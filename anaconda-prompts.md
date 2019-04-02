@@ -125,5 +125,5 @@ To confirm that a package has been removed:
 
 ## Sources 
 
-https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html
-https://pythonfix.com/code/conda-upgrade-all/
+1. https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html
+2. https://pythonfix.com/code/conda-upgrade-all/
