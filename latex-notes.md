@@ -18,21 +18,21 @@ PdfLaTeX > Makeglossaries > Biber > PdfLaTeX > PdfLaTeX
 
 [Remove blank pages after chapters](https://tex.stackexchange.com/a/334126/140109):
 
-```
+```latex
 \documentclass[11pt,openany]{book}
 \let\cleardoublepage=\clearpage
 ```
 
 Change title of contents:
 
-```
+```latex
 \usepackage[UKenglish]{babel} % UK English language
 \addto\captionsUKenglish{\renewcommand\contentsname{Table of Contents}} % specify new title
 ```
 
 Listings:
 
-```
+```latex
 \usepackage{listings}
 \renewcommand{\lstlistlistingname}{List of Listings} % add/rename title of list of listings
 ```
@@ -41,7 +41,7 @@ Sans serif headings with serif body and math:
 
 * [Font catalogue](http://www.tug.dk/FontCatalogue/)
 
-```
+```latex
 \usepackage{lmodern} % latin modern 	
 \usepackage{mathpazo} % mathpazo font for body + math
 \usepackage{sectsty} % for setting section headings to sans serif
@@ -50,13 +50,13 @@ Sans serif headings with serif body and math:
 
 [Adding lists to the table of contents](https://ctan.org/pkg/tocbibind):
 
-```
+```latex
 \usepackage[nottoc,notbib]{tocbibind}
 ```
 
 [Defining custom HTML colours](https://htmlcolorcodes.com/color-names/):
 
-```
+```latex
 \definecolor{EnsystraGreen}{HTML}{00CD98}
 ```
 
@@ -66,7 +66,7 @@ Hyperlink and pdf metadata:
 * https://ctan.org/pkg/hyperxmp
 * [format hyperlink colours](https://www.overleaf.com/learn/latex/hyperlinks)
 
-```
+```latex
 \def \licenseurl {https://www.latex-project.org/lppl/lppl-1-3c/} % license URL
 \def \copyright {Copyright \textcopyright~\the\year{}~by Author. Licensed under the LPPL, version 1.3c.} % copyright information
 \usepackage{hyperxmp}
@@ -79,19 +79,19 @@ pdfkeywords={keyword1,keyword2}]{hyperref}
 ```
 Rename "Chapter X" to "Part X":
 
-```
+```latex
 \addto\captionsUKenglish{\renewcommand{\chaptername}{Part}} % specify new name
 ```
 
 Caption font:
 
-```
+```latex
 \usepackage[font=small,labelfont=bf]{caption} 
 ```
 
 Force table captions to top of the table:
 
-```
+```latex
 \usepackage{floatrow}  
 \floatsetup[table]{capposition=top}
 ```
@@ -104,7 +104,7 @@ Header and footer settings using `fancyhdr`:
 * https://tex.stackexchange.com/a/121808/140109
 * https://tex.stackexchange.com/a/340126/140109
 
-```
+```latex
 \usepackage{fancyhdr} 
 \pagestyle{fancy}
 \fancypagestyle{plain}{
@@ -126,7 +126,7 @@ Header and footer settings using `fancyhdr`:
 
 [Float placeins within subsections](https://tex.stackexchange.com/a/118667/140109):
 
-```
+```latex
 \usepackage[section]{placeins} 
 \makeatletter
 \AtBeginDocument{%
@@ -143,7 +143,7 @@ Tables:
 * [More space between rows](https://www.inf.ethz.ch/personal/markusp/teaching/guides/guide-tables.pdf)
 * [Set table content to align left; for removing underfull hbox warning in table](https://tex.stackexchange.com/a/275310/140109)
 
-```
+```latex
 \usepackage{longtable,tabulary}  
 \usepackage{booktabs} 
 \usepackage{threeparttablex}
@@ -153,20 +153,20 @@ Tables:
 
 [Images path](https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure):
 
-```
+```latex
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 ```
 
 Bibliography package:
 
-```
+```latex
 \usepackage[backend=biber,style=ieee,uniquename=init,giveninits,urldate=long]{biblatex}
 ```
 
 To remove empty parentheses if year not provided for `@online`:
 
-```
+```latex
 \usepackage{xpatch} 
 \xpatchbibdriver{online}
 {\printtext[parens]{\usebibmacro{date}}}
@@ -178,7 +178,7 @@ Prioritising DOI or eprint over URL, if present:
 
 * if DOI is not present, print eprint; if eprint is not present, print URL
 
-```
+```latex
 \renewbibmacro*{doi+eprint+url}{%
 	\printfield{doi}
 	\newunit\newblock
@@ -193,30 +193,30 @@ Prioritising DOI or eprint over URL, if present:
 
 Ensuring bibliography respects margins and [fix `underfull \hbox` warnings](https://tex.stackexchange.com/a/10928/140109):
 
-```
+```latex
 \appto{\bibsetup}{\sloppy} 
 \usepackage{etoolbox}
 \apptocmd{\sloppy}{\hbadness 10000\relax}{}{} 
 ```
 
-% removes unwanted fields for all reference types, except `@misc`
+Removes unwanted fields for all reference types, except `@misc`:
 
-```
+```latex
 \AtEveryBibitem{%
 	\ifboolexpr{not (test {\ifentrytype{misc}})}%
 	{\clearfield{issn}}{}
 }
 ```
 
-[Remap `@software` entries to `@online`](https://tex.stackexchange.com/a/325255/140109)
+[Remap `@software` entries to `@online`](https://tex.stackexchange.com/a/325255/140109):
 
-```
+```latex
 \DeclareBibliographyAlias{software}{online}
 ```
 
 List of abbreviations:
 
-```
+```latex
 \usepackage[acronym,nomain,nonumberlist,nopostdot,nogroupskip,automake,toc]{glossaries} 
 \setglossarystyle{index}
 \makeglossaries 

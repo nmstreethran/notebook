@@ -12,7 +12,7 @@
 
 Numbered lists 
 
-```
+```md
 1. first
 2. second
 2. third
@@ -24,7 +24,7 @@ Numbered lists
 
 Only the first number matters
 
-```
+```md
 3. first
 2. second
 2. third
@@ -36,7 +36,7 @@ Only the first number matters
 
 Bullet lists (using `*`, `-` or `+`)
 
-```
+```md
 * first
 * first
 - second
@@ -50,7 +50,7 @@ Bullet lists (using `*`, `-` or `+`)
 
 ## Hyperlinks
 
-```
+```md
 [I'm an inline-style link](https://www.google.com)
 
 [I'm a reference-style link][Arbitrary case-insensitive reference text]
@@ -90,7 +90,7 @@ Some text to show that the reference links can follow later.
 
 ## Images
 
-```
+```md
 Here's the Markdown Here logo (hover to see the title text):
 
 Inline-style: 
@@ -114,18 +114,19 @@ Reference-style:
 
 ## Code and syntax highlighting
 
-Inline codes are fenced by single back ticks `
+Inline codes are fenced by single back ticks: `
 
-Code blocks are fenced by triple back ticks ```
+Code blocks are fenced by triple back ticks: ```
 
-For code blocks, syntax highlighting is possible. Name the language right after the first three back ticks. e.g., 
-```
+For code blocks, syntax highlighting is possible. Name the language right after the first three back ticks. e.g.:
+
+```md
 ```python
 ```
 
 ## Tables
 
-```
+```md
 Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
@@ -159,7 +160,7 @@ Markdown | Less | Pretty
 
 ## Blockquotes
 
-```
+```md
 > Blockquotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
 
@@ -187,3 +188,6 @@ Three or more hyphens `---`, asterisks `***` or underscores `___`
 2. https://markdown-here.com/
 2. https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 3. https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
+3. https://highlightjs.org/static/demo/
+4. https://help.github.com/en/articles/creating-and-highlighting-code-blocks
+4. https://github.github.com/gfm/
