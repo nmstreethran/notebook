@@ -1,4 +1,3 @@
-
-*.code-workspace
 .ipynb_checkpoints/
 .vscode/
+*.code-workspace

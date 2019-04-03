@@ -18,21 +18,21 @@ PdfLaTeX > Makeglossaries > Biber > PdfLaTeX > PdfLaTeX
 
 [Remove blank pages after chapters](https://tex.stackexchange.com/a/334126/140109):
 
-```latex
+```
 \documentclass[11pt,openany]{book}
 \let\cleardoublepage=\clearpage
 ```
 
 Change title of contents:
 
-```latex
+```
 \usepackage[UKenglish]{babel} % UK English language
 \addto\captionsUKenglish{\renewcommand\contentsname{Table of Contents}} % specify new title
 ```
 
 Listings:
 
-```latex
+```
 \usepackage{listings}
 \renewcommand{\lstlistlistingname}{List of Listings} % add/rename title of list of listings
 ```
@@ -41,7 +41,7 @@ Sans serif headings with serif body and math:
 
 * [Font catalogue](http://www.tug.dk/FontCatalogue/)
 
-```latex
+```
 \usepackage{lmodern} % latin modern 	
 \usepackage{mathpazo} % mathpazo font for body + math
 \usepackage{sectsty} % for setting section headings to sans serif
@@ -50,23 +50,23 @@ Sans serif headings with serif body and math:
 
 [Adding lists to the table of contents](https://ctan.org/pkg/tocbibind):
 
-```latex
+```
 \usepackage[nottoc,notbib]{tocbibind}
 ```
 
 [Defining custom HTML colours](https://htmlcolorcodes.com/color-names/):
 
-```latex
+```
 \definecolor{EnsystraGreen}{HTML}{00CD98}
 ```
 
 Hyperlink and pdf metadata:
 
 * use hidelinks to remove hyperlink borders
-* [`hyperxmp` package](https://ctan.org/pkg/hyperxmp)
+* https://ctan.org/pkg/hyperxmp
 * [format hyperlink colours](https://www.overleaf.com/learn/latex/hyperlinks)
 
-```latex
+```
 \def \licenseurl {https://www.latex-project.org/lppl/lppl-1-3c/} % license URL
 \def \copyright {Copyright \textcopyright~\the\year{}~by Author. Licensed under the LPPL, version 1.3c.} % copyright information
 \usepackage{hyperxmp}
@@ -79,32 +79,32 @@ pdfkeywords={keyword1,keyword2}]{hyperref}
 ```
 Rename "Chapter X" to "Part X":
 
-```latex
+```
 \addto\captionsUKenglish{\renewcommand{\chaptername}{Part}} % specify new name
 ```
 
 Caption font:
 
-```latex
+```
 \usepackage[font=small,labelfont=bf]{caption} 
 ```
 
 Force table captions to top of the table:
 
-```latex
+```
 \usepackage{floatrow}  
 \floatsetup[table]{capposition=top}
 ```
 
 Header and footer settings using `fancyhdr`:
 
-* [Changing the font style of page number on front page](https://tex.stackexchange.com/a/97442/140109)
+* https://tex.stackexchange.com/a/97442/140109
 * [remove horizontal line from header](https://tex.stackexchange.com/a/13897/140109)
-* [Header and footers guide on Overleaf](https://www.overleaf.com/learn/latex/Headers_and_footers)
-* [Lowercase chapter in header](https://tex.stackexchange.com/a/121808/140109)
-* [Remove "Chapter 0" from header](https://tex.stackexchange.com/a/340126/140109)
+* https://www.overleaf.com/learn/latex/Headers_and_footers 
+* https://tex.stackexchange.com/a/121808/140109
+* https://tex.stackexchange.com/a/340126/140109
 
-```latex
+```
 \usepackage{fancyhdr} 
 \pagestyle{fancy}
 \fancypagestyle{plain}{
@@ -126,7 +126,7 @@ Header and footer settings using `fancyhdr`:
 
 [Float placeins within subsections](https://tex.stackexchange.com/a/118667/140109):
 
-```latex
+```
 \usepackage[section]{placeins} 
 \makeatletter
 \AtBeginDocument{%
@@ -143,7 +143,7 @@ Tables:
 * [More space between rows](https://www.inf.ethz.ch/personal/markusp/teaching/guides/guide-tables.pdf)
 * [Set table content to align left; for removing underfull hbox warning in table](https://tex.stackexchange.com/a/275310/140109)
 
-```latex
+```
 \usepackage{longtable,tabulary}  
 \usepackage{booktabs} 
 \usepackage{threeparttablex}
@@ -151,22 +151,22 @@ Tables:
 \newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}} 
 ```
 
-[Set images path](https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure):
+[Images path](https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure):
 
-```latex
+```
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 ```
 
 Bibliography package:
 
-```latex
+```
 \usepackage[backend=biber,style=ieee,uniquename=init,giveninits,urldate=long]{biblatex}
 ```
 
 To remove empty parentheses if year not provided for `@online`:
 
-```latex
+```
 \usepackage{xpatch} 
 \xpatchbibdriver{online}
 {\printtext[parens]{\usebibmacro{date}}}
@@ -178,7 +178,7 @@ Prioritising DOI or eprint over URL, if present:
 
 * if DOI is not present, print eprint; if eprint is not present, print URL
 
-```latex
+```
 \renewbibmacro*{doi+eprint+url}{%
 	\printfield{doi}
 	\newunit\newblock
@@ -193,210 +193,31 @@ Prioritising DOI or eprint over URL, if present:
 
 Ensuring bibliography respects margins and [fix `underfull \hbox` warnings](https://tex.stackexchange.com/a/10928/140109):
 
-```latex
+```
 \appto{\bibsetup}{\sloppy} 
 \usepackage{etoolbox}
 \apptocmd{\sloppy}{\hbadness 10000\relax}{}{} 
 ```
 
-Removes unwanted fields for all reference types, except `@misc`:
+% removes unwanted fields for all reference types, except `@misc`
 
-```latex
+```
 \AtEveryBibitem{%
 	\ifboolexpr{not (test {\ifentrytype{misc}})}%
 	{\clearfield{issn}}{}
 }
 ```
 
-[Remap `@software` entries to `@online`](https://tex.stackexchange.com/a/325255/140109):
+[Remap `@software` entries to `@online`](https://tex.stackexchange.com/a/325255/140109)
 
-```latex
+```
 \DeclareBibliographyAlias{software}{online}
 ```
 
 List of abbreviations:
 
-```latex
+```
 \usepackage[acronym,nomain,nonumberlist,nopostdot,nogroupskip,automake,toc]{glossaries} 
 \setglossarystyle{index}
 \makeglossaries 
-```
-
-### Frontmatter, mainmatter and backmatter
-
-* [footnote customisation](https://en.wikibooks.org/wiki/LaTeX/Footnotes_and_Margin_Notes)
-* [reset footnote counter](https://ubuntuincident.wordpress.com/2011/12/28/reset-footnote-counter-in-latex/)
-* [placing appendices after backmatter](https://tex.stackexchange.com/a/198608/140109)
-* [remove "Appendix/Chapter X" from references header](https://tex.stackexchange.com/a/102693/140109)
-* [appendix chapter name](https://tex.stackexchange.com/a/151130/140109)
-
-```latex
-\newcommand{\frontmattersetup}{
-	\frontmatter
-	\renewcommand{\thefootnote}{\fnsymbol{footnote}}} % set footnote numbering style to symbol 
-```
-
-```latex
-\newcommand{\mainmattersetup}{
-	\mainmatter
-	\renewcommand{\thefootnote}{\arabic{footnote}} % change footnote numbering style to arabic
-	\setcounter{footnote}{0} % reset footnote counter for front matter 
-```
-
-```latex
-\newcommand{\backmattersetup}{
-	{\backmatter
-		\chapter{References}
-		\printbibliography[heading=none]
-		\clearpage % to remove "Chapter X" from header
-	} 
-	\appendix
-	\renewcommand\chaptername{Appendix} % 
-	\setcounter{footnote}{0} % reset footnote counter for appendix
-}
-```
-
-## Beamer class
-
-### Preamble
-
-Date format DD/MM/YYYY:
-
-```latex
-\usepackage[UKenglish]{babel}
-\usepackage[ddmmyyyy]{datetime} % set date format 
-```
-
-Colours and themes:
-
-* [set colours for sections and subsections in table of contents](https://tex.stackexchange.com/a/69721/140109)
-
-```latex
-\definecolor{darkblue}{HTML}{050F42} % custom HTML colour
-\usecolortheme[named=blue]{structure} % set theme colour
-\setbeamertemplate{section in toc}{% 
-	{\color{blue}\inserttocsectionnumber.}~{\color{blue}\textbf{\inserttocsection}}}
-\setbeamertemplate{subsection in toc}{%
-	\hspace{2em}{\color{logoblue}\rule[0.3ex]{3pt}{3pt}}~\inserttocsubsection\par}
-\setbeamercolor{title}{fg=white}
-\setbeamercolor{date}{fg=white}
-\setbeamercolor{frametitle}{fg=darkblue}
-\setbeamercolor{normal text}{fg=darkblue}
-\setbeamercolor{example text}{fg=blue}
-```
-
-Bibliography:
-* [bibliography icon](https://tex.stackexchange.com/a/68084/140109)
-* [supress patching footnotes failed warning](https://tex.stackexchange.com/a/202994/140109)
-* [numerical references](https://tex.stackexchange.com/a/68081/140109)
-* [change font size](https://tex.stackexchange.com/a/205447/140109)
-
-```latex
-\usepackage[style=ieee,urldate=long]{biblatex}
-\usepackage{silence} % suppress warning below 
-\WarningFilter{biblatex}{Patching footnotes failed}
-\setbeamertemplate{bibliography item}[text] % show numerical reference 
-\AtBeginBibliography{\tiny} % change font size 
-```
-
-[Adjust title page vertical spacing](https://tex.stackexchange.com/a/255335/140109):
-
-```latex
-\makeatletter
-\defbeamertemplate*{title page}{mydefault}[1][]{
-	\begin{columns}
-		\column{.22\paperwidth}% ADJUST
-		\mbox{}
-		\column{.78\paperwidth}% ADJUST
-		\begin{beamercolorbox}[sep=0pt,left,#1]{author}
-			\vskip1.5cm
-			\usebeamerfont{author}\textcolor{white}\insertauthor
-		\end{beamercolorbox}
-		\vskip.7cm%<- added
-		\begin{beamercolorbox}[sep=0pt,left,#1]{title}
-			\usebeamerfont{title}\titlesize\inserttitle\par%
-			\ifx\insertsubtitle\@empty%
-			\else%
-			\vskip0.25em%
-			{\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
-			\fi%     
-		\end{beamercolorbox}%
-		\vskip.25cm\par
-		\begin{beamercolorbox}[sep=0pt,left,#1]{date}
-			\usebeamerfont{date}\footnotesize\date
-		\end{beamercolorbox}\vskip.25em
-		\begin{beamercolorbox}[sep=0pt,left,#1]{email}
-			\usebeamerfont{email}\href{mailto:email@mail.com}{\texttt{\textcolor{white}email@mail.com}}
-		\end{beamercolorbox}
-	\end{columns}}
-\setbeamertemplate{title page}[mydefault][colsep=-4bp,rounded=true,shadow=\beamer@themerounded@shadow,wd=9.5cm]% ADJUST
-\makeatother
-```
-
-[Frame title formatting](https://tex.stackexchange.com/a/306416/140109):
-
-```latex
-\makeatletter % 
-\setbeamertemplate{frametitle}{
-	\ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
-	\@tempdima=\textwidth%
-	\advance\@tempdima by\beamer@leftmargin%
-	\advance\@tempdima by\beamer@rightmargin%
-	\vspace{.5cm} % ADJUST
-	\hspace*{.5cm} % ADJUST
-	\begin{beamercolorbox}[sep=.3cm,left,wd=\the\@tempdima]{frametitle}
-		\usebeamerfont{frametitle}%
-		\vbox{}\vskip-1ex%
-		\if@tempswa\else\csname beamer@ftecenter\endcsname\fi%
-		\strut\underline{\insertframetitle}\strut\par%
-		{%
-			\ifx\insertframesubtitle\@empty%
-			\else%
-			{\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\strut\par}%
-			\fi
-		}%
-		\vskip-1ex%
-		\if@tempswa\else\vskip-.3cm\fi% set inside beamercolorbox... evil here...
-	\end{beamercolorbox}}
-\makeatother
-```
-
-[Frame margins](https://tex.stackexchange.com/a/109984/140109):
-
-```latex
-\setbeamertemplate{footline}{%
-	\vspace{.4cm}
-}
-```
-
-Remove navigation symbols:
-
-```latex
-\setbeamertemplate{navigation symbols}{}
-```
-
-### Other commands
-
-[Change position of navigation symbols](https://tex.stackexchange.com/a/35637/140109):
-
-```latex
-\hskip1em\usebeamercolor[fg]{navigation symbols dimmed}%
-			\insertslidenavigationsymbol% 
-			\insertframenavigationsymbol% % 
-			\insertsectionnavigationsymbol%
-			\insertsubsectionnavigationsymbol%
-			\insertdocnavigationsymbol%
-			\insertbackfindforwardnavigationsymbol
-```
-
-References frame: 
-
-* [beamer references](https://en.wikibooks.org/wiki/LaTeX/Presentations#References_(Beamer))
-* references which are not cited in the slides using `\nocite{bibid}`
-
-```latex
-\begin{frame}[noframenumbering,plain,allowframebreaks]{References}
-\nocite{vangennep:related,ctan}
-\printbibliography
-\end{frame}
 ```
