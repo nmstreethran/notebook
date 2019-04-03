@@ -82,6 +82,7 @@
     "dispatchable",
     "ensystra",
     "flensburg",
+    "forecasted",
     "groningen",
     "irradiance",
     "nithiya",
@@ -93,5 +94,6 @@
     "streethran"
   ],
   "cSpell.allowCompoundWords": true,
-  "cSpell.maxDuplicateProblems": 2
+  "cSpell.maxDuplicateProblems": 2,
+  "python.dataScience.exportWithOutputEnabled": true
 }

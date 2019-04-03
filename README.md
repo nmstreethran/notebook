@@ -2,96 +2,62 @@
 
 ## Python
 
-Python For Beginners
+* [Python For Beginners](https://www.python.org/about/gettingstarted/)
 
-https://www.python.org/about/gettingstarted/
+* [Python Editors](https://wiki.python.org/moin/PythonEditors)
 
-Python Editors
+* [Integrated Development Environments](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments)
 
-https://wiki.python.org/moin/PythonEditors
+* [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python#_install-python-and-the-python-extension)
 
-Integrated Development Environments
+* [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
 
-https://wiki.python.org/moin/IntegratedDevelopmentEnvironments
-
-Python in Visual Studio Code
-
-https://code.visualstudio.com/docs/languages/python#_install-python-and-the-python-extension
-
-Getting Started with Python in VS Code
-
-https://code.visualstudio.com/docs/python/python-tutorial
-
-Working with Jupyter Notebooks in Visual Studio Code
-
-https://code.visualstudio.com/docs/python/jupyter-support
+* [Working with Jupyter Notebooks in Visual Studio Code](https://code.visualstudio.com/docs/python/jupyter-support)
 
 ### Packages
 
-Pandas
+* [Pandas](http://pandas-docs.github.io/pandas-docs-travis/getting_started/index.html)
 
-http://pandas-docs.github.io/pandas-docs-travis/getting_started/index.html
+* [Matplotlib](https://matplotlib.org/)
+
+* [NumPy](http://www.numpy.org/)
+
+* [scikit-learn](https://scikit-learn.org/stable/)
 
 ## Version control
 
-Using Version Control in VS Code
+* [Using Version Control in VS Code](https://code.visualstudio.com/Docs/editor/versioncontrol)
 
-https://code.visualstudio.com/Docs/editor/versioncontrol
+* [Ignoring files](https://help.github.com/en/articles/ignoring-files)
 
-Ignoring files
+* [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
 
-https://help.github.com/en/articles/ignoring-files
-
-Squash your commits
-
-https://github.blog/2016-04-01-squash-your-commits/
-
-About pull request merges
-
-https://help.github.com/en/articles/about-pull-request-merges
+* [About pull request merges](https://help.github.com/en/articles/about-pull-request-merges)
 
 ## Markdown
 
-Markdown and Visual Studio Code
+* [Markdown and Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown)
 
-https://code.visualstudio.com/docs/languages/markdown
-
-Markdown cheatsheet
-
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+* [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## HTML
 
-HTML in Visual Studio Code
-
-https://code.visualstudio.com/docs/languages/html
+* [HTML in Visual Studio Code](https://code.visualstudio.com/docs/languages/html)
 
 ## Visual Studio Code Extensions
 
-LaTeX Workshop
+* [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 
-https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop
+* [hide-gitignored](https://marketplace.visualstudio.com/items?itemName=npxms.hide-gitignored)
 
-hide-gitignored
+* [Anaconda Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-python.anaconda-extension-pack)
 
-https://marketplace.visualstudio.com/items?itemName=npxms.hide-gitignored
+* [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
-Anaconda Extension Pack
+* [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
 
-https://marketplace.visualstudio.com/items?itemName=ms-python.anaconda-extension-pack
+* [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 
-Python
+* [Live HTML Previewer](https://marketplace.visualstudio.com/items?itemName=hdg.live-html-previewer#review-details)
 
-https://marketplace.visualstudio.com/items?itemName=ms-python.python
-
-Visual Studio IntelliCode
-
-https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode
-
-Code Spell Checker
-
-https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
-
-Live HTML Previewer
-
-https://marketplace.visualstudio.com/items?itemName=hdg.live-html-previewer#review-details
+* [VS Code Jupyter Notebook Previewer](https://marketplace.visualstudio.com/items?itemName=jithurjacob.nbpreviewer)
