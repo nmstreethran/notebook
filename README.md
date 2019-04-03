@@ -34,6 +34,8 @@
 
 * [About pull request merges](https://help.github.com/en/articles/about-pull-request-merges)
 
+* [Merging a pull request](https://help.github.com/en/articles/merging-a-pull-request)
+
 ## Markdown
 
 * [Markdown and Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown)
