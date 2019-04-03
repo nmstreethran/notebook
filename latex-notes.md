@@ -258,6 +258,10 @@ List of abbreviations:
 
 ## Beamer class
 
+### Compilation
+
+PdfLaTeX > Biber > PdfLaTeX > PdfLaTeX
+
 ### Preamble
 
 Date format DD/MM/YYYY:
