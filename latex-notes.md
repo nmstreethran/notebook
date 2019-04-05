@@ -4,6 +4,12 @@ My LaTeX documents are compiled using [latexmk](https://ctan.org/pkg/latexmk) on
 
 ## General
 
+[Define shortcuts to document properties](https://en.wikibooks.org/wiki/TeX/def)
+
+```latex
+\def \auth {Author's Name} % author
+```
+
 [Set images path](https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure):
 
 ```latex
