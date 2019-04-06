@@ -123,7 +123,7 @@ To confirm that a package has been removed:
 
 `conda list`
 
-## Sources 
+## References
 
 1. https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html
 2. https://pythonfix.com/code/conda-upgrade-all/

@@ -182,12 +182,13 @@ Three or more hyphens `---`, asterisks `***` or underscores `___`
 
 ---
 
-## Sources
+## References
 
 1. https://daringfireball.net/projects/markdown/
 2. https://markdown-here.com/
-2. https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-3. https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
+2. [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+3. [Markdown Here cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
 3. https://highlightjs.org/static/demo/
 4. https://help.github.com/en/articles/creating-and-highlighting-code-blocks
 4. https://github.github.com/gfm/
+5. [Markdown and Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown)
