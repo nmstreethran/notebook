@@ -1,4 +1,8 @@
-# Useful links
+# Useful links for Visual Studio Code
+
+* [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings)
+
+* [Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 
 ## Python
 
@@ -16,29 +20,9 @@
 
 ### Packages
 
-* [Pandas](http://pandas-docs.github.io/pandas-docs-travis/getting_started/index.html)
-
-* [Matplotlib](https://matplotlib.org/)
-
 * [NumPy](http://www.numpy.org/)
 
 * [scikit-learn](https://scikit-learn.org/stable/)
-
-## Version control
-
-* [Using Version Control in VS Code](https://code.visualstudio.com/Docs/editor/versioncontrol)
-
-* [Ignoring files](https://help.github.com/en/articles/ignoring-files)
-
-* [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
-
-* [About pull request merges](https://help.github.com/en/articles/about-pull-request-merges)
-
-## Markdown
-
-* [Markdown and Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown)
-
-* [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## HTML
 
@@ -58,6 +42,6 @@
 
 * [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 
-* [Live HTML Previewer](https://marketplace.visualstudio.com/items?itemName=hdg.live-html-previewer#review-details)
+* [Live HTML Previewer](https://marketplace.visualstudio.com/items?itemName=hdg.live-html-previewer)
 
 * [VS Code Jupyter Notebook Previewer](https://marketplace.visualstudio.com/items?itemName=jithurjacob.nbpreviewer)

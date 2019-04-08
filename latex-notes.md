@@ -1,6 +1,93 @@
 # LaTeX notes
 
-My LaTeX documents are compiled using [latexmk](https://ctan.org/pkg/latexmk) on [Visual Studio Code](https://code.visualstudio.com/) with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) and [texlive](https://tug.org/texlive/).
+My LaTeX documents are compiled using [latexmk](https://ctan.org/pkg/latexmk) on [VSCodium](https://vscodium.github.io/) (open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) and [texlive](https://tug.org/texlive/).
+
+## General
+
+[Define shortcuts to document properties](https://en.wikibooks.org/wiki/TeX/def)
+
+```latex
+\def \auth {Author's Name} % author
+```
+
+[Set images path](https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure):
+
+```latex
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+```
+
+[Adding captions as a node in `tikzpicture`](https://tex.stackexchange.com/a/351672/140109)
+
+[`tikzpagenodes`](https://tex.stackexchange.com/a/386331/140109)
+
+[Defining custom HTML colours](https://htmlcolorcodes.com/color-names/):
+
+```latex
+\definecolor{EnsystraGreen}{HTML}{00CD98}
+```
+
+Hyperlink and pdf metadata:
+
+* use hidelinks to remove hyperlink borders
+* [`hyperxmp` package](https://ctan.org/pkg/hyperxmp)
+* [format hyperlink colours](https://www.overleaf.com/learn/latex/hyperlinks)
+
+```latex
+\def \licenseurl {https://www.latex-project.org/lppl/lppl-1-3c/} % license URL
+\def \copyright {Copyright \textcopyright~\the\year{}~by Author. Licensed under the LPPL, version 1.3c.} % copyright information
+\usepackage{hyperxmp}
+\usepackage[hidelinks,pdftex,
+pdfauthor={Author},
+pdftitle={Title},
+pdfsubject={Subject},
+pdfkeywords={keyword1,keyword2}]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,pdfcopyright=\copyright,pdflicenseurl=\licenseurl,pdfcontactemail=email@mail.com}
+```
+
+### Bibliography
+
+To remove empty parentheses if year not provided for `@online`:
+
+```latex
+\usepackage{xpatch} 
+\xpatchbibdriver{online}
+{\printtext[parens]{\usebibmacro{date}}}
+{\iffieldundef{year}{}{\printtext[parens]{\usebibmacro{date}}}}
+{}{} 
+```
+
+Prioritising DOI or eprint over URL, if present:
+
+* if DOI is not present, print eprint; if eprint is not present, print URL
+
+```latex
+\renewbibmacro*{doi+eprint+url}{%
+	\printfield{doi}
+	\newunit\newblock
+	\newunit\newblock
+	\iffieldundef{doi}{%
+		\usebibmacro{eprint}
+		\iffieldundef{eprint}{%
+			\usebibmacro{url+urldate}}}
+	{}
+}
+```
+
+Removes unwanted fields for all reference types, except `@misc`:
+
+```latex
+\AtEveryBibitem{%
+	\ifboolexpr{not (test {\ifentrytype{misc}})}%
+	{\clearfield{issn}}{}
+}
+```
+
+[Remap `@software` entries to `@online`](https://tex.stackexchange.com/a/325255/140109):
+
+```latex
+\DeclareBibliographyAlias{software}{online}
+```
 
 ## Book / article / report document class
 
@@ -21,6 +108,11 @@ PdfLaTeX > Makeglossaries > Biber > PdfLaTeX > PdfLaTeX
 ```latex
 \documentclass[11pt,openany]{book}
 \let\cleardoublepage=\clearpage
+```
+
+[Fix spacing problem for header and footer using `headheight`](https://tex.stackexchange.com/a/93871/140109):
+```latex
+\geometry{lmargin=2.5cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm,headheight=34pt} 
 ```
 
 Change title of contents:
@@ -54,29 +146,6 @@ Sans serif headings with serif body and math:
 \usepackage[nottoc,notbib]{tocbibind}
 ```
 
-[Defining custom HTML colours](https://htmlcolorcodes.com/color-names/):
-
-```latex
-\definecolor{EnsystraGreen}{HTML}{00CD98}
-```
-
-Hyperlink and pdf metadata:
-
-* use hidelinks to remove hyperlink borders
-* [`hyperxmp` package](https://ctan.org/pkg/hyperxmp)
-* [format hyperlink colours](https://www.overleaf.com/learn/latex/hyperlinks)
-
-```latex
-\def \licenseurl {https://www.latex-project.org/lppl/lppl-1-3c/} % license URL
-\def \copyright {Copyright \textcopyright~\the\year{}~by Author. Licensed under the LPPL, version 1.3c.} % copyright information
-\usepackage{hyperxmp}
-\usepackage[hidelinks,pdftex,
-pdfauthor={Author},
-pdftitle={Title},
-pdfsubject={Subject},
-pdfkeywords={keyword1,keyword2}]{hyperref}
-\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,pdfcopyright=\copyright,pdflicenseurl=\licenseurl,pdfcontactemail=email@mail.com}
-```
 Rename "Chapter X" to "Part X":
 
 ```latex
@@ -100,15 +169,15 @@ Header and footer settings using `fancyhdr`:
 
 * [Changing the font style of page number on front page](https://tex.stackexchange.com/a/97442/140109)
 * [remove horizontal line from header](https://tex.stackexchange.com/a/13897/140109)
-* [Header and footers guide on Overleaf](https://www.overleaf.com/learn/latex/Headers_and_footers)
-* [Lowercase chapter in header](https://tex.stackexchange.com/a/121808/140109)
-* [Remove "Chapter 0" from header](https://tex.stackexchange.com/a/340126/140109)
+* [header and footers guide on Overleaf](https://www.overleaf.com/learn/latex/Headers_and_footers)
+* [lowercase chapter in header](https://tex.stackexchange.com/a/121808/140109)
+* [remove "Chapter 0" from header](https://tex.stackexchange.com/a/340126/140109)
 
 ```latex
 \usepackage{fancyhdr} 
 \pagestyle{fancy}
 \fancypagestyle{plain}{
-	\fancyhf{}
+	\fancyhf{} % set header and footer to nothing
 	\renewcommand{\headrulewidth}{0pt}
 	\fancyfoot[C]{\sffamily\thepage}
 }
@@ -122,6 +191,12 @@ Header and footer settings using `fancyhdr`:
 \makeatother
 \fancyhead[LO]{\textit{\sffamily\nouppercase{\leftmark}}} % Chapter title
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+```
+
+[Remove headers and footers for a page](https://tex.stackexchange.com/a/120748/140109):
+
+```latex
+\thispagestyle{empty}
 ```
 
 [Float placeins within subsections](https://tex.stackexchange.com/a/118667/140109):
@@ -141,7 +216,7 @@ Tables:
 
 * ["ThreePartTable" environment](https://tex.stackexchange.com/a/209851/140109)
 * [More space between rows](https://www.inf.ethz.ch/personal/markusp/teaching/guides/guide-tables.pdf)
-* [Set table content to align left; for removing underfull hbox warning in table](https://tex.stackexchange.com/a/275310/140109)
+* [Set table content to align left; for removing `underfull \hbox` warning in table](https://tex.stackexchange.com/a/275310/140109)
 
 ```latex
 \usepackage{longtable,tabulary}  
@@ -151,44 +226,10 @@ Tables:
 \newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}} 
 ```
 
-[Set images path](https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure):
-
-```latex
-\usepackage{graphicx}
-\graphicspath{ {images/} }
-```
-
 Bibliography package:
 
 ```latex
 \usepackage[backend=biber,style=ieee,uniquename=init,giveninits,urldate=long]{biblatex}
-```
-
-To remove empty parentheses if year not provided for `@online`:
-
-```latex
-\usepackage{xpatch} 
-\xpatchbibdriver{online}
-{\printtext[parens]{\usebibmacro{date}}}
-{\iffieldundef{year}{}{\printtext[parens]{\usebibmacro{date}}}}
-{}{} 
-```
-
-Prioritising DOI or eprint over URL, if present:
-
-* if DOI is not present, print eprint; if eprint is not present, print URL
-
-```latex
-\renewbibmacro*{doi+eprint+url}{%
-	\printfield{doi}
-	\newunit\newblock
-	\newunit\newblock
-	\iffieldundef{doi}{%
-		\usebibmacro{eprint}
-		\iffieldundef{eprint}{%
-			\usebibmacro{url+urldate}}}
-	{}
-}
 ```
 
 Ensuring bibliography respects margins and [fix `underfull \hbox` warnings](https://tex.stackexchange.com/a/10928/140109):
@@ -197,21 +238,6 @@ Ensuring bibliography respects margins and [fix `underfull \hbox` warnings](http
 \appto{\bibsetup}{\sloppy} 
 \usepackage{etoolbox}
 \apptocmd{\sloppy}{\hbadness 10000\relax}{}{} 
-```
-
-Removes unwanted fields for all reference types, except `@misc`:
-
-```latex
-\AtEveryBibitem{%
-	\ifboolexpr{not (test {\ifentrytype{misc}})}%
-	{\clearfield{issn}}{}
-}
-```
-
-[Remap `@software` entries to `@online`](https://tex.stackexchange.com/a/325255/140109):
-
-```latex
-\DeclareBibliographyAlias{software}{online}
 ```
 
 List of abbreviations:
@@ -252,11 +278,15 @@ List of abbreviations:
 	} 
 	\appendix
 	\renewcommand\chaptername{Appendix} % 
-	\setcounter{footnote}{0} % reset footnote counter for appendix
+%	\setcounter{footnote}{0} % reset footnote counter for appendix
 }
 ```
 
 ## Beamer class
+
+### Compilation
+
+PdfLaTeX > Biber > PdfLaTeX > PdfLaTeX
 
 ### Preamble
 
@@ -387,6 +417,18 @@ Remove navigation symbols:
 			\insertsubsectionnavigationsymbol%
 			\insertdocnavigationsymbol%
 			\insertbackfindforwardnavigationsymbol
+```
+
+Sectioning and highlighting a section / subsection in the table of contents:
+
+* sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+* a subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+```latex
+\section{First Section} 
+\subsection{Subsection Example} 
+\begin{frame}{Table of Contents} 
+\tableofcontents[currentsection]
 ```
 
 References frame: 
