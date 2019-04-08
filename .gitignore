@@ -107,6 +107,3 @@ venv.bak/
 # Visual Studio Code
 *.code-workspace
 .vscode/
-
-# Data folder (data sources provided in readme)
-data/

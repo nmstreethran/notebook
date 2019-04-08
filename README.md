@@ -1,4 +1,4 @@
-# Useful links
+# Useful links for Visual Studio Code
 
 * [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings)
 
@@ -19,10 +19,6 @@
 * [Working with Jupyter Notebooks in Visual Studio Code](https://code.visualstudio.com/docs/python/jupyter-support)
 
 ### Packages
-
-* [Pandas](http://pandas-docs.github.io/pandas-docs-travis/getting_started/index.html)
-
-* [Matplotlib](https://matplotlib.org/)
 
 * [NumPy](http://www.numpy.org/)
 
