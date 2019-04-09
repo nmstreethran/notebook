@@ -3,6 +3,7 @@
 ## Table of contents <!-- omit in toc -->
 
 - [Useful links](#useful-links)
+- [Branching](#branching)
 - [Pull requests](#pull-requests)
 - [Removing the last commit](#removing-the-last-commit)
 - [Ignoring files](#ignoring-files)
@@ -12,6 +13,18 @@
 * [Git reference](https://git-scm.com/docs)
 * [Pro Git book](https://git-scm.com/book/en/v2)
 * [Visual Git Cheat Sheet](http://ndpsoftware.com/git-cheatsheet.html)
+
+## Branching
+
+`HEAD` points towards your current branch, which is also indicated by an asterisk (`*`).
+
+List current branches:
+
+```
+git branch
+```
+
+[Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
 
 ## Pull requests
 

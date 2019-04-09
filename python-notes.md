@@ -5,10 +5,11 @@
 - [Getting started](#getting-started)
 - [Pandas](#pandas)
 - [Matplotlib](#matplotlib)
+  - [Customising facecolours](#customising-facecolours)
+  - [Customising plots with style sheets](#customising-plots-with-style-sheets)
 - [Datetime](#datetime)
 - [NumPy](#numpy)
 - [scikit-learn](#scikit-learn)
-- [References](#references)
 
 ## Getting started
 
@@ -67,22 +68,24 @@ df['Region']=
 
 ## [Matplotlib](https://matplotlib.org/)
 
-Save pandas dataframe plot as pdf:
+[Save pandas dataframe plot as pdf](https://stackoverflow.com/a/35484725/4573584):
 
 ```python
 plt.savefig('filename.pdf')
 ```
 
-Change figure axes facecolour of inline plot globally:
+[Change legend text colour](https://stackoverflow.com/a/47229840/4573584): 
+
+```python
+plt.setp(plt.legend().get_texts(),color='w')
+```
+
+### Customising facecolours
+
+[Change figure axes facecolour](https://stackoverflow.com/a/39176226/4573584) of inline plot globally:
 
 ```python
 plt.rcParams['axes.facecolor']='red'
-```
-
-Change figure plot area colour of inline plot globally:
-
-```python
-plt.rcParams['figure.facecolor']='black'
 ```
 
 Change figure axes facecolour of pdf plot output globally (when using `plt.savefig(filename.pdf)`):
@@ -90,13 +93,14 @@ Change figure axes facecolour of pdf plot output globally (when using `plt.savef
 ```python
 plt.rcParams['savefig.facecolor']='red'
 ```
-Change legend text colour: 
+
+[Change figure plot area colour](https://stackoverflow.com/a/40371037/4573584) of inline plot globally:
 
 ```python
-plt.setp(plt.legend().get_texts(),color='w')
+plt.rcParams['figure.facecolor']='black'
 ```
 
-Customising plots with style sheets:
+### [Customising plots with style sheets](https://matplotlib.org/users/style_sheets.html)
 
 ```python
 plt.style.use('ggplot')
@@ -118,16 +122,9 @@ The outputs of each style sheet is shown in [matplotlib-style-sheets.ipynb](http
 
 ## Datetime
 
-[Python's `strftime` directives](http://strftime.org/)
+* [Python's `strftime` directives](http://strftime.org/)
+* [`pandas.to_datetime`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html)
 
 ## [NumPy](http://www.numpy.org/)
 
 ## [scikit-learn](https://scikit-learn.org/stable/)
-
-## References
-
-1. Save pandas dataframe plot as pdf: https://stackoverflow.com/a/35484725/4573584
-2. Change plot area colour: https://stackoverflow.com/a/40371037/4573584
-3. Change figure axes facecolour: https://stackoverflow.com/a/39176226/4573584 
-4. Legend text colour: https://stackoverflow.com/a/47229840/4573584
-5. Style sheets: https://matplotlib.org/users/style_sheets.html
