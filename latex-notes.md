@@ -2,6 +2,8 @@
 
 My LaTeX documents are compiled using [latexmk](https://ctan.org/pkg/latexmk) on [VSCodium](https://vscodium.github.io/) (open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) and [texlive](https://tug.org/texlive/).
 
+## Table of contents
+
 ## General
 
 [Define shortcuts to document properties](https://en.wikibooks.org/wiki/TeX/def)

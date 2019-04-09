@@ -1,7 +1,5 @@
 # Git notes
 
-* [Using Version Control in VS Code](https://code.visualstudio.com/Docs/editor/versioncontrol)
-
 * [Ignoring files](https://help.github.com/en/articles/ignoring-files)
 
 * [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)

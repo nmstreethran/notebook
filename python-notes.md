@@ -1,5 +1,11 @@
 # Python notes
 
+## Getting started
+
+* [Python For Beginners](https://www.python.org/about/gettingstarted/)
+* [Python Editors](https://wiki.python.org/moin/PythonEditors)
+* [Integrated Development Environments](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments)
+
 ## [Pandas](http://pandas.pydata.org/pandas-docs/stable/)
 
 [Drop a row / column](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop.html):
@@ -104,10 +110,14 @@ The outputs of each style sheet is shown in [matplotlib-style-sheets.ipynb](http
 
 [Python's `strftime` directives](http://strftime.org/)
 
+## [NumPy](http://www.numpy.org/)
+
+## [scikit-learn](https://scikit-learn.org/stable/)
+
 ## References
 
 1. Save pandas dataframe plot as pdf: https://stackoverflow.com/a/35484725/4573584
-1. Change plot area colour: https://stackoverflow.com/a/40371037/4573584
-2. Change figure axes facecolour: https://stackoverflow.com/a/39176226/4573584 
-2. Legend text colour: https://stackoverflow.com/a/47229840/4573584
-2. Style sheets: https://matplotlib.org/users/style_sheets.html
+2. Change plot area colour: https://stackoverflow.com/a/40371037/4573584
+3. Change figure axes facecolour: https://stackoverflow.com/a/39176226/4573584 
+4. Legend text colour: https://stackoverflow.com/a/47229840/4573584
+5. Style sheets: https://matplotlib.org/users/style_sheets.html

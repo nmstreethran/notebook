@@ -95,5 +95,8 @@
   ],
   "cSpell.allowCompoundWords": true,
   "cSpell.maxDuplicateProblems": 2,
-  "python.dataScience.exportWithOutputEnabled": true
+  "python.dataScience.exportWithOutputEnabled": true,
+  "python.dataScience.sendSelectionToInteractiveWindow": true,
+  "window.restoreWindows": "none",
+  "markdown.extension.toc.githubCompatibility": true
 }
