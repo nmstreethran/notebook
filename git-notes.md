@@ -9,11 +9,8 @@
 ## Useful links
 
 * [Ignoring files](https://help.github.com/en/articles/ignoring-files)
-
 * [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
-
 * [About pull request merges](https://help.github.com/en/articles/about-pull-request-merges)
-
 * [Merging a pull request](https://help.github.com/en/articles/merging-a-pull-request)
 
 ## Removing the last commit
