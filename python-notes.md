@@ -1,4 +1,14 @@
-# Python notes
+# Python notes <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [Getting started](#getting-started)
+- [Pandas](#pandas)
+- [Matplotlib](#matplotlib)
+- [Datetime](#datetime)
+- [NumPy](#numpy)
+- [scikit-learn](#scikit-learn)
+- [References](#references)
 
 ## Getting started
 

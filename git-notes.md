@@ -1,4 +1,12 @@
-# Git notes
+# Git notes <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [Useful links](#useful-links)
+- [Removing the last commit](#removing-the-last-commit)
+- [References](#references)
+
+## Useful links
 
 * [Ignoring files](https://help.github.com/en/articles/ignoring-files)
 

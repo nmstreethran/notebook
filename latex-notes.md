@@ -1,8 +1,19 @@
-# LaTeX notes
+# LaTeX notes <!-- omit in toc -->
 
 My LaTeX documents are compiled using [latexmk](https://ctan.org/pkg/latexmk) on [VSCodium](https://vscodium.github.io/) (open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) and [texlive](https://tug.org/texlive/).
 
-## Table of contents
+## Table of contents <!-- omit in toc -->
+
+- [General](#general)
+	- [Bibliography](#bibliography)
+- [Book / article / report document class](#book--article--report-document-class)
+	- [Compilation](#compilation)
+	- [Preamble](#preamble)
+	- [Frontmatter, mainmatter and backmatter](#frontmatter-mainmatter-and-backmatter)
+- [Beamer class](#beamer-class)
+	- [Compilation](#compilation-1)
+	- [Preamble](#preamble-1)
+	- [Other commands](#other-commands)
 
 ## General
 

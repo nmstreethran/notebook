@@ -1,4 +1,14 @@
-# Anaconda prompts
+# Anaconda prompts <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [Searching for packages](#searching-for-packages)
+- [Managing environments](#managing-environments)
+- [Installing packages](#installing-packages)
+- [Viewing a list of installed packages](#viewing-a-list-of-installed-packages)
+- [Updating packages](#updating-packages)
+- [Removing packages](#removing-packages)
+- [References](#references)
 
 ## Searching for packages
 

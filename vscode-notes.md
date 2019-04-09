@@ -1,4 +1,13 @@
-# Visual Studio Code notes
+# Visual Studio Code notes <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [Useful links](#useful-links)
+- [Visual Studio Code Extensions](#visual-studio-code-extensions)
+- [Python](#python)
+- [Git](#git)
+- [Markdown](#markdown)
+- [HTML](#html)
 
 ## Useful links 
 

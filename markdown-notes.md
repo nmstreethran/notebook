@@ -1,4 +1,12 @@
-# Markdown notes
+# Markdown notes <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [Emphasis](#emphasis)
+- [Lists](#lists)
+- [Hyperlinks](#hyperlinks)
+- [Images](#images)
+- [Code and syntax highlighting](#code-and-syntax-highlighting)
 
 ## Emphasis
 
