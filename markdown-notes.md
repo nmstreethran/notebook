@@ -23,7 +23,7 @@ Numbered lists
 ```md
 1. first
 2. second
-2. third
+3. third
 ```
 
 1. first
@@ -189,6 +189,18 @@ Quote break.
 Three or more hyphens `---`, asterisks `***` or underscores `___`
 
 ---
+
+## [Text alignment](https://stackoverflow.com/q/14051715/4573584)
+
+```md
+<p align="center">centered text</p>
+```
+
+<p align="center">centered text</p>
+
+## Licenses
+
+* [License badges](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
 
 ## References
 

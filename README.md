@@ -6,11 +6,12 @@ I use [VSCodium](https://vscodium.github.io/) (open-source alternative to [Visua
 
 ## Files
 
-- [Anaconda](https://github.com/nmstreethran/coding/blob/master/anaconda-prompts.md)
-- [Git](https://github.com/nmstreethran/coding/blob/master/git-notes.md)
-- [LaTeX](https://github.com/nmstreethran/coding/blob/master/latex-notes.md)
-- [Markdown](https://github.com/nmstreethran/coding/blob/master/markdown-notes.md)
-- [Python](https://github.com/nmstreethran/coding/blob/master/python-notes.md)
+- [Anaconda notes](https://github.com/nmstreethran/coding/blob/master/anaconda-prompts.md)
+- [Git notes](https://github.com/nmstreethran/coding/blob/master/git-notes.md)
+- [LaTeX notes](https://github.com/nmstreethran/coding/blob/master/latex-notes.md)
+- [Markdown notes](https://github.com/nmstreethran/coding/blob/master/markdown-notes.md)
+- [Python notes](https://github.com/nmstreethran/coding/blob/master/python-notes.md)
+- [Web development notes](https://github.com/nmstreethran/coding/blob/master/webdev-notes.md)
 - Matplotlib style sheets ([.py](https://github.com/nmstreethran/coding/blob/master/matplotlib-style-sheets.py) and [.ipynb](https://github.com/nmstreethran/coding/blob/master/matplotlib-style-sheets.ipynb))
 
 ## Folders
