@@ -19,6 +19,7 @@
 
 * [Installation](https://mmistakes.github.io/minimal-mistakes/docs/installation/)
 * [Jekyll Remote Theme](https://github.com/benbalter/jekyll-remote-theme)
+* [AcademicPages](https://github.com/academicpages/academicpages.github.io)
 * [Adding favicons to website](https://github.com/mmistakes/minimal-mistakes/issues/949): use [Favicon generator](https://realfavicongenerator.net/) to generate the icons and HTML, then drop them into `/assets/icons/` and `/_includes/head/custom.html` respectively. Make sure you update the path to the icons in the HTML file.
 
 ### Social share buttons <!-- omit in toc -->

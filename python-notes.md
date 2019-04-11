@@ -35,6 +35,13 @@ df.set_index('month',inplace=True)
 df.set_index(['year','month'],inplace=True)
 ```
 
+[When plotting a time series, set the timestamps as the index, and ensure they are of the datetime format](https://stackoverflow.com/a/52266133/4573584):
+
+```python
+df.set_index('Timestamp',inplace=True)
+df.index=pd.to_datetime(df.index)
+```
+
 [Return a row / column / particular cell in dataframe](https://stackoverflow.com/a/16729808/4573584):
 
 ```python

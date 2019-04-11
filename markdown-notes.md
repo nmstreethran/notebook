@@ -6,7 +6,13 @@
 - [Lists](#lists)
 - [Hyperlinks](#hyperlinks)
 - [Images](#images)
+- [Tables](#tables)
 - [Code and syntax highlighting](#code-and-syntax-highlighting)
+- [Horizontal rule](#horizontal-rule)
+- [Text alignment](#text-alignment)
+- [Licenses](#licenses)
+- [Blockquotes](#blockquotes)
+- [References](#references)
 
 ## Emphasis
 
@@ -120,18 +126,6 @@ Reference-style:
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
-## Code and syntax highlighting
-
-Inline codes are fenced by single back ticks: `
-
-Code blocks are fenced by triple back ticks: ```
-
-For code blocks, syntax highlighting is possible. Name the language right after the first three back ticks. e.g.:
-
-```md
-```python
-```
-
 ## Tables
 
 ```md
@@ -166,23 +160,11 @@ Markdown | Less | Pretty
 *Still* | `renders` | **nicely**
 1 | 2 | 3
 
-## Blockquotes
+## Code and syntax highlighting
 
-```md
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
+Inline codes are fenced by single back ticks. Code blocks are fenced by triple back ticks. ` ````` `
 
-Quote break.
-
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
-```
-
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
-
-Quote break.
-
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+For code blocks, syntax highlighting is possible. Name the language right after the first three back ticks.
 
 ## Horizontal rule
 
@@ -201,6 +183,24 @@ Three or more hyphens `---`, asterisks `***` or underscores `___`
 ## Licenses
 
 * [License badges](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
+
+## Blockquotes
+
+```md
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
+Quote break.
+
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+```
+
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
+Quote break.
+
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 
 ## References
 

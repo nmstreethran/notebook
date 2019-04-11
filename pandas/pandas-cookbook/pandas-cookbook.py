@@ -370,6 +370,6 @@ df.sort_values(by=('Labs','II'),ascending=False)
 # ## Missing data
 # See the [missing data](https://pandas.pydata.org/pandas-docs/stable/user_guide/missing_data.html#missing-data) docs
 #
-# Fill forward a reversed timeseries
+# Fill forward a reversed time series
 
 #%%

@@ -11,6 +11,7 @@ I use [VSCodium](https://vscodium.github.io/) (open-source alternative to [Visua
 - [LaTeX](/latex-notes.md)
 - [Markdown](/markdown-notes.md)
 - [Python](/python-notes.md)
+- [Visual Studio Code](/vscode-notes.md)
 - [Web development](/webdev-notes.md)
 
 ## Folders

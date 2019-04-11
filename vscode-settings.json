@@ -7,7 +7,6 @@
   "python.jediEnabled": false,
   "python.linting.pylintEnabled": true,
   "python.condaPath": "C:\\Users\\2919124\\AppData\\Local\\Continuum\\anaconda3\\Scripts",
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
   "latex-workshop.view.pdf.viewer": "tab",
   "editor.wordWrap": "on",
   "latex-workshop.intellisense.package.enabled": true,
@@ -98,5 +97,8 @@
   "python.dataScience.exportWithOutputEnabled": true,
   "python.dataScience.sendSelectionToInteractiveWindow": true,
   "window.restoreWindows": "none",
-  "markdown.extension.toc.githubCompatibility": true
+  "markdown.extension.toc.githubCompatibility": true,
+  "explorer.confirmDelete": false,
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+  "explorer.confirmDragAndDrop": false
 }
