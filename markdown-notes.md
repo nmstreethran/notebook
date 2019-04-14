@@ -12,6 +12,8 @@
 - [Text alignment](#text-alignment)
 - [Licenses](#licenses)
 - [Blockquotes](#blockquotes)
+- [Font Awesome](#font-awesome)
+- [Text colours and fonts](#text-colours-and-fonts)
 - [References](#references)
 
 ## Emphasis
@@ -174,7 +176,7 @@ Three or more hyphens `---`, asterisks `***` or underscores `___`
 
 ## [Text alignment](https://stackoverflow.com/q/14051715/4573584)
 
-```md
+```html
 <p align="center">centered text</p>
 ```
 
@@ -202,6 +204,28 @@ Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 
+## [Font Awesome](https://fontawesome.com/) 
+
+```html
+<i class="fab fa-markdown"></i>
+```
+
+<i class="fab fa-markdown"></i>
+
+## Text colours and fonts
+
+```html
+In his beard lived three <span style="color:red">cardinals</span>.
+```
+
+In his beard lived three <span style="color:red">cardinals</span>.
+
+```html
+I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
+```
+
+I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
+
 ## References
 
 1. https://daringfireball.net/projects/markdown/
@@ -211,3 +235,4 @@ Quote break.
 5. https://highlightjs.org/static/demo/
 6. https://help.github.com/en/articles/creating-and-highlighting-code-blocks
 7. https://github.github.com/gfm/
+8. [Squarespace Markdown cheat sheet](https://support.squarespace.com/hc/en-us/articles/206543587-Markdown-cheat-sheet)

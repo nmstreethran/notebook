@@ -12,8 +12,6 @@
 * [GitHub Pages Basics](https://help.github.com/en/categories/github-pages-basics)
 * [Using Jekyll as a static site generator with GitHub Pages](https://help.github.com/en/articles/using-jekyll-as-a-static-site-generator-with-github-pages)
 * [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll)
-* [Jekyll Windows installation](https://jekyllrb.com/docs/installation/windows/)
-* [Jekyll documentation](https://jekyllrb.com/docs/)
 
 ## [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
 
@@ -76,10 +74,16 @@ Check Ruby version:
 ruby --version
 ```
 
-Install Bundler:
+[Install Jekyll and Bundler (after installing Ruby and the PATH environment variable becomes effective)](https://jekyllrb.com/docs/installation/windows/):
+
+```ruby
+gem install jekyll bundler
+```
+
+[Check if Jekyll installed properly](https://jekyllrb.com/docs/installation/windows/):
 
 ```bash
-gem install bundler
+jekyll -v
 ```
 
 [Update Rubygems](https://github.com/jekyll/jekyll/issues/7463):
@@ -91,3 +95,5 @@ gem update --system
 ## See also
 
 1. [Top Ten Static Site Generators of 2017](https://www.netlify.com/blog/2017/05/25/top-ten-static-site-generators-of-2017/)
+2. [Jekyll on Windows](https://jekyllrb.com/docs/installation/windows/)
+3. [Jekyll documentation](https://jekyllrb.com/docs/)

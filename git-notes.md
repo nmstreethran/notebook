@@ -4,9 +4,10 @@
 
 - [Useful links](#useful-links)
 - [Branching](#branching)
-- [Pull requests](#pull-requests)
 - [Removing the last commit](#removing-the-last-commit)
 - [Ignoring files](#ignoring-files)
+- [GitHub](#github)
+  - [Pull requests](#pull-requests)
 
 ## Useful links
 
@@ -20,21 +21,15 @@
 
 List current branches:
 
-```
+```bash
 git branch
 ```
 
 [Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
 
-## Pull requests
-
-* [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
-* [About pull request merges](https://help.github.com/en/articles/about-pull-request-merges)
-* [Merging a pull request](https://help.github.com/en/articles/merging-a-pull-request)
-
 ## [Removing the last commit](https://gist.github.com/CrookedNumber/8964442)
 
-```
+```bash
 git reset --hard HEAD~<num> 
 git push origin -f
 ```
@@ -47,6 +42,16 @@ Replace `<num>` with the number of commits you want to remove. e.g., `git reset 
 
 If you already have a file checked in, and you want to ignore it, Git will not ignore the file if you add a rule later. In those cases, you must untrack the file first, by running the following command in your terminal:
 
-```
+```bash
 $ git rm --cached FILENAME
 ```
+
+## GitHub
+
+* [Delete wiki home page](https://stackoverflow.com/a/42653762/4573584)
+
+### Pull requests
+
+* [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
+* [About pull request merges](https://help.github.com/en/articles/about-pull-request-merges)
+* [Merging a pull request](https://help.github.com/en/articles/merging-a-pull-request)

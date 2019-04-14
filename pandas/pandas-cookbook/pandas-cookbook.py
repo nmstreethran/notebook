@@ -373,3 +373,68 @@ df.sort_values(by=('Labs','II'),ascending=False)
 # Fill forward a reversed time series
 
 #%%
+df=pd.DataFrame(np.random.randn(6,1),
+                index=pd.date_range('2013-08-01', periods=6,freq='B'),
+                columns=list('A'))
+df.loc[df.index[3],'A']=np.nan
+df
+
+#%%
+df.reindex(df.index[::-1]).ffill() # reverse order of index and fill missing value with value of cell above
+
+#%% [markdown]
+# [cumsum reset at NaN values](http://stackoverflow.com/questions/18196811/cumsum-reset-at-nan)
+# ### Replace
+# [Using replace with backrefs](http://stackoverflow.com/questions/16818871/extracting-value-and-creating-new-column-out-of-it)
+# ## Grouping
+# See the [grouping](https://pandas.pydata.org/pandas-docs/stable/user_guide/groupby.html#groupby) docs
+#
+# [Basic grouping with apply](http://stackoverflow.com/questions/15322632/python-pandas-df-groupy-agg-column-reference-in-agg)
+#
+# Unlike agg, apply's callable is passed as a sub-DataFrame, which gives you access to all the columns
+
+#%%
+df = pd.DataFrame({'animal': 'cat dog cat fish dog cat cat'.split(),
+                   'size': list('SSMMMLL'),
+                   'weight': [8, 10, 11, 1, 20, 12, 12],
+                   'adult': [False] * 5 + [True] * 2})
+df
+
+#%%
+# list the size of the animals with the highest weight
+df.groupby('animal').apply(lambda subf: subf['size'][subf['weight'].idxmax()])
+
+#%% [markdown]
+# [using `get_group`](http://stackoverflow.com/questions/14734533/how-to-access-pandas-groupby-dataframe-by-key)
+
+#%%
+gb=df.groupby(['animal'])
+gb.get_group('cat')
+
+#%% [markdown]
+# [apply to different items in a group](http://stackoverflow.com/questions/15262134/apply-different-functions-to-different-items-in-group-object-python-pandas)
+
+#%%
+def GrowUp(x):
+      avg_weight=sum(x[x['size']=='S'].weight*1.5)
+      avg_weight+=sum(x[x['size']=='M'].weight*1.25)
+      avg_weight+=sum(x[x['size']=='L'].weight)
+      avg_weight/=len(x)
+      return pd.Series(['L',avg_weight,True],
+                        index=['size','weight','adult'])
+expected_df=gb.apply(GrowUp)
+expected_df
+
+#%% [markdown]
+# [expanding apply](http://stackoverflow.com/questions/14542145/reductions-down-a-column-in-pandas)
+
+
+#%%
+S=pd.Series([i/100.0 for i in range(1,11)])
+def cum_ret(x,y):
+      return x*(1+y)
+def red(x):
+      return functools.reduce(cum_ret,x,1.0)
+S.expanding().apply(red,raw=True)
+
+#%%

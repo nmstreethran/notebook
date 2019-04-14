@@ -99,6 +99,6 @@
   "window.restoreWindows": "none",
   "markdown.extension.toc.githubCompatibility": true,
   "explorer.confirmDelete": false,
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
   "explorer.confirmDragAndDrop": false
 }
