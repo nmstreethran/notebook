@@ -504,7 +504,7 @@ ts=pd.Series(np.random.randn(1000),
                 index=pd.date_range('1/1/2000',periods=1000))
 ts=ts.cumsum()
 ts.plot()
-plt.savefig('pandas/ts_plot.pdf') # save plot as pdf
+plt.savefig('pandas/pandas-10-min-intro/ts_plot.pdf') # save plot as pdf
 
 #%%
 # on a DataFrame, the plot() method is a convenience to plot all of the columns with labels
@@ -515,7 +515,7 @@ plt.figure()
 df.plot()
 # set legend in best location; change legend text colour to match that of the axes
 plt.setp(plt.legend(loc='best').get_texts(),color='#586e75')
-plt.savefig('pandas/df_plot.pdf') # save plot as pdf
+plt.savefig('pandas/pandas-10-min-intro/df_plot.pdf') # save plot as pdf
 
 #%% [markdown]
 # ## Getting data in / out
@@ -525,27 +525,27 @@ plt.savefig('pandas/df_plot.pdf') # save plot as pdf
 
 #%%
 # writing to a csv file
-df.to_csv('pandas/foo.csv')
+df.to_csv('pandas/pandas-10-min-intro/foo.csv')
 # reading from a csv file
-pd.read_csv('pandas/foo.csv')
+pd.read_csv('pandas/pandas-10-min-intro/foo.csv')
 
 #%% [markdown]
 # ### HDF5
 
 #%% 
 # writing to a HDF5 Store
-df.to_hdf('pandas/foo.h5', 'df')
+df.to_hdf('pandas/pandas-10-min-intro/foo.h5', 'df')
 # reading from a HDF5 Store
-pd.read_hdf('pandas/foo.h5', 'df')
+pd.read_hdf('pandas/pandas-10-min-intro/foo.h5', 'df')
 
 #%% [markdown]
 # ### Excel
 
 #%%
 # writing to an excel file
-df.to_excel('pandas/foo.xlsx',sheet_name='Sheet1')
+df.to_excel('pandas/pandas-10-min-intro/foo.xlsx',sheet_name='Sheet1')
 # reading from an excel file
-pd.read_excel('pandas/foo.xlsx','Sheet1',index_col=None,na_values=['NA'])
+pd.read_excel('pandas/pandas-10-min-intro/foo.xlsx','Sheet1',index_col=None,na_values=['NA'])
 
 #%% [markdown]
 # ## Gotchas

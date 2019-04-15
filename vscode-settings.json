@@ -1,5 +1,5 @@
 {
-  "python.pythonPath": "C:\\Users\\2919124\\AppData\\Local\\Continuum\\anaconda3\\python.exe",
+  "python.pythonPath": "C:\\Users\\2919124\\AppData\\Local\\Continuum\\anaconda3",
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "editor.suggestSelection": "first",
@@ -7,7 +7,6 @@
   "python.jediEnabled": false,
   "python.linting.pylintEnabled": true,
   "python.condaPath": "C:\\Users\\2919124\\AppData\\Local\\Continuum\\anaconda3\\Scripts",
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
   "latex-workshop.view.pdf.viewer": "tab",
   "editor.wordWrap": "on",
   "latex-workshop.intellisense.package.enabled": true,
@@ -95,5 +94,11 @@
   ],
   "cSpell.allowCompoundWords": true,
   "cSpell.maxDuplicateProblems": 2,
-  "python.dataScience.exportWithOutputEnabled": true
+  "python.dataScience.exportWithOutputEnabled": true,
+  "python.dataScience.sendSelectionToInteractiveWindow": true,
+  "window.restoreWindows": "none",
+  "markdown.extension.toc.githubCompatibility": true,
+  "explorer.confirmDelete": false,
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "explorer.confirmDragAndDrop": false
 }

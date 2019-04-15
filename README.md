@@ -1,47 +1,28 @@
-# Useful links for Visual Studio Code
+# coding
 
-* [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings)
+Welcome to my coding repository! 
 
-* [Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+I use [VSCodium](https://vscodium.github.io/) (open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) for my coding. My custom settings and the extensions I use can be found in [vscode-settings.json](/vscode-settings.json) and [vscode-notes.md](/vscode-notes.md) respectively. I have Python version 3.6.8 and conda version 4.6.11.
 
-## Python
+## Notes
 
-* [Python For Beginners](https://www.python.org/about/gettingstarted/)
+- [Anaconda](/anaconda-prompts.md)
+- [Git](/git-notes.md)
+- [LaTeX](/latex-notes.md)
+- [Markdown](/markdown-notes.md)
+- [Python](/python-notes.md)
+- [Python Sololearn](/python-sololearn.md)
+- [Visual Studio Code](/vscode-notes.md)
+- [Web development](/webdev-notes.md)
 
-* [Python Editors](https://wiki.python.org/moin/PythonEditors)
+## Folders
 
-* [Integrated Development Environments](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments)
+- [Pandas tutorials](/pandas/)
+  - Pandas 10 minute introduction ([.py](/pandas/pandas-10-min-intro/pandas-10-min-intro.py) and [.ipynb](/pandas/pandas-10-min-intro/pandas-10-min-intro.ipynb))
+  - Pandas cookbook ([.py](/pandas/pandas-cookbook/pandas-cookbook.py) and [.ipynb](/pandas/pandas-cookbook/pandas-cookbook.ipynb))
+- [Matplotlib](/matplotlib/)
+  - Matplotlib style sheets ([.py](/matplotlib/matplotlib-style-sheets.py) and [.ipynb](/matplotlib/matplotlib-style-sheets.ipynb))
 
-* [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python#_install-python-and-the-python-extension)
+## License
 
-* [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
-
-* [Working with Jupyter Notebooks in Visual Studio Code](https://code.visualstudio.com/docs/python/jupyter-support)
-
-### Packages
-
-* [NumPy](http://www.numpy.org/)
-
-* [scikit-learn](https://scikit-learn.org/stable/)
-
-## HTML
-
-* [HTML in Visual Studio Code](https://code.visualstudio.com/docs/languages/html)
-
-## Visual Studio Code Extensions
-
-* [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
-
-* [hide-gitignored](https://marketplace.visualstudio.com/items?itemName=npxms.hide-gitignored)
-
-* [Anaconda Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-python.anaconda-extension-pack)
-
-* [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-
-* [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
-
-* [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-
-* [Live HTML Previewer](https://marketplace.visualstudio.com/items?itemName=hdg.live-html-previewer)
-
-* [VS Code Jupyter Notebook Previewer](https://marketplace.visualstudio.com/items?itemName=jithurjacob.nbpreviewer)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

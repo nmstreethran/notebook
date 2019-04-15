@@ -1,4 +1,20 @@
-# Markdown notes
+# Markdown notes <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [Emphasis](#emphasis)
+- [Lists](#lists)
+- [Hyperlinks](#hyperlinks)
+- [Images](#images)
+- [Tables](#tables)
+- [Code and syntax highlighting](#code-and-syntax-highlighting)
+- [Horizontal rule](#horizontal-rule)
+- [Text alignment](#text-alignment)
+- [Licenses](#licenses)
+- [Blockquotes](#blockquotes)
+- [Font Awesome](#font-awesome)
+- [Text colours and fonts](#text-colours-and-fonts)
+- [References](#references)
 
 ## Emphasis
 
@@ -15,7 +31,7 @@ Numbered lists
 ```md
 1. first
 2. second
-2. third
+3. third
 ```
 
 1. first
@@ -112,18 +128,6 @@ Reference-style:
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
-## Code and syntax highlighting
-
-Inline codes are fenced by single back ticks: `
-
-Code blocks are fenced by triple back ticks: ```
-
-For code blocks, syntax highlighting is possible. Name the language right after the first three back ticks. e.g.:
-
-```md
-```python
-```
-
 ## Tables
 
 ```md
@@ -135,7 +139,7 @@ Colons can be used to align columns.
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
-The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
+The outer pipes (`|`) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
 
 Markdown | Less | Pretty
 --- | --- | ---
@@ -151,12 +155,36 @@ Colons can be used to align columns.
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
-The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
+The outer pipes (`|`) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
 
 Markdown | Less | Pretty
 --- | --- | ---
 *Still* | `renders` | **nicely**
 1 | 2 | 3
+
+## Code and syntax highlighting
+
+Inline codes are fenced by single back ticks. Code blocks are fenced by triple back ticks. ` ````` `
+
+For code blocks, syntax highlighting is possible. Name the language right after the first three back ticks.
+
+## Horizontal rule
+
+Three or more hyphens `---`, asterisks `***` or underscores `___`
+
+---
+
+## [Text alignment](https://stackoverflow.com/q/14051715/4573584)
+
+```html
+<p align="center">centered text</p>
+```
+
+<p align="center">centered text</p>
+
+## Licenses
+
+* [License badges](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
 
 ## Blockquotes
 
@@ -176,19 +204,35 @@ Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 
-## Horizontal rule
+## [Font Awesome](https://fontawesome.com/) 
 
-Three or more hyphens `---`, asterisks `***` or underscores `___`
+```html
+<i class="fab fa-markdown"></i>
+```
 
----
+<i class="fab fa-markdown"></i>
+
+## Text colours and fonts
+
+```html
+In his beard lived three <span style="color:red">cardinals</span>.
+```
+
+In his beard lived three <span style="color:red">cardinals</span>.
+
+```html
+I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
+```
+
+I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
 
 ## References
 
 1. https://daringfireball.net/projects/markdown/
 2. https://markdown-here.com/
-2. [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-3. [Markdown Here cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
-3. https://highlightjs.org/static/demo/
-4. https://help.github.com/en/articles/creating-and-highlighting-code-blocks
-4. https://github.github.com/gfm/
-5. [Markdown and Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown)
+3. [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+4. [Markdown Here cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
+5. https://highlightjs.org/static/demo/
+6. https://help.github.com/en/articles/creating-and-highlighting-code-blocks
+7. https://github.github.com/gfm/
+8. [Squarespace Markdown cheat sheet](https://support.squarespace.com/hc/en-us/articles/206543587-Markdown-cheat-sheet)
