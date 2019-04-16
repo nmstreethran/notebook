@@ -21,7 +21,7 @@
 
 List current branches:
 
-```bash
+```
 git branch
 ```
 
@@ -29,7 +29,7 @@ git branch
 
 ## [Removing the last commit](https://gist.github.com/CrookedNumber/8964442)
 
-```bash
+```
 git reset --hard HEAD~<num> 
 git push origin -f
 ```
@@ -42,7 +42,7 @@ Replace `<num>` with the number of commits you want to remove. e.g., `git reset 
 
 If you already have a file checked in, and you want to ignore it, Git will not ignore the file if you add a rule later. In those cases, you must untrack the file first, by running the following command in your terminal:
 
-```bash
+```
 $ git rm --cached FILENAME
 ```
 
