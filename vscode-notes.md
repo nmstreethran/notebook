@@ -13,6 +13,7 @@
 
 * [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings)
 * [Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+* [Multi-root Workspaces](https://code.visualstudio.com/docs/editor/multi-root-workspaces)
 
 ## Visual Studio Code Extensions
 

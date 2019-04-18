@@ -105,8 +105,9 @@ venv.bak/
 .mypy_cache/
 
 # Visual Studio Code
-*.code-workspace
+#*.code-workspace
 .vscode/
 
 # others
 python-sololearn.md
+images/operatorprecedence.jpg

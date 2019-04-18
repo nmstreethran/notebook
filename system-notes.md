@@ -4,7 +4,8 @@
 - [Setting or changing the PATH system variable](#setting-or-changing-the-path-system-variable)
 - [Turn on or off secure boot](#turn-on-or-off-secure-boot)
 - [Linux](#linux)
-  - [Fix Grub menu not showing for Windows 10 dual boot](#fix-grub-menu-not-showing-for-windows-10-dual-boot)
+  - [Fix boot order / Grub menu not appearing on startup](#fix-boot-order--grub-menu-not-appearing-on-startup)
+  - [Realtek wifi problems](#realtek-wifi-problems)
 
 ## [Setting or changing the PATH system variable](https://www.java.com/en/download/help/path.xml)
 
@@ -29,22 +30,10 @@ Find the **Secure Boot** setting, and if possible, set it to **Enabled**. This o
 * [Radeon™ Software for Linux® 18.20 Release Notes](https://www.amd.com/en/support/kb/release-notes/rn-prorad-lin-18-20)
 * [VSCodium installation](https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo)
 
-### [Fix Grub menu not showing for Windows 10 dual boot](https://itsfoss.com/no-grub-windows-linux/)
+### Fix boot order / Grub menu not appearing on startup 
 
-Run shell (Command Prompt with admin rights) and the command below
+Windows: go to **Settings charm** > **Change PC settings** > **Update and Recovery** > **Recovery** > **Advanced Startup: Restart now**. When the PC reboots, go to **Troubleshoot** > **Advanced Options: UEFI Firmware Settings**. Change the order of the OS in boot settings.
 
-```shell
-bcdedit /set {bootmgr} path \EFI\ubuntu\grubx64.efi
-```
+### Realtek wifi problems
 
-If this command did not work, reverse it:
-
-```shell
-bcdedit /deletevalue {bootmgr} path \EFI\ubuntu\grubx64.efi
-```
-
-This command sets the boot back to Windows, if the commands above did not work:
-
-```shell
-bcdedit /set {bootmgr} path \EFI\Microsoft\Boot\bootmgfw.efi
-```
+Secure boot should be disabled before installing these drivers.
