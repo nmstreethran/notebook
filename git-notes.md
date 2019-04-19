@@ -7,7 +7,9 @@
 - [Removing the last commit](#removing-the-last-commit)
 - [Ignoring files](#ignoring-files)
 - [GitHub](#github)
-  - [Pull requests](#pull-requests)
+- [Pull requests](#pull-requests)
+- [Errors](#errors)
+- [Including wiki in the main code repository](#including-wiki-in-the-main-code-repository)
 
 ## Useful links
 
@@ -21,17 +23,17 @@
 
 List current branches:
 
-```bash
-git branch
+```shell
+$ git branch
 ```
 
 [Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
 
 ## [Removing the last commit](https://gist.github.com/CrookedNumber/8964442)
 
-```bash
-git reset --hard HEAD~<num> 
-git push origin -f
+```shell
+$ git reset --hard HEAD~<num> 
+$ git push origin -f
 ```
 Replace `<num>` with the number of commits you want to remove. e.g., `git reset --hard HEAD~2` removes the last two commits.
 
@@ -42,7 +44,7 @@ Replace `<num>` with the number of commits you want to remove. e.g., `git reset 
 
 If you already have a file checked in, and you want to ignore it, Git will not ignore the file if you add a rule later. In those cases, you must untrack the file first, by running the following command in your terminal:
 
-```bash
+```shell
 $ git rm --cached FILENAME
 ```
 
@@ -50,8 +52,30 @@ $ git rm --cached FILENAME
 
 * [Delete wiki home page](https://stackoverflow.com/a/42653762/4573584)
 
-### Pull requests
+## Pull requests
 
 * [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
 * [About pull request merges](https://help.github.com/en/articles/about-pull-request-merges)
 * [Merging a pull request](https://help.github.com/en/articles/merging-a-pull-request)
+
+## Errors
+
+```
+fatal: HttpRequestException encountered.
+```
+
+... followed by being prompted for my username and password again.
+
+Solution: [Update Git to the latest version](https://stackoverflow.com/a/49109825/4573584).
+
+## [Including wiki in the main code repository](https://brendancleary.com/2013/03/08/including-a-github-wiki-in-a-repository-as-a-submodule/)
+
+Add the wiki to the main repository as a submodule:
+
+```shell
+$ git submodule add https://github.com/username/project.wiki.git docs
+```
+
+Commit this addition to the main repository and push the changes. Once changes to the wiki within the submodule are made (e.g., new markdown files, images), these changes must first be committed and pushed to the wiki's branch first, before committing and pushing to the main repository's branch. 
+
+See the [Git documentation on submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
