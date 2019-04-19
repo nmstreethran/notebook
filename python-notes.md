@@ -21,7 +21,7 @@
 
 [Drop a row / column](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop.html):
 
-```python
+```py
 df.drop(['B','C'],axis=1) # drop columns
 df.drop(columns=['B','C']) # drop columns (alternative)
 df.drop([0,1]) # drop row by index
@@ -29,7 +29,7 @@ df.drop([0,1]) # drop row by index
 
 [Set index](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index):
 
-```python
+```py
 df.set_index('month',inplace=True)
 # multiindex
 df.set_index(['year','month'],inplace=True)
@@ -37,21 +37,21 @@ df.set_index(['year','month'],inplace=True)
 
 [When plotting a time series, set the timestamps as the index, and ensure they are of the datetime format](https://stackoverflow.com/a/52266133/4573584):
 
-```python
+```py
 df.set_index('Timestamp',inplace=True)
 df.index=pd.to_datetime(df.index)
 ```
 
 [Return a row / column / particular cell in dataframe](https://stackoverflow.com/a/16729808/4573584):
 
-```python
+```py
 df.iloc[0] # returns corresponding row at index 0
 df.iloc[0]['column'] # returns corresponding cell 
 ```
 
 [Extracting parts of a string in a column separated by a delimiter](https://stackoverflow.com/a/44922659/4573584):
 
-```python
+```py
 df['Raw']=
 '(1T XXX, Europe)'
 '(2T YYYY, Latin America)'
@@ -77,13 +77,13 @@ df['Region']=
 
 [Save pandas dataframe plot as pdf](https://stackoverflow.com/a/35484725/4573584):
 
-```python
+```py
 plt.savefig('filename.pdf')
 ```
 
 [Change legend text colour](https://stackoverflow.com/a/47229840/4573584): 
 
-```python
+```py
 plt.setp(plt.legend().get_texts(),color='w')
 ```
 
@@ -91,37 +91,37 @@ plt.setp(plt.legend().get_texts(),color='w')
 
 [Change figure axes facecolour](https://stackoverflow.com/a/39176226/4573584) of inline plot globally:
 
-```python
+```py
 plt.rcParams['axes.facecolor']='red'
 ```
 
 Change figure axes facecolour of pdf plot output globally (when using `plt.savefig(filename.pdf)`):
 
-```python
+```py
 plt.rcParams['savefig.facecolor']='red'
 ```
 
 [Change figure plot area colour](https://stackoverflow.com/a/40371037/4573584) of inline plot globally:
 
-```python
+```py
 plt.rcParams['figure.facecolor']='black'
 ```
 
 ### [Customising plots with style sheets](https://matplotlib.org/users/style_sheets.html)
 
-```python
+```py
 plt.style.use('ggplot')
 ```
 
 To list all available styles, use:
 
-```python
+```py
 print(plt.style.available)
 ```
 
 This gives:
 
-```python
+```py
 ['bmh', 'classic', 'dark_background', 'fast', 'fivethirtyeight', 'ggplot', 'grayscale', 'seaborn-bright', 'seaborn-colorblind', 'seaborn-dark-palette', 'seaborn-dark', 'seaborn-darkgrid', 'seaborn-deep', 'seaborn-muted', 'seaborn-notebook', 'seaborn-paper', 'seaborn-pastel', 'seaborn-poster', 'seaborn-talk', 'seaborn-ticks', 'seaborn-white', 'seaborn-whitegrid', 'seaborn', 'Solarize_Light2', 'tableau-colorblind10', '_classic_test']
 ```
 

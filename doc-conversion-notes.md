@@ -10,6 +10,8 @@
 
 ### Markdown to Beamer
 
+The Easiest Way to Make Presentations! (Pandoc + Markdown) by Luke Smith:
+
 [![The Easiest Way to Make Presentations! (Pandoc + Markdown)](http://img.youtube.com/vi/dum7q6UXiCE/0.jpg)](http://www.youtube.com/watch?v=dum7q6UXiCE)
 
 [Pandoc command](https://pandoc.org/demos.html):

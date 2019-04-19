@@ -60,7 +60,7 @@ $ git rm --cached FILENAME
 
 ## Errors
 
-```
+```shell
 fatal: HttpRequestException encountered.
 ```
 

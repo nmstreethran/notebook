@@ -1,8 +1,10 @@
 # coding
 
-Welcome to my coding repository! 
+Welcome to my coding repository! This is where I keep all my notes organised for various coding tasks, so that I do not have to Google the same thing over and over again. I also store my completed tutorials here.
 
-I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) for my coding. My custom settings and the extensions I use can be found in [vscode-settings.json](/vscode-settings.json) and [vscode-notes.md](/vscode-notes.md) respectively. I have Python version 3.6.8 and conda version 4.6.11.
+I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) for my coding. My custom settings and the extensions I use can be found in [vscode-settings.json](/vscode-settings.json) and [vscode-notes.md](/vscode-notes.md) respectively. 
+
+I have Python version 3.6.8 and conda version 4.6.11.
 
 ## Notes
 
@@ -24,6 +26,9 @@ I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to 
 - [Matplotlib](/matplotlib/)
   - Matplotlib style sheets ([.py](/matplotlib/matplotlib-style-sheets.py) and [.ipynb](/matplotlib/matplotlib-style-sheets.ipynb))
 
-## License
+## Licenses
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Where sources have not been specified:
+
+* Code: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+* Notes / content: [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
