@@ -14,6 +14,7 @@
 - [Blockquotes](#blockquotes)
 - [Font Awesome](#font-awesome)
 - [Text colours and fonts](#text-colours-and-fonts)
+- [YouTube videos](#youtube-videos)
 - [References](#references)
 
 ## Emphasis
@@ -225,6 +226,12 @@ I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
 ```
 
 I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
+
+## YouTube videos
+
+```md
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+```
 
 ## References
 

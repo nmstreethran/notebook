@@ -2,11 +2,12 @@
 
 Welcome to my coding repository! 
 
-I use [VSCodium](https://vscodium.github.io/) (open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) for my coding. My custom settings and the extensions I use can be found in [vscode-settings.json](/vscode-settings.json) and [vscode-notes.md](/vscode-notes.md) respectively. I have Python version 3.6.8 and conda version 4.6.11.
+I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) for my coding. My custom settings and the extensions I use can be found in [vscode-settings.json](/vscode-settings.json) and [vscode-notes.md](/vscode-notes.md) respectively. I have Python version 3.6.8 and conda version 4.6.11.
 
 ## Notes
 
 - [Anaconda](/anaconda-prompts.md)
+- [Document conversion](/doc-conversion-notes.md)
 - [Git](/git-notes.md)
 - [LaTeX](/latex-notes.md)
 - [Markdown](/markdown-notes.md)

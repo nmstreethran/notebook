@@ -12,6 +12,7 @@ My LaTeX documents are compiled using [latexmk](https://ctan.org/pkg/latexmk) on
 	- [Frontmatter, mainmatter and backmatter](#frontmatter-mainmatter-and-backmatter)
 - [Beamer class](#beamer-class)
 	- [Compilation](#compilation-1)
+	- [Themes](#themes)
 	- [Preamble](#preamble-1)
 	- [Other commands](#other-commands)
 
@@ -300,6 +301,10 @@ List of abbreviations:
 ### Compilation
 
 PdfLaTeX > Biber > PdfLaTeX > PdfLaTeX
+
+### Themes
+
+[Beamer theme gallery](http://deic.uab.es/~iblanes/beamer_gallery/index.html)
 
 ### Preamble
 
