@@ -74,7 +74,7 @@ Solution: [Update Git to the latest version](https://stackoverflow.com/a/4910982
 Add the wiki to the main repository as a submodule:
 
 ```shell
-$ git submodule add https://github.com/username/project.wiki.git docs
+$ git submodule add https://github.com/username/project.wiki.git wiki
 ```
 
 Commit this addition to the main repository and push the changes. Once changes to the wiki within the submodule are made (e.g., new markdown files, images), these changes must first be committed and pushed to the wiki's branch first, before committing and pushing to the main repository's branch. 
@@ -86,16 +86,16 @@ See the [Git documentation on submodules](https://git-scm.com/book/en/v2/Git-Too
 ```shell
 git clone git://github.com/you/proj
 cd proj
-git remote add -f wiki git://github.com/you/proj.wiki
-git merge -s ours --no-commit --allow-unrelated wiki/master
-git read-tree --prefix=wiki/ -u wiki/master
-git commit -m "Github wiki subtree merged in wiki/"
+git remote add -f docs git://github.com/you/proj.wiki
+git merge -s ours --no-commit --allow-unrelated docs/master
+git read-tree --prefix=docs/ -u docs/master
+git commit -m "Github docs subtree merged in docs/"
 ```
 
 Changes made in the actual wiki can be merged to the main code repository:
 
 ```shell
-git pull -s subtree wiki master
+git pull -s subtree docs master
 ```
 
 Unfortunately, merging changes the other way is complicated.
