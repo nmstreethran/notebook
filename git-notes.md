@@ -9,7 +9,8 @@
 - [GitHub](#github)
 - [Pull requests](#pull-requests)
 - [Errors](#errors)
-- [Including wiki in the main code repository](#including-wiki-in-the-main-code-repository)
+- [Including wiki in the main code repository as a submodule](#including-wiki-in-the-main-code-repository-as-a-submodule)
+- [Including wiki in the main code repository as a subtree](#including-wiki-in-the-main-code-repository-as-a-subtree)
 
 ## Useful links
 
@@ -68,7 +69,7 @@ fatal: HttpRequestException encountered.
 
 Solution: [Update Git to the latest version](https://stackoverflow.com/a/49109825/4573584).
 
-## [Including wiki in the main code repository](https://brendancleary.com/2013/03/08/including-a-github-wiki-in-a-repository-as-a-submodule/)
+## [Including wiki in the main code repository as a submodule](https://brendancleary.com/2013/03/08/including-a-github-wiki-in-a-repository-as-a-submodule/)
 
 Add the wiki to the main repository as a submodule:
 
@@ -79,3 +80,24 @@ $ git submodule add https://github.com/username/project.wiki.git docs
 Commit this addition to the main repository and push the changes. Once changes to the wiki within the submodule are made (e.g., new markdown files, images), these changes must first be committed and pushed to the wiki's branch first, before committing and pushing to the main repository's branch. 
 
 See the [Git documentation on submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+
+## [Including wiki in the main code repository as a subtree](https://stackoverflow.com/a/33182223/4573584)
+
+```shell
+git clone git://github.com/you/proj
+cd proj
+git remote add -f wiki git://github.com/you/proj.wiki
+git merge -s ours --no-commit --allow-unrelated wiki/master
+git read-tree --prefix=wiki/ -u wiki/master
+git commit -m "Github wiki subtree merged in wiki/"
+```
+
+Changes made in the actual wiki can be merged to the main code repository:
+
+```shell
+git pull -s subtree wiki master
+```
+
+Unfortunately, merging changes the other way is complicated.
+
+More about subtree merges on [GitHub](https://help.github.com/en/articles/about-git-subtree-merges).
