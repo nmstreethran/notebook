@@ -5,6 +5,7 @@
 - [Minimal Mistakes](#minimal-mistakes)
 - [Local](#local)
 - [System](#system)
+- [reveal.js](#revealjs)
 - [See also](#see-also)
 
 ## [GitHub Pages](https://pages.github.com/)
@@ -91,6 +92,11 @@ jekyll -v
 ```bash
 gem update --system
 ```
+
+## [reveal.js](https://revealjs.com/)
+
+* [GitHub repository](https://github.com/hakimel/reveal.js)
+* [Node.js](https://nodejs.org/en/)
 
 ## See also
 

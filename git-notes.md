@@ -9,8 +9,11 @@
 - [GitHub](#github)
 - [Pull requests](#pull-requests)
 - [Errors](#errors)
-- [Including wiki in the main code repository as a submodule](#including-wiki-in-the-main-code-repository-as-a-submodule)
-- [Including wiki in the main code repository as a subtree](#including-wiki-in-the-main-code-repository-as-a-subtree)
+- [Submodules and subtrees](#submodules-and-subtrees)
+  - [Including wiki in the main code repository as a submodule](#including-wiki-in-the-main-code-repository-as-a-submodule)
+  - [Renaming submodules](#renaming-submodules)
+  - [Deinit old submodule, remove the directory and create a new submodule](#deinit-old-submodule-remove-the-directory-and-create-a-new-submodule)
+  - [Including wiki in the main code repository as a subtree](#including-wiki-in-the-main-code-repository-as-a-subtree)
 
 ## Useful links
 
@@ -69,7 +72,25 @@ fatal: HttpRequestException encountered.
 
 Solution: [Update Git to the latest version](https://stackoverflow.com/a/49109825/4573584).
 
-## [Including wiki in the main code repository as a submodule](https://brendancleary.com/2013/03/08/including-a-github-wiki-in-a-repository-as-a-submodule/)
+```shell
+fatal: remote docs already exists.
+```
+
+Solution: [remove the remote repository](https://stackoverflow.com/a/1221874/4573584)
+
+```shell
+git remote rm docs
+```
+
+## Submodules and subtrees
+
+***For wikis:***
+1. ***make all changes in the submodule***
+2. ***push the changes to the submodule's master branch***
+3. ***merge the changes to the subtree***
+4. ***push to the main code repository***
+
+### [Including wiki in the main code repository as a submodule](https://brendancleary.com/2013/03/08/including-a-github-wiki-in-a-repository-as-a-submodule/)
 
 Add the wiki to the main repository as a submodule:
 
@@ -81,7 +102,21 @@ Commit this addition to the main repository and push the changes. Once changes t
 
 See the [Git documentation on submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
-## [Including wiki in the main code repository as a subtree](https://stackoverflow.com/a/33182223/4573584)
+### [Renaming submodules](https://stackoverflow.com/a/18712756/4573584)
+
+```shell
+git mv oldname newname
+```
+
+### [Deinit old submodule, remove the directory and create a new submodule](https://stackoverflow.com/a/22309234/4573584)
+
+```shell
+git submodule deinit <submodule name>
+git rm <submodule folder name>
+git submodule add <address to remote git repo> <new folder name>
+```
+
+### [Including wiki in the main code repository as a subtree](https://stackoverflow.com/a/33182223/4573584)
 
 ```shell
 git clone git://github.com/you/proj

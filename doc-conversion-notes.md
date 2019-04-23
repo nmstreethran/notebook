@@ -4,7 +4,7 @@
 - [Pandoc](#pandoc)
   - [Markdown to Beamer](#markdown-to-beamer)
   - [Markdown to PDF](#markdown-to-pdf)
-- [reveal.js](#revealjs)
+  - [Markdown to reveal.js](#markdown-to-revealjs)
 
 ## [Pandoc](https://pandoc.org/)
 
@@ -87,7 +87,33 @@ geometry:
 ---
 ```
 
-## [reveal.js](https://revealjs.com/)
+### Markdown to reveal.js
 
-* [GitHub repository](https://github.com/hakimel/reveal.js)
-* [Node.js](https://nodejs.org/en/)
+[Pandoc commands](https://pandoc.org/demos.html):
+
+* For slides with math:
+
+```shell
+pandoc -s --mathjax -i -t revealjs SLIDES.txt -o example16d.html
+```
+
+```shell
+pandoc -t revealjs -s habits.txt -o habits.html
+```
+
+[YAML metadata](http://pandoc.org/MANUAL.html#variables-for-html-slides):
+
+```yml
+---
+revealjs-url:
+- https://revealjs.com/
+title:
+- Title
+author:
+- Author
+date:
+- 20/04/2019
+theme:
+- white
+---
+```
