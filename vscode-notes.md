@@ -3,11 +3,12 @@
 ## Table of contents <!-- omit in toc -->
 
 - [Useful links](#useful-links)
-- [Visual Studio Code Extensions](#visual-studio-code-extensions)
+- [Visual Studio Code extensions](#visual-studio-code-extensions)
 - [Python](#python)
 - [Git](#git)
 - [Markdown](#markdown)
 - [HTML](#html)
+- [Keyboard shortcuts](#keyboard-shortcuts)
 
 ## Useful links 
 
@@ -15,7 +16,7 @@
 * [Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 * [Multi-root Workspaces](https://code.visualstudio.com/docs/editor/multi-root-workspaces)
 
-## Visual Studio Code Extensions
+## Visual Studio Code extensions
 
 * [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 * [hide-gitignored](https://marketplace.visualstudio.com/items?itemName=npxms.hide-gitignored)
@@ -46,3 +47,11 @@
 ## HTML
 
 * [HTML in Visual Studio Code](https://code.visualstudio.com/docs/languages/html)
+
+## [Keyboard shortcuts](https://vslive.com/Blogs/News-and-Tips/2015/04/5-VS-Keyboard-Shortcuts.aspx)
+
+* Move Code: `Alt+Up` / `Alt+Down`
+* Create Collapsible Region: `Ctrl+M+H` / `Ctrl+M+U`
+* Comment / uncomment Code Block: `Ctrl+K+C` / `Ctrl+K+U`
+* Peek Definition: `Alt+F12`
+* Navigate Forward / Backward: `Ctrl+–` / `Ctrl+Shift+–` 

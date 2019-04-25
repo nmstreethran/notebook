@@ -4,6 +4,8 @@
 - [Setting or changing the PATH system variable](#setting-or-changing-the-path-system-variable)
 - [Turn on or off secure boot](#turn-on-or-off-secure-boot)
 - [Linux](#linux)
+  - [Using the terminal](#using-the-terminal)
+  - [Drivers and applications](#drivers-and-applications)
   - [Fix boot order / Grub menu not appearing on startup](#fix-boot-order--grub-menu-not-appearing-on-startup)
   - [Realtek wifi problems](#realtek-wifi-problems)
 
@@ -25,6 +27,17 @@ Or, from Windows: go to **Settings charm** > **Change PC settings** > **Update a
 Find the **Secure Boot** setting, and if possible, set it to **Enabled**. This option is usually in either the **Security** tab, the **Boot** tab, or the **Authentication** tab.
 
 ## Linux
+
+### [Using the terminal](https://help.ubuntu.com/community/UsingTheTerminal)
+
+Changing directories using `cd`:
+
+* To navigate into the root directory: `cd /`
+* To navigate to your home directory: `cd` or `cd ~`
+* To navigate up one directory level: `cd ..`
+* To navigate to the previous directory (or back): `cd -`
+
+### Drivers and applications
 
 * [Radeon Software for Linux Installation](https://www.amd.com/en/support/kb/release-notes/AMDGPU-INSTALLATION)
 * [Radeon™ Software for Linux® 18.20 Release Notes](https://www.amd.com/en/support/kb/release-notes/rn-prorad-lin-18-20)
