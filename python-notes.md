@@ -73,6 +73,23 @@ df['Region']=
 'Africa'
 ```
 
+[Show all the rows or columns from a DataFrame in Jupyter](https://songhuiming.github.io/pages/2017/04/02/jupyter-and-pandas-display/):
+
+```py
+# set up display area to show dataframe 
+pd.set_option('display.height',1000)
+pd.set_option('display.max_rows',500)
+pd.set_option('display.max_columns',500)
+pd.set_option('display.width',1000)
+```
+
+[Display all text in a cell without truncation in Jupyter](https://songhuiming.github.io/pages/2017/04/02/jupyter-and-pandas-display/):
+
+```py
+pd.options.display.max_rows
+pd.set_option('display.max_colwidth',-1)
+```
+
 ## [Matplotlib](https://matplotlib.org/)
 
 [Save pandas dataframe plot as pdf](https://stackoverflow.com/a/35484725/4573584):
