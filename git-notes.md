@@ -79,7 +79,7 @@ fatal: remote docs already exists.
 Solution: [remove the remote repository](https://stackoverflow.com/a/1221874/4573584)
 
 ```shell
-git remote rm docs
+$ git remote rm docs
 ```
 
 ## Submodules and subtrees
@@ -105,32 +105,32 @@ See the [Git documentation on submodules](https://git-scm.com/book/en/v2/Git-Too
 ### [Renaming submodules](https://stackoverflow.com/a/18712756/4573584)
 
 ```shell
-git mv oldname newname
+$ git mv oldname newname
 ```
 
 ### [Deinit old submodule, remove the directory and create a new submodule](https://stackoverflow.com/a/22309234/4573584)
 
 ```shell
-git submodule deinit <submodule name>
-git rm <submodule folder name>
-git submodule add <address to remote git repo> <new folder name>
+$ git submodule deinit <submodule name>
+$ git rm <submodule folder name>
+$ git submodule add <address to remote git repo> <new folder name>
 ```
 
 ### [Including wiki in the main code repository as a subtree](https://stackoverflow.com/a/33182223/4573584)
 
 ```shell
-git clone git://github.com/you/proj
-cd proj
-git remote add -f docs git://github.com/you/proj.wiki
-git merge -s ours --no-commit --allow-unrelated docs/master
-git read-tree --prefix=docs/ -u docs/master
-git commit -m "Github docs subtree merged in docs/"
+$ git clone git://github.com/you/proj
+$ cd proj
+$ git remote add -f docs git://github.com/you/proj.wiki
+$ git merge -s ours --no-commit --allow-unrelated docs/master
+$ git read-tree --prefix=docs/ -u docs/master
+$ git commit -m "Github docs subtree merged in docs/"
 ```
 
 Changes made in the actual wiki can be merged to the main code repository:
 
 ```shell
-git pull -s subtree docs master
+$ git pull -s subtree docs master
 ```
 
 Unfortunately, merging changes the other way is complicated.

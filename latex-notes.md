@@ -1,6 +1,6 @@
 # LaTeX notes <!-- omit in toc -->
 
-My LaTeX documents are compiled using [latexmk](https://ctan.org/pkg/latexmk) on [VSCodium](https://vscodium.github.io/) (open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) and [texlive](https://tug.org/texlive/).
+My LaTeX documents are compiled using [latexmk](https://ctan.org/pkg/latexmk) on [VSCodium](https://vscodium.github.io/) (open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) and [TeXlive](https://tug.org/texlive/).
 
 ## Table of contents <!-- omit in toc -->
 
@@ -10,6 +10,7 @@ My LaTeX documents are compiled using [latexmk](https://ctan.org/pkg/latexmk) on
 	- [Compilation](#compilation)
 	- [Preamble](#preamble)
 	- [Frontmatter, mainmatter and backmatter](#frontmatter-mainmatter-and-backmatter)
+	- [Word count](#word-count)
 - [Beamer class](#beamer-class)
 	- [Compilation](#compilation-1)
 	- [Themes](#themes)
@@ -294,6 +295,20 @@ List of abbreviations:
 	\renewcommand\chaptername{Appendix} % 
 %	\setcounter{footnote}{0} % reset footnote counter for appendix
 }
+```
+
+### Word count
+
+[TeXcount](http://ctan.uib.no/support/texcount/doc/TeXcount.pdf) package documentation.
+
+[Ignore sections or inputs of a document when calculating the number of words using TeXcount](https://tex.stackexchange.com/a/259296/140109):
+
+```latex
+% regions between TC:ignore and TC:endignore will be ignored from word count
+%TC:ignore 
+\appendix
+And now for something completely different
+%TC:endignore 
 ```
 
 ## Beamer class
