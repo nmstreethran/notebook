@@ -100,5 +100,29 @@
   "explorer.confirmDelete": false,
   "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
   "explorer.confirmDragAndDrop": false,
-  "workbench.colorTheme": "Monokai"
-}
+  "latex-workshop.texcount.path": "C:\\Users\\2919124\\texlive\\2018\\bin\\win32\\texcount.exe",
+  "githubPullRequests.defaultMergeMethod": "squash",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Material Theme Ocean High Contrast",
+  "workbench.colorCustomizations": {
+    "activityBarBadge.background": "#ffe23b",
+    "list.activeSelectionForeground": "#ffe23b",
+    "list.inactiveSelectionForeground": "#ffe23b",
+    "list.highlightForeground": "#ffe23b",
+    "scrollbarSlider.activeBackground": "#ffe23b",
+    "editorSuggestWidget.highlightForeground": "#ffe23b",
+    "textLink.foreground": "#ffe23b",
+    "progressBar.background": "#ffe23b",
+    "pickerGroup.foreground": "#ffe23b",
+    "tab.activeBorder": "#ffe23b",
+    "notificationLink.foreground": "#ffe23b",
+    "editorWidget.resizeBorder": "#ffe23b",
+    "editorWidget.border": "#ffe23b",
+    "settings.modifiedItemIndicator": "#ffe23b",
+    "settings.headerForeground": "#ffe23b",
+    "panelTitle.activeBorder": "#ffe23b",
+    "breadcrumb.activeSelectionForeground": "#ffe23b",
+    "menu.selectionForeground": "#ffe23b",
+    "menubar.selectionForeground": "#ffe23b"
+  }
+} 
