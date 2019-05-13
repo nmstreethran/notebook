@@ -4,7 +4,12 @@ Welcome to my coding repository! This is where I keep all my notes organised for
 
 I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) for my coding. My custom settings and the extensions I use can be found in [vscode-settings.json](/vscode-settings.json) and [vscode-notes.md](/vscode-notes.md) respectively. 
 
-I have Python version 3.6.8 and conda version 4.6.11.
+Computing:
+* Python version 3.6.8
+* conda version 4.6.11
+* git version 2.18.0.windows.1
+* Processor: Intel(R) Core(TM) i5-7200U CPU @ 250 GHz 2.71 GHz
+* RAM: 8 GB
 
 ## Notes
 
