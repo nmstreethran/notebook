@@ -55,6 +55,7 @@ $ git rm --cached FILENAME
 ## GitHub
 
 * [Delete wiki home page](https://stackoverflow.com/a/42653762/4573584)
+* [GitHub Wiki How-To](https://gist.github.com/subfuzion/0d3f19c4f780a7d75ba2)
 
 ## Pull requests
 
@@ -133,6 +134,6 @@ Changes made in the actual wiki can be merged to the main code repository:
 $ git pull -s subtree docs master
 ```
 
-Unfortunately, merging changes the other way is complicated.
+Merging changes the other way is complicated.
 
 More about subtree merges on [GitHub](https://help.github.com/en/articles/about-git-subtree-merges).

@@ -31,9 +31,6 @@ Computing:
 - [Matplotlib](/matplotlib/)
   - Matplotlib style sheets ([.py](/matplotlib/matplotlib-style-sheets.py) and [.ipynb](/matplotlib/matplotlib-style-sheets.ipynb))
 
-## Licenses
+## Credits
 
-Where sources have not been specified:
-
-* Code: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-* Notes / content: [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+Sources have been attributed within the notes.

@@ -15,7 +15,8 @@
 - [Font Awesome](#font-awesome)
 - [Text colours and fonts](#text-colours-and-fonts)
 - [YouTube videos](#youtube-videos)
-- [References](#references)
+- [Footnotes](#footnotes)
+- [Sources](#sources)
 
 ## Emphasis
 
@@ -177,7 +178,7 @@ Three or more hyphens `---`, asterisks `***` or underscores `___`
 
 ## [Text alignment](https://stackoverflow.com/q/14051715/4573584)
 
-```html
+```md
 <p align="center">centered text</p>
 ```
 
@@ -185,7 +186,7 @@ Three or more hyphens `---`, asterisks `***` or underscores `___`
 
 ## Licenses
 
-* [License badges](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
+* [License badges using Shields.io](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
 
 ## Blockquotes
 
@@ -207,21 +208,19 @@ Quote break.
 
 ## [Font Awesome](https://fontawesome.com/) 
 
-```html
+```md
 <i class="fab fa-markdown"></i>
 ```
-
-<i class="fab fa-markdown"></i>
 
 ## Text colours and fonts
 
-```html
+```md
 In his beard lived three <span style="color:red">cardinals</span>.
 ```
 
 In his beard lived three <span style="color:red">cardinals</span>.
 
-```html
+```md
 I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
 ```
 
@@ -233,7 +232,30 @@ I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 ```
 
-## References
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+
+## [Footnotes](https://stackoverflow.com/a/32119820/4573584)
+
+In text:
+
+```md
+Bla bla <sup id="a1">[1](#f1)</sup> or <sup name="a2">[2](#f2)</sup>
+```
+
+In the footnote:
+
+```md
+<b id="f1">1</b> Footnote content here. [↩](#a1)
+<b name="f2">2</b> Footnote content here. [↩](#a2)
+```
+
+Bla bla <sup id="a1">[1](#f1)</sup> or <sup name="a2">[2](#f2)</sup>
+
+<b id="f1">1</b> Footnote content here. [↩](#a1)
+
+<b name="f2">2</b> Footnote content here. [↩](#a2)
+
+## Sources
 
 1. https://daringfireball.net/projects/markdown/
 2. https://markdown-here.com/

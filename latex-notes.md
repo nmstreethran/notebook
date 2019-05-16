@@ -241,6 +241,13 @@ Tables:
 \newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}} 
 ```
 
+[Globally change table font size](https://tex.stackexchange.com/a/220258/140109):
+
+```latex
+\let\oldtabular\tabular
+\renewcommand{\tabular}{\footnotesize\oldtabular}
+```
+
 Bibliography package:
 
 ```latex

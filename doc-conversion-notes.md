@@ -87,6 +87,32 @@ geometry:
 ---
 ```
 
+Command line formatting and metadata:
+
+* [Page title or title](https://groups.google.com/d/msg/pandoc-discuss/CyiyBJOn5Gs/Olo3aq1qAi0J):
+
+```shell
+pandoc -s -V "pagetitle:My Doc Title" -V "title:My Doc Title" 
+```
+
+* Today's date:
+
+```shell
+-M date="`date "+%B %e, %Y"`"
+```
+
+or
+
+```shell
+--metadata date="`date +%D`"
+```
+
+To obtain date formats:
+
+```shell
+date --help
+```
+
 ### Markdown to reveal.js
 
 [Pandoc commands](https://pandoc.org/demos.html):
