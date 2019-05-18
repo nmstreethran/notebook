@@ -31,6 +31,18 @@ List current branches:
 $ git branch
 ```
 
+[Create branch in old commit](https://stackoverflow.com/a/2816728/4573584):
+
+```shell
+$ git branch branchname <sha1-of-commit>
+```
+
+or using symbolic reference:
+
+```shell
+$ git branch branchname HEAD~3
+```
+
 [Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
 
 ## [Removing the last commit](https://gist.github.com/CrookedNumber/8964442)
@@ -122,8 +134,8 @@ $ git submodule add <address to remote git repo> <new folder name>
 ```shell
 $ git clone git://github.com/you/proj
 $ cd proj
-$ git remote add -f docs git://github.com/you/proj.wiki
-$ git merge -s ours --no-commit --allow-unrelated docs/master
+$ git remote add -f docs https://github.com/you/proj.wiki.git
+$ git merge -s ours --no-commit --allow-unrelated-histories docs/master
 $ git read-tree --prefix=docs/ -u docs/master
 $ git commit -m "Github docs subtree merged in docs/"
 ```

@@ -10,7 +10,7 @@
 - [Code and syntax highlighting](#code-and-syntax-highlighting)
 - [Horizontal rule](#horizontal-rule)
 - [Text alignment](#text-alignment)
-- [Licenses](#licenses)
+- [Badges](#badges)
 - [Blockquotes](#blockquotes)
 - [Font Awesome](#font-awesome)
 - [Text colours and fonts](#text-colours-and-fonts)
@@ -184,9 +184,22 @@ Three or more hyphens `---`, asterisks `***` or underscores `___`
 
 <p align="center">centered text</p>
 
-## Licenses
+## Badges
 
 * [License badges using Shields.io](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
+
+Using [Shields.io](https://shields.io/category/social) badges with [custom logo](https://stackoverflow.com/a/41472017/4573584):
+
+[![tyle-Flat-appveyor](https://img.shields.io/badge/style-flat-green.svg?logo=appveyor&style=flat)](https://img.shields.io/badge/style-flat-green.svg?logo=appveyor&style=flat)
+
+```md
+[![Style-Flat-appveyor](https://img.shields.io/badge/style-flat-green.svg?logo=appveyor&style=flat)](https://img.shields.io/badge/style-flat-green.svg?logo=appveyor&style=flat)
+```
+
+Use the following to obtain `?logo=data:image/png;base64,…`:
+
+* [Base-64 encoding tool](http://b64.io/)
+* [Encoder/decoder tool for percent encoding](http://meyerweb.com/eric/tools/dencoder/)
 
 ## Blockquotes
 
