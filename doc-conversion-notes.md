@@ -5,18 +5,17 @@
   - [Markdown to Beamer](#markdown-to-beamer)
   - [Markdown to PDF](#markdown-to-pdf)
   - [Markdown to reveal.js](#markdown-to-revealjs)
+  - [Input multiple files](#input-multiple-files)
 
 ## [Pandoc](https://pandoc.org/)
 
 ### Markdown to Beamer
 
-The Easiest Way to Make Presentations! (Pandoc + Markdown) by Luke Smith:
-
-[![The Easiest Way to Make Presentations! (Pandoc + Markdown)](http://img.youtube.com/vi/dum7q6UXiCE/0.jpg)](http://www.youtube.com/watch?v=dum7q6UXiCE)
+[The Easiest Way to Make Presentations! (Pandoc + Markdown)](http://www.youtube.com/watch?v=dum7q6UXiCE) by Luke Smith on YouTube
 
 [Pandoc command](https://pandoc.org/demos.html):
 
-```shell
+```sh
 pandoc -t beamer file.md -o file.pdf
 ```
 
@@ -50,7 +49,7 @@ keywords:
 
 [Pandoc command](https://pandoc.org/demos.html)
 
-```shell
+```sh
 pandoc file.txt --pdf-engine=pdflatex -o file.pdf
 ```
 
@@ -91,25 +90,25 @@ Command line formatting and metadata:
 
 * [Page title or title](https://groups.google.com/d/msg/pandoc-discuss/CyiyBJOn5Gs/Olo3aq1qAi0J):
 
-```shell
+```sh
 pandoc -s -V "pagetitle:My Doc Title" -V "title:My Doc Title" 
 ```
 
 * Today's date:
 
-```shell
+```sh
 -M date="`date "+%B %e, %Y"`"
 ```
 
 or
 
-```shell
+```sh
 --metadata date="`date +%D`"
 ```
 
 To obtain date formats:
 
-```shell
+```sh
 date --help
 ```
 
@@ -119,11 +118,11 @@ date --help
 
 * For slides with math:
 
-```shell
+```sh
 pandoc -s --mathjax -i -t revealjs SLIDES.txt -o example16d.html
 ```
 
-```shell
+```sh
 pandoc -t revealjs -s habits.txt -o habits.html
 ```
 
@@ -142,4 +141,10 @@ date:
 theme:
 - white
 ---
+```
+
+### [Input multiple files](https://gist.github.com/xuanlongma/5564190)
+
+```sh
+pandoc -s input1.md input2.md input3.md -o output.html
 ```

@@ -6,6 +6,9 @@
 - [Branching](#branching)
 - [Removing the last commit](#removing-the-last-commit)
 - [Ignoring files](#ignoring-files)
+  - [Templates](#templates)
+  - [Remove checked in file](#remove-checked-in-file)
+  - [Ignoring files with exceptions](#ignoring-files-with-exceptions)
 - [GitHub](#github)
 - [Pull requests](#pull-requests)
 - [Errors](#errors)
@@ -27,19 +30,19 @@
 
 List current branches:
 
-```shell
+```sh
 $ git branch
 ```
 
 [Create branch in old commit](https://stackoverflow.com/a/2816728/4573584):
 
-```shell
+```sh
 $ git branch branchname <sha1-of-commit>
 ```
 
 or using symbolic reference:
 
-```shell
+```sh
 $ git branch branchname HEAD~3
 ```
 
@@ -47,7 +50,7 @@ $ git branch branchname HEAD~3
 
 ## [Removing the last commit](https://gist.github.com/CrookedNumber/8964442)
 
-```shell
+```sh
 $ git reset --hard HEAD~<num> 
 $ git push origin -f
 ```
@@ -55,13 +58,28 @@ Replace `<num>` with the number of commits you want to remove. e.g., `git reset 
 
 ## [Ignoring files](https://help.github.com/en/articles/ignoring-files)
 
+### Templates
+
 * [A collection of useful .gitignore templates](https://github.com/github/gitignore)
 * [gitignore.io](https://www.gitignore.io/)
 
+### Remove checked in file
+
 If you already have a file checked in, and you want to ignore it, Git will not ignore the file if you add a rule later. In those cases, you must untrack the file first, by running the following command in your terminal:
 
-```shell
+```sh
 $ git rm --cached FILENAME
+```
+
+### [Ignoring files with exceptions](https://stackoverflow.com/a/16318111/4573584)
+
+Ignore the `pippo` folder except `pippo/pluto/paperino.xml`:
+
+```sh
+pippo/*
+!pippo/pluto
+pippo/pluto/*
+!pippo/pluto/paperino.xml
 ```
 
 ## GitHub
@@ -77,7 +95,7 @@ $ git rm --cached FILENAME
 
 ## Errors
 
-```shell
+```sh
 fatal: HttpRequestException encountered.
 ```
 
@@ -85,13 +103,13 @@ fatal: HttpRequestException encountered.
 
 Solution: [Update Git to the latest version](https://stackoverflow.com/a/49109825/4573584).
 
-```shell
+```sh
 fatal: remote docs already exists.
 ```
 
 Solution: [remove the remote repository](https://stackoverflow.com/a/1221874/4573584)
 
-```shell
+```sh
 $ git remote rm docs
 ```
 
@@ -107,7 +125,7 @@ $ git remote rm docs
 
 Add the wiki to the main repository as a submodule:
 
-```shell
+```sh
 $ git submodule add https://github.com/username/project.wiki.git wiki
 ```
 
@@ -117,13 +135,13 @@ See the [Git documentation on submodules](https://git-scm.com/book/en/v2/Git-Too
 
 ### [Renaming submodules](https://stackoverflow.com/a/18712756/4573584)
 
-```shell
+```sh
 $ git mv oldname newname
 ```
 
 ### [Deinit old submodule, remove the directory and create a new submodule](https://stackoverflow.com/a/22309234/4573584)
 
-```shell
+```sh
 $ git submodule deinit <submodule name>
 $ git rm <submodule folder name>
 $ git submodule add <address to remote git repo> <new folder name>
@@ -131,7 +149,7 @@ $ git submodule add <address to remote git repo> <new folder name>
 
 ### [Including wiki in the main code repository as a subtree](https://stackoverflow.com/a/33182223/4573584)
 
-```shell
+```sh
 $ git clone git://github.com/you/proj
 $ cd proj
 $ git remote add -f docs https://github.com/you/proj.wiki.git
@@ -142,7 +160,7 @@ $ git commit -m "Github docs subtree merged in docs/"
 
 Changes made in the actual wiki can be merged to the main code repository:
 
-```shell
+```sh
 $ git pull -s subtree docs master
 ```
 

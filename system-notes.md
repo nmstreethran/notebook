@@ -5,6 +5,8 @@
 - [Turn on or off secure boot](#turn-on-or-off-secure-boot)
 - [Linux](#linux)
   - [Using the terminal](#using-the-terminal)
+  - [Copy files from one directory to another, ignoring all .files and .dirs](#copy-files-from-one-directory-to-another-ignoring-all-files-and-dirs)
+  - [Running commands stored in a file](#running-commands-stored-in-a-file)
   - [Drivers and applications](#drivers-and-applications)
   - [Fix boot order / Grub menu not appearing on startup](#fix-boot-order--grub-menu-not-appearing-on-startup)
   - [Realtek wifi problems](#realtek-wifi-problems)
@@ -36,6 +38,18 @@ Changing directories using `cd`:
 * To navigate to your home directory: `cd` or `cd ~`
 * To navigate up one directory level: `cd ..`
 * To navigate to the previous directory (or back): `cd -`
+
+### [Copy files from one directory to another, ignoring all .files and .dirs](https://stackoverflow.com/a/11557164/4573584)
+
+```sh
+cp -r SRC_DIR/* DEST_DIR
+```
+
+### [Running commands stored in a file](https://stackoverflow.com/a/13568021/4573584)
+
+```sh
+bash file
+```
 
 ### Drivers and applications
 
