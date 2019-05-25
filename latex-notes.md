@@ -5,7 +5,10 @@ My LaTeX documents are compiled using [latexmk](https://ctan.org/pkg/latexmk) on
 ## Table of contents <!-- omit in toc -->
 
 - [General](#general)
-	- [Bibliography](#bibliography)
+- [Bibliography](#bibliography)
+	- [Patches](#patches)
+	- [BibLaTeX styles](#biblatex-styles)
+	- [Listing entries without in-text citation](#listing-entries-without-in-text-citation)
 - [Book / article / report document class](#book--article--report-document-class)
 	- [Compilation](#compilation)
 	- [Preamble](#preamble)
@@ -60,7 +63,9 @@ pdfkeywords={keyword1,keyword2}]{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,pdfcopyright=\copyright,pdflicenseurl=\licenseurl,pdfcontactemail=email@mail.com}
 ```
 
-### Bibliography
+## Bibliography
+
+### Patches
 
 To remove empty parentheses if year not provided for `@online`:
 
@@ -103,6 +108,34 @@ Removes unwanted fields for all reference types, except `@misc`:
 ```latex
 \DeclareBibliographyAlias{software}{online}
 ```
+
+### [BibLaTeX styles](https://www.overleaf.com/learn/latex/Biblatex_citation_styles)
+
+Alphanumeric style - [edit to include title for entries with no author and 'ND' for entries with no date; minimum 4 characters for title/author](https://tex.stackexchange.com/a/68875/140109)
+
+```latex
+\usepackage[backend=biber,style=alphabetic,urldate=long,maxalphanames=1]{biblatex}
+\renewcommand*{\labelalphaothers}{}
+\DeclareLabelalphaTemplate{
+  \labelelement{
+    \field[final]{shorthand}
+    \field{label}
+    \field[strwidth=4,strside=left,ifnames=1]{labelname}
+	\field[strwidth=1,strside=left]{labelname}
+	\field[strwidth=4,strside=left,ifnames=1]{title}
+  }
+  \labelelement{
+		\field[strwidth=2,strside=right]{year}
+		\field[strwidth=2,strside=right]{ND}
+  }
+}
+```
+
+The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](https://github.com/plk/biblatex/blob/dev/tex/latex/biblatex/biblatex.def).
+
+### [Listing entries without in-text citation](https://tex.stackexchange.com/a/17132/140109)
+
+`\nocite{*}` prints all entries, while `\nocite{key1,key2,...,keyn}` prints entries corresponding to the `key1,key2,...,keyn` keys. Use either of these commands before `\printbibliography`.
 
 ## Book / article / report document class
 
