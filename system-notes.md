@@ -10,6 +10,8 @@
   - [Drivers and applications](#drivers-and-applications)
   - [Fix boot order / Grub menu not appearing on startup](#fix-boot-order--grub-menu-not-appearing-on-startup)
   - [Realtek wifi problems](#realtek-wifi-problems)
+  - [Making Ubuntu look like Windows](#making-ubuntu-look-like-windows)
+  - [File syncing using rclone](#file-syncing-using-rclone)
 
 ## [Setting or changing the PATH system variable](https://www.java.com/en/download/help/path.xml)
 
@@ -64,3 +66,13 @@ Windows: go to **Settings charm** > **Change PC settings** > **Update and Recove
 ### Realtek wifi problems
 
 Secure boot should be disabled before installing these drivers.
+
+### [Making Ubuntu look like Windows](https://www.howtogeek.com/353819/how-to-make-ubuntu-look-more-like-windows/)
+
+* [Dash to panel](https://github.com/home-sweet-gnome/dash-to-panel)
+
+### File syncing using rclone
+
+* https://www.techrepublic.com/article/how-to-sync-from-linux-to-google-drive-with-rclone/
+* https://github.com/ncw/rclone
+* https://rclone.org/

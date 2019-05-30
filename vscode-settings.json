@@ -123,7 +123,7 @@
   "window.restoreWindows": "none",
   "markdown.extension.toc.githubCompatibility": true,
   "explorer.confirmDelete": false,
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+  "terminal.integrated.shell.windows": "C:\\Users\\2919124\\AppData\\Local\\Programs\\Git\\bin\\bash.exe",
   "explorer.confirmDragAndDrop": false,
   "latex-workshop.texcount.path": "C:\\Users\\2919124\\texlive\\2018\\bin\\win32\\texcount.exe",
   "githubPullRequests.defaultMergeMethod": "squash",

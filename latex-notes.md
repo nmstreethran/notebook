@@ -111,7 +111,10 @@ Removes unwanted fields for all reference types, except `@misc`:
 
 ### [BibLaTeX styles](https://www.overleaf.com/learn/latex/Biblatex_citation_styles)
 
-Alphanumeric style - [edit to include title for entries with no author and 'ND' for entries with no date; minimum 4 characters for title/author](https://tex.stackexchange.com/a/68875/140109)
+Alphanumeric style 
+- [edit to include title for entries with no author and 'ND' for entries with no date; minimum 4 characters for title/author](https://tex.stackexchange.com/a/68875/140109)
+- [display only first author's name in label using `maxalphanames=1`](https://tex.stackexchange.com/a/276530/140109)
+- [ignore spaces in author name or title](https://tex.stackexchange.com/a/276530/140109)
 
 ```latex
 \usepackage[backend=biber,style=alphabetic,urldate=long,maxalphanames=1]{biblatex}
@@ -129,9 +132,12 @@ Alphanumeric style - [edit to include title for entries with no author and 'ND' 
 		\field[strwidth=2,strside=right]{ND}
   }
 }
+\DeclareNolabel{
+  \nolabel{\regexp{[\p{Z}\p{P}\p{S}\p{C}]+}}
+}
 ```
 
-The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](https://github.com/plk/biblatex/blob/dev/tex/latex/biblatex/biblatex.def).
+The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](https://github.com/plk/biblatex/blob/dev/tex/latex/biblatex/biblatex.def). The defaults for `\DeclareNolabel` are `\regexp{[\p{P}\p{S}\p{C}]+}`.
 
 ### [Listing entries without in-text citation](https://tex.stackexchange.com/a/17132/140109)
 

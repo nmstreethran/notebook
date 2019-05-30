@@ -6,6 +6,7 @@
 - [Local](#local)
 - [System](#system)
 - [reveal.js](#revealjs)
+- [CSS](#css)
 - [See also](#see-also)
 
 ## [GitHub Pages](https://pages.github.com/)
@@ -97,6 +98,10 @@ gem update --system
 
 * [GitHub repository](https://github.com/hakimel/reveal.js)
 * [Node.js](https://nodejs.org/en/)
+
+## CSS
+
+* [System fonts](https://devhints.io/css-system-font-stack)
 
 ## See also
 

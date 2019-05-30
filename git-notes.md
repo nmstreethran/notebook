@@ -12,6 +12,9 @@
 - [GitHub](#github)
 - [Pull requests](#pull-requests)
 - [Errors](#errors)
+  - [`HttpRequestException`](#httprequestexception)
+  - [Remote already exists](#remote-already-exists)
+  - [Invalid username or password](#invalid-username-or-password)
 - [Submodules and subtrees](#submodules-and-subtrees)
   - [Including wiki in the main code repository as a submodule](#including-wiki-in-the-main-code-repository-as-a-submodule)
   - [Renaming submodules](#renaming-submodules)
@@ -95,6 +98,8 @@ pippo/pluto/*
 
 ## Errors
 
+### `HttpRequestException`
+
 ```sh
 fatal: HttpRequestException encountered.
 ```
@@ -102,6 +107,8 @@ fatal: HttpRequestException encountered.
 ... followed by being prompted for my username and password again.
 
 Solution: [Update Git to the latest version](https://stackoverflow.com/a/49109825/4573584).
+
+### Remote already exists
 
 ```sh
 fatal: remote docs already exists.
@@ -113,12 +120,20 @@ Solution: [remove the remote repository](https://stackoverflow.com/a/1221874/457
 $ git remote rm docs
 ```
 
+### [Invalid username or password](https://stackoverflow.com/a/34919582/4573584)
+
+Could happen due to two-factor authentication. To resolve the issue: 
+
+* manually generate a personal access token on GitHub
+* assign permission to access repo and gist (just like the othet tokens)
+* copy the token and use it instead of the password
+
 ## Submodules and subtrees
 
 ***For wikis:***
 1. ***make all changes in the submodule***
 2. ***push the changes to the submodule's master branch***
-3. ***merge the changes to the subtree***
+3. ~~***merge the changes to the subtree***~~ subtrees cause too many merge issues for me
 4. ***push to the main code repository***
 
 ### [Including wiki in the main code repository as a submodule](https://brendancleary.com/2013/03/08/including-a-github-wiki-in-a-repository-as-a-submodule/)
