@@ -2,6 +2,7 @@
 
 ## Table of contents <!-- omit in toc -->
 
+- [Settings](#settings)
 - [Useful links](#useful-links)
 - [Visual Studio Code extensions](#visual-studio-code-extensions)
 - [Python](#python)
@@ -10,12 +11,16 @@
 - [HTML](#html)
 - [Keyboard shortcuts](#keyboard-shortcuts)
 
+## Settings
+
+See my [gists](https://gist.github.com/nmstreethran).
+
 ## Useful links 
 
 * [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings)
 * [Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 * [Multi-root Workspaces](https://code.visualstudio.com/docs/editor/multi-root-workspaces)
-
+<!-- 
 ## Visual Studio Code extensions
 
 * [Anaconda Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-python.anaconda-extension-pack)
@@ -30,7 +35,7 @@
 * [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 * [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
 * [VS Code Jupyter Notebook Previewer](https://marketplace.visualstudio.com/items?itemName=jithurjacob.nbpreviewer)
-* [YAML](https://marketplace.visualstudio.com/itemdetails?itemName=redhat.vscode-yaml)
+* [YAML](https://marketplace.visualstudio.com/itemdetails?itemName=redhat.vscode-yaml) -->
 
 ## Python
 
