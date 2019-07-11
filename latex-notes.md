@@ -4,21 +4,22 @@ My LaTeX documents are compiled using [latexmk](https://ctan.org/pkg/latexmk) on
 
 ## Table of contents <!-- omit in toc -->
 
-- [General](#general)
-- [Bibliography](#bibliography)
-	- [Patches](#patches)
-	- [BibLaTeX styles](#biblatex-styles)
-	- [Listing entries without in-text citation](#listing-entries-without-in-text-citation)
-- [Book / article / report document class](#book--article--report-document-class)
-	- [Compilation](#compilation)
-	- [Preamble](#preamble)
-	- [Frontmatter, mainmatter and backmatter](#frontmatter-mainmatter-and-backmatter)
-	- [Word count](#word-count)
-- [Beamer class](#beamer-class)
-	- [Compilation](#compilation-1)
-	- [Themes](#themes)
-	- [Preamble](#preamble-1)
-	- [Other commands](#other-commands)
+- [General](#General)
+- [Bibliography](#Bibliography)
+	- [Patches](#Patches)
+	- [BibLaTeX styles](#BibLaTeX-styles)
+	- [Listing entries without in-text citation](#Listing-entries-without-in-text-citation)
+- [Book / article / report document class](#Book--article--report-document-class)
+	- [Compilation](#Compilation)
+	- [Preamble](#Preamble)
+	- [Frontmatter, mainmatter and backmatter](#Frontmatter-mainmatter-and-backmatter)
+	- [Word count](#Word-count)
+- [Beamer class](#Beamer-class)
+	- [Compilation](#Compilation-1)
+	- [Themes](#Themes)
+	- [Preamble](#Preamble-1)
+	- [Other commands](#Other-commands)
+- [ModernCV](#ModernCV)
 
 ## General
 
@@ -520,4 +521,30 @@ References frame:
 \nocite{vangennep:related,ctan}
 \printbibliography
 \end{frame}
+```
+
+## ModernCV
+
+[Extending a quote's width](https://tex.stackexchange.com/a/247503/140109):
+
+```latex
+% preamble
+\let\originalrecomputecvlengths\recomputecvlengths
+\renewcommand*{\recomputecvlengths}{%
+\originalrecomputecvlengths%
+\setlength{\quotewidth}{.8\textwidth}} % change .8 to desired value
+```
+
+[Edit space after header](https://tex.stackexchange.com/a/82871/140109):
+
+```latex
+\makecvtitle
+\vspace*{-5mm} % enter right after \makecvtitle
+```
+
+[Reduce signature whitespace](https://tex.stackexchange.com/a/196910/140109):
+
+```latex
+% preamble
+\patchcmd{\makeletterclosing}{[3em]}{[1em]}{}{}
 ```
