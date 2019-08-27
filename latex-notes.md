@@ -4,24 +4,45 @@ My LaTeX documents are compiled using [latexmk](https://ctan.org/pkg/latexmk) on
 
 ## Table of contents <!-- omit in toc -->
 
-- [General](#General)
-- [Bibliography](#Bibliography)
-	- [Patches](#Patches)
-	- [BibLaTeX styles](#BibLaTeX-styles)
-	- [Listing entries without in-text citation](#Listing-entries-without-in-text-citation)
-- [Book / article / report document class](#Book--article--report-document-class)
-	- [Compilation](#Compilation)
-	- [Preamble](#Preamble)
-	- [Frontmatter, mainmatter and backmatter](#Frontmatter-mainmatter-and-backmatter)
-	- [Word count](#Word-count)
-- [Beamer class](#Beamer-class)
-	- [Compilation](#Compilation-1)
-	- [Themes](#Themes)
-	- [Preamble](#Preamble-1)
-	- [Other commands](#Other-commands)
-- [ModernCV](#ModernCV)
+- [General](#general)
+- [Bibliography](#bibliography)
+	- [Patches](#patches)
+	- [BibLaTeX styles](#biblatex-styles)
+	- [Listing entries without in-text citation](#listing-entries-without-in-text-citation)
+- [Book / article / report document class](#book--article--report-document-class)
+	- [Compilation](#compilation)
+	- [Preamble](#preamble)
+	- [Frontmatter, mainmatter and backmatter](#frontmatter-mainmatter-and-backmatter)
+	- [Word count](#word-count)
+- [Beamer class](#beamer-class)
+	- [Compilation](#compilation-1)
+	- [Themes](#themes)
+	- [Preamble](#preamble-1)
+	- [Other commands](#other-commands)
+- [ModernCV](#moderncv)
 
 ## General
+
+[Reusing the `\title`, `\author` and `\date` commands in different areas of a document](https://tex.stackexchange.com/a/10131/140109)
+
+> The `\title`, `\author` and `\date` macros are saving their argument into `\@title`, `\@author`, and `\@date`, respectively. You can use this macros after `\makeatletter`. Afterwards use `\makeatother`. Note that they are cleared by `\maketitle`. - *Martin Scharrer*
+
+```latex
+\title{Example}
+\author{Me}
+\date{\today}
+
+% ...
+
+\makeatletter
+\begin{titlepage}
+
+The title is \@title
+It was written by \@author\space on \@date
+
+\end{titlepage}
+\makeatother
+```
 
 [Define shortcuts to document properties](https://en.wikibooks.org/wiki/TeX/def)
 
@@ -57,10 +78,10 @@ Hyperlink and pdf metadata:
 \def \copyright {Copyright \textcopyright~\the\year{}~by Author. Licensed under the LPPL, version 1.3c.} % copyright information
 \usepackage{hyperxmp}
 \usepackage[hidelinks,pdftex,
-pdfauthor={Author},
-pdftitle={Title},
-pdfsubject={Subject},
-pdfkeywords={keyword1,keyword2}]{hyperref}
+	pdfauthor={Author},
+	pdftitle={Title},
+	pdfsubject={Subject},
+	pdfkeywords={keyword1,keyword2}]{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,pdfcopyright=\copyright,pdflicenseurl=\licenseurl,pdfcontactemail=email@mail.com}
 ```
 

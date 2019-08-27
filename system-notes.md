@@ -1,17 +1,18 @@
 # System notes <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
-- [Setting or changing the PATH system variable](#setting-or-changing-the-path-system-variable)
-- [Turn on or off secure boot](#turn-on-or-off-secure-boot)
-- [Linux](#linux)
-  - [Using the terminal](#using-the-terminal)
-  - [Copy files from one directory to another, ignoring all .files and .dirs](#copy-files-from-one-directory-to-another-ignoring-all-files-and-dirs)
-  - [Running commands stored in a file](#running-commands-stored-in-a-file)
-  - [Drivers and applications](#drivers-and-applications)
-  - [Fix boot order / Grub menu not appearing on startup](#fix-boot-order--grub-menu-not-appearing-on-startup)
-  - [Realtek wifi problems](#realtek-wifi-problems)
-  - [Making Ubuntu look like Windows](#making-ubuntu-look-like-windows)
-  - [File syncing using rclone](#file-syncing-using-rclone)
+- [Setting or changing the PATH system variable](#Setting-or-changing-the-PATH-system-variable)
+- [Turn on or off secure boot](#Turn-on-or-off-secure-boot)
+- [Linux](#Linux)
+  - [Using the terminal](#Using-the-terminal)
+  - [Copy files from one directory to another, ignoring all .files and .dirs](#Copy-files-from-one-directory-to-another-ignoring-all-files-and-dirs)
+  - [Running commands stored in a file](#Running-commands-stored-in-a-file)
+  - [Drivers and applications](#Drivers-and-applications)
+  - [Fix boot order / Grub menu not appearing on startup](#Fix-boot-order--Grub-menu-not-appearing-on-startup)
+  - [Realtek wifi problems](#Realtek-wifi-problems)
+  - [Making Ubuntu look like Windows](#Making-Ubuntu-look-like-Windows)
+  - [File syncing using rclone](#File-syncing-using-rclone)
+  - [Python package installation](#Python-package-installation)
 
 ## [Setting or changing the PATH system variable](https://www.java.com/en/download/help/path.xml)
 
@@ -76,3 +77,17 @@ Secure boot should be disabled before installing these drivers.
 * https://www.techrepublic.com/article/how-to-sync-from-linux-to-google-drive-with-rclone/
 * https://github.com/ncw/rclone
 * https://rclone.org/
+
+### [Python package installation](https://stackoverflow.com/a/50893981/4573584)
+
+```sh
+ERROR: Could not install packages due to an EnvironmentError: [Errno 13] Permission denied: '/installation/path/'
+Consider using the `--user` option or check the permissions.
+```
+
+Fixed using:
+
+```sh
+pip3 install --user package-name  # for Python3
+pip install --user package-name   # for Python2
+```
