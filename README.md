@@ -1,6 +1,6 @@
 # coding
 
-Welcome to my coding repository! This is where I keep all my notes organised for various coding tasks, so that I do not have to search the same thing over and over again. I also store my completed tutorials here.
+Welcome to my coding repository! This is where I keep all my notes organised for various coding tasks. I also store my completed tutorials here.
 
 I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) for my coding. My custom settings and the extensions can be found in my [gists](https://gist.github.com/nmstreethran). 
 
@@ -20,7 +20,7 @@ I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to 
 
 - [Pandas tutorials](/pandas/)
   - Pandas 10 minute introduction ([.py](/pandas/pandas-10-min-intro/pandas-10-min-intro.py) and [.ipynb](/pandas/pandas-10-min-intro/pandas-10-min-intro.ipynb))
-  - Pandas cookbook ([.py](/pandas/pandas-cookbook/pandas-cookbook.py) and [.ipynb](/pandas/pandas-cookbook/pandas-cookbook.ipynb))
+  - Pandas cookbook ([.py](/pandas/pandas-cookbook/pandas-cookbook.py))
 - [Matplotlib](/matplotlib/)
   - Matplotlib style sheets ([.py](/matplotlib/matplotlib-style-sheets.py) and [.ipynb](/matplotlib/matplotlib-style-sheets.ipynb))
 
