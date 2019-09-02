@@ -1,8 +1,10 @@
-# coding
+# notebook
 
-Welcome to my coding repository! This is where I keep all my notes organised for various coding tasks. I also store my completed tutorials here.
+Welcome to my notebook! 
 
-I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) for my coding. My custom settings and the extensions can be found in my [gists](https://gist.github.com/nmstreethran). 
+## Software used 
+
+I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)). My custom settings and extensions used can be found in my [gists](https://gist.github.com/nmstreethran). 
 
 ## Notes
 

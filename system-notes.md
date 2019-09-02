@@ -1,18 +1,18 @@
 # System notes <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
-- [Setting or changing the PATH system variable](#Setting-or-changing-the-PATH-system-variable)
-- [Turn on or off secure boot](#Turn-on-or-off-secure-boot)
-- [Linux](#Linux)
-  - [Using the terminal](#Using-the-terminal)
-  - [Copy files from one directory to another, ignoring all .files and .dirs](#Copy-files-from-one-directory-to-another-ignoring-all-files-and-dirs)
-  - [Running commands stored in a file](#Running-commands-stored-in-a-file)
-  - [Drivers and applications](#Drivers-and-applications)
-  - [Fix boot order / Grub menu not appearing on startup](#Fix-boot-order--Grub-menu-not-appearing-on-startup)
-  - [Realtek wifi problems](#Realtek-wifi-problems)
-  - [Making Ubuntu look like Windows](#Making-Ubuntu-look-like-Windows)
-  - [File syncing using rclone](#File-syncing-using-rclone)
-  - [Python package installation](#Python-package-installation)
+- [Setting or changing the PATH system variable](#setting-or-changing-the-path-system-variable)
+- [Turn on or off secure boot](#turn-on-or-off-secure-boot)
+- [Linux](#linux)
+  - [Using the terminal to navigate through directories](#using-the-terminal-to-navigate-through-directories)
+  - [Copy files from one directory to another, ignoring all .files and .dirs](#copy-files-from-one-directory-to-another-ignoring-all-files-and-dirs)
+  - [Running commands stored in a file](#running-commands-stored-in-a-file)
+  - [Drivers and applications](#drivers-and-applications)
+  - [Fix boot order / Grub menu not appearing on startup](#fix-boot-order--grub-menu-not-appearing-on-startup)
+  - [Realtek wifi problems](#realtek-wifi-problems)
+  - [Making Ubuntu look like Windows](#making-ubuntu-look-like-windows)
+  - [File syncing using rclone](#file-syncing-using-rclone)
+  - [Python package installation](#python-package-installation)
 
 ## [Setting or changing the PATH system variable](https://www.java.com/en/download/help/path.xml)
 
@@ -31,9 +31,9 @@ Or, from Windows: go to **Settings charm** > **Change PC settings** > **Update a
 
 Find the **Secure Boot** setting, and if possible, set it to **Enabled**. This option is usually in either the **Security** tab, the **Boot** tab, or the **Authentication** tab.
 
-## Linux
+## Linux 
 
-### [Using the terminal](https://help.ubuntu.com/community/UsingTheTerminal)
+### [Using the terminal to navigate through directories](https://help.ubuntu.com/community/UsingTheTerminal)
 
 Changing directories using `cd`:
 

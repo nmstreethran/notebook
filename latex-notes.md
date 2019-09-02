@@ -1,27 +1,59 @@
 # LaTeX notes <!-- omit in toc -->
 
-My LaTeX documents are compiled using [latexmk](https://ctan.org/pkg/latexmk) on [VSCodium](https://vscodium.github.io/) (open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) and [TeXlive](https://tug.org/texlive/).
+My LaTeX documents are compiled on [VSCodium](https://vscodium.github.io/) (open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) and [TeXlive](https://tug.org/texlive/).
 
 ## Table of contents <!-- omit in toc -->
 
 - [General](#general)
+	- [Reusing defined commands](#reusing-defined-commands)
+	- [Define shortcuts to document properties](#define-shortcuts-to-document-properties)
+	- [Set images path:_Basic_Structure)](#set-images-path_basic_structure)
+	- [Adding captions as a node in `tikzpicture`](#adding-captions-as-a-node-in-tikzpicture)
+	- [Defining custom HTML colours](#defining-custom-html-colours)
+	- [Hyperlink and pdf metadata](#hyperlink-and-pdf-metadata)
 - [Bibliography](#bibliography)
 	- [Patches](#patches)
 	- [BibLaTeX styles](#biblatex-styles)
 	- [Listing entries without in-text citation](#listing-entries-without-in-text-citation)
 - [Book / article / report document class](#book--article--report-document-class)
-	- [Compilation](#compilation)
-	- [Preamble](#preamble)
+	- [Avoid overfulls in right margin](#avoid-overfulls-in-right-margin)
+	- [Remove blank pages after chapters](#remove-blank-pages-after-chapters)
+	- [Fix spacing problem for header and footer using `headheight`](#fix-spacing-problem-for-header-and-footer-using-headheight)
+	- [Change title of contents](#change-title-of-contents)
+	- [Listings](#listings)
+	- [Sans serif headings with serif body and math](#sans-serif-headings-with-serif-body-and-math)
+	- [Adding lists to the table of contents](#adding-lists-to-the-table-of-contents)
+	- [Rename "Chapter X" to "Part X"](#rename-chapter-x-to-part-x)
+	- [Caption font](#caption-font)
+	- [Force table captions to top of the table](#force-table-captions-to-top-of-the-table)
+	- [Header and footer settings using `fancyhdr`](#header-and-footer-settings-using-fancyhdr)
+	- [Remove headers and footers for a page](#remove-headers-and-footers-for-a-page)
+	- [Float placeins within subsections](#float-placeins-within-subsections)
+	- [Tables](#tables)
+	- [Globally change table font size](#globally-change-table-font-size)
+	- [Bibliography package](#bibliography-package)
+	- [Ensuring bibliography respects margins and fix `underfull \hbox` warnings](#ensuring-bibliography-respects-margins-and-fix-underfull-hbox-warnings)
+	- [List of abbreviations](#list-of-abbreviations)
 	- [Frontmatter, mainmatter and backmatter](#frontmatter-mainmatter-and-backmatter)
 	- [Word count](#word-count)
 - [Beamer class](#beamer-class)
-	- [Compilation](#compilation-1)
-	- [Themes](#themes)
-	- [Preamble](#preamble-1)
-	- [Other commands](#other-commands)
+	- [Themes and colours](#themes-and-colours)
+	- [Change date format to DD/MM/YYYY](#change-date-format-to-ddmmyyyy)
+	- [Bibliography](#bibliography-1)
+	- [Adjust title page vertical spacing](#adjust-title-page-vertical-spacing)
+	- [Frame title formatting](#frame-title-formatting)
+	- [Frame margins](#frame-margins)
+	- [Remove navigation symbols](#remove-navigation-symbols)
+	- [Change position of navigation symbols](#change-position-of-navigation-symbols)
+	- [Sectioning](#sectioning)
 - [ModernCV](#moderncv)
+	- [Extending a quote's width](#extending-a-quotes-width)
+	- [Edit space after header](#edit-space-after-header)
+	- [Reduce signature whitespace](#reduce-signature-whitespace)
 
 ## General
+
+### Reusing defined commands
 
 [Reusing the `\title`, `\author` and `\date` commands in different areas of a document](https://tex.stackexchange.com/a/10131/140109)
 
@@ -44,30 +76,30 @@ It was written by \@author\space on \@date
 \makeatother
 ```
 
-[Define shortcuts to document properties](https://en.wikibooks.org/wiki/TeX/def)
+### [Define shortcuts to document properties](https://en.wikibooks.org/wiki/TeX/def)
 
 ```latex
 \def \auth {Author's Name} % author
 ```
 
-[Set images path](https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure):
+### [Set images path](https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure)
 
 ```latex
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 ```
 
-[Adding captions as a node in `tikzpicture`](https://tex.stackexchange.com/a/351672/140109)
+### [Adding captions as a node in `tikzpicture`](https://tex.stackexchange.com/a/351672/140109)
 
 [`tikzpagenodes`](https://tex.stackexchange.com/a/386331/140109)
 
-[Defining custom HTML colours](https://htmlcolorcodes.com/color-names/):
+### [Defining custom HTML colours](https://htmlcolorcodes.com/color-names/)
 
 ```latex
 \definecolor{EnsystraGreen}{HTML}{00CD98}
 ```
 
-Hyperlink and pdf metadata:
+### Hyperlink and pdf metadata
 
 * use hidelinks to remove hyperlink borders
 * [`hyperxmp` package](https://ctan.org/pkg/hyperxmp)
@@ -167,45 +199,39 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 
 ## Book / article / report document class
 
-### Compilation
-
-PdfLaTeX > Makeglossaries > Biber > PdfLaTeX > PdfLaTeX
-
-### Preamble 
-
-[Avoid overfulls in right margin](https://tex.stackexchange.com/a/391321/140109): 
+### [Avoid overfulls in right margin](https://tex.stackexchange.com/a/391321/140109)
 
 ```latex
 \emergencystretch 3em 
 ```
 
-[Remove blank pages after chapters](https://tex.stackexchange.com/a/334126/140109):
+### [Remove blank pages after chapters](https://tex.stackexchange.com/a/334126/140109)
 
 ```latex
 \documentclass[11pt,openany]{book}
 \let\cleardoublepage=\clearpage
 ```
 
-[Fix spacing problem for header and footer using `headheight`](https://tex.stackexchange.com/a/93871/140109):
+### [Fix spacing problem for header and footer using `headheight`](https://tex.stackexchange.com/a/93871/140109)
 ```latex
 \geometry{lmargin=2.5cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm,headheight=34pt} 
 ```
 
-Change title of contents:
+### Change title of contents
 
 ```latex
 \usepackage[UKenglish]{babel} % UK English language
 \addto\captionsUKenglish{\renewcommand\contentsname{Table of Contents}} % specify new title
 ```
 
-Listings:
+### Listings
 
 ```latex
 \usepackage{listings}
 \renewcommand{\lstlistlistingname}{List of Listings} % add/rename title of list of listings
 ```
 
-Sans serif headings with serif body and math:
+### Sans serif headings with serif body and math
 
 * [Font catalogue](http://www.tug.dk/FontCatalogue/)
 
@@ -216,32 +242,32 @@ Sans serif headings with serif body and math:
 \allsectionsfont{\raggedright\normalfont\sffamily\bfseries} % ^ bold + sans serif section headings; aligned left
 ```
 
-[Adding lists to the table of contents](https://ctan.org/pkg/tocbibind):
+### [Adding lists to the table of contents](https://ctan.org/pkg/tocbibind)
 
 ```latex
 \usepackage[nottoc,notbib]{tocbibind}
 ```
 
-Rename "Chapter X" to "Part X":
+### Rename "Chapter X" to "Part X"
 
 ```latex
 \addto\captionsUKenglish{\renewcommand{\chaptername}{Part}} % specify new name
 ```
 
-Caption font:
+### Caption font
 
 ```latex
 \usepackage[font=small,labelfont=bf]{caption} 
 ```
 
-Force table captions to top of the table:
+### Force table captions to top of the table
 
 ```latex
 \usepackage{floatrow}  
 \floatsetup[table]{capposition=top}
 ```
 
-Header and footer settings using `fancyhdr`:
+### Header and footer settings using `fancyhdr`
 
 * [Changing the font style of page number on front page](https://tex.stackexchange.com/a/97442/140109)
 * [remove horizontal line from header](https://tex.stackexchange.com/a/13897/140109)
@@ -269,13 +295,13 @@ Header and footer settings using `fancyhdr`:
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 ```
 
-[Remove headers and footers for a page](https://tex.stackexchange.com/a/120748/140109):
+### [Remove headers and footers for a page](https://tex.stackexchange.com/a/120748/140109)
 
 ```latex
 \thispagestyle{empty}
 ```
 
-[Float placeins within subsections](https://tex.stackexchange.com/a/118667/140109):
+### [Float placeins within subsections](https://tex.stackexchange.com/a/118667/140109)
 
 ```latex
 \usepackage[section]{placeins} 
@@ -288,7 +314,7 @@ Header and footer settings using `fancyhdr`:
 \makeatother
 ```
 
-Tables:
+### Tables
 
 * ["ThreePartTable" environment](https://tex.stackexchange.com/a/209851/140109)
 * [More space between rows](https://www.inf.ethz.ch/personal/markusp/teaching/guides/guide-tables.pdf)
@@ -302,20 +328,20 @@ Tables:
 \newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}} 
 ```
 
-[Globally change table font size](https://tex.stackexchange.com/a/220258/140109):
+### [Globally change table font size](https://tex.stackexchange.com/a/220258/140109)
 
 ```latex
 \let\oldtabular\tabular
 \renewcommand{\tabular}{\footnotesize\oldtabular}
 ```
 
-Bibliography package:
+### Bibliography package
 
 ```latex
 \usepackage[backend=biber,style=ieee,uniquename=init,giveninits,urldate=long]{biblatex}
 ```
 
-Ensuring bibliography respects margins and [fix `underfull \hbox` warnings](https://tex.stackexchange.com/a/10928/140109):
+### Ensuring bibliography respects margins and [fix `underfull \hbox` warnings](https://tex.stackexchange.com/a/10928/140109)
 
 ```latex
 \appto{\bibsetup}{\sloppy} 
@@ -323,7 +349,7 @@ Ensuring bibliography respects margins and [fix `underfull \hbox` warnings](http
 \apptocmd{\sloppy}{\hbadness 10000\relax}{}{} 
 ```
 
-List of abbreviations:
+### List of abbreviations
 
 ```latex
 \usepackage[acronym,nomain,nonumberlist,nopostdot,nogroupskip,automake,toc]{glossaries} 
@@ -338,32 +364,6 @@ List of abbreviations:
 * [placing appendices after backmatter](https://tex.stackexchange.com/a/198608/140109)
 * [remove "Appendix/Chapter X" from references header](https://tex.stackexchange.com/a/102693/140109)
 * [appendix chapter name](https://tex.stackexchange.com/a/151130/140109)
-
-```latex
-\newcommand{\frontmattersetup}{
-	\frontmatter
-	\renewcommand{\thefootnote}{\fnsymbol{footnote}}} % set footnote numbering style to symbol 
-```
-
-```latex
-\newcommand{\mainmattersetup}{
-	\mainmatter
-	\renewcommand{\thefootnote}{\arabic{footnote}} % change footnote numbering style to arabic
-	\setcounter{footnote}{0} % reset footnote counter for front matter 
-```
-
-```latex
-\newcommand{\backmattersetup}{
-	{\backmatter
-		\chapter{References}
-		\printbibliography[heading=none]
-		\clearpage % to remove "Chapter X" from header
-	} 
-	\appendix
-	\renewcommand\chaptername{Appendix} % 
-%	\setcounter{footnote}{0} % reset footnote counter for appendix
-}
-```
 
 ### Word count
 
@@ -381,25 +381,12 @@ And now for something completely different
 
 ## Beamer class
 
-### Compilation
+### Themes and colours
 
-PdfLaTeX > Biber > PdfLaTeX > PdfLaTeX
-
-### Themes
-
-[Beamer theme gallery](http://deic.uab.es/~iblanes/beamer_gallery/index.html)
-
-### Preamble
-
-Date format DD/MM/YYYY:
-
-```latex
-\usepackage[UKenglish]{babel}
-\usepackage[ddmmyyyy]{datetime} % set date format 
-```
-
-Colours and themes:
-
+* [Beamer theme gallery](http://deic.uab.es/~iblanes/beamer_gallery/index.html)
+* [Beamer docs](https://ctan.org/pkg/beamer)
+* [Beamer template tutorial by Claudio Fiandrino](https://tex.stackexchange.com/a/146682/140109)
+* [Overleaf Beamer guide](https://www.overleaf.com/learn/latex/Beamer)
 * [set colours for sections and subsections in table of contents](https://tex.stackexchange.com/a/69721/140109)
 
 ```latex
@@ -416,7 +403,15 @@ Colours and themes:
 \setbeamercolor{example text}{fg=blue}
 ```
 
-Bibliography:
+### Change date format to DD/MM/YYYY
+
+```latex
+\usepackage[UKenglish]{babel}
+\usepackage[ddmmyyyy]{datetime} % set date format 
+```
+
+### Bibliography
+
 * [bibliography icon](https://tex.stackexchange.com/a/68084/140109)
 * [supress patching footnotes failed warning](https://tex.stackexchange.com/a/202994/140109)
 * [numerical references](https://tex.stackexchange.com/a/68081/140109)
@@ -430,7 +425,17 @@ Bibliography:
 \AtBeginBibliography{\tiny} % change font size 
 ```
 
-[Adjust title page vertical spacing](https://tex.stackexchange.com/a/255335/140109):
+* [beamer references](https://en.wikibooks.org/wiki/LaTeX/Presentations#References_(Beamer))
+* references which are not cited in the slides using `\nocite{bibid}`
+
+```latex
+\begin{frame}[noframenumbering,plain,allowframebreaks]{References}
+\nocite{vangennep:related,ctan}
+\printbibliography
+\end{frame}
+```
+
+### [Adjust title page vertical spacing](https://tex.stackexchange.com/a/255335/140109)
 
 ```latex
 \makeatletter
@@ -464,7 +469,7 @@ Bibliography:
 \makeatother
 ```
 
-[Frame title formatting](https://tex.stackexchange.com/a/306416/140109):
+### [Frame title formatting](https://tex.stackexchange.com/a/306416/140109)
 
 ```latex
 \makeatletter % 
@@ -492,7 +497,7 @@ Bibliography:
 \makeatother
 ```
 
-[Frame margins](https://tex.stackexchange.com/a/109984/140109):
+### [Frame margins](https://tex.stackexchange.com/a/109984/140109)
 
 ```latex
 \setbeamertemplate{footline}{%
@@ -500,15 +505,13 @@ Bibliography:
 }
 ```
 
-Remove navigation symbols:
+### Remove navigation symbols
 
 ```latex
 \setbeamertemplate{navigation symbols}{}
 ```
 
-### Other commands
-
-[Change position of navigation symbols](https://tex.stackexchange.com/a/35637/140109):
+### [Change position of navigation symbols](https://tex.stackexchange.com/a/35637/140109)
 
 ```latex
 \hskip1em\usebeamercolor[fg]{navigation symbols dimmed}%
@@ -520,7 +523,7 @@ Remove navigation symbols:
 			\insertbackfindforwardnavigationsymbol
 ```
 
-Sectioning and highlighting a section / subsection in the table of contents:
+### Sectioning 
 
 * sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 * a subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
@@ -532,21 +535,9 @@ Sectioning and highlighting a section / subsection in the table of contents:
 \tableofcontents[currentsection]
 ```
 
-References frame: 
-
-* [beamer references](https://en.wikibooks.org/wiki/LaTeX/Presentations#References_(Beamer))
-* references which are not cited in the slides using `\nocite{bibid}`
-
-```latex
-\begin{frame}[noframenumbering,plain,allowframebreaks]{References}
-\nocite{vangennep:related,ctan}
-\printbibliography
-\end{frame}
-```
-
 ## ModernCV
 
-[Extending a quote's width](https://tex.stackexchange.com/a/247503/140109):
+### [Extending a quote's width](https://tex.stackexchange.com/a/247503/140109)
 
 ```latex
 % preamble
@@ -556,14 +547,14 @@ References frame:
 \setlength{\quotewidth}{.8\textwidth}} % change .8 to desired value
 ```
 
-[Edit space after header](https://tex.stackexchange.com/a/82871/140109):
+### [Edit space after header](https://tex.stackexchange.com/a/82871/140109)
 
 ```latex
 \makecvtitle
 \vspace*{-5mm} % enter right after \makecvtitle
 ```
 
-[Reduce signature whitespace](https://tex.stackexchange.com/a/196910/140109):
+### [Reduce signature whitespace](https://tex.stackexchange.com/a/196910/140109)
 
 ```latex
 % preamble
