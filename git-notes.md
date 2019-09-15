@@ -34,29 +34,41 @@
 List current branches:
 
 ```sh
-$ git branch
+git branch
 ```
 
 [Create branch in old commit](https://stackoverflow.com/a/2816728/4573584):
 
 ```sh
-$ git branch branchname <sha1-of-commit>
+git branch branchname <sha1-of-commit>
 ```
 
 or using symbolic reference:
 
 ```sh
-$ git branch branchname HEAD~3
+git branch branchname HEAD~3
 ```
 
 [Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
 
+[Controversial article about trunk-based development vs feature branches](https://medium.com/@mattia.battiston/why-i-love-trunk-based-development-641fcf0b94a0)
+
+[Changing the master branch, preserving the old master branch as the ancestor](https://stackoverflow.com/a/2763118/4573584):
+
+```sh
+git checkout better_branch
+git merge --strategy=ours master    # keep the content of this branch, but record a merge
+git checkout master
+git merge better_branch             # fast-forward master up to the merge
+```
+
 ## [Removing the last commit](https://gist.github.com/CrookedNumber/8964442)
 
 ```sh
-$ git reset --hard HEAD~<num> 
-$ git push origin -f
+git reset --hard HEAD~<num> 
+git push origin -f
 ```
+
 Replace `<num>` with the number of commits you want to remove. e.g., `git reset --hard HEAD~2` removes the last two commits.
 
 ## [Ignoring files](https://help.github.com/en/articles/ignoring-files)
@@ -71,7 +83,7 @@ Replace `<num>` with the number of commits you want to remove. e.g., `git reset 
 If you already have a file checked in, and you want to ignore it, Git will not ignore the file if you add a rule later. In those cases, you must untrack the file first, by running the following command in your terminal:
 
 ```sh
-$ git rm --cached FILENAME
+git rm --cached FILENAME
 ```
 
 ### [Ignoring files with exceptions](https://stackoverflow.com/a/16318111/4573584)
@@ -117,7 +129,7 @@ fatal: remote docs already exists.
 Solution: [remove the remote repository](https://stackoverflow.com/a/1221874/4573584)
 
 ```sh
-$ git remote rm docs
+git remote rm docs
 ```
 
 ### [Invalid username or password](https://stackoverflow.com/a/34919582/4573584)
@@ -141,42 +153,42 @@ Could happen due to two-factor authentication. To resolve the issue:
 Add the wiki to the main repository as a submodule:
 
 ```sh
-$ git submodule add https://github.com/username/project.wiki.git wiki
+git submodule add https://github.com/username/project.wiki.git wiki
 ```
 
-Commit this addition to the main repository and push the changes. Once changes to the wiki within the submodule are made (e.g., new markdown files, images), these changes must first be committed and pushed to the wiki's branch first, before committing and pushing to the main repository's branch. 
+Commit this addition to the main repository and push the changes. Once changes to the wiki within the submodule are made (e.g., new markdown files, images), these changes must first be committed and pushed to the wiki's branch, before committing and pushing to the main repository's branch. 
 
 See the [Git documentation on submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
 ### [Renaming submodules](https://stackoverflow.com/a/18712756/4573584)
 
 ```sh
-$ git mv oldname newname
+git mv oldname newname
 ```
 
 ### [Deinit old submodule, remove the directory and create a new submodule](https://stackoverflow.com/a/22309234/4573584)
 
 ```sh
-$ git submodule deinit <submodule name>
-$ git rm <submodule folder name>
-$ git submodule add <address to remote git repo> <new folder name>
+git submodule deinit <submodule name>
+git rm <submodule folder name>
+git submodule add <address to remote git repo> <new folder name>
 ```
 
 ### [Including wiki in the main code repository as a subtree](https://stackoverflow.com/a/33182223/4573584)
 
 ```sh
-$ git clone git://github.com/you/proj
-$ cd proj
-$ git remote add -f docs https://github.com/you/proj.wiki.git
-$ git merge -s ours --no-commit --allow-unrelated-histories docs/master
-$ git read-tree --prefix=docs/ -u docs/master
-$ git commit -m "Github docs subtree merged in docs/"
+git clone git://github.com/you/proj
+cd proj
+git remote add -f docs https://github.com/you/proj.wiki.git
+git merge -s ours --no-commit --allow-unrelated-histories docs/master
+git read-tree --prefix=docs/ -u docs/master
+git commit -m "Github docs subtree merged in docs/"
 ```
 
 Changes made in the actual wiki can be merged to the main code repository:
 
 ```sh
-$ git pull -s subtree docs master
+git pull -s subtree docs master
 ```
 
 Merging changes the other way is complicated.

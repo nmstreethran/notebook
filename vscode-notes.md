@@ -12,11 +12,15 @@
 
 ## [Keyboard shortcuts](https://vslive.com/Blogs/News-and-Tips/2015/04/5-VS-Keyboard-Shortcuts.aspx)
 
+View all keyboard shortcuts in VS Code using `Ctrl+K+S`
+
+Useful shortcuts:
 * Move Code: `Alt+Up` / `Alt+Down`
 * Create Collapsible Region: `Ctrl+M+H` / `Ctrl+M+U`
 * Comment / uncomment Code Block: `Ctrl+K+C` / `Ctrl+K+U`
 * Peek Definition: `Alt+F12`
 * Navigate Forward / Backward: `Ctrl+–` / `Ctrl+Shift+–` 
+* [Add cursors to all line ends in current selection](https://stackoverflow.com/a/46244456/4573584): `Alt+Shift+I`
 
 ## Settings
 

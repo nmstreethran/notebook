@@ -47,6 +47,7 @@ My LaTeX documents are compiled on [VSCodium](https://vscodium.github.io/) (open
 	- [Change position of navigation symbols](#change-position-of-navigation-symbols)
 	- [Sectioning](#sectioning)
 - [ModernCV](#moderncv)
+	- [Known issues](#known-issues)
 	- [Extending a quote's width](#extending-a-quotes-width)
 	- [Edit space after header](#edit-space-after-header)
 	- [Reduce signature whitespace](#reduce-signature-whitespace)
@@ -536,6 +537,15 @@ And now for something completely different
 ```
 
 ## ModernCV
+
+***Note: This package has not been updated since 2016***
+
+### Known issues
+
+- main `.tex` file: Some font shapes were not available, defaults substituted
+- `fontenc.sty`: Font shape 'TU/qpl/m/n' undefined \ (Font) using 'TU/lmr/m/n' instead
+- `moderncvbodyiii.sty`: You have requested package 'moderncvbodyiii', but the package provides 'moderncvbodyiii'.
+- `moderncvheadiii.sty`: You have requested package 'moderncvheadiii', but the package provides 'moderncvheadiii'.
 
 ### [Extending a quote's width](https://tex.stackexchange.com/a/247503/140109)
 
