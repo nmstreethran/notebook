@@ -13,6 +13,8 @@
   - [Making Ubuntu look like Windows](#making-ubuntu-look-like-windows)
   - [File syncing using rclone](#file-syncing-using-rclone)
   - [Python package installation](#python-package-installation)
+  - [Adding directory to PATH](#adding-directory-to-path)
+  - [What to do when Ubuntu freezes](#what-to-do-when-ubuntu-freezes)
 
 ## [Setting or changing the PATH system variable](https://www.java.com/en/download/help/path.xml)
 
@@ -91,3 +93,30 @@ Fixed using:
 pip3 install --user package-name  # for Python3
 pip install --user package-name   # for Python2
 ```
+
+### [Adding directory to PATH](https://askubuntu.com/a/688998/714808)
+
+These are added to the `.bashrc` file
+
+```sh
+echo export PATH=\"$(echo path/to/file/):\$PATH\" >> ~/.bashrc
+```
+
+### [What to do when Ubuntu freezes](https://askubuntu.com/a/36717/714808)
+
+If it's completely frozen, REISUB it (safer than rebooting)
+
+> While holding `Alt` and the `SysReq` (Print Screen) keys, type `R` `E` `I` `S` `U` `B`.
+
+```
+R:  Switch to XLATE mode
+E:  Send Terminate signal to all processes except for init
+I:  Send Kill signal to all processes except for init
+S:  Sync all mounted file-systems
+U:  Remount file-systems as read-only
+B:  Reboot
+```
+
+> REISUB is BUSIER backwards, as in "The System is **busier** than it should be", if you need to remember it. Or mnemonically - **R**eboot; **E**ven; **I**f; **S**ystem; **U**tterly; **B**roken.
+
+> **NOTE:** There exists less radical way than rebooting the whole system. If `SysReq` key works, you can kill processes one-by-one using `Alt`+`SysReq`+`F`. Kernel will kill the mostly «expensive» process each time. If you want to kill all processes for one console, you can issue `Alt`+`SysReq`+`K`.

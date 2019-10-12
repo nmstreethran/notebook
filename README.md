@@ -1,10 +1,10 @@
 # notebook
 
-Welcome to my notebook! 
+Welcome to my notebook!
 
-## Software used 
+## Software used
 
-I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)). My custom settings and extensions used can be found in my [gists](https://gist.github.com/nmstreethran). 
+I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)). My custom settings and extensions used can be found in this [gist](https://gist.github.com/nmstreethran/b63189f4af0c9d444691105ab456e943).
 
 ## Notes
 
@@ -29,4 +29,8 @@ I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to 
 
 ## Credits
 
+[Creative Commons Attribution-ShareAlike 4.0 International Public License](LICENSE.md).
+
 Sources have been attributed within the notes.
+
+Stack Overflow user contributions are licensed under cc by-sa 4.0.
