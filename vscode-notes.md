@@ -1,7 +1,6 @@
 # Visual Studio Code notes <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
-
 - [Keyboard shortcuts](#keyboard-shortcuts)
 - [Settings](#settings)
 - [Useful links](#useful-links)

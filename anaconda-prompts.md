@@ -1,7 +1,6 @@
 # Anaconda prompts <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
-
 - [Searching for packages](#searching-for-packages)
 - [Managing environments](#managing-environments)
 - [Installing packages](#installing-packages)
@@ -9,6 +8,7 @@
 - [Updating packages](#updating-packages)
 - [Removing packages](#removing-packages)
 - [References](#references)
+
 
 ## Searching for packages
 
@@ -30,6 +30,7 @@ To see if a specific package exists in a specific channel and is available for i
 conda search --override-channels --channel http://channel.url package
 ```
 
+
 ## Managing environments
 
 Creating a new environment:
@@ -49,6 +50,7 @@ Deactivating an environment:
 ```shell
 deactivate
 ```
+
 
 ## Installing packages
 
@@ -106,6 +108,7 @@ Installing commercial packages:
 conda install --name myenv package
 ```
 
+
 ## Viewing a list of installed packages
 
 To list all of the packages in the active environment:
@@ -119,6 +122,7 @@ To list all of the packages in a deactivated environment:
 ```shell
 conda list -n myenv
 ```
+
 
 ## Updating packages
 
@@ -159,6 +163,7 @@ List packages that can be updated:
 conda search --outdated
 ```
 
+
 ## Removing packages
 
 To remove a package in an environment :
@@ -184,6 +189,7 @@ To confirm that a package has been removed:
 ```shell
 conda list
 ```
+
 
 ## References
 

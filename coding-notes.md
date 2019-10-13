@@ -1,7 +1,9 @@
-# Git notes <!-- omit in toc -->
+# General coding notes and best practices <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
 - [Character limits](#character-limits)
+- [Python](#python)
+
 
 ## Character limits
 
@@ -11,3 +13,8 @@
 - easier to view diffs (VS Code's word wrap does not work on diffs)
 - reduces code density
 - increases readability of complex lines, such as conditionals and nested loops
+
+
+## Python
+
+[PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)

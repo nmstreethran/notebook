@@ -1,11 +1,43 @@
 # Document conversion  notes <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
+- [Ghostscript](#ghostscript)
+- [Poppler](#poppler)
 - [Pandoc](#pandoc)
   - [Markdown to Beamer](#markdown-to-beamer)
   - [Markdown to PDF](#markdown-to-pdf)
   - [Markdown to reveal.js](#markdown-to-revealjs)
   - [Input multiple files](#input-multiple-files)
+
+## Ghostscript
+
+[Compressing PDF files to reduce their size](https://askubuntu.com/a/256449/714808)
+
+```sh
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+```
+
+> - `-dPDFSETTINGS=/screen` lower quality, smaller size. (72 dpi)
+> - `-dPDFSETTINGS=/ebook` for better quality, but slightly larger pdfs. (150 dpi)
+> - `-dPDFSETTINGS=/prepress` output similar to Acrobat Distiller "Prepress Optimized" setting (300 dpi)
+> - `-dPDFSETTINGS=/printer` selects output similar to the Acrobat Distiller "Print Optimized" setting (300 dpi)
+> - `-dPDFSETTINGS=/default` selects output intended to be useful across a wide variety of uses, possibly at the expense of a larger output file
+
+## Poppler
+
+Source: https://www.ostechnix.com/how-to-merge-pdf-files-in-command-line-on-linux/
+
+Installing in Ubuntu:
+
+```sh
+sudo apt-get install poppler-utils
+```
+
+Merging PDF files (preserves hyperlinks):
+
+```sh
+pdfunite file1.pdf file2.pdf file3.pdf outputfile.pdf
+```
 
 ## [Pandoc](https://pandoc.org/)
 

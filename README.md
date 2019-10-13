@@ -4,7 +4,7 @@ Welcome to my notebook!
 
 ## Software used
 
-I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)). My custom settings and extensions used can be found in this [gist](https://gist.github.com/nmstreethran/b63189f4af0c9d444691105ab456e943).
+I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)). The settings and extensions I use can be found in this [gist](https://gist.github.com/nmstreethran/b63189f4af0c9d444691105ab456e943).
 
 ## Notes
 
@@ -15,6 +15,7 @@ I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to 
 - [LaTeX](latex-notes.md)
 - [Markdown](markdown-notes.md)
 - [Python](python-notes.md)
+- [Shell scripting](shellscript-notes.md)
 - [System](system-notes.md)
 - [Visual Studio Code](vscode-notes.md)
 - [Web development](webdev-notes.md)
@@ -27,10 +28,10 @@ I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to 
 - [Matplotlib](matplotlib/)
   - Matplotlib style sheets ([.py](matplotlib/matplotlib-style-sheets.py) and [.ipynb](matplotlib/matplotlib-style-sheets.ipynb))
 
-## Credits
+## License and credits
 
-[Creative Commons Attribution-ShareAlike 4.0 International Public License](LICENSE.md).
+Unless otherwise stated or attributed, the contents of this repository are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International Public License](LICENSE.md).
 
-Sources have been attributed within the notes.
+Stack Overflow user contributions are licensed under CC BY-SA 4.0.
 
-Stack Overflow user contributions are licensed under cc by-sa 4.0.
+All original sources are attributed and/or linked within the notes.
