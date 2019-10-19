@@ -64,16 +64,6 @@ ssh-add ~/.ssh/id_rsa
 
 Copy the SSH key to your clipboard (saved at `/home/you/.ssh/id_rsa`). Go to ['SSH and GPG keys'](https://github.com/settings/keys) in your GitHub account settings. Select 'New SSH key', add a descriptive label in the 'Title' field, and paste the SSH key in the 'Key' field.
 
-Finally, [change the remote URL](https://help.github.com/en/articles/changing-a-remotes-url#switching-remote-urls-from-https-to-ssh) of your local repository to the following format:
-
-```sh
-git config remote.origin.url 
-https://github.com/dir/repo.git
-
-# change the url using the following format
-git config remote.origin.url "git@github.com:dir/repo.git"
-```
-
 List existing remote URLs for your local repository:
 
 ```sh

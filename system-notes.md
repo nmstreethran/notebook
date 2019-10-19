@@ -12,6 +12,7 @@
   - [File syncing using rclone](#file-syncing-using-rclone)
   - [Adding directory to PATH](#adding-directory-to-path)
   - [What to do when Ubuntu freezes](#what-to-do-when-ubuntu-freezes)
+  - [Globally customise system UI font on Ubuntu](#globally-customise-system-ui-font-on-ubuntu)
 
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
@@ -93,3 +94,21 @@ B:  Reboot
 > REISUB is BUSIER backwards, as in "The System is **busier** than it should be", if you need to remember it. Or mnemonically - **R**eboot; **E**ven; **I**f; **S**ystem; **U**tterly; **B**roken.
 
 > **NOTE:** There exists less radical way than rebooting the whole system. If `SysReq` key works, you can kill processes one-by-one using `Alt`+`SysReq`+`F`. Kernel will kill the mostly «expensive» process each time. If you want to kill all processes for one console, you can issue `Alt`+`SysReq`+`K`.
+
+
+### [Globally customise system UI font on Ubuntu](https://github.com/Microsoft/vscode/issues/10144#issuecomment-337490205)
+
+Paste the following in your local font configuration file (`/etc/fonts/conf.avail/local.conf`) and replace `Lato` with the font of your choice:
+
+```xml
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+	<!-- Load local system customization file -->
+	<match target="pattern"> 
+		<test qual="any" name="family"><string>Ubuntu</string></test>
+		<edit name="family" mode="assign" binding="same"><string>Lato</string></edit>
+	</match>	
+	<include ignore_missing="yes">local.conf</include>
+</fontconfig>
+```
