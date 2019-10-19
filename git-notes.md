@@ -2,6 +2,9 @@
 
 ## Table of contents <!-- omit in toc -->
 - [Useful links](#useful-links)
+- [Credentials and authentication](#credentials-and-authentication)
+  - [Prevent Git from asking for username and password during every push on Linux](#prevent-git-from-asking-for-username-and-password-during-every-push-on-linux)
+  - [Invalid username or password](#invalid-username-or-password)
 - [Branching](#branching)
 - [Removing the last commit](#removing-the-last-commit)
 - [Ignoring files](#ignoring-files)
@@ -13,7 +16,6 @@
 - [Errors](#errors)
   - [`HttpRequestException`](#httprequestexception)
   - [Remote already exists](#remote-already-exists)
-  - [Invalid username or password](#invalid-username-or-password)
 - [Submodules and subtrees](#submodules-and-subtrees)
   - [Including wiki in the main code repository as a submodule](#including-wiki-in-the-main-code-repository-as-a-submodule)
   - [Cloning a repository including the contents of its submodules](#cloning-a-repository-including-the-contents-of-its-submodules)
@@ -27,6 +29,87 @@
 * [Git reference](https://git-scm.com/docs)
 * [Pro Git book](https://git-scm.com/book/en/v2)
 * [Visual Git Cheat Sheet](http://ndpsoftware.com/git-cheatsheet.html)
+
+
+## Credentials and authentication
+
+### Prevent Git from asking for username and password during every push on Linux
+
+#### [Using SSH keys](https://stackoverflow.com/a/34957424/4573584)
+
+- https://help.github.com/en/articles/connecting-to-github-with-ssh
+- https://help.github.com/en/articles/changing-a-remotes-url#switching-remote-urls-from-https-to-ssh
+
+Check for existing SSH keys:
+
+```sh
+ls -al ~/.ssh
+```
+
+Generate a new key if there are none exist:
+
+```sh
+ssh-keygen -t rsa -b 4096 -C "your_github_email@example.com"
+```
+
+Press `Enter` when prompted to "Enter a file in which to save the key". Then, type a secure passphrase.
+
+Start the ssh-agent and add your private key:
+
+```sh
+eval "$(ssh-agent -s)"
+
+ssh-add ~/.ssh/id_rsa
+```
+
+Copy the SSH key to your clipboard (saved at `/home/you/.ssh/id_rsa`). Go to ['SSH and GPG keys'](https://github.com/settings/keys) in your GitHub account settings. Select 'New SSH key', add a descriptive label in the 'Title' field, and paste the SSH key in the 'Key' field.
+
+Finally, [change the remote URL](https://help.github.com/en/articles/changing-a-remotes-url#switching-remote-urls-from-https-to-ssh) of your local repository to the following format:
+
+```sh
+git config remote.origin.url 
+https://github.com/dir/repo.git
+
+# change the url using the following format
+git config remote.origin.url "git@github.com:dir/repo.git"
+```
+
+List existing remote URLs for your local repository:
+
+```sh
+git remote -v
+```
+
+Change your remote's URL from HTTPS to SSH with `git remote set-url` and verify:
+
+```sh
+git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+git remote -v
+```
+
+
+#### [Using credential helper to store password (less secure method)](https://stackoverflow.com/a/17979600/4573584)
+
+```sh
+git config --global credential.helper store
+```
+
+**Warning**: username and password / personal access token are stored unencrypted at `~/.git-credentials` through this method.
+
+Use the following command to undo credential storage:
+
+```sh
+git config --unset credential.helper
+```
+
+
+### [Invalid username or password](https://stackoverflow.com/a/34919582/4573584)
+
+Could happen due to two-factor authentication. To resolve the issue: 
+
+* manually generate a personal access token on GitHub
+* assign permission to access repo and gist (just like the other tokens)
+* copy the token and use it instead of the password
 
 
 ## Branching
@@ -59,9 +142,9 @@ git branch branchname HEAD~3
 
 ```sh
 git checkout better_branch
-git merge --strategy=ours master    # keep the content of this branch, but record a merge
+git merge --strategy=ours master # keep the content of this branch, but record a merge
 git checkout master
-git merge better_branch             # fast-forward master up to the merge
+git merge better_branch # fast-forward master up to the merge
 ```
 
 
@@ -78,7 +161,6 @@ Replace `<num>` with the number of commits you want to remove. e.g., `git reset 
 ## [Ignoring files](https://help.github.com/en/articles/ignoring-files)
 
 ### Templates
-
 
 * [A collection of useful .gitignore templates](https://github.com/github/gitignore)
 * [gitignore.io](https://www.gitignore.io/)
@@ -145,21 +227,12 @@ git remote rm docs
 ```
 
 
-### [Invalid username or password](https://stackoverflow.com/a/34919582/4573584)
-
-Could happen due to two-factor authentication. To resolve the issue: 
-
-* manually generate a personal access token on GitHub
-* assign permission to access repo and gist (just like the othet tokens)
-* copy the token and use it instead of the password
-
-
 ## Submodules and subtrees
 
 ***For wikis:***
 1. ***make all changes in the submodule***
 2. ***push the changes to the submodule's master branch***
-3. ~~***merge the changes to the subtree***~~ subtrees cause too many merge issues for me
+3. ~~***merge the changes to the subtree***~~ *subtrees cause too many merge issues for me*
 4. ***push to the main code repository***
 
 

@@ -3,6 +3,7 @@
 ## Table of contents <!-- omit in toc -->
 - [Getting started](#getting-started)
 - [Pandas](#pandas)
+- [Jupyter](#jupyter)
 - [Matplotlib](#matplotlib)
   - [Customising facecolours](#customising-facecolours)
   - [Customising plots with style sheets](#customising-plots-with-style-sheets)
@@ -74,6 +75,8 @@ df['Region'] =
 'Europe'
 'Africa'
 ```
+
+## Jupyter
 
 [Show all the rows or columns from a DataFrame in Jupyter](https://songhuiming.github.io/pages/2017/04/02/jupyter-and-pandas-display/):
 
