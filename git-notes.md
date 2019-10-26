@@ -4,7 +4,7 @@
 - [Useful links](#useful-links)
 - [Credentials and authentication](#credentials-and-authentication)
   - [Prevent Git from asking for username and password during every push on Linux](#prevent-git-from-asking-for-username-and-password-during-every-push-on-linux)
-  - [Invalid username or password](#invalid-username-or-password)
+  - [Invalid username or password error](#invalid-username-or-password-error)
 - [Branching](#branching)
 - [Removing the last commit](#removing-the-last-commit)
 - [Ignoring files](#ignoring-files)
@@ -93,7 +93,7 @@ git config --unset credential.helper
 ```
 
 
-### [Invalid username or password](https://stackoverflow.com/a/34919582/4573584)
+### [Invalid username or password error](https://stackoverflow.com/a/34919582/4573584)
 
 Could happen due to two-factor authentication. To resolve the issue: 
 

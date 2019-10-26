@@ -4,6 +4,7 @@
 - [Ghostscript](#ghostscript)
 - [Poppler](#poppler)
 - [Pandoc](#pandoc)
+  - [Syntax highlighting](#syntax-highlighting)
   - [Markdown to Beamer](#markdown-to-beamer)
   - [Markdown to PDF](#markdown-to-pdf)
   - [Markdown to reveal.js](#markdown-to-revealjs)
@@ -40,6 +41,24 @@ pdfunite file1.pdf file2.pdf file3.pdf outputfile.pdf
 ```
 
 ## [Pandoc](https://pandoc.org/)
+
+### Syntax highlighting
+
+Content fenced by three backticks (```) will be parsed as codeblocks. If a language is not specified after the first three backticks, Pandoc parses the content into the `verbatim` environment on LaTeX. This prevents the codeblock from being formatted using the default syntax highlighting settings (including background colour). To prevent this from happening, assign these code blocks markup languages such as `html` or `md`.
+
+Allowing syntax highlighting of inline code (refs: [1](https://stackoverflow.com/a/54669722/4573584), [2](https://stackoverflow.com/a/34481948/4573584)):
+
+```latex
+% preamble - required packages
+\usepackage{xcolor}
+\definecolor{bgcolor}{HTML}{f0f8ff}
+% set background colour
+\let\oldtexttt\texttt
+\renewcommand{\texttt}[1]{
+  \colorbox{bgcolor}{\oldtexttt{#1}}
+}
+```
+
 
 ### Markdown to Beamer
 

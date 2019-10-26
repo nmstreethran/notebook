@@ -175,6 +175,10 @@ Inline codes are fenced by single back ticks. Code blocks are fenced by triple b
 
 For code blocks, syntax highlighting is possible. Name the language right after the first three back ticks.
 
+[List of languages supported by GitHub flavoured markdown](http://www.rubycoloredglasses.com/2013/04/languages-supported-by-github-flavored-markdown/):
+
+> Github uses Linguist to perform language detection and syntax highlighting [...] [(see full list in Linguist - languages.yml)](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml).
+
 
 ## Horizontal rule
 

@@ -1,13 +1,140 @@
 # Web development notes <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
+- [HTML / CSS](#html--css)
+  - [Overflow](#overflow)
+  - [Selecting elements](#selecting-elements)
+  - [Fonts](#fonts)
+  - [Responsive tables](#responsive-tables)
+  - [Types of CSS](#types-of-css)
 - [GitHub Pages](#github-pages)
 - [Minimal Mistakes](#minimal-mistakes)
 - [Local](#local)
 - [System](#system)
 - [reveal.js](#revealjs)
-- [CSS](#css)
 - [See also](#see-also)
+
+
+## HTML / CSS
+
+### Overflow
+
+[Prevent unbreakable strings from overflowing its line box (e.g., long URLs and words)](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap):
+
+```css
+div {
+    overflow-wrap: anywhere;
+}
+```
+
+
+### Selecting elements
+
+[Style the element with `id="firstname"`](https://www.w3schools.com/csSref/sel_id.asp):
+
+```css
+#firstname {
+    background-color: yellow;
+}
+```
+
+[Selecting elements with matching conditions](https://stackoverflow.com/a/56043821/4573584):
+
+Given the following example snippet with a `div`:
+
+```html
+<div id='element_123_wrapper_text'>My sample DIV</div>
+```
+
+... to match IDs that starts with given value, use the operator `^`:
+
+```css
+div[id^="element_123"] {
+    background-color: yellow;
+}
+```
+
+... to match elements that ends with given value, use the operator `$`:
+
+```css
+div[id$="wrapper_text"] {
+    background-color: yellow;
+}
+```
+
+... to match elements that have an attribute containing a given value, use the operator `*`:
+
+```css
+div[id*="wrapper_text"] {
+    background-color: yellow;
+}
+```
+
+
+### Fonts
+
+* [System fonts](https://devhints.io/css-system-font-stack)
+
+
+### [Responsive tables](https://www.w3schools.com/howto/howto_css_table_responsive.asp)
+
+> display a horizontal scroll bar if the screen is too small to display the full content
+
+```html
+<div style="overflow-x:auto;">
+  <table>
+    ...
+  </table>
+</div>
+```
+
+
+### [Types of CSS](https://stackoverflow.com/a/40690406/4573584)
+
+Inline CSS (within HTML):
+
+```html
+<div style="width:50px;height:50px;background color:red">
+```
+
+Internal CSS (within HTML):
+
+```html
+<head>
+    <style>
+        div {
+        height:50px;
+        width:50px;
+        background-color:red;
+        foreground-color:white;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+```
+
+External CSS:
+
+```html
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div></div>
+</body>
+```
+
+... where `style.css` is:
+
+```css
+div {
+        height:50px;
+        width:50px;
+        background-color:red;
+    }
+```
 
 
 ## [GitHub Pages](https://pages.github.com/)
@@ -104,11 +231,6 @@ gem update --system
 
 * [GitHub repository](https://github.com/hakimel/reveal.js)
 * [Node.js](https://nodejs.org/en/)
-
-
-## CSS
-
-* [System fonts](https://devhints.io/css-system-font-stack)
 
 
 ## See also

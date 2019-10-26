@@ -30,7 +30,7 @@ I use [VSCodium](https://vscodium.github.io/) (fully open-source alternative to 
 
 ## License and credits
 
-Unless otherwise stated or attributed, the contents of this repository are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International Public License](LICENSE.md).
+Unless otherwise stated or attributed, the contents of this repository are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International Public License (CC BY-SA 4.0)](LICENSE.md).
 
 Stack Overflow user contributions are licensed under CC BY-SA 4.0.
 
