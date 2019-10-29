@@ -5,6 +5,7 @@
 - [Credentials and authentication](#credentials-and-authentication)
   - [Prevent Git from asking for username and password during every push on Linux](#prevent-git-from-asking-for-username-and-password-during-every-push-on-linux)
   - [Invalid username or password error](#invalid-username-or-password-error)
+  - [SSH askpass error](#ssh-askpass-error)
 - [Branching](#branching)
 - [Removing the last commit](#removing-the-last-commit)
 - [Ignoring files](#ignoring-files)
@@ -100,6 +101,17 @@ Could happen due to two-factor authentication. To resolve the issue:
 * manually generate a personal access token on GitHub
 * assign permission to access repo and gist (just like the other tokens)
 * copy the token and use it instead of the password
+
+
+### [SSH askpass error](https://stackoverflow.com/a/52886041/4573584)
+
+Error when pushing using VS Code on Ubuntu:
+
+```sh
+Git: ssh_askpass: exec(usr/lib/ssh/ssh_askpass): No such file or directory.
+```
+
+Likely caused by OS update, which makes Git lose the passphrase of the SSH key. To solve the problem, run `ssh-add ~/.ssh/id_rsa`. It may require reinstallation of VS Code.
 
 
 ## Branching

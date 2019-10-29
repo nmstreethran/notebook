@@ -171,7 +171,7 @@ Markdown | Less | Pretty
 
 ## Code and syntax highlighting
 
-Inline codes are fenced by single back ticks. Code blocks are fenced by triple back ticks. ` ````` `
+Inline codes are fenced by single back ticks. Code blocks are fenced by triple back ticks (```).
 
 For code blocks, syntax highlighting is possible. Name the language right after the first three back ticks.
 

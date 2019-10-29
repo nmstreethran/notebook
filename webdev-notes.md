@@ -6,6 +6,7 @@
   - [Selecting elements](#selecting-elements)
   - [Fonts](#fonts)
   - [Responsive tables](#responsive-tables)
+  - [Prevent overlap of content on navigation bar](#prevent-overlap-of-content-on-navigation-bar)
   - [Types of CSS](#types-of-css)
 - [GitHub Pages](#github-pages)
 - [Minimal Mistakes](#minimal-mistakes)
@@ -86,6 +87,17 @@ div[id*="wrapper_text"] {
     ...
   </table>
 </div>
+```
+
+
+### [Prevent overlap of content on navigation bar](https://stackoverflow.com/a/16873252/4573584)
+
+Adding a z-index to keep the navigation bar on top of everything. 999 is the max value.
+
+```css
+nav {
+    z-index: 999;
+}
 ```
 
 
