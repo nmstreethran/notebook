@@ -9,8 +9,6 @@
   - [Customising plots with style sheets](#customising-plots-with-style-sheets)
 - [Datetime](#datetime)
 - [Getting a Python programme to do nothing when using statements](#getting-a-python-programme-to-do-nothing-when-using-statements)
-- [NumPy](#numpy)
-- [scikit-learn](#scikit-learn)
 
 
 ## Getting started
@@ -181,9 +179,3 @@ Even better (using not-equal-to operator):
 if num2 != num5:
     do_something()
 ```
-
-
-## [NumPy](http://www.numpy.org/)
-
-
-## [scikit-learn](https://scikit-learn.org/stable/)

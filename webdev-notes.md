@@ -9,11 +9,10 @@
   - [Prevent overlap of content on navigation bar](#prevent-overlap-of-content-on-navigation-bar)
   - [Types of CSS](#types-of-css)
 - [GitHub Pages](#github-pages)
-- [Minimal Mistakes](#minimal-mistakes)
-- [Local](#local)
-- [System](#system)
-- [reveal.js](#revealjs)
-- [See also](#see-also)
+  - [Minimal Mistakes](#minimal-mistakes)
+  - [Local](#local)
+  - [System](#system)
+  - [See also](#see-also)
 
 
 ## HTML / CSS
@@ -83,9 +82,9 @@ div[id*="wrapper_text"] {
 
 ```html
 <div style="overflow-x:auto;">
-  <table>
-    ...
-  </table>
+    <table>
+        ...
+    </table>
 </div>
 ```
 
@@ -156,7 +155,7 @@ div {
 * [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll)
 
 
-## [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
+### [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
 
 * [Installation](https://mmistakes.github.io/minimal-mistakes/docs/installation/)
 * [Jekyll Remote Theme](https://github.com/benbalter/jekyll-remote-theme)
@@ -164,7 +163,7 @@ div {
 * [Adding favicons to website](https://github.com/mmistakes/minimal-mistakes/issues/949): use [Favicon generator](https://realfavicongenerator.net/) to generate the icons and HTML, then drop them into `/assets/icons/` and `/_includes/head/custom.html` respectively. Make sure you update the path to the icons in the HTML file.
 
 
-### Social share buttons <!-- omit in toc -->
+#### Social share buttons <!-- omit in toc -->
 
 Edit `_includes/social-share.html` to add or remove buttons:
 
@@ -179,7 +178,7 @@ Buttons' colours can be changed in `_sass/minimal-mistakes/_buttons.scss`, under
 ```
 
 
-## Local
+### Local
 
 Check files in local repository:
 
@@ -212,7 +211,7 @@ gem 'tzinfo-data'
 ```
 
 
-## System
+### System
 
 Check Ruby version:
 
@@ -239,13 +238,7 @@ gem update --system
 ```
 
 
-## [reveal.js](https://revealjs.com/)
-
-* [GitHub repository](https://github.com/hakimel/reveal.js)
-* [Node.js](https://nodejs.org/en/)
-
-
-## See also
+### See also
 
 1. [Top Ten Static Site Generators of 2017](https://www.netlify.com/blog/2017/05/25/top-ten-static-site-generators-of-2017/)
 2. [Jekyll on Windows](https://jekyllrb.com/docs/installation/windows/)

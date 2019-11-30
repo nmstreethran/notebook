@@ -10,6 +10,7 @@
   - [Markdown to reveal.js](#markdown-to-revealjs)
   - [Input multiple files](#input-multiple-files)
 
+
 ## Ghostscript
 
 [Compressing PDF files to reduce their size](https://askubuntu.com/a/256449/714808)
@@ -23,6 +24,7 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -d
 > - `-dPDFSETTINGS=/prepress` output similar to Acrobat Distiller "Prepress Optimized" setting (300 dpi)
 > - `-dPDFSETTINGS=/printer` selects output similar to the Acrobat Distiller "Print Optimized" setting (300 dpi)
 > - `-dPDFSETTINGS=/default` selects output intended to be useful across a wide variety of uses, possibly at the expense of a larger output file
+
 
 ## Poppler
 
@@ -39,6 +41,7 @@ Merging PDF files (preserves hyperlinks):
 ```sh
 pdfunite file1.pdf file2.pdf file3.pdf outputfile.pdf
 ```
+
 
 ## [Pandoc](https://pandoc.org/)
 
@@ -96,6 +99,7 @@ keywords:
 ---
 ```
 
+
 ### Markdown to PDF
 
 [Pandoc command](https://pandoc.org/demos.html)
@@ -142,7 +146,7 @@ Command line formatting and metadata:
 * [Page title or title](https://groups.google.com/d/msg/pandoc-discuss/CyiyBJOn5Gs/Olo3aq1qAi0J):
 
 ```sh
-pandoc -s -V "pagetitle:My Doc Title" -V "title:My Doc Title" 
+pandoc -s -V "pagetitle:My Doc Title" -V "title:My Doc Title"
 ```
 
 * Today's date:
@@ -162,6 +166,7 @@ To obtain date formats:
 ```sh
 date --help
 ```
+
 
 ### Markdown to reveal.js
 
@@ -193,6 +198,7 @@ theme:
 - white
 ---
 ```
+
 
 ### [Input multiple files](https://gist.github.com/xuanlongma/5564190)
 
