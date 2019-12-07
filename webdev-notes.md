@@ -27,7 +27,6 @@ div {
 }
 ```
 
-
 ### Selecting elements
 
 [Style the element with `id="firstname"`](https://www.w3schools.com/csSref/sel_id.asp):
@@ -70,11 +69,9 @@ div[id*="wrapper_text"] {
 }
 ```
 
-
 ### Fonts
 
 * [System fonts](https://devhints.io/css-system-font-stack)
-
 
 ### [Responsive tables](https://www.w3schools.com/howto/howto_css_table_responsive.asp)
 
@@ -88,7 +85,6 @@ div[id*="wrapper_text"] {
 </div>
 ```
 
-
 ### [Prevent overlap of content on navigation bar](https://stackoverflow.com/a/16873252/4573584)
 
 Adding a z-index to keep the navigation bar on top of everything. 999 is the max value.
@@ -98,7 +94,6 @@ nav {
     z-index: 999;
 }
 ```
-
 
 ### [Types of CSS](https://stackoverflow.com/a/40690406/4573584)
 
@@ -147,13 +142,11 @@ div {
     }
 ```
 
-
 ## [GitHub Pages](https://pages.github.com/)
 
 * [GitHub Pages Basics](https://help.github.com/en/categories/github-pages-basics)
 * [Using Jekyll as a static site generator with GitHub Pages](https://help.github.com/en/articles/using-jekyll-as-a-static-site-generator-with-github-pages)
 * [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll)
-
 
 ### [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
 
@@ -161,7 +154,6 @@ div {
 * [Jekyll Remote Theme](https://github.com/benbalter/jekyll-remote-theme)
 * [AcademicPages](https://github.com/academicpages/academicpages.github.io)
 * [Adding favicons to website](https://github.com/mmistakes/minimal-mistakes/issues/949): use [Favicon generator](https://realfavicongenerator.net/) to generate the icons and HTML, then drop them into `/assets/icons/` and `/_includes/head/custom.html` respectively. Make sure you update the path to the icons in the HTML file.
-
 
 #### Social share buttons <!-- omit in toc -->
 
@@ -176,7 +168,6 @@ Buttons' colours can be changed in `_sass/minimal-mistakes/_buttons.scss`, under
 ```html
 (reddit, #ff4500)
 ```
-
 
 ### Local
 
@@ -210,7 +201,6 @@ bundle update
 gem 'tzinfo-data'
 ```
 
-
 ### System
 
 Check Ruby version:
@@ -236,7 +226,6 @@ jekyll -v
 ```bash
 gem update --system
 ```
-
 
 ### See also
 

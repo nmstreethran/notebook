@@ -4,7 +4,6 @@
 - [Character limits](#character-limits)
 - [Python](#python)
 
-
 ## Character limits
 
 [adhering to 80 character limit in code](https://softwareengineering.stackexchange.com/a/1848/333462)
@@ -13,7 +12,6 @@
 - easier to view diffs (VS Code's word wrap does not work on diffs)
 - reduces code density
 - increases readability of complex lines, such as conditionals and nested loops
-
 
 ## Python
 

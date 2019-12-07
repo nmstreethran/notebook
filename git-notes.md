@@ -31,7 +31,6 @@
 * [Pro Git book](https://git-scm.com/book/en/v2)
 * [Visual Git Cheat Sheet](http://ndpsoftware.com/git-cheatsheet.html)
 
-
 ## Credentials and authentication
 
 ### Prevent Git from asking for username and password during every push on Linux
@@ -78,7 +77,6 @@ git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 git remote -v
 ```
 
-
 #### [Using credential helper to store password (less secure method)](https://stackoverflow.com/a/17979600/4573584)
 
 ```sh
@@ -93,7 +91,6 @@ Use the following command to undo credential storage:
 git config --unset credential.helper
 ```
 
-
 ### [Invalid username or password error](https://stackoverflow.com/a/34919582/4573584)
 
 Could happen due to two-factor authentication. To resolve the issue: 
@@ -101,7 +98,6 @@ Could happen due to two-factor authentication. To resolve the issue:
 * manually generate a personal access token on GitHub
 * assign permission to access repo and gist (just like the other tokens)
 * copy the token and use it instead of the password
-
 
 ### [SSH askpass error](https://stackoverflow.com/a/52886041/4573584)
 
@@ -112,7 +108,6 @@ Git: ssh_askpass: exec(usr/lib/ssh/ssh_askpass): No such file or directory.
 ```
 
 Likely caused by OS update, which makes Git lose the passphrase of the SSH key. To solve the problem, run `ssh-add ~/.ssh/id_rsa`. It may require reinstallation of VS Code.
-
 
 ## Branching
 
@@ -149,7 +144,6 @@ git checkout master
 git merge better_branch # fast-forward master up to the merge
 ```
 
-
 ## [Removing the last commit](https://gist.github.com/CrookedNumber/8964442)
 
 ```sh
@@ -159,14 +153,12 @@ git push origin -f
 
 Replace `<num>` with the number of commits you want to remove. e.g., `git reset --hard HEAD~2` removes the last two commits.
 
-
 ## [Ignoring files](https://help.github.com/en/articles/ignoring-files)
 
 ### Templates
 
 * [A collection of useful .gitignore templates](https://github.com/github/gitignore)
 * [gitignore.io](https://www.gitignore.io/)
-
 
 ### Remove checked in file
 
@@ -175,7 +167,6 @@ If you already have a file checked in, and you want to ignore it, Git will not i
 ```sh
 git rm --cached FILENAME
 ```
-
 
 ### [Ignoring files with exceptions](https://stackoverflow.com/a/16318111/4573584)
 
@@ -188,20 +179,17 @@ pippo/pluto/*
 !pippo/pluto/paperino.xml
 ```
 
-
 ## GitHub
 
 * [Delete wiki home page](https://stackoverflow.com/a/42653762/4573584)
 * [GitHub Wiki How-To](https://gist.github.com/subfuzion/0d3f19c4f780a7d75ba2)
 * [Detach a fork and turn it into a standalone repository](https://help.github.com/en/articles/why-are-my-contributions-not-showing-up-on-my-profile) -- contact [GitHub support](https://support.github.com/contact)
 
-
 ## Pull requests
 
 * [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
 * [About pull request merges](https://help.github.com/en/articles/about-pull-request-merges)
 * [Merging a pull request](https://help.github.com/en/articles/merging-a-pull-request)
-
 
 ## Errors
 
@@ -215,7 +203,6 @@ fatal: HttpRequestException encountered.
 
 Solution: [Update Git to the latest version](https://stackoverflow.com/a/49109825/4573584).
 
-
 ### Remote already exists
 
 ```sh
@@ -228,7 +215,6 @@ Solution: [remove the remote repository](https://stackoverflow.com/a/1221874/457
 git remote rm docs
 ```
 
-
 ## Submodules and subtrees
 
 ***For wikis:***
@@ -236,7 +222,6 @@ git remote rm docs
 2. ***push the changes to the submodule's master branch***
 3. ~~***merge the changes to the subtree***~~ *subtrees cause too many merge issues for me*
 4. ***push to the main code repository***
-
 
 ### [Including wiki in the main code repository as a submodule](https://brendancleary.com/2013/03/08/including-a-github-wiki-in-a-repository-as-a-submodule/)
 
@@ -250,20 +235,17 @@ Commit this addition to the main repository and push the changes. Once changes t
 
 See the [Git documentation on submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
-
 ### [Cloning a repository including the contents of its submodules](https://stackoverflow.com/a/3797061/4573584)
 
 ```sh
 git clone --recurse-submodules https://github.com/username/repo.git
 ```
 
-
 ### [Renaming submodules](https://stackoverflow.com/a/18712756/4573584)
 
 ```sh
 git mv oldname newname
 ```
-
 
 ### [Deinit old submodule, remove the directory and create a new submodule](https://stackoverflow.com/a/22309234/4573584)
 
@@ -272,7 +254,6 @@ git submodule deinit <submodule name>
 git rm <submodule folder name>
 git submodule add <address to remote git repo> <new folder name>
 ```
-
 
 ### [Including wiki in the main code repository as a subtree](https://stackoverflow.com/a/33182223/4573584)
 

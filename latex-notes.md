@@ -78,13 +78,11 @@ It was written by \@author\space on \@date
 \makeatother
 ```
 
-
 ### [Define shortcuts to document properties](https://en.wikibooks.org/wiki/TeX/def)
 
 ```latex
 \def \auth {Author's Name} % author
 ```
-
 
 ### [Set images path](https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure)
 
@@ -93,18 +91,15 @@ It was written by \@author\space on \@date
 \graphicspath{ {images/} }
 ```
 
-
 ### [Adding captions as a node in `tikzpicture`](https://tex.stackexchange.com/a/351672/140109)
 
 [`tikzpagenodes`](https://tex.stackexchange.com/a/386331/140109)
-
 
 ### [Defining custom HTML colours](https://htmlcolorcodes.com/color-names/)
 
 ```latex
 \definecolor{EnsystraGreen}{HTML}{00CD98}
 ```
-
 
 ### Hyperlink and pdf metadata
 
@@ -123,7 +118,6 @@ It was written by \@author\space on \@date
 	pdfkeywords={keyword1,keyword2}]{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,pdfcopyright=\copyright,pdflicenseurl=\licenseurl,pdfcontactemail=email@mail.com}
 ```
-
 
 ## Bibliography
 
@@ -171,7 +165,6 @@ Removes unwanted fields for all reference types, except `@misc`:
 \DeclareBibliographyAlias{software}{online}
 ```
 
-
 ### [BibLaTeX styles](https://www.overleaf.com/learn/latex/Biblatex_citation_styles)
 
 Alphanumeric style 
@@ -202,11 +195,9 @@ Alphanumeric style
 
 The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](https://github.com/plk/biblatex/blob/dev/tex/latex/biblatex/biblatex.def). The defaults for `\DeclareNolabel` are `\regexp{[\p{P}\p{S}\p{C}]+}`.
 
-
 ### [Listing entries without in-text citation](https://tex.stackexchange.com/a/17132/140109)
 
 `\nocite{*}` prints all entries, while `\nocite{key1,key2,...,keyn}` prints entries corresponding to the `key1,key2,...,keyn` keys. Use either of these commands before `\printbibliography`.
-
 
 ## Book / article / report document class
 
@@ -216,7 +207,6 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 \emergencystretch 3em 
 ```
 
-
 ### [Remove blank pages after chapters](https://tex.stackexchange.com/a/334126/140109)
 
 ```latex
@@ -224,13 +214,11 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 \let\cleardoublepage=\clearpage
 ```
 
-
 ### [Fix spacing problem for header and footer using `headheight`](https://tex.stackexchange.com/a/93871/140109)
 
 ```latex
 \geometry{lmargin=2.5cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm,headheight=34pt} 
 ```
-
 
 ### Change title of contents
 
@@ -239,14 +227,12 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 \addto\captionsUKenglish{\renewcommand\contentsname{Table of Contents}} % specify new title
 ```
 
-
 ### Listings
 
 ```latex
 \usepackage{listings}
 \renewcommand{\lstlistlistingname}{List of Listings} % add/rename title of list of listings
 ```
-
 
 ### Sans serif headings with serif body and math
 
@@ -259,13 +245,11 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 \allsectionsfont{\raggedright\normalfont\sffamily\bfseries} % ^ bold + sans serif section headings; aligned left
 ```
 
-
 ### [Adding lists to the table of contents](https://ctan.org/pkg/tocbibind)
 
 ```latex
 \usepackage[nottoc,notbib]{tocbibind}
 ```
-
 
 ### Rename "Chapter X" to "Part X"
 
@@ -273,13 +257,11 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 \addto\captionsUKenglish{\renewcommand{\chaptername}{Part}} % specify new name
 ```
 
-
 ### Caption font
 
 ```latex
 \usepackage[font=small,labelfont=bf]{caption} 
 ```
-
 
 ### Force table captions to top of the table
 
@@ -287,7 +269,6 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 \usepackage{floatrow}  
 \floatsetup[table]{capposition=top}
 ```
-
 
 ### Header and footer settings using `fancyhdr`
 
@@ -317,13 +298,11 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 ```
 
-
 ### [Remove headers and footers for a page](https://tex.stackexchange.com/a/120748/140109)
 
 ```latex
 \thispagestyle{empty}
 ```
-
 
 ### [Float placeins within subsections](https://tex.stackexchange.com/a/118667/140109)
 
@@ -337,7 +316,6 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 }
 \makeatother
 ```
-
 
 ### Tables
 
@@ -353,7 +331,6 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 \newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}} 
 ```
 
-
 ### [Globally change table font size](https://tex.stackexchange.com/a/220258/140109)
 
 ```latex
@@ -361,13 +338,11 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 \renewcommand{\tabular}{\footnotesize\oldtabular}
 ```
 
-
 ### Bibliography package
 
 ```latex
 \usepackage[backend=biber,style=ieee,uniquename=init,giveninits,urldate=long]{biblatex}
 ```
-
 
 ### Ensuring bibliography respects margins and [fix `underfull \hbox` warnings](https://tex.stackexchange.com/a/10928/140109)
 
@@ -386,7 +361,6 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 \makeglossaries 
 ```
 
-
 ### Frontmatter, mainmatter and backmatter
 
 * [footnote customisation](https://en.wikibooks.org/wiki/LaTeX/Footnotes_and_Margin_Notes)
@@ -394,7 +368,6 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 * [placing appendices after backmatter](https://tex.stackexchange.com/a/198608/140109)
 * [remove "Appendix/Chapter X" from references header](https://tex.stackexchange.com/a/102693/140109)
 * [appendix chapter name](https://tex.stackexchange.com/a/151130/140109)
-
 
 ### Word count
 
@@ -409,7 +382,6 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 And now for something completely different
 %TC:endignore 
 ```
-
 
 ## Beamer class
 
@@ -435,14 +407,12 @@ And now for something completely different
 \setbeamercolor{example text}{fg=blue}
 ```
 
-
 ### Change date format to DD/MM/YYYY
 
 ```latex
 \usepackage[UKenglish]{babel}
 \usepackage[ddmmyyyy]{datetime} % set date format 
 ```
-
 
 ### Bibliography
 
@@ -468,7 +438,6 @@ And now for something completely different
 \printbibliography
 \end{frame}
 ```
-
 
 ### [Adjust title page vertical spacing](https://tex.stackexchange.com/a/255335/140109)
 
@@ -504,7 +473,6 @@ And now for something completely different
 \makeatother
 ```
 
-
 ### [Frame title formatting](https://tex.stackexchange.com/a/306416/140109)
 
 ```latex
@@ -533,7 +501,6 @@ And now for something completely different
 \makeatother
 ```
 
-
 ### [Frame margins](https://tex.stackexchange.com/a/109984/140109)
 
 ```latex
@@ -542,13 +509,11 @@ And now for something completely different
 }
 ```
 
-
 ### Remove navigation symbols
 
 ```latex
 \setbeamertemplate{navigation symbols}{}
 ```
-
 
 ### [Change position of navigation symbols](https://tex.stackexchange.com/a/35637/140109)
 
@@ -562,7 +527,6 @@ And now for something completely different
 			\insertbackfindforwardnavigationsymbol
 ```
 
-
 ### Sectioning 
 
 * sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
@@ -575,11 +539,9 @@ And now for something completely different
 \tableofcontents[currentsection]
 ```
 
-
 ## ModernCV
 
 ***Note: This package has not been updated since 2016***
-
 
 ### Known issues
 
@@ -587,7 +549,6 @@ And now for something completely different
 - `fontenc.sty`: Font shape 'TU/qpl/m/n' undefined \ (Font) using 'TU/lmr/m/n' instead
 - `moderncvbodyiii.sty`: You have requested package 'moderncvbodyiii', but the package provides 'moderncvbodyiii'.
 - `moderncvheadiii.sty`: You have requested package 'moderncvheadiii', but the package provides 'moderncvheadiii'.
-
 
 ### [Extending a quote's width](https://tex.stackexchange.com/a/247503/140109)
 
@@ -599,14 +560,12 @@ And now for something completely different
 \setlength{\quotewidth}{.8\textwidth}} % change .8 to desired value
 ```
 
-
 ### [Edit space after header](https://tex.stackexchange.com/a/82871/140109)
 
 ```latex
 \makecvtitle
 \vspace*{-5mm} % enter right after \makecvtitle
 ```
-
 
 ### [Reduce signature whitespace](https://tex.stackexchange.com/a/196910/140109)
 

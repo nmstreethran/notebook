@@ -9,7 +9,6 @@ Bash scripts and commands
 - [Running commands stored in a file](#running-commands-stored-in-a-file)
 - [Python package installation](#python-package-installation)
 
-
 ## [Using the terminal to navigate through directories](https://help.ubuntu.com/community/UsingTheTerminal)
 
 Changing directories using `cd`:
@@ -19,20 +18,17 @@ Changing directories using `cd`:
 * To navigate up one directory level: `cd ..`
 * To navigate to the previous directory (or back): `cd -`
 
-
 ## [Copy files from one directory to another, ignoring all .files and .dirs](https://stackoverflow.com/a/11557164/4573584)
 
 ```sh
 cp -r SRC_DIR/* DEST_DIR
 ```
 
-
 ## [Running commands stored in a file](https://stackoverflow.com/a/13568021/4573584)
 
 ```sh
 bash file
 ```
-
 
 ## [Python package installation](https://stackoverflow.com/a/50893981/4573584)
 

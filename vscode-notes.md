@@ -23,11 +23,9 @@ Useful shortcuts:
 * Navigate Forward / Backward: `Ctrl+–` / `Ctrl+Shift+–` 
 * [Add cursors to all line ends in current selection](https://stackoverflow.com/a/46244456/4573584): `Alt+Shift+I`
 
-
 ## Settings
 
 See my [gist](https://gist.github.com/nmstreethran/b63189f4af0c9d444691105ab456e943).
-
 
 ## Syntax highlighting
 
@@ -35,13 +33,11 @@ See my [gist](https://gist.github.com/nmstreethran/b63189f4af0c9d444691105ab456e
 
 > In the very right bottom corner, left to the smiley there was the icon saying "Plain Text". When you click it, the menu with all languages appears where you can choose your desired language.
 
-
 ## Useful links
 
 * [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings)
 * [Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 * [Multi-root Workspaces](https://code.visualstudio.com/docs/editor/multi-root-workspaces)
-
 
 ## Python
 
@@ -49,16 +45,13 @@ See my [gist](https://gist.github.com/nmstreethran/b63189f4af0c9d444691105ab456e
 * [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
 * [Working with Jupyter Notebooks in Visual Studio Code](https://code.visualstudio.com/docs/python/jupyter-support)
 
-
 ## Git
 
 * [Using Version Control in VS Code](https://code.visualstudio.com/Docs/editor/versioncontrol)
 
-
 ## Markdown
 
 * [Markdown and Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown)
-
 
 ## HTML
 

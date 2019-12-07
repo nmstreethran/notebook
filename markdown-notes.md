@@ -26,7 +26,6 @@
 
 ~~Strikethrough~~: `~~Strikethrough~~`
 
-
 ## Lists
 
 Numbered lists 
@@ -66,7 +65,6 @@ Bullet lists (using `*`, `-` or `+`)
 * first
 - second
 + third
-
 
 ## Hyperlinks
 
@@ -108,7 +106,6 @@ Some text to show that the reference links can follow later.
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
 
-
 ## Images
 
 ```md
@@ -132,7 +129,6 @@ Reference-style:
 ![alt text][logo]
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
 
 ## Tables
 
@@ -168,7 +164,6 @@ Markdown | Less | Pretty
 *Still* | `renders` | **nicely**
 1 | 2 | 3
 
-
 ## Code and syntax highlighting
 
 Inline codes are fenced by single back ticks. Code blocks are fenced by triple back ticks (```).
@@ -179,13 +174,11 @@ For code blocks, syntax highlighting is possible. Name the language right after 
 
 > Github uses Linguist to perform language detection and syntax highlighting [...] [(see full list in Linguist - languages.yml)](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml).
 
-
 ## Horizontal rule
 
 Three or more hyphens `---`, asterisks `***` or underscores `___`
 
 ---
-
 
 ## [Text alignment](https://stackoverflow.com/q/14051715/4573584)
 
@@ -194,7 +187,6 @@ Three or more hyphens `---`, asterisks `***` or underscores `___`
 ```
 
 <p align="center">centered text</p>
-
 
 ## Badges
 
@@ -212,7 +204,6 @@ Use the following to obtain `?logo=data:image/png;base64,…`:
 
 * [Base-64 encoding tool](http://b64.io/)
 * [Encoder/decoder tool for percent encoding](http://meyerweb.com/eric/tools/dencoder/)
-
 
 ## Blockquotes
 
@@ -232,13 +223,11 @@ Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 
-
 ## [Font Awesome](https://fontawesome.com/) 
 
 ```md
 <i class="fab fa-markdown"></i>
 ```
-
 
 ## Text colours and fonts
 
@@ -254,7 +243,6 @@ I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
 
 I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
 
-
 ## YouTube videos
 
 ```md
@@ -262,7 +250,6 @@ I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
 ```
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
-
 
 ## [Footnotes](https://stackoverflow.com/a/32119820/4573584)
 
@@ -284,7 +271,6 @@ Bla bla <sup id="a1">[1](#f1)</sup> or <sup name="a2">[2](#f2)</sup>
 <b id="f1">1</b> Footnote content here. [↩](#a1)
 
 <b name="f2">2</b> Footnote content here. [↩](#a2)
-
 
 ## Sources
 

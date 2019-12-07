@@ -25,7 +25,6 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -d
 > - `-dPDFSETTINGS=/printer` selects output similar to the Acrobat Distiller "Print Optimized" setting (300 dpi)
 > - `-dPDFSETTINGS=/default` selects output intended to be useful across a wide variety of uses, possibly at the expense of a larger output file
 
-
 ## Poppler
 
 Source: https://www.ostechnix.com/how-to-merge-pdf-files-in-command-line-on-linux/
@@ -41,7 +40,6 @@ Merging PDF files (preserves hyperlinks):
 ```sh
 pdfunite file1.pdf file2.pdf file3.pdf outputfile.pdf
 ```
-
 
 ## [Pandoc](https://pandoc.org/)
 
@@ -61,7 +59,6 @@ Allowing syntax highlighting of inline code (refs: [1](https://stackoverflow.com
   \colorbox{bgcolor}{\oldtexttt{#1}}
 }
 ```
-
 
 ### Markdown to Beamer
 
@@ -98,7 +95,6 @@ keywords:
 - notes
 ---
 ```
-
 
 ### Markdown to PDF
 
@@ -167,7 +163,6 @@ To obtain date formats:
 date --help
 ```
 
-
 ### Markdown to reveal.js
 
 [Pandoc commands](https://pandoc.org/demos.html):
@@ -198,7 +193,6 @@ theme:
 - white
 ---
 ```
-
 
 ### [Input multiple files](https://gist.github.com/xuanlongma/5564190)
 

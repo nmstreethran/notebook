@@ -17,7 +17,6 @@
 * [Python Editors](https://wiki.python.org/moin/PythonEditors)
 * [Integrated Development Environments](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments)
 
-
 ## [Pandas](http://pandas.pydata.org/pandas-docs/stable/)
 
 [Drop a row / column](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop.html):
@@ -93,7 +92,6 @@ pd.options.display.max_rows
 pd.set_option('display.max_colwidth', -1)
 ```
 
-
 ## [Matplotlib](https://matplotlib.org/)
 
 [Save pandas dataframe plot as pdf](https://stackoverflow.com/a/35484725/4573584):
@@ -107,7 +105,6 @@ plt.savefig('filename.pdf')
 ```py
 plt.setp(plt.legend().get_texts(), color='w')
 ```
-
 
 ### Customising facecolours
 
@@ -129,7 +126,6 @@ plt.rcParams['savefig.facecolor'] = 'red'
 plt.rcParams['figure.facecolor'] = 'black'
 ```
 
-
 ### [Customising plots with style sheets](https://matplotlib.org/users/style_sheets.html)
 
 ```py
@@ -150,12 +146,10 @@ This gives:
 
 The outputs of each style sheet is shown in [matplotlib-style-sheets.ipynb](https://github.com/nmstreethran/coding/blob/master/matplotlib-style-sheets.ipynb).
 
-
 ## Datetime
 
 * [Python's `strftime` directives](http://strftime.org/)
 * [`pandas.to_datetime`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html)
-
 
 ## [Getting a Python programme to do nothing when using statements](https://stackoverflow.com/a/19632742/4573584)
 
