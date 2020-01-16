@@ -39,6 +39,7 @@
 
 - https://help.github.com/en/articles/connecting-to-github-with-ssh
 - https://help.github.com/en/articles/changing-a-remotes-url#switching-remote-urls-from-https-to-ssh
+- https://gitlab.com/help/ssh/README
 
 Check for existing SSH keys:
 
@@ -46,15 +47,21 @@ Check for existing SSH keys:
 ls -al ~/.ssh
 ```
 
-Generate a new key if there are none exist:
+Generate a new key if none exist:
 
 ```sh
-ssh-keygen -t rsa -b 4096 -C "your_github_email@example.com"
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+**[Using ED25519 SSH keys (recommended over RSA)](https://gitlab.com/help/ssh/README#ed25519-ssh-keys)**
+
+```sh
+ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
 Press `Enter` when prompted to "Enter a file in which to save the key". Then, type a secure passphrase.
 
-Start the ssh-agent and add your private key:
+Start the ssh-agent and add your private key (if using non-default file path):
 
 ```sh
 eval "$(ssh-agent -s)"

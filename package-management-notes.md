@@ -15,6 +15,7 @@
   - [Virtual environments](#virtual-environments)
   - [Installing for a specific Python version](#installing-for-a-specific-python-version)
   - [Uninstalling packages](#uninstalling-packages)
+  - [Prevent conda from activating the base environment by default](#prevent-conda-from-activating-the-base-environment-by-default)
 - [References](#references)
 
 
@@ -319,6 +320,10 @@ python3 -m pip install package
 ```sh
 pip uninstall package
 ```
+
+### Prevent conda from activating the base environment by default
+
+https://stackoverflow.com/questions/54429210/how-do-i-prevent-conda-from-activating-the-base-environment-by-default
 
 ## References
 
