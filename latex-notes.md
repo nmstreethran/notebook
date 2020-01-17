@@ -7,7 +7,7 @@ My LaTeX documents are compiled on [VSCodium](https://vscodium.github.io/) (open
 - [General](#general)
 	- [Reusing defined commands](#reusing-defined-commands)
 	- [Define shortcuts to document properties](#define-shortcuts-to-document-properties)
-	- [Set images path:_Basic_Structure)](#set-images-path_basic_structure)
+	- [Set images path](#set-images-path)
 	- [Adding captions as a node in `tikzpicture`](#adding-captions-as-a-node-in-tikzpicture)
 	- [Defining custom HTML colours](#defining-custom-html-colours)
 	- [Hyperlink and pdf metadata](#hyperlink-and-pdf-metadata)
@@ -84,7 +84,9 @@ It was written by \@author\space on \@date
 \def \auth {Author's Name} % author
 ```
 
-### [Set images path](https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure)
+### Set images path
+
+Source: https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure
 
 ```latex
 \usepackage{graphicx}

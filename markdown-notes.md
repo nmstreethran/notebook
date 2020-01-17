@@ -246,10 +246,12 @@ I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
 ## YouTube videos
 
 ```md
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/oFFvwZIEk1Y/0.jpg)](http://www.youtube.com/watch?v=oFFvwZIEk1Y)
 ```
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/oFFvwZIEk1Y/0.jpg)](http://www.youtube.com/watch?v=oFFvwZIEk1Y)
+
+Thumbnail by [Gopher](https://www.youtube.com/user/GophersVids).
 
 ## [Footnotes](https://stackoverflow.com/a/32119820/4573584)
 
