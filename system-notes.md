@@ -49,8 +49,7 @@ Using the [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdel
 
 ### Drivers and applications
 
-* [Radeon Software for Linux Installation](https://www.amd.com/en/support/kb/release-notes/AMDGPU-INSTALLATION)
-* [Radeon™ Software for Linux® 18.20 Release Notes](https://www.amd.com/en/support/kb/release-notes/rn-prorad-lin-18-20)
+* Radeon Software for Linux Installation (search for Linux in the AMD website)
 * [VSCodium installation](https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo)
 
 ### Realtek wifi problems

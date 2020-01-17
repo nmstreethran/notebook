@@ -6,4 +6,4 @@ services:
 
 script:
   # Link checks
-  - docker run -ti --rm -v $PWD:/mnt:ro dkhamsing/awesome_bot --allow-dupe --allow-redirect --skip-save-results --base-url https://github.com/nmstreethran/notebook/blob/master/ `find . -name "*.md"`
+  - docker run -ti --rm -v $PWD:/mnt:ro dkhamsing/awesome_bot --allow-dupe --allow-redirect --skip-save-results `find . -name "*.md"`
