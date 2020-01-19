@@ -7,6 +7,7 @@
   - [Invalid username or password error](#invalid-username-or-password-error)
   - [SSH askpass error](#ssh-askpass-error)
 - [Branching](#branching)
+- [Deleting commit history of a repository but keep the code in its current state](#deleting-commit-history-of-a-repository-but-keep-the-code-in-its-current-state)
 - [Removing the last commit](#removing-the-last-commit)
 - [Ignoring files](#ignoring-files)
   - [Templates](#templates)
@@ -149,6 +150,44 @@ git checkout better_branch
 git merge --strategy=ours master # keep the content of this branch, but record a merge
 git checkout master
 git merge better_branch # fast-forward master up to the merge
+```
+
+## [Deleting commit history of a repository but keep the code in its current state](https://stackoverflow.com/a/26000395/4573584)
+
+Checkout
+
+```sh
+git checkout --orphan latest_branch
+```
+
+Add all the files
+
+```sh
+git add -A
+```
+
+Commit the changes
+
+```sh
+git commit -am "commit message"
+```
+
+Delete the branch
+
+```sh
+git branch -D master
+```
+
+Rename the current branch to master
+
+```sh
+git branch -m master
+```
+
+Force update your repository
+
+```sh
+git push -f origin master
 ```
 
 ## [Removing the last commit](https://gist.github.com/CrookedNumber/8964442)
