@@ -144,7 +144,7 @@ This gives:
 ['bmh', 'classic', 'dark_background', 'fast', 'fivethirtyeight', 'ggplot', 'grayscale', 'seaborn-bright', 'seaborn-colorblind', 'seaborn-dark-palette', 'seaborn-dark', 'seaborn-darkgrid', 'seaborn-deep', 'seaborn-muted', 'seaborn-notebook', 'seaborn-paper', 'seaborn-pastel', 'seaborn-poster', 'seaborn-talk', 'seaborn-ticks', 'seaborn-white', 'seaborn-whitegrid', 'seaborn', 'Solarize_Light2', 'tableau-colorblind10', '_classic_test']
 ```
 
-The outputs of each style sheet is shown in [matplotlib-style-sheets.ipynb](https://github.com/nmstreethran/coding/blob/master/matplotlib-style-sheets.ipynb).
+The outputs of each style sheet is shown in [matplotlib-style-sheets.ipynb](matplotlib/matplotlib-style-sheets.ipynb).
 
 ## Datetime
 

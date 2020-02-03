@@ -1,0 +1,9 @@
+# https://github.com/dkhamsing/awesome_bot
+sudo: required
+
+services:
+  - docker
+
+script:
+  # Link checks
+  - docker run -ti --rm -v $PWD:/mnt:ro dkhamsing/awesome_bot --allow-dupe --allow-redirect --skip-save-results --base-url https://github.com/nmstreethran/notebook/blob/master/ `find . -name "*.md"`
