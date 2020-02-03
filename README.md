@@ -37,5 +37,3 @@ Unless otherwise stated or attributed, the contents of this repository are licen
 Stack Overflow user contributions are licensed under CC BY-SA 4.0.
 
 All original sources are attributed and/or linked within the notes.
-
-Link validation: [dkhamsing/awesome_bot](https://github.com/dkhamsing/awesome_bot)
