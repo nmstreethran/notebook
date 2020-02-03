@@ -17,6 +17,11 @@
   - [Globally customise system UI font on Ubuntu](#globally-customise-system-ui-font-on-ubuntu)
   - [Prevent the screen from turning off when the lockscreen is active](#prevent-the-screen-from-turning-off-when-the-lockscreen-is-active)
   - [Changing the default display manager](#changing-the-default-display-manager)
+  - [Installing Firefox Developer Edition](#installing-firefox-developer-edition)
+  - [CheckInstall](#checkinstall)
+  - [Installing from an archive](#installing-from-an-archive)
+  - [Uninstalling software](#uninstalling-software)
+  - [Changing GNOME screenshot directory](#changing-gnome-screenshot-directory)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
 
@@ -138,3 +143,76 @@ sudo dpkg-reconfigure gdm3
 ```
 
 The same command can be used to [reset the display manager](https://askubuntu.com/q/1043048/714808) should something go wrong with the GUI, or the original CSS files get corrupted.
+
+### [Installing Firefox Developer Edition](https://askubuntu.com/a/584704/714808)
+
+Firefox Developer Edition will work alongside other Firefox installations with separate profiles.
+
+First, install [Ubuntu Make](https://wiki.ubuntu.com/ubuntu-make):
+
+```sh
+snap install ubuntu-make
+```
+
+Then, install Firefox Developer Edition:
+
+```sh
+umake web firefox-dev
+```
+
+Restart if the application does not appear in the dashboard.
+
+### [CheckInstall](https://help.ubuntu.com/community/CheckInstall)
+
+> CheckInstall keeps track of all files installed by a "make install" or equivalent, creates a Slackware, RPM, or Debian package with those files, and adds it to the installed packages database, allowing for easy package removal or distribution.
+
+Install using:
+
+```sh
+sudo apt-get update && sudo apt-get install checkinstall
+```
+
+Instead of
+
+```sh
+sudo make install
+```
+
+you will use
+
+```
+sudo checkinstall
+```
+
+### [Installing from an archive](https://askubuntu.com/a/1030/714808)
+
+First, extract the archive. Then, open a terminal and navigate to the directory of the extracted folder.
+
+Installation (depends on instructions):
+
+```sh
+xdg-open INSTALL
+```
+
+### [Uninstalling software](https://askubuntu.com/a/1144/714808)
+
+If installed via package manager:
+
+```sh
+sudo apt-get remove <application_name>
+```
+
+To uninstall all related packages and configuration files:
+
+```sh
+sudo apt-get purge <package-name>
+```
+
+Otherwise, use Synaptic Package Manager, and 'Mark for complete removal'.
+
+### [Changing GNOME screenshot directory](https://askubuntu.com/a/1102530/714808)
+
+Use an extension:
+
+- <https://extensions.gnome.org/extension/1179/screenshot-locations/>
+- <https://github.com/kiyui/gnome-shell-screenshotlocations-extension>

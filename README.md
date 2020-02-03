@@ -1,6 +1,6 @@
 # notebook
 
-[![Markdown link checker GitHub issues](https://img.shields.io/github/issues/nmstreethran/notebook/link%20checker?color=limegreen&label=Link%20checker%20issues&labelColor=darkslategray)](https://github.com/nmstreethran/notebook/issues?q=is%3Aissue+is%3Aopen+label%3A%22link+checker%22)
+[![Build Status](https://travis-ci.org/nmstreethran/notebook.svg?branch=master)](https://travis-ci.org/nmstreethran/notebook)
 
 Welcome to my notebook!
 

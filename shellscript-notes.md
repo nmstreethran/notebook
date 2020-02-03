@@ -8,6 +8,8 @@ Bash scripts and commands
 - [Copy files from one directory to another, ignoring all .files and .dirs](#copy-files-from-one-directory-to-another-ignoring-all-files-and-dirs)
 - [Running commands stored in a file](#running-commands-stored-in-a-file)
 - [Python package installation](#python-package-installation)
+- [Saving the output of a terminal command to a file](#saving-the-output-of-a-terminal-command-to-a-file)
+- [Extracting tarballs](#extracting-tarballs)
 
 ## [Using the terminal to navigate through directories](https://help.ubuntu.com/community/UsingTheTerminal)
 
@@ -42,4 +44,49 @@ Fixed using:
 ```sh
 pip3 install --user package-name  # for Python3
 pip install --user package-name   # for Python2
+```
+
+## [Saving the output of a terminal command to a file](https://askubuntu.com/a/420983/714808)
+
+```sh
+SomeCommand > SomeFile.txt
+```
+
+To append data:
+
+```sh
+SomeCommand >> SomeFile.txt
+```
+
+If you want [`stderr`](https://en.wikipedia.org/wiki/Standard_streams#Standard_error_.28stderr.29) as well:
+
+```sh
+SomeCommand &> SomeFile.txt
+```
+
+`stderr` and append:
+
+```sh
+SomeCommand &>> SomeFile.txt
+```
+
+`stderr` and output displayed on the console and in a file:
+
+```sh
+SomeCommand 2>&1 | tee SomeFile.txt
+```
+
+(If you want the output only, drop the `2` above)
+
+## [Extracting tarballs](https://askubuntu.com/a/25962/714808)
+
+```sh
+tar xzf file.tar.gz
+tar xjf file.tar.bz2
+```
+
+To see the files being extracted during unpacking:
+
+```sh
+tar xzvf file.tar.gz
 ```
