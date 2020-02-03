@@ -1,6 +1,7 @@
 # Web development notes <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
+
 - [HTML / CSS](#html--css)
   - [Overflow](#overflow)
   - [Selecting elements](#selecting-elements)
@@ -13,7 +14,6 @@
   - [Local](#local)
   - [System](#system)
   - [See also](#see-also)
-
 
 ## HTML / CSS
 
@@ -71,7 +71,7 @@ div[id*="wrapper_text"] {
 
 ### Fonts
 
-* [System fonts](https://devhints.io/css-system-font-stack)
+- [System fonts](https://devhints.io/css-system-font-stack)
 
 ### [Responsive tables](https://www.w3schools.com/howto/howto_css_table_responsive.asp)
 
@@ -144,16 +144,16 @@ div {
 
 ## [GitHub Pages](https://pages.github.com/)
 
-* [GitHub Pages Basics](https://help.github.com/en/categories/github-pages-basics)
-* [Using Jekyll as a static site generator with GitHub Pages](https://help.github.com/en/articles/using-jekyll-as-a-static-site-generator-with-github-pages)
-* [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll)
+- [GitHub Pages Basics](https://help.github.com/en/categories/github-pages-basics)
+- [Using Jekyll as a static site generator with GitHub Pages](https://help.github.com/en/articles/using-jekyll-as-a-static-site-generator-with-github-pages)
+- [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll)
 
 ### [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
 
-* [Installation](https://mmistakes.github.io/minimal-mistakes/docs/installation/)
-* [Jekyll Remote Theme](https://github.com/benbalter/jekyll-remote-theme)
-* [AcademicPages](https://github.com/academicpages/academicpages.github.io)
-* [Adding favicons to website](https://github.com/mmistakes/minimal-mistakes/issues/949): use [Favicon generator](https://realfavicongenerator.net/) to generate the icons and HTML, then drop them into `/assets/icons/` and `/_includes/head/custom.html` respectively. Make sure you update the path to the icons in the HTML file.
+- [Installation](https://mmistakes.github.io/minimal-mistakes/docs/installation/)
+- [Jekyll Remote Theme](https://github.com/benbalter/jekyll-remote-theme)
+- [AcademicPages](https://github.com/academicpages/academicpages.github.io)
+- [Adding favicons to website](https://github.com/mmistakes/minimal-mistakes/issues/949): use [Favicon generator](https://realfavicongenerator.net/) to generate the icons and HTML, then drop them into `/assets/icons/` and `/_includes/head/custom.html` respectively. Make sure you update the path to the icons in the HTML file.
 
 #### Social share buttons <!-- omit in toc -->
 
@@ -192,7 +192,7 @@ bundle exec jekyll serve
 Updating the site:
 
 ```bash
-bundle update 
+bundle update
 ```
 
 [Resolving TZInfo::DataSourceNotFound Errors](https://github.com/tzinfo/tzinfo/wiki/Resolving-TZInfo::DataSourceNotFound-Errors) by adding this to the Gemfile:

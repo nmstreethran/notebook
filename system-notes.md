@@ -1,6 +1,7 @@
 # System notes <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
+
 - [Turn on or off secure boot](#turn-on-or-off-secure-boot)
 - [Fix boot order / Grub menu not appearing on startup](#fix-boot-order--grub-menu-not-appearing-on-startup)
 - [Windows](#windows)
@@ -17,7 +18,6 @@
   - [Prevent the screen from turning off when the lockscreen is active](#prevent-the-screen-from-turning-off-when-the-lockscreen-is-active)
   - [Changing the default display manager](#changing-the-default-display-manager)
 
-
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
 
 Open the PC BIOS menu. You can often access this menu by pressing a key during the bootup sequence, such as F1, F2, F12, or Esc.
@@ -26,7 +26,7 @@ Or, from Windows: go to **Settings charm** > **Change PC settings** > **Update a
 
 Find the **Secure Boot** setting, and if possible, set it to **Enabled**. This option is usually in either the **Security** tab, the **Boot** tab, or the **Authentication** tab.
 
-## Fix boot order / Grub menu not appearing on startup 
+## Fix boot order / Grub menu not appearing on startup
 
 Windows: go to **Settings charm** > **Change PC settings** > **Update and Recovery** > **Recovery** > **Advanced Startup: Restart now**. When the PC reboots, go to **Troubleshoot** > **Advanced Options: UEFI Firmware Settings**. Change the order of the OS in boot settings.
 
@@ -34,12 +34,12 @@ Windows: go to **Settings charm** > **Change PC settings** > **Update and Recove
 
 ### [Setting or changing the PATH system variable](https://www.java.com/en/download/help/path.xml)
 
-* The **PATH** is the system variable that your operating system uses to locate needed executables from the command line or Terminal window.
-* The **PATH** system variable can be set using **System Utility** in control panel on Windows.
-* In Windows 10, search for 'Edit the system environment variables'
-* Click on 'Environment Variables'.
-* In the section System Variables, find the **PATH** environment variable and select it. Click Edit. If the **PATH** environment variable does not exist, click New.
-* In the Edit System Variable (or New System Variable) window, specify the value of the **PATH** environment variable. Click OK. Close all remaining windows by clicking OK.
+- The **PATH** is the system variable that your operating system uses to locate needed executables from the command line or Terminal window.
+- The **PATH** system variable can be set using **System Utility** in control panel on Windows.
+- In Windows 10, search for 'Edit the system environment variables'
+- Click on 'Environment Variables'.
+- In the section System Variables, find the **PATH** environment variable and select it. Click Edit. If the **PATH** environment variable does not exist, click New.
+- In the Edit System Variable (or New System Variable) window, specify the value of the **PATH** environment variable. Click OK. Close all remaining windows by clicking OK.
 
 ### [Securely delete files on Windows 10 without third-party tools](https://www.techrepublic.com/article/how-to-securely-and-completely-delete-files-in-windows-10-without-third-party-software/)
 
@@ -49,8 +49,8 @@ Using the [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdel
 
 ### Drivers and applications
 
-* Radeon Software for Linux Installation (search for Linux in the AMD website)
-* [VSCodium installation](https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo)
+- Radeon Software for Linux Installation (search for Linux in the AMD website)
+- [VSCodium installation](https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo)
 
 ### Realtek wifi problems
 
@@ -58,13 +58,13 @@ Secure boot should be disabled before installing these drivers.
 
 ### [Making Ubuntu look like Windows](https://www.howtogeek.com/353819/how-to-make-ubuntu-look-more-like-windows/)
 
-* [Dash to panel](https://github.com/home-sweet-gnome/dash-to-panel)
+- [Dash to panel](https://github.com/home-sweet-gnome/dash-to-panel)
 
 ### File syncing using rclone
 
-* https://www.techrepublic.com/article/how-to-sync-from-linux-to-google-drive-with-rclone/
-* https://github.com/ncw/rclone
-* https://rclone.org/
+- <https://www.techrepublic.com/article/how-to-sync-from-linux-to-google-drive-with-rclone/>
+- <https://github.com/ncw/rclone>
+- <https://rclone.org/>
 
 ### [Adding directory to PATH](https://askubuntu.com/a/688998/714808)
 
@@ -79,18 +79,16 @@ echo export PATH=\"$(echo path/to/file/):\$PATH\" >> ~/.bashrc
 If it's completely frozen, REISUB it (safer than rebooting)
 
 > While holding `Alt` and the `SysReq` (Print Screen) keys, type `R` `E` `I` `S` `U` `B`.
-
-```
-R:  Switch to XLATE mode
-E:  Send Terminate signal to all processes except for init
-I:  Send Kill signal to all processes except for init
-S:  Sync all mounted file-systems
-U:  Remount file-systems as read-only
-B:  Reboot
-```
-
+>
+> R:  Switch to XLATE mode
+> E:  Send Terminate signal to all processes except for init
+> I:  Send Kill signal to all processes except for init
+> S:  Sync all mounted file-systems
+> U:  Remount file-systems as read-only
+> B:  Reboot
+>
 > REISUB is BUSIER backwards, as in "The System is **busier** than it should be", if you need to remember it. Or mnemonically - **R**eboot; **E**ven; **I**f; **S**ystem; **U**tterly; **B**roken.
-
+>
 > **NOTE:** There exists less radical way than rebooting the whole system. If `SysReq` key works, you can kill processes one-by-one using `Alt`+`SysReq`+`F`. Kernel will kill the mostly «expensive» process each time. If you want to kill all processes for one console, you can issue `Alt`+`SysReq`+`K`.
 
 ### [Globally customise system UI font on Ubuntu](https://github.com/Microsoft/vscode/issues/10144#issuecomment-337490205)
@@ -101,12 +99,12 @@ Paste the following in your local font configuration file (`/etc/fonts/conf.avai
 <?xml version="1.0"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 <fontconfig>
-	<!-- Load local system customization file -->
-	<match target="pattern"> 
-		<test qual="any" name="family"><string>Ubuntu</string></test>
-		<edit name="family" mode="assign" binding="same"><string>Lato</string></edit>
-	</match>	
-	<include ignore_missing="yes">local.conf</include>
+    <!-- Load local system customization file -->
+    <match target="pattern">
+        <test qual="any" name="family"><string>Ubuntu</string></test>
+        <edit name="family" mode="assign" binding="same"><string>Lato</string></edit>
+    </match>
+    <include ignore_missing="yes">local.conf</include>
 </fontconfig>
 ```
 
@@ -121,7 +119,7 @@ Using an extension by [u/SomeGenericUsername](https://www.reddit.com/r/gnome/com
 > I've only tested the extension on 3.14, but I think it should work on 3.10 or 3.12 as well, if you haven't upgraded yet. Also my testing was not really thorough, but it seems to be working for both, locking the screen based on the user being idle and on clicking the lock button.
 > So after all this has been said, here is the extension now:
 >
-> https://www.dropbox.com/s/5owr2bxhbijdino/no-screen-blank%40example.com.zip?dl=1
+> <https://www.dropbox.com/s/5owr2bxhbijdino/no-screen-blank%40example.com.zip?dl=1>
 >
 > Extract it to `~/.local/share/gnome-shell/extensions/`
 >

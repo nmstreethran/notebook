@@ -1,6 +1,7 @@
 # Markdown notes <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
+
 - [Emphasis](#emphasis)
 - [Lists](#lists)
 - [Hyperlinks](#hyperlinks)
@@ -17,7 +18,6 @@
 - [Footnotes](#footnotes)
 - [Sources](#sources)
 
-
 ## Emphasis
 
 **Bold**: `**Bold**`
@@ -28,7 +28,7 @@
 
 ## Lists
 
-Numbered lists 
+Numbered lists
 
 ```md
 1. first
@@ -77,8 +77,8 @@ Bullet lists (using `*`, `-` or `+`)
 
 Or leave it empty and use the [link text itself]
 
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
+URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or <http://www.example.com> and sometimes
 example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
@@ -96,8 +96,8 @@ Some text to show that the reference links can follow later.
 
 Or leave it empty and use the [link text itself]
 
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
+URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or <http://www.example.com> and sometimes
 example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
@@ -111,10 +111,10 @@ Some text to show that the reference links can follow later.
 ```md
 Here's the Markdown Here logo (hover to see the title text):
 
-Inline-style: 
+Inline-style:
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
-Reference-style: 
+Reference-style:
 ![alt text][logo]
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
@@ -122,10 +122,10 @@ Reference-style:
 
 Here's the Markdown Here logo (hover to see the title text):
 
-Inline-style: 
+Inline-style:
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
-Reference-style: 
+Reference-style:
 ![alt text][logo]
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
@@ -190,7 +190,7 @@ Three or more hyphens `---`, asterisks `***` or underscores `___`
 
 ## Badges
 
-* [License badges using Shields.io](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
+- [License badges using Shields.io](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
 
 Using [Shields.io](https://shields.io/category/social) badges with [custom logo](https://stackoverflow.com/a/41472017/4573584):
 
@@ -202,8 +202,8 @@ Using [Shields.io](https://shields.io/category/social) badges with [custom logo]
 
 Use the following to obtain `?logo=data:image/png;base64,…`:
 
-* [Base-64 encoding tool](http://b64.io/)
-* [Encoder/decoder tool for percent encoding](http://meyerweb.com/eric/tools/dencoder/)
+- [Base-64 encoding tool](http://b64.io/)
+- [Encoder/decoder tool for percent encoding](http://meyerweb.com/eric/tools/dencoder/)
 
 ## Blockquotes
 
@@ -213,7 +213,7 @@ Use the following to obtain `?logo=data:image/png;base64,…`:
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 ```
 
 > Blockquotes are very handy in email to emulate reply text.
@@ -221,7 +221,7 @@ Quote break.
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 
 ## [Font Awesome](https://fontawesome.com/) 
 
@@ -276,11 +276,11 @@ Bla bla <sup id="a1">[1](#f1)</sup> or <sup name="a2">[2](#f2)</sup>
 
 ## Sources
 
-1. https://daringfireball.net/projects/markdown/
-2. https://markdown-here.com/
+1. <https://daringfireball.net/projects/markdown/>
+2. <https://markdown-here.com/>
 3. [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 4. [Markdown Here cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
-5. https://highlightjs.org/static/demo/
-6. https://help.github.com/en/articles/creating-and-highlighting-code-blocks
-7. https://github.github.com/gfm/
+5. <https://highlightjs.org/static/demo/>
+6. <https://help.github.com/en/articles/creating-and-highlighting-code-blocks>
+7. <https://github.github.com/gfm/>
 8. [Squarespace Markdown cheat sheet](https://support.squarespace.com/hc/en-us/articles/206543587-Markdown-cheat-sheet)

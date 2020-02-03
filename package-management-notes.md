@@ -1,6 +1,7 @@
 # Package management <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
+
 - [Anaconda](#anaconda)
   - [Searching for packages](#searching-for-packages)
   - [Managing environments](#managing-environments)
@@ -17,7 +18,6 @@
   - [Uninstalling packages](#uninstalling-packages)
   - [Prevent conda from activating the base environment by default](#prevent-conda-from-activating-the-base-environment-by-default)
 - [References](#references)
-
 
 ## Anaconda
 
@@ -189,9 +189,9 @@ To update the Anaconda metapackage:
 ```sh
 conda update conda
 conda update anaconda
-``` 
+```
 
-Update all installed packages: 
+Update all installed packages:
 
 ```sh
 conda update --all
@@ -299,7 +299,7 @@ source env/bin/activate
 
 Leaving the virtual environment:
 
-```
+```sh
 deactivate
 ```
 
@@ -323,11 +323,11 @@ pip uninstall package
 
 ### Prevent conda from activating the base environment by default
 
-https://stackoverflow.com/questions/54429210/how-do-i-prevent-conda-from-activating-the-base-environment-by-default
+<https://stackoverflow.com/questions/54429210/how-do-i-prevent-conda-from-activating-the-base-environment-by-default>
 
 ## References
 
-1. https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html
-2. https://pythonfix.com/code/conda-upgrade-all/
-3. https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
-4. https://packaging.python.org/guides/installing-using-pip-and-virtual-environments
+1. <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html>
+2. <https://pythonfix.com/code/conda-upgrade-all/>
+3. <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>
+4. <https://packaging.python.org/guides/installing-using-pip-and-virtual-environments>

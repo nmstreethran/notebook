@@ -1,6 +1,7 @@
 # Python notes <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
+
 - [Getting started](#getting-started)
 - [Pandas](#pandas)
 - [Jupyter](#jupyter)
@@ -10,12 +11,11 @@
 - [Datetime](#datetime)
 - [Getting a Python programme to do nothing when using statements](#getting-a-python-programme-to-do-nothing-when-using-statements)
 
-
 ## Getting started
 
-* [Python For Beginners](https://www.python.org/about/gettingstarted/)
-* [Python Editors](https://wiki.python.org/moin/PythonEditors)
-* [Integrated Development Environments](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments)
+- [Python For Beginners](https://www.python.org/about/gettingstarted/)
+- [Python Editors](https://wiki.python.org/moin/PythonEditors)
+- [Integrated Development Environments](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments)
 
 ## [Pandas](http://pandas.pydata.org/pandas-docs/stable/)
 
@@ -46,13 +46,13 @@ df.index=pd.to_datetime(df.index)
 
 ```py
 df.iloc[0] # returns corresponding row at index 0
-df.iloc[0]['column'] # returns corresponding cell 
+df.iloc[0]['column'] # returns corresponding cell
 ```
 
 [Extracting parts of a string in a column separated by a delimiter](https://stackoverflow.com/a/44922659/4573584):
 
 ```py
-df['Raw'] = 
+df['Raw'] =
 '(1T XXX, Europe)'
 '(2T YYYY, Latin America)'
 '(3T ZZ/ZZZZ, Europe)'
@@ -61,12 +61,12 @@ df['Raw'] =
 df['Model'] = [x.split(',')[0].replace('(', '') for x in df['Raw']] # extract first section; remove opening parenthesis
 df['Region'] = [x.split(',')[1].replace(')', '') for x in df['Raw']] # extract second section; remove closing parenthesis
 # results
-df['Model'] = 
+df['Model'] =
 '1T XXX'
 '2T YYYY'
 '3T ZZ/ZZZZ'
 '4T XXX XXX'
-df['Region'] = 
+df['Region'] =
 'Europe'
 'Latin America'
 'Europe'
@@ -148,8 +148,8 @@ The outputs of each style sheet is shown in [matplotlib-style-sheets.ipynb](http
 
 ## Datetime
 
-* [Python's `strftime` directives](http://strftime.org/)
-* [`pandas.to_datetime`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html)
+- [Python's `strftime` directives](http://strftime.org/)
+- [`pandas.to_datetime`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html)
 
 ## [Getting a Python programme to do nothing when using statements](https://stackoverflow.com/a/19632742/4573584)
 

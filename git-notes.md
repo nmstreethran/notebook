@@ -1,6 +1,7 @@
 # Git notes <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
+
 - [Useful links](#useful-links)
 - [Credentials and authentication](#credentials-and-authentication)
   - [Prevent Git from asking for username and password during every push on Linux](#prevent-git-from-asking-for-username-and-password-during-every-push-on-linux)
@@ -25,12 +26,11 @@
   - [Deinit old submodule, remove the directory and create a new submodule](#deinit-old-submodule-remove-the-directory-and-create-a-new-submodule)
   - [Including wiki in the main code repository as a subtree](#including-wiki-in-the-main-code-repository-as-a-subtree)
 
-
 ## Useful links
 
-* [Git reference](https://git-scm.com/docs)
-* [Pro Git book](https://git-scm.com/book/en/v2)
-* [Visual Git Cheat Sheet](http://ndpsoftware.com/git-cheatsheet.html)
+- [Git reference](https://git-scm.com/docs)
+- [Pro Git book](https://git-scm.com/book/en/v2)
+- [Visual Git Cheat Sheet](http://ndpsoftware.com/git-cheatsheet.html)
 
 ## Credentials and authentication
 
@@ -38,9 +38,9 @@
 
 #### [Using SSH keys](https://stackoverflow.com/a/34957424/4573584)
 
-- https://help.github.com/en/articles/connecting-to-github-with-ssh
-- https://help.github.com/en/articles/changing-a-remotes-url#switching-remote-urls-from-https-to-ssh
-- https://gitlab.com/help/ssh/README
+- <https://help.github.com/en/articles/connecting-to-github-with-ssh>
+- <https://help.github.com/en/articles/changing-a-remotes-url#switching-remote-urls-from-https-to-ssh>
+- <https://gitlab.com/help/ssh/README>
 
 Check for existing SSH keys:
 
@@ -101,11 +101,11 @@ git config --unset credential.helper
 
 ### [Invalid username or password error](https://stackoverflow.com/a/34919582/4573584)
 
-Could happen due to two-factor authentication. To resolve the issue: 
+Could happen due to two-factor authentication. To resolve the issue:
 
-* manually generate a personal access token on GitHub
-* assign permission to access repo and gist (just like the other tokens)
-* copy the token and use it instead of the password
+- manually generate a personal access token on GitHub
+- assign permission to access repo and gist (just like the other tokens)
+- copy the token and use it instead of the password
 
 ### [SSH askpass error](https://stackoverflow.com/a/52886041/4573584)
 
@@ -193,7 +193,7 @@ git push -f origin master
 ## [Removing the last commit](https://gist.github.com/CrookedNumber/8964442)
 
 ```sh
-git reset --hard HEAD~<num> 
+git reset --hard HEAD~<num>
 git push origin -f
 ```
 
@@ -203,8 +203,8 @@ Replace `<num>` with the number of commits you want to remove. e.g., `git reset 
 
 ### Templates
 
-* [A collection of useful .gitignore templates](https://github.com/github/gitignore)
-* [gitignore.io](https://www.gitignore.io/)
+- [A collection of useful .gitignore templates](https://github.com/github/gitignore)
+- [gitignore.io](https://www.gitignore.io/)
 
 ### Remove checked in file
 
@@ -227,15 +227,15 @@ pippo/pluto/*
 
 ## GitHub
 
-* [Delete wiki home page](https://stackoverflow.com/a/42653762/4573584)
-* [GitHub Wiki How-To](https://gist.github.com/subfuzion/0d3f19c4f780a7d75ba2)
-* [Detach a fork and turn it into a standalone repository](https://help.github.com/en/articles/why-are-my-contributions-not-showing-up-on-my-profile) -- contact [GitHub support](https://support.github.com/contact)
+- [Delete wiki home page](https://stackoverflow.com/a/42653762/4573584)
+- [GitHub Wiki How-To](https://gist.github.com/subfuzion/0d3f19c4f780a7d75ba2)
+- [Detach a fork and turn it into a standalone repository](https://help.github.com/en/articles/why-are-my-contributions-not-showing-up-on-my-profile) -- contact [GitHub support](https://support.github.com/contact)
 
 ## Pull requests
 
-* [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
-* [About pull request merges](https://help.github.com/en/articles/about-pull-request-merges)
-* [Merging a pull request](https://help.github.com/en/articles/merging-a-pull-request)
+- [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
+- [About pull request merges](https://help.github.com/en/articles/about-pull-request-merges)
+- [Merging a pull request](https://help.github.com/en/articles/merging-a-pull-request)
 
 ## Errors
 
@@ -264,6 +264,7 @@ git remote rm docs
 ## Submodules and subtrees
 
 ***For wikis:***
+
 1. ***make all changes in the submodule***
 2. ***push the changes to the submodule's master branch***
 3. ~~***merge the changes to the subtree***~~ *subtrees cause too many merge issues for me*
@@ -277,7 +278,7 @@ Add the wiki to the main repository as a submodule:
 git submodule add https://github.com/username/project.wiki.git wiki
 ```
 
-Commit this addition to the main repository and push the changes. Once changes to the wiki within the submodule are made (e.g., new markdown files, images), these changes must first be committed and pushed to the wiki's branch, before committing and pushing to the main repository's branch. 
+Commit this addition to the main repository and push the changes. Once changes to the wiki within the submodule are made (e.g., new markdown files, images), these changes must first be committed and pushed to the wiki's branch, before committing and pushing to the main repository's branch.
 
 See the [Git documentation on submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 

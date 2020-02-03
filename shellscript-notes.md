@@ -2,8 +2,8 @@
 
 Bash scripts and commands
 
-
 ## Table of contents <!-- omit in toc -->
+
 - [Using the terminal to navigate through directories](#using-the-terminal-to-navigate-through-directories)
 - [Copy files from one directory to another, ignoring all .files and .dirs](#copy-files-from-one-directory-to-another-ignoring-all-files-and-dirs)
 - [Running commands stored in a file](#running-commands-stored-in-a-file)
@@ -13,10 +13,10 @@ Bash scripts and commands
 
 Changing directories using `cd`:
 
-* To navigate into the root directory: `cd /`
-* To navigate to your home directory: `cd` or `cd ~`
-* To navigate up one directory level: `cd ..`
-* To navigate to the previous directory (or back): `cd -`
+- To navigate into the root directory: `cd /`
+- To navigate to your home directory: `cd` or `cd ~`
+- To navigate up one directory level: `cd ..`
+- To navigate to the previous directory (or back): `cd -`
 
 ## [Copy files from one directory to another, ignoring all .files and .dirs](https://stackoverflow.com/a/11557164/4573584)
 

@@ -1,6 +1,7 @@
 # Document conversion  notes <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
+
 - [Ghostscript](#ghostscript)
 - [Poppler](#poppler)
 - [Pandoc](#pandoc)
@@ -9,7 +10,6 @@
   - [Markdown to PDF](#markdown-to-pdf)
   - [Markdown to reveal.js](#markdown-to-revealjs)
   - [Input multiple files](#input-multiple-files)
-
 
 ## Ghostscript
 
@@ -27,7 +27,7 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -d
 
 ## Poppler
 
-Source: https://www.ostechnix.com/how-to-merge-pdf-files-in-command-line-on-linux/
+Source: <https://www.ostechnix.com/how-to-merge-pdf-files-in-command-line-on-linux/>
 
 Installing in Ubuntu:
 
@@ -80,7 +80,7 @@ title:
 - Title
 subtitle:
 - Subtitle
-author: 
+author:
 - Author
 subject:
 - Subject
@@ -112,7 +112,7 @@ title:
 - Title
 subtitle:
 - Subtitle
-author: 
+author:
 - Author
 subject:
 - Subject
@@ -139,13 +139,13 @@ geometry:
 
 Command line formatting and metadata:
 
-* [Page title or title](https://groups.google.com/d/msg/pandoc-discuss/CyiyBJOn5Gs/Olo3aq1qAi0J):
+- [Page title or title](https://groups.google.com/d/msg/pandoc-discuss/CyiyBJOn5Gs/Olo3aq1qAi0J):
 
 ```sh
 pandoc -s -V "pagetitle:My Doc Title" -V "title:My Doc Title"
 ```
 
-* Today's date:
+- Today's date:
 
 ```sh
 -M date="`date "+%B %e, %Y"`"
@@ -167,7 +167,7 @@ date --help
 
 [Pandoc commands](https://pandoc.org/demos.html):
 
-* For slides with math:
+- For slides with math:
 
 ```sh
 pandoc -s --mathjax -i -t revealjs SLIDES.txt -o example16d.html
