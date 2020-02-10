@@ -3,6 +3,8 @@
 ## Table of contents <!-- omit in toc -->
 
 - [Keyboard shortcuts](#keyboard-shortcuts)
+- [Additional keybindings](#additional-keybindings)
+  - [Making selected text uppercase or lowercase](#making-selected-text-uppercase-or-lowercase)
 - [Settings](#settings)
 - [Syntax highlighting](#syntax-highlighting)
 - [Useful links](#useful-links)
@@ -23,6 +25,29 @@ Useful shortcuts:
 - Peek Definition: `Alt+F12`
 - Navigate Forward / Backward: `Ctrl+–` / `Ctrl+Shift+–`
 - [Add cursors to all line ends in current selection](https://stackoverflow.com/a/46244456/4573584): `Alt+Shift+I`
+
+## Additional keybindings
+
+### [Making selected text uppercase or lowercase](https://stackoverflow.com/a/41688564/4573584)
+
+Go to Keyboard Shortcuts (`ctrl+k` `ctrl+s`) and paste the following in `keybindings.json`:
+
+```json
+[
+ {
+    "key": "ctrl+shift+u",
+    "command": "editor.action.transformToUppercase",
+    "when": "editorTextFocus"
+ },
+ {
+    "key": "ctrl+shift+l",
+    "command": "editor.action.transformToLowercase",
+    "when": "editorTextFocus"
+ }
+]
+```
+
+`ctrl+shift+l` and `ctrl+shift+u` might cause conflicts or not work at all, so use other keys, such as `ctrl+alt+l` and `ctrl+alt+u` respectively.
 
 ## Settings
 

@@ -4,9 +4,11 @@
 
 Welcome to my notebook!
 
-## Software used
+## Text editor
 
-[VSCodium](https://vscodium.github.io/) (fully open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)), with [these settings and extensions](https://gist.github.com/nmstreethran/b63189f4af0c9d444691105ab456e943).
+[Visual Studio Code](https://code.visualstudio.com/) / [VSCodium](https://vscodium.github.io/)
+
+Settings and extensions used can be found [here](https://gist.github.com/nmstreethran/b63189f4af0c9d444691105ab456e943).
 
 ## Notes
 
@@ -21,14 +23,6 @@ Welcome to my notebook!
 - [System](system-notes.md)
 - [Visual Studio Code](vscode-notes.md)
 - [Web development](webdev-notes.md)
-
-## Folders
-
-- [Pandas tutorials](pandas/)
-  - [Pandas 10 minute introduction](pandas/pandas-10-min-intro/pandas-10-min-intro.ipynb)
-  - [Pandas cookbook](pandas/pandas-cookbook/pandas-cookbook.py)
-- [Matplotlib](matplotlib/)
-  - [Matplotlib style sheets](matplotlib/matplotlib-style-sheets.ipynb)
 
 ## License and credits
 
