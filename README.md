@@ -22,11 +22,12 @@ Settings and extensions used can be found [here](https://gist.github.com/nmstree
 - [Shell scripting](shellscript-notes.md)
 - [System](system-notes.md)
 - [Visual Studio Code](vscode-notes.md)
+- [Web browsing](browser-notes.md)
 - [Web development](webdev-notes.md)
 
 ## License and credits
 
-Unless otherwise stated or attributed, the contents of this repository are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International Public License (CC BY-SA 4.0)](LICENSE.md).
+Unless otherwise stated or attributed, the contents of this repository are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International Public License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
 
 Stack Overflow user contributions are licensed under CC BY-SA 4.0.
 
