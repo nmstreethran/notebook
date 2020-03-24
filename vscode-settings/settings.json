@@ -1,0 +1,195 @@
+{
+    "cSpell.allowCompoundWords": true,
+    "cSpell.language": "en-GB",
+    "cSpell.maxDuplicateProblems": 2,
+    "cSpell.minWordLength": 1,
+    "cSpell.userWords": [
+        "analytics",
+        "blogs",
+        "bokmål",
+        "decarbonisation",
+        "dispatchable",
+        "forecasted",
+        "irradiance",
+        "nithiya",
+        "prosumers",
+        "renewables",
+        "resumé",
+        "streethran"
+      ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": false,
+    "editor.fontFamily": "'Fira Code Retina', 'Cascadia Code', 'Ubuntu Mono', 'Consolas', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        77
+      ],
+    "editor.suggestSelection": "first",
+    "editor.wordWrap": "on",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.associations": {
+        "*.theme": "jsonc",
+        "*.latex": "latex",
+        "*.sty": "latex",
+        "*.geojson": "jsonc",
+        "*.tex_t": "tex"
+      },
+    "files.autoSave": "afterDelay",
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "gitlens.currentLine.scrollable": false,
+    "[html]": {
+      "editor.tabSize": 2
+      },
+    "[javascript]": {
+        "editor.tabSize": 2
+      },
+    "[json]": {
+        "editor.tabSize": 2
+      },
+    "[jsonc]": {
+        "editor.tabSize": 2
+      },
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.latex.recipes": [
+      {
+          "name": "xelatex ×2",
+          "tools": [
+              "xelatex",
+              "xelatex"
+            ]
+        },
+      {
+          "name": "xelatex ➞ biber ➞ xelatex ×2",
+          "tools": [
+              "xelatex",
+              "biber",
+              "xelatex",
+              "xelatex"
+            ]
+        },
+      {
+          "name": "xelatex ➞ makeglossaries ➞ xelatex ×2",
+          "tools": [
+              "xelatex",
+              "makeglossaries",
+              "xelatex",
+              "xelatex"
+            ]
+        },
+      {
+          "name": "xelatex ➞ makeglossaries ➞ biber ➞ xelatex ×2",
+          "tools": [
+              "xelatex",
+              "makeglossaries",
+              "biber",
+              "xelatex",
+              "xelatex"
+            ]
+        },
+      {
+          "name": "latexmk 🔃",
+          "tools": [
+              "latexmk"
+            ]
+        },
+      {
+          "name": "pdflatex ➞ makeglossaries ➞ biber ➞ pdflatex ×2",
+          "tools": [
+              "pdflatex",
+              "makeglossaries",
+              "biber",
+              "pdflatex",
+              "pdflatex"
+            ]
+        }
+      ],
+    "latex-workshop.latex.tools": [
+      {
+          "name": "latexmk",
+          "command": "latexmk",
+          "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-pdf",
+              "-outdir=%OUTDIR%",
+              "%DOC%"
+            ],
+          "env": {}
+        },
+      {
+          "name": "pdflatex",
+          "command": "pdflatex",
+          "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "%DOC%"
+            ],
+          "env": {}
+        },
+      {
+          "name": "biber",
+          "command": "biber",
+          "args": [
+              "%DOCFILE%"
+            ]
+        },
+      {
+          "name": "makeglossaries",
+          "command": "makeglossaries",
+          "args": [
+              "%DOCFILE%"
+            ]
+        },
+      {
+          "name": "xelatex",
+          "command": "xelatex",
+          "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "%DOC%"
+            ],
+          "env": {}
+        },
+      {
+          "name": "lualatex",
+          "command": "lualatex",
+          "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "%DOC%"
+            ],
+          "env": {}
+        }
+      ],
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.update.show": false,
+    "latex-workshop.message.warning.show": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "[markdown]": {
+        "editor.tabSize": 2
+      },
+    "material-icon-theme.files.associations": {
+        "*.latex": "tex",
+        "*.geojson": "json",
+        "*.tex_t": "tex",
+        "*.theme": "json"
+      },
+    // "python.insidersChannel": "weekly",
+    "python.jediEnabled": false,
+    // "terminal.integrated.inheritEnv": false,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.menuBarVisibility": "toggle",
+    "window.restoreWindows": "none",
+    "workbench.colorTheme": "Soft Colors",
+    "workbench.iconTheme": "material-icon-theme"
+  }

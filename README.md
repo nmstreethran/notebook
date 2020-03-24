@@ -8,7 +8,7 @@ Welcome to my notebook!
 
 [Visual Studio Code](https://code.visualstudio.com/) / [VSCodium](https://vscodium.github.io/)
 
-Settings and extensions used can be found [here](https://gist.github.com/nmstreethran/b63189f4af0c9d444691105ab456e943).
+Settings and extensions used can be found in [vscode-settings](vscode-settings/).
 
 ## Notes
 
