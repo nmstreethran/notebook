@@ -62,7 +62,7 @@ Allowing syntax highlighting of inline code (refs: [1](https://stackoverflow.com
 
 ### Markdown to Beamer
 
-[The Easiest Way to Make Presentations! (Pandoc + Markdown)](http://www.youtube.com/watch?v=dum7q6UXiCE) by Luke Smith on YouTube
+[The Easiest Way to Make Presentations! (Pandoc + Markdown)](https://www.youtube.com/watch?v=dum7q6UXiCE) by Luke Smith on YouTube
 
 [Pandoc command](https://pandoc.org/demos.html):
 
@@ -139,7 +139,7 @@ geometry:
 
 Command line formatting and metadata:
 
-- [Page title or title](https://groups.google.com/d/msg/pandoc-discuss/CyiyBJOn5Gs/Olo3aq1qAi0J):
+- [Page title or title](https://groups.google.com/forum/#!msg/pandoc-discuss/CyiyBJOn5Gs/Olo3aq1qAi0J):
 
 ```sh
 pandoc -s -V "pagetitle:My Doc Title" -V "title:My Doc Title"
@@ -177,7 +177,7 @@ pandoc -s --mathjax -i -t revealjs SLIDES.txt -o example16d.html
 pandoc -t revealjs -s habits.txt -o habits.html
 ```
 
-[YAML metadata](http://pandoc.org/MANUAL.html#variables-for-html-slides):
+[YAML metadata](https://pandoc.org/MANUAL.html#variables-for-html-slides):
 
 ```yml
 ---

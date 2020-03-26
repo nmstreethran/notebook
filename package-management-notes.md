@@ -330,4 +330,4 @@ pip uninstall package
 1. <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html>
 2. <https://pythonfix.com/code/conda-upgrade-all/>
 3. <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>
-4. <https://packaging.python.org/guides/installing-using-pip-and-virtual-environments>
+4. <https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/>

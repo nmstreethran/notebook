@@ -5,6 +5,8 @@
 - [Useful links](#useful-links)
 - [Credentials and authentication](#credentials-and-authentication)
   - [Prevent Git from asking for username and password during every push on Linux](#prevent-git-from-asking-for-username-and-password-during-every-push-on-linux)
+    - [Using SSH keys](#using-ssh-keys)
+    - [Using credential helper to store password (less secure method)](#using-credential-helper-to-store-password-less-secure-method)
   - [Invalid username or password error](#invalid-username-or-password-error)
   - [SSH askpass error](#ssh-askpass-error)
 - [Branching](#branching)
@@ -38,8 +40,8 @@
 
 #### [Using SSH keys](https://stackoverflow.com/a/34957424/4573584)
 
-- <https://help.github.com/en/articles/connecting-to-github-with-ssh>
-- <https://help.github.com/en/articles/changing-a-remotes-url#switching-remote-urls-from-https-to-ssh>
+- <https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>
+- <https://help.github.com/en/github/using-git/changing-a-remotes-url>
 - <https://gitlab.com/help/ssh/README>
 
 Check for existing SSH keys:
@@ -70,7 +72,7 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```
 
-Copy the SSH key to your clipboard (saved at `/home/you/.ssh/id_rsa`). Go to ['SSH and GPG keys'](https://github.com/settings/keys) in your GitHub account settings. Select 'New SSH key', add a descriptive label in the 'Title' field, and paste the SSH key in the 'Key' field.
+Copy the SSH key to your clipboard (saved at `/home/you/.ssh/id_rsa`). Go to 'SSH and GPG keys' in your GitHub account settings. Select 'New SSH key', add a descriptive label in the 'Title' field, and paste the SSH key in the 'Key' field.
 
 List existing remote URLs for your local repository:
 
@@ -199,7 +201,7 @@ git push origin -f
 
 Replace `<num>` with the number of commits you want to remove. e.g., `git reset --hard HEAD~2` removes the last two commits.
 
-## [Ignoring files](https://help.github.com/en/articles/ignoring-files)
+## [Ignoring files](https://help.github.com/en/github/using-git/ignoring-files)
 
 ### Templates
 
@@ -229,13 +231,13 @@ pippo/pluto/*
 
 - [Delete wiki home page](https://stackoverflow.com/a/42653762/4573584)
 - [GitHub Wiki How-To](https://gist.github.com/subfuzion/0d3f19c4f780a7d75ba2)
-- [Detach a fork and turn it into a standalone repository](https://help.github.com/en/articles/why-are-my-contributions-not-showing-up-on-my-profile) -- contact [GitHub support](https://support.github.com/contact)
+- [Detach a fork and turn it into a standalone repository](https://help.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile) -- contact [GitHub support](https://support.github.com/contact)
 
 ## Pull requests
 
 - [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
-- [About pull request merges](https://help.github.com/en/articles/about-pull-request-merges)
-- [Merging a pull request](https://help.github.com/en/articles/merging-a-pull-request)
+- [About pull request merges](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges)
+- [Merging a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request)
 
 ## Errors
 
@@ -272,10 +274,10 @@ git remote rm docs
 
 ### [Including wiki in the main code repository as a submodule](https://brendancleary.com/2013/03/08/including-a-github-wiki-in-a-repository-as-a-submodule/)
 
-Add the wiki to the main repository as a submodule:
+Add the wiki to the main repository as a submodule (replace `username` and `repository` with username and repository name respectively):
 
 ```sh
-git submodule add https://github.com/username/project.wiki.git wiki
+git submodule add https://github.com/username/repository.wiki.git wiki
 ```
 
 Commit this addition to the main repository and push the changes. Once changes to the wiki within the submodule are made (e.g., new markdown files, images), these changes must first be committed and pushed to the wiki's branch, before committing and pushing to the main repository's branch.
@@ -285,7 +287,7 @@ See the [Git documentation on submodules](https://git-scm.com/book/en/v2/Git-Too
 ### [Cloning a repository including the contents of its submodules](https://stackoverflow.com/a/3797061/4573584)
 
 ```sh
-git clone --recurse-submodules https://github.com/username/repo.git
+git clone --recurse-submodules https://github.com/username/repository.git
 ```
 
 ### [Renaming submodules](https://stackoverflow.com/a/18712756/4573584)
@@ -305,9 +307,9 @@ git submodule add <address to remote git repo> <new folder name>
 ### [Including wiki in the main code repository as a subtree](https://stackoverflow.com/a/33182223/4573584)
 
 ```sh
-git clone git://github.com/you/proj
+git clone git://github.com/username/repository
 cd proj
-git remote add -f docs https://github.com/you/proj.wiki.git
+git remote add -f docs https://github.com/username/repository.wiki.git
 git merge -s ours --no-commit --allow-unrelated-histories docs/master
 git read-tree --prefix=docs/ -u docs/master
 git commit -m "Github docs subtree merged in docs/"
@@ -321,4 +323,4 @@ git pull -s subtree docs master
 
 Merging changes the other way is complicated.
 
-More about subtree merges on [GitHub](https://help.github.com/en/articles/about-git-subtree-merges).
+More about subtree merges on [GitHub](https://help.github.com/en/github/using-git/about-git-subtree-merges).

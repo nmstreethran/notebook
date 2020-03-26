@@ -17,7 +17,7 @@
 - [Python Editors](https://wiki.python.org/moin/PythonEditors)
 - [Integrated Development Environments](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments)
 
-## [Pandas](http://pandas.pydata.org/pandas-docs/stable/)
+## [Pandas](https://pandas.pydata.org/pandas-docs/stable/)
 
 [Drop a row / column](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop.html):
 
@@ -148,7 +148,7 @@ The outputs of each style sheet is shown in [matplotlib-style-sheets.ipynb](matp
 
 ## Datetime
 
-- [Python's `strftime` directives](http://strftime.org/)
+- [Python's `strftime` directives](https://strftime.org/)
 - [`pandas.to_datetime`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html)
 
 ## [Getting a Python programme to do nothing when using statements](https://stackoverflow.com/a/19632742/4573584)

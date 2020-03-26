@@ -83,9 +83,9 @@ example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
 
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
+[arbitrary case-insensitive reference text]: https://www.mozilla.org/en-US/
+[1]: https://slashdot.org/
+[link text itself]: https://www.reddit.com/
 ```
 
 [I'm an inline-style link](https://www.google.com)
@@ -102,9 +102,9 @@ example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
 
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
+[arbitrary case-insensitive reference text]: https://www.mozilla.org/en-US/
+[1]: https://slashdot.org/
+[link text itself]: https://www.reddit.com/
 
 ## Images
 
@@ -112,23 +112,23 @@ Some text to show that the reference links can follow later.
 Here's the Markdown Here logo (hover to see the title text):
 
 Inline-style:
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/adam-p/markdown-here/master/src/common/images/icon48.png "Logo Title Text 1")
 
 Reference-style:
 ![alt text][logo]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[logo]: https://raw.githubusercontent.com/adam-p/markdown-here/master/src/common/images/icon48.png "Logo Title Text 2"
 ```
 
 Here's the Markdown Here logo (hover to see the title text):
 
 Inline-style:
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/adam-p/markdown-here/master/src/common/images/icon48.png "Logo Title Text 1")
 
 Reference-style:
 ![alt text][logo]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[logo]: https://raw.githubusercontent.com/adam-p/markdown-here/master/src/common/images/icon48.png "Logo Title Text 2"
 
 ## Tables
 
@@ -192,7 +192,7 @@ Three or more hyphens `---`, asterisks `***` or underscores `___`
 
 - [License badges using Shields.io](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
 
-Using [Shields.io](https://shields.io/category/social) badges with [custom logo](https://stackoverflow.com/a/41472017/4573584):
+Using [Shields.io](https://shields.io/category/social/) badges with [custom logo](https://stackoverflow.com/a/41472017/4573584):
 
 [![tyle-Flat-appveyor](https://img.shields.io/badge/style-flat-green.svg?logo=appveyor&style=flat)](https://img.shields.io/badge/style-flat-green.svg?logo=appveyor&style=flat)
 
@@ -203,7 +203,7 @@ Using [Shields.io](https://shields.io/category/social) badges with [custom logo]
 Use the following to obtain `?logo=data:image/png;base64,…`:
 
 - [Base-64 encoding tool](http://b64.io/)
-- [Encoder/decoder tool for percent encoding](http://meyerweb.com/eric/tools/dencoder/)
+- [Encoder/decoder tool for percent encoding](https://meyerweb.com/eric/tools/dencoder/)
 
 ## Blockquotes
 
@@ -246,10 +246,10 @@ I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
 ## YouTube videos
 
 ```md
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/oFFvwZIEk1Y/0.jpg)](http://www.youtube.com/watch?v=oFFvwZIEk1Y)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/oFFvwZIEk1Y/0.jpg)](https://www.youtube.com/watch?v=oFFvwZIEk1Y)
 ```
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/oFFvwZIEk1Y/0.jpg)](http://www.youtube.com/watch?v=oFFvwZIEk1Y)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/oFFvwZIEk1Y/0.jpg)](https://www.youtube.com/watch?v=oFFvwZIEk1Y)
 
 Thumbnail by [Gopher](https://www.youtube.com/user/GophersVids).
 
@@ -281,6 +281,6 @@ Bla bla <sup id="a1">[1](#f1)</sup> or <sup name="a2">[2](#f2)</sup>
 3. [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 4. [Markdown Here cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
 5. <https://highlightjs.org/static/demo/>
-6. <https://help.github.com/en/articles/creating-and-highlighting-code-blocks>
+6. <https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks>
 7. <https://github.github.com/gfm/>
 8. [Squarespace Markdown cheat sheet](https://support.squarespace.com/hc/en-us/articles/206543587-Markdown-cheat-sheet)

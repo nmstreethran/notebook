@@ -14,4 +14,4 @@ git:
     submodules: false
 
 script:
-    - awesome_bot --allow-dupe --allow-redirect --skip-save-results `find . -name "*.md"`
+    - awesome_bot --allow-dupe --skip-save-results --white-list stackexchange.com,stackoverflow.com,askubuntu.com,travis-ci.org,github.com/username/repository `find . -name "*.md"`

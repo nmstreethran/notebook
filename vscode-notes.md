@@ -51,7 +51,7 @@ Go to Keyboard Shortcuts (`ctrl+k` `ctrl+s`) and paste the following in `keybind
 
 ## Settings
 
-See my [gist](https://gist.github.com/nmstreethran/b63189f4af0c9d444691105ab456e943).
+See [vscode-settings](vscode-settings/).
 
 ## Syntax highlighting
 

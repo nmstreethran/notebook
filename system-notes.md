@@ -68,7 +68,7 @@ Secure boot should be disabled before installing these drivers.
 ### File syncing using rclone
 
 - <https://www.techrepublic.com/article/how-to-sync-from-linux-to-google-drive-with-rclone/>
-- <https://github.com/ncw/rclone>
+- <https://github.com/rclone/rclone>
 - <https://rclone.org/>
 
 ### [Adding directory to PATH](https://askubuntu.com/a/688998/714808)
@@ -115,7 +115,7 @@ Paste the following in your local font configuration file (`/etc/fonts/conf.avai
 
 ### Prevent the screen from turning off when the lockscreen is active
 
-Using an extension by [u/SomeGenericUsername](https://www.reddit.com/r/gnome/comments/2hj8bx/has_anyone_figured_out_a_way_to_keep_the_screen/cktqjqd?utm_source=share&utm_medium=web2x)
+Using an extension by [u/SomeGenericUsername](https://old.reddit.com/r/gnome/comments/2hj8bx/has_anyone_figured_out_a_way_to_keep_the_screen/cktqjqd/)
 
 > I don't think it is possible to achieve that with config options alone as it is not intended to work that way and certain parts of the sequence from fading to blanking to locking the screen are hardcoded. This gets complicated even further by this whole thing being spread across multiple processes. The shell is what does the fading but then it tells gnome-settings-daemon to blank the screen via d-bus signals. That's at least my limited understanding from quickly glancing at the involved code.
 >
@@ -124,7 +124,7 @@ Using an extension by [u/SomeGenericUsername](https://www.reddit.com/r/gnome/com
 > I've only tested the extension on 3.14, but I think it should work on 3.10 or 3.12 as well, if you haven't upgraded yet. Also my testing was not really thorough, but it seems to be working for both, locking the screen based on the user being idle and on clicking the lock button.
 > So after all this has been said, here is the extension now:
 >
-> <https://www.dropbox.com/s/5owr2bxhbijdino/no-screen-blank%40example.com.zip?dl=1>
+> [Link to Dropbox file]
 >
 > Extract it to `~/.local/share/gnome-shell/extensions/`
 >

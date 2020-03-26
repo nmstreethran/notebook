@@ -6,7 +6,7 @@ Welcome to my notebook!
 
 ## Text editor
 
-[Visual Studio Code](https://code.visualstudio.com/) / [VSCodium](https://vscodium.github.io/)
+[Visual Studio Code](https://code.visualstudio.com/) / [VSCodium](https://vscodium.com/)
 
 Settings and extensions used can be found in [vscode-settings](vscode-settings/).
 

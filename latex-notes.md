@@ -1,7 +1,5 @@
 # LaTeX notes <!-- omit in toc -->
 
-My LaTeX documents are compiled on [VSCodium](https://vscodium.github.io/) (open-source alternative to [Visual Studio Code](https://code.visualstudio.com/)) with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) and [TeX Live](https://tug.org/texlive/).
-
 ## Table of contents <!-- omit in toc -->
 
 - [General](#general)
@@ -23,7 +21,7 @@ My LaTeX documents are compiled on [VSCodium](https://vscodium.github.io/) (open
   - [Listings](#listings)
   - [Sans serif headings with serif body and math](#sans-serif-headings-with-serif-body-and-math)
   - [Adding lists to the table of contents](#adding-lists-to-the-table-of-contents)
-  - [Rename "Chapter X" to "Part X"](#rename-chapter-x-to-part-x)
+  - [Rename "Chapter X" to "Part X"](#rename-%22chapter-x%22-to-%22part-x%22)
   - [Caption font](#caption-font)
   - [Force table captions to top of the table](#force-table-captions-to-top-of-the-table)
   - [Header and footer settings using `fancyhdr`](#header-and-footer-settings-using-fancyhdr)
@@ -238,7 +236,7 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 
 ### Sans serif headings with serif body and math
 
-- [Font catalogue](http://www.tug.dk/FontCatalogue/)
+- [Font catalogue](http://tug.org/FontCatalogue/)
 
 ```latex
 \usepackage{lmodern} % latin modern
@@ -322,7 +320,7 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 ### Tables
 
 - ["ThreePartTable" environment](https://tex.stackexchange.com/a/209851/140109)
-- [More space between rows](https://www.inf.ethz.ch/personal/markusp/teaching/guides/guide-tables.pdf)
+- [More space between rows](https://inf.ethz.ch/personal/markusp/teaching/guides/guide-tables.pdf)
 - [Set table content to align left; for removing `underfull \hbox` warning in table](https://tex.stackexchange.com/a/275310/140109)
 
 ```latex
@@ -372,7 +370,7 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 
 ### Word count
 
-[TeXcount](http://ctan.uib.no/support/texcount/doc/TeXcount.pdf) package documentation.
+[TeXcount](https://ctan.uib.no/support/texcount/doc/TeXcount.pdf) package documentation.
 
 [Ignore sections or inputs of a document when calculating the number of words using TeXcount](https://tex.stackexchange.com/a/259296/140109):
 

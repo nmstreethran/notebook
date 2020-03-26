@@ -144,9 +144,9 @@ div {
 
 ## [GitHub Pages](https://pages.github.com/)
 
-- [GitHub Pages Basics](https://help.github.com/en/categories/github-pages-basics)
-- [Using Jekyll as a static site generator with GitHub Pages](https://help.github.com/en/articles/using-jekyll-as-a-static-site-generator-with-github-pages)
-- [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll)
+- [GitHub Pages Basics](https://help.github.com/en/github/working-with-github-pages/getting-started-with-github-pages)
+- [Using Jekyll as a static site generator with GitHub Pages](https://help.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll)
+- [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll)
 
 ### [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
 
@@ -157,11 +157,7 @@ div {
 
 #### Social share buttons <!-- omit in toc -->
 
-Edit `_includes/social-share.html` to add or remove buttons:
-
-```html
-<a href="https://www.reddit.com/submit?url={{ page.url | absolute_url | url_encode }}&title={{ page.title }}" class="btn btn--reddit" title="{{ site.data.ui-text[site.locale].share_on_label }} Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
-```
+Edit `_includes/social-share.html` to add or remove buttons.
 
 Buttons' colours can be changed in `_sass/minimal-mistakes/_buttons.scss`, under `$buttoncolors:`:
 
