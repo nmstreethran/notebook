@@ -11,7 +11,6 @@
   - [Drivers and applications](#drivers-and-applications)
   - [Realtek wifi problems](#realtek-wifi-problems)
   - [Making Ubuntu look like Windows](#making-ubuntu-look-like-windows)
-  - [File syncing using rclone](#file-syncing-using-rclone)
   - [Adding directory to PATH](#adding-directory-to-path)
   - [What to do when Ubuntu freezes](#what-to-do-when-ubuntu-freezes)
   - [Globally customise system UI font on Ubuntu](#globally-customise-system-ui-font-on-ubuntu)
@@ -22,6 +21,7 @@
   - [Installing from an archive](#installing-from-an-archive)
   - [Uninstalling software](#uninstalling-software)
   - [Changing GNOME screenshot directory](#changing-gnome-screenshot-directory)
+  - [Installing Wine](#installing-wine)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
 
@@ -64,12 +64,6 @@ Secure boot should be disabled before installing these drivers.
 ### [Making Ubuntu look like Windows](https://www.howtogeek.com/353819/how-to-make-ubuntu-look-more-like-windows/)
 
 - [Dash to panel](https://github.com/home-sweet-gnome/dash-to-panel)
-
-### File syncing using rclone
-
-- <https://www.techrepublic.com/article/how-to-sync-from-linux-to-google-drive-with-rclone/>
-- <https://github.com/rclone/rclone>
-- <https://rclone.org/>
 
 ### [Adding directory to PATH](https://askubuntu.com/a/688998/714808)
 
@@ -180,7 +174,7 @@ sudo make install
 
 you will use
 
-```
+```sh
 sudo checkinstall
 ```
 
@@ -216,3 +210,110 @@ Use an extension:
 
 - <https://extensions.gnome.org/extension/1179/screenshot-locations/>
 - <https://github.com/kiyui/gnome-shell-screenshotlocations-extension>
+
+### Installing Wine
+
+Enable 32-bit architecture if system is 64-bit:
+
+```sh
+sudo dpkg --add-architecture i386
+```
+
+Download and add repository key:
+
+```sh
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+sudo apt-key add winehq.key
+```
+
+Add the repository (replace `bionic` with your Ubuntu version):
+
+```sh
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+```
+
+Update packages:
+
+```sh
+sudo apt update
+```
+
+Install Wine package (from stable branch):
+
+```sh
+sudo apt install --install-recommends winehq-stable
+```
+
+This may throw dependency errors:
+
+```sh
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ winehq-stable : Depends: wine-stable (= 5.0.0~bionic)
+E: Unable to correct problems, you have held broken packages.
+```
+
+To fix the error, use the following command:
+
+```sh
+sudo apt-get install --install-recommends winehq-stable wine-stable wine-stable-i386 wine-stable-amd64
+```
+
+This resulted in additional dependency errors on my system:
+
+```sh
+ wine-stable-amd64 : Depends: libfaudio0 but it is not installable
+                     Recommends: libcapi20-3 but it is not going to be installed
+                     Recommends: libosmesa6 but it is not going to be installed
+ wine-stable-i386:i386 : Depends: libfaudio0:i386 but it is not installable
+                         Recommends: libcapi20-3:i386 but it is not going to be installed
+                         Recommends: libcups2:i386 but it is not going to be installed
+                         Recommends: libglu1-mesa:i386 but it is not going to be installed or
+                                     libglu1:i386
+                         Recommends: libgsm1:i386 but it is not going to be installed
+                         Recommends: libgssapi-krb5-2:i386 but it is not going to be installed
+                         Recommends: libkrb5-3:i386 but it is not going to be installed
+                         Recommends: libodbc1:i386 but it is not going to be installed
+                         Recommends: libosmesa6:i386 but it is not going to be installed
+                         Recommends: libsane:i386 or
+                                     libsane1:i386 but it is not going to be installed
+                         Recommends: libv4l-0:i386 but it is not going to be installed
+                         Recommends: libxcomposite1:i386 but it is not going to be installed
+                         Recommends: libxslt1.1:i386 but it is not going to be installed
+```
+
+Install the required `[libfaudio0](https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/)` libraries as recommended:
+
+```sh
+cd Downloads
+wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/amd64/libfaudio0_19.07-0~bionic_amd64.deb
+wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/i386/libfaudio0_19.07-0~bionic_i386.deb
+sudo dpkg -i libfaudio0_19.07-0~bionic_amd64.deb libfaudio0_19.07-0~bionic_i386.deb
+sudo apt --fix-broken install
+cd ..
+```
+
+Install all remaining dependencies and these additional libraries for compatibility reasons:
+
+```sh
+sudo apt-get install libgnutls30:i386 libldap-2.4-2:i386 libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386 libfreetype6:i386 libdbus-1-3:i386 libsqlite3-0:i386
+```
+
+Finally, install Wine using the same command used earlier:
+
+```sh
+sudo apt-get install --install-recommends winehq-stable wine-stable wine-stable-i386 wine-stable-amd64
+```
+
+References:
+
+- <https://askubuntu.com/a/1145491/714808>
+- <https://wiki.winehq.org/Ubuntu>
+- <https://github.com/lutris/lutris/wiki/Wine-Dependencies>
+- <https://wiki.winehq.org/FAQ#How_do_I_solve_dependency_errors_when_trying_to_install_Wine.3F>
+- <https://forum.winehq.org/viewtopic.php?f=8&t=32192>

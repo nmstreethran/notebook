@@ -1,6 +1,7 @@
 davidanson.vscode-markdownlint-0.34.0
 daylerees.rainglow-1.5.2
 dracula-theme.theme-dracula-2.21.0
+eamodio.amethyst-theme-2.6.0
 eamodio.gitlens-10.2.1
 eskilop.northernlights-1.0.1
 james-yu.latex-workshop-8.8.0

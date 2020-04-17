@@ -114,7 +114,7 @@
     "latex-workshop.latex.tools": [
         {
             "name": "latexmk",
-            "command": "latexmk",
+            "command": "/usr/local/texlive/2020/bin/x86_64-linux/latexmk",
             "args": [
                 "-synctex=1",
                 "-interaction=nonstopmode",
@@ -127,7 +127,7 @@
           },
         {
             "name": "pdflatex",
-            "command": "pdflatex",
+            "command": "/usr/local/texlive/2020/bin/x86_64-linux/pdflatex",
             "args": [
                 "-synctex=1",
                 "-interaction=nonstopmode",
@@ -138,21 +138,21 @@
           },
         {
             "name": "biber",
-            "command": "biber",
+            "command": "/usr/local/texlive/2020/bin/x86_64-linux/biber",
             "args": [
                 "%DOCFILE%"
               ]
           },
         {
             "name": "makeglossaries",
-            "command": "makeglossaries",
+            "command": "/usr/local/texlive/2020/bin/x86_64-linux/makeglossaries",
             "args": [
                 "%DOCFILE%"
               ]
           },
         {
             "name": "xelatex",
-            "command": "xelatex",
+            "command": "/usr/local/texlive/2020/bin/x86_64-linux/xelatex",
             "args": [
                 "-synctex=1",
                 "-interaction=nonstopmode",
@@ -163,7 +163,7 @@
           },
         {
             "name": "lualatex",
-            "command": "lualatex",
+            "command": "/usr/local/texlive/2020/bin/x86_64-linux/lualatex",
             "args": [
                 "-synctex=1",
                 "-interaction=nonstopmode",
@@ -193,6 +193,6 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.menuBarVisibility": "toggle",
     "window.restoreWindows": "none",
-    "workbench.colorTheme": "Juicy Contrast (rainglow)",
+    "workbench.colorTheme": "Frontier Contrast (rainglow)",
     "workbench.iconTheme": "material-icon-theme"
   }
