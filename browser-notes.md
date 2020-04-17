@@ -2,6 +2,10 @@
 
 ## Table of contents <!-- omit in toc -->
 
+- [Firefox](#firefox)
+  - [Find location of extensions](#find-location-of-extensions)
+  - [View and modify extension data](#view-and-modify-extension-data)
+
 ## Firefox
 
 ### [Find location of extensions](https://stackoverflow.com/a/6579979/4573584)
