@@ -8,7 +8,6 @@
   - [Setting or changing the PATH system variable](#setting-or-changing-the-path-system-variable)
   - [Securely delete files on Windows 10 without third-party tools](#securely-delete-files-on-windows-10-without-third-party-tools)
 - [Linux](#linux)
-  - [AMD Radeon software](#amd-radeon-software)
   - [Realtek wifi problems](#realtek-wifi-problems)
   - [Making Ubuntu look like Windows](#making-ubuntu-look-like-windows)
   - [Adding directory to PATH](#adding-directory-to-path)
@@ -23,6 +22,7 @@
   - [Changing GNOME screenshot directory](#changing-gnome-screenshot-directory)
   - [Installing Wine](#installing-wine)
   - [Computer boots to blank screen after Ubuntu upgrade](#computer-boots-to-blank-screen-after-ubuntu-upgrade)
+    - [AMD Radeon software](#amd-radeon-software)
   - [Handling held back packages](#handling-held-back-packages)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
@@ -53,12 +53,6 @@ Windows: go to **Settings charm** > **Change PC settings** > **Update and Recove
 Using the [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete) Sysinternals software.
 
 ## Linux
-
-### AMD Radeon software
-
-- <https://www.amd.com/en/support/kb/faq/amdgpupro-install>
-- <https://www.amd.com/en/support/kb/release-notes/amdgpu-installation>
-- <https://www.amd.com/en/support/kb/release-notes/rn-rad-lin-17-50-unified>
 
 ### Realtek wifi problems
 
@@ -325,7 +319,58 @@ References:
 
 ### [Computer boots to blank screen after Ubuntu upgrade](https://askubuntu.com/a/162076/714808)
 
-This is likely due to proprietary graphics card software not being installed by Ubuntu during the upgrade. To fix this, boot Ubuntu in `nomodeset` to bypass the blank screen. In the Grub menu, highlight 'Ubuntu' and press `e` to edit the entry. Replace `quiet splash` with `nomodeset`. Then, press `ctrl` + `x` to boot. Download and install the proprietary graphics card drivers and reboot to fix this permanently. See <https://askubuntu.com/q/47506/714808> for more information about installing additional drivers.
+This is likely due to proprietary graphics card software not being installed by Ubuntu during the upgrade. To fix this, boot Ubuntu in `nomodeset` to bypass the blank screen. In the Grub menu, highlight 'Ubuntu' and press `e` to edit the entry. Replace `quiet splash` with `nomodeset`. Then, press `ctrl` + `x` to boot. Download and install the proprietary graphics card drivers and reboot to fix this permanently. See below, and <https://askubuntu.com/q/47506/714808> for more information about installing additional drivers.
+
+#### AMD Radeon software
+
+From the AMD website:
+
+- <https://www.amd.com/en/support/kb/faq/gpu-635>
+- <https://www.amd.com/en/support/kb/faq/amdgpupro-install>
+- <https://www.amd.com/en/support/kb/release-notes/amdgpu-installation>
+- <https://www.amd.com/en/support/kb/release-notes/rn-rad-lin-17-50-unified>
+
+Open source:
+
+- <https://askubuntu.com/a/1066106/714808>
+- <https://help.ubuntu.com/community/AMDGPU-Driver>
+
+Checking graphics card name and chipset:
+
+```sh
+sudo update-pciids # optional command, requires internet
+lspci -nn | grep -E 'VGA|Display'
+```
+
+Add PPA and update:
+
+```sh
+sudo add-apt-repository ppa:oibaf/graphics-drivers
+sudo apt-get update
+sudo apt upgrade
+```
+
+Reconfigure to be safe:
+
+```sh
+sudo apt install --reinstall xserver-xorg-video-amdgpu
+sudo dpkg --configure -a
+sudo dpkg-reconfigure gdm3 ubuntu-session xserver-xorg-video-amdgpu
+```
+
+To enable accelerated video:
+
+```sh
+sudo apt-get install mesa-vdpau-drivers
+```
+
+To test the vdpau driver with mpv:
+
+```sh
+mpv --hwdec=vdpau yourvideofile
+```
+
+Reboot computer and see if everything works as intended.
 
 ### [Handling held back packages](https://askubuntu.com/a/602/714808)
 
