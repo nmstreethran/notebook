@@ -8,7 +8,7 @@
   - [Setting or changing the PATH system variable](#setting-or-changing-the-path-system-variable)
   - [Securely delete files on Windows 10 without third-party tools](#securely-delete-files-on-windows-10-without-third-party-tools)
 - [Linux](#linux)
-  - [Drivers and applications](#drivers-and-applications)
+  - [AMD Radeon software](#amd-radeon-software)
   - [Realtek wifi problems](#realtek-wifi-problems)
   - [Making Ubuntu look like Windows](#making-ubuntu-look-like-windows)
   - [Adding directory to PATH](#adding-directory-to-path)
@@ -22,6 +22,8 @@
   - [Uninstalling software](#uninstalling-software)
   - [Changing GNOME screenshot directory](#changing-gnome-screenshot-directory)
   - [Installing Wine](#installing-wine)
+  - [Computer boots to blank screen after Ubuntu upgrade](#computer-boots-to-blank-screen-after-ubuntu-upgrade)
+  - [Handling held back packages](#handling-held-back-packages)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
 
@@ -52,14 +54,17 @@ Using the [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdel
 
 ## Linux
 
-### Drivers and applications
+### AMD Radeon software
 
-- Radeon Software for Linux Installation (search for Linux in the AMD website)
-- [VSCodium installation](https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo)
+- <https://www.amd.com/en/support/kb/faq/amdgpupro-install>
+- <https://www.amd.com/en/support/kb/release-notes/amdgpu-installation>
+- <https://www.amd.com/en/support/kb/release-notes/rn-rad-lin-17-50-unified>
 
 ### Realtek wifi problems
 
 Secure boot should be disabled before installing these drivers.
+
+See <https://askubuntu.com/a/635629/714808>.
 
 ### [Making Ubuntu look like Windows](https://www.howtogeek.com/353819/how-to-make-ubuntu-look-more-like-windows/)
 
@@ -317,3 +322,23 @@ References:
 - <https://github.com/lutris/lutris/wiki/Wine-Dependencies>
 - <https://wiki.winehq.org/FAQ#How_do_I_solve_dependency_errors_when_trying_to_install_Wine.3F>
 - <https://forum.winehq.org/viewtopic.php?f=8&t=32192>
+
+### [Computer boots to blank screen after Ubuntu upgrade](https://askubuntu.com/a/162076/714808)
+
+This is likely due to proprietary graphics card software not being installed by Ubuntu during the upgrade. To fix this, boot Ubuntu in `nomodeset` to bypass the blank screen. In the Grub menu, highlight 'Ubuntu' and press `e` to edit the entry. Replace `quiet splash` with `nomodeset`. Then, press `ctrl` + `x` to boot. Download and install the proprietary graphics card drivers and reboot to fix this permanently. See <https://askubuntu.com/q/47506/714808> for more information about installing additional drivers.
+
+### [Handling held back packages](https://askubuntu.com/a/602/714808)
+
+`apt-get upgrade` gives `The following packages have been kept back`.
+
+Solution 1:
+
+```sh
+sudo apt-get --with-new-pkgs upgrade
+```
+
+Solution 2 (replace `package` with the list of packages held back):
+
+```sh
+sudo apt-get install package
+```
