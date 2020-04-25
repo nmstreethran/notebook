@@ -9,7 +9,7 @@
   - [Securely delete files on Windows 10 without third-party tools](#securely-delete-files-on-windows-10-without-third-party-tools)
 - [Linux](#linux)
   - [Realtek wifi problems](#realtek-wifi-problems)
-  - [Making Ubuntu look like Windows](#making-ubuntu-look-like-windows)
+  - [Useful extensions](#useful-extensions)
   - [Adding directory to PATH](#adding-directory-to-path)
   - [What to do when Ubuntu freezes](#what-to-do-when-ubuntu-freezes)
   - [Globally customise system UI font on Ubuntu](#globally-customise-system-ui-font-on-ubuntu)
@@ -22,8 +22,8 @@
   - [Changing GNOME screenshot directory](#changing-gnome-screenshot-directory)
   - [Installing Wine](#installing-wine)
   - [Computer boots to blank screen after Ubuntu upgrade](#computer-boots-to-blank-screen-after-ubuntu-upgrade)
-    - [AMD Radeon software](#amd-radeon-software)
   - [Handling held back packages](#handling-held-back-packages)
+  - [KDE Plasma](#kde-plasma)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
 
@@ -60,7 +60,9 @@ Secure boot should be disabled before installing these drivers.
 
 See <https://askubuntu.com/a/635629/714808>.
 
-### [Making Ubuntu look like Windows](https://www.howtogeek.com/353819/how-to-make-ubuntu-look-more-like-windows/)
+### Useful extensions
+
+- [Making Ubuntu look like Windows](https://www.howtogeek.com/353819/how-to-make-ubuntu-look-more-like-windows/)
 
 - [Dash to panel](https://github.com/home-sweet-gnome/dash-to-panel)
 
@@ -321,6 +323,8 @@ References:
 
 This is likely due to proprietary graphics card software not being installed by Ubuntu during the upgrade. To fix this, boot Ubuntu in `nomodeset` to bypass the blank screen. In the Grub menu, highlight 'Ubuntu' and press `e` to edit the entry. Replace `quiet splash` with `nomodeset`. Then, press `ctrl` + `x` to boot. Download and install the proprietary graphics card drivers and reboot to fix this permanently. See below, and <https://askubuntu.com/q/47506/714808> for more information about installing additional drivers.
 
+**Note:** If this still doesn't fix the problem, set `nomodeset` through the Grub Customiser.
+
 #### AMD Radeon software
 
 From the AMD website:
@@ -382,8 +386,24 @@ Solution 1:
 sudo apt-get --with-new-pkgs upgrade
 ```
 
-Solution 2 (replace `package` with the list of packages held back):
+Solution 2 (replace `packages` with the list of packages held back):
 
 ```sh
-sudo apt-get install package
+sudo apt-get install packages
 ```
+
+### KDE Plasma
+
+#### [Missing network manager](https://askubuntu.com/a/963902/714808)
+
+```sh
+sudo apt-get install plasma-nm
+```
+
+#### Missing terminal
+
+Install Konsole from the app store.
+
+#### Taking screenshots
+
+Install Spectacle from the app store.

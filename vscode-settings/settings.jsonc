@@ -191,8 +191,8 @@
     "python.jediEnabled": false,
     "python.linting.pylintEnabled": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "window.menuBarVisibility": "toggle",
+    "window.menuBarVisibility": "default",
     "window.restoreWindows": "none",
-    "workbench.colorTheme": "Frontier Contrast (rainglow)",
+    "workbench.colorTheme": "Soft Colors",
     "workbench.iconTheme": "material-icon-theme"
   }
