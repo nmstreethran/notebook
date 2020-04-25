@@ -7,23 +7,29 @@
 - [Windows](#windows)
   - [Setting or changing the PATH system variable](#setting-or-changing-the-path-system-variable)
   - [Securely delete files on Windows 10 without third-party tools](#securely-delete-files-on-windows-10-without-third-party-tools)
-- [Linux](#linux)
-  - [Realtek wifi problems](#realtek-wifi-problems)
-  - [Useful extensions](#useful-extensions)
+- [Linux - Ubuntu](#linux---ubuntu)
   - [Adding directory to PATH](#adding-directory-to-path)
   - [What to do when Ubuntu freezes](#what-to-do-when-ubuntu-freezes)
   - [Globally customise system UI font on Ubuntu](#globally-customise-system-ui-font-on-ubuntu)
-  - [Prevent the screen from turning off when the lockscreen is active](#prevent-the-screen-from-turning-off-when-the-lockscreen-is-active)
   - [Changing the default display manager](#changing-the-default-display-manager)
   - [Installing Firefox Developer Edition](#installing-firefox-developer-edition)
   - [CheckInstall](#checkinstall)
   - [Installing from an archive](#installing-from-an-archive)
   - [Uninstalling software](#uninstalling-software)
-  - [Changing GNOME screenshot directory](#changing-gnome-screenshot-directory)
-  - [Installing Wine](#installing-wine)
   - [Computer boots to blank screen after Ubuntu upgrade](#computer-boots-to-blank-screen-after-ubuntu-upgrade)
+  - [Useful packages](#useful-packages)
   - [Handling held back packages](#handling-held-back-packages)
-  - [KDE Plasma](#kde-plasma)
+- [KDE Plasma](#kde-plasma)
+  - [Missing network manager](#missing-network-manager)
+  - [Missing terminal](#missing-terminal)
+  - [Taking screenshots](#taking-screenshots)
+- [GNOME](#gnome)
+  - [Useful GNOME extensions](#useful-gnome-extensions)
+  - [Prevent the screen from turning off when the lockscreen is active](#prevent-the-screen-from-turning-off-when-the-lockscreen-is-active)
+  - [Changing GNOME screenshot directory](#changing-gnome-screenshot-directory)
+- [Linux - old](#linux---old)
+  - [Installing Wine](#installing-wine)
+  - [Realtek wifi problems](#realtek-wifi-problems)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
 
@@ -52,19 +58,7 @@ Windows: go to **Settings charm** > **Change PC settings** > **Update and Recove
 
 Using the [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete) Sysinternals software.
 
-## Linux
-
-### Realtek wifi problems
-
-Secure boot should be disabled before installing these drivers.
-
-See <https://askubuntu.com/a/635629/714808>.
-
-### Useful extensions
-
-- [Making Ubuntu look like Windows](https://www.howtogeek.com/353819/how-to-make-ubuntu-look-more-like-windows/)
-
-- [Dash to panel](https://github.com/home-sweet-gnome/dash-to-panel)
+## Linux - Ubuntu
 
 ### [Adding directory to PATH](https://askubuntu.com/a/688998/714808)
 
@@ -107,27 +101,6 @@ Paste the following in your local font configuration file (`/etc/fonts/conf.avai
     <include ignore_missing="yes">local.conf</include>
 </fontconfig>
 ```
-
-### Prevent the screen from turning off when the lockscreen is active
-
-Using an extension by [u/SomeGenericUsername](https://old.reddit.com/r/gnome/comments/2hj8bx/has_anyone_figured_out_a_way_to_keep_the_screen/cktqjqd/)
-
-> I don't think it is possible to achieve that with config options alone as it is not intended to work that way and certain parts of the sequence from fading to blanking to locking the screen are hardcoded. This gets complicated even further by this whole thing being spread across multiple processes. The shell is what does the fading but then it tells gnome-settings-daemon to blank the screen via d-bus signals. That's at least my limited understanding from quickly glancing at the involved code.
->
-> Now, I've just written an extension, that kind of works around all of that. It disables the fading and removes the emission of the d-bus signal. This whole thing is super ugly and would never stand a chance to get accepted for extensions.gnome.org as extensions are supposed to be disabled when the lock screen gets activated, but that won't make much sense for this extension. That also means you can't disable it like you are used to, but that you have to restart gnome-shell after disabling if for it to be actually disabled. Another thing is that there might be other applications listening to the d-bus signal I've disabled and that might have some security implications. I'm not sure which signal gnome-keyring uses to lock its keyring when the lock screen gets shown, but this signal might be it or it might be part of a signal chain to some other signal that would lock the keyring. The way I've removed the signal emission might also affect gnome-shell internally, so maybe it won't automatically change your online status to away anymore, but I haven't checked for that either.
->
-> I've only tested the extension on 3.14, but I think it should work on 3.10 or 3.12 as well, if you haven't upgraded yet. Also my testing was not really thorough, but it seems to be working for both, locking the screen based on the user being idle and on clicking the lock button.
-> So after all this has been said, here is the extension now:
->
-> [Link to Dropbox file]
->
-> Extract it to `~/.local/share/gnome-shell/extensions/`
->
-> Edit (2017-03-24): Updated the extension to allow manually disabling it (still a hack though), tested with 3.24, and updated the link because the old one wasn't working anymore (thanks Dropbox...).
-
-[SoCRaT](https://techienotes.blog/2018/04/16/how-to-to-prevent-the-screen-from-turning-off-when-locked-with-gnome-shell-on-ubuntu-18-04/) has made an updated version to support GNOME 3.28. Alternatively, edit `metadata.json` in the original download to include 3.28.
-
-Once the extracted folder is placed in `~/.local/share/gnome-shell/extensions/`, use Tweaks to turn the "No screen blank" extension on. A restart may be required before it shows up in the list of extensions.
 
 ### [Changing the default display manager](https://askubuntu.com/a/58024/714808)
 
@@ -205,12 +178,154 @@ sudo apt-get purge <package-name>
 
 Otherwise, use Synaptic Package Manager, and 'Mark for complete removal'.
 
+### [Computer boots to blank screen after Ubuntu upgrade](https://askubuntu.com/a/162076/714808)
+
+This is likely due to proprietary graphics card software not being installed by Ubuntu during the upgrade. To fix this, boot Ubuntu in `nomodeset` to bypass the blank screen. In the Grub menu, highlight 'Ubuntu' and press `e` to edit the entry. Replace `quiet splash` with `nomodeset`. Then, press `ctrl` + `x` to boot. Download and install the proprietary graphics card drivers and reboot to fix this permanently. See below, and <https://askubuntu.com/q/47506/714808> for more information about installing additional drivers.
+
+**Note:** If this still doesn't fix the problem, set `nomodeset` through the Grub Customiser.
+
+#### AMD Radeon software
+
+From the AMD website:
+
+- <https://www.amd.com/en/support/kb/faq/gpu-635>
+- <https://www.amd.com/en/support/kb/faq/amdgpupro-install>
+- <https://www.amd.com/en/support/kb/release-notes/amdgpu-installation>
+- <https://www.amd.com/en/support/kb/release-notes/rn-rad-lin-17-50-unified>
+
+Open source:
+
+- <https://askubuntu.com/a/1066106/714808>
+- <https://help.ubuntu.com/community/AMDGPU-Driver>
+
+Checking graphics card name and chipset:
+
+```sh
+sudo update-pciids # optional command, requires internet
+lspci -nn | grep -E 'VGA|Display'
+```
+
+Add [PPA](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers) and update:
+
+```sh
+sudo add-apt-repository ppa:oibaf/graphics-drivers
+sudo apt-get update
+sudo apt upgrade
+```
+
+Reconfigure to be safe:
+
+```sh
+sudo apt install --reinstall xserver-xorg-video-amdgpu
+sudo dpkg --configure -a
+sudo dpkg-reconfigure gdm3 ubuntu-session xserver-xorg-video-amdgpu
+```
+
+To enable accelerated video:
+
+```sh
+sudo apt-get install mesa-vdpau-drivers
+```
+
+To test the vdpau driver with mpv:
+
+```sh
+mpv --hwdec=vdpau yourvideofile
+```
+
+Reboot computer and see if everything works as intended.
+
+### Useful packages
+
+- [nautilus-admin (**archived**)](https://github.com/brunonova/nautilus-admin)
+- [HardInfo](https://help.ubuntu.com/community/HardInfo)
+- [Ubuntu Make](https://wiki.ubuntu.com/ubuntu-make)
+- [Synaptic Package Manager](https://www.nongnu.org/synaptic/)
+- [GRUB Customizer](https://launchpad.net/grub-customizer)
+- [Open Graphics Drivers](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers)
+
+### [Handling held back packages](https://askubuntu.com/a/602/714808)
+
+`apt-get upgrade` gives `The following packages have been kept back`.
+
+Solution 1:
+
+```sh
+sudo apt-get --with-new-pkgs upgrade
+```
+
+Solution 2 (replace `packages` with the list of packages held back):
+
+```sh
+sudo apt-get install packages
+```
+
+## KDE Plasma
+
+### [Missing network manager](https://askubuntu.com/a/963902/714808)
+
+```sh
+sudo apt-get install plasma-nm
+```
+
+### Missing terminal
+
+Install Konsole from the app store.
+
+### Taking screenshots
+
+Install Spectacle from the app store.
+
+## GNOME
+
+### Useful GNOME extensions
+
+Guides:
+
+- [Making Ubuntu look like Windows](https://www.howtogeek.com/353819/how-to-make-ubuntu-look-more-like-windows/)
+
+Extensions:
+
+- [Dash to panel](https://github.com/home-sweet-gnome/dash-to-panel)
+- [No Topleft Hot Corner](https://extensions.gnome.org/extension/118/no-topleft-hot-corner/)
+- [Dynamic Panel Transparency](https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/)
+- [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
+- [AlternateTab](https://extensions.gnome.org/extension/15/alternatetab/)
+- [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
+- [Flat Remix theme](https://drasite.com/flat-remix)
+- [windowNavigator](https://extensions.gnome.org/extension/10/windownavigator/)
+- [No Screen Blank](https://extensions.gnome.org/extension/2413/no-screen-blank/)
+- [Screenshot Locations](https://extensions.gnome.org/extension/1179/screenshot-locations/)
+
+### Prevent the screen from turning off when the lockscreen is active
+
+Using an extension by [u/SomeGenericUsername](https://old.reddit.com/r/gnome/comments/2hj8bx/has_anyone_figured_out_a_way_to_keep_the_screen/cktqjqd/)
+
+> I don't think it is possible to achieve that with config options alone as it is not intended to work that way and certain parts of the sequence from fading to blanking to locking the screen are hardcoded. This gets complicated even further by this whole thing being spread across multiple processes. The shell is what does the fading but then it tells gnome-settings-daemon to blank the screen via d-bus signals. That's at least my limited understanding from quickly glancing at the involved code.
+>
+> Now, I've just written an extension, that kind of works around all of that. It disables the fading and removes the emission of the d-bus signal. This whole thing is super ugly and would never stand a chance to get accepted for extensions.gnome.org as extensions are supposed to be disabled when the lock screen gets activated, but that won't make much sense for this extension. That also means you can't disable it like you are used to, but that you have to restart gnome-shell after disabling if for it to be actually disabled. Another thing is that there might be other applications listening to the d-bus signal I've disabled and that might have some security implications. I'm not sure which signal gnome-keyring uses to lock its keyring when the lock screen gets shown, but this signal might be it or it might be part of a signal chain to some other signal that would lock the keyring. The way I've removed the signal emission might also affect gnome-shell internally, so maybe it won't automatically change your online status to away anymore, but I haven't checked for that either.
+>
+> I've only tested the extension on 3.14, but I think it should work on 3.10 or 3.12 as well, if you haven't upgraded yet. Also my testing was not really thorough, but it seems to be working for both, locking the screen based on the user being idle and on clicking the lock button.
+> So after all this has been said, here is the extension now:
+>
+> [Link to Dropbox file]
+>
+> Extract it to `~/.local/share/gnome-shell/extensions/`
+>
+> Edit (2017-03-24): Updated the extension to allow manually disabling it (still a hack though), tested with 3.24, and updated the link because the old one wasn't working anymore (thanks Dropbox...).
+
+[SoCRaT](https://techienotes.blog/2018/04/16/how-to-to-prevent-the-screen-from-turning-off-when-locked-with-gnome-shell-on-ubuntu-18-04/) has made an updated version to support GNOME 3.28. Alternatively, edit `metadata.json` in the original download to include 3.28.
+
+Once the extracted folder is placed in `~/.local/share/gnome-shell/extensions/`, use Tweaks to turn the "No screen blank" extension on. A restart may be required before it shows up in the list of extensions.
+
 ### [Changing GNOME screenshot directory](https://askubuntu.com/a/1102530/714808)
 
 Use an extension:
 
 - <https://extensions.gnome.org/extension/1179/screenshot-locations/>
 - <https://github.com/kiyui/gnome-shell-screenshotlocations-extension>
+
+## Linux - old
 
 ### Installing Wine
 
@@ -319,91 +434,8 @@ References:
 - <https://wiki.winehq.org/FAQ#How_do_I_solve_dependency_errors_when_trying_to_install_Wine.3F>
 - <https://forum.winehq.org/viewtopic.php?f=8&t=32192>
 
-### [Computer boots to blank screen after Ubuntu upgrade](https://askubuntu.com/a/162076/714808)
+### Realtek wifi problems
 
-This is likely due to proprietary graphics card software not being installed by Ubuntu during the upgrade. To fix this, boot Ubuntu in `nomodeset` to bypass the blank screen. In the Grub menu, highlight 'Ubuntu' and press `e` to edit the entry. Replace `quiet splash` with `nomodeset`. Then, press `ctrl` + `x` to boot. Download and install the proprietary graphics card drivers and reboot to fix this permanently. See below, and <https://askubuntu.com/q/47506/714808> for more information about installing additional drivers.
+Secure boot should be disabled before installing these drivers.
 
-**Note:** If this still doesn't fix the problem, set `nomodeset` through the Grub Customiser.
-
-#### AMD Radeon software
-
-From the AMD website:
-
-- <https://www.amd.com/en/support/kb/faq/gpu-635>
-- <https://www.amd.com/en/support/kb/faq/amdgpupro-install>
-- <https://www.amd.com/en/support/kb/release-notes/amdgpu-installation>
-- <https://www.amd.com/en/support/kb/release-notes/rn-rad-lin-17-50-unified>
-
-Open source:
-
-- <https://askubuntu.com/a/1066106/714808>
-- <https://help.ubuntu.com/community/AMDGPU-Driver>
-
-Checking graphics card name and chipset:
-
-```sh
-sudo update-pciids # optional command, requires internet
-lspci -nn | grep -E 'VGA|Display'
-```
-
-Add PPA and update:
-
-```sh
-sudo add-apt-repository ppa:oibaf/graphics-drivers
-sudo apt-get update
-sudo apt upgrade
-```
-
-Reconfigure to be safe:
-
-```sh
-sudo apt install --reinstall xserver-xorg-video-amdgpu
-sudo dpkg --configure -a
-sudo dpkg-reconfigure gdm3 ubuntu-session xserver-xorg-video-amdgpu
-```
-
-To enable accelerated video:
-
-```sh
-sudo apt-get install mesa-vdpau-drivers
-```
-
-To test the vdpau driver with mpv:
-
-```sh
-mpv --hwdec=vdpau yourvideofile
-```
-
-Reboot computer and see if everything works as intended.
-
-### [Handling held back packages](https://askubuntu.com/a/602/714808)
-
-`apt-get upgrade` gives `The following packages have been kept back`.
-
-Solution 1:
-
-```sh
-sudo apt-get --with-new-pkgs upgrade
-```
-
-Solution 2 (replace `packages` with the list of packages held back):
-
-```sh
-sudo apt-get install packages
-```
-
-### KDE Plasma
-
-#### [Missing network manager](https://askubuntu.com/a/963902/714808)
-
-```sh
-sudo apt-get install plasma-nm
-```
-
-#### Missing terminal
-
-Install Konsole from the app store.
-
-#### Taking screenshots
-
-Install Spectacle from the app store.
+See <https://askubuntu.com/a/635629/714808>.
