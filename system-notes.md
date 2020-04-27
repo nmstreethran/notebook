@@ -16,7 +16,6 @@
   - [CheckInstall](#checkinstall)
   - [Installing from an archive](#installing-from-an-archive)
   - [Uninstalling software](#uninstalling-software)
-  - [Computer boots to blank screen after Ubuntu upgrade](#computer-boots-to-blank-screen-after-ubuntu-upgrade)
   - [Useful packages](#useful-packages)
   - [Handling held back packages](#handling-held-back-packages)
 - [KDE Plasma](#kde-plasma)
@@ -30,6 +29,8 @@
 - [Linux - old](#linux---old)
   - [Installing Wine](#installing-wine)
   - [Realtek wifi problems](#realtek-wifi-problems)
+  - [Computer boots to blank screen after Ubuntu upgrade](#computer-boots-to-blank-screen-after-ubuntu-upgrade)
+    - [AMD Radeon software](#amd-radeon-software)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
 
@@ -74,11 +75,11 @@ If it's completely frozen, REISUB it (safer than rebooting)
 
 > While holding `Alt` and the `SysReq` (Print Screen) keys, type `R` `E` `I` `S` `U` `B`.
 >
-> R:  Switch to XLATE mode
-> E:  Send Terminate signal to all processes except for init
-> I:  Send Kill signal to all processes except for init
-> S:  Sync all mounted file-systems
-> U:  Remount file-systems as read-only
+> R:  Switch to XLATE mode \
+> E:  Send Terminate signal to all processes except for init \
+> I:  Send Kill signal to all processes except for init \
+> S:  Sync all mounted file-systems \
+> U:  Remount file-systems as read-only \
 > B:  Reboot
 >
 > REISUB is BUSIER backwards, as in "The System is **busier** than it should be", if you need to remember it. Or mnemonically - **R**eboot; **E**ven; **I**f; **S**ystem; **U**tterly; **B**roken.
@@ -178,71 +179,14 @@ sudo apt-get purge <package-name>
 
 Otherwise, use Synaptic Package Manager, and 'Mark for complete removal'.
 
-### [Computer boots to blank screen after Ubuntu upgrade](https://askubuntu.com/a/162076/714808)
-
-This is likely due to proprietary graphics card software not being installed by Ubuntu during the upgrade. To fix this, boot Ubuntu in `nomodeset` to bypass the blank screen. In the Grub menu, highlight 'Ubuntu' and press `e` to edit the entry. Replace `quiet splash` with `nomodeset`. Then, press `ctrl` + `x` to boot. Download and install the proprietary graphics card drivers and reboot to fix this permanently. See below, and <https://askubuntu.com/q/47506/714808> for more information about installing additional drivers.
-
-**Note:** If this still doesn't fix the problem, set `nomodeset` through the Grub Customiser.
-
-#### AMD Radeon software
-
-From the AMD website:
-
-- <https://www.amd.com/en/support/kb/faq/gpu-635>
-- <https://www.amd.com/en/support/kb/faq/amdgpupro-install>
-- <https://www.amd.com/en/support/kb/release-notes/amdgpu-installation>
-- <https://www.amd.com/en/support/kb/release-notes/rn-rad-lin-17-50-unified>
-
-Open source:
-
-- <https://askubuntu.com/a/1066106/714808>
-- <https://help.ubuntu.com/community/AMDGPU-Driver>
-
-Checking graphics card name and chipset:
-
-```sh
-sudo update-pciids # optional command, requires internet
-lspci -nn | grep -E 'VGA|Display'
-```
-
-Add [PPA](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers) and update:
-
-```sh
-sudo add-apt-repository ppa:oibaf/graphics-drivers
-sudo apt-get update
-sudo apt upgrade
-```
-
-Reconfigure to be safe:
-
-```sh
-sudo apt install --reinstall xserver-xorg-video-amdgpu
-sudo dpkg --configure -a
-sudo dpkg-reconfigure gdm3 ubuntu-session xserver-xorg-video-amdgpu
-```
-
-To enable accelerated video:
-
-```sh
-sudo apt-get install mesa-vdpau-drivers
-```
-
-To test the vdpau driver with mpv:
-
-```sh
-mpv --hwdec=vdpau yourvideofile
-```
-
-Reboot computer and see if everything works as intended.
-
 ### Useful packages
 
-- [nautilus-admin (**archived**)](https://github.com/brunonova/nautilus-admin)
 - [HardInfo](https://help.ubuntu.com/community/HardInfo)
 - [Ubuntu Make](https://wiki.ubuntu.com/ubuntu-make)
 - [Synaptic Package Manager](https://www.nongnu.org/synaptic/)
-- [GRUB Customizer](https://launchpad.net/grub-customizer)
-- [Open Graphics Drivers](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers)
+<!-- - [GRUB Customizer](https://launchpad.net/grub-customizer) -->
+<!-- - [Open Graphics Drivers](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers) -->
+<!-- - [nautilus-admin (**archived**)](https://github.com/brunonova/nautilus-admin) -->
 
 ### [Handling held back packages](https://askubuntu.com/a/602/714808)
 
@@ -287,15 +231,15 @@ Guides:
 Extensions:
 
 - [Dash to panel](https://github.com/home-sweet-gnome/dash-to-panel)
-- [No Topleft Hot Corner](https://extensions.gnome.org/extension/118/no-topleft-hot-corner/)
-- [Dynamic Panel Transparency](https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/)
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
-- [AlternateTab](https://extensions.gnome.org/extension/15/alternatetab/)
 - [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
-- [Flat Remix theme](https://drasite.com/flat-remix)
-- [windowNavigator](https://extensions.gnome.org/extension/10/windownavigator/)
-- [No Screen Blank](https://extensions.gnome.org/extension/2413/no-screen-blank/)
 - [Screenshot Locations](https://extensions.gnome.org/extension/1179/screenshot-locations/)
+<!-- - [Flat Remix theme](https://drasite.com/flat-remix) -->
+<!-- - [windowNavigator](https://extensions.gnome.org/extension/10/windownavigator/) -->
+<!-- - [No Screen Blank](https://extensions.gnome.org/extension/2413/no-screen-blank/) -->
+<!-- - [No Topleft Hot Corner](https://extensions.gnome.org/extension/118/no-topleft-hot-corner/) -->
+<!-- - [Dynamic Panel Transparency](https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/) -->
+<!-- - [AlternateTab](https://extensions.gnome.org/extension/15/alternatetab/) -->
 
 ### Prevent the screen from turning off when the lockscreen is active
 
@@ -403,7 +347,7 @@ This resulted in additional dependency errors on my system:
                          Recommends: libxslt1.1:i386 but it is not going to be installed
 ```
 
-Install the required `[libfaudio0](https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/)` libraries as recommended:
+Install the required [`libfaudio0`](https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/) libraries as recommended:
 
 ```sh
 cd Downloads
@@ -439,3 +383,62 @@ References:
 Secure boot should be disabled before installing these drivers.
 
 See <https://askubuntu.com/a/635629/714808>.
+
+### [Computer boots to blank screen after Ubuntu upgrade](https://askubuntu.com/a/162076/714808)
+
+**Note:** It is recommended to upgrade using a **bootable USB or disk**. Upgrading through the Software Updater may cause the following issues.
+
+This is likely due to proprietary graphics card software not being installed by Ubuntu during the upgrade. To fix this, boot Ubuntu in `nomodeset` to bypass the blank screen. In the Grub menu, highlight 'Ubuntu' and press `e` to edit the entry. Replace `quiet splash` with `nomodeset`. Then, press `ctrl` + `x` to boot. Download and install the proprietary graphics card drivers and reboot to fix this permanently. See below, and <https://askubuntu.com/q/47506/714808> for more information about installing additional drivers.
+
+**Note:** If this still doesn't fix the problem, set `nomodeset` permanently through the Grub Customiser.
+
+#### AMD Radeon software
+
+Downloading directly from the AMD website:
+
+- [Radeon™ Software for Linux® Installation](https://amdgpu-install.readthedocs.io/en/latest/)
+- [Radeon™ Software for Linux® 20.10 Release Notes](https://www.amd.com/en/support/kb/release-notes/rn-amdgpu-unified-linux-20-10)
+- <https://www.amd.com/en/support/kb/faq/amdgpupro-install>
+- <https://www.amd.com/en/support/kb/release-notes/amdgpu-installation>
+
+Open source PPAs:
+
+- <https://askubuntu.com/a/1066106/714808>
+- <https://help.ubuntu.com/community/AMDGPU-Driver>
+
+Checking graphics card name and chipset:
+
+```sh
+sudo update-pciids # optional command, requires internet
+lspci -nn | grep -E 'VGA|Display'
+```
+
+Add [the Open Graphics Drivers PPA](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers) and update:
+
+```sh
+sudo add-apt-repository ppa:oibaf/graphics-drivers
+sudo apt-get update
+sudo apt upgrade
+```
+
+Reconfigure to be safe:
+
+```sh
+sudo apt install --reinstall xserver-xorg-video-amdgpu
+sudo dpkg --configure -a
+sudo dpkg-reconfigure gdm3 ubuntu-session xserver-xorg-video-amdgpu
+```
+
+To enable accelerated video:
+
+```sh
+sudo apt-get install mesa-vdpau-drivers
+```
+
+To test the vdpau driver with mpv:
+
+```sh
+mpv --hwdec=vdpau yourvideofile
+```
+
+Reboot computer and see if everything works as intended.

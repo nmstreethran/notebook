@@ -52,11 +52,13 @@ ls -al ~/.ssh
 
 Generate a new key if none exist:
 
+**Using RSA:**
+
 ```sh
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
-**[Using ED25519 SSH keys (recommended over RSA)](https://gitlab.com/help/ssh/README)**
+**[Using ED25519 SSH keys (recommended over RSA)](https://gitlab.com/help/ssh/README):**
 
 ```sh
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -70,9 +72,11 @@ Start the ssh-agent and add your private key (if using non-default file path):
 eval "$(ssh-agent -s)"
 
 ssh-add ~/.ssh/id_rsa
+# or
+ssh-add ~/.ssh/id_ed25519
 ```
 
-Copy the SSH key to your clipboard (saved at `/home/you/.ssh/id_rsa`). Go to 'SSH and GPG keys' in your GitHub account settings. Select 'New SSH key', add a descriptive label in the 'Title' field, and paste the SSH key in the 'Key' field.
+Copy the SSH key to your clipboard (saved at `/home/you/.ssh/id_rsa` or `/home/you/.ssh/id_ed25519`). Go to 'SSH and GPG keys' in your GitHub account settings. Select 'New SSH key', add a descriptive label in the 'Title' field, and paste the SSH key in the 'Key' field.
 
 List existing remote URLs for your local repository:
 
@@ -118,6 +122,12 @@ Git: ssh_askpass: exec(usr/lib/ssh/ssh_askpass): No such file or directory.
 ```
 
 Likely caused by OS update, which makes Git lose the passphrase of the SSH key. To solve the problem, run `ssh-add ~/.ssh/id_rsa`. It may require reinstallation of VS Code.
+
+If that doesn't work, [try reinstalling `ssh-askpass`](https://askubuntu.com/a/1196265/714808):
+
+```sh
+sudo apt install ssh-askpass
+```
 
 ## Branching
 

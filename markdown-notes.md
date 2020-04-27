@@ -202,7 +202,7 @@ Using [Shields.io](https://shields.io/category/social/) badges with [custom logo
 
 Use the following to obtain `?logo=data:image/png;base64,…`:
 
-- [Base-64 encoding tool](http://b64.io/)
+- [Base-64 encoding tool](https://b64.io/)
 - [Encoder/decoder tool for percent encoding](https://meyerweb.com/eric/tools/dencoder/)
 
 ## Blockquotes
