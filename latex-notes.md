@@ -37,18 +37,15 @@
 - [Beamer class](#beamer-class)
   - [Themes and colours](#themes-and-colours)
   - [Change date format to DD/MM/YYYY](#change-date-format-to-ddmmyyyy)
-  - [Bibliography](#bibliography-1)
+  - [Bibliography - Beamer](#bibliography---beamer)
   - [Adjust title page vertical spacing](#adjust-title-page-vertical-spacing)
   - [Frame title formatting](#frame-title-formatting)
   - [Frame margins](#frame-margins)
   - [Remove navigation symbols](#remove-navigation-symbols)
   - [Change position of navigation symbols](#change-position-of-navigation-symbols)
   - [Sectioning](#sectioning)
-- [ModernCV](#moderncv)
-  - [Known issues](#known-issues)
-  - [Extending a quote's width](#extending-a-quotes-width)
-  - [Edit space after header](#edit-space-after-header)
-  - [Reduce signature whitespace](#reduce-signature-whitespace)
+- [Old](#old)
+  - [ModernCV](#moderncv)
 
 ## General
 
@@ -386,7 +383,7 @@ And now for something completely different
 
 ### Themes and colours
 
-- [Beamer theme gallery](http://deic.uab.es/~iblanes/beamer_gallery/index.html)
+- [Beamer theme gallery](https://deic-web.uab.cat/~iblanes/beamer_gallery/index.html)
 - [Beamer docs](https://ctan.org/pkg/beamer)
 - [Beamer template tutorial by Claudio Fiandrino](https://tex.stackexchange.com/a/146682/140109)
 - [Overleaf Beamer guide](https://www.overleaf.com/learn/latex/Beamer)
@@ -413,7 +410,7 @@ And now for something completely different
 \usepackage[ddmmyyyy]{datetime} % set date format
 ```
 
-### Bibliography
+### Bibliography - Beamer
 
 - [bibliography icon](https://tex.stackexchange.com/a/68084/140109)
 - [supress patching footnotes failed warning](https://tex.stackexchange.com/a/202994/140109)
@@ -538,18 +535,25 @@ And now for something completely different
 \tableofcontents[currentsection]
 ```
 
-## ModernCV
+## Old
+
+<details>
+<summary>
+Click to expand
+</summary>
+
+### ModernCV
 
 ***Note: This package has not been updated since 2016***
 
-### Known issues
+#### Known issues
 
 - main `.tex` file: Some font shapes were not available, defaults substituted
 - `fontenc.sty`: Font shape 'TU/qpl/m/n' undefined \ (Font) using 'TU/lmr/m/n' instead
 - `moderncvbodyiii.sty`: You have requested package 'moderncvbodyiii', but the package provides 'moderncvbodyiii'.
 - `moderncvheadiii.sty`: You have requested package 'moderncvheadiii', but the package provides 'moderncvheadiii'.
 
-### [Extending a quote's width](https://tex.stackexchange.com/a/247503/140109)
+#### [Extending a quote's width](https://tex.stackexchange.com/a/247503/140109)
 
 ```latex
 % preamble
@@ -559,16 +563,18 @@ And now for something completely different
 \setlength{\quotewidth}{.8\textwidth}} % change .8 to desired value
 ```
 
-### [Edit space after header](https://tex.stackexchange.com/a/82871/140109)
+#### [Edit space after header](https://tex.stackexchange.com/a/82871/140109)
 
 ```latex
 \makecvtitle
 \vspace*{-5mm} % enter right after \makecvtitle
 ```
 
-### [Reduce signature whitespace](https://tex.stackexchange.com/a/196910/140109)
+#### [Reduce signature whitespace](https://tex.stackexchange.com/a/196910/140109)
 
 ```latex
 % preamble
 \patchcmd{\makeletterclosing}{[3em]}{[1em]}{}{}
 ```
+
+</details>

@@ -18,6 +18,7 @@
   - [Uninstalling software](#uninstalling-software)
   - [Useful packages](#useful-packages)
   - [Handling held back packages](#handling-held-back-packages)
+  - [Installing Zotero](#installing-zotero)
 - [KDE Plasma](#kde-plasma)
   - [Missing network manager](#missing-network-manager)
   - [Missing terminal](#missing-terminal)
@@ -25,12 +26,10 @@
 - [GNOME](#gnome)
   - [Useful GNOME extensions](#useful-gnome-extensions)
   - [Prevent the screen from turning off when the lockscreen is active](#prevent-the-screen-from-turning-off-when-the-lockscreen-is-active)
-  - [Changing GNOME screenshot directory](#changing-gnome-screenshot-directory)
-- [Linux - old](#linux---old)
+- [Old](#old)
   - [Installing Wine](#installing-wine)
-  - [Realtek wifi problems](#realtek-wifi-problems)
-  - [Computer boots to blank screen after Ubuntu upgrade](#computer-boots-to-blank-screen-after-ubuntu-upgrade)
-    - [AMD Radeon software](#amd-radeon-software)
+  - [Packages and GNOME extensions](#packages-and-gnome-extensions)
+  - [Problems with drivers](#problems-with-drivers)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
 
@@ -184,9 +183,6 @@ Otherwise, use Synaptic Package Manager, and 'Mark for complete removal'.
 - [HardInfo](https://help.ubuntu.com/community/HardInfo)
 - [Ubuntu Make](https://wiki.ubuntu.com/ubuntu-make)
 - [Synaptic Package Manager](https://www.nongnu.org/synaptic/)
-<!-- - [GRUB Customizer](https://launchpad.net/grub-customizer) -->
-<!-- - [Open Graphics Drivers](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers) -->
-<!-- - [nautilus-admin (**archived**)](https://github.com/brunonova/nautilus-admin) -->
 
 ### [Handling held back packages](https://askubuntu.com/a/602/714808)
 
@@ -203,6 +199,15 @@ Solution 2 (replace `packages` with the list of packages held back):
 ```sh
 sudo apt-get install packages
 ```
+
+### Installing Zotero
+
+Download the tarball from Zotero's [download page](https://www.zotero.org/download/). Extract the contents and move them to a location of your choice, such as `/opt/zotero`. Open the terminal in this location and run `./set_launcher_icon` to update the `zotero.desktop` file for that location. Create a symlink for `zotero.desktop` by running `ln -s "$PWD/zotero.desktop" ~/.local/share/applications/` from the same location. All of these commands can be run in succession from the same terminal window, i.e., `nms@nms-notebook:~/opt/zotero`.
+
+References:
+
+- <https://www.zotero.org/support/installation>
+- <https://askubuntu.com/a/1147073/714808>
 
 ## KDE Plasma
 
@@ -233,13 +238,6 @@ Extensions:
 - [Dash to panel](https://github.com/home-sweet-gnome/dash-to-panel)
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
 - [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
-- [Screenshot Locations](https://extensions.gnome.org/extension/1179/screenshot-locations/)
-<!-- - [Flat Remix theme](https://drasite.com/flat-remix) -->
-<!-- - [windowNavigator](https://extensions.gnome.org/extension/10/windownavigator/) -->
-<!-- - [No Screen Blank](https://extensions.gnome.org/extension/2413/no-screen-blank/) -->
-<!-- - [No Topleft Hot Corner](https://extensions.gnome.org/extension/118/no-topleft-hot-corner/) -->
-<!-- - [Dynamic Panel Transparency](https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/) -->
-<!-- - [AlternateTab](https://extensions.gnome.org/extension/15/alternatetab/) -->
 
 ### Prevent the screen from turning off when the lockscreen is active
 
@@ -262,14 +260,12 @@ Using an extension by [u/SomeGenericUsername](https://old.reddit.com/r/gnome/com
 
 Once the extracted folder is placed in `~/.local/share/gnome-shell/extensions/`, use Tweaks to turn the "No screen blank" extension on. A restart may be required before it shows up in the list of extensions.
 
-### [Changing GNOME screenshot directory](https://askubuntu.com/a/1102530/714808)
+## Old
 
-Use an extension:
-
-- <https://extensions.gnome.org/extension/1179/screenshot-locations/>
-- <https://github.com/kiyui/gnome-shell-screenshotlocations-extension>
-
-## Linux - old
+<details>
+<summary>
+Click to expand
+</summary>
 
 ### Installing Wine
 
@@ -378,23 +374,42 @@ References:
 - <https://wiki.winehq.org/FAQ#How_do_I_solve_dependency_errors_when_trying_to_install_Wine.3F>
 - <https://forum.winehq.org/viewtopic.php?f=8&t=32192>
 
-### Realtek wifi problems
+### Packages and GNOME extensions
+
+- [GRUB Customizer](https://launchpad.net/grub-customizer)
+- [Open Graphics Drivers](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers)
+- [nautilus-admin (**archived**)](https://github.com/brunonova/nautilus-admin)
+- [Flat Remix theme](https://drasite.com/flat-remix)
+- [windowNavigator](https://extensions.gnome.org/extension/10/windownavigator/)
+- [No Screen Blank](https://extensions.gnome.org/extension/2413/no-screen-blank/)
+- [No Topleft Hot Corner](https://extensions.gnome.org/extension/118/no-topleft-hot-corner/)
+- [Dynamic Panel Transparency](https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/)
+- [AlternateTab](https://extensions.gnome.org/extension/15/alternatetab/)
+
+#### [Changing GNOME screenshot directory](https://askubuntu.com/a/1102530/714808)
+
+Use an extension:
+
+- <https://extensions.gnome.org/extension/1179/screenshot-locations/>
+- <https://github.com/kiyui/gnome-shell-screenshotlocations-extension>
+
+### Problems with drivers
+
+#### Realtek wifi problems
 
 Secure boot should be disabled before installing these drivers.
 
 See <https://askubuntu.com/a/635629/714808>.
 
-### [Computer boots to blank screen after Ubuntu upgrade](https://askubuntu.com/a/162076/714808)
+#### [Computer boots to blank screen after Ubuntu upgrade](https://askubuntu.com/a/162076/714808)
 
-**Note:** It is recommended to upgrade using a **bootable USB or disk**. Upgrading through the Software Updater may cause the following issues.
+**Note:** It is recommended to upgrade using a **bootable USB or disk**. Upgrading through the Software Updater could potentially cause driver-related problems which can otherwise be avoided.
 
 This is likely due to proprietary graphics card software not being installed by Ubuntu during the upgrade. To fix this, boot Ubuntu in `nomodeset` to bypass the blank screen. In the Grub menu, highlight 'Ubuntu' and press `e` to edit the entry. Replace `quiet splash` with `nomodeset`. Then, press `ctrl` + `x` to boot. Download and install the proprietary graphics card drivers and reboot to fix this permanently. See below, and <https://askubuntu.com/q/47506/714808> for more information about installing additional drivers.
 
 **Note:** If this still doesn't fix the problem, set `nomodeset` permanently through the Grub Customiser.
 
-#### AMD Radeon software
-
-Downloading directly from the AMD website:
+**AMD Radeon software** - downloading directly from the AMD website:
 
 - [Radeon™ Software for Linux® Installation](https://amdgpu-install.readthedocs.io/en/latest/)
 - [Radeon™ Software for Linux® 20.10 Release Notes](https://www.amd.com/en/support/kb/release-notes/rn-amdgpu-unified-linux-20-10)
@@ -442,3 +457,5 @@ mpv --hwdec=vdpau yourvideofile
 ```
 
 Reboot computer and see if everything works as intended.
+
+</details>

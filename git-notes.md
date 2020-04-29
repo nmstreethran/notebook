@@ -5,8 +5,6 @@
 - [Useful links](#useful-links)
 - [Credentials and authentication](#credentials-and-authentication)
   - [Prevent Git from asking for username and password during every push on Linux](#prevent-git-from-asking-for-username-and-password-during-every-push-on-linux)
-    - [Using SSH keys](#using-ssh-keys)
-    - [Using credential helper to store password (less secure method)](#using-credential-helper-to-store-password-less-secure-method)
   - [Invalid username or password error](#invalid-username-or-password-error)
   - [SSH askpass error](#ssh-askpass-error)
 - [Branching](#branching)
@@ -21,12 +19,14 @@
 - [Errors](#errors)
   - [`HttpRequestException`](#httprequestexception)
   - [Remote already exists](#remote-already-exists)
-- [Submodules and subtrees](#submodules-and-subtrees)
+- [Submodules](#submodules)
   - [Including wiki in the main code repository as a submodule](#including-wiki-in-the-main-code-repository-as-a-submodule)
   - [Cloning a repository including the contents of its submodules](#cloning-a-repository-including-the-contents-of-its-submodules)
   - [Renaming submodules](#renaming-submodules)
   - [Deinit old submodule, remove the directory and create a new submodule](#deinit-old-submodule-remove-the-directory-and-create-a-new-submodule)
-  - [Including wiki in the main code repository as a subtree](#including-wiki-in-the-main-code-repository-as-a-subtree)
+- [Old](#old)
+  - [Security](#security)
+  - [Subtrees](#subtrees)
 
 ## Useful links
 
@@ -38,7 +38,7 @@
 
 ### Prevent Git from asking for username and password during every push on Linux
 
-#### [Using SSH keys](https://stackoverflow.com/a/34957424/4573584)
+[Using SSH keys](https://stackoverflow.com/a/34957424/4573584):
 
 - <https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>
 - <https://help.github.com/en/github/using-git/changing-a-remotes-url>
@@ -91,20 +91,6 @@ git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 git remote -v
 ```
 
-#### [Using credential helper to store password (less secure method)](https://stackoverflow.com/a/17979600/4573584)
-
-```sh
-git config --global credential.helper store
-```
-
-**Warning**: username and password / personal access token are stored unencrypted at `~/.git-credentials` through this method.
-
-Use the following command to undo credential storage:
-
-```sh
-git config --unset credential.helper
-```
-
 ### [Invalid username or password error](https://stackoverflow.com/a/34919582/4573584)
 
 Could happen due to two-factor authentication. To resolve the issue:
@@ -128,6 +114,19 @@ If that doesn't work, [try reinstalling `ssh-askpass`](https://askubuntu.com/a/1
 ```sh
 sudo apt install ssh-askpass
 ```
+
+If you get a similar error to the [following](https://superuser.com/a/421084/752084):
+
+```sh
+The authenticity of host 'bitbucket.org (207.223.240.181)' can't be established.
+
+RSA key fingerprint is 97:8c:1b:f2:6f:14:6b:5c:3b:ec:aa:46:46:74:7c:40.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'bitbucket.org,207.223.240.181' (RSA) to the list of
+known hosts.
+```
+
+If you expect to receive this message from the host and it's the first time you're connecting to this server after installing SSH, then it's probably normal. If you answer `yes`, SSH will start recognising that this host is `bitbucket.org`.
 
 ## Branching
 
@@ -273,14 +272,13 @@ Solution: [remove the remote repository](https://stackoverflow.com/a/1221874/457
 git remote rm docs
 ```
 
-## Submodules and subtrees
+## Submodules
 
 ***For wikis:***
 
 1. ***make all changes in the submodule***
 2. ***push the changes to the submodule's master branch***
-3. ~~***merge the changes to the subtree***~~ *subtrees cause too many merge issues for me*
-4. ***push to the main code repository***
+3. ***push to the main code repository***
 
 ### [Including wiki in the main code repository as a submodule](https://brendancleary.com/2013/03/08/including-a-github-wiki-in-a-repository-as-a-submodule/)
 
@@ -314,7 +312,32 @@ git rm <submodule folder name>
 git submodule add <address to remote git repo> <new folder name>
 ```
 
-### [Including wiki in the main code repository as a subtree](https://stackoverflow.com/a/33182223/4573584)
+## Old
+
+<details>
+<summary>
+Click to expand
+</summary>
+
+### Security
+
+#### [Using credential helper to store password (less secure method)](https://stackoverflow.com/a/17979600/4573584)
+
+```sh
+git config --global credential.helper store
+```
+
+**Warning**: username and password / personal access token are stored unencrypted at `~/.git-credentials` through this method.
+
+Use the following command to undo credential storage:
+
+```sh
+git config --unset credential.helper
+```
+
+### Subtrees
+
+#### [Including wiki in the main code repository as a subtree](https://stackoverflow.com/a/33182223/4573584)
 
 ```sh
 git clone git://github.com/username/repository
@@ -334,3 +357,5 @@ git pull -s subtree docs master
 Merging changes the other way is complicated.
 
 More about subtree merges on [GitHub](https://help.github.com/en/github/using-git/about-git-subtree-merges).
+
+</details>
