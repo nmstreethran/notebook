@@ -383,7 +383,7 @@ And now for something completely different
 
 ### Themes and colours
 
-- [Beamer theme gallery](https://deic-web.uab.cat/~iblanes/beamer_gallery/index.html)
+- [Beamer theme gallery](https://deic-web.uab.cat/~iblanes/beamer_gallery/)
 - [Beamer docs](https://ctan.org/pkg/beamer)
 - [Beamer template tutorial by Claudio Fiandrino](https://tex.stackexchange.com/a/146682/140109)
 - [Overleaf Beamer guide](https://www.overleaf.com/learn/latex/Beamer)

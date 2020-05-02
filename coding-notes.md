@@ -4,6 +4,7 @@
 
 - [Character limits](#character-limits)
 - [Python](#python)
+- [URL encoding](#url-encoding)
 
 ## Character limits
 
@@ -18,3 +19,36 @@
 ## Python
 
 [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
+
+## URL encoding
+
+<https://vermontdatabase.com/cloudwriter/url_encoding.htm>
+
+**Character** | **URL encoding**
+--- | ---
+\` | %60
+~ | %7E
+! | %21
+\# | %23
+$ | %24
+% | %25
+^ | %5E
+& | %26
+\( | %28
+\) | %29
+= | %3D
+\+ | %2B
+\ | %5C
+\| | %7C
+\[ | %5B
+\] | %5D
+{ | %7B
+} | %7D
+; | %3B
+: | %3A
+' | %27
+" | %22
+, | %2C
+\< | %3C
+\> | %3E
+? | %3F
