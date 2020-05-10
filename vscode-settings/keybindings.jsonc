@@ -29,5 +29,50 @@
         "key": "ctrl+alt+l",
         "command": "editor.action.transformToLowercase",
         "when": "editorTextFocus"
+      },
+    {
+        "key": "alt+l alt+r",
+        "command": "latex-workshop.recipes",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId =~ /latex|rsweave/"
+      },
+    {
+        "key": "ctrl+i",
+        "command": "latex-workshop.shortcut.textit",
+        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave/"
+      },
+    {
+        "key": "ctrl+l ctrl+i",
+        "command": "-latex-workshop.shortcut.textit",
+        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave/"
+      },
+    {
+        "key": "ctrl+b",
+        "command": "latex-workshop.shortcut.textbf",
+        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave/"
+      },
+    {
+        "key": "ctrl+l ctrl+b",
+        "command": "-latex-workshop.shortcut.textbf",
+        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave/"
+      },
+    {
+        "key": "alt+l alt+b",
+        "command": "latex-workshop.build",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId =~ /latex|rsweave/"
+      },
+    {
+        "key": "ctrl+l alt+b",
+        "command": "-latex-workshop.build",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId =~ /latex|rsweave/"
+      },
+    {
+        "key": "alt+l alt+v",
+        "command": "latex-workshop.view",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId =~ /latex|rsweave/"
+      },
+    {
+        "key": "ctrl+l alt+v",
+        "command": "-latex-workshop.view",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId =~ /latex|rsweave/"
       }
   ]

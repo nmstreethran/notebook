@@ -1,4 +1,5 @@
 akamud.vscode-theme-onedark-2.2.1
+bauke.horizon-vscode-3.0.2
 davidanson.vscode-markdownlint-0.35.1
 eamodio.gitlens-10.2.1
 james-yu.latex-workshop-8.9.0
@@ -8,6 +9,7 @@ ms-python.python-2020.4.76186
 npxms.hide-gitignored-1.1.0
 pkief.material-icon-theme-4.1.0
 redhat.vscode-yaml-0.7.2
+shaneyu.beyond-the-horizon-theme-vscode-0.0.2
 streetsidesoftware.code-spell-checker-1.8.0
-visualstudioexptteam.vscodeintellicode-1.2.6
+visualstudioexptteam.vscodeintellicode-1.2.7
 yzhang.markdown-all-in-one-2.8.0

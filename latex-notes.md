@@ -45,7 +45,6 @@
   - [Change position of navigation symbols](#change-position-of-navigation-symbols)
   - [Sectioning](#sectioning)
 - [Old](#old)
-  - [ModernCV](#moderncv)
 
 ## General
 
@@ -542,7 +541,7 @@ And now for something completely different
 Click to expand
 </summary>
 
-### ModernCV
+### ModernCV <!-- omit in toc -->
 
 ***Note: This package has not been updated since 2016***
 

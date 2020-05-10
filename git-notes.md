@@ -25,8 +25,6 @@
   - [Renaming submodules](#renaming-submodules)
   - [Deinit old submodule, remove the directory and create a new submodule](#deinit-old-submodule-remove-the-directory-and-create-a-new-submodule)
 - [Old](#old)
-  - [Security](#security)
-  - [Subtrees](#subtrees)
 
 ## Useful links
 
@@ -319,7 +317,7 @@ git submodule add <address to remote git repo> <new folder name>
 Click to expand
 </summary>
 
-### Security
+### Security <!-- omit in toc -->
 
 #### [Using credential helper to store password (less secure method)](https://stackoverflow.com/a/17979600/4573584)
 
@@ -335,7 +333,7 @@ Use the following command to undo credential storage:
 git config --unset credential.helper
 ```
 
-### Subtrees
+### Subtrees <!-- omit in toc -->
 
 #### [Including wiki in the main code repository as a subtree](https://stackoverflow.com/a/33182223/4573584)
 

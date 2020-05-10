@@ -27,9 +27,6 @@
   - [Useful GNOME extensions](#useful-gnome-extensions)
   - [Prevent the screen from turning off when the lockscreen is active](#prevent-the-screen-from-turning-off-when-the-lockscreen-is-active)
 - [Old](#old)
-  - [Installing Wine](#installing-wine)
-  - [Packages and GNOME extensions](#packages-and-gnome-extensions)
-  - [Problems with drivers](#problems-with-drivers)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
 
@@ -267,7 +264,7 @@ Once the extracted folder is placed in `~/.local/share/gnome-shell/extensions/`,
 Click to expand
 </summary>
 
-### Installing Wine
+### Installing Wine <!-- omit in toc -->
 
 Enable 32-bit architecture if system is 64-bit:
 
@@ -374,7 +371,7 @@ References:
 - <https://wiki.winehq.org/FAQ#How_do_I_solve_dependency_errors_when_trying_to_install_Wine.3F>
 - <https://forum.winehq.org/viewtopic.php?f=8&t=32192>
 
-### Packages and GNOME extensions
+### Packages and GNOME extensions <!-- omit in toc -->
 
 - [GRUB Customizer](https://launchpad.net/grub-customizer)
 - [Open Graphics Drivers](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers)
@@ -393,7 +390,7 @@ Use an extension:
 - <https://extensions.gnome.org/extension/1179/screenshot-locations/>
 - <https://github.com/kiyui/gnome-shell-screenshotlocations-extension>
 
-### Problems with drivers
+### Problems with drivers <!-- omit in toc -->
 
 #### Realtek wifi problems
 

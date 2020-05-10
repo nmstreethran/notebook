@@ -12,12 +12,13 @@
         "dispatchable",
         "forecasted",
         "irradiance",
+        "metrology",
         "nithiya",
         "prosumers",
         "renewables",
         "resumé",
         "streethran"
-      ],
+    ],
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.renderSideBySide": false,
     "editor.fontFamily": "'Fira Code Retina', 'Cascadia Code', 'Ubuntu Mono', 'Consolas', monospace",
@@ -32,11 +33,11 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "files.associations": {
-        "*.theme": "jsonc",
+        "*.geojson": "jsonc",
         "*.latex": "latex",
         "*.sty": "latex",
-        "*.geojson": "jsonc",
-        "*.tex_t": "tex"
+        "*.tex_t": "tex",
+        "*.theme": "jsonc"
       },
     "files.autoSave": "afterDelay",
     "git.autofetch": true,
@@ -56,7 +57,38 @@
     "[jsonc]": {
         "editor.tabSize": 2
       },
+    "latex-workshop.bibtex-format.tab": "tab",
+    "latex-workshop.bind.altKeymap.enabled": true,
     "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.synctex(busy)",
+        "*.synctex.gz(busy)",
+        "*.nav",
+        "*.synctex.gz",
+        "*.run.xml",
+        "*.bcf",
+        "*.vrb"
+    ],
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.latex.recipes": [
         {
@@ -160,17 +192,6 @@
                 "%DOC%"
               ],
             "env": {}
-          },
-        {
-            "name": "lualatex",
-            "command": "/usr/local/texlive/2020/bin/x86_64-linux/lualatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-              ],
-            "env": {}
           }
       ],
     "latex-workshop.message.error.show": false,
@@ -180,11 +201,16 @@
     "[markdown]": {
         "editor.tabSize": 2
       },
+    "markdown.extension.toc.levels": "1..3",
     "material-icon-theme.files.associations": {
-        "*.latex": "tex",
         "*.geojson": "json",
+        "*.latex": "tex",
         "*.tex_t": "tex",
         "*.theme": "json"
+      },
+    "material-icon-theme.folders.associations": {
+        "cvtemplate": "template",
+        "wiki": "docs"
       },
     "python.dataScience.askForKernelRestart": false,
     "python.dataScience.exportWithOutputEnabled": true,
@@ -194,6 +220,6 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.menuBarVisibility": "default",
     "window.restoreWindows": "none",
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Horizon Dark",
     "workbench.iconTheme": "material-icon-theme"
   }
