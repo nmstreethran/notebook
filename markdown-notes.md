@@ -83,7 +83,7 @@ example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
 
-[arbitrary case-insensitive reference text]: https://www.mozilla.org/en-US/
+[arbitrary case-insensitive reference text]: https://www.mozilla.org/en-US/exp/
 [1]: https://slashdot.org/
 [link text itself]: https://www.reddit.com/
 ```
@@ -102,7 +102,7 @@ example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
 
-[arbitrary case-insensitive reference text]: https://www.mozilla.org/en-US/
+[arbitrary case-insensitive reference text]: https://www.mozilla.org/en-US/exp/
 [1]: https://slashdot.org/
 [link text itself]: https://www.reddit.com/
 

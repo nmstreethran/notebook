@@ -1,0 +1,3 @@
+[submodule "gh-wiki"]
+	path = gh-wiki
+	url = git@github.com:nmstreethran/notebook.wiki.git

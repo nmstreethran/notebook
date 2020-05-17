@@ -110,5 +110,9 @@ venv.bak/
 
 # others
 python-sololearn.md
-images/operatorprecedence.jpg
-archive/
+operatorprecedence.jpg
+old/
+*.csv
+*.xlsx
+*.h5
+*.pdf

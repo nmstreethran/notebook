@@ -41,6 +41,24 @@ Merging PDF files (preserves hyperlinks):
 pdfunite file1.pdf file2.pdf file3.pdf outputfile.pdf
 ```
 
+[Convert PDF to image](https://askubuntu.com/a/50180/714808):
+
+```sh
+pdftoppm input.pdf outputname -png
+```
+
+Converting a page:
+
+```sh
+pdftoppm input.pdf outputname -png -f {page} -singlefile
+```
+
+Specifying resolution:
+
+```sh
+pdftoppm input.pdf outputname -png -rx 300 -ry 300
+```
+
 ## [Pandoc](https://pandoc.org/)
 
 ### Syntax highlighting
