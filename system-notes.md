@@ -11,6 +11,8 @@
   - [Adding directory to PATH](#adding-directory-to-path)
   - [What to do when Ubuntu freezes](#what-to-do-when-ubuntu-freezes)
   - [Globally customise system UI font on Ubuntu](#globally-customise-system-ui-font-on-ubuntu)
+  - [Prevent DejaVu family of fonts from interfering with emoji display](#prevent-dejavu-family-of-fonts-from-interfering-with-emoji-display)
+  - [Font management in Ubuntu](#font-management-in-ubuntu)
   - [Changing the default display manager](#changing-the-default-display-manager)
   - [Installing Firefox Developer Edition](#installing-firefox-developer-edition)
   - [CheckInstall](#checkinstall)
@@ -19,11 +21,8 @@
   - [Useful packages](#useful-packages)
   - [Handling held back packages](#handling-held-back-packages)
   - [Installing Zotero](#installing-zotero)
-- [KDE Plasma](#kde-plasma)
-  - [Missing network manager](#missing-network-manager)
-  - [Missing terminal](#missing-terminal)
-  - [Taking screenshots](#taking-screenshots)
 - [GNOME](#gnome)
+  - [Install GNOME tweak tools](#install-gnome-tweak-tools)
   - [Useful GNOME extensions](#useful-gnome-extensions)
   - [Prevent the screen from turning off when the lockscreen is active](#prevent-the-screen-from-turning-off-when-the-lockscreen-is-active)
 - [Old](#old)
@@ -97,6 +96,22 @@ Paste the following in your local font configuration file (`/etc/fonts/conf.avai
     </match>
     <include ignore_missing="yes">local.conf</include>
 </fontconfig>
+```
+
+### Prevent DejaVu family of fonts from interfering with emoji display
+
+Installing `twemoji-color-font` and editing `$HOME/.config/fontconfig/56-twemoji-color.conf` to comment out the `<match target="pattern">` blocks (especially for sans serif fonts) does the trick. Not doing this causes some blobs, such as those on GitLab, to use the default sans serif font instead of the default monospace font. The browser font settings should also be changed to match the settings in the configuration file for best results.
+
+- <https://github.com/eosrei/twemoji-color-font>
+- <https://www.reddit.com/r/firefox/comments/ev92yz/prevent_dejavu_font_from_messing_with_emojis/>
+- <https://wiki.archlinux.org/index.php/Font_configuration#Replace_or_set_default_fonts>
+
+### Font management in Ubuntu
+
+Install [`font-manager`](https://askubuntu.com/a/371320/714808):
+
+```sh
+sudo apt-get install font-manager
 ```
 
 ### [Changing the default display manager](https://askubuntu.com/a/58024/714808)
@@ -206,23 +221,13 @@ References:
 - <https://www.zotero.org/support/installation>
 - <https://askubuntu.com/a/1147073/714808>
 
-## KDE Plasma
+## GNOME
 
-### [Missing network manager](https://askubuntu.com/a/963902/714808)
+### [Install GNOME tweak tools](https://askubuntu.com/a/968630/714808)
 
 ```sh
-sudo apt-get install plasma-nm
+sudo apt install gnome-tweak-tool
 ```
-
-### Missing terminal
-
-Install Konsole from the app store.
-
-### Taking screenshots
-
-Install Spectacle from the app store.
-
-## GNOME
 
 ### Useful GNOME extensions
 
@@ -235,6 +240,7 @@ Extensions:
 - [Dash to panel](https://github.com/home-sweet-gnome/dash-to-panel)
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
 - [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
+- [Applications Overview Tooltip](https://extensions.gnome.org/extension/1071/applications-overview-tooltip/)
 
 ### Prevent the screen from turning off when the lockscreen is active
 
@@ -383,7 +389,7 @@ References:
 - [Dynamic Panel Transparency](https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/)
 - [AlternateTab](https://extensions.gnome.org/extension/15/alternatetab/)
 
-#### [Changing GNOME screenshot directory](https://askubuntu.com/a/1102530/714808)
+#### [Changing GNOME screenshot directory](https://askubuntu.com/a/1102530/714808) <!-- omit in toc -->
 
 Use an extension:
 
@@ -392,13 +398,13 @@ Use an extension:
 
 ### Problems with drivers <!-- omit in toc -->
 
-#### Realtek wifi problems
+#### Realtek wifi problems <!-- omit in toc -->
 
 Secure boot should be disabled before installing these drivers.
 
 See <https://askubuntu.com/a/635629/714808>.
 
-#### [Computer boots to blank screen after Ubuntu upgrade](https://askubuntu.com/a/162076/714808)
+#### [Computer boots to blank screen after Ubuntu upgrade](https://askubuntu.com/a/162076/714808) <!-- omit in toc -->
 
 **Note:** It is recommended to upgrade using a **bootable USB or disk**. Upgrading through the Software Updater could potentially cause driver-related problems which can otherwise be avoided.
 
@@ -454,5 +460,21 @@ mpv --hwdec=vdpau yourvideofile
 ```
 
 Reboot computer and see if everything works as intended.
+
+### KDE Plasma <!-- omit in toc -->
+
+#### [Missing network manager](https://askubuntu.com/a/963902/714808) <!-- omit in toc -->
+
+```sh
+sudo apt-get install plasma-nm
+```
+
+#### Missing terminal <!-- omit in toc -->
+
+Install Konsole from the app store.
+
+#### Taking screenshots <!-- omit in toc -->
+
+Install Spectacle from the app store.
 
 </details>

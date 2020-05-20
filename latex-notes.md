@@ -3,52 +3,52 @@
 ## Table of contents <!-- omit in toc -->
 
 - [General](#general)
-  - [Reusing defined commands](#reusing-defined-commands)
-  - [Define shortcuts to document properties](#define-shortcuts-to-document-properties)
-  - [Set images path](#set-images-path)
-  - [Adding captions as a node in `tikzpicture`](#adding-captions-as-a-node-in-tikzpicture)
-  - [Defining custom HTML colours](#defining-custom-html-colours)
-  - [Hyperlink and pdf metadata](#hyperlink-and-pdf-metadata)
+  - [Commands](#commands)
+  - [Defining custom macros](#defining-custom-macros)
+  - [Graphics](#graphics)
+  - [Tables](#tables)
+  - [Colours](#colours)
+  - [Hyperlink and PDF metadata](#hyperlink-and-pdf-metadata)
+  - [Listings](#listings)
+  - [Lists](#lists)
+  - [No monospaced URL font](#no-monospaced-url-font)
+  - [Remove indentation and add spaces between paragraphs](#remove-indentation-and-add-spaces-between-paragraphs)
+  - [Add section to PDF bookmark](#add-section-to-pdf-bookmark)
 - [Bibliography](#bibliography)
-  - [Patches](#patches)
   - [BibLaTeX styles](#biblatex-styles)
+  - [Suppress values from bibliography output](#suppress-values-from-bibliography-output)
   - [Listing entries without in-text citation](#listing-entries-without-in-text-citation)
+  - [Split bibliography into works cited and works not cited in-text](#split-bibliography-into-works-cited-and-works-not-cited-in-text)
+  - [Remap `@software` entries to `@online`](#remap-software-entries-to-online)
 - [Book / article / report document class](#book--article--report-document-class)
+  - [Author and affiliation](#author-and-affiliation)
   - [Avoid overfulls in right margin](#avoid-overfulls-in-right-margin)
   - [Remove blank pages after chapters](#remove-blank-pages-after-chapters)
   - [Fix spacing problem for header and footer using `headheight`](#fix-spacing-problem-for-header-and-footer-using-headheight)
-  - [Change title of contents](#change-title-of-contents)
-  - [Listings](#listings)
   - [Sans serif headings with serif body and math](#sans-serif-headings-with-serif-body-and-math)
   - [Adding lists to the table of contents](#adding-lists-to-the-table-of-contents)
-  - [Rename "Chapter X" to "Part X"](#rename-%22chapter-x%22-to-%22part-x%22)
-  - [Caption font](#caption-font)
-  - [Force table captions to top of the table](#force-table-captions-to-top-of-the-table)
   - [Header and footer settings using `fancyhdr`](#header-and-footer-settings-using-fancyhdr)
   - [Remove headers and footers for a page](#remove-headers-and-footers-for-a-page)
-  - [Float placeins within subsections](#float-placeins-within-subsections)
-  - [Tables](#tables)
-  - [Globally change table font size](#globally-change-table-font-size)
-  - [Bibliography package](#bibliography-package)
-  - [Ensuring bibliography respects margins and fix `underfull \hbox` warnings](#ensuring-bibliography-respects-margins-and-fix-underfull-hbox-warnings)
+  - [Use value of last page](#use-value-of-last-page)
   - [List of abbreviations](#list-of-abbreviations)
   - [Frontmatter, mainmatter and backmatter](#frontmatter-mainmatter-and-backmatter)
   - [Word count](#word-count)
 - [Beamer class](#beamer-class)
+  - [Class options](#class-options)
+  - [Defining document properties](#defining-document-properties)
   - [Themes and colours](#themes-and-colours)
-  - [Change date format to DD/MM/YYYY](#change-date-format-to-ddmmyyyy)
-  - [Bibliography - Beamer](#bibliography---beamer)
-  - [Adjust title page vertical spacing](#adjust-title-page-vertical-spacing)
-  - [Frame title formatting](#frame-title-formatting)
-  - [Frame margins](#frame-margins)
+  - [Beamer fonts](#beamer-fonts)
+  - [Beamer listings](#beamer-listings)
+  - [Beamer bibliography](#beamer-bibliography)
   - [Remove navigation symbols](#remove-navigation-symbols)
-  - [Change position of navigation symbols](#change-position-of-navigation-symbols)
   - [Sectioning](#sectioning)
 - [Old](#old)
 
 ## General
 
-### Reusing defined commands
+### Commands
+
+#### Reusing defined commands
 
 [Reusing the `\title`, `\author` and `\date` commands in different areas of a document](https://tex.stackexchange.com/a/10131/140109)
 
@@ -58,8 +58,6 @@
 \title{Example}
 \author{Me}
 \date{\today}
-
-% ...
 
 \makeatletter
 \begin{titlepage}
@@ -71,52 +69,635 @@ It was written by \@author\space on \@date
 \makeatother
 ```
 
-### [Define shortcuts to document properties](https://en.wikibooks.org/wiki/TeX/def)
+#### [Define shortcuts to document properties](https://en.wikibooks.org/wiki/TeX/def)
 
 ```latex
-\def \auth {Author's Name} % author
+\def\auth{Author's Name} % author
 ```
 
-### Set images path
+### Defining custom macros
+
+```latex
+\newcommand{\education}[5]{
+    \textbf{#1}\hfill\textit{#2} \\
+    \textbf{\textit{#3 $\bullet$ #4}}\hfill#5}
+% end of preamble
+
+\education{Master's Degree in Mathematics}{Apr 2017 — Apr 2018}{University of Alexandria}{Distinction grade}{Alexandria, Egypt}
+```
+
+### Graphics
+
+#### Set images path
 
 Source: <https://www.overleaf.com/learn>
 
 ```latex
 \usepackage{graphicx}
-\graphicspath{ {images/} }
+\graphicspath{{images/}}
 ```
 
-### [Adding captions as a node in `tikzpicture`](https://tex.stackexchange.com/a/351672/140109)
-
-[`tikzpagenodes`](https://tex.stackexchange.com/a/386331/140109)
-
-### [Defining custom HTML colours](https://htmlcolorcodes.com/color-names/)
+#### [Prevent image overflow in margins](https://github.com/jgm/pandoc/blob/master/data/templates/default.latex)
 
 ```latex
-\definecolor{EnsystraGreen}{HTML}{00CD98}
+\makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+    \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 ```
 
-### Hyperlink and pdf metadata
+#### [Set default figure placement to `!htb`](https://github.com/jgm/pandoc/blob/master/data/templates/default.latex)
 
-- use hidelinks to remove hyperlink borders
-- [`hyperxmp` package](https://ctan.org/pkg/hyperxmp)
+```latex
+\makeatletter
+    \def\fps@figure{!htb}
+\makeatother
+```
+
+#### Adding subfigures
+
+```latex
+\usepackage{subcaption}
+% end of preamble
+
+An example subfigure (Figure~\ref{fig:subfig}), which contains Figure~\ref{fig:a} and Figure~\ref{fig:b}. Figure~\ref{fig:b} has been flipped horizontally.
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{.4\textwidth}
+        \includegraphics{Passer_montanus_malaccensis}
+        \caption{Picture A. \label{fig:a}}
+    \end{subfigure}
+    ~~~
+    \begin{subfigure}[t]{.4\textwidth}
+        \reflectbox{\includegraphics{Passer_montanus_malaccensis}}
+        \caption{Picture B, which is the same as Picture A, but flipped horizontally. \label{fig:b}}
+    \end{subfigure}
+    \caption{The same Eurasian tree sparrow (\textit{Passer montanus malaccensis}), adult male, in Kuala Lumpur, Malaysia. Taken on 31 January 2019, 15:20:47 by Peter P. Othagoer, Wikimedia Commons, CC BY 4.0. \label{fig:subfig}}
+\end{figure}
+```
+
+### Tables
+
+- ["ThreePartTable" environment](https://tex.stackexchange.com/a/209851/140109)
+- [More space between rows](https://inf.ethz.ch/personal/markusp/teaching/guides/guide-tables.pdf)
+- [Set table content to align left; for removing `underfull \hbox` warning in table](https://tex.stackexchange.com/a/275310/140109)
+
+```latex
+\usepackage{longtable,tabulary}
+\usepackage{booktabs}
+\usepackage{threeparttablex}
+\renewcommand{\arraystretch}{1.2}
+\newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+```
+
+#### [Globally change table font size](https://tex.stackexchange.com/a/220258/140109)
+
+```latex
+\let\oldtabular\tabular
+\renewcommand{\tabular}{\footnotesize\oldtabular}
+```
+
+#### Caption font
+
+```latex
+\usepackage[font=small,labelfont=bf]{caption}
+```
+
+#### Set default table placement to `!htb`
+
+```latex
+\makeatletter
+    \def\fps@table{!htb}
+\makeatother
+```
+
+### Colours
+
+#### Defining custom HTML colours
+
+```latex
+\definecolor{MyPaleGreen}{HTML}{00CD98}
+```
+
+#### LaTeX RGB colours
+
+See <https://latexcolor.com/>.
+
+### Hyperlink and PDF metadata
+
+- use hidelinks to remove hyperlink borders / coloured boxes
 - [format hyperlink colours](https://www.overleaf.com/learn/latex/hyperlinks)
+- `urlcolor` is for external links
 
 ```latex
-\def \licenseurl {https://www.latex-project.org/lppl/lppl-1-3c/} % license URL
-\def \copyright {Copyright \textcopyright~\the\year{}~by Author. Licensed under the LPPL, version 1.3c.} % copyright information
-\usepackage{hyperxmp}
 \usepackage[hidelinks,pdftex,
     pdfauthor={Author},
     pdftitle={Title},
     pdfsubject={Subject},
-    pdfkeywords={keyword1,keyword2}]{hyperref}
-\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,pdfcopyright=\copyright,pdflicenseurl=\licenseurl,pdfcontactemail=email@mail.com}
+    pdfkeywords={keyword1, keyword2}]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=green,citecolor=blue}
+```
+
+### Listings
+
+Add and rename title of list of listings:
+
+```latex
+\usepackage{listings}
+\renewcommand{\lstlistlistingname}{List of Listings}
+```
+
+Listings configuration:
+
+See <https://tex.stackexchange.com/a/235822/140109> and <https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings>.
+
+```latex
+% using named colours from xcolor
+\usepackage[svgnames]{xcolor}
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    breaklines=true,
+    numbers=left,
+    backgroundcolor=\color{Snow},
+    commentstyle=\itshape\color{SlateGrey},
+    keywordstyle=\bfseries\color{ForestGreen},
+    numberstyle=\tiny\ttfamily\color{DarkSlateGrey},
+    stringstyle=\color{Crimson},
+    showstringspaces=false
+}
+% additional styling for python code listings
+\lstdefinestyle{py}{
+    language=Python,
+    keywordstyle={[2]\color{ForestGreen}},
+    morekeywords={True,False,as},
+    morestring=[s]{"""}{"""},
+    morestring=[s]{'''}{'''},
+    literate=
+    *{+}{{{\bfseries\color{DarkOrchid}+}}}1
+    {-}{{{\bfseries\color{DarkOrchid}-}}}1
+    {*}{{{\bfseries\color{DarkOrchid}$^\ast$}}}1
+    {/}{{{\bfseries\color{DarkOrchid}/}}}1
+    {^}{{{\bfseries\color{DarkOrchid}\^{}}}}1
+    {?}{{{\bfseries\color{DarkOrchid}?}}}1
+    {!}{{{\bfseries\color{DarkOrchid}!}}}1
+    {\%}{{{\bfseries\color{DarkOrchid}\%}}}1
+    {<}{{{\bfseries\color{DarkOrchid}<}}}1
+    {>}{{{\bfseries\color{DarkOrchid}>}}}1
+    {|}{{{\bfseries\color{DarkOrchid}|}}}1
+    {\&}{{{\bfseries\color{DarkOrchid}\&}}}1
+    {~}{{{\bfseries\color{DarkOrchid}~}}}1
+    {=}{{{\bfseries\color{DarkOrchid}=}}}1
+    %
+    {==}{{{\bfseries\color{DarkOrchid}==}}}2
+    {<=}{{{\bfseries\color{DarkOrchid}<=}}}2
+    {>=}{{{\bfseries\color{DarkOrchid}>=}}}2
+    %
+    {+=}{{{+=}}}2
+    {-=}{{{-=}}}2
+    {*=}{{{$^\ast$=}}}2
+    {/=}{{{/=}}}2
+}
+```
+
+Snippet with custom line number start:
+
+```latex
+\begin{lstlisting}[style=py,firstnumber=8]
+# import libraries
+import pandas as pd
+\end{lstlisting}
+```
+
+### Lists
+
+Adjust spacing:
+
+```latex
+\usepackage{enumitem}
+\setlist{itemsep=.5pt}
+```
+
+### No monospaced URL font
+
+```latex
+\urlstyle{same}
+```
+
+### Remove indentation and add spaces between paragraphs
+
+```latex
+\usepackage{parskip}
+\ifundef{\abstract}{}{\patchcmd{\abstract}
+    {\quotation}{\quotation\noindent\ignorespaces}{}{}}
+```
+
+### Add section to PDF bookmark
+
+```latex
+\usepackage{bookmark}
+\pdfbookmark[1]{Further Reading}{Further Reading}
 ```
 
 ## Bibliography
 
-### Patches
+Numeric bibliography:
+
+- sorted by order of appearance
+- given name initials
+- display prefixes such as 'van', 'di', and 'le'
+- compact date format
+
+```latex
+\usepackage[sorting=none,alldates=comp,useprefix=true,giveninits=true,defernumbers=true]{biblatex}
+```
+
+### [BibLaTeX styles](https://www.overleaf.com/learn/latex/Biblatex_citation_styles)
+
+Alphanumeric style:
+
+- [edit to include title for entries with no author and 'ND' for entries with no date; minimum 4 characters for title/author](https://tex.stackexchange.com/a/68875/140109)
+- [display only first author's name in label using `maxalphanames=1`](https://tex.stackexchange.com/a/276530/140109)
+- [ignore spaces in author name or title](https://tex.stackexchange.com/a/276530/140109)
+
+```latex
+\usepackage[style=alphabetic,maxalphanames=1]{biblatex}
+\renewcommand*{\labelalphaothers}{}
+\DeclareLabelalphaTemplate{
+  \labelelement{
+    \field[final]{shorthand}
+    \field{label}
+    \field[strwidth=4,strside=left,ifnames=1]{labelname}
+    \field[strwidth=1,strside=left]{labelname}
+    \field[strwidth=4,strside=left,ifnames=1]{title}
+  }
+  \labelelement{
+        \field[strwidth=2,strside=right]{year}
+        \field[strwidth=2,strside=right]{ND}
+  }
+}
+\DeclareNolabel{
+  \nolabel{\regexp{[\p{Z}\p{P}\p{S}\p{C}]+}}
+}
+```
+
+The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](https://github.com/plk/biblatex/blob/dev/tex/latex/biblatex/biblatex.def). The defaults for `\DeclareNolabel` are `\regexp{[\p{P}\p{S}\p{C}]+}`.
+
+### Suppress values from bibliography output
+
+```latex
+% suppress shorthand values
+\DeclareSourcemap{
+    \maps[datatype=bibtex]{\map{\step[fieldset=shorthand, null]}}
+}
+% suppress eprint class values
+\DeclareSourcemap{
+    \maps[datatype=bibtex]{\map{\step[fieldset=eprintclass, null]}}
+}
+```
+
+### [Listing entries without in-text citation](https://tex.stackexchange.com/a/17132/140109)
+
+`\nocite{*}` prints all entries, while `\nocite{key1,key2,...,keyn}` prints entries corresponding to the `key1,key2,...,keyn` keys. Use either of these commands before `\printbibliography`.
+
+### [Split bibliography into works cited and works not cited in-text](https://tex.stackexchange.com/a/6977/140109)
+
+```latex
+%% preamble
+\usepackage[defernumbers=true]{biblatex}
+\DeclareBibliographyCategory{cited}
+\AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
+\addbibresource{biblio.bib}
+\nocite{*}
+% end of preamble
+
+Some text \cite{A01,B02}.
+
+\printbibliography[category=cited]% default title for `article` class: "References"
+\printbibliography[title={Further Reading},notcategory=cited]
+```
+
+### [Remap `@software` entries to `@online`](https://tex.stackexchange.com/a/325255/140109)
+
+```latex
+\DeclareBibliographyAlias{software}{online}
+```
+
+## Book / article / report document class
+
+### Author and affiliation
+
+```latex
+\def\theauthor{Euclid of Alexandria}
+% footnote containing author's contact information and/or affiliation
+\def\authornote{Musaeum of Alexandria; Email: \href{mailto:euclid@alexandria.edu}{euclid@alexandria.edu}}
+\usepackage[hidelinks]{hyperref}
+\author{\theauthor \footnote{\authornote}}
+\hypersetup{pdfauthor={\theauthor}}
+```
+
+### [Avoid overfulls in right margin](https://tex.stackexchange.com/a/391321/140109)
+
+```latex
+\emergencystretch 3em
+```
+
+### [Remove blank pages after chapters](https://tex.stackexchange.com/a/334126/140109)
+
+```latex
+\documentclass[11pt,openany]{book}
+\let\cleardoublepage=\clearpage
+```
+
+### [Fix spacing problem for header and footer using `headheight`](https://tex.stackexchange.com/a/93871/140109)
+
+```latex
+\geometry{lmargin=2.5cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm,headheight=34pt}
+```
+
+### Sans serif headings with serif body and math
+
+- [Font catalogue](http://tug.org/FontCatalogue/)
+
+```latex
+\usepackage{lmodern} % latin modern
+\usepackage{mathpazo} % mathpazo font for body + math
+\usepackage{sectsty} % for setting section headings to sans serif
+\allsectionsfont{\raggedright\normalfont\sffamily\bfseries} % ^ bold + sans serif section headings; aligned left
+```
+
+### [Adding lists to the table of contents](https://ctan.org/pkg/tocbibind)
+
+```latex
+\usepackage[nottoc,notbib]{tocbibind}
+```
+
+### Header and footer settings using `fancyhdr`
+
+- [Changing the font style of page number on front page](https://tex.stackexchange.com/a/97442/140109)
+- [remove horizontal line from header](https://tex.stackexchange.com/a/13897/140109)
+- [header and footers guide on Overleaf](https://www.overleaf.com/learn/latex/Headers_and_footers)
+- [lowercase chapter in header](https://tex.stackexchange.com/a/121808/140109)
+- [remove "Chapter 0" from header](https://tex.stackexchange.com/a/340126/140109)
+
+```latex
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancypagestyle{plain}{
+    \fancyhf{} % set header and footer to nothing
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyfoot[C]{\sffamily\thepage}
+}
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt} % remove horizontal line from header
+\fancyhead[LE,RO]{} % blank
+\fancyfoot[LE,RO]{\sffamily\thepage} % page number
+\fancyfoot[RE,LO]{} % blank
+\makeatletter
+\fancyhead[RE]{\if@mainmatter \sffamily\chaptername~\thechapter\fi} % "Chapter X"
+\makeatother
+\fancyhead[LO]{\textit{\sffamily\nouppercase{\leftmark}}} % Chapter title
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+```
+
+### [Remove headers and footers for a page](https://tex.stackexchange.com/a/120748/140109)
+
+```latex
+\thispagestyle{empty}
+```
+
+### Use value of last page
+
+```latex
+\usepackage{lastpage}
+\fancyfoot[C]{\thepage/\pageref{LastPage}}
+```
+
+### List of abbreviations
+
+```latex
+\usepackage[acronym,nomain,nonumberlist,nopostdot,nogroupskip,automake,toc]{glossaries}
+\setglossarystyle{index}
+\makeglossaries
+```
+
+### Frontmatter, mainmatter and backmatter
+
+- [footnote customisation](https://en.wikibooks.org/wiki/LaTeX/Footnotes_and_Margin_Notes)
+- [reset footnote counter](https://ubuntuincident.wordpress.com/2011/12/28/reset-footnote-counter-in-latex/)
+- [placing appendices after backmatter](https://tex.stackexchange.com/a/198608/140109)
+- [remove "Appendix/Chapter X" from references header](https://tex.stackexchange.com/a/102693/140109)
+- [appendix chapter name](https://tex.stackexchange.com/a/151130/140109)
+
+### Word count
+
+- [TeXcount](https://ctan.uib.no/support/texcount/doc/TeXcount.pdf) package documentation.
+- [Ignore sections or inputs of a document when calculating the number of words using TeXcount](https://tex.stackexchange.com/a/259296/140109) - using `%TC:ignore` and `%TC:endignore`:
+
+```latex
+% regions between TC:ignore and TC:endignore will be ignored from word count
+%TC:ignore
+\appendix
+And now for something completely different
+%TC:endignore
+```
+
+## Beamer class
+
+### Class options
+
+Set custom aspect ratio (widescreen) and import colours from `xcolor` (`svgnames`):
+
+```latex
+\documentclass[aspectratio=169,xcolor={svgnames}]{beamer}
+```
+
+### Defining document properties
+
+```latex
+% define title, subtitle, author's name, institute, and
+% date (and/or event name)
+% short versions in [brackets]
+% use \today to display today's date in MMM dd, YYYY format
+\title[Prime Numbers]{There Is No Largest Prime Number}
+\subtitle[\textit{reductio ad absurdum}]{The proof uses \textit{reductio ad absurdum}.}
+\author[Euclid of Alexandria]{Euclid of Alexandria \href{mailto:euclid@alexandria.edu}{\texttt{<euclid@alexandria.edu>}}}
+\institute[Musaeum]{Musaeum of Alexandria}
+\date[ISPN '80]{27th International Symposium of Prime Numbers; 280 BC}
+% define pdf metadata
+% keywords
+\def\keywords{presentation, beamer, latex, prime numbers}
+% subject - e.g., event name and copyright info
+\def\subject{Presented at ISPN '80. License: CC BY 4.0.}
+\hypersetup{pdfkeywords={\keywords},pdfsubject={\subject}}
+```
+
+### Themes and colours
+
+- [Beamer theme gallery](https://deic-web.uab.cat/~iblanes/beamer_gallery/)
+- [Beamer docs](https://ctan.org/pkg/beamer)
+- [Beamer template tutorial by Claudio Fiandrino](https://tex.stackexchange.com/a/146682/140109)
+- [Overleaf Beamer guide](https://www.overleaf.com/learn/latex/Beamer)
+- [set colours for sections and subsections in table of contents](https://tex.stackexchange.com/a/69721/140109)
+
+```latex
+\mode<presentation>
+{
+    % set inner, outer, and colour themes
+    \useoutertheme{infolines}
+    \usecolortheme{spruce,rose} % these colours are part of beamer
+    \usecolortheme[named=MSUgreen]{structure} % ^
+    \useinnertheme[shadow]{rounded}
+    % remove navigation symbols
+    \setbeamertemplate{navigation symbols}{}
+    % use numbered captions
+    \setbeamertemplate{caption}[numbered]
+    % set custom colours for blocks and text
+    % these colours (except MSUgreen) are named colours from xcolor (svgnames)
+    \setbeamercolor{block title}{fg=MSUgreen,bg=PaleGreen!40}
+    \setbeamercolor{block title example}{fg=RoyalBlue,bg=PowderBlue!40}
+    \setbeamercolor{block title alerted}{fg=Tomato,bg=PeachPuff!40}
+    \setbeamercolor{example text}{fg=RoyalBlue}
+    \setbeamercolor{alerted text}{fg=Tomato}
+    \setbeamercolor{math text}{fg=DarkSlateGrey}
+    % show bibliography numbering
+    \setbeamertemplate{bibliography item}[text]
+}
+```
+
+### Beamer fonts
+
+Example for a sans-serif presentation:
+
+```latex
+\usepackage{amsmath} % math
+\usepackage{amssymb} % ^
+\usepackage[zerostyle=c,straightquotes]{newtxtt} % monospace
+\usepackage[sfdefault]{cabin} % sans-serif default
+\usepackage{gfsneohellenicot} % sans-serif math font
+\usepackage{fontawesome5} % font awesome symbols
+\faStyle{regular} % font awesome style
+```
+
+### Beamer listings
+
+Specifying font:
+
+```latex
+\lstset{
+    basicstyle=\footnotesize\usefont{T1}{newtxtt}{m}{n}
+}
+```
+
+Displaying listing in a frame (must use `fragile`):
+
+```latex
+\subsection{Code Blocks}
+\begin{frame}[fragile]{\insertsubsectionhead}
+% no indentation for this frame as it's verbatim code
+\begin{exampleblock}{Shell}
+\begin{lstlisting}[language=sh]
+#!/bin/bash
+
+cd $HOME
+cout << "Hello world!";
+\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+```
+
+### Beamer bibliography
+
+- [bibliography icon](https://tex.stackexchange.com/a/68084/140109)
+- [numerical references](https://tex.stackexchange.com/a/68081/140109)
+- [change font size](https://tex.stackexchange.com/a/205447/140109)
+
+Change font size:
+
+```latex
+\AtBeginBibliography{\footnotesize}
+```
+
+- [beamer references](https://en.wikibooks.org/wiki/LaTeX/Presentations#References_%28Beamer%29)
+- references which are not cited in the slides using `\nocite{bibid}`
+
+```latex
+\begin{frame}
+    Citing an article \cite{sigfridsson}, online source \cite{ctan}, and book \cite{aristotle:anima}.
+\end{frame}
+
+\section*{References}
+\begin{frame}[allowframebreaks]{\insertsectionhead}
+    \nocite{angenendt,vangennep,britannica}
+    \printbibliography[heading=none]
+\end{frame}
+```
+
+### Remove navigation symbols
+
+```latex
+\setbeamertemplate{navigation symbols}{}
+```
+
+### Sectioning
+
+- sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+- a subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+```latex
+\section{First Section}
+\subsection{Subsection Example}
+\begin{frame}{Table of Contents}
+\tableofcontents[currentsection]
+```
+
+## Old
+
+<details>
+<summary>
+Click to expand
+</summary>
+
+### ModernCV <!-- omit in toc -->
+
+***Note: This package has not been updated since 2016***
+
+#### Known issues <!-- omit in toc -->
+
+- main `.tex` file: Some font shapes were not available, defaults substituted
+- `fontenc.sty`: Font shape 'TU/qpl/m/n' undefined \ (Font) using 'TU/lmr/m/n' instead
+- `moderncvbodyiii.sty`: You have requested package 'moderncvbodyiii', but the package provides 'moderncvbodyiii'.
+- `moderncvheadiii.sty`: You have requested package 'moderncvheadiii', but the package provides 'moderncvheadiii'.
+
+#### [Extending a quote's width](https://tex.stackexchange.com/a/247503/140109) <!-- omit in toc -->
+
+```latex
+% preamble
+\let\originalrecomputecvlengths\recomputecvlengths
+\renewcommand*{\recomputecvlengths}{%
+\originalrecomputecvlengths%
+\setlength{\quotewidth}{.8\textwidth}} % change .8 to desired value
+```
+
+#### [Edit space after header](https://tex.stackexchange.com/a/82871/140109) <!-- omit in toc -->
+
+```latex
+\makecvtitle
+\vspace*{-5mm} % enter right after \makecvtitle
+```
+
+#### [Reduce signature whitespace](https://tex.stackexchange.com/a/196910/140109) <!-- omit in toc -->
+
+```latex
+% preamble
+\patchcmd{\makeletterclosing}{[3em]}{[1em]}{}{}
+```
+
+### Bibliography patches <!-- omit in toc -->
 
 To remove empty parentheses if year not provided for `@online`:
 
@@ -154,153 +735,45 @@ Removes unwanted fields for all reference types, except `@misc`:
 }
 ```
 
-[Remap `@software` entries to `@online`](https://tex.stackexchange.com/a/325255/140109):
+- [supress patching footnotes failed warning](https://tex.stackexchange.com/a/202994/140109)
 
 ```latex
-\DeclareBibliographyAlias{software}{online}
+\usepackage{silence} % suppress warning below
+\WarningFilter{biblatex}{Patching footnotes failed}
 ```
 
-### [BibLaTeX styles](https://www.overleaf.com/learn/latex/Biblatex_citation_styles)
-
-Alphanumeric style
-
-- [edit to include title for entries with no author and 'ND' for entries with no date; minimum 4 characters for title/author](https://tex.stackexchange.com/a/68875/140109)
-- [display only first author's name in label using `maxalphanames=1`](https://tex.stackexchange.com/a/276530/140109)
-- [ignore spaces in author name or title](https://tex.stackexchange.com/a/276530/140109)
+### `hyperxmp` <!-- omit in toc -->
 
 ```latex
-\usepackage[backend=biber,style=alphabetic,urldate=long,maxalphanames=1]{biblatex}
-\renewcommand*{\labelalphaothers}{}
-\DeclareLabelalphaTemplate{
-  \labelelement{
-    \field[final]{shorthand}
-    \field{label}
-    \field[strwidth=4,strside=left,ifnames=1]{labelname}
-    \field[strwidth=1,strside=left]{labelname}
-    \field[strwidth=4,strside=left,ifnames=1]{title}
-  }
-  \labelelement{
-        \field[strwidth=2,strside=right]{year}
-        \field[strwidth=2,strside=right]{ND}
-  }
-}
-\DeclareNolabel{
-  \nolabel{\regexp{[\p{Z}\p{P}\p{S}\p{C}]+}}
-}
+\def\licenseurl{https://www.latex-project.org/lppl/lppl-1-3c/} % license URL
+\def\copyright{Copyright \textcopyright~\the\year{}~by Author. Licensed under the LPPL, version 1.3c.} % copyright information
+\usepackage{hyperxmp}
+\hypersetup{pdfcopyright=\copyright,pdflicenseurl=\licenseurl,pdfcontactemail=email@mail.com}
 ```
 
-The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](https://github.com/plk/biblatex/blob/dev/tex/latex/biblatex/biblatex.def). The defaults for `\DeclareNolabel` are `\regexp{[\p{P}\p{S}\p{C}]+}`.
-
-### [Listing entries without in-text citation](https://tex.stackexchange.com/a/17132/140109)
-
-`\nocite{*}` prints all entries, while `\nocite{key1,key2,...,keyn}` prints entries corresponding to the `key1,key2,...,keyn` keys. Use either of these commands before `\printbibliography`.
-
-## Book / article / report document class
-
-### [Avoid overfulls in right margin](https://tex.stackexchange.com/a/391321/140109)
+### Force table captions to top of the table <!-- omit in toc -->
 
 ```latex
-\emergencystretch 3em
+\usepackage{floatrow}
+\floatsetup[table]{capposition=top}
 ```
 
-### [Remove blank pages after chapters](https://tex.stackexchange.com/a/334126/140109)
+### Ensuring bibliography respects margins and [fix `underfull \hbox` warnings](https://tex.stackexchange.com/a/10928/140109) <!-- omit in toc -->
 
 ```latex
-\documentclass[11pt,openany]{book}
-\let\cleardoublepage=\clearpage
+\appto{\bibsetup}{\sloppy}
+\usepackage{etoolbox}
+\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
 ```
 
-### [Fix spacing problem for header and footer using `headheight`](https://tex.stackexchange.com/a/93871/140109)
-
-```latex
-\geometry{lmargin=2.5cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm,headheight=34pt}
-```
-
-### Change title of contents
+### Change title of contents <!-- omit in toc -->
 
 ```latex
 \usepackage[UKenglish]{babel} % UK English language
 \addto\captionsUKenglish{\renewcommand\contentsname{Table of Contents}} % specify new title
 ```
 
-### Listings
-
-```latex
-\usepackage{listings}
-\renewcommand{\lstlistlistingname}{List of Listings} % add/rename title of list of listings
-```
-
-### Sans serif headings with serif body and math
-
-- [Font catalogue](http://tug.org/FontCatalogue/)
-
-```latex
-\usepackage{lmodern} % latin modern
-\usepackage{mathpazo} % mathpazo font for body + math
-\usepackage{sectsty} % for setting section headings to sans serif
-\allsectionsfont{\raggedright\normalfont\sffamily\bfseries} % ^ bold + sans serif section headings; aligned left
-```
-
-### [Adding lists to the table of contents](https://ctan.org/pkg/tocbibind)
-
-```latex
-\usepackage[nottoc,notbib]{tocbibind}
-```
-
-### Rename "Chapter X" to "Part X"
-
-```latex
-\addto\captionsUKenglish{\renewcommand{\chaptername}{Part}} % specify new name
-```
-
-### Caption font
-
-```latex
-\usepackage[font=small,labelfont=bf]{caption}
-```
-
-### Force table captions to top of the table
-
-```latex
-\usepackage{floatrow}  
-\floatsetup[table]{capposition=top}
-```
-
-### Header and footer settings using `fancyhdr`
-
-- [Changing the font style of page number on front page](https://tex.stackexchange.com/a/97442/140109)
-- [remove horizontal line from header](https://tex.stackexchange.com/a/13897/140109)
-- [header and footers guide on Overleaf](https://www.overleaf.com/learn/latex/Headers_and_footers)
-- [lowercase chapter in header](https://tex.stackexchange.com/a/121808/140109)
-- [remove "Chapter 0" from header](https://tex.stackexchange.com/a/340126/140109)
-
-```latex
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancypagestyle{plain}{
-    \fancyhf{} % set header and footer to nothing
-    \renewcommand{\headrulewidth}{0pt}
-    \fancyfoot[C]{\sffamily\thepage}
-}
-\fancyhf{} % sets both header and footer to nothing
-\renewcommand{\headrulewidth}{0pt} % remove horizontal line from header
-\fancyhead[LE,RO]{} % blank
-\fancyfoot[LE,RO]{\sffamily\thepage} % page number
-\fancyfoot[RE,LO]{} % blank
-\makeatletter
-\fancyhead[RE]{\if@mainmatter \sffamily\chaptername~\thechapter\fi} % "Chapter X"
-\makeatother
-\fancyhead[LO]{\textit{\sffamily\nouppercase{\leftmark}}} % Chapter title
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-```
-
-### [Remove headers and footers for a page](https://tex.stackexchange.com/a/120748/140109)
-
-```latex
-\thispagestyle{empty}
-```
-
-### [Float placeins within subsections](https://tex.stackexchange.com/a/118667/140109)
+### [Float placeins within subsections](https://tex.stackexchange.com/a/118667/140109) <!-- omit in toc -->
 
 ```latex
 \usepackage[section]{placeins}
@@ -313,128 +786,26 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 \makeatother
 ```
 
-### Tables
+### [Adding captions as a node in `tikzpicture`](https://tex.stackexchange.com/a/351672/140109) <!-- omit in toc -->
 
-- ["ThreePartTable" environment](https://tex.stackexchange.com/a/209851/140109)
-- [More space between rows](https://inf.ethz.ch/personal/markusp/teaching/guides/guide-tables.pdf)
-- [Set table content to align left; for removing `underfull \hbox` warning in table](https://tex.stackexchange.com/a/275310/140109)
+[`tikzpagenodes`](https://tex.stackexchange.com/a/386331/140109)
 
-```latex
-\usepackage{longtable,tabulary}
-\usepackage{booktabs}
-\usepackage{threeparttablex}
-\renewcommand{\arraystretch}{1.2}
-\newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
-```
-
-### [Globally change table font size](https://tex.stackexchange.com/a/220258/140109)
-
-```latex
-\let\oldtabular\tabular
-\renewcommand{\tabular}{\footnotesize\oldtabular}
-```
-
-### Bibliography package
-
-```latex
-\usepackage[backend=biber,style=ieee,uniquename=init,giveninits,urldate=long]{biblatex}
-```
-
-### Ensuring bibliography respects margins and [fix `underfull \hbox` warnings](https://tex.stackexchange.com/a/10928/140109)
-
-```latex
-\appto{\bibsetup}{\sloppy}
-\usepackage{etoolbox}
-\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
-```
-
-### List of abbreviations
-
-```latex
-\usepackage[acronym,nomain,nonumberlist,nopostdot,nogroupskip,automake,toc]{glossaries}
-\setglossarystyle{index}
-\makeglossaries
-```
-
-### Frontmatter, mainmatter and backmatter
-
-- [footnote customisation](https://en.wikibooks.org/wiki/LaTeX/Footnotes_and_Margin_Notes)
-- [reset footnote counter](https://ubuntuincident.wordpress.com/2011/12/28/reset-footnote-counter-in-latex/)
-- [placing appendices after backmatter](https://tex.stackexchange.com/a/198608/140109)
-- [remove "Appendix/Chapter X" from references header](https://tex.stackexchange.com/a/102693/140109)
-- [appendix chapter name](https://tex.stackexchange.com/a/151130/140109)
-
-### Word count
-
-[TeXcount](https://ctan.uib.no/support/texcount/doc/TeXcount.pdf) package documentation.
-
-[Ignore sections or inputs of a document when calculating the number of words using TeXcount](https://tex.stackexchange.com/a/259296/140109):
-
-```latex
-% regions between TC:ignore and TC:endignore will be ignored from word count
-%TC:ignore
-\appendix
-And now for something completely different
-%TC:endignore
-```
-
-## Beamer class
-
-### Themes and colours
-
-- [Beamer theme gallery](https://deic-web.uab.cat/~iblanes/beamer_gallery/)
-- [Beamer docs](https://ctan.org/pkg/beamer)
-- [Beamer template tutorial by Claudio Fiandrino](https://tex.stackexchange.com/a/146682/140109)
-- [Overleaf Beamer guide](https://www.overleaf.com/learn/latex/Beamer)
-- [set colours for sections and subsections in table of contents](https://tex.stackexchange.com/a/69721/140109)
-
-```latex
-\definecolor{darkblue}{HTML}{050F42} % custom HTML colour
-\usecolortheme[named=blue]{structure} % set theme colour
-\setbeamertemplate{section in toc}{%
-    {\color{blue}\inserttocsectionnumber.}~{\color{blue}\textbf{\inserttocsection}}}
-\setbeamertemplate{subsection in toc}{%
-    \hspace{2em}{\color{logoblue}\rule[0.3ex]{3pt}{3pt}}~\inserttocsubsection\par}
-\setbeamercolor{title}{fg=white}
-\setbeamercolor{date}{fg=white}
-\setbeamercolor{frametitle}{fg=darkblue}
-\setbeamercolor{normal text}{fg=darkblue}
-\setbeamercolor{example text}{fg=blue}
-```
-
-### Change date format to DD/MM/YYYY
+### Change date format to DD/MM/YYYY <!-- omit in toc -->
 
 ```latex
 \usepackage[UKenglish]{babel}
 \usepackage[ddmmyyyy]{datetime} % set date format
 ```
 
-### Bibliography - Beamer
-
-- [bibliography icon](https://tex.stackexchange.com/a/68084/140109)
-- [supress patching footnotes failed warning](https://tex.stackexchange.com/a/202994/140109)
-- [numerical references](https://tex.stackexchange.com/a/68081/140109)
-- [change font size](https://tex.stackexchange.com/a/205447/140109)
+### Rename "Chapter X" to "Part X" <!-- omit in toc -->
 
 ```latex
-\usepackage[style=ieee,urldate=long]{biblatex}
-\usepackage{silence} % suppress warning below
-\WarningFilter{biblatex}{Patching footnotes failed}
-\setbeamertemplate{bibliography item}[text] % show numerical reference
-\AtBeginBibliography{\tiny} % change font size
+\addto\captionsUKenglish{\renewcommand{\chaptername}{Part}} % specify new name
 ```
 
-- [beamer references](https://en.wikibooks.org/wiki/LaTeX/Presentations#References_(Beamer))
-- references which are not cited in the slides using `\nocite{bibid}`
+### Beamer <!-- omit in toc -->
 
-```latex
-\begin{frame}[noframenumbering,plain,allowframebreaks]{References}
-\nocite{vangennep:related,ctan}
-\printbibliography
-\end{frame}
-```
-
-### [Adjust title page vertical spacing](https://tex.stackexchange.com/a/255335/140109)
+#### [Adjust title page vertical spacing](https://tex.stackexchange.com/a/255335/140109) <!-- omit in toc -->
 
 ```latex
 \makeatletter
@@ -468,7 +839,7 @@ And now for something completely different
 \makeatother
 ```
 
-### [Frame title formatting](https://tex.stackexchange.com/a/306416/140109)
+#### [Frame title formatting](https://tex.stackexchange.com/a/306416/140109) <!-- omit in toc -->
 
 ```latex
 \makeatletter %
@@ -496,7 +867,7 @@ And now for something completely different
 \makeatother
 ```
 
-### [Frame margins](https://tex.stackexchange.com/a/109984/140109)
+#### [Frame margins](https://tex.stackexchange.com/a/109984/140109) <!-- omit in toc -->
 
 ```latex
 \setbeamertemplate{footline}{%
@@ -504,13 +875,23 @@ And now for something completely different
 }
 ```
 
-### Remove navigation symbols
+#### Beamer colours <!-- omit in toc -->
 
 ```latex
-\setbeamertemplate{navigation symbols}{}
+\definecolor{darkblue}{HTML}{050F42} % custom HTML colour
+\usecolortheme[named=blue]{structure} % set theme colour
+\setbeamertemplate{section in toc}{%
+    {\color{blue}\inserttocsectionnumber.}~{\color{blue}\textbf{\inserttocsection}}}
+\setbeamertemplate{subsection in toc}{%
+    \hspace{2em}{\color{logoblue}\rule[0.3ex]{3pt}{3pt}}~\inserttocsubsection\par}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{date}{fg=white}
+\setbeamercolor{frametitle}{fg=darkblue}
+\setbeamercolor{normal text}{fg=darkblue}
+\setbeamercolor{example text}{fg=blue}
 ```
 
-### [Change position of navigation symbols](https://tex.stackexchange.com/a/35637/140109)
+#### [Change position of navigation symbols](https://tex.stackexchange.com/a/35637/140109) <!-- omit in toc -->
 
 ```latex
 \hskip1em\usebeamercolor[fg]{navigation symbols dimmed}%
@@ -520,60 +901,6 @@ And now for something completely different
     \insertsubsectionnavigationsymbol%
     \insertdocnavigationsymbol%
     \insertbackfindforwardnavigationsymbol
-```
-
-### Sectioning
-
-- sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
-- a subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
-
-```latex
-\section{First Section}
-\subsection{Subsection Example}
-\begin{frame}{Table of Contents}
-\tableofcontents[currentsection]
-```
-
-## Old
-
-<details>
-<summary>
-Click to expand
-</summary>
-
-### ModernCV <!-- omit in toc -->
-
-***Note: This package has not been updated since 2016***
-
-#### Known issues
-
-- main `.tex` file: Some font shapes were not available, defaults substituted
-- `fontenc.sty`: Font shape 'TU/qpl/m/n' undefined \ (Font) using 'TU/lmr/m/n' instead
-- `moderncvbodyiii.sty`: You have requested package 'moderncvbodyiii', but the package provides 'moderncvbodyiii'.
-- `moderncvheadiii.sty`: You have requested package 'moderncvheadiii', but the package provides 'moderncvheadiii'.
-
-#### [Extending a quote's width](https://tex.stackexchange.com/a/247503/140109)
-
-```latex
-% preamble
-\let\originalrecomputecvlengths\recomputecvlengths
-\renewcommand*{\recomputecvlengths}{%
-\originalrecomputecvlengths%
-\setlength{\quotewidth}{.8\textwidth}} % change .8 to desired value
-```
-
-#### [Edit space after header](https://tex.stackexchange.com/a/82871/140109)
-
-```latex
-\makecvtitle
-\vspace*{-5mm} % enter right after \makecvtitle
-```
-
-#### [Reduce signature whitespace](https://tex.stackexchange.com/a/196910/140109)
-
-```latex
-% preamble
-\patchcmd{\makeletterclosing}{[3em]}{[1em]}{}{}
 ```
 
 </details>

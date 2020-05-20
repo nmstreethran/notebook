@@ -10,6 +10,7 @@
 - [Branching](#branching)
 - [Deleting commit history of a repository but keep the code in its current state](#deleting-commit-history-of-a-repository-but-keep-the-code-in-its-current-state)
 - [Removing the last commit](#removing-the-last-commit)
+- [Reducing the repository size](#reducing-the-repository-size)
 - [Ignoring files](#ignoring-files)
   - [Templates](#templates)
   - [Remove checked in file](#remove-checked-in-file)
@@ -207,6 +208,37 @@ git push origin -f
 ```
 
 Replace `<num>` with the number of commits you want to remove. e.g., `git reset --hard HEAD~2` removes the last two commits.
+
+## [Reducing the repository size](https://gitlab.com/help/user/project/repository/reducing_the_repo_size_using_git.md)
+
+Using [BFG](https://rtyley.github.io/bfg-repo-cleaner/).
+
+Clone a bare repository and create a backup of it:
+
+```sh
+git clone --mirror git@github.com:USERNAME/REPOSITORY.git
+```
+
+Download and run BFG (Java / OpenJDK must be installed):
+
+```sh
+bfg.jar --strip-blobs-bigger-than 100M REPOSITORY.git
+```
+
+Check the changes that have been made and clean unwanted data:
+
+```sh
+cd REPOSITORY.git
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
+```
+
+Push to update remote repository:
+
+```sh
+git push
+```
+
+See the BFG site for more command line options.
 
 ## [Ignoring files](https://help.github.com/en/github/using-git/ignoring-files)
 

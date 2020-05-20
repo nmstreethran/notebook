@@ -22,7 +22,7 @@
     ],
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.renderSideBySide": false,
-    "editor.fontFamily": "'Fira Code Retina', 'Cascadia Code', 'Ubuntu Mono', 'Consolas', monospace",
+    "editor.fontFamily": "'Cascadia Code', 'Ubuntu Mono', 'Consolas', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "editor.renderWhitespace": "all",
@@ -34,12 +34,13 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "files.associations": {
-        "*.geojson": "jsonc",
-        "*.latex": "latex",
-        "*.sty": "latex",
-        "*.tex_t": "tex",
-        "*.theme": "jsonc"
-      },
+      "*.geojson": "jsonc",
+      "*.latex": "latex",
+      "*.rst": "restructuredtext",
+      "*.sty": "latex",
+      "*.tex_t": "tex",
+      "*.theme": "jsonc"
+    },
     "files.autoSave": "afterDelay",
     "git.autofetch": true,
     "git.enableSmartCommit": true,
@@ -57,6 +58,9 @@
       },
     "[jsonc]": {
         "editor.tabSize": 2
+      },
+    "[restructuredtext]": {
+        "editor.tabSize": 3
       },
     "latex-workshop.bibtex-format.tab": "tab",
     "latex-workshop.bind.altKeymap.enabled": true,
@@ -210,6 +214,7 @@
         "*.theme": "json"
       },
     "material-icon-theme.folders.associations": {
+        "charts": "images",
         "cvtemplate": "template",
         "old": "archive",
         "wiki": "docs"
@@ -218,6 +223,8 @@
     "python.dataScience.exportWithOutputEnabled": true,
     "python.jediEnabled": false,
     "python.linting.pylintEnabled": true,
+    "restructuredtext.preview.doubleClickToSwitchToEditor": false,
+    "restructuredtext.preview.sphinx.disabled": true,
     "terminal.integrated.fontSize": 16,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.menuBarVisibility": "default",
