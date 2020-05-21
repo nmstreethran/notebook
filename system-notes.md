@@ -7,12 +7,11 @@
 - [Windows](#windows)
   - [Setting or changing the PATH system variable](#setting-or-changing-the-path-system-variable)
   - [Securely delete files on Windows 10 without third-party tools](#securely-delete-files-on-windows-10-without-third-party-tools)
-- [Linux - Ubuntu](#linux---ubuntu)
+- [Ubuntu](#ubuntu)
   - [Adding directory to PATH](#adding-directory-to-path)
   - [What to do when Ubuntu freezes](#what-to-do-when-ubuntu-freezes)
-  - [Globally customise system UI font on Ubuntu](#globally-customise-system-ui-font-on-ubuntu)
   - [Prevent DejaVu family of fonts from interfering with emoji display](#prevent-dejavu-family-of-fonts-from-interfering-with-emoji-display)
-  - [Font management in Ubuntu](#font-management-in-ubuntu)
+  - [Font management](#font-management)
   - [Changing the default display manager](#changing-the-default-display-manager)
   - [Installing Firefox Developer Edition](#installing-firefox-developer-edition)
   - [CheckInstall](#checkinstall)
@@ -21,10 +20,8 @@
   - [Useful packages](#useful-packages)
   - [Handling held back packages](#handling-held-back-packages)
   - [Installing Zotero](#installing-zotero)
-- [GNOME](#gnome)
-  - [Install GNOME tweak tools](#install-gnome-tweak-tools)
+  - [Install GNOME tweak tool](#install-gnome-tweak-tool)
   - [Useful GNOME extensions](#useful-gnome-extensions)
-  - [Prevent the screen from turning off when the lockscreen is active](#prevent-the-screen-from-turning-off-when-the-lockscreen-is-active)
 - [Old](#old)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
@@ -54,7 +51,7 @@ Windows: go to **Settings charm** > **Change PC settings** > **Update and Recove
 
 Using the [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete) Sysinternals software.
 
-## Linux - Ubuntu
+## Ubuntu
 
 ### [Adding directory to PATH](https://askubuntu.com/a/688998/714808)
 
@@ -81,34 +78,17 @@ If it's completely frozen, REISUB it (safer than rebooting)
 >
 > **NOTE:** There exists less radical way than rebooting the whole system. If `SysReq` key works, you can kill processes one-by-one using `Alt`+`SysReq`+`F`. Kernel will kill the mostly «expensive» process each time. If you want to kill all processes for one console, you can issue `Alt`+`SysReq`+`K`.
 
-### [Globally customise system UI font on Ubuntu](https://github.com/Microsoft/vscode/issues/10144#issuecomment-337490205)
-
-Paste the following in your local font configuration file (`/etc/fonts/conf.avail/local.conf`) and replace `Lato` with the font of your choice:
-
-```xml
-<?xml version="1.0"?>
-<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-<fontconfig>
-    <!-- Load local system customization file -->
-    <match target="pattern">
-        <test qual="any" name="family"><string>Ubuntu</string></test>
-        <edit name="family" mode="assign" binding="same"><string>Lato</string></edit>
-    </match>
-    <include ignore_missing="yes">local.conf</include>
-</fontconfig>
-```
-
 ### Prevent DejaVu family of fonts from interfering with emoji display
 
-Installing `twemoji-color-font` and editing `$HOME/.config/fontconfig/56-twemoji-color.conf` to comment out the `<match target="pattern">` blocks (especially for sans serif fonts) does the trick. Not doing this causes some blobs, such as those on GitLab, to use the default sans serif font instead of the default monospace font. The browser font settings should also be changed to match the settings in the configuration file for best results.
+Installing `twemoji-color-font` and optionally editing `$HOME/.config/fontconfig/56-twemoji-color.conf` to replace the Bitstream Vera family of fonts with other suitable fonts, such as Noto Serif, Ubuntu, and Cascadia Code. The browser font settings should also be changed to match the settings in the configuration file for best results.
 
 - <https://github.com/eosrei/twemoji-color-font>
 - <https://www.reddit.com/r/firefox/comments/ev92yz/prevent_dejavu_font_from_messing_with_emojis/>
 - <https://wiki.archlinux.org/index.php/Font_configuration#Replace_or_set_default_fonts>
 
-### Font management in Ubuntu
+### [Font management](https://askubuntu.com/a/371320/714808)
 
-Install [`font-manager`](https://askubuntu.com/a/371320/714808):
+Install [font-manager](https://packages.ubuntu.com/focal/font-manager)
 
 ```sh
 sudo apt-get install font-manager
@@ -221,9 +201,7 @@ References:
 - <https://www.zotero.org/support/installation>
 - <https://askubuntu.com/a/1147073/714808>
 
-## GNOME
-
-### [Install GNOME tweak tools](https://askubuntu.com/a/968630/714808)
+### [Install GNOME tweak tool](https://askubuntu.com/a/968630/714808)
 
 ```sh
 sudo apt install gnome-tweak-tool
@@ -231,37 +209,13 @@ sudo apt install gnome-tweak-tool
 
 ### Useful GNOME extensions
 
-Guides:
-
-- [Making Ubuntu look like Windows](https://www.howtogeek.com/353819/how-to-make-ubuntu-look-more-like-windows/)
-
-Extensions:
-
-- [Dash to panel](https://github.com/home-sweet-gnome/dash-to-panel)
+- [Dash to Panel](https://github.com/home-sweet-gnome/dash-to-panel)
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
 - [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
 - [Applications Overview Tooltip](https://extensions.gnome.org/extension/1071/applications-overview-tooltip/)
-
-### Prevent the screen from turning off when the lockscreen is active
-
-Using an extension by [u/SomeGenericUsername](https://old.reddit.com/r/gnome/comments/2hj8bx/has_anyone_figured_out_a_way_to_keep_the_screen/cktqjqd/)
-
-> I don't think it is possible to achieve that with config options alone as it is not intended to work that way and certain parts of the sequence from fading to blanking to locking the screen are hardcoded. This gets complicated even further by this whole thing being spread across multiple processes. The shell is what does the fading but then it tells gnome-settings-daemon to blank the screen via d-bus signals. That's at least my limited understanding from quickly glancing at the involved code.
->
-> Now, I've just written an extension, that kind of works around all of that. It disables the fading and removes the emission of the d-bus signal. This whole thing is super ugly and would never stand a chance to get accepted for extensions.gnome.org as extensions are supposed to be disabled when the lock screen gets activated, but that won't make much sense for this extension. That also means you can't disable it like you are used to, but that you have to restart gnome-shell after disabling if for it to be actually disabled. Another thing is that there might be other applications listening to the d-bus signal I've disabled and that might have some security implications. I'm not sure which signal gnome-keyring uses to lock its keyring when the lock screen gets shown, but this signal might be it or it might be part of a signal chain to some other signal that would lock the keyring. The way I've removed the signal emission might also affect gnome-shell internally, so maybe it won't automatically change your online status to away anymore, but I haven't checked for that either.
->
-> I've only tested the extension on 3.14, but I think it should work on 3.10 or 3.12 as well, if you haven't upgraded yet. Also my testing was not really thorough, but it seems to be working for both, locking the screen based on the user being idle and on clicking the lock button.
-> So after all this has been said, here is the extension now:
->
-> [Link to Dropbox file]
->
-> Extract it to `~/.local/share/gnome-shell/extensions/`
->
-> Edit (2017-03-24): Updated the extension to allow manually disabling it (still a hack though), tested with 3.24, and updated the link because the old one wasn't working anymore (thanks Dropbox...).
-
-[SoCRaT](https://techienotes.blog/2018/04/16/how-to-to-prevent-the-screen-from-turning-off-when-locked-with-gnome-shell-on-ubuntu-18-04/) has made an updated version to support GNOME 3.28. Alternatively, edit `metadata.json` in the original download to include 3.28.
-
-Once the extracted folder is placed in `~/.local/share/gnome-shell/extensions/`, use Tweaks to turn the "No screen blank" extension on. A restart may be required before it shows up in the list of extensions.
+- [Applications Menu](https://extensions.gnome.org/extension/6/applications-menu/)
+- [Start Overlay in Application View](https://extensions.gnome.org/extension/1198/start-overlay-in-application-view/)
+- [OpenWeather](https://extensions.gnome.org/extension/750/openweather/)
 
 ## Old
 
@@ -270,7 +224,7 @@ Once the extracted folder is placed in `~/.local/share/gnome-shell/extensions/`,
 Click to expand
 </summary>
 
-### Installing Wine <!-- omit in toc -->
+### Installing Wine with dependency issues <!-- omit in toc -->
 
 Enable 32-bit architecture if system is 64-bit:
 
@@ -382,7 +336,6 @@ References:
 - [GRUB Customizer](https://launchpad.net/grub-customizer)
 - [Open Graphics Drivers](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers)
 - [nautilus-admin (**archived**)](https://github.com/brunonova/nautilus-admin)
-- [Flat Remix theme](https://drasite.com/flat-remix)
 - [windowNavigator](https://extensions.gnome.org/extension/10/windownavigator/)
 - [No Screen Blank](https://extensions.gnome.org/extension/2413/no-screen-blank/)
 - [No Topleft Hot Corner](https://extensions.gnome.org/extension/118/no-topleft-hot-corner/)
@@ -398,7 +351,7 @@ Use an extension:
 
 ### Problems with drivers <!-- omit in toc -->
 
-#### Realtek wifi problems <!-- omit in toc -->
+#### Realtek WiFi problems <!-- omit in toc -->
 
 Secure boot should be disabled before installing these drivers.
 
@@ -476,5 +429,47 @@ Install Konsole from the app store.
 #### Taking screenshots <!-- omit in toc -->
 
 Install Spectacle from the app store.
+
+### Guides <!-- omit in toc -->
+
+- [Making Ubuntu look like Windows](https://www.howtogeek.com/353819/how-to-make-ubuntu-look-more-like-windows/)
+
+### Prevent the screen from turning off when the lockscreen is active  <!-- omit in toc -->
+
+Using an extension by [u/SomeGenericUsername](https://old.reddit.com/r/gnome/comments/2hj8bx/has_anyone_figured_out_a_way_to_keep_the_screen/cktqjqd/)
+
+> I don't think it is possible to achieve that with config options alone as it is not intended to work that way and certain parts of the sequence from fading to blanking to locking the screen are hardcoded. This gets complicated even further by this whole thing being spread across multiple processes. The shell is what does the fading but then it tells gnome-settings-daemon to blank the screen via d-bus signals. That's at least my limited understanding from quickly glancing at the involved code.
+>
+> Now, I've just written an extension, that kind of works around all of that. It disables the fading and removes the emission of the d-bus signal. This whole thing is super ugly and would never stand a chance to get accepted for extensions.gnome.org as extensions are supposed to be disabled when the lock screen gets activated, but that won't make much sense for this extension. That also means you can't disable it like you are used to, but that you have to restart gnome-shell after disabling if for it to be actually disabled. Another thing is that there might be other applications listening to the d-bus signal I've disabled and that might have some security implications. I'm not sure which signal gnome-keyring uses to lock its keyring when the lock screen gets shown, but this signal might be it or it might be part of a signal chain to some other signal that would lock the keyring. The way I've removed the signal emission might also affect gnome-shell internally, so maybe it won't automatically change your online status to away anymore, but I haven't checked for that either.
+>
+> I've only tested the extension on 3.14, but I think it should work on 3.10 or 3.12 as well, if you haven't upgraded yet. Also my testing was not really thorough, but it seems to be working for both, locking the screen based on the user being idle and on clicking the lock button.
+> So after all this has been said, here is the extension now:
+>
+> [Link to Dropbox file]
+>
+> Extract it to `~/.local/share/gnome-shell/extensions/`
+>
+> Edit (2017-03-24): Updated the extension to allow manually disabling it (still a hack though), tested with 3.24, and updated the link because the old one wasn't working anymore (thanks Dropbox...).
+
+[SoCRaT](https://techienotes.blog/2018/04/16/how-to-to-prevent-the-screen-from-turning-off-when-locked-with-gnome-shell-on-ubuntu-18-04/) has made an updated version to support GNOME 3.28. Alternatively, edit `metadata.json` in the original download to include 3.28.
+
+Once the extracted folder is placed in `~/.local/share/gnome-shell/extensions/`, use Tweaks to turn the "No screen blank" extension on. A restart may be required before it shows up in the list of extensions.
+
+### [Globally customise system UI font on Ubuntu](https://github.com/Microsoft/vscode/issues/10144#issuecomment-337490205) <!-- omit in toc -->
+
+Paste the following in your local font configuration file (`/etc/fonts/conf.avail/local.conf`) and replace `Lato` with the font of your choice:
+
+```xml
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+    <!-- Load local system customization file -->
+    <match target="pattern">
+        <test qual="any" name="family"><string>Ubuntu</string></test>
+        <edit name="family" mode="assign" binding="same"><string>Lato</string></edit>
+    </match>
+    <include ignore_missing="yes">local.conf</include>
+</fontconfig>
+```
 
 </details>

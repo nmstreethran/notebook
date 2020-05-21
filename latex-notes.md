@@ -13,7 +13,7 @@
   - [Lists](#lists)
   - [No monospaced URL font](#no-monospaced-url-font)
   - [Remove indentation and add spaces between paragraphs](#remove-indentation-and-add-spaces-between-paragraphs)
-  - [Add section to PDF bookmark](#add-section-to-pdf-bookmark)
+  - [Add section PDF bookmark manually](#add-section-pdf-bookmark-manually)
 - [Bibliography](#bibliography)
   - [BibLaTeX styles](#biblatex-styles)
   - [Suppress values from bibliography output](#suppress-values-from-bibliography-output)
@@ -140,6 +140,9 @@ An example subfigure (Figure~\ref{fig:subfig}), which contains Figure~\ref{fig:a
     \caption{The same Eurasian tree sparrow (\textit{Passer montanus malaccensis}), adult male, in Kuala Lumpur, Malaysia. Taken on 31 January 2019, 15:20:47 by Peter P. Othagoer, Wikimedia Commons, CC BY 4.0. \label{fig:subfig}}
 \end{figure}
 ```
+
+- <https://tex.stackexchange.com/a/119985/140109>
+- <https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions#Captions>
 
 ### Tables
 
@@ -282,7 +285,7 @@ Adjust spacing:
 \setlist{itemsep=.5pt}
 ```
 
-### No monospaced URL font
+### [No monospaced URL font](https://tex.stackexchange.com/a/53963/140109)
 
 ```latex
 \urlstyle{same}
@@ -292,18 +295,28 @@ Adjust spacing:
 
 ```latex
 \usepackage{parskip}
+% remove indentation from abstract
 \ifundef{\abstract}{}{\patchcmd{\abstract}
     {\quotation}{\quotation\noindent\ignorespaces}{}{}}
 ```
 
-### Add section to PDF bookmark
+- <https://tex.stackexchange.com/a/1603/140109>
+- <https://tex.stackexchange.com/a/40432/140109>
+
+### Add section PDF bookmark manually
 
 ```latex
-\usepackage{bookmark}
+% \pdfbookmark[<level>]{<text>}{<name>}
+% \currentpdfbookmark{<text>}{<name>}
 \pdfbookmark[1]{Further Reading}{Further Reading}
 ```
 
+- <https://tex.stackexchange.com/a/33701/140109>
+- <https://tex.stackexchange.com/a/33699/140109>
+
 ## Bibliography
+
+<https://www.ctan.org/pkg/biblatex>
 
 Numeric bibliography:
 
@@ -347,7 +360,7 @@ Alphanumeric style:
 
 The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](https://github.com/plk/biblatex/blob/dev/tex/latex/biblatex/biblatex.def). The defaults for `\DeclareNolabel` are `\regexp{[\p{P}\p{S}\p{C}]+}`.
 
-### Suppress values from bibliography output
+### [Suppress values from bibliography output](https://tex.stackexchange.com/a/364598/140109)
 
 ```latex
 % suppress shorthand values
@@ -470,7 +483,7 @@ Some text \cite{A01,B02}.
 \thispagestyle{empty}
 ```
 
-### Use value of last page
+### [Use value of last page](https://tex.stackexchange.com/a/235/140109)
 
 ```latex
 \usepackage{lastpage}
@@ -508,6 +521,8 @@ And now for something completely different
 
 ## Beamer class
 
+<https://www.ctan.org/pkg/beamer>
+
 ### Class options
 
 Set custom aspect ratio (widescreen) and import colours from `xcolor` (`svgnames`):
@@ -515,6 +530,8 @@ Set custom aspect ratio (widescreen) and import colours from `xcolor` (`svgnames
 ```latex
 \documentclass[aspectratio=169,xcolor={svgnames}]{beamer}
 ```
+
+- <https://tex.stackexchange.com/a/74807/140109>
 
 ### Defining document properties
 
@@ -541,7 +558,7 @@ Set custom aspect ratio (widescreen) and import colours from `xcolor` (`svgnames
 - [Beamer theme gallery](https://deic-web.uab.cat/~iblanes/beamer_gallery/)
 - [Beamer docs](https://ctan.org/pkg/beamer)
 - [Beamer template tutorial by Claudio Fiandrino](https://tex.stackexchange.com/a/146682/140109)
-- [Overleaf Beamer guide](https://www.overleaf.com/learn/latex/Beamer)
+- [Overleaf beamer guide](https://www.overleaf.com/learn/latex/Beamer)
 - [set colours for sections and subsections in table of contents](https://tex.stackexchange.com/a/69721/140109)
 
 ```latex
@@ -585,7 +602,7 @@ Example for a sans-serif presentation:
 
 ### Beamer listings
 
-Specifying font:
+[Specifying font](https://www.ctan.org/pkg/newtxtt):
 
 ```latex
 \lstset{
@@ -622,7 +639,7 @@ Change font size:
 \AtBeginBibliography{\footnotesize}
 ```
 
-- [beamer references](https://en.wikibooks.org/wiki/LaTeX/Presentations#References_%28Beamer%29)
+- [Beamer references](https://en.wikibooks.org/wiki/LaTeX/Presentations#References_%28Beamer%29)
 - references which are not cited in the slides using `\nocite{bibid}`
 
 ```latex
@@ -644,6 +661,8 @@ Change font size:
 ```
 
 ### Sectioning
+
+From Overleaf:
 
 - sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 - a subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
