@@ -1,234 +1,234 @@
 {
-    "breadcrumbs.enabled": true,
-    "cSpell.allowCompoundWords": true,
-    "cSpell.language": "en-GB",
-    "cSpell.maxDuplicateProblems": 2,
-    "cSpell.minWordLength": 1,
-    "cSpell.userWords": [
-      "alright",
-      "analytics",
-      "blogs",
-      "bokmål",
-      "decarbonisation",
-      "dispatchable",
-      "forecasted",
-      "irradiance",
-      "metrology",
-      "nithiya",
-      "prosumers",
-      "renewables",
-      "resumé",
-      "streethran"
-    ],
-    "diffEditor.ignoreTrimWhitespace": false,
-    "diffEditor.renderSideBySide": false,
-    "editor.fontFamily": "'Cascadia Code', 'Ubuntu Mono', 'Consolas', monospace",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 16,
-    "editor.renderWhitespace": "all",
-    "editor.rulers": [
-        77
-      ],
-    "editor.suggestSelection": "first",
-    "editor.wordWrap": "on",
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "files.associations": {
-      "*.geojson": "jsonc",
-      "*.latex": "latex",
-      "*.rst": "restructuredtext",
-      "*.sty": "latex",
-      "*.tex_t": "tex",
-      "*.theme": "jsonc"
+  "breadcrumbs.enabled": true,
+  "cSpell.allowCompoundWords": true,
+  "cSpell.language": "en-GB",
+  "cSpell.maxDuplicateProblems": 2,
+  "cSpell.minWordLength": 1,
+  "cSpell.userWords": [
+    "alright",
+    "analytics",
+    "blogs",
+    "bokmål",
+    "decarbonisation",
+    "dispatchable",
+    "forecasted",
+    "irradiance",
+    "metrology",
+    "nithiya",
+    "prosumers",
+    "renewables",
+    "resumé",
+    "streethran"
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": false,
+  "editor.fontFamily": "'Cascadia Code', 'Ubuntu Mono', 'Consolas', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [
+    77
+  ],
+  "editor.suggestSelection": "first",
+  "editor.wordWrap": "on",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.geojson": "jsonc",
+    "*.latex": "latex",
+    "*.rst": "restructuredtext",
+    "*.sty": "latex",
+    "*.tex_t": "tex",
+    "*.theme": "jsonc"
+  },
+  "files.autoSave": "afterDelay",
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "gitlens.advanced.telemetry.enabled": false,
+  "gitlens.currentLine.scrollable": false,
+  "[html]": {
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.tabSize": 2
+  },
+  "[restructuredtext]": {
+    "editor.tabSize": 3
+  },
+  "latex-workshop.bibtex-format.tab": "tab",
+  "latex-workshop.bind.altKeymap.enabled": true,
+  "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.aux",
+    "*.bbl",
+    "*.bcf",
+    "*.blg",
+    "*.fdb_latexmk",
+    "*.fls",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.log",
+    "*.lot",
+    "*.nav",
+    "*.out",
+    "*.run.xml",
+    "*.snm",
+    "*.synctex(busy)",
+    "*.synctex.gz",
+    "*.synctex.gz(busy)",
+    "*.toc",
+    "*.vrb"
+  ],
+  "latex-workshop.latex.recipe.default": "lastUsed",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "xelatex ×2",
+      "tools": [
+        "xelatex",
+        "xelatex"
+      ]
     },
-    "files.autoSave": "afterDelay",
-    "git.autofetch": true,
-    "git.enableSmartCommit": true,
-    "git.confirmSync": false,
-    "gitlens.advanced.telemetry.enabled": false,
-    "gitlens.currentLine.scrollable": false,
-    "[html]": {
-        "editor.tabSize": 2
-      },
-    "[javascript]": {
-        "editor.tabSize": 2
-      },
-    "[json]": {
-        "editor.tabSize": 2
-      },
-    "[jsonc]": {
-        "editor.tabSize": 2
-      },
-    "[restructuredtext]": {
-        "editor.tabSize": 3
-      },
-    "latex-workshop.bibtex-format.tab": "tab",
-    "latex-workshop.bind.altKeymap.enabled": true,
-    "latex-workshop.intellisense.package.enabled": true,
-    "latex-workshop.latex.autoClean.run": "onBuilt",
-    "latex-workshop.latex.clean.fileTypes": [
-        "*.aux",
-        "*.bbl",
-        "*.blg",
-        "*.idx",
-        "*.ind",
-        "*.lof",
-        "*.lot",
-        "*.out",
-        "*.toc",
-        "*.acn",
-        "*.acr",
-        "*.alg",
-        "*.glg",
-        "*.glo",
-        "*.gls",
-        "*.fls",
-        "*.log",
-        "*.fdb_latexmk",
-        "*.snm",
-        "*.synctex(busy)",
-        "*.synctex.gz(busy)",
-        "*.nav",
-        "*.synctex.gz",
-        "*.run.xml",
-        "*.bcf",
-        "*.vrb"
-    ],
-    "latex-workshop.latex.recipe.default": "lastUsed",
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "xelatex ×2",
-            "tools": [
-                "xelatex",
-                "xelatex"
-              ]
-          },
-        {
-            "name": "xelatex ➞ biber ➞ xelatex ×2",
-            "tools": [
-                "xelatex",
-                "biber",
-                "xelatex",
-                "xelatex"
-              ]
-          },
-        {
-            "name": "xelatex ➞ makeglossaries ➞ xelatex ×2",
-            "tools": [
-                "xelatex",
-                "makeglossaries",
-                "xelatex",
-                "xelatex"
-              ]
-          },
-        {
-            "name": "xelatex ➞ makeglossaries ➞ biber ➞ xelatex ×2",
-            "tools": [
-                "xelatex",
-                "makeglossaries",
-                "biber",
-                "xelatex",
-                "xelatex"
-              ]
-          },
-        {
-            "name": "latexmk 🔃",
-            "tools": [
-                "latexmk"
-              ]
-          },
-        {
-            "name": "pdflatex ➞ makeglossaries ➞ biber ➞ pdflatex ×2",
-            "tools": [
-                "pdflatex",
-                "makeglossaries",
-                "biber",
-                "pdflatex",
-                "pdflatex"
-              ]
-          }
+    {
+      "name": "xelatex ➞ biber ➞ xelatex ×2",
+      "tools": [
+        "xelatex",
+        "biber",
+        "xelatex",
+        "xelatex"
+      ]
+    },
+    {
+      "name": "xelatex ➞ makeglossaries ➞ xelatex ×2",
+      "tools": [
+        "xelatex",
+        "makeglossaries",
+        "xelatex",
+        "xelatex"
+      ]
+    },
+    {
+      "name": "xelatex ➞ makeglossaries ➞ biber ➞ xelatex ×2",
+      "tools": [
+        "xelatex",
+        "makeglossaries",
+        "biber",
+        "xelatex",
+        "xelatex"
+      ]
+    },
+    {
+      "name": "latexmk 🔃",
+      "tools": [
+        "latexmk"
+      ]
+    },
+    {
+      "name": "pdflatex ➞ makeglossaries ➞ biber ➞ pdflatex ×2",
+      "tools": [
+        "pdflatex",
+        "makeglossaries",
+        "biber",
+        "pdflatex",
+        "pdflatex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "/usr/local/texlive/2020/bin/x86_64-linux/latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
       ],
-    "latex-workshop.latex.tools": [
-        {
-            "name": "latexmk",
-            "command": "/usr/local/texlive/2020/bin/x86_64-linux/latexmk",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-pdf",
-                "-outdir=%OUTDIR%",
-                "%DOC%"
-              ],
-            "env": {}
-          },
-        {
-            "name": "pdflatex",
-            "command": "/usr/local/texlive/2020/bin/x86_64-linux/pdflatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-              ],
-            "env": {}
-          },
-        {
-            "name": "biber",
-            "command": "/usr/local/texlive/2020/bin/x86_64-linux/biber",
-            "args": [
-                "%DOCFILE%"
-              ]
-          },
-        {
-            "name": "makeglossaries",
-            "command": "/usr/local/texlive/2020/bin/x86_64-linux/makeglossaries",
-            "args": [
-                "%DOCFILE%"
-              ]
-          },
-        {
-            "name": "xelatex",
-            "command": "/usr/local/texlive/2020/bin/x86_64-linux/xelatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-              ],
-            "env": {}
-          }
+      "env": {}
+    },
+    {
+      "name": "pdflatex",
+      "command": "/usr/local/texlive/2020/bin/x86_64-linux/pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
       ],
-    "latex-workshop.message.error.show": false,
-    "latex-workshop.message.update.show": false,
-    "latex-workshop.message.warning.show": false,
-    "latex-workshop.view.pdf.viewer": "tab",
-    "[markdown]": {
-        "editor.tabSize": 2
-      },
-    "markdown.extension.toc.levels": "1..3",
-    "material-icon-theme.files.associations": {
-        "*.geojson": "json",
-        "*.latex": "tex",
-        "*.tex_t": "tex",
-        "*.theme": "json"
-      },
-    "material-icon-theme.folders.associations": {
-        "charts": "images",
-        "cvtemplate": "template",
-        "old": "archive",
-        "wiki": "docs"
-      },
-    "python.dataScience.askForKernelRestart": false,
-    "python.dataScience.exportWithOutputEnabled": true,
-    "python.jediEnabled": false,
-    "python.linting.pylintEnabled": true,
-    "restructuredtext.preview.doubleClickToSwitchToEditor": false,
-    "restructuredtext.preview.sphinx.disabled": true,
-    "terminal.integrated.fontSize": 16,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "window.menuBarVisibility": "default",
-    "window.restoreWindows": "none",
-    "workbench.colorTheme": "Horizon Dark",
-    "workbench.iconTheme": "material-icon-theme"
-  }
+      "env": {}
+    },
+    {
+      "name": "biber",
+      "command": "/usr/local/texlive/2020/bin/x86_64-linux/biber",
+      "args": [
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "makeglossaries",
+      "command": "/usr/local/texlive/2020/bin/x86_64-linux/makeglossaries",
+      "args": [
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "xelatex",
+      "command": "/usr/local/texlive/2020/bin/x86_64-linux/xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
+    }
+  ],
+  "latex-workshop.message.error.show": false,
+  "latex-workshop.message.update.show": false,
+  "latex-workshop.message.warning.show": false,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "[markdown]": {
+    "editor.tabSize": 2
+  },
+  "markdown.extension.toc.levels": "1..3",
+  "material-icon-theme.files.associations": {
+    "*.geojson": "json",
+    "*.latex": "tex",
+    "*.tex_t": "tex",
+    "*.theme": "json"
+  },
+  "material-icon-theme.folders.associations": {
+    "charts": "images",
+    "cvtemplate": "template",
+    "old": "archive",
+    "wiki": "docs"
+  },
+  "python.dataScience.askForKernelRestart": false,
+  "python.dataScience.exportWithOutputEnabled": true,
+  "python.jediEnabled": false,
+  "python.linting.pylintEnabled": true,
+  "restructuredtext.preview.doubleClickToSwitchToEditor": false,
+  "restructuredtext.preview.sphinx.disabled": true,
+  "terminal.integrated.fontSize": 16,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.menuBarVisibility": "default",
+  "window.restoreWindows": "none",
+  "workbench.colorTheme": "Horizon Dark",
+  "workbench.iconTheme": "material-icon-theme"
+}

@@ -592,7 +592,6 @@ Example for a sans-serif presentation:
 
 ```latex
 \usepackage{amsmath} % math
-\usepackage{amssymb} % ^
 \usepackage[zerostyle=c,straightquotes]{newtxtt} % monospace
 \usepackage[sfdefault]{cabin} % sans-serif default
 \usepackage{gfsneohellenicot} % sans-serif math font

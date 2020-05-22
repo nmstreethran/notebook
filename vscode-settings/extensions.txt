@@ -10,7 +10,6 @@ ms-python.python-2020.5.80290
 npxms.hide-gitignored-1.1.0
 pkief.material-icon-theme-4.1.0
 redhat.vscode-yaml-0.8.0
-shaneyu.beyond-the-horizon-theme-vscode-0.0.2
 streetsidesoftware.code-spell-checker-1.9.0
 visualstudioexptteam.vscodeintellicode-1.2.7
 yzhang.markdown-all-in-one-2.8.0
