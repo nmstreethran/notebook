@@ -375,7 +375,7 @@ cd proj
 git remote add -f docs https://github.com/username/repository.wiki.git
 git merge -s ours --no-commit --allow-unrelated-histories docs/master
 git read-tree --prefix=docs/ -u docs/master
-git commit -m "Github docs subtree merged in docs/"
+git commit -m "GitHub docs subtree merged in docs/"
 ```
 
 Changes made in the actual wiki can be merged to the main code repository:

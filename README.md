@@ -1,5 +1,7 @@
 # notebook
 
+[![View notes on GitHub Wiki](https://img.shields.io/badge/-View%20on%20GitHub%20Wiki-lime?style=for-the-badge&logo=github&labelColor=black&logoColor=white)](https://github.com/nmstreethran/notebook/wiki)
+
 [![Build Status](https://travis-ci.org/nmstreethran/notebook.svg?branch=master)](https://travis-ci.org/nmstreethran/notebook)
 
 Welcome to my notebook!
@@ -9,21 +11,6 @@ Welcome to my notebook!
 [Visual Studio Code](https://code.visualstudio.com/) / [VSCodium](https://vscodium.com/)
 
 Settings and extensions used can be found in [vscode-settings](vscode-settings/).
-
-## Notes
-
-- [Coding (general, best practices)](coding-notes.md)
-- [Document conversion](doc-conversion-notes.md)
-- [Git](git-notes.md)
-- [LaTeX](latex-notes.md)
-- [Markdown](markdown-notes.md)
-- [Package management](package-management-notes.md)
-- [Python](python-notes.md)
-- [Shell scripting](shellscript-notes.md)
-- [System](system-notes.md)
-- [Visual Studio Code](vscode-notes.md)
-- [Web browsing](browser-notes.md)
-- [Web development](webdev-notes.md)
 
 ## License and credits
 

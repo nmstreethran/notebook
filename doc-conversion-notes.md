@@ -1,4 +1,4 @@
-# Document conversion  notes <!-- omit in toc -->
+# Document conversion notes <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
 
@@ -63,7 +63,7 @@ pdftoppm input.pdf outputname -png -rx 300 -ry 300
 
 ### Syntax highlighting
 
-Content fenced by three backticks (```) will be parsed as codeblocks. If a language is not specified after the first three backticks, Pandoc parses the content into the `verbatim` environment on LaTeX. This prevents the codeblock from being formatted using the default syntax highlighting settings (including background colour). To prevent this from happening, assign these code blocks markup languages such as `html` or `md`.
+Content fenced by three backticks (\`) will be parsed as codeblocks. If a language is not specified after the first three backticks, Pandoc parses the content into the `verbatim` environment on LaTeX. This prevents the codeblock from being formatted using the default syntax highlighting settings (including background colour). To prevent this from happening, assign these code blocks markup languages such as `html` or `md`.
 
 Allowing syntax highlighting of inline code (refs: [1](https://stackoverflow.com/a/54669722/4573584), [2](https://stackoverflow.com/a/34481948/4573584)):
 

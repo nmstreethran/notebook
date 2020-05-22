@@ -9,7 +9,8 @@
   - [Responsive tables](#responsive-tables)
   - [Prevent overlap of content on navigation bar](#prevent-overlap-of-content-on-navigation-bar)
   - [Types of CSS](#types-of-css)
-- [GitHub Pages](#github-pages)
+- [Jekyll](#jekyll)
+  - [GitHub Pages](#github-pages)
   - [Minimal Mistakes](#minimal-mistakes)
   - [Local](#local)
   - [System](#system)
@@ -142,7 +143,9 @@ div {
     }
 ```
 
-## [GitHub Pages](https://pages.github.com/)
+## Jekyll
+
+### [GitHub Pages](https://pages.github.com/)
 
 - [GitHub Pages Basics](https://help.github.com/en/github/working-with-github-pages/getting-started-with-github-pages)
 - [Using Jekyll as a static site generator with GitHub Pages](https://help.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll)
@@ -150,12 +153,14 @@ div {
 
 ### [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
 
+See <https://nithiya.gitlab.io/development/pages-tweaks/> for modifications to this theme.
+
 - [Installation](https://mmistakes.github.io/minimal-mistakes/docs/installation/)
 - [Jekyll Remote Theme](https://github.com/benbalter/jekyll-remote-theme)
 - [AcademicPages](https://github.com/academicpages/academicpages.github.io)
 - [Adding favicons to website](https://github.com/mmistakes/minimal-mistakes/issues/949): use [Favicon generator](https://realfavicongenerator.net/) to generate the icons and HTML, then drop them into `/assets/icons/` and `/_includes/head/custom.html` respectively. Make sure you update the path to the icons in the HTML file.
 
-#### Social share buttons <!-- omit in toc -->
+#### Social share buttons
 
 Edit `_includes/social-share.html` to add or remove buttons.
 

@@ -1,17 +1,17 @@
-# Link checking
+# link checking
 # https://github.com/dkhamsing/awesome_bot
 
 os: linux
 
 language: ruby
 
-rvm: 2.7.0
+rvm: 2.7.1
 
 before_script:
-    - gem install awesome_bot
+  - gem install awesome_bot
 
 git:
-    submodules: false
+  submodules: false
 
 script:
-    - awesome_bot --allow-dupe --skip-save-results --white-list stackexchange.com,stackoverflow.com,askubuntu.com,superuser.com,travis-ci.org,username/repository,dum7q6UXiCE,download.opensuse.org,www.amd.com `find . -name "*.md"`
+  - awesome_bot --allow-dupe --skip-save-results --white-list stackexchange.com,stackoverflow.com,askubuntu.com,superuser.com,travis-ci.org,username/repository,dum7q6UXiCE,oFFvwZIEk1Y,download.opensuse.org,www.amd.com `find . -name "*.md"`
