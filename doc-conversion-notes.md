@@ -93,24 +93,24 @@ pandoc -t beamer file.md -o file.pdf
 ```yml
 ---
 aspectratio:
-- 169
+  - 169
 title:
-- Title
+  - Title
 subtitle:
-- Subtitle
+  - Subtitle
 author:
-- Author
+  - Author
 subject:
-- Subject
+  - Subject
 date:
-- \today
+  - \today
 theme:
-- Madrid
+  - Madrid
 colortheme:
-- beaver
+  - beaver
 keywords:
-- random
-- notes
+  - random
+  - notes
 ---
 ```
 
@@ -127,31 +127,31 @@ pandoc file.txt --pdf-engine=pdflatex -o file.pdf
 ```yml
 ---
 title:
-- Title
+  - Title
 subtitle:
-- Subtitle
+  - Subtitle
 author:
-- Author
+  - Author
 subject:
-- Subject
+  - Subject
 date:
-- \today
+  - \today
 keywords:
-- random
-- notes
+  - random
+  - notes
 abstract:
-- Abstract.
+  - Abstract.
 documentclass:
-- article
+  - article
 fontfamily:
-- mathpazo
+  - mathpazo
 papersize:
-- a4
+  - a4
 geometry:
-- top=25mm
-- left=25mm
-- right=25mm
-- bottom=25mm
+  - top=25mm
+  - left=25mm
+  - right=25mm
+  - bottom=25mm
 ---
 ```
 
@@ -200,15 +200,15 @@ pandoc -t revealjs -s habits.txt -o habits.html
 ```yml
 ---
 revealjs-url:
-- https://revealjs.com/
+  - https://revealjs.com/
 title:
-- Title
+  - Title
 author:
-- Author
+  - Author
 date:
-- 20/04/2019
+  - 20/04/2019
 theme:
-- white
+  - white
 ---
 ```
 

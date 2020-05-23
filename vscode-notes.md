@@ -34,16 +34,16 @@ Go to Keyboard Shortcuts (`ctrl+k` `ctrl+s`) and paste the following in `keybind
 
 ```json
 [
- {
+  {
     "key": "ctrl+shift+u",
     "command": "editor.action.transformToUppercase",
     "when": "editorTextFocus"
- },
- {
+  },
+  {
     "key": "ctrl+shift+l",
     "command": "editor.action.transformToLowercase",
     "when": "editorTextFocus"
- }
+  }
 ]
 ```
 

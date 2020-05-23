@@ -2,6 +2,7 @@
 
 ## Table of contents <!-- omit in toc -->
 
+- [My templates](#my-templates)
 - [General](#general)
   - [Commands](#commands)
   - [Defining custom macros](#defining-custom-macros)
@@ -43,6 +44,12 @@
   - [Remove navigation symbols](#remove-navigation-symbols)
   - [Sectioning](#sectioning)
 - [Old](#old)
+
+## My templates
+
+- [CV and cover letter](https://gitlab.com/nithiya/cvtemplate)
+- [article](https://gitlab.com/nithiya/articletemplate)
+- [beamer](https://gitlab.com/nithiya/beamertemplate)
 
 ## General
 
@@ -204,6 +211,16 @@ See <https://latexcolor.com/>.
     pdfsubject={Subject},
     pdfkeywords={keyword1, keyword2}]{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=green,citecolor=blue}
+```
+
+#### [Token not allowed in a PDF string warning](https://tex.stackexchange.com/a/53514/140109)
+
+> The bookmarks are not typeset by TeX: they simply are strings of characters, so no math or general formatting instructions are allowed. -- egreg
+
+Using `\texorpdfstring{<tex>}{<bookmark>}` to avoid this error:
+
+```latex
+\subsection{The classes \texorpdfstring{$\mathcal{L}(\gamma)$}{Lg}}
 ```
 
 ### Listings

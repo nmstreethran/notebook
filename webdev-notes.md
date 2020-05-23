@@ -24,7 +24,7 @@
 
 ```css
 div {
-    overflow-wrap: anywhere;
+  overflow-wrap: anywhere;
 }
 ```
 
@@ -34,7 +34,7 @@ div {
 
 ```css
 #firstname {
-    background-color: yellow;
+  background-color: yellow;
 }
 ```
 
@@ -50,7 +50,7 @@ Given the following example snippet with a `div`:
 
 ```css
 div[id^="element_123"] {
-    background-color: yellow;
+  background-color: yellow;
 }
 ```
 
@@ -58,7 +58,7 @@ div[id^="element_123"] {
 
 ```css
 div[id$="wrapper_text"] {
-    background-color: yellow;
+  background-color: yellow;
 }
 ```
 
@@ -66,7 +66,7 @@ div[id$="wrapper_text"] {
 
 ```css
 div[id*="wrapper_text"] {
-    background-color: yellow;
+  background-color: yellow;
 }
 ```
 
@@ -80,9 +80,9 @@ div[id*="wrapper_text"] {
 
 ```html
 <div style="overflow-x:auto;">
-    <table>
-        ...
-    </table>
+  <table>
+      ...
+  </table>
 </div>
 ```
 
@@ -92,7 +92,7 @@ Adding a z-index to keep the navigation bar on top of everything. 999 is the max
 
 ```css
 nav {
-    z-index: 999;
+  z-index: 999;
 }
 ```
 
@@ -108,17 +108,17 @@ Internal CSS (within HTML):
 
 ```html
 <head>
-    <style>
-        div {
-        height:50px;
-        width:50px;
-        background-color:red;
-        foreground-color:white;
-        }
-    </style>
+  <style>
+    div {
+      height:50px;
+      width:50px;
+      background-color:red;
+      foreground-color:white;
+    }
+  </style>
 </head>
 <body>
-    <div></div>
+  <div></div>
 </body>
 ```
 
@@ -126,10 +126,10 @@ External CSS:
 
 ```html
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div></div>
+  <div></div>
 </body>
 ```
 
@@ -137,10 +137,10 @@ External CSS:
 
 ```css
 div {
-        height:50px;
-        width:50px;
-        background-color:red;
-    }
+  height:50px;
+  width:50px;
+  background-color:red;
+}
 ```
 
 ## Jekyll
