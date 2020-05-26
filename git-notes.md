@@ -8,9 +8,11 @@
   - [Invalid username or password error](#invalid-username-or-password-error)
   - [SSH askpass error](#ssh-askpass-error)
 - [Branching](#branching)
-- [Deleting commit history of a repository but keep the code in its current state](#deleting-commit-history-of-a-repository-but-keep-the-code-in-its-current-state)
-- [Removing the last commit](#removing-the-last-commit)
-- [Reducing the repository size](#reducing-the-repository-size)
+  - [Cloning a specific branch](#cloning-a-specific-branch)
+- [Rewriting history](#rewriting-history)
+  - [Deleting commit history of a repository but keep the code in its current state](#deleting-commit-history-of-a-repository-but-keep-the-code-in-its-current-state)
+  - [Removing the last commit](#removing-the-last-commit)
+  - [Reducing the repository size or modifying commited files](#reducing-the-repository-size-or-modifying-commited-files)
 - [Ignoring files](#ignoring-files)
   - [Templates](#templates)
   - [Remove checked in file](#remove-checked-in-file)
@@ -162,7 +164,15 @@ git checkout master
 git merge better_branch # fast-forward master up to the merge
 ```
 
-## [Deleting commit history of a repository but keep the code in its current state](https://stackoverflow.com/a/26000395/4573584)
+### [Cloning a specific branch](https://stackoverflow.com/a/9920956/4573584)
+
+```sh
+git clone git@github.com:USERNAME/REPOSITORY.git --branch develop --single-branch REPOSITORY
+```
+
+## Rewriting history
+
+### [Deleting commit history of a repository but keep the code in its current state](https://stackoverflow.com/a/26000395/4573584)
 
 Checkout
 
@@ -200,7 +210,7 @@ Force update your repository
 git push -f origin master
 ```
 
-## [Removing the last commit](https://gist.github.com/CrookedNumber/8964442)
+### [Removing the last commit](https://gist.github.com/CrookedNumber/8964442)
 
 ```sh
 git reset --hard HEAD~<num>
@@ -209,7 +219,7 @@ git push origin -f
 
 Replace `<num>` with the number of commits you want to remove. e.g., `git reset --hard HEAD~2` removes the last two commits.
 
-## [Reducing the repository size](https://gitlab.com/help/user/project/repository/reducing_the_repo_size_using_git.md)
+### [Reducing the repository size or modifying commited files](https://gitlab.com/help/user/project/repository/reducing_the_repo_size_using_git.md)
 
 Using [BFG](https://rtyley.github.io/bfg-repo-cleaner/).
 
@@ -222,7 +232,18 @@ git clone --mirror git@github.com:USERNAME/REPOSITORY.git
 Download and run BFG (Java / OpenJDK must be installed):
 
 ```sh
-bfg.jar --strip-blobs-bigger-than 100M REPOSITORY.git
+# to strip blobs bigger than a particular size (e.g., 100 MB)
+java -jar bfg.jar --strip-blobs-bigger-than 100M REPOSITORY.git
+
+# delete all files named 'id_rsa' or 'id_dsa'
+java -jar bfg.jar --delete-files id_{dsa,rsa} REPOSITORY.git
+
+# delete all pdfs
+java -jar bfg.jar --delete-files *.pdf REPOSITORY.git
+
+# replace all passwords listed in a file (prefix lines 'regex:' or
+# 'glob:' if required) with ***REMOVED***
+java -jar bfg.jar --replace-text passwords.txt REPOSITORY.git
 ```
 
 Check the changes that have been made and clean unwanted data:
@@ -238,7 +259,7 @@ Push to update remote repository:
 git push
 ```
 
-See the BFG site for more command line options.
+***Note:*** branches must be unprotected in GitLab for a successful push.
 
 ## [Ignoring files](https://help.github.com/en/github/using-git/ignoring-files)
 
@@ -304,10 +325,8 @@ git remote rm docs
 
 ## Submodules
 
-***For wikis:***
-
 1. ***make all changes in the submodule***
-2. ***push the changes to the submodule's master branch***
+2. ***push the changes to the submodule's branch***
 3. ***push to the main code repository***
 
 ### [Including wiki in the main code repository as a submodule](https://brendancleary.com/2013/03/08/including-a-github-wiki-in-a-repository-as-a-submodule/)

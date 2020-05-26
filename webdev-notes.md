@@ -9,6 +9,7 @@
   - [Responsive tables](#responsive-tables)
   - [Prevent overlap of content on navigation bar](#prevent-overlap-of-content-on-navigation-bar)
   - [Types of CSS](#types-of-css)
+  - [Scale image height to match text height](#scale-image-height-to-match-text-height)
 - [Jekyll](#jekyll)
   - [GitHub Pages](#github-pages)
   - [Minimal Mistakes](#minimal-mistakes)
@@ -110,10 +111,10 @@ Internal CSS (within HTML):
 <head>
   <style>
     div {
-      height:50px;
-      width:50px;
-      background-color:red;
-      foreground-color:white;
+      height: 50px;
+      width: 50px;
+      background-color: red;
+      foreground-color: white;
     }
   </style>
 </head>
@@ -137,9 +138,17 @@ External CSS:
 
 ```css
 div {
-  height:50px;
-  width:50px;
-  background-color:red;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+```
+
+### Scale image height to match text height
+
+```css
+img {
+  height: 1em;
 }
 ```
 

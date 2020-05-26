@@ -12,4 +12,4 @@ pkief.material-icon-theme-4.1.0
 redhat.vscode-yaml-0.8.0
 streetsidesoftware.code-spell-checker-1.9.0
 visualstudioexptteam.vscodeintellicode-1.2.7
-yzhang.markdown-all-in-one-2.8.0
+yzhang.markdown-all-in-one-3.0.0
