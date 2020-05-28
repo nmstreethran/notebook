@@ -8,7 +8,7 @@
   - [Setting or changing the PATH system variable](#setting-or-changing-the-path-system-variable)
   - [Securely delete files on Windows 10 without third-party tools](#securely-delete-files-on-windows-10-without-third-party-tools)
 - [Ubuntu](#ubuntu)
-  - [Adding directory to PATH](#adding-directory-to-path)
+  - [Adding directory to PATH environment variables](#adding-directory-to-path-environment-variables)
   - [What to do when Ubuntu freezes](#what-to-do-when-ubuntu-freezes)
   - [Prevent DejaVu family of fonts from interfering with emoji display](#prevent-dejavu-family-of-fonts-from-interfering-with-emoji-display)
   - [Font management](#font-management)
@@ -20,8 +20,9 @@
   - [Useful packages](#useful-packages)
   - [Handling held back packages](#handling-held-back-packages)
   - [Installing Zotero](#installing-zotero)
-  - [Install GNOME tweak tool](#install-gnome-tweak-tool)
-  - [Useful GNOME extensions](#useful-gnome-extensions)
+  - [GNOME](#gnome)
+  - [KDE Plasma](#kde-plasma)
+  - [Snap / Flatpak sandboxing issues](#snap--flatpak-sandboxing-issues)
 - [Old](#old)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
@@ -53,7 +54,7 @@ Using the [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdel
 
 ## Ubuntu
 
-### [Adding directory to PATH](https://askubuntu.com/a/688998/714808)
+### [Adding directory to PATH environment variables](https://askubuntu.com/a/688998/714808)
 
 These are added to the `.bashrc` (shell startup) file, which can be found in the Home directory.
 
@@ -82,9 +83,14 @@ If it's completely frozen, REISUB it (safer than rebooting)
 
 Installing `twemoji-color-font` and optionally editing `$HOME/.config/fontconfig/56-twemoji-color.conf` to replace the Bitstream Vera family of fonts with other suitable fonts, such as Noto Serif, Ubuntu, and Cascadia Code. The browser font settings should also be changed to match the settings in the configuration file for best results.
 
+***Note:*** This will only work for Mozilla apps.
+
+> The font uses the SVG-in-OpenType format and will currently only show color emoji in Firefox, Thunderbird and other Mozilla Gecko-based applications. This is not a limitation of the font, but of the operating systems and applications. Regular B&W outline emoji are included for backwards/fallback compatibility. -- 13rac1
+
 - <https://github.com/eosrei/twemoji-color-font>
 - <https://www.reddit.com/r/firefox/comments/ev92yz/prevent_dejavu_font_from_messing_with_emojis/>
 - <https://wiki.archlinux.org/index.php/Font_configuration#Replace_or_set_default_fonts>
+- <https://askubuntu.com/a/740649/714808>
 
 ### [Font management](https://askubuntu.com/a/371320/714808)
 
@@ -103,6 +109,8 @@ sudo dpkg-reconfigure gdm3
 ```
 
 The same command can be used to [reset the display manager](https://askubuntu.com/q/1043048/714808) should something go wrong with the GUI, or the original CSS files get corrupted.
+
+<https://wiki.archlinux.org/index.php/Display_manager>
 
 ### [Installing Firefox Developer Edition](https://askubuntu.com/a/584704/714808)
 
@@ -196,18 +204,22 @@ sudo apt-get install packages
 
 Download the tarball from Zotero's [download page](https://www.zotero.org/download/). Extract the contents and move them to a location of your choice, such as `/opt/zotero`. Open the terminal in this location and run `./set_launcher_icon` to update the `zotero.desktop` file for that location. Create a symlink for `zotero.desktop` by running `ln -s "$PWD/zotero.desktop" ~/.local/share/applications/` from the same location. All of these commands can be run in succession from the same terminal window, i.e., `nms@nms-notebook:~/opt/zotero`.
 
+***Note:*** If using a custom icon theme, replace the absolute path for the icon with `zotero` in `./set_launcher_icon` prior to running it.
+
 References:
 
 - <https://www.zotero.org/support/installation>
 - <https://askubuntu.com/a/1147073/714808>
 
-### [Install GNOME tweak tool](https://askubuntu.com/a/968630/714808)
+### GNOME
+
+#### [Install GNOME tweak tool](https://askubuntu.com/a/968630/714808)
 
 ```sh
 sudo apt install gnome-tweak-tool
 ```
 
-### Useful GNOME extensions
+#### Useful GNOME extensions
 
 - [Dash to Panel](https://github.com/home-sweet-gnome/dash-to-panel)
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
@@ -217,6 +229,33 @@ sudo apt install gnome-tweak-tool
 - [Start Overlay in Application View](https://extensions.gnome.org/extension/1198/start-overlay-in-application-view/)
 - [OpenWeather](https://extensions.gnome.org/extension/750/openweather/)
 
+### KDE Plasma
+
+#### [Missing network manager](https://askubuntu.com/a/963902/714808)
+
+Install the package:
+
+```sh
+sudo apt-get install plasma-nm
+```
+
+#### Missing terminal
+
+Install Konsole from the app store.
+
+#### Taking screenshots
+
+Install Spectacle from the app store. Screenshot location can be configured in the settings.
+
+### Snap / Flatpak sandboxing issues
+
+- must use full path for LaTeX commands in VSCodium, despite being added to the environment variables
+- extra script to set up KeePassXC browser extension
+- icon themes not respected
+- missing icons in KDE
+
+Use PPA or Ubuntu package with a complete icon theme wherever possible to avoid these issues.
+
 ## Old
 
 <details>
@@ -224,7 +263,7 @@ sudo apt install gnome-tweak-tool
 Click to expand
 </summary>
 
-### Installing Wine with dependency issues <!-- omit in toc -->
+### Installing Wine and fixing dependency issues <!-- omit in toc -->
 
 Enable 32-bit architecture if system is 64-bit:
 
@@ -413,22 +452,6 @@ mpv --hwdec=vdpau yourvideofile
 ```
 
 Reboot computer and see if everything works as intended.
-
-### KDE Plasma <!-- omit in toc -->
-
-#### [Missing network manager](https://askubuntu.com/a/963902/714808) <!-- omit in toc -->
-
-```sh
-sudo apt-get install plasma-nm
-```
-
-#### Missing terminal <!-- omit in toc -->
-
-Install Konsole from the app store.
-
-#### Taking screenshots <!-- omit in toc -->
-
-Install Spectacle from the app store.
 
 ### Guides <!-- omit in toc -->
 

@@ -162,7 +162,7 @@ img {
 
 ### [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
 
-See <https://nithiya.gitlab.io/development/pages-tweaks/> for modifications to this theme.
+See <https://nithiya.gitlab.io/development/pages-tweaks/> for my personal modifications to this theme.
 
 - [Installation](https://mmistakes.github.io/minimal-mistakes/docs/installation/)
 - [Jekyll Remote Theme](https://github.com/benbalter/jekyll-remote-theme)

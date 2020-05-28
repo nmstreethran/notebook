@@ -3,6 +3,7 @@
 [![View notes on GitHub Wiki](https://img.shields.io/badge/-View%20on%20GitHub%20Wiki-seagreen?style=for-the-badge&logo=github&labelColor=black&logoColor=white)](https://github.com/nmstreethran/notebook/wiki)
 
 [![Build Status](https://travis-ci.org/nmstreethran/notebook.svg?branch=master)](https://travis-ci.org/nmstreethran/notebook)
+[![Action: links](https://github.com/nmstreethran/notebook/workflows/links/badge.svg)](https://github.com/nmstreethran/notebook/actions?query=workflow%3A%22links%22)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/license-CC%20BY--SA%204.0-blue?labelColor=darkslategray)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 Welcome to my notebook!
@@ -11,7 +12,7 @@ Welcome to my notebook!
 
 [Visual Studio Code](https://code.visualstudio.com/) / [VSCodium](https://vscodium.com/)
 
-Settings and extensions used can be found in [vscode-settings](vscode-settings/).
+Settings and extensions used can be found in [`vscode-settings`](vscode-settings/).
 
 ## License and credits
 
