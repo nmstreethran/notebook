@@ -253,8 +253,9 @@ Install Spectacle from the app store. Screenshot location can be configured in t
 - extra script to set up KeePassXC browser extension
 - icon themes not respected
 - missing icons in KDE
+- VSCodium opens a new, sandboxed instance of the web browser, which often crashes
 
-Use PPA or Ubuntu package with a complete icon theme wherever possible to avoid these issues.
+Use PPA or Ubuntu package with a complete icon theme wherever possible to avoid these issues. Alternatively, to fix icon issues, use the [Hardcoded Icon Fixer](https://github.com/Foggalong/hardcode-fixer) and [Hardcode-Tray](https://github.com/bilelmoussaoui/Hardcode-Tray) (recommended for [Papirus icon theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)).
 
 ## Old
 

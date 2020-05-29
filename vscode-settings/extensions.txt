@@ -1,6 +1,6 @@
 akamud.vscode-theme-onedark-2.2.1
 bauke.horizon-vscode-3.0.2
-davidanson.vscode-markdownlint-0.35.2
+davidanson.vscode-markdownlint-0.36.0
 eamodio.gitlens-10.2.1
 james-yu.latex-workshop-8.9.0
 lextudio.restructuredtext-128.0.0
