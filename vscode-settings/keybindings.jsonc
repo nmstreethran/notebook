@@ -74,5 +74,15 @@
     "key": "ctrl+l alt+v",
     "command": "-latex-workshop.view",
     "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId =~ /latex|rsweave/"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "markdown.extension.editing.toggleBold",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'restructuredtext'"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "markdown.extension.editing.toggleItalic",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'restructuredtext'"
   }
 ]

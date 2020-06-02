@@ -25,7 +25,7 @@
 
 <https://vermontdatabase.com/cloudwriter/url_encoding.htm>
 
-**Character** | **URL encoding**
+Character | URL encoding
 --- | ---:
 \` | %60
 ~ | %7E

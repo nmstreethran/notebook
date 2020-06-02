@@ -5,12 +5,22 @@ Bash scripts and commands
 ## Table of contents <!-- omit in toc -->
 
 - [Using the terminal to navigate through directories](#using-the-terminal-to-navigate-through-directories)
+- [Command line options](#command-line-options)
+  - [GNU Sed](#gnu-sed)
 - [Copy files from one directory to another, ignoring all .files and .dirs](#copy-files-from-one-directory-to-another-ignoring-all-files-and-dirs)
+- [Copy all files with a certain name or extension from one directory into another](#copy-all-files-with-a-certain-name-or-extension-from-one-directory-into-another)
+- [Get a list of folder names in a directory and save to file](#get-a-list-of-folder-names-in-a-directory-and-save-to-file)
+- [Copy a file](#copy-a-file)
+- [Rename a file or directory](#rename-a-file-or-directory)
+- [Delete a file](#delete-a-file)
+- [Delete a directory](#delete-a-directory)
 - [Running commands stored in a file](#running-commands-stored-in-a-file)
-- [Python package installation](#python-package-installation)
 - [Saving the output of a terminal command to a file](#saving-the-output-of-a-terminal-command-to-a-file)
 - [Extracting tarballs](#extracting-tarballs)
 - [Running multiple commands in a single line](#running-multiple-commands-in-a-single-line)
+- [Using the home directory](#using-the-home-directory)
+- [Replace a string in a file](#replace-a-string-in-a-file)
+- [Delete all lines containing a string in a file](#delete-all-lines-containing-a-string-in-a-file)
 
 ## [Using the terminal to navigate through directories](https://help.ubuntu.com/community/UsingTheTerminal)
 
@@ -21,30 +31,73 @@ Changing directories using `cd`:
 - To navigate up one directory level: `cd ..`
 - To navigate to the previous directory (or back): `cd -`
 
+## Command line options
+
+### [GNU Sed](https://www.gnu.org/software/sed/manual/html_node/Command_002dLine-Options.html)
+
+Short version | Long version | Note
+--- | --- | ---
+`-i[SUFFIX]` | `--in-place[=SUFFIX]` |
+`-f script-file` | `--file=script-file` | input script from file
+`-n` | `--quiet`, `--silent` |
+`-l N` | `--line-length=N` | line wrap length
+`-e script` | `--expression=script` | input script
+`-b` | `--binary` |
+`-s` | `--separate` |
+`-E`, `-r` | `--regexp-extended` |
+`-u` | `--unbuffered` |
+`-z` | `--null-data`, `--zero-terminated` |
+
+> If no `-e`, `-f`, `--expression`, or `--file` options are given on the command-line, then the first non-option argument on the command line is taken to be the script to be executed.
+
 ## [Copy files from one directory to another, ignoring all .files and .dirs](https://stackoverflow.com/a/11557164/4573584)
 
 ```sh
 cp -r SRC_DIR/* DEST_DIR
 ```
 
+## Copy all files with a certain name or extension from one directory into another
+
+```sh
+cp -a SRC_DIR/*notes.md DEST_DIR
+```
+
+## Get a list of folder names in a directory and save to file
+
+```sh
+# using -1d to specify depth
+ls -1d SRC_DIR/*/ | awk -F "/" "{print \$(NF-1)}" > DEST_DIR/filename.txt
+```
+
+## Copy a file
+
+```sh
+cp file1.txt DEST_DIR/file2.txt
+```
+
+## Rename a file or directory
+
+```sh
+mv oldname.txt newname.txt
+mv OLDNAME NEWNAME
+```
+
+## Delete a file
+
+```sh
+rm file.txt
+```
+
+## Delete a directory
+
+```sh
+rm -r DIR
+```
+
 ## [Running commands stored in a file](https://stackoverflow.com/a/13568021/4573584)
 
 ```sh
 bash file
-```
-
-## [Python package installation](https://stackoverflow.com/a/50893981/4573584)
-
-```sh
-ERROR: Could not install packages due to an EnvironmentError: [Errno 13] Permission denied: '/installation/path/'
-Consider using the `--user` option or check the permissions.
-```
-
-Fixed using:
-
-```sh
-pip3 install --user package-name  # for Python3
-pip install --user package-name   # for Python2
 ```
 
 ## [Saving the output of a terminal command to a file](https://askubuntu.com/a/420983/714808)
@@ -103,3 +156,22 @@ tar xzvf file.tar.gz
 > `||` executes the right-hand command of `||` only it the previous one failed.
 >
 > `;` executes the right-hand command of `;` always regardless whether the previous command succeeded or failed. Unless `set -e` was previously invoked, which causes bash to fail on an error.
+
+## Using the home directory
+
+```sh
+$HOME
+```
+
+## [Replace a string in a file](https://www.cyberciti.biz/faq/how-to-use-sed-to-find-and-replace-text-in-files-in-linux-unix-shell/)
+
+```sh
+sed -i -e "s/string to be replaced/replacement/g" filename.txt
+```
+
+## [Delete all lines containing a string in a file](https://stackoverflow.com/a/13188531/4573584)
+
+```sh
+grep -v "string to delete" filename.txt > filename_temp.txt
+mv filename_temp.txt filename.txt
+```

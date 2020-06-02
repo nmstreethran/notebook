@@ -3,6 +3,12 @@
 ## Table of contents <!-- omit in toc -->
 
 - [Useful links](#useful-links)
+- [Short and long command line options](#short-and-long-command-line-options)
+  - [`git`](#git)
+  - [`git-branch`](#git-branch)
+  - [`git-clone`](#git-clone)
+  - [`git-pull`](#git-pull)
+  - [`git-push`](#git-push)
 - [Credentials and authentication](#credentials-and-authentication)
   - [Prevent Git from asking for username and password during every push on Linux](#prevent-git-from-asking-for-username-and-password-during-every-push-on-linux)
   - [Invalid username or password error](#invalid-username-or-password-error)
@@ -34,6 +40,89 @@
 - [Git reference](https://git-scm.com/docs)
 - [Pro Git book](https://git-scm.com/book/en/v2)
 - [Visual Git Cheat Sheet](http://ndpsoftware.com/git-cheatsheet.html)
+
+## [Short and long command line options](https://git-scm.com/docs/git)
+
+### `git`
+
+Short version | Long version | Note
+--- | --- | ---
+`-a` | `--all` |
+`-p` | `--paginate` |
+`-P` | `--no-pager` |
+`-C <path>` | | run as if git was started in `<path>` instead of the current working directory
+`-c <name>=<value>` | | pass a configuration parameter to the command
+
+### [`git-branch`](https://git-scm.com/docs/git-branch)
+
+Short version | Long version | Note
+--- | --- | ---
+`-d` | `--delete` |
+`-D` | | shortcut for `--delete --force`
+`-f` | `--force` |
+`-m` | `--move` |
+`-M` | | shortcut for `--move --force`
+`-c` | `--copy` |
+`-C` | | shortcut for `--copy --force`
+`-i` | `--ignore-case` |
+`-r` | `--remotes` |
+`-a` | `--all` |
+`-l` | `--list` |
+`-v`, `-vv` | `--verbose` |
+`-q` | `--quiet` |
+`-t` | `--track` |
+`-u <upstream>` | `--set-upstream-to <upstream>` |
+
+### [`git-clone`](https://git-scm.com/docs/git-clone)
+
+Short version | Long version | Note
+--- | --- | ---
+`-l` | `--local` |
+`-s` | `--shared` |
+`-q` | `--quiet` |
+`-v` | `--verbose` |
+`-n` | `--no-checkout` |
+`-o <name>` | `--origin <name>` |
+`-b <name>` | `--branch <name>` |
+`-u <upload-pack>` | `--upload-pack <upload-pack>` |
+`-c <key>=<value>` | `--config <key>=<value>` |
+`-j <n>` | `--jobs <n>` |
+
+### [`git-pull`](https://git-scm.com/docs/git-pull)
+
+Short version | Long version | Note
+--- | --- | ---
+`-q` | `--quiet` |
+`-v` | `--verbose` |
+`-e` | `--edit` |
+`-S[<keyid>]` | `--gpg-sign[=<keyid>]` |
+`-n` | `--stat` |
+`-s <strategy>` | `--strategy=<strategy>` |
+`-X <option>` | `--strategy-option=<option>` |
+`-r` | `--rebase[=<option>]` |
+`-a` | `--append` |
+`-f` | `--force` |
+`-k` | `--keep` |
+`-p` | `--prune` |
+`-t` | `--tags` |
+`-j` | `--jobs=<n>` |
+`-o <option>` | `--server-option=<option>` |
+`-4` | `--ipv4` |
+`-6` | `--ipv6` |
+
+### [`git-push`](https://git-scm.com/docs/git-push)
+
+Short version | Long version | Note
+--- | --- | ---
+`-n` | `--dry-run` |
+`-d` | `--delete` |
+`-o <option>` | `--push-option=<option>` |
+`-f` | `--force` |
+`-u` | `--set-upstream` |
+`-q` | `--quiet` |
+`-v` | `--verbose` |
+`-4` | `--ipv4` |
+`-6` | `--ipv6` |
 
 ## Credentials and authentication
 

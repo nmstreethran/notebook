@@ -1,4 +1,4 @@
-# Package management <!-- omit in toc -->
+# Python package management <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
 
@@ -17,6 +17,8 @@
   - [Installing for a specific Python version](#installing-for-a-specific-python-version)
   - [Uninstalling packages](#uninstalling-packages)
   - [Prevent conda from activating the base environment by default](#prevent-conda-from-activating-the-base-environment-by-default)
+  - [Environment error](#environment-error)
+- [Creating a requirements file](#creating-a-requirements-file)
 - [References](#references)
 
 ## Anaconda
@@ -324,6 +326,30 @@ pip uninstall package
 ### Prevent conda from activating the base environment by default
 
 <https://stackoverflow.com/questions/54429210/how-do-i-prevent-conda-from-activating-the-base-environment-by-default>
+
+### [Environment error](https://stackoverflow.com/a/50893981/4573584)
+
+```sh
+ERROR: Could not install packages due to an EnvironmentError: [Errno 13] Permission denied: '/installation/path/'
+Consider using the `--user` option or check the permissions.
+```
+
+Fixed using:
+
+```sh
+pip3 install --user package-name  # for Python3
+pip install --user package-name   # for Python2
+```
+
+## Creating a requirements file
+
+Using [PIP-chill](https://pip-chill.readthedocs.io/en/latest/), which lists only the packages that are not dependencies of installed packages.
+
+```sh
+pip-chill --no-version -v > requirements.txt
+```
+
+`--no-version` leaves out the version numbers, and `-v` lists package dependencies as comments.
 
 ## References
 

@@ -1,24 +1,37 @@
 {
   "breadcrumbs.enabled": true,
   "cSpell.allowCompoundWords": true,
+  "cSpell.flagWords": [
+    "metadada"
+  ],
   "cSpell.language": "en-GB",
   "cSpell.maxDuplicateProblems": 2,
   "cSpell.minWordLength": 1,
   "cSpell.userWords": [
     "alright",
     "analytics",
+    "biofuels",
     "blogs",
     "bokmål",
+    "celcius",
     "decarbonisation",
     "dispatchable",
     "forecasted",
+    "geospatial",
     "irradiance",
     "metrology",
+    "microfluidic",
+    "microfluidics",
     "nithiya",
+    "nmstreethran",
     "prosumers",
     "renewables",
     "resumé",
-    "streethran"
+    "streethran",
+    "tribology",
+    "winery",
+    "zenodo",
+    "zotero"
   ],
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
@@ -226,7 +239,7 @@
   "restructuredtext.preview.sphinx.disabled": true,
   "terminal.integrated.fontSize": 16,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.menuBarVisibility": "default",
+  "window.menuBarVisibility": "hidden",
   "window.restoreWindows": "none",
   "workbench.colorTheme": "Horizon Dark",
   "workbench.iconTheme": "material-icon-theme"
