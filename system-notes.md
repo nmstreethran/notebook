@@ -21,7 +21,7 @@
   - [Handling held back packages](#handling-held-back-packages)
   - [Installing Zotero](#installing-zotero)
   - [GNOME](#gnome)
-  - [KDE Plasma](#kde-plasma)
+  - [KDE](#kde)
   - [Snap / Flatpak sandboxing issues](#snap--flatpak-sandboxing-issues)
 - [Old](#old)
 
@@ -229,7 +229,7 @@ sudo apt install gnome-tweak-tool
 - [Start Overlay in Application View](https://extensions.gnome.org/extension/1198/start-overlay-in-application-view/)
 - [OpenWeather](https://extensions.gnome.org/extension/750/openweather/)
 
-### KDE Plasma
+### KDE
 
 #### [Missing network manager](https://askubuntu.com/a/963902/714808)
 
@@ -246,6 +246,11 @@ Install Konsole from the app store.
 #### Taking screenshots
 
 Install Spectacle from the app store. Screenshot location can be configured in the settings.
+
+#### Customising KDE's appearance with Latte Dock
+
+- <https://www.dedoimedo.com/computers/plasma-global-menu-app-title-window-buttons-like-mac-unity.html>
+- <https://www.dedoimedo.com/computers/plasma-look-like-mac.html>
 
 ### Snap / Flatpak sandboxing issues
 

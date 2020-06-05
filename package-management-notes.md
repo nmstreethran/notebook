@@ -128,17 +128,17 @@ conda install -c channelname package
 Installing non-conda packages:
 
 ```sh
-pip install package
+pip install packagename
 ```
 
 [**Note:**](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#using-pip-in-an-environment)
 
 > - Use pip only after conda
 >   - Install as many requirements as possible with conda then use pip
->   - Pip should be run with --upgrade-strategy only-if-needed (the default)
->   - Do not use pip with the --user argument, avoid all "users" installs
+>   - Pip should be run with `--upgrade-strategy only-if-needed` (the default)
+>   - Do not use pip with the `--user argument`, avoid all "users" installs
 >
->- Use conda environments for isolation
+> - Use conda environments for isolation
 >   - Create a conda environment to isolate any changes pip makes
 >   - Environments take up little space thanks to hard links
 >   - Care should be taken to avoid running pip in the “root” environment
@@ -148,8 +148,8 @@ pip install package
 >   - To install additional conda packages, it is best to recreate the environment
 >
 > - Store conda and pip requirements in text files
->   - Package requirements can be passed to conda via the --file argument
->   - Pip accepts a list of Python packages with -r or --requirements
+>   - Package requirements can be passed to conda via the `--file` argument
+>   - Pip accepts a list of Python packages with `-r` or `--requirements`
 >   - Conda env will export or create environments based on a file with conda and pip requirements
 
 Installing commercial packages:
@@ -343,13 +343,29 @@ pip install --user package-name   # for Python2
 
 ## Creating a requirements file
 
-Using [PIP-chill](https://pip-chill.readthedocs.io/en/latest/), which lists only the packages that are not dependencies of installed packages.
+Using [PIP Chill](https://pip-chill.readthedocs.io/en/latest/), which lists only the packages that are not dependencies of installed packages. This is an alternative to `pip freeze`.
 
 ```sh
 pip-chill --no-version -v > requirements.txt
 ```
 
 `--no-version` leaves out the version numbers, and `-v` lists package dependencies as comments.
+
+Install PIP Chill via pip:
+
+```sh
+pip install pip-chill
+```
+
+The requirements file generated through PIP Chill can be used to install all dependencies via both pip and conda:
+
+```sh
+# using pip
+pip install -r requirements.txt
+
+# using conda
+conda create --file requirements.txt
+```
 
 ## References
 

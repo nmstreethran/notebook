@@ -5,8 +5,6 @@ Bash scripts and commands
 ## Table of contents <!-- omit in toc -->
 
 - [Using the terminal to navigate through directories](#using-the-terminal-to-navigate-through-directories)
-- [Command line options](#command-line-options)
-  - [GNU Sed](#gnu-sed)
 - [Copy files from one directory to another, ignoring all .files and .dirs](#copy-files-from-one-directory-to-another-ignoring-all-files-and-dirs)
 - [Copy all files with a certain name or extension from one directory into another](#copy-all-files-with-a-certain-name-or-extension-from-one-directory-into-another)
 - [Get a list of folder names in a directory and save to file](#get-a-list-of-folder-names-in-a-directory-and-save-to-file)
@@ -30,25 +28,6 @@ Changing directories using `cd`:
 - To navigate to your home directory: `cd` or `cd ~`
 - To navigate up one directory level: `cd ..`
 - To navigate to the previous directory (or back): `cd -`
-
-## Command line options
-
-### [GNU Sed](https://www.gnu.org/software/sed/manual/html_node/Command_002dLine-Options.html)
-
-Short version | Long version | Note
---- | --- | ---
-`-i[SUFFIX]` | `--in-place[=SUFFIX]` |
-`-f script-file` | `--file=script-file` | input script from file
-`-n` | `--quiet`, `--silent` |
-`-l N` | `--line-length=N` | line wrap length
-`-e script` | `--expression=script` | input script
-`-b` | `--binary` |
-`-s` | `--separate` |
-`-E`, `-r` | `--regexp-extended` |
-`-u` | `--unbuffered` |
-`-z` | `--null-data`, `--zero-terminated` |
-
-> If no `-e`, `-f`, `--expression`, or `--file` options are given on the command-line, then the first non-option argument on the command line is taken to be the script to be executed.
 
 ## [Copy files from one directory to another, ignoring all .files and .dirs](https://stackoverflow.com/a/11557164/4573584)
 

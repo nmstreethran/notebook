@@ -60,6 +60,9 @@
   "git.confirmSync": false,
   "gitlens.advanced.telemetry.enabled": false,
   "gitlens.currentLine.scrollable": false,
+  "[css]": {
+    "editor.tabSize": 2
+  },
   "[html]": {
     "editor.tabSize": 2
   },
