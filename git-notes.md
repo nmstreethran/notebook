@@ -33,7 +33,7 @@
 
 - [Git reference](https://git-scm.com/docs)
 - [Pro Git book](https://git-scm.com/book/en/v2)
-- [Visual Git Cheat Sheet](http://ndpsoftware.com/git-cheatsheet.html)
+- [Visual Git Cheat Sheet](https://ndpsoftware.com/git-cheatsheet.html)
 
 ## Credentials and authentication
 
@@ -174,19 +174,19 @@ git clone git@github.com:USERNAME/REPOSITORY.git --branch develop --single-branc
 
 ### [Deleting commit history of a repository but keep the code in its current state](https://stackoverflow.com/a/26000395/4573584)
 
-Checkout
+Checkout:
 
 ```sh
 git checkout --orphan latest_branch
 ```
 
-Add all the files
+Add all the files:
 
 ```sh
 git add -A
 ```
 
-Commit the changes
+Commit the changes:
 
 ```sh
 git commit -am "commit message"
@@ -198,13 +198,13 @@ Delete the branch
 git branch -D master
 ```
 
-Rename the current branch to master
+Rename the current branch to master:
 
 ```sh
 git branch -m master
 ```
 
-Force update your repository
+Force update your repository:
 
 ```sh
 git push -f origin master
@@ -266,7 +266,7 @@ git push
 ### Templates
 
 - [A collection of useful .gitignore templates](https://github.com/github/gitignore)
-- [gitignore.io](https://www.gitignore.io/)
+- [gitignore.io](https://www.toptal.com/developers/gitignore)
 
 ### Remove checked in file
 

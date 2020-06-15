@@ -19,6 +19,7 @@
 - [GeoPandas](#geopandas)
   - [Changing legend position in GeoPandas plot](#changing-legend-position-in-geopandas-plot)
   - [Concatenation of GeoDataFrames](#concatenation-of-geodataframes)
+  - [Merging polygons](#merging-polygons)
 - [Sphinx](#sphinx)
   - [Read the Docs not recognising theme](#read-the-docs-not-recognising-theme)
 
@@ -250,6 +251,19 @@ rdf = gpd.GeoDataFrame(
     pd.concat(dataframesList, ignore_index=True),
     crs=dataframesList[0].crs)
 ```
+
+### Merging polygons
+
+Use `dissolve`:
+
+```py
+df = df.dissolve(by='column')
+```
+
+Source:
+
+- <https://stackoverflow.com/a/47225799/4573584>
+- <https://geopandas.org/aggregation_with_dissolve.html>
 
 ## Sphinx
 

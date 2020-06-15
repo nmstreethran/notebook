@@ -23,6 +23,7 @@
   - [GNOME](#gnome)
   - [KDE](#kde)
   - [Snap / Flatpak sandboxing issues](#snap--flatpak-sandboxing-issues)
+  - [Using a custom icon for an application](#using-a-custom-icon-for-an-application)
 - [Old](#old)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
@@ -261,6 +262,16 @@ Install Spectacle from the app store. Screenshot location can be configured in t
 - VSCodium opens a new, sandboxed instance of the web browser, which often crashes
 
 Use PPA or Ubuntu package with a complete icon theme wherever possible to avoid these issues. Alternatively, to fix icon issues, use the [Hardcoded Icon Fixer](https://github.com/Foggalong/hardcode-fixer) and [Hardcode-Tray](https://github.com/bilelmoussaoui/Hardcode-Tray) (recommended for [Papirus icon theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)).
+
+### [Using a custom icon for an application](https://askubuntu.com/a/80634/714808)
+
+Copy the `.desktop` file of the application to the local applications folder:
+
+```sh
+cp /usr/share/applications/app.desktop ~/.local/share/applications/
+```
+
+Open the copied file and change the value of `Icon`, e.g., change absolute path to relative, use a custom icon, etc. Save the file.
 
 ## Old
 

@@ -3,17 +3,16 @@
 ## Table of contents <!-- omit in toc -->
 
 - [Ghostscript](#ghostscript)
+  - [Compressing PDF files to reduce their size](#compressing-pdf-files-to-reduce-their-size)
+  - [Merging PDF files and generating bookmarks](#merging-pdf-files-and-generating-bookmarks)
 - [Poppler](#poppler)
+  - [Merging PDF files](#merging-pdf-files)
+  - [Convert PDF to image](#convert-pdf-to-image)
 - [Pandoc](#pandoc)
-  - [Syntax highlighting](#syntax-highlighting)
-  - [Markdown to Beamer](#markdown-to-beamer)
-  - [Markdown to PDF](#markdown-to-pdf)
-  - [Markdown to reveal.js](#markdown-to-revealjs)
-  - [Input multiple files](#input-multiple-files)
 
 ## Ghostscript
 
-[Compressing PDF files to reduce their size](https://askubuntu.com/a/256449/714808)
+### [Compressing PDF files to reduce their size](https://askubuntu.com/a/256449/714808)
 
 ```sh
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
@@ -25,6 +24,50 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -d
 > - `-dPDFSETTINGS=/printer` selects output similar to the Acrobat Distiller "Print Optimized" setting (300 dpi)
 > - `-dPDFSETTINGS=/default` selects output intended to be useful across a wide variety of uses, possibly at the expense of a larger output file
 
+### Merging PDF files and generating bookmarks
+
+This method preserves hyperlinks.
+
+```sh
+gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=output.pdf input1.pdf input2.pdf etc.pdf pdfmarks
+```
+
+`pdfmarks` is a text file that contains the bookmarks. For example:
+
+```txt
+[/Title (Title Page) /Page 1 /OUT pdfmark
+[/Title (Table of Contents) /Page 3 /OUT pdfmark
+```
+
+The bookmarks can be nested:
+
+```txt
+[/Count 3 /Title (Chapter 1) /Page 1 /OUT pdfmark
+[/Count -2 /Title (Section 1.1) /Page 2 /OUT pdfmark
+[/Title (Section 1.1.1) /Page 3 /OUT pdfmark
+[/Title (Section 1.1.2) /Page 4 /OUT pdfmark
+[/Count -1 /Title (Section 1.2) /Page 5 /OUT pdfmark
+[/Title (Section 1.2.1) /Page 6 /OUT pdfmark
+[/Title (Section 1.3) /Page 7 /OUT pdfmark
+```
+
+The PDF metadata can be specified using a dictionary:
+
+```txt
+[ /Title (My Test Document)
+  /Author (John Doe)
+  /Subject (pdfmark 3.0)
+  /Keywords (pdfmark, example, test)
+  /DOCINFO pdfmark
+```
+
+See Adobe's [pdfmark reference](https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdfmark_reference.pdf) for more information.
+
+Source:
+
+- <https://ubuntuforums.org/showthread.php?t=1545064>
+- <http://physics.drexel.edu/~wking/unfolding-disasters-old/posts/PDF_bookmarks_with_Ghostscript/>
+
 ## Poppler
 
 Source: <https://www.ostechnix.com/how-to-merge-pdf-files-in-command-line-on-linux/>
@@ -35,13 +78,15 @@ Installing in Ubuntu:
 sudo apt-get install poppler-utils
 ```
 
-Merging PDF files (preserves hyperlinks):
+### Merging PDF files
+
+This method preserves hyperlinks.
 
 ```sh
 pdfunite file1.pdf file2.pdf file3.pdf outputfile.pdf
 ```
 
-[Convert PDF to image](https://askubuntu.com/a/50180/714808):
+### [Convert PDF to image](https://askubuntu.com/a/50180/714808)
 
 ```sh
 pdftoppm input.pdf outputname -png
@@ -61,7 +106,12 @@ pdftoppm input.pdf outputname -png -rx 300 -ry 300
 
 ## [Pandoc](https://pandoc.org/)
 
-### Syntax highlighting
+<details>
+<summary>
+Click to expand
+</summary>
+
+### Syntax highlighting <!-- omit in toc -->
 
 Content fenced by three backticks (\`) will be parsed as codeblocks. If a language is not specified after the first three backticks, Pandoc parses the content into the `verbatim` environment on LaTeX. This prevents the codeblock from being formatted using the default syntax highlighting settings (including background colour). To prevent this from happening, assign these code blocks markup languages such as `html` or `md`.
 
@@ -78,7 +128,7 @@ Allowing syntax highlighting of inline code (refs: [1](https://stackoverflow.com
 }
 ```
 
-### Markdown to Beamer
+### Markdown to Beamer <!-- omit in toc -->
 
 [The Easiest Way to Make Presentations! (Pandoc + Markdown)](https://www.youtube.com/watch?v=dum7q6UXiCE) by Luke Smith on YouTube
 
@@ -114,7 +164,7 @@ keywords:
 ---
 ```
 
-### Markdown to PDF
+### Markdown to PDF <!-- omit in toc -->
 
 [Pandoc command](https://pandoc.org/demos.html)
 
@@ -181,7 +231,7 @@ To obtain date formats:
 date --help
 ```
 
-### Markdown to reveal.js
+### Markdown to reveal.js <!-- omit in toc -->
 
 [Pandoc commands](https://pandoc.org/demos.html):
 
@@ -212,8 +262,10 @@ theme:
 ---
 ```
 
-### [Input multiple files](https://gist.github.com/xuanlongma/5564190)
+### [Input multiple files](https://gist.github.com/xuanlongma/5564190) <!-- omit in toc -->
 
 ```sh
 pandoc -s input1.md input2.md input3.md -o output.html
 ```
+
+</details>

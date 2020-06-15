@@ -33,6 +33,7 @@
   - [Use value of last page](#use-value-of-last-page)
   - [List of abbreviations](#list-of-abbreviations)
   - [Frontmatter, mainmatter and backmatter](#frontmatter-mainmatter-and-backmatter)
+  - [Inserting PDFs](#inserting-pdfs)
   - [Word count](#word-count)
 - [Beamer class](#beamer-class)
   - [Class options](#class-options)
@@ -451,7 +452,7 @@ Some text \cite{A01,B02}.
 
 ### Sans serif headings with serif body and math
 
-- [Font catalogue](http://tug.org/FontCatalogue/)
+- [Font catalogue](https://tug.org/FontCatalogue/)
 
 ```latex
 \usepackage{lmodern} % latin modern
@@ -522,6 +523,30 @@ Some text \cite{A01,B02}.
 - [placing appendices after backmatter](https://tex.stackexchange.com/a/198608/140109)
 - [remove "Appendix/Chapter X" from references header](https://tex.stackexchange.com/a/102693/140109)
 - [appendix chapter name](https://tex.stackexchange.com/a/151130/140109)
+
+### Inserting PDFs
+
+```latex
+\documentclass{article}
+\usepackage{pdfpages}
+
+\begin{document}
+
+\includepdf[pages=-]{paper1}
+\includepdf[pages=-]{paper2}
+
+\end{document}
+```
+
+`pages=-` includes all pages in the document. See the package documentation for more options.
+
+Note that pdfpages does not preserve hyperlinks that are in the document. Use Ghostscript or Poppler to merge PDFs if the hyperlinks must be preserved.
+
+Sources:
+
+- <https://ctan.org/pkg/pdfpages>
+- <https://tex.stackexchange.com/a/8665/140109>
+- <https://tex.stackexchange.com/q/14620/140109>
 
 ### Word count
 

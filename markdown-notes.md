@@ -69,7 +69,7 @@ Bullet lists (using `*`, `-` or `+`)
 ## Hyperlinks
 
 ```md
-[I'm an inline-style link](https://www.google.com)
+[I'm an inline-style link](https://github.com/)
 
 [I'm a reference-style link][Arbitrary case-insensitive reference text]
 
@@ -78,7 +78,7 @@ Bullet lists (using `*`, `-` or `+`)
 Or leave it empty and use the [link text itself]
 
 URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
+https://github.com/ or <https://github.com/> and sometimes
 example.com (but not on GitHub, for example).
 
 Some text to show that the reference links can follow later.
@@ -88,7 +88,7 @@ Some text to show that the reference links can follow later.
 [link text itself]: https://www.reddit.com/
 ```
 
-[I'm an inline-style link](https://www.google.com)
+[I'm an inline-style link](https://github.com/)
 
 [I'm a reference-style link][Arbitrary case-insensitive reference text]
 
@@ -97,7 +97,7 @@ Some text to show that the reference links can follow later.
 Or leave it empty and use the [link text itself]
 
 URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
+https://github.com/ or <https://github.com/> and sometimes
 example.com (but not on GitHub, for example).
 
 Some text to show that the reference links can follow later.

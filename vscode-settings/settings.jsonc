@@ -19,6 +19,7 @@
     "forecasted",
     "geospatial",
     "irradiance",
+    "mechatronics",
     "metrology",
     "microfluidic",
     "microfluidics",
@@ -244,6 +245,6 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.menuBarVisibility": "hidden",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "Horizon Dark",
+  "workbench.colorTheme": "Dracula",
   "workbench.iconTheme": "material-icon-theme"
 }
