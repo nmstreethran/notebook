@@ -15,7 +15,7 @@ Settings and extensions used can be found in [`vscode-settings`](vscode-settings
 
 ## License and credits
 
-Unless otherwise stated, the contents of this repository are licensed under the [Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0) International Public License](https://creativecommons.org/licenses/by-sa/4.0/).
+Unless otherwise stated, the contents of this repository are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license](https://creativecommons.org/licenses/by-sa/4.0/).
 
 These notes are mostly derived from [Stack Exchange](https://stackexchange.com/) user contributions, which are [licensed under CC BY-SA licenses](https://stackoverflow.com/help/licensing).
 

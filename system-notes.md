@@ -119,8 +119,18 @@ Firefox Developer Edition will work alongside other Firefox installations with s
 
 First, install [Ubuntu Make](https://wiki.ubuntu.com/ubuntu-make):
 
+Using Snap:
+
 ```sh
 snap install ubuntu-make
+```
+
+Using PPA:
+
+```sh
+sudo add-apt-repository ppa:lyzardking/ubuntu-make
+sudo apt-get update
+sudo apt-get install ubuntu-make
 ```
 
 Then, install Firefox Developer Edition:
@@ -271,7 +281,7 @@ Copy the `.desktop` file of the application to the local applications folder:
 cp /usr/share/applications/app.desktop ~/.local/share/applications/
 ```
 
-Open the copied file and change the value of `Icon`, e.g., change absolute path to relative, use a custom icon, etc. Save the file.
+Open the copied file and change the value of `Icon`, e.g., change absolute path to relative, use a custom icon, etc. Save the file after making changes.
 
 ## Old
 

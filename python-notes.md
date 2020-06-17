@@ -68,7 +68,7 @@ from script1 import x
 ```sh
 import urllib.request, json
 # define URL
-# URL =
+URL = 'https://stackoverflow.com'
 with urllib.request.urlopen(URL) as url:
     data = json.loads(url.read().decode())
     print(data)
@@ -79,8 +79,8 @@ with urllib.request.urlopen(URL) as url:
 [Drop a row / column](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop.html):
 
 ```py
-df.drop(['B','C'], axis=1) # drop columns
-df.drop(columns=['B','C']) # drop columns (alternative)
+df.drop(['B', 'C'], axis=1) # drop columns
+df.drop(columns=['B', 'C']) # drop columns (alternative)
 df.drop([0, 1]) # drop row by index
 ```
 
@@ -115,8 +115,10 @@ df['Raw'] =
 '(3T ZZ/ZZZZ, Europe)'
 '(4T XXX XXX, Africa)'
 # perform split into two new columns
-df['Model'] = [x.split(',')[0].replace('(', '') for x in df['Raw']] # extract first section; remove opening parenthesis
-df['Region'] = [x.split(',')[1].replace(')', '') for x in df['Raw']] # extract second section; remove closing parenthesis
+# extract first section; remove opening parenthesis
+df['Model'] = [x.split(',')[0].replace('(', '') for x in df['Raw']]
+# extract second section; remove closing parenthesis
+df['Region'] = [x.split(',')[1].replace(')', '') for x in df['Raw']]
 # results
 df['Model'] =
 '1T XXX'
@@ -193,12 +195,6 @@ To list all available styles, use:
 
 ```py
 print(plt.style.available)
-```
-
-This gives:
-
-```py
-['bmh', 'classic', 'dark_background', 'fast', 'fivethirtyeight', 'ggplot', 'grayscale', 'seaborn-bright', 'seaborn-colorblind', 'seaborn-dark-palette', 'seaborn-dark', 'seaborn-darkgrid', 'seaborn-deep', 'seaborn-muted', 'seaborn-notebook', 'seaborn-paper', 'seaborn-pastel', 'seaborn-poster', 'seaborn-talk', 'seaborn-ticks', 'seaborn-white', 'seaborn-whitegrid', 'seaborn', 'Solarize_Light2', 'tableau-colorblind10', '_classic_test']
 ```
 
 See the style sheets reference at <https://matplotlib.org/gallery/style_sheets/style_sheets_reference.html>.

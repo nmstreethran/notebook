@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # copy vscode settings
 cp $HOME/.config/VSCodium/User/settings.json vscode-settings/settings.jsonc

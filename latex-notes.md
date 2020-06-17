@@ -155,7 +155,7 @@ An example subfigure (Figure~\ref{fig:subfig}), which contains Figure~\ref{fig:a
 ### Tables
 
 - ["ThreePartTable" environment](https://tex.stackexchange.com/a/209851/140109)
-- [More space between rows](https://inf.ethz.ch/personal/markusp/teaching/guides/guide-tables.pdf)
+- [More space between rows](https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf)
 - [Set table content to align left; for removing `underfull \hbox` warning in table](https://tex.stackexchange.com/a/275310/140109)
 
 ```latex

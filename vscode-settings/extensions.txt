@@ -6,7 +6,7 @@ james-yu.latex-workshop-8.10.0
 lextudio.restructuredtext-128.0.0
 mechatroner.rainbow-csv-1.7.0
 ms-python.anaconda-extension-pack-1.0.1
-ms-python.python-2020.5.86806
+ms-python.python-2020.6.88468
 npxms.hide-gitignored-1.1.0
 pkief.material-icon-theme-4.1.0
 redhat.vscode-yaml-0.8.0

@@ -291,7 +291,7 @@ pippo/pluto/*
 
 - [Delete wiki home page](https://stackoverflow.com/a/42653762/4573584)
 - [GitHub Wiki How-To](https://gist.github.com/subfuzion/0d3f19c4f780a7d75ba2)
-- [Detach a fork and turn it into a standalone repository](https://help.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile) -- contact [GitHub support](https://support.github.com/contact)
+- [Detach a fork and turn it into a standalone repository](https://help.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile) -- contact [GitHub support](https://support.github.com/request)
 
 ## Pull requests
 
