@@ -34,6 +34,6 @@ jobs:
     - name: Check links
       run: >-
         awesome_bot --allow-dupe --skip-save-results --white-list
-        "stackexchange.com,stackoverflow.com,askubuntu.com,superuser.com,\
-        username/repository,dum7q6UXiCE,oFFvwZIEk1Y,download.opensuse.org,\
+        "stackexchange.com,stackoverflow.com,askubuntu.com,superuser.com,
+        username/repository,dum7q6UXiCE,oFFvwZIEk1Y,download.opensuse.org,
         www.amd.com" `find . -name "*.md"`
