@@ -7,7 +7,8 @@
 - [Windows](#windows)
   - [Setting or changing the PATH system variable](#setting-or-changing-the-path-system-variable)
   - [Securely delete files on Windows 10 without third-party tools](#securely-delete-files-on-windows-10-without-third-party-tools)
-- [Ubuntu](#ubuntu)
+  - [Closing windows that are open](#closing-windows-that-are-open)
+- [Linux](#linux)
   - [Adding directory to PATH environment variables](#adding-directory-to-path-environment-variables)
   - [What to do when Ubuntu freezes](#what-to-do-when-ubuntu-freezes)
   - [Prevent DejaVu family of fonts from interfering with emoji display](#prevent-dejavu-family-of-fonts-from-interfering-with-emoji-display)
@@ -20,10 +21,11 @@
   - [Useful packages](#useful-packages)
   - [Handling held back packages](#handling-held-back-packages)
   - [Installing Zotero](#installing-zotero)
-  - [GNOME](#gnome)
+  - [Extracting archives](#extracting-archives)
   - [KDE](#kde)
   - [Snap / Flatpak sandboxing issues](#snap--flatpak-sandboxing-issues)
   - [Using a custom icon for an application](#using-a-custom-icon-for-an-application)
+  - [Troubleshooting WiFi issues](#troubleshooting-wifi-issues)
 - [Old](#old)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
@@ -53,7 +55,11 @@ Windows: go to **Settings charm** > **Change PC settings** > **Update and Recove
 
 Using the [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete) Sysinternals software.
 
-## Ubuntu
+### [Closing windows that are open](https://superuser.com/a/81477/752084)
+
+Ensure the window to be closed is in focus. Press `Alt` + `F4` to close.
+
+## Linux
 
 ### [Adding directory to PATH environment variables](https://askubuntu.com/a/688998/714808)
 
@@ -222,23 +228,38 @@ References:
 - <https://www.zotero.org/support/installation>
 - <https://askubuntu.com/a/1147073/714808>
 
-### GNOME
+### Extracting archives
 
-#### [Install GNOME tweak tool](https://askubuntu.com/a/968630/714808)
+#### [Extracting tarballs](https://askubuntu.com/a/25962/714808)
 
 ```sh
-sudo apt install gnome-tweak-tool
+tar xzf file.tar.gz
+tar xjf file.tar.bz2
 ```
 
-#### Useful GNOME extensions
+To see the files being extracted during unpacking:
 
-- [Dash to Panel](https://github.com/home-sweet-gnome/dash-to-panel)
-- [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
-- [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
-- [Applications Overview Tooltip](https://extensions.gnome.org/extension/1071/applications-overview-tooltip/)
-- [Applications Menu](https://extensions.gnome.org/extension/6/applications-menu/)
-- [Start Overlay in Application View](https://extensions.gnome.org/extension/1198/start-overlay-in-application-view/)
-- [OpenWeather](https://extensions.gnome.org/extension/750/openweather/)
+```sh
+tar xzvf file.tar.gz
+```
+
+#### [Extracting ZIP files](https://askubuntu.com/a/86852/714808)
+
+```sh
+unzip file.zip -d destination_folder
+```
+
+If the source and destination are the same:
+
+```sh
+unzip file.zip
+```
+
+If `unzip` is not installed:
+
+```sh
+sudo apt-get install unzip
+```
 
 ### KDE
 
@@ -283,12 +304,34 @@ cp /usr/share/applications/app.desktop ~/.local/share/applications/
 
 Open the copied file and change the value of `Icon`, e.g., change absolute path to relative, use a custom icon, etc. Save the file after making changes.
 
+### Troubleshooting WiFi issues
+
+See <https://askubuntu.com/a/235280/714808>.
+
 ## Old
 
 <details>
 <summary>
 Click to expand
 </summary>
+
+### GNOME <!-- omit in toc -->
+
+#### [Install GNOME tweak tool](https://askubuntu.com/a/968630/714808)
+
+```sh
+sudo apt install gnome-tweak-tool
+```
+
+#### Useful GNOME extensions
+
+- [Dash to Panel](https://github.com/home-sweet-gnome/dash-to-panel)
+- [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
+- [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
+- [Applications Overview Tooltip](https://extensions.gnome.org/extension/1071/applications-overview-tooltip/)
+- [Applications Menu](https://extensions.gnome.org/extension/6/applications-menu/)
+- [Start Overlay in Application View](https://extensions.gnome.org/extension/1198/start-overlay-in-application-view/)
+- [OpenWeather](https://extensions.gnome.org/extension/750/openweather/)
 
 ### Installing Wine and fixing dependency issues <!-- omit in toc -->
 

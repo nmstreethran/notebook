@@ -64,6 +64,9 @@
   "[css]": {
     "editor.tabSize": 2
   },
+  "[csv]":{
+    "editor.wordWrap": "off"
+  },
   "[html]": {
     "editor.tabSize": 2
   },
@@ -237,7 +240,7 @@
   },
   "python.dataScience.askForKernelRestart": false,
   "python.dataScience.exportWithOutputEnabled": true,
-  "python.jediEnabled": false,
+  "python.languageServer": "Microsoft",
   "python.linting.pylintEnabled": true,
   "restructuredtext.preview.doubleClickToSwitchToEditor": false,
   "restructuredtext.preview.sphinx.disabled": true,
@@ -246,6 +249,5 @@
   "window.menuBarVisibility": "hidden",
   "window.restoreWindows": "none",
   "workbench.colorTheme": "Dracula",
-  "workbench.iconTheme": "material-icon-theme",
-  "python.languageServer": "Microsoft"
+  "workbench.iconTheme": "material-icon-theme"
 }

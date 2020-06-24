@@ -1,6 +1,6 @@
 # Shell scripting notes <!-- omit in toc -->
 
-Bash scripts and commands
+Shell scripts and commands, including Bash, AWK, sed, grep.
 
 ## Table of contents <!-- omit in toc -->
 
@@ -14,7 +14,6 @@ Bash scripts and commands
 - [Delete a directory](#delete-a-directory)
 - [Running commands stored in a file](#running-commands-stored-in-a-file)
 - [Saving the output of a terminal command to a file](#saving-the-output-of-a-terminal-command-to-a-file)
-- [Extracting tarballs](#extracting-tarballs)
 - [Running multiple commands in a single line](#running-multiple-commands-in-a-single-line)
 - [Using the home directory](#using-the-home-directory)
 - [Replace a string in a file](#replace-a-string-in-a-file)
@@ -110,19 +109,6 @@ SomeCommand 2>&1 | tee SomeFile.txt
 ```
 
 (If you want the output only, drop the `2` above)
-
-## [Extracting tarballs](https://askubuntu.com/a/25962/714808)
-
-```sh
-tar xzf file.tar.gz
-tar xjf file.tar.bz2
-```
-
-To see the files being extracted during unpacking:
-
-```sh
-tar xzvf file.tar.gz
-```
 
 ## [Running multiple commands in a single line](https://stackoverflow.com/q/5130847/4573584)
 

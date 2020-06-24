@@ -6,6 +6,8 @@
 - [Python](#python)
 - [URL encoding](#url-encoding)
 - [Versioning](#versioning)
+- [YAML](#yaml)
+  - [Line breaks](#line-breaks)
 
 ## Character limits
 
@@ -84,3 +86,9 @@ From [Semantic Versioning](https://semver.org/):
 > I think different factors come into play here. Psychological/marketing impact of the version number (version number increased often => more $$$, people don't want to buy a 0.99 beta version, etc) must be taken into account. "Logic" version numbers can help when working in a huge team.
 >
 > And I like the linux way of having odd numbers for the unstable versions, and even numbers for the stable one.
+
+## YAML
+
+### Line breaks
+
+See <https://stackoverflow.com/a/21699210/4573584>.
