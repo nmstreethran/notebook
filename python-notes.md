@@ -110,27 +110,43 @@ df.iloc[0]['column'] # returns corresponding cell
 
 ```py
 df['Raw'] =
-'(1T XXX, Europe)'
-'(2T YYYY, Latin America)'
-'(3T ZZ/ZZZZ, Europe)'
-'(4T XXX XXX, Africa)'
+    '(1T XXX, Europe)'
+    '(2T YYYY, Latin America)'
+    '(3T ZZ/ZZZZ, Europe)'
+    '(4T XXX XXX, Africa)'
+
 # perform split into two new columns
 # extract first section; remove opening parenthesis
 df['Model'] = [x.split(',')[0].replace('(', '') for x in df['Raw']]
 # extract second section; remove closing parenthesis
 df['Region'] = [x.split(',')[1].replace(')', '') for x in df['Raw']]
+
 # results
 df['Model'] =
-'1T XXX'
-'2T YYYY'
-'3T ZZ/ZZZZ'
-'4T XXX XXX'
+    '1T XXX'
+    '2T YYYY'
+    '3T ZZ/ZZZZ'
+    '4T XXX XXX'
+
 df['Region'] =
-'Europe'
-'Latin America'
-'Europe'
-'Africa'
+    'Europe'
+    'Latin America'
+    'Europe'
+    'Africa'
 ```
+
+[UnicodeDecodeError](https://stackoverflow.com/a/18172249/4573584)
+
+> `read_csv` takes an encoding option to deal with files in different formats.
+>
+> To detect the encoding (assuming the file contains non-ASCII characters), [you can use `enca`](https://linux.die.net/man/1/enconv) or [`file -i` (Linux)](https://linux.die.net/man/1/file).
+
+Use `ISO-8859-1` or `utf-8` for reading the CSV file, and `utf-8` for writing CSV files. Aliases can be used, e.g., `latin` instead of `ISO-8859-1`.
+
+Resources on encoding:
+
+- <https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/>
+- <https://docs.python.org/3/library/codecs.html#standard-encodings>
 
 ## Jupyter
 

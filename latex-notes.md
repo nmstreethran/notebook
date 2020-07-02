@@ -251,7 +251,8 @@ See <https://tex.stackexchange.com/a/235822/140109> and <https://en.wikibooks.or
     stringstyle=\color{Crimson},
     showstringspaces=false
 }
-% additional styling for python code listings
+
+% additional styling for Python code listings
 \lstdefinestyle{py}{
     language=Python,
     keywordstyle={[2]\color{ForestGreen}},
@@ -271,7 +272,7 @@ See <https://tex.stackexchange.com/a/235822/140109> and <https://en.wikibooks.or
     {>}{{{\bfseries\color{DarkOrchid}>}}}1
     {|}{{{\bfseries\color{DarkOrchid}|}}}1
     {\&}{{{\bfseries\color{DarkOrchid}\&}}}1
-    {~}{{{\bfseries\color{DarkOrchid}~}}}1
+    {~}{{{\bfseries\color{DarkOrchid}\char`~}}}1
     {=}{{{\bfseries\color{DarkOrchid}=}}}1
     %
     {==}{{{\bfseries\color{DarkOrchid}==}}}2
@@ -283,6 +284,13 @@ See <https://tex.stackexchange.com/a/235822/140109> and <https://en.wikibooks.or
     {*=}{{{$^\ast$=}}}2
     {/=}{{{/=}}}2
 }
+
+% additional styling for shell script listings
+\lstdefinestyle{sh}{
+    language=sh,
+    keywordstyle={[2]\color{ForestGreen}},
+    morekeywords={grep,mv,rm}
+}
 ```
 
 Snippet with custom line number start:
@@ -293,6 +301,27 @@ Snippet with custom line number start:
 import pandas as pd
 \end{lstlisting}
 ```
+
+Using a tilde `~` in verbatim environments:
+
+- [Using the `formats` option and tilde in math mode (uses math font and size)](https://tex.stackexchange.com/a/120811/140109):
+
+```latex
+\usepackage[formats]{listings}
+\lstdefineformat{R}{~=\( \sim \)}
+```
+
+Alternatively, define it as a literal (worked better for me):
+
+```latex
+\usepackage{listings}
+\lstdefinestyle{py}{
+    literate=
+    {~}{{{\bfseries\color{DarkOrchid}\char`~}}}1
+}
+```
+
+See <https://tex.stackexchange.com/q/312/140109> for more options.
 
 ### Lists
 
