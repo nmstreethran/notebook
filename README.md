@@ -7,11 +7,19 @@
 
 Welcome to my notebook!
 
-## Text editor
+## Configurations
+
+### Text editor
 
 [Visual Studio Code](https://code.visualstudio.com/) / [VSCodium](https://vscodium.com/)
 
-Settings and extensions used can be found in [`vscode-settings`](vscode-settings/).
+Settings and extensions used can be found in the `vscode-settings` folder.
+
+### OS
+
+Ubuntu + KDE Plasma
+
+Settings can be found in the `desktop-settings` folder.
 
 ## License and credits
 

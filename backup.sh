@@ -7,3 +7,4 @@ ls -1d $HOME/.vscode-oss/extensions/*/ | awk -F "/" "{print \$(NF-1)}" > vscode-
 
 # copy all notes into wiki
 cp -a *notes.md gh-wiki
+cp README.md gh-wiki/Home.md

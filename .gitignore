@@ -116,8 +116,4 @@ old/
 *.xlsx
 *.h5
 *.pdf
-my-ublock-backup_*
-*.layout.latte
-kshortcuts*
-*.khotkeys
-ublock-youtube.json
+backups/

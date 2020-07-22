@@ -1,0 +1,275 @@
+{
+  "fullscreen": true,
+  "icon": "/home/nms/Pictures/Icons/folder-activities.svg",
+  "fixedPanelIcon": false,
+  "searchResultsMerged": true,
+  "searchDefaultFilters": [
+    "Dictionary",
+    "services",
+    "calculator",
+    "shell",
+    "org.kde.windowedwidgets",
+    "org.kde.datetime",
+    "baloosearch",
+    "locations",
+    "unitconverter"
+  ],
+  "showRecentApps": true,
+  "recentOrdering": 1,
+  "numRecentApps": 5,
+  "sidebarShortcuts": [
+    "xdg:DOCUMENTS",
+    "xdg:PICTURES",
+    "org.kde.dolphin.desktop",
+    "systemsettings.desktop"
+  ],
+  "defaultAppListView": "Alphabetical",
+  "tileModel": [
+    {
+      "x": 8,
+      "y": 4,
+      "w": 2,
+      "h": 2,
+      "url": "libreoffice-writer.desktop",
+      "backgroundColor": "#212c61"
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "w": 2,
+      "h": 2,
+      "url": "libreoffice-calc.desktop",
+      "backgroundColor": "#307032"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "w": 6,
+      "h": 1,
+      "url": "",
+      "tileType": "group",
+      "label": "Web"
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "w": 2,
+      "h": 2,
+      "url": "preferred://browser",
+      "backgroundColor": "#782533"
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "w": 2,
+      "h": 2,
+      "url": "gimp.desktop",
+      "backgroundColor": "#231b14"
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "w": 2,
+      "h": 2,
+      "url": "org.gnome.Calculator.desktop",
+      "backgroundColor": "#1e1e1e"
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "w": 2,
+      "h": 2,
+      "url": "chromium.desktop",
+      "backgroundColor": "#244667"
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "w": 2,
+      "h": 2,
+      "url": "firefox-developer.desktop",
+      "backgroundColor": "#033376"
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "w": 2,
+      "h": 2,
+      "url": "org.inkscape.Inkscape.desktop",
+      "backgroundColor": "#1a1a1a"
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "w": 6,
+      "h": 1,
+      "url": "",
+      "tileType": "group",
+      "label": "Office"
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "w": 6,
+      "h": 1,
+      "url": "",
+      "tileType": "group",
+      "label": "Graphics and Music"
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "w": 2,
+      "h": 2,
+      "url": "libreoffice-impress.desktop",
+      "backgroundColor": "#842910"
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "w": 2,
+      "h": 2,
+      "url": "codium.desktop",
+      "backgroundColor": "#00324d"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "w": 2,
+      "h": 2,
+      "url": "org.kde.kwrite.desktop",
+      "backgroundColor": "#731e18"
+    },
+    {
+      "x": 12,
+      "y": 7,
+      "w": 2,
+      "h": 2,
+      "url": "org.kde.krita.desktop",
+      "backgroundColor": "#11203d"
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "w": 2,
+      "h": 2,
+      "url": "org.keepassxc.KeePassXC.desktop",
+      "backgroundColor": "#181b21"
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "w": 6,
+      "h": 1,
+      "url": "",
+      "tileType": "group",
+      "label": "Settings"
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "w": 2,
+      "h": 2,
+      "url": "org.kde.discover.desktop",
+      "backgroundColor": "#215267"
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "w": 2,
+      "h": 2,
+      "url": "org.kde.kolourpaint.desktop",
+      "backgroundColor": "#931a1a"
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "w": 2,
+      "h": 2,
+      "url": "rhythmbox.desktop",
+      "backgroundColor": "#191919"
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "w": 2,
+      "h": 2,
+      "url": "systemsettings.desktop",
+      "backgroundColor": "#212121"
+    },
+    {
+      "x": 12,
+      "y": 1,
+      "w": 2,
+      "h": 2,
+      "url": "synaptic.desktop",
+      "backgroundColor": "#712c42"
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "w": 2,
+      "h": 2,
+      "url": "org.kde.konsole.desktop",
+      "backgroundColor": "#1f1f1f"
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "w": 2,
+      "h": 2,
+      "url": "zotero.desktop",
+      "backgroundColor": "#680e0e"
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "w": 2,
+      "h": 2,
+      "url": "org.kde.ksysguard.desktop",
+      "backgroundColor": "#1f1f1f"
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "w": 6,
+      "h": 1,
+      "url": "",
+      "tileType": "group",
+      "label": "Tools"
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "w": 2,
+      "h": 2,
+      "url": "org.kde.dolphin.desktop",
+      "backgroundColor": "#1f1f1f"
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "w": 2,
+      "h": 2,
+      "url": "org.kde.kate.desktop",
+      "backgroundColor": "#003d6f"
+    }
+  ],
+  "tileMargin": 5,
+  "tilesLocked": false,
+  "defaultTileColor": "",
+  "defaultTileGradient": false,
+  "sidebarBackgroundColor": "",
+  "searchFieldFollowsTheme": true,
+  "sidebarFollowsTheme": false,
+  "tileLabelAlignment": "left",
+  "appDescription": "after",
+  "menuItemHeight": 36,
+  "searchFieldHeight": 48,
+  "appListWidth": 350,
+  "favGridCols": 6,
+  "popupHeight": 602,
+  "sidebarButtonSize": 48,
+  "sidebarIconSize": 30,
+  "sidebarPopupButtonSize": 36
+}
