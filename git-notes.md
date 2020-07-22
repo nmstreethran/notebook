@@ -41,8 +41,8 @@
 
 [Using SSH keys](https://stackoverflow.com/a/34957424/4573584):
 
-- <https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>
-- <https://help.github.com/en/github/using-git/changing-a-remotes-url>
+- <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>
+- <https://docs.github.com/en/github/using-git/changing-a-remotes-url>
 - <https://gitlab.com/help/ssh/README>
 
 Check for existing SSH keys:
@@ -261,7 +261,7 @@ git push
 
 ***Note:*** branches must be unprotected in GitLab for a successful push.
 
-## [Ignoring files](https://help.github.com/en/github/using-git/ignoring-files)
+## [Ignoring files](https://docs.github.com/en/github/using-git/ignoring-files)
 
 ### Templates
 
@@ -291,13 +291,13 @@ pippo/pluto/*
 
 - [Delete wiki home page](https://stackoverflow.com/a/42653762/4573584)
 - [GitHub Wiki How-To](https://gist.github.com/subfuzion/0d3f19c4f780a7d75ba2)
-- [Detach a fork and turn it into a standalone repository](https://help.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile) -- contact [GitHub support](https://support.github.com)
+- [Detach a fork and turn it into a standalone repository](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile) -- contact [GitHub support](https://support.github.com)
 
 ## Pull requests
 
 - [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
-- [About pull request merges](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges)
-- [Merging a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request)
+- [About pull request merges](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges)
+- [Merging a pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request)
 
 ## Errors
 
@@ -405,6 +405,6 @@ git pull -s subtree docs master
 
 Merging changes the other way is complicated.
 
-More about subtree merges on [GitHub](https://help.github.com/en/github/using-git/about-git-subtree-merges).
+More about subtree merges on [GitHub](https://docs.github.com/en/github/using-git/about-git-subtree-merges).
 
 </details>

@@ -281,6 +281,6 @@ Bla bla <sup id="a1">[1](#f1)</sup> or <sup name="a2">[2](#f2)</sup>
 3. [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 4. [Markdown Here cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
 5. <https://highlightjs.org/static/demo/>
-6. <https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks>
+6. <https://docs.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks>
 7. <https://github.github.com/gfm/>
 8. [Squarespace Markdown cheat sheet](https://support.squarespace.com/hc/en-us/articles/206543587-Markdown-cheat-sheet)
