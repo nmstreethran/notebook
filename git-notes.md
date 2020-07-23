@@ -19,6 +19,8 @@
   - [Ignoring files with exceptions](#ignoring-files-with-exceptions)
 - [GitHub](#github)
 - [Pull requests](#pull-requests)
+- [GitLab API](#gitlab-api)
+  - [Getting raw file from repository](#getting-raw-file-from-repository)
 - [Errors](#errors)
   - [`HttpRequestException`](#httprequestexception)
   - [Remote already exists](#remote-already-exists)
@@ -298,6 +300,31 @@ pippo/pluto/*
 - [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
 - [About pull request merges](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges)
 - [Merging a pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request)
+
+## GitLab API
+
+### [Getting raw file from repository](https://docs.gitlab.com/ee/api/repository_files.html#get-raw-file-from-repository)
+
+```md
+GET /projects/:id/repository/files/:file_path/raw
+```
+
+Parameters:
+
+- `file_path` (required) - URL encoded full path to new file. e.g., `lib%2Fclass%2Erb` (replace `/` with `%2F`)
+- `ref` (required) - The name of branch, tag or commit
+
+Example for the file at <https://gitlab.com/nithiya/ml-elec-model-data/-/blob/master/geography/polygons/bidding_zones.geojson>:
+
+- `file_path`: `geography%2Fpolygons%2Fbidding_zones.geojson`
+- `ref`: `master`
+- `id`: `19753809`
+
+URL:
+
+```md
+https://gitlab.com/api/v4/projects/19753809/repository/files/geography%2Fpolygons%2Fbidding_zones.geojson/raw?ref=master
+```
 
 ## Errors
 

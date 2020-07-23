@@ -3,6 +3,8 @@
 ## Table of contents <!-- omit in toc -->
 
 - [HTML / CSS](#html--css)
+  - [Selectors reference](#selectors-reference)
+  - [Render whitespace when using `content`](#render-whitespace-when-using-content)
   - [Overflow](#overflow)
   - [Selecting elements](#selecting-elements)
   - [Fonts](#fonts)
@@ -10,6 +12,8 @@
   - [Prevent overlap of content on navigation bar](#prevent-overlap-of-content-on-navigation-bar)
   - [Types of CSS](#types-of-css)
   - [Scale image height to match text height](#scale-image-height-to-match-text-height)
+- [Issues](#issues)
+  - [MIME type mismatch](#mime-type-mismatch)
 - [Jekyll](#jekyll)
   - [GitHub Pages](#github-pages)
   - [Minimal Mistakes](#minimal-mistakes)
@@ -18,6 +22,21 @@
   - [See also](#see-also)
 
 ## HTML / CSS
+
+### Selectors reference
+
+See <https://www.w3schools.com/cssref/css_selectors.asp>.
+
+### [Render whitespace when using `content`](https://stackoverflow.com/a/40963855/4573584)
+
+Set `white-space` to `pre` or `pre-wrap`, e.g.:
+
+```css
+h2.space::after {
+  content: " ";
+  white-space: pre;
+}
+```
 
 ### Overflow
 
@@ -150,6 +169,16 @@ div {
 img {
   height: 1em;
 }
+```
+
+## Issues
+
+### [MIME type mismatch](https://stackoverflow.com/q/40728554/4573584)
+
+Could be caused by incorrect file path, e.g., missing leading slash.
+
+```html
+<link rel="stylesheet" type="text/css" href="/_static/custom.css">
 ```
 
 ## Jekyll
