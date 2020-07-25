@@ -6,8 +6,6 @@
   - [Find location of extensions](#find-location-of-extensions)
   - [View and modify extension data](#view-and-modify-extension-data)
   - [Crashes](#crashes)
-- [Brave](#brave)
-  - [Adblock](#adblock)
 
 ## Firefox
 
@@ -22,9 +20,3 @@ Go to `about:debugging#/runtime/this-firefox` to open the extension console
 ### Crashes
 
 View and submit crash reports via `about:crashes`.
-
-## Brave
-
-### Adblock
-
-To set filters, go to `brave://adblock/`. Custom filters use the [Adblock Plus syntax](https://help.eyeo.com/adblockplus/how-to-write-filters).
