@@ -27,36 +27,45 @@
 
 <https://vermontdatabase.com/cloudwriter/url_encoding.htm>
 
-Character | URL encoding
---- | ---:
-\` | %60
-~ | %7E
-! | %21
-\# | %23
-$ | %24
-% | %25
-^ | %5E
-& | %26
-\( | %28
-\) | %29
-= | %3D
-\+ | %2B
-\ | %5C
-\| | %7C
-\[ | %5B
-\] | %5D
-{ | %7B
-} | %7D
-; | %3B
-: | %3A
-' | %27
-" | %22
-, | %2C
-\< | %3C
-\> | %3E
-? | %3F
-`space` | %20
-/ | %2F
+<https://en.wikipedia.org/wiki/Percent-encoding>
+
+Character | URL encoding | Reserved?
+--- | ---: | ---
+`newline` | %0A or %0D or %0D%0A |
+`space` | %20 |
+`!` | %21 | Yes
+`"` | %22 |
+`#` | %23 | Yes
+`$` | %24 | Yes
+`%` | %25 | Yes
+`&` | %26 | Yes
+`'` | %27 | Yes
+`(` | %28 | Yes
+`)` | %29 | Yes
+`*` | %2A | Yes
+`+` | %2B | Yes
+`,` | %2C | Yes
+`-` | %2D |
+`.` | %2E |
+`/` | %2F | Yes
+`:` | %3A | Yes
+`;` | %3B | Yes
+`<` | %3C |
+`=` | %3D | Yes
+`>` | %3E |
+`?` | %3F | Yes
+`@` | %40 | Yes
+`[` | %5B | Yes
+`\` | %5C |
+`]` | %5D | Yes
+`^` | %5E |
+`_` | %5F |
+` | %60 |
+`{` | %7B |
+`|` | %7C |
+`}` | %7D |
+`~` | %7E |
+`£` | %C2%A3 |
 
 ## Versioning
 
