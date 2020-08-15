@@ -249,6 +249,6 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.menuBarVisibility": "hidden",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Owlet (Outrun)",
   "workbench.iconTheme": "material-icon-theme"
 }

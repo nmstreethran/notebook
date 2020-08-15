@@ -1,6 +1,6 @@
 {
   "fullscreen": true,
-  "icon": "/home/nms/Pictures/Icons/folder-activities.svg",
+  "icon": "start-here-kde-plasma",
   "fixedPanelIcon": false,
   "searchResultsMerged": true,
   "searchDefaultFilters": [
@@ -253,6 +253,14 @@
       "h": 2,
       "url": "org.kde.kate.desktop",
       "backgroundColor": "#003d6f"
+    },
+    {
+      "x": 12,
+      "y": 9,
+      "w": 2,
+      "h": 2,
+      "url": "spotify_spotify.desktop",
+      "backgroundColor": "#073517"
     }
   ],
   "tileMargin": 5,
