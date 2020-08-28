@@ -2,6 +2,7 @@ bauke.horizon-vscode-3.0.3
 davidanson.vscode-markdownlint-0.36.0
 dracula-theme.theme-dracula-2.22.1
 eamodio.gitlens-10.2.2
+esbenp.prettier-vscode-5.1.3
 github.github-vscode-theme-1.1.3
 itsjonq.owlet-0.1.22
 james-yu.latex-workshop-8.10.0

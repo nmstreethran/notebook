@@ -26,7 +26,7 @@
   - [Avoid overfulls in right margin](#avoid-overfulls-in-right-margin)
   - [Remove blank pages after chapters](#remove-blank-pages-after-chapters)
   - [Fix spacing problem for header and footer using `headheight`](#fix-spacing-problem-for-header-and-footer-using-headheight)
-  - [Sans serif headings with serif body and math](#sans-serif-headings-with-serif-body-and-math)
+  - [Fonts](#fonts)
   - [Adding lists to the table of contents](#adding-lists-to-the-table-of-contents)
   - [Header and footer settings using `fancyhdr`](#header-and-footer-settings-using-fancyhdr)
   - [Remove headers and footers for a page](#remove-headers-and-footers-for-a-page)
@@ -50,7 +50,8 @@
 
 - [CV and cover letter](https://gitlab.com/nithiya/cvtemplate)
 - [article](https://gitlab.com/nithiya/articletemplate)
-- [beamer](https://gitlab.com/nithiya/beamertemplate)
+- [Beamer presentation](https://gitlab.com/nithiya/beamertemplate)
+- [book](https://gitlab.com/nithiya/booktemplate)
 
 ## General
 
@@ -87,11 +88,12 @@ It was written by \@author\space on \@date
 
 ```latex
 \newcommand{\education}[5]{
-    \textbf{#1}\hfill\textit{#2} \\
-    \textbf{\textit{#3 $\bullet$ #4}}\hfill#5}
+  \textbf{#1}\hfill\textit{#2} \\
+  \textbf{\textit{#3 $\bullet$ #4}}\hfill#5}
 % end of preamble
 
-\education{Master's Degree in Mathematics}{Apr 2017 — Apr 2018}{University of Alexandria}{Distinction grade}{Alexandria, Egypt}
+\education{Master's Degree in Mathematics}{Apr 2017 — Apr 2018}
+  {University of Alexandria}{Distinction grade}{Alexandria, Egypt}
 ```
 
 ### Graphics
@@ -109,8 +111,20 @@ Source: <https://www.overleaf.com/learn>
 
 ```latex
 \makeatletter
-    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-    \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\def\maxwidth{
+  \ifdim\Gin@nat@width>\linewidth
+  \linewidth
+  \else
+  \Gin@nat@width
+  \fi
+}
+\def\maxheight{
+  \ifdim\Gin@nat@height>\textheight
+  \textheight
+  \else
+  \Gin@nat@height
+  \fi
+}
 \makeatother
 % scale images if necessary, so that they will not overflow the page
 % margins by default, and it is still possible to overwrite the defaults
@@ -122,7 +136,7 @@ Source: <https://www.overleaf.com/learn>
 
 ```latex
 \makeatletter
-    \def\fps@figure{!htb}
+\def\fps@figure{!htb}
 \makeatother
 ```
 
@@ -132,20 +146,26 @@ Source: <https://www.overleaf.com/learn>
 \usepackage{subcaption}
 % end of preamble
 
-An example subfigure (Figure~\ref{fig:subfig}), which contains Figure~\ref{fig:a} and Figure~\ref{fig:b}. Figure~\ref{fig:b} has been flipped horizontally.
+An example subfigure (\autoref{fig:subfig}), which contains \autoref{fig:a}
+and \autoref{fig:b}. \autoref{fig:b} has been flipped horizontally.
 
 \begin{figure}
-    \centering
-    \begin{subfigure}[t]{.4\textwidth}
-        \includegraphics{Passer_montanus_malaccensis}
-        \caption{Picture A. \label{fig:a}}
-    \end{subfigure}
-    ~~~
-    \begin{subfigure}[t]{.4\textwidth}
-        \reflectbox{\includegraphics{Passer_montanus_malaccensis}}
-        \caption{Picture B, which is the same as Picture A, but flipped horizontally. \label{fig:b}}
-    \end{subfigure}
-    \caption{The same Eurasian tree sparrow (\textit{Passer montanus malaccensis}), adult male, in Kuala Lumpur, Malaysia. Taken on 31 January 2019, 15:20:47 by Peter P. Othagoer, Wikimedia Commons, CC BY 4.0. \label{fig:subfig}}
+  \centering
+  \begin{subfigure}[t]{.4\textwidth}
+    \includegraphics{Passer_montanus_malaccensis}
+    \caption{Picture A. \label{fig:a}}
+  \end{subfigure}
+  ~~~
+  \begin{subfigure}[t]{.4\textwidth}
+    \reflectbox{\includegraphics{Passer_montanus_malaccensis}}
+    \caption{Picture B, which is the same as Picture A, but flipped
+      horizontally. \label{fig:b}}
+  \end{subfigure}
+  \caption{
+    The same Eurasian tree sparrow (\textit{Passer montanus malaccensis}),
+    adult male, in Kuala Lumpur, Malaysia. Taken on 31 January 2019, 15:20:47
+    by Peter P. Othagoer, Wikimedia Commons, CC BY 4.0. \label{fig:subfig}
+  }
 \end{figure}
 ```
 
@@ -163,7 +183,8 @@ An example subfigure (Figure~\ref{fig:subfig}), which contains Figure~\ref{fig:a
 \usepackage{booktabs}
 \usepackage{threeparttablex}
 \renewcommand{\arraystretch}{1.2}
-\newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{P}[1]{
+  >{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 ```
 
 #### [Globally change table font size](https://tex.stackexchange.com/a/220258/140109)
@@ -183,7 +204,7 @@ An example subfigure (Figure~\ref{fig:subfig}), which contains Figure~\ref{fig:a
 
 ```latex
 \makeatletter
-    \def\fps@table{!htb}
+\def\fps@table{!htb}
 \makeatother
 ```
 
@@ -206,11 +227,11 @@ See <https://latexcolor.com/>.
 - `urlcolor` is for external links
 
 ```latex
-\usepackage[hidelinks,pdftex,
-    pdfauthor={Author},
-    pdftitle={Title},
-    pdfsubject={Subject},
-    pdfkeywords={keyword1, keyword2}]{hyperref}
+\usepackage[hidelinks,
+  pdfauthor={Author},
+  pdftitle={Title},
+  pdfsubject={Subject},
+  pdfkeywords={keyword1, keyword2}]{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=green,citecolor=blue}
 ```
 
@@ -241,55 +262,55 @@ See <https://tex.stackexchange.com/a/235822/140109> and <https://en.wikibooks.or
 % using named colours from xcolor
 \usepackage[svgnames]{xcolor}
 \lstset{
-    basicstyle=\footnotesize\ttfamily,
-    breaklines=true,
-    numbers=left,
-    backgroundcolor=\color{Snow},
-    commentstyle=\itshape\color{SlateGrey},
-    keywordstyle=\bfseries\color{ForestGreen},
-    numberstyle=\tiny\ttfamily\color{DarkSlateGrey},
-    stringstyle=\color{Crimson},
-    showstringspaces=false
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  numbers=left,
+  backgroundcolor=\color{Snow},
+  commentstyle=\itshape\color{SlateGrey},
+  keywordstyle=\bfseries\color{ForestGreen},
+  numberstyle=\tiny\ttfamily\color{DarkSlateGrey},
+  stringstyle=\color{Crimson},
+  showstringspaces=false
 }
 
 % additional styling for Python code listings
 \lstdefinestyle{py}{
-    language=Python,
-    keywordstyle={[2]\color{ForestGreen}},
-    morekeywords={True,False,as},
-    morestring=[s]{"""}{"""},
-    morestring=[s]{'''}{'''},
-    literate=
-    *{+}{{{\bfseries\color{DarkOrchid}+}}}1
-    {-}{{{\bfseries\color{DarkOrchid}-}}}1
-    {*}{{{\bfseries\color{DarkOrchid}$^\ast$}}}1
-    {/}{{{\bfseries\color{DarkOrchid}/}}}1
-    {^}{{{\bfseries\color{DarkOrchid}\^{}}}}1
-    {?}{{{\bfseries\color{DarkOrchid}?}}}1
-    {!}{{{\bfseries\color{DarkOrchid}!}}}1
-    {\%}{{{\bfseries\color{DarkOrchid}\%}}}1
-    {<}{{{\bfseries\color{DarkOrchid}<}}}1
-    {>}{{{\bfseries\color{DarkOrchid}>}}}1
-    {|}{{{\bfseries\color{DarkOrchid}|}}}1
-    {\&}{{{\bfseries\color{DarkOrchid}\&}}}1
-    {~}{{{\bfseries\color{DarkOrchid}\char`~}}}1
-    {=}{{{\bfseries\color{DarkOrchid}=}}}1
-    %
-    {==}{{{\bfseries\color{DarkOrchid}==}}}2
-    {<=}{{{\bfseries\color{DarkOrchid}<=}}}2
-    {>=}{{{\bfseries\color{DarkOrchid}>=}}}2
-    %
-    {+=}{{{+=}}}2
-    {-=}{{{-=}}}2
-    {*=}{{{$^\ast$=}}}2
-    {/=}{{{/=}}}2
+  language=Python,
+  keywordstyle={[2]\color{ForestGreen}},
+  morekeywords={True,False,as},
+  morestring=[s]{"""}{"""},
+  morestring=[s]{'''}{'''},
+  literate=
+  *{+}{{{\bfseries\color{DarkOrchid}+}}}1
+  {-}{{{\bfseries\color{DarkOrchid}-}}}1
+  {*}{{{\bfseries\color{DarkOrchid}$^\ast$}}}1
+  {/}{{{\bfseries\color{DarkOrchid}/}}}1
+  {^}{{{\bfseries\color{DarkOrchid}\^{}}}}1
+  {?}{{{\bfseries\color{DarkOrchid}?}}}1
+  {!}{{{\bfseries\color{DarkOrchid}!}}}1
+  {\%}{{{\bfseries\color{DarkOrchid}\%}}}1
+  {<}{{{\bfseries\color{DarkOrchid}<}}}1
+  {>}{{{\bfseries\color{DarkOrchid}>}}}1
+  {|}{{{\bfseries\color{DarkOrchid}|}}}1
+  {\&}{{{\bfseries\color{DarkOrchid}\&}}}1
+  {~}{{{\bfseries\color{DarkOrchid}\char`~}}}1
+  {=}{{{\bfseries\color{DarkOrchid}=}}}1
+  %
+  {==}{{{\bfseries\color{DarkOrchid}==}}}2
+  {<=}{{{\bfseries\color{DarkOrchid}<=}}}2
+  {>=}{{{\bfseries\color{DarkOrchid}>=}}}2
+  %
+  {+=}{{{+=}}}2
+  {-=}{{{-=}}}2
+  {*=}{{{$^\ast$=}}}2
+  {/=}{{{/=}}}2
 }
 
 % additional styling for shell script listings
 \lstdefinestyle{sh}{
-    language=sh,
-    keywordstyle={[2]\color{ForestGreen}},
-    morekeywords={grep,mv,rm}
+  language=sh,
+  keywordstyle={[2]\color{ForestGreen}},
+  morekeywords={grep,mv,rm}
 }
 ```
 
@@ -316,8 +337,8 @@ Alternatively, define it as a literal (worked better for me):
 ```latex
 \usepackage{listings}
 \lstdefinestyle{py}{
-    literate=
-    {~}{{{\bfseries\color{DarkOrchid}\char`~}}}1
+  literate=
+  {~}{{{\bfseries\color{DarkOrchid}\char`~}}}1
 }
 ```
 
@@ -344,7 +365,7 @@ Adjust spacing:
 \usepackage{parskip}
 % remove indentation from abstract
 \ifundef{\abstract}{}{\patchcmd{\abstract}
-    {\quotation}{\quotation\noindent\ignorespaces}{}{}}
+  {\quotation}{\quotation\noindent\ignorespaces}{}{}}
 ```
 
 - <https://tex.stackexchange.com/a/1603/140109>
@@ -373,7 +394,8 @@ Numeric bibliography:
 - compact date format
 
 ```latex
-\usepackage[sorting=none,alldates=comp,useprefix=true,giveninits=true,defernumbers=true]{biblatex}
+\usepackage[sorting=none,alldates=comp,useprefix=true,giveninits=true,
+  defernumbers=true]{biblatex}
 ```
 
 ### [BibLaTeX styles](https://www.overleaf.com/learn/latex/Biblatex_citation_styles)
@@ -396,13 +418,11 @@ Alphanumeric style:
     \field[strwidth=4,strside=left,ifnames=1]{title}
   }
   \labelelement{
-        \field[strwidth=2,strside=right]{year}
-        \field[strwidth=2,strside=right]{ND}
+    \field[strwidth=2,strside=right]{year}
+    \field[strwidth=2,strside=right]{ND}
   }
 }
-\DeclareNolabel{
-  \nolabel{\regexp{[\p{Z}\p{P}\p{S}\p{C}]+}}
-}
+\DeclareNolabel{\nolabel{\regexp{[\p{Z}\p{P}\p{S}\p{C}]+}}}
 ```
 
 The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](https://github.com/plk/biblatex/blob/dev/tex/latex/biblatex/biblatex.def). The defaults for `\DeclareNolabel` are `\regexp{[\p{P}\p{S}\p{C}]+}`.
@@ -412,12 +432,10 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 ```latex
 % suppress shorthand values
 \DeclareSourcemap{
-    \maps[datatype=bibtex]{\map{\step[fieldset=shorthand, null]}}
-}
+  \maps[datatype=bibtex]{\map{\step[fieldset=shorthand, null]}}}
 % suppress eprint class values
 \DeclareSourcemap{
-    \maps[datatype=bibtex]{\map{\step[fieldset=eprintclass, null]}}
-}
+  \maps[datatype=bibtex]{\map{\step[fieldset=eprintclass, null]}}}
 ```
 
 ### [Listing entries without in-text citation](https://tex.stackexchange.com/a/17132/140109)
@@ -437,7 +455,8 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
 
 Some text \cite{A01,B02}.
 
-\printbibliography[category=cited]% default title for `article` class: "References"
+% default title for `article` class: "References"
+\printbibliography[category=cited] % ^
 \printbibliography[title={Further Reading},notcategory=cited]
 ```
 
@@ -454,7 +473,8 @@ Some text \cite{A01,B02}.
 ```latex
 \def\theauthor{Euclid of Alexandria}
 % footnote containing author's contact information and/or affiliation
-\def\authornote{Musaeum of Alexandria; Email: \href{mailto:euclid@alexandria.edu}{euclid@alexandria.edu}}
+\def\authornote{Musaeum of Alexandria; Email:
+  \href{mailto:euclid@alexandria.edu}{euclid@alexandria.edu}}
 \usepackage[hidelinks]{hyperref}
 \author{\theauthor \footnote{\authornote}}
 \hypersetup{pdfauthor={\theauthor}}
@@ -463,7 +483,7 @@ Some text \cite{A01,B02}.
 ### [Avoid overfulls in right margin](https://tex.stackexchange.com/a/391321/140109)
 
 ```latex
-\emergencystretch 3em
+\emergencystretch3em
 ```
 
 ### [Remove blank pages after chapters](https://tex.stackexchange.com/a/334126/140109)
@@ -476,19 +496,13 @@ Some text \cite{A01,B02}.
 ### [Fix spacing problem for header and footer using `headheight`](https://tex.stackexchange.com/a/93871/140109)
 
 ```latex
-\geometry{lmargin=2.5cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm,headheight=34pt}
+\geometry{
+  lmargin=2.5cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm,headheight=34pt}
 ```
 
-### Sans serif headings with serif body and math
+### Fonts
 
 - [Font catalogue](https://tug.org/FontCatalogue/)
-
-```latex
-\usepackage{lmodern} % latin modern
-\usepackage{mathpazo} % mathpazo font for body + math
-\usepackage{sectsty} % for setting section headings to sans serif
-\allsectionsfont{\raggedright\normalfont\sffamily\bfseries} % ^ bold + sans serif section headings; aligned left
-```
 
 ### [Adding lists to the table of contents](https://ctan.org/pkg/tocbibind)
 
@@ -508,9 +522,9 @@ Some text \cite{A01,B02}.
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancypagestyle{plain}{
-    \fancyhf{} % set header and footer to nothing
-    \renewcommand{\headrulewidth}{0pt}
-    \fancyfoot[C]{\sffamily\thepage}
+  \fancyhf{} % set header and footer to nothing
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyfoot[C]{\sffamily\thepage}
 }
 \fancyhf{} % sets both header and footer to nothing
 \renewcommand{\headrulewidth}{0pt} % remove horizontal line from header
@@ -518,7 +532,8 @@ Some text \cite{A01,B02}.
 \fancyfoot[LE,RO]{\sffamily\thepage} % page number
 \fancyfoot[RE,LO]{} % blank
 \makeatletter
-\fancyhead[RE]{\if@mainmatter \sffamily\chaptername~\thechapter\fi} % "Chapter X"
+% "Chapter X"
+\fancyhead[RE]{\if@mainmatter \sffamily\chaptername~\thechapter\fi} % ^
 \makeatother
 \fancyhead[LO]{\textit{\sffamily\nouppercase{\leftmark}}} % Chapter title
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
@@ -540,7 +555,8 @@ Some text \cite{A01,B02}.
 ### List of abbreviations
 
 ```latex
-\usepackage[acronym,nomain,nonumberlist,nopostdot,nogroupskip,automake,toc]{glossaries}
+\usepackage[
+  acronym,nomain,nonumberlist,nopostdot,nogroupskip,automake,toc]{glossaries}
 \setglossarystyle{index}
 \makeglossaries
 ```
@@ -612,8 +628,10 @@ Set custom aspect ratio (widescreen) and import colours from `xcolor` (`svgnames
 % short versions in [brackets]
 % use \today to display today's date in MMM dd, YYYY format
 \title[Prime Numbers]{There Is No Largest Prime Number}
-\subtitle[\textit{reductio ad absurdum}]{The proof uses \textit{reductio ad absurdum}.}
-\author[Euclid of Alexandria]{Euclid of Alexandria \href{mailto:euclid@alexandria.edu}{\texttt{<euclid@alexandria.edu>}}}
+\subtitle[\textit{reductio ad absurdum}]{The proof uses
+  \textit{reductio ad absurdum}.}
+\author[Euclid of Alexandria]{Euclid of Alexandria
+  \href{mailto:euclid@alexandria.edu}{\texttt{<euclid@alexandria.edu>}}}
 \institute[Musaeum]{Musaeum of Alexandria}
 \date[ISPN '80]{27th International Symposium of Prime Numbers; 280 BC}
 % define pdf metadata
@@ -635,25 +653,25 @@ Set custom aspect ratio (widescreen) and import colours from `xcolor` (`svgnames
 ```latex
 \mode<presentation>
 {
-    % set inner, outer, and colour themes
-    \useoutertheme{infolines}
-    \usecolortheme{spruce,rose} % these colours are part of beamer
-    \usecolortheme[named=MSUgreen]{structure} % ^
-    \useinnertheme[shadow]{rounded}
-    % remove navigation symbols
-    \setbeamertemplate{navigation symbols}{}
-    % use numbered captions
-    \setbeamertemplate{caption}[numbered]
-    % set custom colours for blocks and text
-    % these colours (except MSUgreen) are named colours from xcolor (svgnames)
-    \setbeamercolor{block title}{fg=MSUgreen,bg=PaleGreen!40}
-    \setbeamercolor{block title example}{fg=RoyalBlue,bg=PowderBlue!40}
-    \setbeamercolor{block title alerted}{fg=Tomato,bg=PeachPuff!40}
-    \setbeamercolor{example text}{fg=RoyalBlue}
-    \setbeamercolor{alerted text}{fg=Tomato}
-    \setbeamercolor{math text}{fg=DarkSlateGrey}
-    % show bibliography numbering
-    \setbeamertemplate{bibliography item}[text]
+  % set inner, outer, and colour themes
+  \useoutertheme{infolines}
+  \usecolortheme{spruce,rose} % these colours are part of beamer
+  \usecolortheme[named=MSUgreen]{structure} % ^
+  \useinnertheme[shadow]{rounded}
+  % remove navigation symbols
+  \setbeamertemplate{navigation symbols}{}
+  % use numbered captions
+  \setbeamertemplate{caption}[numbered]
+  % set custom colours for blocks and text
+  % these colours (except MSUgreen) are named colours from xcolor (svgnames)
+  \setbeamercolor{block title}{fg=MSUgreen,bg=PaleGreen!40}
+  \setbeamercolor{block title example}{fg=RoyalBlue,bg=PowderBlue!40}
+  \setbeamercolor{block title alerted}{fg=Tomato,bg=PeachPuff!40}
+  \setbeamercolor{example text}{fg=RoyalBlue}
+  \setbeamercolor{alerted text}{fg=Tomato}
+  \setbeamercolor{math text}{fg=DarkSlateGrey}
+  % show bibliography numbering
+  \setbeamertemplate{bibliography item}[text]
 }
 ```
 
@@ -675,9 +693,7 @@ Example for a sans-serif presentation:
 [Specifying font](https://www.ctan.org/pkg/newtxtt):
 
 ```latex
-\lstset{
-    basicstyle=\footnotesize\usefont{T1}{newtxtt}{m}{n}
-}
+\lstset{basicstyle=\footnotesize\usefont{T1}{newtxtt}{m}{n}}
 ```
 
 Displaying listing in a frame (must use `fragile`):
@@ -714,13 +730,14 @@ Change font size:
 
 ```latex
 \begin{frame}
-    Citing an article \cite{sigfridsson}, online source \cite{ctan}, and book \cite{aristotle:anima}.
+  Citing an article \cite{sigfridsson}, online source \cite{ctan}, and book
+  \cite{aristotle:anima}.
 \end{frame}
 
 \section*{References}
 \begin{frame}[allowframebreaks]{\insertsectionhead}
-    \nocite{angenendt,vangennep,britannica}
-    \printbibliography[heading=none]
+  \nocite{angenendt,vangennep,britannica}
+  \printbibliography[heading=none]
 \end{frame}
 ```
 
@@ -990,6 +1007,15 @@ Removes unwanted fields for all reference types, except `@misc`:
     \insertsubsectionnavigationsymbol%
     \insertdocnavigationsymbol%
     \insertbackfindforwardnavigationsymbol
+```
+
+### Sans serif headings with serif body and math <!-- omit in toc -->
+
+```latex
+\usepackage{lmodern} % latin modern
+\usepackage{mathpazo} % mathpazo font for body + math
+\usepackage{sectsty} % for setting section headings to sans serif
+\allsectionsfont{\raggedright\normalfont\sffamily\bfseries} % ^ bold + sans serif section headings; aligned left
 ```
 
 </details>

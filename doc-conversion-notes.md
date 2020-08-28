@@ -70,7 +70,7 @@ Source:
 
 ## Poppler
 
-Source: <https://www.ostechnix.com/how-to-merge-pdf-files-in-command-line-on-linux/>
+Source: <https://ostechnix.com/how-to-merge-pdf-files-in-command-line-on-linux/>
 
 Installing in Ubuntu:
 

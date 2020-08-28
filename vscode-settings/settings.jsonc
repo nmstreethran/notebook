@@ -40,7 +40,7 @@
   "editor.minimap.renderCharacters": false,
   "editor.renderWhitespace": "all",
   "editor.rulers": [
-    77
+    79
   ],
   "editor.suggestSelection": "first",
   "editor.wordWrap": "on",
@@ -79,6 +79,9 @@
   "[jsonc]": {
     "editor.tabSize": 2
   },
+  "[latex]": {
+    "editor.tabSize": 2
+  },
   "[restructuredtext]": {
     "editor.tabSize": 3
   },
@@ -99,13 +102,21 @@
     "*.glg",
     "*.glo",
     "*.gls",
+    "*.*glg",
+    "*.*glo",
+    "*.*gls",
     "*.idx",
     "*.ind",
+    "*.ist",
     "*.lof",
+    "*.lol",
     "*.lot",
     "*.nav",
     "*.out",
     "*.run.xml",
+    "*.slg",
+    "*.slo",
+    "*.sls",
     "*.snm",
     "*.synctex(busy)",
     "*.synctex.gz",

@@ -56,6 +56,16 @@
     "when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave/"
   },
   {
+    "key": "ctrl+m",
+    "command": "latex-workshop.shortcut.texttt",
+    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave/"
+  },
+  {
+    "key": "ctrl+l ctrl+m",
+    "command": "-latex-workshop.shortcut.texttt",
+    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave/"
+  },
+  {
     "key": "alt+l alt+b",
     "command": "latex-workshop.build",
     "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId =~ /latex|rsweave/"
