@@ -11,6 +11,7 @@ sed -i -e "s/^lastUsedActivity=.*$/lastUsedActivity=/" desktop-settings/panel.la
 sed -i -e "s/^hiddenItems=.*$/hiddenItems=/" desktop-settings/panel.layout.latte
 sed -i -e "s/^extraItems=.*$/extraItems=/" desktop-settings/panel.layout.latte
 sed -i -e "s/^tileModel=.*$/tileModel=/" desktop-settings/panel.layout.latte
+sed -i -e "s/^PreloadWeight=.*$/PreloadWeight=/" desktop-settings/panel.layout.latte
 
 # copy all notes into wiki
 cp -a *notes.md gh-wiki
