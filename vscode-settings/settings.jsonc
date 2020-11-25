@@ -1,6 +1,7 @@
 {
   "breadcrumbs.enabled": true,
   "cSpell.allowCompoundWords": true,
+  "cSpell.diagnosticLevel": "Hint",
   "cSpell.language": "en-GB",
   "cSpell.maxDuplicateProblems": 2,
   "cSpell.minWordLength": 1,
@@ -257,12 +258,14 @@
   "python.languageServer": "Microsoft",
   "python.linting.pylintEnabled": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
+  "restructuredtext.linter.disabled": true,
+  "restructuredtext.preview.docutil.disabled": true,
   "restructuredtext.preview.doubleClickToSwitchToEditor": false,
   "restructuredtext.preview.sphinx.disabled": true,
+  "restructuredtext.updateOnTextChanged": "false",
   "terminal.integrated.fontSize": 16,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.menuBarVisibility": "hidden",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "Owlet (Outrun)",
+  "workbench.colorTheme": "Abyss",
   "workbench.iconTheme": "material-icon-theme"
 }
