@@ -264,7 +264,7 @@
   "restructuredtext.preview.sphinx.disabled": true,
   "restructuredtext.updateOnTextChanged": "false",
   "terminal.integrated.fontSize": 16,
-  "window.menuBarVisibility": "hidden",
+  "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
   "workbench.colorTheme": "Abyss",
   "workbench.iconTheme": "material-icon-theme"

@@ -11,8 +11,6 @@
 - [Linux](#linux)
   - [Adding directory to PATH environment variables](#adding-directory-to-path-environment-variables)
   - [What to do when Ubuntu freezes](#what-to-do-when-ubuntu-freezes)
-  - [Prevent DejaVu family of fonts from interfering with emoji display](#prevent-dejavu-family-of-fonts-from-interfering-with-emoji-display)
-  - [Font management](#font-management)
   - [Changing the default display manager](#changing-the-default-display-manager)
   - [Installing Firefox Developer Edition](#installing-firefox-developer-edition)
   - [CheckInstall](#checkinstall)
@@ -22,7 +20,6 @@
   - [Handling held back packages](#handling-held-back-packages)
   - [Installing Zotero](#installing-zotero)
   - [Extracting archives](#extracting-archives)
-  - [KDE](#kde)
   - [Snap / Flatpak sandboxing issues](#snap--flatpak-sandboxing-issues)
   - [Using a custom icon for an application](#using-a-custom-icon-for-an-application)
   - [Troubleshooting WiFi issues](#troubleshooting-wifi-issues)
@@ -85,27 +82,6 @@ If it's completely frozen, REISUB it (safer than rebooting)
 > REISUB is BUSIER backwards, as in "The System is **busier** than it should be", if you need to remember it. Or mnemonically - **R**eboot; **E**ven; **I**f; **S**ystem; **U**tterly; **B**roken.
 >
 > **NOTE:** There exists less radical way than rebooting the whole system. If `SysReq` key works, you can kill processes one-by-one using `Alt`+`SysReq`+`F`. Kernel will kill the mostly «expensive» process each time. If you want to kill all processes for one console, you can issue `Alt`+`SysReq`+`K`.
-
-### Prevent DejaVu family of fonts from interfering with emoji display
-
-Installing `twemoji-color-font` and optionally editing `$HOME/.config/fontconfig/56-twemoji-color.conf` to replace the Bitstream Vera family of fonts with other suitable fonts, such as Noto Serif, Ubuntu, and Cascadia Code. The browser font settings should also be changed to match the settings in the configuration file for best results.
-
-***Note:*** This will only work for Mozilla apps.
-
-> The font uses the SVG-in-OpenType format and will currently only show color emoji in Firefox, Thunderbird and other Mozilla Gecko-based applications. This is not a limitation of the font, but of the operating systems and applications. Regular B&W outline emoji are included for backwards/fallback compatibility. -- 13rac1
-
-- <https://github.com/eosrei/twemoji-color-font>
-- <https://www.reddit.com/r/firefox/comments/ev92yz/prevent_dejavu_font_from_messing_with_emojis/>
-- <https://wiki.archlinux.org/index.php/Font_configuration#Replace_or_set_default_fonts>
-- <https://askubuntu.com/a/740649/714808>
-
-### [Font management](https://askubuntu.com/a/371320/714808)
-
-Install [font-manager](https://packages.ubuntu.com/focal/font-manager)
-
-```sh
-sudo apt-get install font-manager
-```
 
 ### [Changing the default display manager](https://askubuntu.com/a/58024/714808)
 
@@ -260,29 +236,6 @@ If `unzip` is not installed:
 ```sh
 sudo apt-get install unzip
 ```
-
-### KDE
-
-#### [Missing network manager](https://askubuntu.com/a/963902/714808)
-
-Install the package:
-
-```sh
-sudo apt-get install plasma-nm
-```
-
-#### Missing terminal
-
-Install Konsole from the app store.
-
-#### Taking screenshots
-
-Install Spectacle from the app store. Screenshot location can be configured in the settings.
-
-#### Customising KDE's appearance with Latte Dock
-
-- <https://www.dedoimedo.com/computers/plasma-global-menu-app-title-window-buttons-like-mac-unity.html>
-- <https://www.dedoimedo.com/computers/plasma-look-like-mac.html>
 
 ### Snap / Flatpak sandboxing issues
 
@@ -563,6 +516,46 @@ Paste the following in your local font configuration file (`/etc/fonts/conf.avai
     </match>
     <include ignore_missing="yes">local.conf</include>
 </fontconfig>
+```
+
+### Prevent DejaVu family of fonts from interfering with emoji display <!-- omit in toc -->
+
+Installing `twemoji-color-font` and optionally editing `$HOME/.config/fontconfig/56-twemoji-color.conf` to replace the Bitstream Vera family of fonts with other suitable fonts, such as Noto Serif, Ubuntu, and Cascadia Code. The browser font settings should also be changed to match the settings in the configuration file for best results.
+
+***Note:*** This will only work for Mozilla apps.
+
+> The font uses the SVG-in-OpenType format and will currently only show color emoji in Firefox, Thunderbird and other Mozilla Gecko-based applications. This is not a limitation of the font, but of the operating systems and applications. Regular B&W outline emoji are included for backwards/fallback compatibility. -- 13rac1
+
+- <https://github.com/eosrei/twemoji-color-font>
+- <https://www.reddit.com/r/firefox/comments/ev92yz/prevent_dejavu_font_from_messing_with_emojis/>
+- <https://wiki.archlinux.org/index.php/Font_configuration#Replace_or_set_default_fonts>
+- <https://askubuntu.com/a/740649/714808>
+
+### KDE <!-- omit in toc -->
+
+#### Taking screenshots
+
+Install Spectacle from the app store. Screenshot location can be configured in the settings.
+
+#### Customising KDE's appearance with Latte Dock
+
+- <https://www.dedoimedo.com/computers/plasma-global-menu-app-title-window-buttons-like-mac-unity.html>
+- <https://www.dedoimedo.com/computers/plasma-look-like-mac.html>
+
+#### [Missing network manager](https://askubuntu.com/a/963902/714808)
+
+Install the package:
+
+```sh
+sudo apt-get install plasma-nm
+```
+
+### [Font management](https://askubuntu.com/a/371320/714808) <!-- omit in toc -->
+
+Install [font-manager](https://packages.ubuntu.com/focal/font-manager)
+
+```sh
+sudo apt-get install font-manager
 ```
 
 </details>

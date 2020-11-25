@@ -2,7 +2,7 @@
 
 [![View notes on GitHub Wiki](https://img.shields.io/badge/-View%20on%20GitHub%20Wiki-seagreen?style=for-the-badge&logo=github&labelColor=black&logoColor=white)](https://github.com/nmstreethran/notebook/wiki)
 
-Welcome to my notebook!
+Welcome to my notebook! This is where I backup my settings and computing notes.
 
 ## Configurations
 
@@ -10,13 +10,11 @@ Welcome to my notebook!
 
 [Visual Studio Code](https://code.visualstudio.com/) / [VSCodium](https://vscodium.com/)
 
-Settings and extensions used can be found in the `vscode-settings` folder.
+Settings and the list of extensions used can be found in the `vscode-settings` folder.
 
 ### OS
 
-Ubuntu + KDE Plasma
-
-Settings can be found in the `desktop-settings` folder.
+Kubuntu and Windows 10
 
 ## License and credits
 
