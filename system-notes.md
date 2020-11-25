@@ -39,7 +39,7 @@ Windows: go to **Settings charm** > **Change PC settings** > **Update and Recove
 
 ## Windows
 
-### [Setting or changing the PATH system variable](https://www.java.com/en/download/help/path.xml)
+### [Setting or changing the PATH system variable](https://www.java.com/en/download/help/path.html)
 
 - The **PATH** is the system variable that your operating system uses to locate needed executables from the command line or Terminal window.
 - The **PATH** system variable can be set using **System Utility** in control panel on Windows.

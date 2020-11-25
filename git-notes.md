@@ -43,9 +43,9 @@
 
 [Using SSH keys](https://stackoverflow.com/a/34957424/4573584):
 
-- <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>
-- <https://docs.github.com/en/github/using-git/changing-a-remotes-url>
-- <https://gitlab.com/help/ssh/README>
+- <https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh>
+- <https://docs.github.com/en/free-pro-team@latest/github/using-git/changing-a-remotes-url>
+- <https://docs.gitlab.com/ee/ssh/README.html>
 
 Check for existing SSH keys:
 
@@ -221,7 +221,7 @@ git push origin -f
 
 Replace `<num>` with the number of commits you want to remove. e.g., `git reset --hard HEAD~2` removes the last two commits.
 
-### [Reducing the repository size or modifying commited files](https://gitlab.com/help/user/project/repository/reducing_the_repo_size_using_git.md)
+### [Reducing the repository size or modifying commited files](https://docs.gitlab.com/ee/user/project/repository/reducing_the_repo_size_using_git.html)
 
 Using [BFG](https://rtyley.github.io/bfg-repo-cleaner/).
 
@@ -263,7 +263,7 @@ git push
 
 ***Note:*** branches must be unprotected in GitLab for a successful push.
 
-## [Ignoring files](https://docs.github.com/en/github/using-git/ignoring-files)
+## [Ignoring files](https://docs.github.com/en/free-pro-team@latest/github/using-git/ignoring-files)
 
 ### Templates
 
@@ -293,13 +293,13 @@ pippo/pluto/*
 
 - [Delete wiki home page](https://stackoverflow.com/a/42653762/4573584)
 - [GitHub Wiki How-To](https://gist.github.com/subfuzion/0d3f19c4f780a7d75ba2)
-- [Detach a fork and turn it into a standalone repository](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile) -- contact [GitHub support](https://support.github.com)
+- [Detach a fork and turn it into a standalone repository](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile) -- contact [GitHub support](https://support.github.com)
 
 ## Pull requests
 
 - [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
-- [About pull request merges](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges)
-- [Merging a pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request)
+- [About pull request merges](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges)
+- [Merging a pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request)
 
 ## GitLab API
 
@@ -316,14 +316,14 @@ Parameters:
 
 Example for the file at <https://gitlab.com/nithiya/ml-elec-model-data/-/blob/master/geography/polygons/bidding_zones.geojson>:
 
-- `file_path`: `geography%2Fpolygons%2Fbidding_zones.geojson`
+- `file_path`: `geography%2Fpolygons%2Fbidding%5Fzones%2Egeojson`
 - `ref`: `master`
 - `id`: `19753809`
 
 URL:
 
 ```md
-https://gitlab.com/api/v4/projects/19753809/repository/files/geography%2Fpolygons%2Fbidding_zones.geojson/raw?ref=master
+https://gitlab.com/api/v4/projects/19753809/repository/files/geography%2Fpolygons%2Fbidding%5Fzones%2Egeojson/raw?ref=master
 ```
 
 ## Errors
@@ -432,6 +432,6 @@ git pull -s subtree docs master
 
 Merging changes the other way is complicated.
 
-More about subtree merges on [GitHub](https://docs.github.com/en/github/using-git/about-git-subtree-merges).
+More about subtree merges on [GitHub](https://docs.github.com/en/free-pro-team@latest/github/using-git/about-git-subtree-merges).
 
 </details>
