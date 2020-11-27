@@ -14,7 +14,7 @@ Settings and the list of extensions used can be found in the `vscode-settings` f
 
 ### OS
 
-Kubuntu and Windows 10
+[Kubuntu](https://kubuntu.org/) and Windows 10
 
 ## License and credits
 

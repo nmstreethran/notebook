@@ -4,12 +4,15 @@
 
 - [Turn on or off secure boot](#turn-on-or-off-secure-boot)
 - [Fix boot order / Grub menu not appearing on startup](#fix-boot-order--grub-menu-not-appearing-on-startup)
+- [Booting into a USB device using Grub2](#booting-into-a-usb-device-using-grub2)
+- [Changing default Grub boot OS](#changing-default-grub-boot-os)
 - [Windows](#windows)
   - [Setting or changing the PATH system variable](#setting-or-changing-the-path-system-variable)
   - [Securely delete files on Windows 10 without third-party tools](#securely-delete-files-on-windows-10-without-third-party-tools)
   - [Closing windows that are open](#closing-windows-that-are-open)
   - [Editing hosts file - Windows 10](#editing-hosts-file---windows-10)
   - [Resetting PC on Windows 10](#resetting-pc-on-windows-10)
+  - [Computer shuts down or hibernates immediately after waking from sleep](#computer-shuts-down-or-hibernates-immediately-after-waking-from-sleep)
 - [Linux](#linux)
   - [Adding directory to PATH environment variables](#adding-directory-to-path-environment-variables)
   - [Editing hosts file - Ubuntu](#editing-hosts-file---ubuntu)
@@ -38,7 +41,7 @@
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
 
-Open the PC BIOS menu. You can often access this menu by pressing a key during the bootup sequence, such as F1, F2, F12, or Esc.
+Open the PC BIOS menu. You can often access this menu by pressing a key during the boot up sequence, such as F1, F2, F12, or Esc.
 
 Or, from Windows: go to **Settings charm** > **Change PC settings** > **Update and Recovery** > **Recovery** > **Advanced Startup: Restart now**. When the PC reboots, go to **Troubleshoot** > **Advanced Options: UEFI Firmware Settings**.
 
@@ -47,6 +50,65 @@ Find the **Secure Boot** setting, and if possible, set it to **Enabled**. This o
 ## Fix boot order / Grub menu not appearing on startup
 
 Windows: go to **Settings charm** > **Change PC settings** > **Update and Recovery** > **Recovery** > **Advanced Startup: Restart now**. When the PC reboots, go to **Troubleshoot** > **Advanced Options: UEFI Firmware Settings**. Change the order of the OS in boot settings.
+
+## Booting into a USB device using Grub2
+
+The Grub2 command line might show up if you had a dual boot system with Windows 10 and Linux, and the Linux partition has been deleted. This will remove the usual Grub menu which lets you choose between operating systems or UEFI settings. It will not boot into Windows 10 automatically like it did pre-Linux installation, as the master boot record (MBR) has been removed.
+
+This is not an issue for older Windows versions, as the BIOS screen will show up on start up.
+
+If you have not restarted and are still running Windows 10, plug in the USB device and use the advanced startup options in the settings to boot from USB. If you have already restarted, use a Windows 10 installation/recovery medium to restore the MBR. Alternatively, follow the instructions below, which uses the Grub2 command line and do not require a Windows 10 recovery medium.
+
+When creating a bootable USB, note where the `vmlinuz` and `initrd.*` files are located. In my case, it was in `cdrom/casper`.
+
+Plug in the USB and turn on the device.
+
+In the Grub2 command line, use `ls` to get a list of partitions available:
+
+```grub
+grub> ls
+(hd0) (hd0,msdos5) (hd1) (hd1,msdos0)
+```
+
+The root partition of the USB device will probably be the last in the list (i.e, `(hd1,msdos0)`).
+
+Finally, boot the system using the following set of commands:
+
+```grub
+grub> linux (hd1,msdos1)/casper/vmlinuz root=/dev/sdb1
+grub> initrd (hd1,msdos1)/casper/initrd
+grub> boot
+```
+
+- <https://blog.viktorpetersson.com/2014/07/29/how-to-boot-from-usb-with-grub2.html>
+
+## [Changing default Grub boot OS](https://askubuntu.com/a/110738/714808)
+
+On Linux, create a backup of the Grub file:
+
+```sh
+sudo cp /etc/default/grub /etc/default/grub.bak
+```
+
+Open `/boot/grub/grub.cfg` which has a `menuentry` for each Grub menu item. Note the name of the `menuentry` which you want to set as default. An example for Windows 7:
+
+```txt
+menuentry 'Microsoft Windows XP Professional (on /dev/sda1)' [options] {
+```
+
+Open `/etc/default/grub` using a text editor with `sudo` or administrative privileges. Find the line that contains `GRUB_DEFAULT=0`. Replace `0` with the name of the `menuentry` and save the file:
+
+```txt
+GRUB_DEFAULT='Microsoft Windows XP Professional (on /dev/sda1)'
+```
+
+Finally, update the Grub menu:
+
+```sh
+sudo update-grub
+```
+
+If anything goes wrong, restore the Grub file using the backup.
 
 ## Windows
 
@@ -81,6 +143,10 @@ When reinstalling Windows 10, there are two options:
 When resetting, if there are multiple drives or partitions, it will ask if you want to clear all drives, or only the drive with Windows installed. Selecting the latter will only format the Windows drive.
 
 <https://www.neowin.net/forum/topic/1266840-windows-10-reset-this-pc-will-it-delete-files-on-another-partition/>
+
+### [Computer shuts down or hibernates immediately after waking from sleep](https://www.dell.com/community/Laptops-General-Read-Only/Laptop-shuts-down-immediately-after-waking-from-sleep/td-p/5162536)
+
+This is most likely caused by a critical thermal event, which could happen due to a malfunctioning cooling fan. Check the event viewer.
 
 ## Linux
 

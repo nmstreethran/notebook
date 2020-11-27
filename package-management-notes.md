@@ -18,6 +18,7 @@
   - [Uninstalling packages](#uninstalling-packages)
   - [Prevent conda from activating the base environment by default](#prevent-conda-from-activating-the-base-environment-by-default)
   - [Environment error](#environment-error)
+  - [Fixing `error: invalid command 'bdist_wheel'`](#fixing-error-invalid-command-bdist_wheel)
 - [Creating a requirements file](#creating-a-requirements-file)
 - [References](#references)
 
@@ -340,6 +341,20 @@ Fixed using:
 pip3 install --user package-name  # for Python3
 pip install --user package-name   # for Python2
 ```
+
+### Fixing `error: invalid command 'bdist_wheel'`
+
+Installing `wheel` fixes the issue:
+
+```sh
+pip install wheel
+```
+
+Upgrading `pip` or `setuptools`, or reinstalling `wheel` could also potentially fix it.
+
+The issue could be caused by the absence of `setup_requires=['wheel']` in `setup.py`.
+
+See <https://stackoverflow.com/q/34819221/4573584> for more information.
 
 ## Creating a requirements file
 
