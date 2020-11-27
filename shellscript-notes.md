@@ -5,6 +5,7 @@ Shell scripts and commands, including Bash, AWK, sed, grep.
 ## Table of contents <!-- omit in toc -->
 
 - [Using the terminal to navigate through directories](#using-the-terminal-to-navigate-through-directories)
+- [Finding files](#finding-files)
 - [Copy files from one directory to another, ignoring all .files and .dirs](#copy-files-from-one-directory-to-another-ignoring-all-files-and-dirs)
 - [Copy all files with a certain name or extension from one directory into another](#copy-all-files-with-a-certain-name-or-extension-from-one-directory-into-another)
 - [Get a list of folder names in a directory and save to file](#get-a-list-of-folder-names-in-a-directory-and-save-to-file)
@@ -27,6 +28,26 @@ Changing directories using `cd`:
 - To navigate to your home directory: `cd` or `cd ~`
 - To navigate up one directory level: `cd ..`
 - To navigate to the previous directory (or back): `cd -`
+
+## [Finding files](https://www.lifewire.com/uses-of-linux-command-find-2201100)
+
+Searching in the current active path:
+
+```sh
+find filename
+```
+
+Searching the entire drive:
+
+```sh
+find / filename
+```
+
+Searching in the current folder:
+
+```sh
+find . filename
+```
 
 ## [Copy files from one directory to another, ignoring all .files and .dirs](https://stackoverflow.com/a/11557164/4573584)
 

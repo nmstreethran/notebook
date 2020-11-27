@@ -7,6 +7,7 @@
   - [Merging PDF files and generating bookmarks](#merging-pdf-files-and-generating-bookmarks)
 - [Poppler](#poppler)
   - [Merging PDF files](#merging-pdf-files)
+  - [Separating PDF files](#separating-pdf-files)
   - [Convert PDF to image](#convert-pdf-to-image)
 - [Pandoc](#pandoc)
 
@@ -85,6 +86,18 @@ This method preserves hyperlinks.
 ```sh
 pdfunite file1.pdf file2.pdf file3.pdf outputfile.pdf
 ```
+
+### Separating PDF files
+
+Separating individual pages of a PDF file.
+
+```sh
+pdfseparate -f x -l y inputfile.pdf output_%d.pdf
+```
+
+Replace `x` and `y` with the numbers of the first and last page to extract, respectively. `-f` and `-l` can be omitted, which causes the extraction to start with the first and end with the last page of the document, respectively. The `%d` in the output files will be replaced by the page number.
+
+Source: <http://linux-commands-examples.com/pdfseparate>
 
 ### [Convert PDF to image](https://askubuntu.com/a/50180/714808)
 

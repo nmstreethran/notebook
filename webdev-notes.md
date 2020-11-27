@@ -3,6 +3,7 @@
 ## Table of contents <!-- omit in toc -->
 
 - [HTML / CSS](#html--css)
+  - [Colours](#colours)
   - [Selectors reference](#selectors-reference)
   - [Render whitespace when using `content`](#render-whitespace-when-using-content)
   - [Overflow](#overflow)
@@ -22,6 +23,14 @@
   - [See also](#see-also)
 
 ## HTML / CSS
+
+### Colours
+
+References:
+
+- [HTML colour codes](https://htmlcolorcodes.com/)
+- [Percent colour codes](https://www.december.com/html/spec/colorper.html)
+- [Mozilla colour picker tool](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
 
 ### Selectors reference
 

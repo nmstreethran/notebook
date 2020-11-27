@@ -8,21 +8,32 @@
   - [Setting or changing the PATH system variable](#setting-or-changing-the-path-system-variable)
   - [Securely delete files on Windows 10 without third-party tools](#securely-delete-files-on-windows-10-without-third-party-tools)
   - [Closing windows that are open](#closing-windows-that-are-open)
+  - [Editing hosts file - Windows 10](#editing-hosts-file---windows-10)
+  - [Resetting PC on Windows 10](#resetting-pc-on-windows-10)
 - [Linux](#linux)
   - [Adding directory to PATH environment variables](#adding-directory-to-path-environment-variables)
+  - [Editing hosts file - Ubuntu](#editing-hosts-file---ubuntu)
   - [What to do when Ubuntu freezes](#what-to-do-when-ubuntu-freezes)
   - [Changing the default display manager](#changing-the-default-display-manager)
   - [Installing Firefox Developer Edition](#installing-firefox-developer-edition)
   - [CheckInstall](#checkinstall)
-  - [Installing from an archive](#installing-from-an-archive)
   - [Uninstalling software](#uninstalling-software)
   - [Useful packages](#useful-packages)
   - [Handling held back packages](#handling-held-back-packages)
   - [Installing Zotero](#installing-zotero)
-  - [Extracting archives](#extracting-archives)
+  - [Creating and extracting archives](#creating-and-extracting-archives)
+  - [Installing from an archive](#installing-from-an-archive)
+  - [Automount hard disks on boot](#automount-hard-disks-on-boot)
+  - [Preventing applications from launching on boot](#preventing-applications-from-launching-on-boot)
+  - [Fixing 'Setting locale failed'](#fixing-setting-locale-failed)
   - [Snap / Flatpak sandboxing issues](#snap--flatpak-sandboxing-issues)
   - [Using a custom icon for an application](#using-a-custom-icon-for-an-application)
   - [Troubleshooting WiFi issues](#troubleshooting-wifi-issues)
+- [Android](#android)
+  - [How-to-Geek Guides on unlocking bootloader, backups, recovery, and flashing ROMs](#how-to-geek-guides-on-unlocking-bootloader-backups-recovery-and-flashing-roms)
+  - [Unlocking bootloader and rooting](#unlocking-bootloader-and-rooting)
+  - [Finding the list of devices attached via USB using Android SDK tools](#finding-the-list-of-devices-attached-via-usb-using-android-sdk-tools)
+  - [Flashing Samsung phones](#flashing-samsung-phones)
 - [Old](#old)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
@@ -56,6 +67,21 @@ Using the [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdel
 
 Ensure the window to be closed is in focus. Press `Alt` + `F4` to close.
 
+### [Editing hosts file - Windows 10](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)
+
+Open `c:\windows\system32\drivers\etc\hosts` as an administrator using a text editor.
+
+### Resetting PC on Windows 10
+
+When reinstalling Windows 10, there are two options:
+
+- keep personal files and remove all apps and settings (refresh)
+- remove all personal files, apps, and setting (reset)
+
+When resetting, if there are multiple drives or partitions, it will ask if you want to clear all drives, or only the drive with Windows installed. Selecting the latter will only format the Windows drive.
+
+<https://www.neowin.net/forum/topic/1266840-windows-10-reset-this-pc-will-it-delete-files-on-another-partition/>
+
 ## Linux
 
 ### [Adding directory to PATH environment variables](https://askubuntu.com/a/688998/714808)
@@ -65,6 +91,10 @@ These are added to the `.bashrc` (shell startup) file, which can be found in the
 ```sh
 echo export PATH=\"$(echo path/to/file/):\$PATH\" >> ~/.bashrc
 ```
+
+### [Editing hosts file - Ubuntu](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)
+
+Open `/etc/hosts` as an administrator using a text editor.
 
 ### [What to do when Ubuntu freezes](https://askubuntu.com/a/36717/714808)
 
@@ -145,16 +175,6 @@ you will use
 sudo checkinstall
 ```
 
-### [Installing from an archive](https://askubuntu.com/a/1030/714808)
-
-First, extract the archive. Then, open a terminal and navigate to the directory of the extracted folder.
-
-Installation (depends on instructions):
-
-```sh
-xdg-open INSTALL
-```
-
 ### [Uninstalling software](https://askubuntu.com/a/1144/714808)
 
 If installed via package manager:
@@ -204,7 +224,7 @@ References:
 - <https://www.zotero.org/support/installation>
 - <https://askubuntu.com/a/1147073/714808>
 
-### Extracting archives
+### Creating and extracting archives
 
 #### [Extracting tarballs](https://askubuntu.com/a/25962/714808)
 
@@ -237,6 +257,57 @@ If `unzip` is not installed:
 sudo apt-get install unzip
 ```
 
+#### Zipping and unzipping files
+
+- <https://www.howtogeek.com/414082/how-to-zip-or-unzip-files-from-the-linux-terminal/>
+- <https://www.ubuntupit.com/how-to-zip-and-unzip-files-on-ubuntu-linux-an-ultimate-guide/>
+
+### [Installing from an archive](https://askubuntu.com/a/1030/714808)
+
+First, extract the archive. Then, open a terminal and navigate to the directory of the extracted folder.
+
+Installation (depends on instructions):
+
+```sh
+xdg-open INSTALL
+```
+
+### Automount hard disks on boot
+
+For Ubuntu, see <https://www.fosslinux.com/4216/how-to-automount-hard-disk-partitions-in-ubuntu.htm>
+
+For Kubuntu, search for 'Removable Devices' and change the settings there.
+
+### [Preventing applications from launching on boot](https://www.reddit.com/r/Kubuntu/comments/bcae00/how_to_prevent_qbittorrent_from_launching_at/)
+
+System Settings > Startup and Shutdown > Desktop Session > On Login > Enable 'Start with an empty session'
+
+### Fixing 'Setting locale failed'
+
+The error looks like this:
+
+```txt
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+[...]
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+locale: Cannot set LC_ALL to default locale: No such file or directory
+```
+
+Run `locale` to list all locales defined for the user.
+
+To reconfigure locales, identify the locale name (e.g., `en_GB.UTF-8`), generate it, and then reconfigure:
+
+```sh
+sudo locale-gen "en_GB.UTF-8"
+sudo dpkg-reconfigure locales
+```
+
+<https://draculaservers.com/tutorials/setting-locale-failed-ubuntu/>
+
+Alternatively, when installing Ubuntu, select a region which has the desired locale (e.g., United Kingdom for `en_GB.UTF-8`), and change the timezone manually once the installation is complete.
+
 ### Snap / Flatpak sandboxing issues
 
 - must use full path for LaTeX commands in VSCodium, despite being added to the environment variables
@@ -260,6 +331,56 @@ Open the copied file and change the value of `Icon`, e.g., change absolute path 
 ### Troubleshooting WiFi issues
 
 See <https://askubuntu.com/a/235280/714808>.
+
+## Android
+
+### How-to-Geek Guides on unlocking bootloader, backups, recovery, and flashing ROMs
+
+- <https://www.howtogeek.com/125375/how-to-create-a-full-android-phone-or-tablet-backup-without-rooting-or-unlocking-your-device/>
+- <https://www.howtogeek.com/125769/how-to-install-and-use-abd-the-android-debug-bridge-utility/>
+- <https://www.howtogeek.com/239798/how-to-unlock-your-android-phones-bootloader-the-official-way/>
+- <https://www.howtogeek.com/193055/what-is-a-custom-recovery-on-android-and-why-would-i-want-one/>
+- <https://www.howtogeek.com/240047/how-to-flash-twrp-recovery-on-your-android-phone/>
+- <https://www.howtogeek.com/115297/how-to-root-your-android-why-you-might-want-to/>
+- <https://www.howtogeek.com/240582/how-to-back-up-and-restore-your-android-phone-with-twrp/>
+
+### Unlocking bootloader and rooting
+
+- [[HOW TO] Unlock Bootloader & Root GSM Nexus (4.0.x devices only) - XDA Developers](https://forum.xda-developers.com/galaxy-nexus/how-to-unlock-bootloader-root-gsm-nexus-t1362957)
+- Download [Android Studio](https://developer.android.com/studio) to use SDK tools
+- [What is a data/media device? - TWRP](https://twrp.me/faq/datamedia.html)
+- [What is EXCLUDED from a TWRP backup? - TWRP](https://twrp.me/faq/backupexclusions.html)
+
+### Finding the list of devices attached via USB using Android SDK tools
+
+- Install Android SDK tools (via Android Studio)
+- Connect to Android devices using USB cable
+- Navigate to the `platform-tools` directory (in my case, `$HOME/Android/Sdk/platform-tools`)
+- Run `adb devices` (in my case, `./adb devices`)
+
+### Flashing Samsung phones
+
+From the [Android Enthusiasts SE](https://android.stackexchange.com/a/162667/304762):
+
+> *[...] Samsung devices do not support fastboot, you use Odin or Heimdall to flash what you need.*
+
+Why use Heimdall, not Odin (from [Heimdall's homepage](https://glassechidna.com.au/heimdall/)):
+
+> *For internal use, Samsung developed their own firmware flashing tool known as 'Odin' [...]*
+>
+> *Aside from being slow and generally unreliable, Odin only runs on Windows systems. Furthermore, Odin is 'leaked software' that is not officially supported by Samsung, freely available, or well understood by the community at large.*
+
+Links:
+
+- [Heimdall source code on GitLab](https://gitlab.com/BenjaminDobell/Heimdall)
+- [Heimdall guide - XDA Developers](https://forum.xda-developers.com/wiki/Heimdall)
+- [heimdall-flash package - Ubuntu Focal](https://packages.ubuntu.com/focal/heimdall-flash)
+- [heimdall-flash-frontend package - Ubuntu Focal](https://packages.ubuntu.com/focal/heimdall-flash-frontend)
+- [TWRP for Galaxy Tab 2 GMS](https://twrp.me/samsung/samsunggalaxytab2gmsunified.html)
+- [Recoveries for Samsung Galaxy Tab 2](https://andi34.github.io/recoveries_tab2.html)
+- [LineageOS for Galaxy Tab 2](https://andi34.github.io/roms_tab2_lineage.html)
+- [LineageOS 13.0 (Marshmallow - Android 6.0) for Galaxy Tab 2 GMS - XDA Developers](https://forum.xda-developers.com/galaxy-tab-2/galaxy-tab-2-unified/rom-cyanogenmod-13-cm13-0-t3303798)
+- [LineageOS Samsung espresso3g - GitHub](https://github.com/LineageOS/android_device_samsung_espresso3g)
 
 ## Old
 

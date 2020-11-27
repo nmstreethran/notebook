@@ -287,7 +287,7 @@ Installing `virtualenv`:
 python3 -m pip install --user virtualenv
 ```
 
-Creating a virtual environment:
+Creating a virtual environment (`virtualenv` not needed -- `venv` is part of Python's base):
 
 ```sh
 python3 -m venv env

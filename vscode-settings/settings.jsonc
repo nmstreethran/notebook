@@ -1,7 +1,6 @@
 {
   "breadcrumbs.enabled": true,
   "cSpell.allowCompoundWords": true,
-  "cSpell.diagnosticLevel": "Hint",
   "cSpell.language": "en-GB",
   "cSpell.maxDuplicateProblems": 2,
   "cSpell.minWordLength": 1,
@@ -59,6 +58,12 @@
     "*.theme": "jsonc"
   },
   "files.autoSave": "afterDelay",
+  "files.watcherExclude": {
+    "**/env/bin/**": true,
+    "**/env/lib/**": true,
+    "**/env/lib64/**": true,
+    "**/env/share/**": true
+  },
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
@@ -91,6 +96,7 @@
   "latex-workshop.bibtex-format.tab": "tab",
   "latex-workshop.bind.altKeymap.enabled": true,
   "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.latex.autoBuild.run": "never",
   "latex-workshop.latex.autoClean.run": "onBuilt",
   "latex-workshop.latex.clean.fileTypes": [
     "*.acn",
@@ -252,11 +258,13 @@
     "old": "archive",
     "wiki": "docs"
   },
+  "python.dataScience.alwaysTrustNotebooks": true,
   "python.dataScience.askForKernelRestart": false,
   "python.dataScience.exportWithOutputEnabled": true,
   "python.dataScience.notebookFileRoot": "${workspaceFolder}",
-  "python.languageServer": "Microsoft",
+  "python.languageServer": "Pylance",
   "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
   "restructuredtext.linter.disabled": true,
   "restructuredtext.preview.docutil.disabled": true,
