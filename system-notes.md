@@ -33,10 +33,12 @@
   - [Using a custom icon for an application](#using-a-custom-icon-for-an-application)
   - [Troubleshooting WiFi issues](#troubleshooting-wifi-issues)
 - [Android](#android)
-  - [How-to-Geek Guides on unlocking bootloader, backups, recovery, and flashing ROMs](#how-to-geek-guides-on-unlocking-bootloader-backups-recovery-and-flashing-roms)
-  - [Unlocking bootloader and rooting](#unlocking-bootloader-and-rooting)
   - [Finding the list of devices attached via USB using Android SDK tools](#finding-the-list-of-devices-attached-via-usb-using-android-sdk-tools)
-  - [Flashing Samsung phones](#flashing-samsung-phones)
+  - [ADB commands](#adb-commands)
+  - [Flashing Samsung phones - Heimdall vs Odin](#flashing-samsung-phones---heimdall-vs-odin)
+  - [Booting Samsung devices into download mode](#booting-samsung-devices-into-download-mode)
+  - [Using Heimdall and TWRP](#using-heimdall-and-twrp)
+  - [Links](#links)
 - [Old](#old)
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
@@ -80,7 +82,7 @@ grub> initrd (hd1,msdos1)/casper/initrd
 grub> boot
 ```
 
-- <https://blog.viktorpetersson.com/2014/07/29/how-to-boot-from-usb-with-grub2.html>
+<https://blog.viktorpetersson.com/2014/07/29/how-to-boot-from-usb-with-grub2.html>
 
 ## [Changing default Grub boot OS](https://askubuntu.com/a/110738/714808)
 
@@ -108,7 +110,7 @@ Finally, update the Grub menu:
 sudo update-grub
 ```
 
-If anything goes wrong, restore the Grub file using the backup.
+If anything goes wrong, restore using the backup.
 
 ## Windows
 
@@ -400,31 +402,19 @@ See <https://askubuntu.com/a/235280/714808>.
 
 ## Android
 
-### How-to-Geek Guides on unlocking bootloader, backups, recovery, and flashing ROMs
-
-- <https://www.howtogeek.com/125375/how-to-create-a-full-android-phone-or-tablet-backup-without-rooting-or-unlocking-your-device/>
-- <https://www.howtogeek.com/125769/how-to-install-and-use-abd-the-android-debug-bridge-utility/>
-- <https://www.howtogeek.com/239798/how-to-unlock-your-android-phones-bootloader-the-official-way/>
-- <https://www.howtogeek.com/193055/what-is-a-custom-recovery-on-android-and-why-would-i-want-one/>
-- <https://www.howtogeek.com/240047/how-to-flash-twrp-recovery-on-your-android-phone/>
-- <https://www.howtogeek.com/115297/how-to-root-your-android-why-you-might-want-to/>
-- <https://www.howtogeek.com/240582/how-to-back-up-and-restore-your-android-phone-with-twrp/>
-
-### Unlocking bootloader and rooting
-
-- [[HOW TO] Unlock Bootloader & Root GSM Nexus (4.0.x devices only) - XDA Developers](https://forum.xda-developers.com/galaxy-nexus/how-to-unlock-bootloader-root-gsm-nexus-t1362957)
-- Download [Android Studio](https://developer.android.com/studio) to use SDK tools
-- [What is a data/media device? - TWRP](https://twrp.me/faq/datamedia.html)
-- [What is EXCLUDED from a TWRP backup? - TWRP](https://twrp.me/faq/backupexclusions.html)
-
 ### Finding the list of devices attached via USB using Android SDK tools
 
-- Install Android SDK tools (via Android Studio)
-- Connect to Android devices using USB cable
+- Install Android SDK tools on computer (via [Android Studio](https://developer.android.com/studio))
+- Enable USB debugging on the device
+- Connect device to computer using USB cable
 - Navigate to the `platform-tools` directory (in my case, `$HOME/Android/Sdk/platform-tools`)
 - Run `adb devices` (in my case, `./adb devices`)
 
-### Flashing Samsung phones
+### ADB commands
+
+The list of ADB commands can be viewed [here](https://technastic.com/adb-commands-list-adb-cheat-sheet/). See [here](https://technastic.com/adb-shell-commands-list/) for ADB shell commands.
+
+### Flashing Samsung phones - Heimdall vs Odin
 
 From the [Android Enthusiasts SE](https://android.stackexchange.com/a/162667/304762):
 
@@ -436,17 +426,66 @@ Why use Heimdall, not Odin (from [Heimdall's homepage](https://glassechidna.com.
 >
 > *Aside from being slow and generally unreliable, Odin only runs on Windows systems. Furthermore, Odin is 'leaked software' that is not officially supported by Samsung, freely available, or well understood by the community at large.*
 
+### [Booting Samsung devices into download mode](https://technastic.com/samsung-download-recovery-mode/)
+
+- **Option 1:** Turn off the device and hold the Volume Up, Volume Down and Power buttons for a few seconds.
+- **Option 2:**
+  - Follow the steps detailed in [this section](#finding-the-list-of-devices-attached-via-usb-using-android-sdk-tools).
+  - If `adb devices` produces an output, proceed to the next step.
+  - Run `adb reboot bootloader` to reboot into download mode.
+
+### Using Heimdall and TWRP
+
+First, install Heimdall. Use the [heimdall-flash package for Ubuntu Focal](https://packages.ubuntu.com/focal/heimdall-flash), or download the source code from [GitLab](https://gitlab.com/BenjaminDobell/Heimdall). Typing `heimdall` in the terminal will display all available actions or arguments.
+
+Next, prepare the recovery image. Download the latest version of [TWRP (this is for Samsung Galaxy Tab 2 - espresso3g)](https://twrp.me/samsung/samsunggalaxytab2gmsunified.html).
+
+Follow the instructions in the section above to boot the device into download mode.
+
+Connect the device using a USB cable. To ensure the device is properly connected via USB, run `heimdall detect`.
+
+Navigate to the path of the recovery image using the terminal. Then, run the following to install TWRP, replacing `recoveryfilename` with the name of the TWRP image:
+
+```sh
+heimdall flash --recovery recoveryfilename.img
+```
+
+After installing, boot into recovery mode, as noted in the section above, to access TWRP.
+
+To make a Nandroid backup of the current ROM, choose the Backup option on TWRP and select which partitions to include (usually System, Data, and Boot). From [Android Tips and Hacks](https://www.androidtipsandhacks.com/root/twrp-the-complete-guide-to-using-recovery-on-android/):
+
+> *Don’t tick the Skip MD5 generation option, as this ensures the integrity of your backups and guards against errors when restoring them.*
+
+To restore a Nandroid backup, use the Restore button and choose from the list of available backups.
+
+To flash a custom ROM, copy the ROM's ZIP file into the device's internal storage. Tap Install on TWRP to proceed.
+
 Links:
 
-- [Heimdall source code on GitLab](https://gitlab.com/BenjaminDobell/Heimdall)
-- [Heimdall guide - XDA Developers](https://forum.xda-developers.com/wiki/Heimdall)
-- [heimdall-flash package - Ubuntu Focal](https://packages.ubuntu.com/focal/heimdall-flash)
-- [heimdall-flash-frontend package - Ubuntu Focal](https://packages.ubuntu.com/focal/heimdall-flash-frontend)
-- [TWRP for Galaxy Tab 2 GMS](https://twrp.me/samsung/samsunggalaxytab2gmsunified.html)
-- [Recoveries for Samsung Galaxy Tab 2](https://andi34.github.io/recoveries_tab2.html)
+- [Heimdall tutorial - XDA Developers](https://forum.xda-developers.com/showthread.php?t=2118100)
+- [What is a data/media device? - TWRP](https://twrp.me/faq/datamedia.html)
+- [What is EXCLUDED from a TWRP backup? - TWRP](https://twrp.me/faq/backupexclusions.html)
 - [LineageOS for Galaxy Tab 2](https://andi34.github.io/roms_tab2_lineage.html)
 - [LineageOS 13.0 (Marshmallow - Android 6.0) for Galaxy Tab 2 GMS - XDA Developers](https://forum.xda-developers.com/galaxy-tab-2/galaxy-tab-2-unified/rom-cyanogenmod-13-cm13-0-t3303798)
 - [LineageOS Samsung espresso3g - GitHub](https://github.com/LineageOS/android_device_samsung_espresso3g)
+
+### Links
+
+How-to-Geek Guides on unlocking bootloader, backups, recovery, and flashing ROMs:
+
+- <https://www.howtogeek.com/125375/how-to-create-a-full-android-phone-or-tablet-backup-without-rooting-or-unlocking-your-device/>
+- <https://www.howtogeek.com/125769/how-to-install-and-use-abd-the-android-debug-bridge-utility/>
+- <https://www.howtogeek.com/239798/how-to-unlock-your-android-phones-bootloader-the-official-way/>
+- <https://www.howtogeek.com/193055/what-is-a-custom-recovery-on-android-and-why-would-i-want-one/>
+- <https://www.howtogeek.com/240047/how-to-flash-twrp-recovery-on-your-android-phone/>
+- <https://www.howtogeek.com/115297/how-to-root-your-android-why-you-might-want-to/>
+- <https://www.howtogeek.com/240582/how-to-back-up-and-restore-your-android-phone-with-twrp/>
+
+Additional links:
+
+- [heimdall-flash-frontend package - Ubuntu Focal](https://packages.ubuntu.com/focal/heimdall-flash-frontend)
+- [Heimdall guide - XDA Developers Wiki](https://forum.xda-developers.com/wiki/Heimdall)
+- [[HOW TO] Unlock Bootloader & Root GSM Nexus (4.0.x devices only) - XDA Developers](https://forum.xda-developers.com/galaxy-nexus/how-to-unlock-bootloader-root-gsm-nexus-t1362957)
 
 ## Old
 
