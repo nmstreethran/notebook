@@ -36,8 +36,10 @@
   - [Finding the list of devices attached via USB using Android SDK tools](#finding-the-list-of-devices-attached-via-usb-using-android-sdk-tools)
   - [ADB commands](#adb-commands)
   - [Flashing Samsung phones - Heimdall vs Odin](#flashing-samsung-phones---heimdall-vs-odin)
-  - [Booting Samsung devices into download mode](#booting-samsung-devices-into-download-mode)
-  - [Using Heimdall and TWRP](#using-heimdall-and-twrp)
+  - [Booting devices into bootloader](#booting-devices-into-bootloader)
+  - [Using Heimdall to install TWRP](#using-heimdall-to-install-twrp)
+  - [Installing TWRP with ADB](#installing-twrp-with-adb)
+  - [Using TWRP](#using-twrp)
   - [Links](#links)
 - [Old](#old)
 
@@ -82,7 +84,7 @@ grub> initrd (hd1,msdos1)/casper/initrd
 grub> boot
 ```
 
-<https://blog.viktorpetersson.com/2014/07/29/how-to-boot-from-usb-with-grub2.html>
+Source: <https://blog.viktorpetersson.com/2014/07/29/how-to-boot-from-usb-with-grub2.html>
 
 ## [Changing default Grub boot OS](https://askubuntu.com/a/110738/714808)
 
@@ -144,7 +146,7 @@ When reinstalling Windows 10, there are two options:
 
 When resetting, if there are multiple drives or partitions, it will ask if you want to clear all drives, or only the drive with Windows installed. Selecting the latter will only format the Windows drive.
 
-<https://www.neowin.net/forum/topic/1266840-windows-10-reset-this-pc-will-it-delete-files-on-another-partition/>
+Source: <https://www.neowin.net/forum/topic/1266840-windows-10-reset-this-pc-will-it-delete-files-on-another-partition/>
 
 ### [Computer shuts down or hibernates immediately after waking from sleep](https://www.dell.com/community/Laptops-General-Read-Only/Laptop-shuts-down-immediately-after-waking-from-sleep/td-p/5162536)
 
@@ -410,6 +412,8 @@ See <https://askubuntu.com/a/235280/714808>.
 - Navigate to the `platform-tools` directory (in my case, `$HOME/Android/Sdk/platform-tools`)
 - Run `adb devices` (in my case, `./adb devices`)
 
+See [How to Install and Use ADB, the Android Debug Bridge Utility - How-To Geek](https://www.howtogeek.com/125769/how-to-install-and-use-abd-the-android-debug-bridge-utility/).
+
 ### ADB commands
 
 The list of ADB commands can be viewed [here](https://technastic.com/adb-commands-list-adb-cheat-sheet/). See [here](https://technastic.com/adb-shell-commands-list/) for ADB shell commands.
@@ -426,60 +430,87 @@ Why use Heimdall, not Odin (from [Heimdall's homepage](https://glassechidna.com.
 >
 > *Aside from being slow and generally unreliable, Odin only runs on Windows systems. Furthermore, Odin is 'leaked software' that is not officially supported by Samsung, freely available, or well understood by the community at large.*
 
-### [Booting Samsung devices into download mode](https://technastic.com/samsung-download-recovery-mode/)
+### [Booting devices into bootloader](https://technastic.com/samsung-download-recovery-mode/)
 
-- **Option 1:** Turn off the device and hold the Volume Up, Volume Down and Power buttons for a few seconds.
+- **Option 1:** Ensure USB debugging is enabled. Turn off the device and hold the Volume Up, Volume Down and Power buttons for a few seconds.
 - **Option 2:**
   - Follow the steps detailed in [this section](#finding-the-list-of-devices-attached-via-usb-using-android-sdk-tools).
   - If `adb devices` produces an output, proceed to the next step.
-  - Run `adb reboot bootloader` to reboot into download mode.
+  - Run `adb reboot bootloader`.
 
-### Using Heimdall and TWRP
+### Using Heimdall to install TWRP
 
 First, install Heimdall. Use the [heimdall-flash package for Ubuntu Focal](https://packages.ubuntu.com/focal/heimdall-flash), or download the source code from [GitLab](https://gitlab.com/BenjaminDobell/Heimdall). Typing `heimdall` in the terminal will display all available actions or arguments.
 
 Next, prepare the recovery image. Download the latest version of [TWRP (this is for Samsung Galaxy Tab 2 - espresso3g)](https://twrp.me/samsung/samsunggalaxytab2gmsunified.html).
 
-Follow the instructions in the section above to boot the device into download mode.
+Follow the instructions in [this section](#booting-devices-into-bootloader) to boot the device into the bootloader.
 
 Connect the device using a USB cable. To ensure the device is properly connected via USB, run `heimdall detect`.
 
-Navigate to the path of the recovery image using the terminal. Then, run the following to install TWRP, replacing `recoveryfilename` with the name of the TWRP image:
+Navigate to the path of the recovery image using the terminal. Then, run the following to install TWRP, replacing `twrpfilename` with the name of the TWRP image:
 
 ```sh
-heimdall flash --recovery recoveryfilename.img
+heimdall flash --recovery twrpfilename.img
 ```
 
-After installing, boot into recovery mode, as noted in the section above, to access TWRP.
+Source: [Heimdall tutorial - XDA Developers](https://forum.xda-developers.com/showthread.php?t=2118100)
 
-To make a Nandroid backup of the current ROM, choose the Backup option on TWRP and select which partitions to include (usually System, Data, and Boot). From [Android Tips and Hacks](https://www.androidtipsandhacks.com/root/twrp-the-complete-guide-to-using-recovery-on-android/):
+### Installing TWRP with ADB
+
+Install Android SDK tools (as noted [here](#finding-the-list-of-devices-attached-via-usb-using-android-sdk-tools)).
+
+Next, prepare the recovery image. Download the latest version of [TWRP (this is for Samsung Galaxy Tab 2 - espresso3g)](https://twrp.me/samsung/samsunggalaxytab2gmsunified.html).
+
+Follow the instructions in [this section](#booting-devices-into-bootloader) to boot the device into the bootloader.
+
+Connect the device to the computer using a USB cable. Navigate to the `platform-tools` directory and open a terminal window. Run `fastboot devices` to verify that the device is connected properly via USB. To flash TWRP, run:
+
+```sh
+fastboot flash recovery twrpfilename.img
+```
+
+Source: [How to Flash the TWRP Recovery Environment to Your Android Phone - How-To Geek](https://www.howtogeek.com/240582/how-to-back-up-and-restore-your-android-phone-with-twrp/)
+
+### Using TWRP
+
+After installing, boot into recovery mode, as noted in [this section](#booting-devices-into-bootloader), to access TWRP.
+
+Select Read Only mode if you only want TWRP to exist on the phone until reboot.
+
+To make a Nandroid backup of the current ROM, choose the Backup option on TWRP and select which partitions to include (usually System, Data, and Boot).
+
+From [Android Tips and Hacks](https://www.androidtipsandhacks.com/root/twrp-the-complete-guide-to-using-recovery-on-android/):
 
 > *Don’t tick the Skip MD5 generation option, as this ensures the integrity of your backups and guards against errors when restoring them.*
 
-To restore a Nandroid backup, use the Restore button and choose from the list of available backups.
+From [How-To Geek](https://www.howtogeek.com/240047/how-to-flash-twrp-recovery-on-your-android-phone/):
+
+> *The backup will take a while, so give it time. When it finishes, head back into the Backup menu. Uncheck all the options and scroll to the bottom. If you have a special partition listed after “Recovery”, such as WiMAX, PDS, or EFS, check it, and perform one more backup. This partition usually contains your EFS or IMEI information, which is crucial. If it ever becomes corrupted, you’ll lose data connectivity and can restore this backup to make your phone function again.*
+>
+> *Lastly, if TWRP ever asks if you want to root your phone, choose “Do Not Install”. It’s best to flash the latest version of SuperSU yourself rather than having TWRP do it for you.*
+
+To restore a Nandroid backup, boot back into TWRP and use the Restore button to choose from the list of available backups. Once restored, reboot the phone into Android.
 
 To flash a custom ROM, copy the ROM's ZIP file into the device's internal storage. Tap Install on TWRP to proceed.
 
 Links:
 
-- [Heimdall tutorial - XDA Developers](https://forum.xda-developers.com/showthread.php?t=2118100)
 - [What is a data/media device? - TWRP](https://twrp.me/faq/datamedia.html)
 - [What is EXCLUDED from a TWRP backup? - TWRP](https://twrp.me/faq/backupexclusions.html)
+- [How to Back Up and Restore Your Android Phone with TWRP - How-To Geek](https://www.howtogeek.com/240582/how-to-back-up-and-restore-your-android-phone-with-twrp/)
 - [LineageOS for Galaxy Tab 2](https://andi34.github.io/roms_tab2_lineage.html)
 - [LineageOS 13.0 (Marshmallow - Android 6.0) for Galaxy Tab 2 GMS - XDA Developers](https://forum.xda-developers.com/galaxy-tab-2/galaxy-tab-2-unified/rom-cyanogenmod-13-cm13-0-t3303798)
 - [LineageOS Samsung espresso3g - GitHub](https://github.com/LineageOS/android_device_samsung_espresso3g)
 
 ### Links
 
-How-to-Geek Guides on unlocking bootloader, backups, recovery, and flashing ROMs:
+How-To Geek Guides:
 
 - <https://www.howtogeek.com/125375/how-to-create-a-full-android-phone-or-tablet-backup-without-rooting-or-unlocking-your-device/>
-- <https://www.howtogeek.com/125769/how-to-install-and-use-abd-the-android-debug-bridge-utility/>
 - <https://www.howtogeek.com/239798/how-to-unlock-your-android-phones-bootloader-the-official-way/>
 - <https://www.howtogeek.com/193055/what-is-a-custom-recovery-on-android-and-why-would-i-want-one/>
-- <https://www.howtogeek.com/240047/how-to-flash-twrp-recovery-on-your-android-phone/>
 - <https://www.howtogeek.com/115297/how-to-root-your-android-why-you-might-want-to/>
-- <https://www.howtogeek.com/240582/how-to-back-up-and-restore-your-android-phone-with-twrp/>
 
 Additional links:
 

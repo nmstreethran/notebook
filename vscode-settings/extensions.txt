@@ -5,6 +5,5 @@ lextudio.restructuredtext-129.0.0
 mechatroner.rainbow-csv-1.7.1
 ms-python.python-2020.10.332292344
 pkief.material-icon-theme-4.4.0
-streetsidesoftware.code-spell-checker-1.10.0
 streetsidesoftware.code-spell-checker-1.10.2
 yzhang.markdown-all-in-one-3.4.0
