@@ -42,7 +42,7 @@
 
 ## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
 
-Open the PC BIOS menu. You can often access this menu by pressing a key during the boot up sequence, such as F1, F2, F12, or Esc.
+Open the PC BIOS menu. You can often access this menu by pressing a key during the boot up sequence, such as `F1`, `F2`, `F12`, or `Esc`.
 
 Or, from Windows: go to **Settings charm** > **Change PC settings** > **Update and Recovery** > **Recovery** > **Advanced Startup: Restart now**. When the PC reboots, go to **Troubleshoot** > **Advanced Options: UEFI Firmware Settings**.
 
@@ -178,7 +178,7 @@ If it's completely frozen, REISUB it (safer than rebooting)
 >
 > REISUB is BUSIER backwards, as in "The System is **busier** than it should be", if you need to remember it. Or mnemonically - **R**eboot; **E**ven; **I**f; **S**ystem; **U**tterly; **B**roken.
 >
-> **NOTE:** There exists less radical way than rebooting the whole system. If `SysReq` key works, you can kill processes one-by-one using `Alt`+`SysReq`+`F`. Kernel will kill the mostly «expensive» process each time. If you want to kill all processes for one console, you can issue `Alt`+`SysReq`+`K`.
+> **NOTE:** There exists less radical way than rebooting the whole system. If `SysReq` key works, you can kill processes one-by-one using `Alt`+`SysReq`+`F`. Kernel will kill the most[sic] «expensive» process each time. If you want to kill all processes for one console, you can issue `Alt`+`SysReq`+`K`.
 
 ### [Changing the default display manager](https://askubuntu.com/a/58024/714808)
 
@@ -371,7 +371,7 @@ sudo locale-gen "en_GB.UTF-8"
 sudo dpkg-reconfigure locales
 ```
 
-<https://draculaservers.com/tutorials/setting-locale-failed-ubuntu/>
+Source: <https://draculaservers.com/tutorials/setting-locale-failed-ubuntu/>
 
 Alternatively, when installing Ubuntu, select a region which has the desired locale (e.g., United Kingdom for `en_GB.UTF-8`), and change the timezone manually once the installation is complete.
 
@@ -416,7 +416,7 @@ See <https://technastic.com/samsung-download-recovery-mode/>.
 
 Install Android SDK tools via [Android Studio](https://developer.android.com/studio).
 
-#### Finding the list of devices attached via USB using Android SDK tools
+#### Finding the list of devices attached via USB
 
 - Enable USB debugging on the device
 - Connect device to computer using USB cable
@@ -443,7 +443,7 @@ Connect the device to the computer using a USB cable. Navigate to the `platform-
 fastboot flash recovery recovery.img
 ```
 
-Source: [How to Flash the TWRP Recovery Environment to Your Android Phone](https://www.howtogeek.com/240047/how-to-flash-twrp-recovery-on-your-android-phone/)
+Source: [How to Flash the TWRP Recovery Environment to Your Android Phone - How-To Geek](https://www.howtogeek.com/240047/how-to-flash-twrp-recovery-on-your-android-phone/)
 
 ### Flashing Samsung phones
 
@@ -469,7 +469,7 @@ Typing `heimdall help` in the terminal will display all available actions or arg
 
 #### Flashing a custom recovery using Heimdall
 
-This is [for Samsung Galaxy Tab 2 10.1](https://en.wikipedia.org/wiki/Samsung_Galaxy_Tab_2_10.1) GSM (espresso3g).
+This is for [Samsung Galaxy Tab 2 10.1](https://en.wikipedia.org/wiki/Samsung_Galaxy_Tab_2_10.1) GSM (espresso3g).
 
 Download the latest version of your preferred recovery image (e.g., [TWRP](https://twrp.me/samsung/samsunggalaxytab2gmsunified.html)) to the computer.
 
@@ -490,13 +490,13 @@ After installing, reboot into recovery mode (Volume Down + Power buttons) to acc
 Sources:
 
 - [Heimdall tutorial - XDA Developers](https://forum.xda-developers.com/showthread.php?t=2118100)
-- <https://www.msys2.org/>
-- <https://www.msys2.org/docs/terminals/#windows-terminal>
-- <https://forum.xda-developers.com/showthread.php?t=1657056>
-- <https://github.com/pbatard/libwdi/wiki/Zadig>
-- <https://android.stackexchange.com/q/98338/304762>
-- <https://android.stackexchange.com/a/187573/304762>
-- <https://android.stackexchange.com/a/51066/304762>
+- [MSYS2](https://www.msys2.org/)
+- [Windows Terminal - Terminals - MSYS2](https://www.msys2.org/docs/terminals/#windows-terminal)
+- [[How To] ROOT- Galaxy Tab 2 10.1 [GT-P5113 / 5100 / 5110 & 4.0.4 UPGRADE or OEM] - XDA Developers](https://forum.xda-developers.com/showthread.php?t=1657056)
+- [libwdi GitHub Wiki - Zadig](https://github.com/pbatard/libwdi/wiki/Zadig)
+- [Heimdall error libusb error: -12 - Android SE](https://android.stackexchange.com/q/98338/304762)
+- [FASTBOOT commands don't work at all on my Samsung phone - Android SE](https://android.stackexchange.com/a/187573/304762)
+- [Heimdall errors, "ERROR: Partition "recovery" does not exist in the specified PIT." - Android SE](https://android.stackexchange.com/a/51066/304762)
 
 ### Using TWRP to backup and install ROMs
 
@@ -504,21 +504,25 @@ After installing, boot into recovery mode to access TWRP.
 
 Select Read Only mode if you only want TWRP to exist on the phone until reboot.
 
-To make a Nandroid backup of the current ROM, choose the Backup option on TWRP and select which partitions to include (usually System, Data, and Boot). Back up to an external SD card.
+To make a Nandroid backup of the current ROM, choose the Backup option on TWRP and select which partitions to include. Back up to an external SD card.
 
-From [Android Tips and Hacks](https://www.androidtipsandhacks.com/root/twrp-the-complete-guide-to-using-recovery-on-android/):
+From [TWRP's FAQ](https://twrp.me/faq/whattobackup.html):
 
-> *Don’t tick the Skip MD5 generation option, as this ensures the integrity of your backups and guards against errors when restoring them.*
-
-From [How-To Geek](https://www.howtogeek.com/240047/how-to-flash-twrp-recovery-on-your-android-phone/):
-
-> *The backup will take a while, so give it time. When it finishes, head back into the Backup menu. Uncheck all the options and scroll to the bottom. **If you have a special partition listed after “Recovery”, such as WiMAX, PDS, or EFS, check it, and perform one more backup. This partition usually contains your EFS or IMEI information, which is crucial. If it ever becomes corrupted, you’ll lose data connectivity and can restore this backup to make your phone function again.***
+> *The default backup options in TWRP are system, data, and boot. For most cases, this is sufficient for backing up a ROM. [...] If your device has the option, backing up android_secure and/or sd-ext may be a good idea.*
 >
-> *Lastly, if TWRP ever asks if you want to root your phone, choose “Do Not Install”. It’s best to flash the latest version of SuperSU yourself rather than having TWRP do it for you.*
+> *[...] If you need a perfect "go back to completely stock" backup then you should be using System Image (and Vendor Image, when available) instead of just system.*
+>
+> *Some devices have "special partitions" like WiMAX, pds, efs, etc. [...] It's usually a good idea to make a single backup of these partitions and hang on to them just in case. [...] It is NOT recommended to restore these special partitions unless you are absolutely certain that you need to restore them. Restoring these partitions unnecessarily may result in a bricked device.*
+
+From [How-To Geek](https://www.howtogeek.com/240047/how-to-flash-twrp-recovery-on-your-android-phone/), regarding WiMAX, pds, efs, etc., and rooting using TWRP:
+
+> *This partition usually contains your EFS or IMEI information, which is crucial. If it ever becomes corrupted, you’ll lose data connectivity and can restore this backup to make your phone function again.*
+>
+> *Lastly, if TWRP ever asks if you want to root your phone, choose "Do Not Install". It's best to flash the latest version of SuperSU yourself rather than having TWRP do it for you.*
 
 To restore a Nandroid backup, boot back into TWRP and use the Restore button to choose from the list of available backups. Once restored, reboot the phone into Android.
 
-[To flash a custom ROM](https://andi34.github.io/faq.html):
+To flash a custom ROM ([from Android-Andi](https://andi34.github.io/faq.html)):
 
 - backup all important files to the external SD card or computer
 - copy the ZIP files (device- and Android version-specific) for the ROM and [Open GApps](https://opengapps.org/) into the device's external SD card
@@ -540,24 +544,27 @@ Links:
 - [What is a data/media device? - TWRP](https://twrp.me/faq/datamedia.html)
 - [What is EXCLUDED from a TWRP backup? - TWRP](https://twrp.me/faq/backupexclusions.html)
 - [How to Back Up and Restore Your Android Phone with TWRP - How-To Geek](https://www.howtogeek.com/240582/how-to-back-up-and-restore-your-android-phone-with-twrp/)
-- <https://github.com/opengapps/opengapps/wiki/Package-Comparison>
-- <https://docs.omnirom.org/Installing_Omni_on_your_device>
-- <https://forum.xda-developers.com/galaxy-tab-2/galaxy-tab-2-unified/rom-omnirom-t3405123>
+- [Open GApps GitHub Wiki - Package Comparison](https://github.com/opengapps/opengapps/wiki/Package-Comparison)
+- [Installing Omni on your device](https://docs.omnirom.org/Installing_Omni_on_your_device)
+- [[ROM][6.x] OmniROM - Samsung Galaxy Tab 2 - XDA Developers](https://forum.xda-developers.com/galaxy-tab-2/galaxy-tab-2-unified/rom-omnirom-t3405123)
+- [Android Tips and Hacks](https://www.androidtipsandhacks.com/root/twrp-the-complete-guide-to-using-recovery-on-android/)
 
 ### Links
 
 How-To Geek Guides:
 
-- <https://www.howtogeek.com/125375/how-to-create-a-full-android-phone-or-tablet-backup-without-rooting-or-unlocking-your-device/>
-- <https://www.howtogeek.com/239798/how-to-unlock-your-android-phones-bootloader-the-official-way/>
-- <https://www.howtogeek.com/193055/what-is-a-custom-recovery-on-android-and-why-would-i-want-one/>
-- <https://www.howtogeek.com/115297/how-to-root-your-android-why-you-might-want-to/>
+- [How To Create a Full Android Phone or Tablet Backup Without Rooting or Unlocking Your Device](https://www.howtogeek.com/125375/how-to-create-a-full-android-phone-or-tablet-backup-without-rooting-or-unlocking-your-device/)
+- [How to Unlock Your Android Phone’s Bootloader, the Official Way](https://www.howtogeek.com/239798/how-to-unlock-your-android-phones-bootloader-the-official-way/)
+- [What is a Custom Recovery on Android, and Why Would I Want One?](https://www.howtogeek.com/193055/what-is-a-custom-recovery-on-android-and-why-would-i-want-one/)
+- [How to Root Your Android Phone with SuperSU and TWRP](https://www.howtogeek.com/115297/how-to-root-your-android-why-you-might-want-to/)
 
 Additional links:
 
 - [heimdall-flash-frontend package - Ubuntu Focal](https://packages.ubuntu.com/focal/heimdall-flash-frontend)
 - [Heimdall guide - XDA Developers Wiki](https://forum.xda-developers.com/wiki/Heimdall)
 - [[HOW TO] Unlock Bootloader & Root GSM Nexus (4.0.x devices only) - XDA Developers](https://forum.xda-developers.com/galaxy-nexus/how-to-unlock-bootloader-root-gsm-nexus-t1362957)
+
+---
 
 ## Old
 

@@ -221,25 +221,25 @@ Buttons' colours can be changed in `_sass/minimal-mistakes/_buttons.scss`, under
 
 Check files in local repository:
 
-```bash
+```sh
 ls
 ```
 
 Installing gems added to gemfile:
 
-```bash
+```sh
 bundle install
 ```
 
 Running Jekyll site locally:
 
-```bash
+```sh
 bundle exec jekyll serve
 ```
 
 Updating the site:
 
-```bash
+```sh
 bundle update
 ```
 
@@ -251,27 +251,49 @@ gem 'tzinfo-data'
 
 ### System
 
-Check Ruby version:
+#### Check Ruby version
 
-```bash
+```sh
 ruby --version
 ```
 
-[Install Jekyll and Bundler (after installing Ruby and the PATH environment variable becomes effective)](https://jekyllrb.com/docs/installation/windows/):
+#### [Check if Jekyll installed properly](https://jekyllrb.com/docs/installation/windows/)
 
-```ruby
-gem install jekyll bundler
-```
-
-[Check if Jekyll installed properly](https://jekyllrb.com/docs/installation/windows/):
-
-```bash
+```sh
 jekyll -v
 ```
 
-[Update Rubygems](https://github.com/jekyll/jekyll/issues/7463):
+#### Error while installing bundle with `eventmachine`
 
-```bash
+```txt
+An error occurred while installing eventmachine (1.2.7), and Bundler cannot continue.
+Make sure that `gem install eventmachine -v '1.2.7' --source 'https://rubygems.org/'` succeeds before
+bundling.
+```
+
+There was an `extconf.rb` error.
+
+Outfile contained the following:
+
+```txt
+[...]
+package configuration for openssl is not found
+```
+
+A number of solutions were found online but none worked. Ultimately, the following worked for me (based on the [solution for mysql gem installation error](https://www.heatware.net/ruby-rails/solved-installing-mysql-gem-extconf-rb-failed-error/)):
+
+```sh
+sudo apt-get install ruby-full ruby-eventmachine
+sudo gem install bundler eventmachine
+# in the gemfile's path:
+bundle install
+```
+
+#### [Update Rubygems manually](https://github.com/jekyll/jekyll/issues/7463)
+
+[Don't use this if Ruby is installed using a package manager](https://github.com/rubygems/rubygems/issues/3831), as it will handle updates automatically.
+
+```sh
 gem update --system
 ```
 
