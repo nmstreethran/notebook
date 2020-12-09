@@ -262,7 +262,6 @@
   "python.dataScience.askForKernelRestart": false,
   "python.dataScience.exportWithOutputEnabled": true,
   "python.dataScience.notebookFileRoot": "${workspaceFolder}",
-  "python.languageServer": "Pylance",
   "python.linting.pylintEnabled": true,
   "python.linting.flake8Enabled": true,
   "python.terminal.activateEnvInCurrentTerminal": true,

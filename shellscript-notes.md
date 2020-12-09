@@ -17,8 +17,13 @@ Shell scripts and commands, including Bash, AWK, sed, grep.
 - [Saving the output of a terminal command to a file](#saving-the-output-of-a-terminal-command-to-a-file)
 - [Running multiple commands in a single line](#running-multiple-commands-in-a-single-line)
 - [Using the home directory](#using-the-home-directory)
-- [Replace a string in a file](#replace-a-string-in-a-file)
-- [Delete all lines containing a string in a file](#delete-all-lines-containing-a-string-in-a-file)
+- [Sed](#sed)
+  - [Replace a string in a file](#replace-a-string-in-a-file)
+  - [Substituting a string](#substituting-a-string)
+  - [Delete specific lines from a text file](#delete-specific-lines-from-a-text-file)
+  - [Inserting text in a new line before or after a string](#inserting-text-in-a-new-line-before-or-after-a-string)
+- [Grep](#grep)
+  - [Delete all lines containing a string in a file](#delete-all-lines-containing-a-string-in-a-file)
 
 ## [Using the terminal to navigate through directories](https://help.ubuntu.com/community/UsingTheTerminal)
 
@@ -149,13 +154,62 @@ SomeCommand 2>&1 | tee SomeFile.txt
 $HOME
 ```
 
-## [Replace a string in a file](https://www.cyberciti.biz/faq/how-to-use-sed-to-find-and-replace-text-in-files-in-linux-unix-shell/)
+## Sed
+
+Note that the `-i.bak` option will create a backup of the original file.
+
+### [Replace a string in a file](https://www.cyberciti.biz/faq/how-to-use-sed-to-find-and-replace-text-in-files-in-linux-unix-shell/)
 
 ```sh
-sed -i -e "s/string to be replaced/replacement/g" filename.txt
+sed -i.bak "s/string to be replaced/replacement/g" filename.txt
 ```
 
-## [Delete all lines containing a string in a file](https://stackoverflow.com/a/13188531/4573584)
+Replace part of a string:
+
+```sh
+sed -i.bak "s/^string.*$/replacement/" filename.txt
+```
+
+### [Substituting a string](https://www.unix.com/shell-programming-and-scripting/266684-using-sed-find-append-insert-same-line.html)
+
+```sh
+sed -i.bak "s/OK$/_DLY-&/" filename.txt
+```
+
+- `$` will ensure only `OK`s at the end of the line are affected
+- `&` will append the string to be replaced, i.e., `OK`, resulting in `_DLY-OK`
+
+### [Delete specific lines from a text file](https://stackoverflow.com/a/2112496/4573584)
+
+```sh
+sed -i.bak "<lines_to_delete>" filename.txt
+```
+
+`<lines_to_delete>`:
+
+- line 5: `5d`
+- lines 5 to 10: `5,10d`
+- lines 5 and 10: `5d;10d`
+- lines 5 to 10, and 12: `5,10d;12d`
+- line 5 to the final line: `5,$d`
+
+### [Inserting text in a new line before or after a string](https://unix.stackexchange.com/q/121161/287341)
+
+After:
+
+```sh
+sed -i.bak "/pattern/a some text here" filename.txt
+```
+
+Before:
+
+```sh
+sed -i.bak "/pattern/i some text here" filename.txt
+```
+
+## Grep
+
+### [Delete all lines containing a string in a file](https://stackoverflow.com/a/13188531/4573584)
 
 ```sh
 grep -v "string to delete" filename.txt > filename_temp.txt
