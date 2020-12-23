@@ -271,8 +271,6 @@ Make sure that `gem install eventmachine -v '1.2.7' --source 'https://rubygems.o
 bundling.
 ```
 
-There was an `extconf.rb` error.
-
 Outfile contained the following:
 
 ```txt
@@ -287,6 +285,15 @@ sudo apt-get install ruby-full ruby-eventmachine
 sudo gem install bundler eventmachine
 # in the gemfile's path:
 bundle install
+```
+
+This solution fixes the following error:
+
+```txt
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
 ```
 
 #### [Update Rubygems manually](https://github.com/jekyll/jekyll/issues/7463)

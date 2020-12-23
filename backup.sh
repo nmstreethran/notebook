@@ -3,6 +3,8 @@
 # copy VSCode settings
 cp $HOME/.config/VSCodium/User/settings.json vscode-settings/settings.jsonc
 
+cp /media/nms/Windows/Users/nithi/AppData/Roaming/Code/User/settings.json vscode-settings/settings-win.jsonc
+
 cp $HOME/.config/VSCodium/User/keybindings.json \
 vscode-settings/keybindings.jsonc
 

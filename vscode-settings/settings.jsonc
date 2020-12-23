@@ -34,6 +34,12 @@
     "zenodo",
     "zotero"
   ],
+  "[css]": {
+    "editor.tabSize": 2
+  },
+  "[csv]":{
+    "editor.wordWrap": "off"
+  },
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.fontFamily": "'Cascadia Code PL', 'Ubuntu Mono', 'Consolas', monospace",
@@ -69,12 +75,6 @@
   "git.confirmSync": false,
   "gitlens.advanced.telemetry.enabled": false,
   "gitlens.currentLine.scrollable": false,
-  "[css]": {
-    "editor.tabSize": 2
-  },
-  "[csv]":{
-    "editor.wordWrap": "off"
-  },
   "[html]": {
     "editor.tabSize": 2
   },
@@ -89,9 +89,6 @@
   },
   "[latex]": {
     "editor.tabSize": 2
-  },
-  "[restructuredtext]": {
-    "editor.tabSize": 3
   },
   "latex-workshop.bibtex-format.tab": "tab",
   "latex-workshop.bind.altKeymap.enabled": true,
@@ -265,6 +262,9 @@
   "python.linting.pylintEnabled": true,
   "python.linting.flake8Enabled": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
+  "[restructuredtext]": {
+    "editor.tabSize": 3
+  },
   "restructuredtext.linter.disabled": true,
   "restructuredtext.preview.docutil.disabled": true,
   "restructuredtext.preview.doubleClickToSwitchToEditor": false,
