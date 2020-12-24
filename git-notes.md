@@ -61,7 +61,7 @@ Generate a new key if none exist:
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
-**[Using ED25519 SSH keys (recommended over RSA)](https://gitlab.com/help/ssh/README):**
+**[Using ED25519 SSH keys (recommended over RSA)](https://docs.gitlab.com/ee/ssh/README.html):**
 
 ```sh
 ssh-keygen -t ed25519 -C "your_email@example.com"

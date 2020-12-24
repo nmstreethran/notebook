@@ -489,10 +489,10 @@ After installing, reboot into recovery mode (Volume Down + Power buttons) to acc
 
 Sources:
 
-- [Heimdall tutorial - XDA Developers](https://forum.xda-developers.com/showthread.php?t=2118100)
+- [Heimdall tutorial - XDA Developers](https://forum.xda-developers.com/t/tutorial-heimdall-for-mac-like-odin.2118100/)
 - [MSYS2](https://www.msys2.org/)
 - [Windows Terminal - Terminals - MSYS2](https://www.msys2.org/docs/terminals/#windows-terminal)
-- [[How To] ROOT- Galaxy Tab 2 10.1 [GT-P5113 / 5100 / 5110 & 4.0.4 UPGRADE or OEM] - XDA Developers](https://forum.xda-developers.com/showthread.php?t=1657056)
+- [[How To] ROOT- Galaxy Tab 2 10.1 [GT-P5113 / 5100 / 5110 & 4.0.4 UPGRADE or OEM] - XDA Developers](https://forum.xda-developers.com/t/how-to-root-galaxy-tab-2-10-1-gt-p5113-5100-5110-4-0-4-upgrade-or-oem.1657056/)
 - [libwdi GitHub Wiki - Zadig](https://github.com/pbatard/libwdi/wiki/Zadig)
 - [Heimdall error libusb error: -12 - Android SE](https://android.stackexchange.com/q/98338/304762)
 - [FASTBOOT commands don't work at all on my Samsung phone - Android SE](https://android.stackexchange.com/a/187573/304762)
@@ -546,7 +546,7 @@ Links:
 - [How to Back Up and Restore Your Android Phone with TWRP - How-To Geek](https://www.howtogeek.com/240582/how-to-back-up-and-restore-your-android-phone-with-twrp/)
 - [Open GApps GitHub Wiki - Package Comparison](https://github.com/opengapps/opengapps/wiki/Package-Comparison)
 - [Installing Omni on your device](https://docs.omnirom.org/Installing_Omni_on_your_device)
-- [[ROM][6.x] OmniROM - Samsung Galaxy Tab 2 - XDA Developers](https://forum.xda-developers.com/galaxy-tab-2/galaxy-tab-2-unified/rom-omnirom-t3405123)
+- [[ROM][6.x] OmniROM - Samsung Galaxy Tab 2 - XDA Developers](https://forum.xda-developers.com/t/rom-6-x-omnirom.3405123/)
 - [Android Tips and Hacks](https://www.androidtipsandhacks.com/root/twrp-the-complete-guide-to-using-recovery-on-android/)
 
 ### Links
@@ -561,8 +561,8 @@ How-To Geek Guides:
 Additional links:
 
 - [heimdall-flash-frontend package - Ubuntu Focal](https://packages.ubuntu.com/focal/heimdall-flash-frontend)
-- [Heimdall guide - XDA Developers Wiki](https://forum.xda-developers.com/wiki/Heimdall)
-- [[HOW TO] Unlock Bootloader & Root GSM Nexus (4.0.x devices only) - XDA Developers](https://forum.xda-developers.com/galaxy-nexus/how-to-unlock-bootloader-root-gsm-nexus-t1362957)
+- Heimdall guide - XDA Developers Wiki
+- [[HOW TO] Unlock Bootloader & Root GSM Nexus (4.0.x devices only) - XDA Developers](https://forum.xda-developers.com/t/how-to-unlock-bootloader-root-gsm-nexus-4-0-x-devices-only.1362957/)
 
 ---
 

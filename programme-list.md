@@ -123,7 +123,7 @@ This list is non-exhaustive!
 - KDE applications:
   - [KDE Connect](https://kdeconnect.kde.org/) - to connect multiple devices
   - ~~[LatteDock](https://userbase.kde.org/LatteDock) - dock and panel~~
-  - ~~[Spectacle](https://apps.kde.org/en/graphics/org.kde.spectacle) - screenshot capture utility~~
+  - ~~[Spectacle](https://apps.kde.org/en/spectacle) - screenshot capture utility~~
 - ~~KDE widgets:~~
   - ~~[Window Title Applet](https://github.com/psifidotos/applet-window-title)~~
   - ~~[Window Buttons Applet](https://github.com/psifidotos/applet-window-buttons)~~
