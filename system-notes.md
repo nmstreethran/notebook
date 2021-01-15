@@ -198,12 +198,6 @@ Firefox Developer Edition will work alongside other Firefox installations with s
 
 First, install [Ubuntu Make](https://wiki.ubuntu.com/ubuntu-make):
 
-Using Snap:
-
-```sh
-snap install ubuntu-make
-```
-
 Using PPA:
 
 ```sh

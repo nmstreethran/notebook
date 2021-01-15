@@ -246,12 +246,13 @@
   "material-icon-theme.files.associations": {
     "*.geojson": "json",
     "*.latex": "tex",
+    "readme.markdown": "readme",
+    "readme.rst": "readme",
     "*.tex_t": "tex",
     "*.theme": "json"
   },
   "material-icon-theme.folders.associations": {
     "charts": "images",
-    "cvtemplate": "template",
     "old": "archive",
     "wiki": "docs"
   },
@@ -273,6 +274,6 @@
   "terminal.integrated.fontSize": 16,
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "Abyss",
+  "workbench.colorTheme": "Monokai Dimmed",
   "workbench.iconTheme": "material-icon-theme"
 }

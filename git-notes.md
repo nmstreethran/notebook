@@ -12,7 +12,6 @@
 - [Rewriting history](#rewriting-history)
   - [Deleting commit history of a repository but keep the code in its current state](#deleting-commit-history-of-a-repository-but-keep-the-code-in-its-current-state)
   - [Removing the last commit](#removing-the-last-commit)
-  - [Reducing the repository size or modifying commited files](#reducing-the-repository-size-or-modifying-commited-files)
 - [Ignoring files](#ignoring-files)
   - [Templates](#templates)
   - [Remove checked in file](#remove-checked-in-file)
@@ -221,48 +220,6 @@ git push origin -f
 
 Replace `<num>` with the number of commits you want to remove. e.g., `git reset --hard HEAD~2` removes the last two commits.
 
-### [Reducing the repository size or modifying commited files](https://docs.gitlab.com/ee/user/project/repository/reducing_the_repo_size_using_git.html)
-
-Using [BFG](https://rtyley.github.io/bfg-repo-cleaner/).
-
-Clone a bare repository and create a backup of it:
-
-```sh
-git clone --mirror git@github.com:USERNAME/REPOSITORY.git
-```
-
-Download and run BFG (Java / OpenJDK must be installed):
-
-```sh
-# to strip blobs bigger than a particular size (e.g., 100 MB)
-java -jar bfg.jar --strip-blobs-bigger-than 100M REPOSITORY.git
-
-# delete all files named 'id_rsa' or 'id_dsa'
-java -jar bfg.jar --delete-files id_{dsa,rsa} REPOSITORY.git
-
-# delete all pdfs
-java -jar bfg.jar --delete-files *.pdf REPOSITORY.git
-
-# replace all passwords listed in a file (prefix lines 'regex:' or
-# 'glob:' if required) with ***REMOVED***
-java -jar bfg.jar --replace-text passwords.txt REPOSITORY.git
-```
-
-Check the changes that have been made and clean unwanted data:
-
-```sh
-cd REPOSITORY.git
-git reflog expire --expire=now --all && git gc --prune=now --aggressive
-```
-
-Push to update remote repository:
-
-```sh
-git push
-```
-
-***Note:*** branches must be unprotected in GitLab for a successful push.
-
 ## [Ignoring files](https://docs.github.com/en/free-pro-team@latest/github/using-git/ignoring-files)
 
 ### Templates
@@ -394,6 +351,48 @@ git submodule add <address to remote git repo> <new folder name>
 <summary>
 Click to expand
 </summary>
+
+### Reducing the repository size using [BFG](https://rtyley.github.io/bfg-repo-cleaner/) <!-- omit in toc -->
+
+<https://docs.gitlab.com/ee/user/project/repository/reducing_the_repo_size_using_git.html>
+
+Clone a bare repository and create a backup of it:
+
+```sh
+git clone --mirror git@github.com:USERNAME/REPOSITORY.git
+```
+
+Download and run BFG (Java / OpenJDK must be installed):
+
+```sh
+# to strip blobs bigger than a particular size (e.g., 100 MB)
+java -jar bfg.jar --strip-blobs-bigger-than 100M REPOSITORY.git
+
+# delete all files named 'id_rsa' or 'id_dsa'
+java -jar bfg.jar --delete-files id_{dsa,rsa} REPOSITORY.git
+
+# delete all pdfs
+java -jar bfg.jar --delete-files *.pdf REPOSITORY.git
+
+# replace all passwords listed in a file (prefix lines 'regex:' or
+# 'glob:' if required) with ***REMOVED***
+java -jar bfg.jar --replace-text passwords.txt REPOSITORY.git
+```
+
+Check the changes that have been made and clean unwanted data:
+
+```sh
+cd REPOSITORY.git
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
+```
+
+Push to update remote repository:
+
+```sh
+git push
+```
+
+***Note:*** branches must be unprotected in GitLab for a successful push.
 
 ### Security <!-- omit in toc -->
 
