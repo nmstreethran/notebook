@@ -86,16 +86,6 @@
     "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId =~ /latex|rsweave/"
   },
   {
-    "key": "ctrl+b",
-    "command": "markdown.extension.editing.toggleBold",
-    "when": "editorTextFocus && !editorReadonly && editorLangId == 'restructuredtext'"
-  },
-  {
-    "key": "ctrl+i",
-    "command": "markdown.extension.editing.toggleItalic",
-    "when": "editorTextFocus && !editorReadonly && editorLangId == 'restructuredtext'"
-  },
-  {
     "key": "ctrl+m",
     "command": "markdown.extension.editing.toggleCodeSpan",
     "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"

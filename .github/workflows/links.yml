@@ -6,8 +6,13 @@
 # dependencies and run tests with Rake
 # For more information see:
 # https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
+#
+# To automatically get bug fixes and new Ruby versions for
+# ruby/setup-ruby, use ruby/setup-ruby@v1
+# (see https://github.com/ruby/setup-ruby#versioning)
 
-name: links
+# https://github.com/dkhamsing/awesome_bot
+name: test_links
 
 on:
   schedule:
@@ -16,24 +21,33 @@ on:
     branches:
       - master
 
+env:
+  GEM_HOME: .gem
+  GEM_PATH: $GEM_HOME/bin:$GEM_PATH
+
 jobs:
-  test_links:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Ruby
-      # To automatically get bug fixes and new Ruby versions for
-      # ruby/setup-ruby, change this to
-      # (see https://github.com/ruby/setup-ruby#versioning):
-        uses: ruby/setup-ruby@v1
-      # uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+      - name: Cache Ruby dependencies
+        uses: actions/cache@v2
         with:
-          ruby-version: 2.7.1
-      - name: Install dependencies
-      # https://github.com/dkhamsing/awesome_bot
+          path: $GEM_HOME
+          key: ${{ runner.os }}-rubygems
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+      - name: Set Ruby gem installation path
+        run: export PATH="$GEM_PATH:$PATH"
+      - name: Install awesome_bot and dependencies
         run: gem install awesome_bot
-      - name: Check links
-        run: "awesome_bot --allow-dupe --skip-save-results --white-list
+      - name: Check links using awesome_bot
+        run: |
+          awesome_bot --allow-dupe --skip-save-results --white-list
           stackexchange.com,stackoverflow.com,askubuntu.com,superuser.com,\
           username/repository,oFFvwZIEk1Y,download.opensuse.org,\
-          www.amd.com,dum7q6UXiCE,gitlab.com/api `find . -name '*.md'`"
+          www.amd.com,dum7q6UXiCE,gitlab.com/api
+          `find . -path ./.gem -prune -false -o -name "*.md"
