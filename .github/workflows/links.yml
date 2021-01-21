@@ -45,9 +45,8 @@ jobs:
       - name: Install awesome_bot and dependencies
         run: gem install awesome_bot
       - name: Check links using awesome_bot
-        run: |
-          awesome_bot --allow-dupe --skip-save-results --white-list
+        run: "awesome_bot --allow-dupe --skip-save-results --white-list
           stackexchange.com,stackoverflow.com,askubuntu.com,superuser.com,\
           username/repository,oFFvwZIEk1Y,download.opensuse.org,\
           www.amd.com,dum7q6UXiCE,gitlab.com/api
-          `find . -path ./.gem -prune -false -o -name "*.md"
+          `find . -path ./.gem -prune -false -o -name '*.md'`"

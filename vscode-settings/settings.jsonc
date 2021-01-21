@@ -90,7 +90,6 @@
   "[latex]": {
     "editor.tabSize": 2
   },
-  "latex-workshop.bibtex-format.tab": "tab",
   "latex-workshop.bind.altKeymap.enabled": true,
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.autoBuild.run": "never",
