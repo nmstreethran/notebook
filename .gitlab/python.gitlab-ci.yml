@@ -1,0 +1,46 @@
+.python:
+  image: python:3.9
+  variables:
+    PIP_CACHE_DIR: $CI_PROJECT_DIR/.cache/pip
+  cache:
+    key: python-cache
+    paths:
+      - .cache/pip
+      - env/
+  before_script:
+    - python3.9 -m venv env
+    - source env/bin/activate
+    - pip install -r requirements.txt
+
+.pages:
+  extends: .python
+  script:
+    - sphinx-build -b html docs public
+  only:
+    changes:
+      - docs/**/*
+
+# building and deploying Sphinx doc
+pages:
+  extends: .pages
+  stage: deploy
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 week
+  only:
+    refs:
+      - master
+
+# linting Python scripts
+test:
+  extends: .python
+  stage: test
+  script:
+    - pip install flake8
+    - flake8 scripts docs/conf.py
+  only:
+    refs:
+      - merge_requests
+    changes:
+      - "**/*.py"

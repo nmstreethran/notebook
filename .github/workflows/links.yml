@@ -1,17 +1,13 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-# This workflow will download a prebuilt Ruby version, install
-# dependencies and run tests with Rake
-# For more information see:
-# https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
+# Check links in text files
+# https://github.com/dkhamsing/awesome_bot
 #
 # To automatically get bug fixes and new Ruby versions for
 # ruby/setup-ruby, use ruby/setup-ruby@v1
 # (see https://github.com/ruby/setup-ruby#versioning)
+#
+# Based on a quick test run, the Docker method takes around 11 seconds
+# longer than the Ruby gem method.
 
-# https://github.com/dkhamsing/awesome_bot
 name: test_links
 
 on:
@@ -21,32 +17,25 @@ on:
     branches:
       - master
 
-env:
-  GEM_HOME: .gem
-  GEM_PATH: $GEM_HOME/bin:$GEM_PATH
-
 jobs:
   test:
     runs-on: ubuntu-latest
+    # container: dkhamsing/awesome_bot # Docker method
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
-      - name: Cache Ruby dependencies
-        uses: actions/cache@v2
-        with:
-          path: $GEM_HOME
-          key: ${{ runner.os }}-rubygems
+      # begin Ruby gem method
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
-      - name: Set Ruby gem installation path
-        run: export PATH="$GEM_PATH:$PATH"
       - name: Install awesome_bot and dependencies
-        run: gem install awesome_bot
+        run: |
+          gem install awesome_bot
+      # end Ruby gem method
       - name: Check links using awesome_bot
-        run: "awesome_bot --allow-dupe --skip-save-results --white-list
+        run: |
+          awesome_bot --allow-dupe --skip-save-results --white-list \
           stackexchange.com,stackoverflow.com,askubuntu.com,superuser.com,\
           username/repository,oFFvwZIEk1Y,download.opensuse.org,\
-          www.amd.com,dum7q6UXiCE,gitlab.com/api
-          `find . -path ./.gem -prune -false -o -name '*.md'`"
+          www.amd.com,dum7q6UXiCE,gitlab.com/api `find . -name "*.md"`

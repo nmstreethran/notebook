@@ -1,0 +1,42 @@
+# Build LaTeX PDF
+# References:
+# https://docs.github.com/en/actions
+# https://gitlab.com/islandoftex/images/texlive
+# https://tug.org/TUGboat/tb40-3/tb126island-docker.pdf
+# https://github.com/PHPirates/travis-ci-latex-pdf
+
+name: latex_docker
+
+on:
+  push:
+    paths:
+      - "**.tex"
+      - "**.sty"
+      - "**.bib"
+
+# specify file name and directory as variables
+env:
+  FILE: document
+  DIR: doc
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: registry.gitlab.com/islandoftex/images/texlive:latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v1
+      - name: Build LaTeX PDF via Arara
+        run: |
+          cd $DIR
+          arara -v $FILE.tex
+      - name: Set PDF file name
+        id: output_file
+        run: |
+          echo ::set-output name=OUTPUT_FILE::$DIR/$FILE.pdf
+      - name: Upload PDF file as an artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: $FILE-latex-pdf
+          path: ${{ steps.output_file.outputs.OUTPUT_FILE }}
+          retention-days: 5

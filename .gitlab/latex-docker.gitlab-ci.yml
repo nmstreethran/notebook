@@ -1,0 +1,29 @@
+# building LaTeX PDFs using a TeX Live image
+# https://tug.org/TUGboat/tb40-3/tb126island-docker.pdf
+# https://gitlab.com/islandoftex/images/texlive
+
+# specify name and directory of the .tex file as variables
+variables:
+  FILE: document
+  DIR: doc
+
+default:
+  image: registry.gitlab.com/islandoftex/images/texlive:latest
+  before_script:
+    - cd $DIR
+
+build:
+  script:
+    - arara -v $FILE.tex
+  artifacts:
+    paths:
+      - "**/*.pdf"
+    expire_in: 1 week
+  only:
+    refs:
+      - master
+    changes:
+      - "**/*.bib"
+      - "**/*.sty"
+      - "**/*.tex"
+      - images/**/*

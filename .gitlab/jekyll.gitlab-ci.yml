@@ -1,0 +1,43 @@
+variables:
+  JEKYLL_ENV: production
+  LC_ALL: C.UTF-8
+  GEM_HOME: .gem
+  GEM_PATH: $GEM_HOME/bin:$GEM_PATH
+  BUNDLE_PATH: $GEM_HOME
+
+default:
+  image: ruby:latest
+  cache:
+    key: bundler-cache
+    paths:
+      - $GEM_HOME
+  before_script:
+    - export PATH="$GEM_PATH:$PATH"
+    - gem install bundler
+    - bundle install
+
+pages:
+  script:
+    - bundle exec jekyll build -d public
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 week
+  only:
+    refs:
+      - master
+    changes:
+      - _data/**/*
+      - _includes/**/*
+      - _posts/**/*
+      - assets/**/*
+      - "*.html"
+      - "*.md"
+      - "*.png"
+      - "*.xml"
+      - _config.yml
+      - favicon.ico
+      - Gemfile
+      - safari-pinned-tab.svg
+      - site.webmanifest
+      - staticman.yml

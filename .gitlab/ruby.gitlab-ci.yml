@@ -1,0 +1,35 @@
+# Check links in text files
+# https://github.com/dkhamsing/awesome_bot
+
+# Ruby gem method
+.gem:
+  image: ruby:latest
+  variables:
+    GEM_HOME: .gem
+    GEM_PATH: $GEM_HOME/bin:$GEM_PATH
+  cache:
+    key: rubygem-cache
+    paths:
+      - $GEM_HOME
+  before_script:
+    - export PATH="$GEM_PATH:$PATH"
+    - gem install awesome_bot
+
+# Docker method
+.docker:
+  image: dkhamsing/awesome_bot
+
+# use either `extends: .gem` or `extends: .docker`
+test:
+  extends: .gem
+  # extends: .docker
+  script:
+    - "awesome_bot --allow-dupe --skip-save-results --white-list
+      stackexchange.com,stackoverflow.com,askubuntu.com,superuser.com,\
+      username/repository,oFFvwZIEk1Y,download.opensuse.org,\
+      www.amd.com,dum7q6UXiCE,gitlab.com/api `find . -name '*.md'`"
+  only:
+    refs:
+      - merge_requests
+    changes:
+      - "**/*.md"
