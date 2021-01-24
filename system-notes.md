@@ -539,7 +539,7 @@ Links:
 - [What is EXCLUDED from a TWRP backup? - TWRP](https://twrp.me/faq/backupexclusions.html)
 - [How to Back Up and Restore Your Android Phone with TWRP - How-To Geek](https://www.howtogeek.com/240582/how-to-back-up-and-restore-your-android-phone-with-twrp/)
 - [Open GApps GitHub Wiki - Package Comparison](https://github.com/opengapps/opengapps/wiki/Package-Comparison)
-- [Installing Omni on your device](https://docs.omnirom.org/Installing_Omni_on_your_device)
+- Installing Omni on your device - Omni ROM docs
 - [[ROM][6.x] OmniROM - Samsung Galaxy Tab 2 - XDA Developers](https://forum.xda-developers.com/t/rom-6-x-omnirom.3405123/)
 - [Android Tips and Hacks](https://www.androidtipsandhacks.com/root/twrp-the-complete-guide-to-using-recovery-on-android/)
 

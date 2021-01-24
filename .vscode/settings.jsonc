@@ -42,9 +42,10 @@
   },
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
-  "editor.fontFamily": "'Cascadia Code PL', 'Ubuntu Mono', 'Consolas', monospace",
-  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Victor Mono', 'Cascadia Code PL', 'Ubuntu Mono', 'Consolas', monospace",
+  "editor.fontLigatures": "ss01",
   "editor.fontSize": 16,
+  "editor.fontWeight": 550,
   "editor.minimap.renderCharacters": false,
   "editor.renderWhitespace": "all",
   "editor.rulers": [
@@ -175,6 +176,7 @@
     "editor.tabSize": 2
   },
   "markdown.extension.toc.levels": "1..3",
+  "material-icon-theme.activeIconPack": "none",
   "material-icon-theme.files.associations": {
     "*.geojson": "json",
     "*.latex": "tex",
@@ -204,8 +206,9 @@
   "restructuredtext.preview.sphinx.disabled": true,
   "restructuredtext.updateOnTextChanged": "false",
   "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontWeight": 550,
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.colorTheme": "Horizon Bold",
   "workbench.iconTheme": "material-icon-theme"
 }

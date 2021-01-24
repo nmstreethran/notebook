@@ -1,11 +1,11 @@
 .python:
   image: python:3.9
   variables:
-    PIP_CACHE_DIR: $CI_PROJECT_DIR/.cache/pip
+    PIP_CACHE_DIR: .cache/pip
   cache:
     key: python-cache
     paths:
-      - .cache/pip
+      - $PIP_CACHE_DIR
       - env/
   before_script:
     - python3.9 -m venv env

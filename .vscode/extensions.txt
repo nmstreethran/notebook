@@ -1,6 +1,8 @@
 davidanson.vscode-markdownlint-0.38.0
 eamodio.gitlens-10.2.1
+github.github-vscode-theme-1.1.5
 james-yu.latex-workshop-8.15.0
+jolaleye.horizon-theme-vscode-2.0.2
 lextudio.restructuredtext-141.0.0
 mechatroner.rainbow-csv-1.7.1
 ms-python.python-2020.10.332292344
