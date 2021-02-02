@@ -4,8 +4,8 @@
 
 - [Useful links](#useful-links)
 - [Credentials and authentication](#credentials-and-authentication)
-  - [Prevent Git from asking for username and password during every push on Linux](#prevent-git-from-asking-for-username-and-password-during-every-push-on-linux)
-  - [Invalid username or password error](#invalid-username-or-password-error)
+  - [Setting up SSH](#setting-up-ssh)
+  - [SSH on Windows](#ssh-on-windows)
   - [SSH askpass error](#ssh-askpass-error)
 - [Branching](#branching)
   - [Cloning a specific branch](#cloning-a-specific-branch)
@@ -28,7 +28,6 @@
   - [Cloning a repository including the contents of its submodules](#cloning-a-repository-including-the-contents-of-its-submodules)
   - [Renaming submodules](#renaming-submodules)
   - [Deinit old submodule, remove the directory and create a new submodule](#deinit-old-submodule-remove-the-directory-and-create-a-new-submodule)
-- [Old](#old)
 
 ## Useful links
 
@@ -38,7 +37,7 @@
 
 ## Credentials and authentication
 
-### Prevent Git from asking for username and password during every push on Linux
+### Setting up SSH
 
 [Using SSH keys](https://stackoverflow.com/a/34957424/4573584):
 
@@ -93,13 +92,31 @@ git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 git remote -v
 ```
 
-### [Invalid username or password error](https://stackoverflow.com/a/34919582/4573584)
+### SSH on Windows
 
-Could happen due to two-factor authentication. To resolve the issue:
+On Windows, the default SSH key path is `$HOME\.ssh`. `$HOME` is usually `C:\Users\%USERNAME%`.
 
-- manually generate a personal access token on GitHub
-- assign permission to access repo and gist (just like the other tokens)
-- copy the token and use it instead of the password
+[Comment](https://github.com/Microsoft/vscode/issues/13680#issuecomment-414841885) by GitHub user **whatsyourgithub** to fix SSH issues on Windows:
+
+> Make Git use the OpenSSH that comes with Windows instead of the one that comes with Git.
+>
+> ```sh
+> git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
+> ```
+>
+> Set the ssh-agent service (not the one that comes with git) to run automatically.
+> Open Task Manager, Services tab, click Open Services.
+> Find OpenSSH Authentication Agent, open properties, set Startup Type to Automatic, hit OK.
+> Also start the service or restart your computer.
+>
+> Add your password protected key to the agent.
+>
+> ```sh
+> ssh-add
+> ```
+>
+> It should automatically pick up keys stored in `C:\Users\%USERNAME%\.ssh` which is where ssh-keygen creates them.
+> Enter your password(s) at the prompt.
 
 ### [SSH askpass error](https://stackoverflow.com/a/52886041/4573584)
 
@@ -119,7 +136,7 @@ sudo apt install ssh-askpass
 
 If you get a similar error to the [following](https://superuser.com/a/421084/752084):
 
-```sh
+```txt
 The authenticity of host 'bitbucket.org (207.223.240.181)' can't be established.
 
 RSA key fingerprint is 97:8c:1b:f2:6f:14:6b:5c:3b:ec:aa:46:46:74:7c:40.
@@ -344,93 +361,3 @@ git submodule deinit <submodule name>
 git rm <submodule folder name>
 git submodule add <address to remote git repo> <new folder name>
 ```
-
-## Old
-
-<details>
-<summary>
-Click to expand
-</summary>
-
-### Reducing the repository size using [BFG](https://rtyley.github.io/bfg-repo-cleaner/) <!-- omit in toc -->
-
-<https://docs.gitlab.com/ee/user/project/repository/reducing_the_repo_size_using_git.html>
-
-Clone a bare repository and create a backup of it:
-
-```sh
-git clone --mirror git@github.com:USERNAME/REPOSITORY.git
-```
-
-Download and run BFG (Java / OpenJDK must be installed):
-
-```sh
-# to strip blobs bigger than a particular size (e.g., 100 MB)
-java -jar bfg.jar --strip-blobs-bigger-than 100M REPOSITORY.git
-
-# delete all files named 'id_rsa' or 'id_dsa'
-java -jar bfg.jar --delete-files id_{dsa,rsa} REPOSITORY.git
-
-# delete all pdfs
-java -jar bfg.jar --delete-files *.pdf REPOSITORY.git
-
-# replace all passwords listed in a file (prefix lines 'regex:' or
-# 'glob:' if required) with ***REMOVED***
-java -jar bfg.jar --replace-text passwords.txt REPOSITORY.git
-```
-
-Check the changes that have been made and clean unwanted data:
-
-```sh
-cd REPOSITORY.git
-git reflog expire --expire=now --all && git gc --prune=now --aggressive
-```
-
-Push to update remote repository:
-
-```sh
-git push
-```
-
-***Note:*** branches must be unprotected in GitLab for a successful push.
-
-### Security <!-- omit in toc -->
-
-#### [Using credential helper to store password (less secure method)](https://stackoverflow.com/a/17979600/4573584)
-
-```sh
-git config --global credential.helper store
-```
-
-**Warning**: username and password / personal access token are stored unencrypted at `~/.git-credentials` through this method.
-
-Use the following command to undo credential storage:
-
-```sh
-git config --unset credential.helper
-```
-
-### Subtrees <!-- omit in toc -->
-
-#### [Including wiki in the main code repository as a subtree](https://stackoverflow.com/a/33182223/4573584)
-
-```sh
-git clone git://github.com/username/repository
-cd proj
-git remote add -f docs https://github.com/username/repository.wiki.git
-git merge -s ours --no-commit --allow-unrelated-histories docs/master
-git read-tree --prefix=docs/ -u docs/master
-git commit -m "GitHub docs subtree merged in docs/"
-```
-
-Changes made in the actual wiki can be merged to the main code repository:
-
-```sh
-git pull -s subtree docs master
-```
-
-Merging changes the other way is complicated.
-
-More about subtree merges on [GitHub](https://docs.github.com/en/github/using-git/about-git-subtree-merges).
-
-</details>
