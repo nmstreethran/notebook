@@ -4,15 +4,7 @@
 # Ruby gem method
 .gem:
   image: ruby:latest
-  variables:
-    GEM_HOME: .gem
-    GEM_PATH: $GEM_HOME/bin:$GEM_PATH
-  cache:
-    key: rubygem-cache
-    paths:
-      - $GEM_HOME
   before_script:
-    - export PATH="$GEM_PATH:$PATH"
     - gem install awesome_bot
 
 # Docker method

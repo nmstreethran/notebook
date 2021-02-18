@@ -20,7 +20,7 @@ git clone --mirror git@github.com:USERNAME/REPOSITORY.git
 Download and run BFG (Java / OpenJDK must be installed):
 
 ```sh
-# to strip blobs bigger than a particular size (e.g., 100 MB)
+# to strip blobs bigger than a particular size (e.g. 100 MB)
 java -jar bfg.jar --strip-blobs-bigger-than 100M REPOSITORY.git
 
 # delete all files named 'id_rsa' or 'id_dsa'

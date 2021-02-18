@@ -13,9 +13,12 @@
     "celcius",
     "decarbonisation",
     "dispatchable",
+    "eastings",
     "forecasted",
     "geospatial",
+    "interpretivism",
     "irradiance",
+    "kriging",
     "mechatronic",
     "mechatronics",
     "mentoring",
@@ -24,6 +27,7 @@
     "microfluidics",
     "nithiya",
     "nmstreethran",
+    "phenomological",
     "prosumers",
     "renewables",
     "resumé",
@@ -209,6 +213,6 @@
   "terminal.integrated.fontWeight": 550,
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "Horizon Bold",
+  "workbench.colorTheme": "Solarized Dark",
   "workbench.iconTheme": "material-icon-theme"
 }

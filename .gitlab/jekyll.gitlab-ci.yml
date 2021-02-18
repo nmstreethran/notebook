@@ -1,18 +1,15 @@
 variables:
   JEKYLL_ENV: production
   LC_ALL: C.UTF-8
-  GEM_HOME: .gem
-  GEM_PATH: $GEM_HOME/bin:$GEM_PATH
-  BUNDLE_PATH: $GEM_HOME
+  BUNDLE_PATH: .gem
 
 default:
   image: ruby:latest
   cache:
     key: bundler-cache
     paths:
-      - $GEM_HOME
+      - $BUNDLE_PATH
   before_script:
-    - export PATH="$GEM_PATH:$PATH"
     - gem install bundler
     - bundle install
 

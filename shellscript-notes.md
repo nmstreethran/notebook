@@ -177,7 +177,7 @@ sed -i.bak "s/OK$/_DLY-&/" filename.txt
 ```
 
 - `$` will ensure only `OK`s at the end of the line are affected
-- `&` will append the string to be replaced, i.e., `OK`, resulting in `_DLY-OK`
+- `&` will append the string to be replaced, i.e. `OK`, resulting in `_DLY-OK`
 
 ### [Delete specific lines from a text file](https://stackoverflow.com/a/2112496/4573584)
 

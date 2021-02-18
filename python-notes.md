@@ -141,7 +141,7 @@ df['Region'] =
 >
 > To detect the encoding (assuming the file contains non-ASCII characters), [you can use `enca`](https://linux.die.net/man/1/enconv) or [`file -i` (Linux)](https://linux.die.net/man/1/file).
 
-Use `ISO-8859-1` or `utf-8` for reading the CSV file, and `utf-8` for writing CSV files. Aliases can be used, e.g., `latin` instead of `ISO-8859-1`.
+Use `ISO-8859-1` or `utf-8` for reading the CSV file, and `utf-8` for writing CSV files. Aliases can be used, e.g. `latin` instead of `ISO-8859-1`.
 
 Resources on encoding:
 

@@ -24,6 +24,7 @@
   - [Uninstalling old gem versions](#uninstalling-old-gem-versions)
   - [Cross-platform Gemfile](#cross-platform-gemfile)
   - [Fixing dependency errors](#fixing-dependency-errors)
+  - [Update RubyGems manually](#update-rubygems-manually)
 - [Jekyll](#jekyll)
   - [Local server](#local-server)
   - [GitHub Pages](#github-pages)
@@ -58,7 +59,7 @@ h2.space::after {
 
 ### Overflow
 
-[Prevent unbreakable strings from overflowing its line box (e.g., long URLs and words)](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap):
+[Prevent unbreakable strings from overflowing its line box (e.g. long URLs and words)](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap):
 
 ```css
 div {
@@ -193,7 +194,7 @@ img {
 
 ### [MIME type mismatch](https://stackoverflow.com/q/40728554/4573584)
 
-Could be caused by incorrect file path, e.g., missing leading slash.
+Could be caused by incorrect file path, e.g. missing leading slash.
 
 ```html
 <link rel="stylesheet" type="text/css" href="/_static/custom.css">
@@ -215,10 +216,10 @@ First, check if Ruby is already installed and its version:
 ruby --version
 ```
 
-Download and install Ruby from the [official website](https://www.ruby-lang.org/en/).
+Download and install Ruby using instructions from the [official website](https://www.ruby-lang.org/en/).
 
 - Use [RubyInstaller](https://rubyinstaller.org/) on Windows
-- Use apt on Debian/Ubuntu:
+- Use apt on Debian/Ubuntu (*may not be the latest version*):
 
   ```sh
   sudo apt-get install ruby-full
@@ -357,7 +358,7 @@ gem install bundler eventmachine
 bundle install
 ```
 
-#### [Update RubyGems manually](https://github.com/jekyll/jekyll/issues/7463)
+### [Update RubyGems manually](https://github.com/jekyll/jekyll/issues/7463)
 
 [Don't use this if Ruby is installed using a package manager](https://github.com/rubygems/rubygems/issues/3831), as it will handle updates automatically.
 

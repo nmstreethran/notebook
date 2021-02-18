@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # copy VSCode settings
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
@@ -7,6 +7,9 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     ls -1 $HOME/.vscode-oss/extensions/ > .vscode/extensions.txt
 else
     cp $HOME/AppData/Roaming/Code/User/settings.json .vscode/settings-win.jsonc
+    cp $HOME/AppData/Roaming/Code/User/keybindings.json \
+    .vscode/keybindings-win.jsonc
+    ls -1 $HOME/.vscode/extensions/ > .vscode/extensions-win.txt
 fi
 
 # copy all notes into wiki

@@ -235,7 +235,7 @@ git reset --hard HEAD~<num>
 git push origin -f
 ```
 
-Replace `<num>` with the number of commits you want to remove. e.g., `git reset --hard HEAD~2` removes the last two commits.
+Replace `<num>` with the number of commits you want to remove. e.g. `git reset --hard HEAD~2` removes the last two commits.
 
 ## [Ignoring files](https://docs.github.com/en/github/using-git/ignoring-files)
 
@@ -285,7 +285,7 @@ GET /projects/:id/repository/files/:file_path/raw
 
 Parameters:
 
-- `file_path` (required) - URL encoded full path to new file. e.g., `lib%2Fclass%2Erb` (replace `/` with `%2F`)
+- `file_path` (required) - URL encoded full path to new file. e.g. `lib%2Fclass%2Erb` (replace `/` with `%2F`)
 - `ref` (required) - The name of branch, tag or commit
 
 Example for the file at <https://gitlab.com/nithiya/ml-elec-model-data/-/blob/master/geography/polygons/bidding_zones.geojson>:
@@ -338,7 +338,7 @@ Add the wiki to the main repository as a submodule (replace `username` and `repo
 git submodule add https://github.com/username/repository.wiki.git wiki
 ```
 
-Commit this addition to the main repository and push the changes. Once changes to the wiki within the submodule are made (e.g., new markdown files, images), these changes must first be committed and pushed to the wiki's branch, before committing and pushing to the main repository's branch.
+Commit this addition to the main repository and push the changes. Once changes to the wiki within the submodule are made (e.g. new markdown files, images), these changes must first be committed and pushed to the wiki's branch, before committing and pushing to the main repository's branch.
 
 See the [Git documentation on submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 

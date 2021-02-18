@@ -636,7 +636,7 @@ Set custom aspect ratio (widescreen) and import colours from `xcolor` (`svgnames
 % define pdf metadata
 % keywords
 \def\keywords{presentation, beamer, latex, prime numbers}
-% subject - e.g., event name and copyright info
+% subject - e.g. event name and copyright info
 \def\subject{Presented at ISPN '80. License: CC BY 4.0.}
 \hypersetup{pdfkeywords={\keywords},pdfsubject={\subject}}
 ```

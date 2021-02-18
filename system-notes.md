@@ -275,7 +275,7 @@ sudo apt-get install packages
 
 ### Installing Zotero
 
-Download the tarball from Zotero's [download page](https://www.zotero.org/download/). Extract the contents and move them to a location of your choice, such as `/opt/zotero`. Open the terminal in this location and run `./set_launcher_icon` to update the `zotero.desktop` file for that location. Create a symlink for `zotero.desktop` by running `ln -s "$PWD/zotero.desktop" ~/.local/share/applications/` from the same location. All of these commands can be run in succession from the same terminal window, i.e., `nms@nms-notebook:~/opt/zotero`.
+Download the tarball from Zotero's [download page](https://www.zotero.org/download/). Extract the contents and move them to a location of your choice, such as `/opt/zotero`. Open the terminal in this location and run `./set_launcher_icon` to update the `zotero.desktop` file for that location. Create a symlink for `zotero.desktop` by running `ln -s "$PWD/zotero.desktop" ~/.local/share/applications/` from the same location. All of these commands can be run in succession from the same terminal window, i.e. `nms@nms-notebook:~/opt/zotero`.
 
 ***Note:*** If using a custom icon theme, replace the absolute path for the icon with `zotero` in `./set_launcher_icon` prior to running it.
 
@@ -357,7 +357,7 @@ locale: Cannot set LC_ALL to default locale: No such file or directory
 
 Run `locale` to list all locales defined for the user.
 
-To reconfigure locales, identify the locale name (e.g., `en_GB.UTF-8`), generate it, and then reconfigure:
+To reconfigure locales, identify the locale name (e.g. `en_GB.UTF-8`), generate it, and then reconfigure:
 
 ```sh
 sudo locale-gen "en_GB.UTF-8"
@@ -366,7 +366,7 @@ sudo dpkg-reconfigure locales
 
 Source: <https://draculaservers.com/tutorials/setting-locale-failed-ubuntu/>
 
-Alternatively, when installing Ubuntu, select a region which has the desired locale (e.g., United Kingdom for `en_GB.UTF-8`), and change the timezone manually once the installation is complete.
+Alternatively, when installing Ubuntu, select a region which has the desired locale (e.g. United Kingdom for `en_GB.UTF-8`), and change the timezone manually once the installation is complete.
 
 ### Snap / Flatpak sandboxing issues
 
@@ -386,7 +386,7 @@ Copy the `.desktop` file of the application to the local applications folder:
 cp /usr/share/applications/app.desktop ~/.local/share/applications/
 ```
 
-Open the copied file and change the value of `Icon`, e.g., change absolute path to relative, use a custom icon, etc. Save the file after making changes.
+Open the copied file and change the value of `Icon`, e.g. change absolute path to relative, use a custom icon, etc. Save the file after making changes.
 
 ### Troubleshooting WiFi issues
 
@@ -414,7 +414,7 @@ Install Android SDK tools via [Android Studio](https://developer.android.com/stu
 - Enable USB debugging on the device
 - Connect device to computer using USB cable
 - Navigate to the `platform-tools` directory (for Linux, `$HOME/Android/Sdk/platform-tools`; for Windows, `%LocalAppData%/Android/Sdk/platform-tools`)
-- Run `adb devices` (for Linux and Windows, add `./` and `.\` before the executable (i.e., `adb`), respectively)
+- Run `adb devices` (for Linux and Windows, add `./` and `.\` before the executable (i.e. `adb`), respectively)
 
 See [How to Install and Use ADB, the Android Debug Bridge Utility - How-To Geek](https://www.howtogeek.com/125769/how-to-install-and-use-abd-the-android-debug-bridge-utility/).
 
@@ -464,7 +464,7 @@ Typing `heimdall help` in the terminal will display all available actions or arg
 
 This is for [Samsung Galaxy Tab 2 10.1](https://en.wikipedia.org/wiki/Samsung_Galaxy_Tab_2_10.1) GSM (espresso3g).
 
-Download the latest version of your preferred recovery image (e.g., [TWRP](https://twrp.me/samsung/samsunggalaxytab2gmsunified.html)) to the computer.
+Download the latest version of your preferred recovery image (e.g. [TWRP](https://twrp.me/samsung/samsunggalaxytab2gmsunified.html)) to the computer.
 
 Enable USB debugging on device. Turn off and boot the device into download mode (Volume Up + Power buttons, then Volume Down). This is known as ODIN mode on Samsung devices; a yellow warning triangle will appear on the screen.
 
