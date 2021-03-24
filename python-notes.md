@@ -279,7 +279,7 @@ Source:
 
 ## Sphinx
 
-### [Read the Docs not recognising theme](https://github.com/pandas-dev/pydata-sphinx-theme/issues/196)
+### [Read the Docs not recognising theme](https://github.com/pydata/pydata-sphinx-theme/issues/196)
 
 Add a `requirements.txt` file to `docs` (the same directory as `conf.py`) and add the theme to the list of requirements. Then, add the following configuration to `.readthedocs.yml`:
 

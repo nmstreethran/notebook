@@ -78,7 +78,6 @@
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
-  "gitlens.advanced.telemetry.enabled": false,
   "gitlens.currentLine.scrollable": false,
   "[html]": {
     "editor.tabSize": 2
@@ -204,11 +203,6 @@
   "[restructuredtext]": {
     "editor.tabSize": 3
   },
-  "restructuredtext.linter.disabled": true,
-  "restructuredtext.preview.docutil.disabled": true,
-  "restructuredtext.preview.doubleClickToSwitchToEditor": false,
-  "restructuredtext.preview.sphinx.disabled": true,
-  "restructuredtext.updateOnTextChanged": "false",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontWeight": 550,
   "window.menuBarVisibility": "toggle",

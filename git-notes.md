@@ -18,8 +18,9 @@
   - [Ignoring files with exceptions](#ignoring-files-with-exceptions)
 - [GitHub](#github)
 - [Pull requests](#pull-requests)
-- [GitLab API](#gitlab-api)
+- [GitLab](#gitlab)
   - [Getting raw file from repository](#getting-raw-file-from-repository)
+  - [CI](#ci)
 - [Errors](#errors)
   - [`HttpRequestException`](#httprequestexception)
   - [Remote already exists](#remote-already-exists)
@@ -275,7 +276,7 @@ pippo/pluto/*
 - [About pull request merges](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges)
 - [Merging a pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request)
 
-## GitLab API
+## GitLab
 
 ### [Getting raw file from repository](https://docs.gitlab.com/ee/api/repository_files.html#get-raw-file-from-repository)
 
@@ -299,6 +300,10 @@ URL:
 ```md
 https://gitlab.com/api/v4/projects/19753809/repository/files/geography%2Fpolygons%2Fbidding%5Fzones%2Egeojson/raw?ref=master
 ```
+
+### CI
+
+- <https://docs.gitlab.com/ee/development/cicd/templates.html>
 
 ## Errors
 
@@ -330,7 +335,7 @@ git remote rm docs
 2. ***push the changes to the submodule's branch***
 3. ***push to the main code repository***
 
-### [Including wiki in the main code repository as a submodule](https://brendancleary.com/2013/03/08/including-a-github-wiki-in-a-repository-as-a-submodule/)
+### Including wiki in the main code repository as a submodule
 
 Add the wiki to the main repository as a submodule (replace `username` and `repository` with username and repository name respectively):
 
@@ -341,6 +346,8 @@ git submodule add https://github.com/username/repository.wiki.git wiki
 Commit this addition to the main repository and push the changes. Once changes to the wiki within the submodule are made (e.g. new markdown files, images), these changes must first be committed and pushed to the wiki's branch, before committing and pushing to the main repository's branch.
 
 See the [Git documentation on submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+
+References: brendancleary.com (2013)
 
 ### [Cloning a repository including the contents of its submodules](https://stackoverflow.com/a/3797061/4573584)
 

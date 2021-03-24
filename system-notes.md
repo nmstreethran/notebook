@@ -454,9 +454,9 @@ Why use Heimdall, not Odin (from [Heimdall's homepage](https://glassechidna.com.
 
 #### Installing Heimdall
 
-Use the [heimdall-flash package for Ubuntu Focal](https://packages.ubuntu.com/focal/heimdall-flash), or download the source code from [GitLab](https://gitlab.com/BenjaminDobell/Heimdall) to build from source.
+Use the [heimdall-flash package for Ubuntu Focal](https://packages.ubuntu.com/focal/heimdall-flash), or download the source code from [GitHub](https://github.com/Benjamin-Dobell/Heimdall) to build from source.
 
-When building from source, follow the instructions outlined in the platform-specific README files ([Windows](https://gitlab.com/BenjaminDobell/Heimdall/-/tree/master/Win32); [Linux](https://gitlab.com/BenjaminDobell/Heimdall/-/tree/master/Linux)). For Windows, download MSYS2 and install the required libraries.
+When building from source, follow the instructions outlined in the platform-specific README files ([Windows](https://raw.githubusercontent.com/Benjamin-Dobell/Heimdall/master/Win32/README.txt); [Linux](https://raw.githubusercontent.com/Benjamin-Dobell/Heimdall/master/Linux/README)). For Windows, download MSYS2 and install the required libraries.
 
 Typing `heimdall help` in the terminal will display all available actions or arguments. This needs to be done in the path where Heimdall is installed, if it has not been added to the PATH variables.
 
