@@ -4,12 +4,10 @@
 
 - [HTML / CSS](#html--css)
   - [Colours](#colours)
-  - [Selectors reference](#selectors-reference)
   - [Render whitespace when using `content`](#render-whitespace-when-using-content)
   - [Overflow](#overflow)
-  - [Selecting elements](#selecting-elements)
+  - [Selecting elements with matching conditions](#selecting-elements-with-matching-conditions)
   - [Fonts](#fonts)
-  - [Responsive tables](#responsive-tables)
   - [Prevent overlap of content on navigation bar](#prevent-overlap-of-content-on-navigation-bar)
   - [Types of CSS](#types-of-css)
   - [Scale image height to match text height](#scale-image-height-to-match-text-height)
@@ -28,10 +26,6 @@ References:
 - [HTML colour codes](https://htmlcolorcodes.com/)
 - [Percent colour codes](https://www.december.com/html/spec/colorper.html)
 - [Mozilla colour picker tool](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
-
-### Selectors reference
-
-See <https://www.w3schools.com/cssref/css_selectors.asp>.
 
 ### [Render whitespace when using `content`](https://stackoverflow.com/a/40963855/4573584)
 
@@ -54,17 +48,7 @@ div {
 }
 ```
 
-### Selecting elements
-
-[Style the element with `id="firstname"`](https://www.w3schools.com/csSref/sel_id.asp):
-
-```css
-#firstname {
-  background-color: yellow;
-}
-```
-
-[Selecting elements with matching conditions](https://stackoverflow.com/a/56043821/4573584):
+### [Selecting elements with matching conditions](https://stackoverflow.com/a/56043821/4573584)
 
 Given the following example snippet with a `div`:
 
@@ -99,18 +83,6 @@ div[id*="wrapper_text"] {
 ### Fonts
 
 - [System fonts](https://devhints.io/css-system-font-stack)
-
-### [Responsive tables](https://www.w3schools.com/howto/howto_css_table_responsive.asp)
-
-> display a horizontal scroll bar if the screen is too small to display the full content
-
-```html
-<div style="overflow-x:auto;">
-  <table>
-      ...
-  </table>
-</div>
-```
 
 ### [Prevent overlap of content on navigation bar](https://stackoverflow.com/a/16873252/4573584)
 

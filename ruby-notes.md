@@ -196,9 +196,9 @@ jekyll -v
 
 ### [GitHub Pages](https://pages.github.com/)
 
-- [GitHub Pages Basics](https://docs.github.com/en/github/working-with-github-pages/getting-started-with-github-pages)
-- [Using Jekyll as a static site generator with GitHub Pages](https://docs.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll)
-- [Setting up your GitHub Pages site locally with Jekyll](https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll)
+- [GitHub Pages Basics](https://docs.github.com/en/pages/getting-started-with-github-pages)
+- [Using Jekyll as a static site generator with GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)
+- [Setting up your GitHub Pages site locally with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
 - [Installation - Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/docs/installation/)
 - [Jekyll Remote Theme](https://github.com/benbalter/jekyll-remote-theme)
 

@@ -43,7 +43,7 @@
 [Using SSH keys](https://stackoverflow.com/a/34957424/4573584):
 
 - <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>
-- <https://docs.github.com/en/github/using-git/changing-a-remotes-url>
+- <https://docs.github.com/en/github/getting-started-with-github/managing-remote-repositories>
 - <https://docs.gitlab.com/ee/ssh/README.html>
 
 Check for existing SSH keys:
@@ -238,7 +238,7 @@ git push origin -f
 
 Replace `<num>` with the number of commits you want to remove. e.g. `git reset --hard HEAD~2` removes the last two commits.
 
-## [Ignoring files](https://docs.github.com/en/github/using-git/ignoring-files)
+## [Ignoring files](https://docs.github.com/en/github/getting-started-with-github/ignoring-files)
 
 ### Templates
 
