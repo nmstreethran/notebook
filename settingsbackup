@@ -7,15 +7,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     ls -1 $HOME/.vscode-oss/extensions/ > .vscode/extensions.txt
 fi
 
-# if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-#     cp $HOME/.config/VSCodium/User/settings.json .vscode/settings.jsonc
-#     cp $HOME/.config/VSCodium/User/keybindings.json .vscode/keybindings.jsonc
-#     ls -1 $HOME/.vscode-oss/extensions/ > .vscode/extensions.txt
-# else
-#     cp $HOME/AppData/Roaming/Code/User/settings.json \
-#     .vscode/settings-win.jsonc
-# fi
-
 # copy all notes into wiki
 cp *.md gh-wiki
 
