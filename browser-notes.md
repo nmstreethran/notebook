@@ -6,6 +6,8 @@
   - [Find location of extensions](#find-location-of-extensions)
   - [View and modify extension data](#view-and-modify-extension-data)
   - [Crashes](#crashes)
+- [uBlock Origin](#ublock-origin)
+  - [Search result blocking](#search-result-blocking)
 
 ## Firefox
 
@@ -20,3 +22,45 @@ Go to `about:debugging#/runtime/this-firefox` to open the extension console
 ### Crashes
 
 View and submit crash reports via `about:crashes`.
+
+## uBlock Origin
+
+### Search result blocking
+
+To block certain search and image search results from showing up, use the following filters:
+
+```txt
+! DuckDuckGo
+duckduckgo.com##.result[data-domain$="thesun.co.uk"]
+! Ecosia
+ecosia.*##.g:has(a[href*="thesun.co.uk"])
+ecosia.*##a[href*="thesun.co.uk"]:nth-ancestor(1)
+! Google
+google.*##.g:has(a[href*="thesun.co.uk"])
+google.*##a[href*="thesun.co.uk"]:nth-ancestor(1)
+```
+
+Source: [Reddit posts](https://www.reddit.com/r/uBlockOrigin/comments/mml29s/removing_items_from_duckduckgo_search_results/) by u/leedaa99 and u/DrTomDice.
+
+The example above works for `thesun.co.uk`. To block multiple domains, create a text file (e.g. `list.txt`) and list each domain in a new line. Then, the following `awk` commands can be used to generate the filters for each search engine:
+
+```sh
+#!/bin/sh
+
+# DuckDuckGo
+gawk '{
+    se="duckduckgo.com##.result[data-domain$=\""$1"\"]"; print se
+}' list.txt > ddg.txt
+
+# Ecosia
+gawk '{
+    se="ecosia.*##.g:has(a[href*=\""$1"\"])\necosia.*##a[href*=\""$1"\"]:nth-ancestor(1)"; print se
+}' list.txt > ecosia.txt
+
+# Google
+gawk '{
+    se="google.*##.g:has(a[href*=\""$1"\"])\ngoogle.*##a[href*=\""$1"\"]:nth-ancestor(1)"; print se
+}' list.txt > google.txt
+```
+
+The results will be saved in new text files (i.e. `ddg.txt`, `ecosia.txt`, and `google.txt`). Simply copy and paste the contents of these text files in your uBlock Origin personal filter list, or store them in a GitHub Gist and import them into uBlock Origin using their raw file URL.
