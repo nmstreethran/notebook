@@ -72,7 +72,7 @@ git config --unset credential.helper
 ```sh
 git clone git://github.com/username/repository
 cd proj
-git remote add -f docs https://github.com/username/repository.wiki.git
+git remote add -f docs https://github.com/USERNAME/REPOSITORY.wiki.git
 git merge -s ours --no-commit --allow-unrelated-histories docs/master
 git read-tree --prefix=docs/ -u docs/master
 git commit -m "GitHub docs subtree merged in docs/"

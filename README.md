@@ -1,10 +1,6 @@
 # notebook
 
-<p align="center">
-  <a href="https://github.com/nmstreethran/notebook/wiki">
-    <img src="https://img.shields.io/badge/View%20on%20GitHub%20Wiki-white?style=for-the-badge&logo=github&logoColor=black" alt="View notes on GitHub Wiki">
-  </a>
-</p>
+[![View notes on GitHub Wiki](https://img.shields.io/badge/View%20notes%20on%20GitHub%20Wiki-white?logo=github&logoColor=black)](https://github.com/nmstreethran/notebook/wiki)
 
 Welcome to my notebook! This is where I backup my settings and computing notes.
 

@@ -9,6 +9,7 @@
   - [SSH askpass error](#ssh-askpass-error)
 - [Branching](#branching)
   - [Cloning a specific branch](#cloning-a-specific-branch)
+- [Managing forks](#managing-forks)
 - [Rewriting history](#rewriting-history)
   - [Deleting commit history of a repository but keep the code in its current state](#deleting-commit-history-of-a-repository-but-keep-the-code-in-its-current-state)
   - [Removing the last commit](#removing-the-last-commit)
@@ -189,6 +190,89 @@ git merge better_branch # fast-forward master up to the merge
 git clone git@github.com:USERNAME/REPOSITORY.git --branch develop --single-branch REPOSITORY
 ```
 
+## Managing forks
+
+Navigate to the cloned fork's directory and open a terminal. Run the following to list the fork's current configured remote repository:
+
+```sh
+git remote -v
+```
+
+...which will produce:
+
+```txt
+> origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+> origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+```
+
+Configure an upstream repository to sync the fork with and then list the configurations:
+
+```sh
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+git remote -v
+```
+
+...which will produce:
+
+```txt
+> origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+> origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+> upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
+> upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
+```
+
+Fetch commits from the upstream repository:
+
+```sh
+git fetch upstream
+```
+
+...which will produce an output similar to the following:
+
+```txt
+> remote: Counting objects: 75, done.
+> remote: Compressing objects: 100% (53/53), done.
+> remote: Total 62 (delta 27), reused 44 (delta 9)
+> Unpacking objects: 100% (62/62), done.
+> From https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY
+>  * [new branch]      main     -> upstream/main
+```
+
+Checkout the fork's default branch (e.g. `main`):
+
+```sh
+git checkout main
+```
+
+...
+
+```txt
+> Switched to branch 'main'
+```
+
+Merge the changes in the upstream to sync the fork:
+
+```sh
+git merge upstream/main
+```
+
+...
+
+```txt
+> Updating a422352..5fdff0f
+> Fast-forward
+>  README                    |    9 -------
+>  README.md                 |    7 ++++++
+>  2 files changed, 7 insertions(+), 9 deletions(-)
+>  delete mode 100644 README
+>  create mode 100644 README.md
+```
+
+Source:
+
+- <https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork>
+- <https://docs.github.com/en/articles/configuring-a-remote-for-a-fork>
+
 ## Rewriting history
 
 ### [Deleting commit history of a repository but keep the code in its current state](https://stackoverflow.com/a/26000395/4573584)
@@ -340,7 +424,7 @@ git remote rm docs
 Add the wiki to the main repository as a submodule (replace `username` and `repository` with username and repository name respectively):
 
 ```sh
-git submodule add https://github.com/username/repository.wiki.git wiki
+git submodule add https://github.com/USERNAME/REPOSITORY.wiki.git wiki
 ```
 
 Commit this addition to the main repository and push the changes. Once changes to the wiki within the submodule are made (e.g. new markdown files, images), these changes must first be committed and pushed to the wiki's branch, before committing and pushing to the main repository's branch.
@@ -352,7 +436,7 @@ References: brendancleary.com (2013)
 ### [Cloning a repository including the contents of its submodules](https://stackoverflow.com/a/3797061/4573584)
 
 ```sh
-git clone --recurse-submodules https://github.com/username/repository.git
+git clone --recurse-submodules https://github.com/USERNAME/REPOSITORY.git
 ```
 
 ### [Renaming submodules](https://stackoverflow.com/a/18712756/4573584)
