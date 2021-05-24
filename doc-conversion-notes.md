@@ -61,7 +61,7 @@ The PDF metadata can be specified using a dictionary:
   /DOCINFO pdfmark
 ```
 
-See Adobe's [pdfmark reference](https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdfmark_reference.pdf) for more information.
+See Adobe's [pdfmark reference](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/pdfs/acrobatsdk_pdfmark.pdf) for more information.
 
 Source:
 

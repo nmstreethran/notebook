@@ -9,6 +9,7 @@
   - [SSH askpass error](#ssh-askpass-error)
 - [Branching](#branching)
   - [Cloning a specific branch](#cloning-a-specific-branch)
+  - [Updating clone after renaming GitHub default branch](#updating-clone-after-renaming-github-default-branch)
 - [Managing forks](#managing-forks)
 - [Rewriting history](#rewriting-history)
   - [Deleting commit history of a repository but keep the code in its current state](#deleting-commit-history-of-a-repository-but-keep-the-code-in-its-current-state)
@@ -44,7 +45,7 @@
 [Using SSH keys](https://stackoverflow.com/a/34957424/4573584):
 
 - <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>
-- <https://docs.github.com/en/github/getting-started-with-github/managing-remote-repositories>
+- <https://docs.github.com/en/github/getting-started-with-github/getting-started-with-git/managing-remote-repositories>
 - <https://docs.gitlab.com/ee/ssh/README.html>
 
 Check for existing SSH keys:
@@ -190,6 +191,15 @@ git merge better_branch # fast-forward master up to the merge
 git clone git@github.com:USERNAME/REPOSITORY.git --branch develop --single-branch REPOSITORY
 ```
 
+### Updating clone after renaming GitHub default branch
+
+```sh
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
+```
+
 ## Managing forks
 
 Navigate to the cloned fork's directory and open a terminal. Run the following to list the fork's current configured remote repository:
@@ -270,8 +280,8 @@ git merge upstream/main
 
 Source:
 
-- <https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork>
-- <https://docs.github.com/en/articles/configuring-a-remote-for-a-fork>
+- <https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/working-with-forks/syncing-a-fork>
+- <https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/working-with-forks/configuring-a-remote-for-a-fork>
 
 ## Rewriting history
 
@@ -322,7 +332,7 @@ git push origin -f
 
 Replace `<num>` with the number of commits you want to remove. e.g. `git reset --hard HEAD~2` removes the last two commits.
 
-## [Ignoring files](https://docs.github.com/en/github/getting-started-with-github/ignoring-files)
+## [Ignoring files](https://docs.github.com/en/github/getting-started-with-github/getting-started-with-git/ignoring-files)
 
 ### Templates
 
@@ -352,12 +362,12 @@ pippo/pluto/*
 
 - [Delete wiki home page](https://stackoverflow.com/a/42653762/4573584)
 - [GitHub Wiki How-To](https://gist.github.com/subfuzion/0d3f19c4f780a7d75ba2)
-- [Detach a fork and turn it into a standalone repository](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile) -- contact [GitHub support](https://support.github.com)
+- [Detach a fork and turn it into a standalone repository](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-contribution-graphs-on-your-profile/why-are-my-contributions-not-showing-up-on-my-profile) -- contact [GitHub support](https://support.github.com)
 
 ## Pull requests
 
 - [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
-- [About pull request merges](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges)
+- [About pull request merges](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)
 - [Merging a pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request)
 
 ## GitLab

@@ -189,7 +189,7 @@ sudo dpkg-reconfigure gdm3
 
 The same command can be used to [reset the display manager](https://askubuntu.com/q/1043048/714808) should something go wrong with the GUI, or the original CSS files get corrupted.
 
-<https://wiki.archlinux.org/index.php/Display_manager>
+<https://wiki.archlinux.org/title/Display_manager>
 
 ### [Installing Firefox Developer Edition](https://askubuntu.com/a/584704/714808)
 

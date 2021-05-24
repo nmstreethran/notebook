@@ -86,7 +86,7 @@ git pull -s subtree docs master
 
 Merging changes the other way is complicated.
 
-More about subtree merges on [GitHub](https://docs.github.com/en/github/getting-started-with-github/about-git-subtree-merges).
+More about subtree merges on [GitHub](https://docs.github.com/en/github/getting-started-with-github/using-git/about-git-subtree-merges).
 
 ### [Invalid username or password error](https://stackoverflow.com/a/34919582/4573584) <!-- omit in toc -->
 
@@ -365,7 +365,7 @@ Installing `twemoji-color-font` and optionally editing `$HOME/.config/fontconfig
 
 - <https://github.com/eosrei/twemoji-color-font>
 - <https://www.reddit.com/r/firefox/comments/ev92yz/prevent_dejavu_font_from_messing_with_emojis/>
-- <https://wiki.archlinux.org/index.php/Font_configuration#Replace_or_set_default_fonts>
+- <https://wiki.archlinux.org/title/Font_configuration>
 - <https://askubuntu.com/a/740649/714808>
 
 ### KDE <!-- omit in toc -->

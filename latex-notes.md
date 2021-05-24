@@ -222,7 +222,7 @@ See <https://latexcolor.com/>.
 ### Hyperlink and PDF metadata
 
 - use hidelinks to remove hyperlink borders / coloured boxes
-- [format hyperlink colours](https://www.overleaf.com/learn/latex/hyperlinks)
+- [format hyperlink colours](https://www.overleaf.com/learn/latex/Hyperlinks)
 - `urlcolor` is for external links
 
 ```latex

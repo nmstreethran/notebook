@@ -215,7 +215,7 @@
   "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "Tomorrow Night Blue",
+  "workbench.colorTheme": "GitHub Dark",
   "workbench.editorAssociations": [
     {
       "viewType": "jupyter.notebook.ipynb",

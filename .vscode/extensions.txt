@@ -1,6 +1,7 @@
 davidanson.vscode-markdownlint-0.40.4
 eamodio.gitlens-11.4.1
-james-yu.latex-workshop-8.17.0
+github.github-vscode-theme-4.1.1
+james-yu.latex-workshop-8.18.0
 mechatroner.rainbow-csv-1.7.1
 ms-python.python-2020.10.332292344
 pkief.material-icon-theme-4.6.0
