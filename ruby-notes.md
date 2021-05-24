@@ -141,18 +141,18 @@ end
 
 The following dependency errors can occur if gems are installed using `sudo`:
 
-```txt
+```
 An error occurred while installing eventmachine (1.2.7), and Bundler cannot continue.
 Make sure that `gem install eventmachine -v '1.2.7' --source 'https://rubygems.org/'` succeeds before
 bundling.
 ```
 
-```txt
+```
 [...]
 package configuration for openssl is not found
 ```
 
-```txt
+```
 *** extconf.rb failed ***
 Could not create Makefile due to some reason, probably lack of
 necessary libraries and/or headers.  Check the mkmf.log file for more
