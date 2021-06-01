@@ -92,13 +92,13 @@ sudo cp /etc/default/grub /etc/default/grub.bak
 
 Open `/boot/grub/grub.cfg` which has a `menuentry` for each Grub menu item. Note the name of the `menuentry` which you want to set as default. An example for Windows 7:
 
-```
+```text
 menuentry 'Microsoft Windows XP Professional (on /dev/sda1)' [options] {
 ```
 
 Open `/etc/default/grub` using a text editor with `sudo` or administrative privileges. Find the line that contains `GRUB_DEFAULT=0`. Replace `0` with the name of the `menuentry` and save the file:
 
-```
+```text
 GRUB_DEFAULT='Microsoft Windows XP Professional (on /dev/sda1)'
 ```
 
@@ -346,7 +346,7 @@ System Settings > Startup and Shutdown > Desktop Session > On Login > Enable 'St
 
 The error looks like this:
 
-```
+```text
 perl: warning: Setting locale failed.
 perl: warning: Please check that your locale settings:
 [...]

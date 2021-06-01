@@ -36,9 +36,18 @@ jobs:
       - name: Check links using awesome_bot
         run: |
           awesome_bot --allow-dupe --skip-save-results --white-list \
-          stackexchange.com/,stackoverflow.com/,askubuntu.com/,\
-          superuser.com/,USERNAME/REPOSITORY,oFFvwZIEk1Y,\
-          download.opensuse.org,www.amd.com,dum7q6UXiCE,gitlab.com/api,\
-          localhost,YOUR_USERNAME/YOUR_FORK,gist.github.com/$,\
+          stackexchange.com/,\
+          stackoverflow.com/,\
+          askubuntu.com/,\
+          superuser.com/,\
+          USERNAME/REPOSITORY,\
+          oFFvwZIEk1Y,\
+          download.opensuse.org,\
+          www.amd.com,\
+          dum7q6UXiCE,\
+          gitlab.com/api,\
+          localhost,\
+          YOUR_USERNAME/YOUR_FORK,\
+          gist.github.com/$,\
           ORIGINAL_OWNER/ORIGINAL_REPOSITORY \
           `find . -name "*.md"`

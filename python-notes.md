@@ -59,13 +59,13 @@ if num2 != num5:
 
 ## [Importing variables from one script to another](https://stackoverflow.com/a/19289230/4573584)
 
-```sh
+```py
 from script1 import x
 ```
 
 ## [Loading JSON from URL](https://stackoverflow.com/a/12965254/4573584)
 
-```sh
+```py
 import urllib.request, json
 # define URL
 URL = 'https://stackoverflow.com'

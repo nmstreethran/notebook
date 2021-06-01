@@ -141,18 +141,18 @@ end
 
 The following dependency errors can occur if gems are installed using `sudo`:
 
-```
+```text
 An error occurred while installing eventmachine (1.2.7), and Bundler cannot continue.
 Make sure that `gem install eventmachine -v '1.2.7' --source 'https://rubygems.org/'` succeeds before
 bundling.
 ```
 
-```
+```text
 [...]
 package configuration for openssl is not found
 ```
 
-```
+```text
 *** extconf.rb failed ***
 Could not create Makefile due to some reason, probably lack of
 necessary libraries and/or headers.  Check the mkmf.log file for more
@@ -191,8 +191,8 @@ View the site at `http://localhost:4000/`.
 jekyll -v
 ```
 
-2. [Jekyll on Windows](https://jekyllrb.com/docs/installation/windows/)
-3. [Jekyll documentation](https://jekyllrb.com/docs/)
+- [Jekyll on Windows](https://jekyllrb.com/docs/installation/windows/)
+- [Jekyll documentation](https://jekyllrb.com/docs/)
 
 ### [GitHub Pages](https://pages.github.com/)
 

@@ -4,7 +4,7 @@ github.github-vscode-theme-4.1.1
 james-yu.latex-workshop-8.18.0
 mechatroner.rainbow-csv-1.7.1
 ms-python.python-2020.10.332292344
-pkief.material-icon-theme-4.6.0
+pkief.material-icon-theme-4.7.0
 reditorsupport.r-lsp-0.1.14
 streetsidesoftware.code-spell-checker-1.10.4
 yzhang.markdown-all-in-one-3.4.0

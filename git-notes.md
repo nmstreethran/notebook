@@ -139,7 +139,7 @@ sudo apt install ssh-askpass
 
 If you get a similar error to the [following](https://superuser.com/a/421084/752084):
 
-```
+```text
 The authenticity of host 'bitbucket.org (207.223.240.181)' can't be established.
 
 RSA key fingerprint is 97:8c:1b:f2:6f:14:6b:5c:3b:ec:aa:46:46:74:7c:40.
@@ -210,7 +210,7 @@ git remote -v
 
 ...which will produce:
 
-```
+```text
 > origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
 > origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
 ```
@@ -224,7 +224,7 @@ git remote -v
 
 ...which will produce:
 
-```
+```text
 > origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
 > origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
 > upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
@@ -239,7 +239,7 @@ git fetch upstream
 
 ...which will produce an output similar to the following:
 
-```
+```text
 > remote: Counting objects: 75, done.
 > remote: Compressing objects: 100% (53/53), done.
 > remote: Total 62 (delta 27), reused 44 (delta 9)
@@ -256,7 +256,7 @@ git checkout main
 
 ...
 
-```
+```text
 > Switched to branch 'main'
 ```
 
@@ -268,7 +268,7 @@ git merge upstream/main
 
 ...
 
-```
+```text
 > Updating a422352..5fdff0f
 > Fast-forward
 >  README                    |    9 -------
@@ -374,7 +374,7 @@ pippo/pluto/*
 
 ### [Getting raw file from repository](https://docs.gitlab.com/ee/api/repository_files.html#get-raw-file-from-repository)
 
-```md
+```text
 GET /projects/:id/repository/files/:file_path/raw
 ```
 
@@ -391,7 +391,7 @@ Example for the file at <https://gitlab.com/nithiya/ml-elec-model-data/-/blob/ma
 
 URL:
 
-```md
+```text
 https://gitlab.com/api/v4/projects/19753809/repository/files/geography%2Fpolygons%2Fbidding%5Fzones%2Egeojson/raw?ref=master
 ```
 

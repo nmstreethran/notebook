@@ -34,14 +34,14 @@ gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=output.pdf input1.pdf input2
 
 `pdfmarks` is a text file that contains the bookmarks. For example:
 
-```
+```text
 [/Title (Title Page) /Page 1 /OUT pdfmark
 [/Title (Table of Contents) /Page 3 /OUT pdfmark
 ```
 
 The bookmarks can be nested:
 
-```
+```text
 [/Count 3 /Title (Chapter 1) /Page 1 /OUT pdfmark
 [/Count -2 /Title (Section 1.1) /Page 2 /OUT pdfmark
 [/Title (Section 1.1.1) /Page 3 /OUT pdfmark
@@ -53,7 +53,7 @@ The bookmarks can be nested:
 
 The PDF metadata can be specified using a dictionary:
 
-```
+```text
 [ /Title (My Test Document)
   /Author (John Doe)
   /Subject (pdfmark 3.0)

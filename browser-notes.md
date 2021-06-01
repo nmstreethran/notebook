@@ -29,7 +29,7 @@ View and submit crash reports via `about:crashes`.
 
 To block certain search and image search results from showing up, use the following filters:
 
-```
+```text
 ! DuckDuckGo
 duckduckgo.com##.result[data-domain$="thesun.co.uk"]
 ! Ecosia
@@ -68,6 +68,6 @@ awk '{
 
 The results will be saved in new text files (i.e. `ddg.txt`, `ecosia.txt`, and `google.txt`). Simply copy and paste the contents of these text files in your uBlock Origin personal filter list, or store them in a GitHub Gist and import them into uBlock Origin using their raw file URL. The Gist's URL is of the following form:
 
-```sh
+```text
 https://gist.github.com/${username}/${gistid}/raw/${filename}
 ```
