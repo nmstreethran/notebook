@@ -64,9 +64,7 @@
     "*.geojson": "jsonc",
     "*.latex": "latex",
     "*.rst": "restructuredtext",
-    "*.sty": "latex",
-    "*.tex_t": "tex",
-    "*.theme": "jsonc"
+    "*.sty": "latex"
   },
   "files.autoSave": "afterDelay",
   "files.watcherExclude": {
@@ -124,6 +122,7 @@
     "*.lof",
     "*.lol",
     "*.lot",
+    "*.mw",
     "*.nav",
     "*.out",
     "*.run.xml",
@@ -135,8 +134,7 @@
     "*.synctex.gz",
     "*.synctex.gz(busy)",
     "*.toc",
-    "*.vrb",
-    "*.mw"
+    "*.vrb"
   ],
   "latex-workshop.latex.recipe.default": "lastUsed",
   "latex-workshop.latex.recipes": [
@@ -177,7 +175,6 @@
     }
   ],
   "latex-workshop.message.error.show": false,
-  "latex-workshop.message.update.show": false,
   "latex-workshop.message.warning.show": false,
   "latex-workshop.view.pdf.viewer": "tab",
   "[markdown]": {
@@ -189,9 +186,7 @@
     "*.geojson": "json",
     "*.latex": "tex",
     "readme.markdown": "readme",
-    "readme.rst": "readme",
-    "*.tex_t": "tex",
-    "*.theme": "json"
+    "readme.rst": "readme"
   },
   "material-icon-theme.folders.associations": {
     "charts": "images",
@@ -202,6 +197,7 @@
   "python.dataScience.askForKernelRestart": false,
   "python.dataScience.exportWithOutputEnabled": true,
   "python.dataScience.notebookFileRoot": "${workspaceFolder}",
+  "python.dataScience.sendSelectionToInteractiveWindow": false,
   "python.linting.pylintEnabled": true,
   "python.linting.flake8Enabled": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
@@ -214,12 +210,9 @@
   "terminal.integrated.fontSize": 16,
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "GitHub Dark",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
   "workbench.iconTheme": "material-icon-theme"
 }
