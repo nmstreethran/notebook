@@ -56,6 +56,16 @@
     79
   ],
   "editor.suggestSelection": "first",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
   "editor.wordWrap": "on",
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
@@ -89,7 +99,6 @@
   "[jsonc]": {
     "editor.tabSize": 2
   },
-  "jupyter.alwaysTrustNotebooks": true,
   "jupyter.askForKernelRestart": false,
   "jupyter.exportWithOutputEnabled": true,
   "jupyter.notebookFileRoot": "${workspaceFolder}",
@@ -197,7 +206,6 @@
   "python.dataScience.askForKernelRestart": false,
   "python.dataScience.exportWithOutputEnabled": true,
   "python.dataScience.notebookFileRoot": "${workspaceFolder}",
-  "python.dataScience.sendSelectionToInteractiveWindow": false,
   "python.linting.pylintEnabled": true,
   "python.linting.flake8Enabled": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
