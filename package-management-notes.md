@@ -318,6 +318,11 @@ or:
 python3 -m pip install package
 ```
 
+[On Windows:](https://stackoverflow.com/a/13211456/4573584)
+
+- `py -3` for latest version of Python 3
+- `py -3.x` for a specific version of Python 3
+
 ### [Uninstalling packages](https://stackoverflow.com/a/3297564/4573584)
 
 ```sh

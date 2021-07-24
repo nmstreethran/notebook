@@ -86,7 +86,7 @@ git pull -s subtree docs master
 
 Merging changes the other way is complicated.
 
-More about subtree merges on [GitHub](https://docs.github.com/en/github/getting-started-with-github/using-git/about-git-subtree-merges).
+More about subtree merges on [GitHub](https://docs.github.com/en/get-started/using-git/about-git-subtree-merges).
 
 ### [Invalid username or password error](https://stackoverflow.com/a/34919582/4573584) <!-- omit in toc -->
 

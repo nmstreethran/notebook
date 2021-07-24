@@ -84,7 +84,7 @@ Go to Keyboard Shortcuts (`ctrl+k` `ctrl+s`) and paste the following in `keybind
 
 - [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python#_install-python-and-the-python-extension)
 - [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
-- [Working with Jupyter Notebooks in Visual Studio Code](https://code.visualstudio.com/docs/python/jupyter-support)
+- [Working with Jupyter Notebooks in Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
 
 ### Git
 

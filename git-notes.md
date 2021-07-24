@@ -45,7 +45,7 @@
 [Using SSH keys](https://stackoverflow.com/a/34957424/4573584):
 
 - <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>
-- <https://docs.github.com/en/github/getting-started-with-github/getting-started-with-git/managing-remote-repositories>
+- <https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories>
 - <https://docs.gitlab.com/ee/ssh/README.html>
 
 Check for existing SSH keys:
@@ -280,8 +280,8 @@ git merge upstream/main
 
 Source:
 
-- <https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/working-with-forks/syncing-a-fork>
-- <https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/working-with-forks/configuring-a-remote-for-a-fork>
+- <https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/syncing-a-fork>
+- <https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-for-a-fork>
 
 ## Rewriting history
 
@@ -332,7 +332,7 @@ git push origin -f
 
 Replace `<num>` with the number of commits you want to remove. e.g. `git reset --hard HEAD~2` removes the last two commits.
 
-## [Ignoring files](https://docs.github.com/en/github/getting-started-with-github/getting-started-with-git/ignoring-files)
+## [Ignoring files](https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files)
 
 ### Templates
 
@@ -367,8 +367,7 @@ pippo/pluto/*
 ## Pull requests
 
 - [Squash your commits](https://github.blog/2016-04-01-squash-your-commits/)
-- [About pull request merges](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)
-- [Merging a pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request)
+- [About pull request merges](https://docs.github.com/en/github/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)
 
 ## GitLab
 
