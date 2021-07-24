@@ -1,4 +1,7 @@
 {
+  "[bibtex]": {
+    "editor.tabSize": 2
+  },
   "breadcrumbs.enabled": true,
   "cSpell.allowCompoundWords": true,
   "cSpell.language": "en-GB",
@@ -43,12 +46,12 @@
   "[css]": {
     "editor.tabSize": 2
   },
-  "[csv]":{
+  "[csv]": {
     "editor.wordWrap": "off"
   },
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
-  "editor.fontFamily": "'Cascadia Code', 'Ubuntu Mono', 'Consolas', monospace",
+  "editor.fontFamily": "'Cascadia Code', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.minimap.renderCharacters": false,
