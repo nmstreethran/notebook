@@ -1,10 +1,11 @@
-variables:
-  JEKYLL_ENV: production
-  LC_ALL: C.UTF-8
-  BUNDLE_PATH: .gem
-
 default:
   image: ruby:latest
+
+.pages:
+  variables:
+    JEKYLL_ENV: production
+    LC_ALL: C.UTF-8
+    BUNDLE_PATH: .gem
   cache:
     key: bundler-cache
     paths:
@@ -12,10 +13,29 @@ default:
   before_script:
     - gem install bundler
     - bundle install
-
-pages:
   script:
     - bundle exec jekyll build -d public
+  only:
+    changes:
+      - _data/**/*
+      - _includes/**/*
+      - _pages/**/*
+      - _posts/**/*
+      - assets/**/*
+      - "*.png"
+      - _config.yml
+      - browserconfig.xml
+      - favicon.ico
+      - Gemfile
+      - Gemfile.lock
+      - index.md
+      - safari-pinned-tab.svg
+      - site.webmanifest
+      - staticman.yml
+
+pages:
+  extends: .pages
+  stage: deploy
   artifacts:
     paths:
       - public
@@ -23,18 +43,10 @@ pages:
   only:
     refs:
       - master
-    changes:
-      - _data/**/*
-      - _includes/**/*
-      - _posts/**/*
-      - assets/**/*
-      - "*.html"
-      - "*.md"
-      - "*.png"
-      - "*.xml"
-      - _config.yml
-      - favicon.ico
-      - Gemfile
-      - safari-pinned-tab.svg
-      - site.webmanifest
-      - staticman.yml
+
+test_pages:
+  extends: .pages
+  stage: test
+  only:
+    refs:
+      - merge_requests

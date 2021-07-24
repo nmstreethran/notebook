@@ -17,9 +17,11 @@ test:
   # extends: .docker
   script:
     - "awesome_bot --allow-dupe --skip-save-results --white-list
-      stackexchange.com,stackoverflow.com,askubuntu.com,superuser.com,\
-      username/repository,oFFvwZIEk1Y,download.opensuse.org,\
-      www.amd.com,dum7q6UXiCE,gitlab.com/api `find . -name '*.md'`"
+      stackexchange.com,\
+      stackoverflow.com,\
+      askubuntu.com,\
+      superuser.com
+      `find . -name '*.md'`"
   only:
     refs:
       - merge_requests

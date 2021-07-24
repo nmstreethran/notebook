@@ -36,10 +36,10 @@ jobs:
       - name: Check links using awesome_bot
         run: |
           awesome_bot --allow-dupe --skip-save-results --white-list \
-          stackexchange.com/,\
-          stackoverflow.com/,\
-          askubuntu.com/,\
-          superuser.com/,\
+          stackexchange.com,\
+          stackoverflow.com,\
+          askubuntu.com,\
+          superuser.com,\
           USERNAME/REPOSITORY,\
           oFFvwZIEk1Y,\
           download.opensuse.org,\
@@ -49,5 +49,7 @@ jobs:
           localhost,\
           YOUR_USERNAME/YOUR_FORK,\
           gist.github.com/$,\
+          www.java.com,\
+          docs.github.com,\
           ORIGINAL_OWNER/ORIGINAL_REPOSITORY \
           `find . -name "*.md"`
