@@ -207,6 +207,10 @@
     "old": "archive",
     "wiki": "docs"
   },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
   "python.dataScience.alwaysTrustNotebooks": true,
   "python.dataScience.askForKernelRestart": false,
   "python.dataScience.exportWithOutputEnabled": true,
@@ -225,7 +229,7 @@
   "window.restoreWindows": "none",
   "workbench.colorTheme": "GitHub Dark Default",
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
+    "*.ipynb": "jupyter-notebook"
   },
   "workbench.iconTheme": "material-icon-theme"
 }
