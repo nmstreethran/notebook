@@ -31,7 +31,7 @@ Download and install Ruby using instructions from the [official website](https:/
 - Use apt on Debian/Ubuntu (*may not be the latest version*):
 
   ```sh
-  sudo apt-get install ruby-full
+  sudo apt install ruby-full
   ```
 
 ## Installing gems
@@ -162,7 +162,7 @@ details.  You may need configuration options.
 To fix this, either uninstall all `sudo` gems and reinstall them locally, or do the following:
 
 ```sh
-sudo apt-get install ruby-full ruby-eventmachine
+sudo apt install ruby-full ruby-eventmachine
 gem install bundler eventmachine
 bundle install
 ```

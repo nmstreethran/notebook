@@ -75,7 +75,7 @@ Source: <https://ostechnix.com/how-to-merge-pdf-files-in-command-line-on-linux/>
 Installing in Ubuntu:
 
 ```sh
-sudo apt-get install poppler-utils
+sudo apt install poppler-utils
 ```
 
 ### Merging PDF files

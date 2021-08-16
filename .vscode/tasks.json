@@ -6,7 +6,8 @@
         {
             "label": "compile",
             "type": "shell",
-            "command": "./settingsbackup.sh"
+            "command": "./settingsbackup.sh",
+            "problemMatcher": []
         }
     ]
 }

@@ -201,8 +201,8 @@ Using PPA:
 
 ```sh
 sudo add-apt-repository ppa:lyzardking/ubuntu-make
-sudo apt-get update
-sudo apt-get install ubuntu-make
+sudo apt update
+sudo apt install ubuntu-make
 ```
 
 Then, install Firefox Developer Edition:
@@ -220,7 +220,7 @@ Restart if the application does not appear in the dashboard.
 Install using:
 
 ```sh
-sudo apt-get update && sudo apt-get install checkinstall
+sudo apt update && sudo apt install checkinstall
 ```
 
 Instead of
@@ -240,13 +240,13 @@ sudo checkinstall
 If installed via package manager:
 
 ```sh
-sudo apt-get remove <application_name>
+sudo apt remove <application_name>
 ```
 
 To uninstall all related packages and configuration files:
 
 ```sh
-sudo apt-get purge <package-name>
+sudo apt purge <package-name>
 ```
 
 Otherwise, use Synaptic Package Manager, and 'Mark for complete removal'.
@@ -259,18 +259,18 @@ Otherwise, use Synaptic Package Manager, and 'Mark for complete removal'.
 
 ### [Handling held back packages](https://askubuntu.com/a/602/714808)
 
-`apt-get upgrade` gives `The following packages have been kept back`.
+`apt upgrade` gives `The following packages have been kept back`.
 
 Solution 1:
 
 ```sh
-sudo apt-get --with-new-pkgs upgrade
+sudo apt --with-new-pkgs upgrade
 ```
 
 Solution 2 (replace `packages` with the list of packages held back):
 
 ```sh
-sudo apt-get install packages
+sudo apt install packages
 ```
 
 ### Installing Zotero
@@ -314,7 +314,7 @@ unzip file.zip
 If `unzip` is not installed:
 
 ```sh
-sudo apt-get install unzip
+sudo apt install unzip
 ```
 
 #### Zipping and unzipping files

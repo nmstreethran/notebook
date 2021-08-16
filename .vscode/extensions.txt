@@ -1,10 +1,10 @@
-davidanson.vscode-markdownlint-0.42.1
-eamodio.gitlens-11.5.1
+davidanson.vscode-markdownlint-0.43.2
+eamodio.gitlens-11.6.0
 github.github-vscode-theme-4.1.1
 james-yu.latex-workshop-8.19.2
 mechatroner.rainbow-csv-1.7.1
 ms-python.python-2020.10.332292344
-pkief.material-icon-theme-4.8.0
+pkief.material-icon-theme-4.9.0
 reditorsupport.r-lsp-0.1.14
 streetsidesoftware.code-spell-checker-1.10.4
 yzhang.markdown-all-in-one-3.4.0
