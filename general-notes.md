@@ -11,7 +11,7 @@
 
 ## Character limits
 
-[adhering to 80 character limit in code](https://softwareengineering.stackexchange.com/a/1848/333462)
+[adhering to 80 character limit in code](https://softwareengineering.stackexchange.com/a/1848)
 
 - allows for the code to remain fewer than 80 columns even when diff markers and email quoting is added, if you do code review on mailing lists
 - prevents editor code wrapping, which may not be aesthetically pleasing
@@ -69,7 +69,7 @@ Character | URL encoding | Reserved?
 
 ## Versioning
 
-[Answer by Escualo / community wiki](https://stackoverflow.com/a/3728813/4573584):
+[Answer by Escualo / community wiki](https://stackoverflow.com/a/3728813):
 
 > The version number is entirely up to you. Do what makes sense to you and be consistent. Nobody says you have to start from 0, or 0.0, or 1.0, or 1.1.
 >
@@ -91,7 +91,7 @@ From [Semantic Versioning](https://semver.org/):
 >
 > The simplest thing to do is start your initial development release at 0.1.0 and then increment the minor version for each subsequent release.
 
-[Answer by Alexandre C. / community wiki](https://stackoverflow.com/a/3728764/4573584):
+[Answer by Alexandre C. / community wiki](https://stackoverflow.com/a/3728764):
 
 > I think different factors come into play here. Psychological/marketing impact of the version number (version number increased often => more $$$, people don't want to buy a 0.99 beta version, etc) must be taken into account. "Logic" version numbers can help when working in a huge team.
 >
@@ -101,4 +101,4 @@ From [Semantic Versioning](https://semver.org/):
 
 ### Line breaks
 
-See <https://stackoverflow.com/a/21699210/4573584>.
+See <https://stackoverflow.com/a/21699210>.

@@ -58,7 +58,7 @@
 
 #### Reusing defined commands
 
-[Reusing the `\title`, `\author` and `\date` commands in different areas of a document](https://tex.stackexchange.com/a/10131/140109)
+[Reusing the `\title`, `\author` and `\date` commands in different areas of a document](https://tex.stackexchange.com/a/10131)
 
 > The `\title`, `\author` and `\date` macros are saving their argument into `\@title`, `\@author`, and `\@date`, respectively. You can use this macros after `\makeatletter`. Afterwards use `\makeatother`. Note that they are cleared by `\maketitle`. -- Martin Scharrer
 
@@ -168,14 +168,14 @@ and \autoref{fig:b}. \autoref{fig:b} has been flipped horizontally.
 \end{figure}
 ```
 
-- <https://tex.stackexchange.com/a/119985/140109>
+- <https://tex.stackexchange.com/a/119985>
 - <https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions#Captions>
 
 ### Tables
 
-- ["ThreePartTable" environment](https://tex.stackexchange.com/a/209851/140109)
+- ["ThreePartTable" environment](https://tex.stackexchange.com/a/209851)
 - [More space between rows](https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf)
-- [Set table content to align left; for removing `underfull \hbox` warning in table](https://tex.stackexchange.com/a/275310/140109)
+- [Set table content to align left; for removing `underfull \hbox` warning in table](https://tex.stackexchange.com/a/275310)
 
 ```latex
 \usepackage{longtable,tabulary}
@@ -186,7 +186,7 @@ and \autoref{fig:b}. \autoref{fig:b} has been flipped horizontally.
   >{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 ```
 
-#### [Globally change table font size](https://tex.stackexchange.com/a/220258/140109)
+#### [Globally change table font size](https://tex.stackexchange.com/a/220258)
 
 ```latex
 \let\oldtabular\tabular
@@ -234,7 +234,7 @@ See <https://latexcolor.com/>.
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=green,citecolor=blue}
 ```
 
-#### [Token not allowed in a PDF string warning](https://tex.stackexchange.com/a/53514/140109)
+#### [Token not allowed in a PDF string warning](https://tex.stackexchange.com/a/53514)
 
 > The bookmarks are not typeset by TeX: they simply are strings of characters, so no math or general formatting instructions are allowed. -- egreg
 
@@ -255,7 +255,7 @@ Add and rename title of list of listings:
 
 Listings configuration:
 
-See <https://tex.stackexchange.com/a/235822/140109> and <https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings>.
+See <https://tex.stackexchange.com/a/235822> and <https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings>.
 
 ```latex
 % using named colours from xcolor
@@ -324,7 +324,7 @@ import pandas as pd
 
 Using a tilde `~` in verbatim environments:
 
-- [Using the `formats` option and tilde in math mode (uses math font and size)](https://tex.stackexchange.com/a/120811/140109):
+- [Using the `formats` option and tilde in math mode (uses math font and size)](https://tex.stackexchange.com/a/120811):
 
 ```latex
 \usepackage[formats]{listings}
@@ -341,7 +341,7 @@ Alternatively, define it as a literal (worked better for me):
 }
 ```
 
-See <https://tex.stackexchange.com/q/312/140109> for more options.
+See <https://tex.stackexchange.com/q/312> for more options.
 
 ### Lists
 
@@ -352,7 +352,7 @@ Adjust spacing:
 \setlist{itemsep=.5pt}
 ```
 
-### [No monospaced URL font](https://tex.stackexchange.com/a/53963/140109)
+### [No monospaced URL font](https://tex.stackexchange.com/a/53963)
 
 ```latex
 \urlstyle{same}
@@ -367,8 +367,8 @@ Adjust spacing:
   {\quotation}{\quotation\noindent\ignorespaces}{}{}}
 ```
 
-- <https://tex.stackexchange.com/a/1603/140109>
-- <https://tex.stackexchange.com/a/40432/140109>
+- <https://tex.stackexchange.com/a/1603>
+- <https://tex.stackexchange.com/a/40432>
 
 ### Add section PDF bookmark manually
 
@@ -378,8 +378,8 @@ Adjust spacing:
 \pdfbookmark[1]{Further Reading}{Further Reading}
 ```
 
-- <https://tex.stackexchange.com/a/33701/140109>
-- <https://tex.stackexchange.com/a/33699/140109>
+- <https://tex.stackexchange.com/a/33701>
+- <https://tex.stackexchange.com/a/33699>
 
 ## Bibliography
 
@@ -401,9 +401,9 @@ Numeric bibliography:
 
 Alphanumeric style:
 
-- [edit to include title for entries with no author and 'ND' for entries with no date; minimum 4 characters for title/author](https://tex.stackexchange.com/a/68875/140109)
-- [display only first author's name in label using `maxalphanames=1`](https://tex.stackexchange.com/a/276530/140109)
-- [ignore spaces in author name or title](https://tex.stackexchange.com/a/276530/140109)
+- [edit to include title for entries with no author and 'ND' for entries with no date; minimum 4 characters for title/author](https://tex.stackexchange.com/a/68875)
+- [display only first author's name in label using `maxalphanames=1`](https://tex.stackexchange.com/a/276530)
+- [ignore spaces in author name or title](https://tex.stackexchange.com/a/276530)
 
 ```latex
 \usepackage[style=alphabetic,maxalphanames=1]{biblatex}
@@ -426,7 +426,7 @@ Alphanumeric style:
 
 The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](https://github.com/plk/biblatex/blob/dev/tex/latex/biblatex/biblatex.def). The defaults for `\DeclareNolabel` are `\regexp{[\p{P}\p{S}\p{C}]+}`.
 
-### [Suppress values from bibliography output](https://tex.stackexchange.com/a/364598/140109)
+### [Suppress values from bibliography output](https://tex.stackexchange.com/a/364598)
 
 ```latex
 % suppress shorthand values
@@ -437,11 +437,11 @@ The defaults for `\DeclareLabelalphaTemplate` can be found in [`biblatex.def`](h
   \maps[datatype=bibtex]{\map{\step[fieldset=eprintclass, null]}}}
 ```
 
-### [Listing entries without in-text citation](https://tex.stackexchange.com/a/17132/140109)
+### [Listing entries without in-text citation](https://tex.stackexchange.com/a/17132)
 
 `\nocite{*}` prints all entries, while `\nocite{key1,key2,...,keyn}` prints entries corresponding to the `key1,key2,...,keyn` keys. Use either of these commands before `\printbibliography`.
 
-### [Split bibliography into works cited and works not cited in-text](https://tex.stackexchange.com/a/6977/140109)
+### [Split bibliography into works cited and works not cited in-text](https://tex.stackexchange.com/a/6977)
 
 ```latex
 %% preamble
@@ -459,7 +459,7 @@ Some text \cite{A01,B02}.
 \printbibliography[title={Further Reading},notcategory=cited]
 ```
 
-### [Remap `@software` entries to `@online`](https://tex.stackexchange.com/a/325255/140109)
+### [Remap `@software` entries to `@online`](https://tex.stackexchange.com/a/325255)
 
 ```latex
 \DeclareBibliographyAlias{software}{online}
@@ -479,20 +479,20 @@ Some text \cite{A01,B02}.
 \hypersetup{pdfauthor={\theauthor}}
 ```
 
-### [Avoid overfulls in right margin](https://tex.stackexchange.com/a/391321/140109)
+### [Avoid overfulls in right margin](https://tex.stackexchange.com/a/391321)
 
 ```latex
 \emergencystretch3em
 ```
 
-### [Remove blank pages after chapters](https://tex.stackexchange.com/a/334126/140109)
+### [Remove blank pages after chapters](https://tex.stackexchange.com/a/334126)
 
 ```latex
 \documentclass[11pt,openany]{book}
 \let\cleardoublepage=\clearpage
 ```
 
-### [Fix spacing problem for header and footer using `headheight`](https://tex.stackexchange.com/a/93871/140109)
+### [Fix spacing problem for header and footer using `headheight`](https://tex.stackexchange.com/a/93871)
 
 ```latex
 \geometry{
@@ -511,11 +511,11 @@ Some text \cite{A01,B02}.
 
 ### Header and footer settings using `fancyhdr`
 
-- [Changing the font style of page number on front page](https://tex.stackexchange.com/a/97442/140109)
-- [remove horizontal line from header](https://tex.stackexchange.com/a/13897/140109)
+- [Changing the font style of page number on front page](https://tex.stackexchange.com/a/97442)
+- [remove horizontal line from header](https://tex.stackexchange.com/a/13897)
 - [header and footers guide on Overleaf](https://www.overleaf.com/learn/latex/Headers_and_footers)
-- [lowercase chapter in header](https://tex.stackexchange.com/a/121808/140109)
-- [remove "Chapter 0" from header](https://tex.stackexchange.com/a/340126/140109)
+- [lowercase chapter in header](https://tex.stackexchange.com/a/121808)
+- [remove "Chapter 0" from header](https://tex.stackexchange.com/a/340126)
 
 ```latex
 \usepackage{fancyhdr}
@@ -538,13 +538,13 @@ Some text \cite{A01,B02}.
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 ```
 
-### [Remove headers and footers for a page](https://tex.stackexchange.com/a/120748/140109)
+### [Remove headers and footers for a page](https://tex.stackexchange.com/a/120748)
 
 ```latex
 \thispagestyle{empty}
 ```
 
-### [Use value of last page](https://tex.stackexchange.com/a/235/140109)
+### [Use value of last page](https://tex.stackexchange.com/a/235)
 
 ```latex
 \usepackage{lastpage}
@@ -564,9 +564,9 @@ Some text \cite{A01,B02}.
 
 - [footnote customisation](https://en.wikibooks.org/wiki/LaTeX/Footnotes_and_Margin_Notes)
 - [reset footnote counter](https://ubuntuincident.wordpress.com/2011/12/28/reset-footnote-counter-in-latex/)
-- [placing appendices after backmatter](https://tex.stackexchange.com/a/198608/140109)
-- [remove "Appendix/Chapter X" from references header](https://tex.stackexchange.com/a/102693/140109)
-- [appendix chapter name](https://tex.stackexchange.com/a/151130/140109)
+- [placing appendices after backmatter](https://tex.stackexchange.com/a/198608)
+- [remove "Appendix/Chapter X" from references header](https://tex.stackexchange.com/a/102693)
+- [appendix chapter name](https://tex.stackexchange.com/a/151130)
 
 ### Inserting PDFs
 
@@ -589,13 +589,13 @@ Note that pdfpages does not preserve hyperlinks that are in the document. Use Gh
 Sources:
 
 - <https://ctan.org/pkg/pdfpages>
-- <https://tex.stackexchange.com/a/8665/140109>
-- <https://tex.stackexchange.com/q/14620/140109>
+- <https://tex.stackexchange.com/a/8665>
+- <https://tex.stackexchange.com/q/14620>
 
 ### Word count
 
 - [TeXcount](https://ctan.uib.no/support/texcount/doc/TeXcount.pdf) package documentation.
-- [Ignore sections or inputs of a document when calculating the number of words using TeXcount](https://tex.stackexchange.com/a/259296/140109) - using `%TC:ignore` and `%TC:endignore`:
+- [Ignore sections or inputs of a document when calculating the number of words using TeXcount](https://tex.stackexchange.com/a/259296) - using `%TC:ignore` and `%TC:endignore`:
 
 ```latex
 % regions between TC:ignore and TC:endignore will be ignored from word count
@@ -617,7 +617,7 @@ Set custom aspect ratio (widescreen) and import colours from `xcolor` (`svgnames
 \documentclass[aspectratio=169,xcolor={svgnames}]{beamer}
 ```
 
-- <https://tex.stackexchange.com/a/74807/140109>
+- <https://tex.stackexchange.com/a/74807>
 
 ### Defining document properties
 
@@ -645,9 +645,9 @@ Set custom aspect ratio (widescreen) and import colours from `xcolor` (`svgnames
 
 - [Beamer theme gallery](https://deic-web.uab.cat/~iblanes/beamer_gallery/)
 - [Beamer docs](https://ctan.org/pkg/beamer)
-- [Beamer template tutorial by Claudio Fiandrino](https://tex.stackexchange.com/a/146682/140109)
+- [Beamer template tutorial by Claudio Fiandrino](https://tex.stackexchange.com/a/146682)
 - [Overleaf beamer guide](https://www.overleaf.com/learn/latex/Beamer)
-- [set colours for sections and subsections in table of contents](https://tex.stackexchange.com/a/69721/140109)
+- [set colours for sections and subsections in table of contents](https://tex.stackexchange.com/a/69721)
 
 ```latex
 \mode<presentation>
@@ -714,9 +714,9 @@ cout << "Hello world!";
 
 ### Beamer bibliography
 
-- [bibliography icon](https://tex.stackexchange.com/a/68084/140109)
-- [numerical references](https://tex.stackexchange.com/a/68081/140109)
-- [change font size](https://tex.stackexchange.com/a/205447/140109)
+- [bibliography icon](https://tex.stackexchange.com/a/68084)
+- [numerical references](https://tex.stackexchange.com/a/68081)
+- [change font size](https://tex.stackexchange.com/a/205447)
 
 Change font size:
 

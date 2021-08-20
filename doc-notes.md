@@ -12,7 +12,7 @@
 
 ## Ghostscript
 
-### [Compressing PDF files to reduce their size](https://askubuntu.com/a/256449/714808)
+### [Compressing PDF files to reduce their size](https://askubuntu.com/a/256449)
 
 ```sh
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
@@ -98,7 +98,7 @@ Replace `x` and `y` with the numbers of the first and last page to extract, resp
 
 Source: <http://linux-commands-examples.com/pdfseparate>
 
-### [Convert PDF to image](https://askubuntu.com/a/50180/714808)
+### [Convert PDF to image](https://askubuntu.com/a/50180)
 
 ```sh
 pdftoppm input.pdf outputname -png

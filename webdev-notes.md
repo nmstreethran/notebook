@@ -27,7 +27,7 @@ References:
 - [Percent colour codes](https://www.december.com/html/spec/colorper.html)
 - [Mozilla colour picker tool](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
 
-### [Render whitespace when using `content`](https://stackoverflow.com/a/40963855/4573584)
+### [Render whitespace when using `content`](https://stackoverflow.com/a/40963855)
 
 Set `white-space` to `pre` or `pre-wrap`, e.g.:
 
@@ -48,7 +48,7 @@ div {
 }
 ```
 
-### [Selecting elements with matching conditions](https://stackoverflow.com/a/56043821/4573584)
+### [Selecting elements with matching conditions](https://stackoverflow.com/a/56043821)
 
 Given the following example snippet with a `div`:
 
@@ -84,7 +84,7 @@ div[id*="wrapper_text"] {
 
 - [System fonts](https://devhints.io/css-system-font-stack)
 
-### [Prevent overlap of content on navigation bar](https://stackoverflow.com/a/16873252/4573584)
+### [Prevent overlap of content on navigation bar](https://stackoverflow.com/a/16873252)
 
 Adding a z-index to keep the navigation bar on top of everything. 999 is the max value.
 
@@ -94,7 +94,7 @@ nav {
 }
 ```
 
-### [Types of CSS](https://stackoverflow.com/a/40690406/4573584)
+### [Types of CSS](https://stackoverflow.com/a/40690406)
 
 Inline CSS (within HTML):
 
@@ -151,7 +151,7 @@ img {
 
 ## Issues
 
-### [MIME type mismatch](https://stackoverflow.com/q/40728554/4573584)
+### [MIME type mismatch](https://stackoverflow.com/q/40728554)
 
 Could be caused by incorrect file path, e.g. missing leading slash.
 

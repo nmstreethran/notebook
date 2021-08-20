@@ -42,7 +42,7 @@
 
 ### Setting up SSH
 
-[Using SSH keys](https://stackoverflow.com/a/34957424/4573584):
+[Using SSH keys](https://stackoverflow.com/a/34957424):
 
 - <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>
 - <https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories>
@@ -121,7 +121,7 @@ On Windows, the default SSH key path is `$HOME\.ssh`. `$HOME` is usually `C:\Use
 > It should automatically pick up keys stored in `C:\Users\%USERNAME%\.ssh` which is where ssh-keygen creates them.
 > Enter your password(s) at the prompt.
 
-### [SSH askpass error](https://stackoverflow.com/a/52886041/4573584)
+### [SSH askpass error](https://stackoverflow.com/a/52886041)
 
 Error when pushing using VS Code on Ubuntu:
 
@@ -131,13 +131,13 @@ Git: ssh_askpass: exec(usr/lib/ssh/ssh_askpass): No such file or directory.
 
 Likely caused by OS update, which makes Git lose the passphrase of the SSH key. To solve the problem, run `ssh-add ~/.ssh/id_rsa`. It may require reinstallation of VS Code.
 
-If that doesn't work, [try reinstalling `ssh-askpass`](https://askubuntu.com/a/1196265/714808):
+If that doesn't work, [try reinstalling `ssh-askpass`](https://askubuntu.com/a/1196265):
 
 ```sh
 sudo apt install ssh-askpass
 ```
 
-If you get a similar error to the [following](https://superuser.com/a/421084/752084):
+If you get a similar error to the [following](https://superuser.com/a/421084):
 
 ```text
 The authenticity of host 'bitbucket.org (207.223.240.181)' can't be established.
@@ -160,7 +160,7 @@ List current branches:
 git branch
 ```
 
-[Create branch in old commit](https://stackoverflow.com/a/2816728/4573584):
+[Create branch in old commit](https://stackoverflow.com/a/2816728):
 
 ```sh
 git branch branchname <sha1-of-commit>
@@ -176,7 +176,7 @@ git branch branchname HEAD~3
 
 [Controversial article about trunk-based development vs feature branches](https://medium.com/@mattia.battiston/why-i-love-trunk-based-development-641fcf0b94a0)
 
-[Changing the master branch, preserving the old master branch as the ancestor](https://stackoverflow.com/a/2763118/4573584):
+[Changing the master branch, preserving the old master branch as the ancestor](https://stackoverflow.com/a/2763118):
 
 ```sh
 git checkout better_branch
@@ -185,7 +185,7 @@ git checkout master
 git merge better_branch # fast-forward master up to the merge
 ```
 
-### [Cloning a specific branch](https://stackoverflow.com/a/9920956/4573584)
+### [Cloning a specific branch](https://stackoverflow.com/a/9920956)
 
 ```sh
 git clone git@github.com:USERNAME/REPOSITORY.git --branch develop --single-branch REPOSITORY
@@ -285,7 +285,7 @@ Source:
 
 ## Rewriting history
 
-### [Deleting commit history of a repository but keep the code in its current state](https://stackoverflow.com/a/26000395/4573584)
+### [Deleting commit history of a repository but keep the code in its current state](https://stackoverflow.com/a/26000395)
 
 Checkout:
 
@@ -347,7 +347,7 @@ If you already have a file checked in, and you want to ignore it, Git will not i
 git rm --cached FILENAME
 ```
 
-### [Ignoring files with exceptions](https://stackoverflow.com/a/16318111/4573584)
+### [Ignoring files with exceptions](https://stackoverflow.com/a/16318111)
 
 Ignore the `pippo` folder except `pippo/pluto/paperino.xml`:
 
@@ -360,7 +360,7 @@ pippo/pluto/*
 
 ## GitHub
 
-- [Delete wiki home page](https://stackoverflow.com/a/42653762/4573584)
+- [Delete wiki home page](https://stackoverflow.com/a/42653762)
 - [GitHub Wiki How-To](https://gist.github.com/subfuzion/0d3f19c4f780a7d75ba2)
 - [Detach a fork and turn it into a standalone repository](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-contribution-graphs-on-your-profile/why-are-my-contributions-not-showing-up-on-my-profile) -- contact [GitHub support](https://support.github.com)
 
@@ -408,7 +408,7 @@ fatal: HttpRequestException encountered.
 
 ... followed by being prompted for my username and password again.
 
-Solution: [Update Git to the latest version](https://stackoverflow.com/a/49109825/4573584).
+Solution: [Update Git to the latest version](https://stackoverflow.com/a/49109825).
 
 ### Remote already exists
 
@@ -416,7 +416,7 @@ Solution: [Update Git to the latest version](https://stackoverflow.com/a/4910982
 fatal: remote docs already exists.
 ```
 
-Solution: [remove the remote repository](https://stackoverflow.com/a/1221874/4573584)
+Solution: [remove the remote repository](https://stackoverflow.com/a/1221874)
 
 ```sh
 git remote rm docs
@@ -442,19 +442,19 @@ See the [Git documentation on submodules](https://git-scm.com/book/en/v2/Git-Too
 
 References: brendancleary.com (2013)
 
-### [Cloning a repository including the contents of its submodules](https://stackoverflow.com/a/3797061/4573584)
+### [Cloning a repository including the contents of its submodules](https://stackoverflow.com/a/3797061)
 
 ```sh
 git clone --recurse-submodules https://github.com/USERNAME/REPOSITORY.git
 ```
 
-### [Renaming submodules](https://stackoverflow.com/a/18712756/4573584)
+### [Renaming submodules](https://stackoverflow.com/a/18712756)
 
 ```sh
 git mv oldname newname
 ```
 
-### [Deinit old submodule, remove the directory and create a new submodule](https://stackoverflow.com/a/22309234/4573584)
+### [Deinit old submodule, remove the directory and create a new submodule](https://stackoverflow.com/a/22309234)
 
 ```sh
 git submodule deinit <submodule name>

@@ -11,7 +11,7 @@
 
 ## Firefox
 
-### [Find location of extensions](https://stackoverflow.com/a/6579979/4573584)
+### [Find location of extensions](https://stackoverflow.com/a/6579979)
 
 Type `about:support#extensions-tbody` in search
 

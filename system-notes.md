@@ -82,7 +82,7 @@ grub> boot
 
 Source: <https://blog.viktorpetersson.com/2014/07/29/how-to-boot-from-usb-with-grub2.html>
 
-## [Changing default Grub boot OS](https://askubuntu.com/a/110738/714808)
+## [Changing default Grub boot OS](https://askubuntu.com/a/110738)
 
 On Linux, create a backup of the Grub file:
 
@@ -125,7 +125,7 @@ If anything goes wrong, restore using the backup.
 
 Using the [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete) Sysinternals software.
 
-### [Closing windows that are open](https://superuser.com/a/81477/752084)
+### [Closing windows that are open](https://superuser.com/a/81477)
 
 Ensure the window to be closed is in focus. Press `Alt` + `F4` to close.
 
@@ -150,7 +150,7 @@ This is most likely caused by a critical thermal event, which could happen due t
 
 ## Linux
 
-### [Adding directory to PATH environment variables](https://askubuntu.com/a/688998/714808)
+### [Adding directory to PATH environment variables](https://askubuntu.com/a/688998)
 
 These are added to the `.bashrc` (shell startup) file, which can be found in the Home directory.
 
@@ -162,7 +162,7 @@ echo export PATH=\"$(echo path/to/file/):\$PATH\" >> ~/.bashrc
 
 Open `/etc/hosts` as an administrator using a text editor.
 
-### [What to do when Ubuntu freezes](https://askubuntu.com/a/36717/714808)
+### [What to do when Ubuntu freezes](https://askubuntu.com/a/36717)
 
 If it's completely frozen, REISUB it (safer than rebooting)
 
@@ -179,7 +179,7 @@ If it's completely frozen, REISUB it (safer than rebooting)
 >
 > **NOTE:** There exists less radical way than rebooting the whole system. If `SysReq` key works, you can kill processes one-by-one using `Alt`+`SysReq`+`F`. Kernel will kill the most[sic] «expensive» process each time. If you want to kill all processes for one console, you can issue `Alt`+`SysReq`+`K`.
 
-### [Changing the default display manager](https://askubuntu.com/a/58024/714808)
+### [Changing the default display manager](https://askubuntu.com/a/58024)
 
 The following command will create a prompt to select the default display manager (GDM3 in this case):
 
@@ -187,11 +187,11 @@ The following command will create a prompt to select the default display manager
 sudo dpkg-reconfigure gdm3
 ```
 
-The same command can be used to [reset the display manager](https://askubuntu.com/q/1043048/714808) should something go wrong with the GUI, or the original CSS files get corrupted.
+The same command can be used to [reset the display manager](https://askubuntu.com/q/1043048) should something go wrong with the GUI, or the original CSS files get corrupted.
 
 <https://wiki.archlinux.org/title/Display_manager>
 
-### [Installing Firefox Developer Edition](https://askubuntu.com/a/584704/714808)
+### [Installing Firefox Developer Edition](https://askubuntu.com/a/584704)
 
 Firefox Developer Edition will work alongside other Firefox installations with separate profiles.
 
@@ -235,7 +235,7 @@ you will use
 sudo checkinstall
 ```
 
-### [Uninstalling software](https://askubuntu.com/a/1144/714808)
+### [Uninstalling software](https://askubuntu.com/a/1144)
 
 If installed via package manager:
 
@@ -257,7 +257,7 @@ Otherwise, use Synaptic Package Manager, and 'Mark for complete removal'.
 - [Ubuntu Make](https://wiki.ubuntu.com/ubuntu-make)
 - [Synaptic Package Manager](https://www.nongnu.org/synaptic/)
 
-### [Handling held back packages](https://askubuntu.com/a/602/714808)
+### [Handling held back packages](https://askubuntu.com/a/602)
 
 `apt upgrade` gives `The following packages have been kept back`.
 
@@ -282,11 +282,11 @@ Download the tarball from Zotero's [download page](https://www.zotero.org/downlo
 References:
 
 - <https://www.zotero.org/support/installation>
-- <https://askubuntu.com/a/1147073/714808>
+- <https://askubuntu.com/a/1147073>
 
 ### Creating and extracting archives
 
-#### [Extracting tarballs](https://askubuntu.com/a/25962/714808)
+#### [Extracting tarballs](https://askubuntu.com/a/25962)
 
 ```sh
 tar xzf file.tar.gz
@@ -299,7 +299,7 @@ To see the files being extracted during unpacking:
 tar xzvf file.tar.gz
 ```
 
-#### [Extracting ZIP files](https://askubuntu.com/a/86852/714808)
+#### [Extracting ZIP files](https://askubuntu.com/a/86852)
 
 ```sh
 unzip file.zip -d destination_folder
@@ -322,7 +322,7 @@ sudo apt install unzip
 - <https://www.howtogeek.com/414082/how-to-zip-or-unzip-files-from-the-linux-terminal/>
 - <https://www.ubuntupit.com/how-to-zip-and-unzip-files-on-ubuntu-linux-an-ultimate-guide/>
 
-### [Installing from an archive](https://askubuntu.com/a/1030/714808)
+### [Installing from an archive](https://askubuntu.com/a/1030)
 
 First, extract the archive. Then, open a terminal and navigate to the directory of the extracted folder.
 
@@ -378,7 +378,7 @@ Alternatively, when installing Ubuntu, select a region which has the desired loc
 
 Use PPA or Ubuntu package with a complete icon theme wherever possible to avoid these issues. Alternatively, to fix icon issues, use the [Hardcoded Icon Fixer](https://github.com/Foggalong/hardcode-fixer) and [Hardcode-Tray](https://github.com/bilelmoussaoui/Hardcode-Tray) (recommended for [Papirus icon theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)).
 
-### [Using a custom icon for an application](https://askubuntu.com/a/80634/714808)
+### [Using a custom icon for an application](https://askubuntu.com/a/80634)
 
 Copy the `.desktop` file of the application to the local applications folder:
 
@@ -390,7 +390,7 @@ Open the copied file and change the value of `Icon`, e.g. change absolute path t
 
 ### Troubleshooting WiFi issues
 
-See <https://askubuntu.com/a/235280/714808>.
+See <https://askubuntu.com/a/235280>.
 
 ## Android
 
@@ -442,7 +442,7 @@ Source: [How to Flash the TWRP Recovery Environment to Your Android Phone - How-
 
 #### Heimdall vs Odin
 
-From the [Android Enthusiasts SE](https://android.stackexchange.com/a/162667/304762):
+From the [Android Enthusiasts SE](https://android.stackexchange.com/a/162667):
 
 > *[...] Samsung devices do not support fastboot, you use Odin or Heimdall to flash what you need.*
 
@@ -487,9 +487,9 @@ Sources:
 - [Windows Terminal - Terminals - MSYS2](https://www.msys2.org/docs/terminals/#windows-terminal)
 - [[How To] ROOT- Galaxy Tab 2 10.1 [GT-P5113 / 5100 / 5110 & 4.0.4 UPGRADE or OEM] - XDA Developers](https://forum.xda-developers.com/t/how-to-root-galaxy-tab-2-10-1-gt-p5113-5100-5110-4-0-4-upgrade-or-oem.1657056/)
 - [libwdi GitHub Wiki - Zadig](https://github.com/pbatard/libwdi/wiki/Zadig)
-- [Heimdall error libusb error: -12 - Android SE](https://android.stackexchange.com/q/98338/304762)
-- [FASTBOOT commands don't work at all on my Samsung phone - Android SE](https://android.stackexchange.com/a/187573/304762)
-- [Heimdall errors, "ERROR: Partition "recovery" does not exist in the specified PIT." - Android SE](https://android.stackexchange.com/a/51066/304762)
+- [Heimdall error libusb error: -12 - Android SE](https://android.stackexchange.com/q/98338)
+- [FASTBOOT commands don't work at all on my Samsung phone - Android SE](https://android.stackexchange.com/a/187573)
+- [Heimdall errors, "ERROR: Partition "recovery" does not exist in the specified PIT." - Android SE](https://android.stackexchange.com/a/51066)
 
 ### Using TWRP to backup and install ROMs
 

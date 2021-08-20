@@ -240,7 +240,7 @@ conda list
 
 ### Fix `NotWritableError`
 
-[Remove root ownership of Anaconda folder](https://stackoverflow.com/a/57144988/4573584):
+[Remove root ownership of Anaconda folder](https://stackoverflow.com/a/57144988):
 
 ```sh
 sudo chown -R $USER:$USER anaconda3
@@ -248,7 +248,7 @@ sudo chown -R $USER:$USER anaconda3
 
 ## Python
 
-### [Getting a list of locally installed packages](https://stackoverflow.com/q/739993/4573584)
+### [Getting a list of locally installed packages](https://stackoverflow.com/q/739993)
 
 In a Python shell:
 
@@ -268,7 +268,7 @@ Using pip:
 pip list
 ```
 
-### [Updating packages](https://stackoverflow.com/a/44412503/4573584)
+### [Updating packages](https://stackoverflow.com/a/44412503)
 
 ```sh
 pip list --outdated
@@ -318,12 +318,12 @@ or:
 python3 -m pip install package
 ```
 
-[On Windows:](https://stackoverflow.com/a/13211456/4573584)
+[On Windows:](https://stackoverflow.com/a/13211456)
 
 - `py -3` for latest version of Python 3
 - `py -3.x` for a specific version of Python 3
 
-### [Uninstalling packages](https://stackoverflow.com/a/3297564/4573584)
+### [Uninstalling packages](https://stackoverflow.com/a/3297564)
 
 ```sh
 pip uninstall package
@@ -331,9 +331,9 @@ pip uninstall package
 
 ### Prevent conda from activating the base environment by default
 
-<https://stackoverflow.com/questions/54429210/how-do-i-prevent-conda-from-activating-the-base-environment-by-default>
+<https://stackoverflow.com/q/54429210>
 
-### [Environment error](https://stackoverflow.com/a/50893981/4573584)
+### [Environment error](https://stackoverflow.com/a/50893981)
 
 ```sh
 ERROR: Could not install packages due to an EnvironmentError: [Errno 13] Permission denied: '/installation/path/'
@@ -359,7 +359,7 @@ Upgrading `pip` or `setuptools`, or reinstalling `wheel` could also potentially 
 
 The issue could be caused by the absence of `setup_requires=['wheel']` in `setup.py`.
 
-See <https://stackoverflow.com/q/34819221/4573584> for more information.
+See <https://stackoverflow.com/q/34819221> for more information.
 
 ## Creating a requirements file
 

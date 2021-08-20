@@ -1,6 +1,6 @@
 # notebook
 
-[![View notes on GitHub Wiki](https://img.shields.io/badge/View%20notes%20on%20GitHub%20Wiki-white?logo=github&logoColor=black)](https://github.com/nmstreethran/notebook/wiki)
+[![View notes on GitHub Wiki](badge.svg)](https://github.com/nmstreethran/notebook/wiki)
 
 Welcome to my notebook! This is where I backup my settings and computing notes.
 

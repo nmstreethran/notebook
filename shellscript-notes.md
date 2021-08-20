@@ -54,7 +54,7 @@ Searching in the current folder:
 find . filename
 ```
 
-## [Copy files from one directory to another, ignoring all .files and .dirs](https://stackoverflow.com/a/11557164/4573584)
+## [Copy files from one directory to another, ignoring all .files and .dirs](https://stackoverflow.com/a/11557164)
 
 ```sh
 cp -r SRC_DIR/* DEST_DIR
@@ -98,13 +98,13 @@ rm file.txt
 rm -r DIR
 ```
 
-## [Running commands stored in a file](https://stackoverflow.com/a/13568021/4573584)
+## [Running commands stored in a file](https://stackoverflow.com/a/13568021)
 
 ```sh
 bash file
 ```
 
-## [Saving the output of a terminal command to a file](https://askubuntu.com/a/420983/714808)
+## [Saving the output of a terminal command to a file](https://askubuntu.com/a/420983)
 
 ```sh
 SomeCommand > SomeFile.txt
@@ -136,7 +136,7 @@ SomeCommand 2>&1 | tee SomeFile.txt
 
 (If you want the output only, drop the `2` above)
 
-## [Running multiple commands in a single line](https://stackoverflow.com/q/5130847/4573584)
+## [Running multiple commands in a single line](https://stackoverflow.com/q/5130847)
 
 > `|` pipes (pipelines) the standard output (`stdout`) of one command into the standard input of another one. Note that `stderr` still goes into its default destination, whatever that happen to be.
 >
@@ -179,7 +179,7 @@ sed -i.bak "s/OK$/_DLY-&/" filename.txt
 - `$` will ensure only `OK`s at the end of the line are affected
 - `&` will append the string to be replaced, i.e. `OK`, resulting in `_DLY-OK`
 
-### [Delete specific lines from a text file](https://stackoverflow.com/a/2112496/4573584)
+### [Delete specific lines from a text file](https://stackoverflow.com/a/2112496)
 
 ```sh
 sed -i.bak "<lines_to_delete>" filename.txt
@@ -193,7 +193,7 @@ sed -i.bak "<lines_to_delete>" filename.txt
 - lines 5 to 10, and 12: `5,10d;12d`
 - line 5 to the final line: `5,$d`
 
-### [Inserting text in a new line before or after a string](https://unix.stackexchange.com/q/121161/287341)
+### [Inserting text in a new line before or after a string](https://unix.stackexchange.com/q/121161)
 
 After:
 
@@ -209,7 +209,7 @@ sed -i.bak "/pattern/i some text here" filename.txt
 
 ## Grep
 
-### [Delete all lines containing a string in a file](https://stackoverflow.com/a/13188531/4573584)
+### [Delete all lines containing a string in a file](https://stackoverflow.com/a/13188531)
 
 ```sh
 grep -v "string to delete" filename.txt > filename_temp.txt

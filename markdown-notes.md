@@ -180,7 +180,7 @@ Three or more hyphens `---`, asterisks `***` or underscores `___`
 
 ---
 
-## [Text alignment](https://stackoverflow.com/q/14051715/4573584)
+## [Text alignment](https://stackoverflow.com/q/14051715)
 
 ```md
 <p align="center">centered text</p>
@@ -192,7 +192,7 @@ Three or more hyphens `---`, asterisks `***` or underscores `___`
 
 - [License badges using Shields.io](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
 
-Using [Shields.io](https://shields.io/category/social/) badges with [custom logo](https://stackoverflow.com/a/41472017/4573584):
+Using [Shields.io](https://shields.io/category/social/) badges with [custom logo](https://stackoverflow.com/a/41472017):
 
 [![tyle-Flat-appveyor](https://img.shields.io/badge/style-flat-green.svg?logo=appveyor&style=flat)](https://img.shields.io/badge/style-flat-green.svg?logo=appveyor&style=flat)
 
@@ -253,7 +253,7 @@ I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
 
 Thumbnail by [Gopher](https://www.youtube.com/user/GophersVids).
 
-## [Footnotes](https://stackoverflow.com/a/32119820/4573584)
+## [Footnotes](https://stackoverflow.com/a/32119820)
 
 In text:
 

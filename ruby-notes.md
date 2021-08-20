@@ -210,6 +210,6 @@ jekyll -v
 - <https://www.heatware.net/ruby-rails/solved-installing-mysql-gem-extconf-rb-failed-error/>
 - <https://github.com/tzinfo/tzinfo/wiki/Resolving-TZInfo::DataSourceNotFound-Errors>
 - <https://bundler.io/v2.2/man/gemfile.5.html#PLATFORMS>
-- [does using ":platforms =>" in your gemfile work?](https://stackoverflow.com/a/8460294/4573584)
-- ['sudo gem install' or 'gem install' and gem locations](https://stackoverflow.com/q/2119064/4573584)
-- [How to set Ruby GEM_HOME and GEM_PATH](https://unix.stackexchange.com/a/210012/287341)
+- [does using ":platforms =>" in your gemfile work?](https://stackoverflow.com/a/8460294)
+- ['sudo gem install' or 'gem install' and gem locations](https://stackoverflow.com/q/2119064)
+- [How to set Ruby GEM_HOME and GEM_PATH](https://unix.stackexchange.com/a/210012)

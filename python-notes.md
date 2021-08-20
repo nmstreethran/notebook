@@ -17,7 +17,7 @@
 - [Python's `strftime` directives](https://strftime.org/)
 - [`pandas.to_datetime`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html)
 
-## [Getting a Python programme to do nothing when using statements](https://stackoverflow.com/a/19632742/4573584)
+## [Getting a Python programme to do nothing when using statements](https://stackoverflow.com/a/19632742)
 
 ```py
 if condition:

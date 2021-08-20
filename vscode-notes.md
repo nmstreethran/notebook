@@ -17,7 +17,7 @@ See [vscode-settings](vscode-settings/) for the full settings.
 
 ## Syntax highlighting
 
-[Manually set the language for syntax highlighting for a file opened on VS Code](https://stackoverflow.com/a/30776845/4573584):
+[Manually set the language for syntax highlighting for a file opened on VS Code](https://stackoverflow.com/a/30776845):
 
 > *In the very right bottom corner, left to the smiley there was the icon saying "Plain Text". When you click it, the menu with all languages appears where you can choose your desired language.*
 
@@ -49,11 +49,11 @@ Useful shortcuts:
 - Comment / uncomment Code Block: `Ctrl+K+C` / `Ctrl+K+U`
 - Peek Definition: `Alt+F12`
 - Navigate Forward / Backward: `Ctrl+–` / `Ctrl+Shift+–`
-- [Add cursors to all line ends in current selection](https://stackoverflow.com/a/46244456/4573584): `Alt+Shift+I`
+- [Add cursors to all line ends in current selection](https://stackoverflow.com/a/46244456): `Alt+Shift+I`
 
 ## Additional keybindings
 
-### [Making selected text uppercase or lowercase](https://stackoverflow.com/a/41688564/4573584)
+### [Making selected text uppercase or lowercase](https://stackoverflow.com/a/41688564)
 
 Go to Keyboard Shortcuts (`ctrl+k` `ctrl+s`) and paste the following in `keybindings.json`:
 
