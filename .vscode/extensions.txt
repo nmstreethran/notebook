@@ -1,5 +1,4 @@
 davidanson.vscode-markdownlint-0.43.2
-eamodio.gitlens-11.6.0
 github.github-vscode-theme-4.1.1
 james-yu.latex-workshop-8.19.2
 mechatroner.rainbow-csv-1.7.1

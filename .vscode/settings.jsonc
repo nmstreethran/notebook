@@ -51,7 +51,7 @@
   },
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
-  "editor.fontFamily": "'Cascadia Code', monospace",
+  "editor.fontFamily": "'Cascadia Code', 'Cascadia Code PL', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.minimap.renderCharacters": false,
@@ -91,7 +91,6 @@
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
-  "gitlens.currentLine.scrollable": false,
   "[html]": {
     "editor.tabSize": 2
   },

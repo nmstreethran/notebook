@@ -59,7 +59,7 @@ This is not an issue for older Windows versions, as the BIOS screen will show up
 
 If you have not restarted and are still running Windows 10, plug in the USB device and use the advanced startup options in the settings to boot from USB. If you have already restarted, use a Windows 10 installation/recovery medium to restore the MBR. Alternatively, follow the instructions below, which uses the Grub2 command line and do not require a Windows 10 recovery medium.
 
-When creating a bootable USB, note where the `vmlinuz` and `initrd.*` files are located. In my case, it was in `cdrom/casper`.
+When creating a bootable USB, note where the `vmlinuz` and `initrd.*` files are located. In my case, it was in `cdrom/casper`. Kubuntu and Pop! OS use `casper`.
 
 Plug in the USB and turn on the device.
 
@@ -70,13 +70,13 @@ grub> ls
 (hd0) (hd0,msdos5) (hd1) (hd1,msdos0)
 ```
 
-The root partition of the USB device will probably be the last in the list (i.e, `(hd1,msdos0)`).
+The root partition of the USB device will probably be the last in the list (i.e, `(hd1,msdos0)`). This is not always the case. Verify by pressing tab after typing `linux (hd1,msdos0)`.
 
 Finally, boot the system using the following set of commands:
 
 ```grub
-grub> linux (hd1,msdos1)/casper/vmlinuz root=/dev/sdb1
-grub> initrd (hd1,msdos1)/casper/initrd
+grub> linux (hd1,msdos0)/casper/vmlinuz root=/dev/sdb1
+grub> initrd (hd1,msdos0)/casper/initrd
 grub> boot
 ```
 

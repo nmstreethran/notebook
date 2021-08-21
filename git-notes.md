@@ -80,7 +80,7 @@ ssh-add ~/.ssh/id_rsa
 ssh-add ~/.ssh/id_ed25519
 ```
 
-Copy the SSH key to your clipboard (saved at `/home/you/.ssh/id_rsa` or `/home/you/.ssh/id_ed25519`). Go to 'SSH and GPG keys' in your GitHub account settings. Select 'New SSH key', add a descriptive label in the 'Title' field, and paste the SSH key in the 'Key' field.
+Copy the SSH key to your clipboard (saved at `$HOME/.ssh/id_rsa` or `$HOME/.ssh/id_ed25519`). Go to 'SSH and GPG keys' in your GitHub account settings. Select 'New SSH key', add a descriptive label in the 'Title' field, and paste the SSH key in the 'Key' field.
 
 List existing remote URLs for your local repository:
 

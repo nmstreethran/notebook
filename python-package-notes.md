@@ -9,7 +9,7 @@
   - [Viewing a list of installed packages](#viewing-a-list-of-installed-packages)
   - [Updating packages](#updating-packages)
   - [Removing packages](#removing-packages)
-  - [Fix `NotWritableError`](#fix-notwritableerror)
+  - [Desktop shortcut](#desktop-shortcut)
 - [Python](#python)
   - [Getting a list of locally installed packages](#getting-a-list-of-locally-installed-packages)
   - [Updating packages](#updating-packages-1)
@@ -238,13 +238,24 @@ To confirm that a package has been removed:
 conda list
 ```
 
-### Fix `NotWritableError`
+### Desktop shortcut
 
-[Remove root ownership of Anaconda folder](https://stackoverflow.com/a/57144988):
+Example with `qgis`:
 
-```sh
-sudo chown -R $USER:$USER anaconda3
-```
+1.  Create a shell script, e.g. `$HOME/bin/launch_qgis.sh`:
+
+    ```sh
+    #! /bin/bash
+
+    conda activate py-geo && qgis
+    ```
+
+2.  Create a desktop file, e.g. `$HOME/.local/share/applications/qgis.desktop`; copy and paste the programme's desktop configuration. Modify the configurations with the following (may have to remove the `TryExec` line if it exists):
+
+    ```conf
+    Exec=bash -i $HOME/bin/launch_qgis.sh
+    Terminal=true
+    ```
 
 ## Python
 

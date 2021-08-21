@@ -4,6 +4,7 @@
 
 - [My templates](#my-templates)
 - [General](#general)
+  - [Linux setup](#linux-setup)
   - [Commands](#commands)
   - [Defining custom macros](#defining-custom-macros)
   - [Graphics](#graphics)
@@ -53,6 +54,14 @@
 - [book](https://gitlab.com/nithiya/booktemplate)
 
 ## General
+
+### Linux setup
+
+I regularly use XeLaTeX, Biber, Makeglossaries, Arara, and some extra fonts.
+
+```sh
+sudo apt install texlive-extra-utils texlive-xetex texlive-fonts-extra biber
+```
 
 ### Commands
 

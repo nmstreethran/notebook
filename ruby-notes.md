@@ -31,7 +31,7 @@ Download and install Ruby using instructions from the [official website](https:/
 - Use apt on Debian/Ubuntu (*may not be the latest version*):
 
   ```sh
-  sudo apt install ruby-full
+  sudo apt install ruby-dev
   ```
 
 ## Installing gems
@@ -55,6 +55,8 @@ export GEM_HOME=$HOME/.gem
 export GEM_PATH=$GEM_HOME
 export PATH="$GEM_PATH/bin:$PATH"
 ```
+
+To update the paths, run `source ~/.bash_profile`.
 
 ### Installing gems with Bundler
 
@@ -139,7 +141,7 @@ end
 
 ### Fixing dependency errors
 
-The following dependency errors can occur if gems are installed using `sudo`:
+The following dependency errors can occur (for example, with `eventmachine`):
 
 ```text
 An error occurred while installing eventmachine (1.2.7), and Bundler cannot continue.
@@ -159,13 +161,18 @@ necessary libraries and/or headers.  Check the mkmf.log file for more
 details.  You may need configuration options.
 ```
 
-To fix this, either uninstall all `sudo` gems and reinstall them locally, or do the following:
+To fix this, do the following:
 
 ```sh
-sudo apt install ruby-full ruby-eventmachine
-gem install bundler eventmachine
+sudo apt install ruby-dev make gcc g++ ruby-eventmachine libssl-dev
+gem install bundler
 bundle install
 ```
+
+More info:
+
+- <https://stackoverflow.com/q/13767725>
+- <https://stackoverflow.com/q/3458602>
 
 ### [Update RubyGems manually](https://github.com/jekyll/jekyll/issues/7463)
 
