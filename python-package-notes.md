@@ -41,7 +41,7 @@ conda search --override-channels --channel defaults package
 To see if a specific package exists in a specific channel and is available for installation:
 
 ```sh
-conda search --override-channels --channel <channel url> package
+conda search --override-channels --channel ${channel-url} package
 ```
 
 ### Managing environments

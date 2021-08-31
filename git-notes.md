@@ -163,7 +163,7 @@ git branch
 [Create branch in old commit](https://stackoverflow.com/a/2816728):
 
 ```sh
-git branch branchname <sha1-of-commit>
+git branch branchname ${sha1-of-commit}
 ```
 
 or using symbolic reference:
@@ -326,11 +326,11 @@ git push -f origin master
 ### [Removing the last commit](https://gist.github.com/CrookedNumber/8964442)
 
 ```sh
-git reset --hard HEAD~<num>
+git reset --hard HEAD~${num}
 git push origin -f
 ```
 
-Replace `<num>` with the number of commits you want to remove. e.g. `git reset --hard HEAD~2` removes the last two commits.
+Replace `${num}` with the number of commits you want to remove. e.g. `git reset --hard HEAD~2` removes the last two commits.
 
 ## [Ignoring files](https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files)
 
@@ -457,7 +457,7 @@ git mv oldname newname
 ### [Deinit old submodule, remove the directory and create a new submodule](https://stackoverflow.com/a/22309234)
 
 ```sh
-git submodule deinit <submodule name>
-git rm <submodule folder name>
-git submodule add <address to remote git repo> <new folder name>
+git submodule deinit ${submodule-name}
+git rm ${submodule-folder-name}
+git submodule add ${address-to-remote-git-repo} ${new-folder-name}
 ```

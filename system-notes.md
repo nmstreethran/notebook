@@ -17,7 +17,6 @@
   - [Adding directory to PATH environment variables](#adding-directory-to-path-environment-variables)
   - [Editing hosts file - Ubuntu](#editing-hosts-file---ubuntu)
   - [What to do when Ubuntu freezes](#what-to-do-when-ubuntu-freezes)
-  - [Changing the default display manager](#changing-the-default-display-manager)
   - [Installing Firefox Developer Edition](#installing-firefox-developer-edition)
   - [CheckInstall](#checkinstall)
   - [Uninstalling software](#uninstalling-software)
@@ -28,8 +27,8 @@
   - [Installing from an archive](#installing-from-an-archive)
   - [Automount hard disks on boot](#automount-hard-disks-on-boot)
   - [Preventing applications from launching on boot](#preventing-applications-from-launching-on-boot)
+  - [Disable Bluetooth on startup](#disable-bluetooth-on-startup)
   - [Fixing 'Setting locale failed'](#fixing-setting-locale-failed)
-  - [Snap / Flatpak sandboxing issues](#snap--flatpak-sandboxing-issues)
   - [Using a custom icon for an application](#using-a-custom-icon-for-an-application)
   - [Troubleshooting WiFi issues](#troubleshooting-wifi-issues)
 - [Android](#android)
@@ -179,18 +178,6 @@ If it's completely frozen, REISUB it (safer than rebooting)
 >
 > **NOTE:** There exists less radical way than rebooting the whole system. If `SysReq` key works, you can kill processes one-by-one using `Alt`+`SysReq`+`F`. Kernel will kill the most[sic] «expensive» process each time. If you want to kill all processes for one console, you can issue `Alt`+`SysReq`+`K`.
 
-### [Changing the default display manager](https://askubuntu.com/a/58024)
-
-The following command will create a prompt to select the default display manager (GDM3 in this case):
-
-```sh
-sudo dpkg-reconfigure gdm3
-```
-
-The same command can be used to [reset the display manager](https://askubuntu.com/q/1043048) should something go wrong with the GUI, or the original CSS files get corrupted.
-
-<https://wiki.archlinux.org/title/Display_manager>
-
 ### [Installing Firefox Developer Edition](https://askubuntu.com/a/584704)
 
 Firefox Developer Edition will work alongside other Firefox installations with separate profiles.
@@ -240,13 +227,13 @@ sudo checkinstall
 If installed via package manager:
 
 ```sh
-sudo apt remove <application_name>
+sudo apt remove ${application-name}
 ```
 
 To uninstall all related packages and configuration files:
 
 ```sh
-sudo apt purge <package-name>
+sudo apt purge ${package-name}
 ```
 
 Otherwise, use Synaptic Package Manager, and 'Mark for complete removal'.
@@ -342,9 +329,13 @@ For Kubuntu, search for 'Removable Devices' and change the settings there.
 
 System Settings > Startup and Shutdown > Desktop Session > On Login > Enable 'Start with an empty session'
 
-### Fixing 'Setting locale failed'
+### Disable Bluetooth on startup
 
-The error looks like this:
+Open `/etc/bluetooth/main.conf` and set `AutoEnable=false`.
+
+Source: <https://askubuntu.com/a/155886/>
+
+### Fixing 'Setting locale failed'
 
 ```text
 perl: warning: Setting locale failed.
@@ -367,16 +358,6 @@ sudo dpkg-reconfigure locales
 Source: <https://draculaservers.com/tutorials/setting-locale-failed-ubuntu/>
 
 Alternatively, when installing Ubuntu, select a region which has the desired locale (e.g. United Kingdom for `en_GB.UTF-8`), and change the timezone manually once the installation is complete.
-
-### Snap / Flatpak sandboxing issues
-
-- must use full path for LaTeX commands in VSCodium, despite being added to the environment variables
-- extra script to set up KeePassXC browser extension
-- icon themes not respected
-- missing icons in KDE
-- VSCodium opens a new, sandboxed instance of the web browser, which often crashes
-
-Use PPA or Ubuntu package with a complete icon theme wherever possible to avoid these issues. Alternatively, to fix icon issues, use the [Hardcoded Icon Fixer](https://github.com/Foggalong/hardcode-fixer) and [Hardcode-Tray](https://github.com/bilelmoussaoui/Hardcode-Tray) (recommended for [Papirus icon theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)).
 
 ### [Using a custom icon for an application](https://askubuntu.com/a/80634)
 

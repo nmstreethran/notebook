@@ -10,7 +10,6 @@
   - [Uninstalling old gem versions](#uninstalling-old-gem-versions)
   - [Cross-platform Gemfile](#cross-platform-gemfile)
   - [Fixing dependency errors](#fixing-dependency-errors)
-  - [Update RubyGems manually](#update-rubygems-manually)
 - [Jekyll](#jekyll)
   - [Local server](#local-server)
   - [Check if Jekyll installed properly](#check-if-jekyll-installed-properly)
@@ -45,7 +44,7 @@ gem environment
 On Linux, install RubyGems locally, not using `sudo`. Installing using `sudo` can interfere with the system-wide installation and configurations.
 
 ```sh
-gem install --user-install <gemname>
+gem install --user-install ${gemname}
 ```
 
 Add the user install directory to the `PATH` environment variable. Alternatively, change the `GEM_HOME` and `GEM_PATH` variables so that gems can be installed without `sudo` or `--user-install`, by adding the following to `~/.bash_profile` (or equivalent file):
@@ -71,7 +70,7 @@ Bundler installs gems in the same path as `gem install`.
 To globally set Bundler to install gems in a custom path:
 
 ```sh
-bundle config set path <path>
+bundle config set path ${path}
 ```
 
 Install gems using Bundler:
@@ -107,13 +106,11 @@ gem list
 
 ### Uninstalling old gem versions
 
-To check if there are any older versions of gems installed:
+To check if there are any older versions of gems installed, do a dry run of the clean up command:
 
 ```sh
 gem cleanup --dryrun
 ```
-
-To uninstall them, omit `--dryrun` from the command.
 
 ### Cross-platform Gemfile
 
@@ -173,14 +170,6 @@ More info:
 
 - <https://stackoverflow.com/q/13767725>
 - <https://stackoverflow.com/q/3458602>
-
-### [Update RubyGems manually](https://github.com/jekyll/jekyll/issues/7463)
-
-[Don't use this if Ruby is installed using a package manager](https://github.com/rubygems/rubygems/issues/3831), as it will handle updates automatically.
-
-```sh
-gem update --system
-```
 
 ## Jekyll
 

@@ -238,10 +238,10 @@ In his beard lived three <span style="color:red">cardinals</span>.
 In his beard lived three <span style="color:red">cardinals</span>.
 
 ```md
-I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
+I am in <span style="font-family:serif; font-size:4em;">LOVE!</span>
 ```
 
-I am in <span style="font-family:Papyrus; font-size:4em;">LOVE!</span>
+I am in <span style="font-family:serif; font-size:4em;">LOVE!</span>
 
 ## YouTube videos
 
