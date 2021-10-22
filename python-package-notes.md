@@ -129,7 +129,7 @@ conda install -c channelname package
 Installing non-conda packages:
 
 ```sh
-pip install packagename
+python -m pip install packagename
 ```
 
 [**Note:**](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#using-pip-in-an-environment)
@@ -142,7 +142,7 @@ pip install packagename
 > - Use conda environments for isolation
 >   - Create a conda environment to isolate any changes pip makes
 >   - Environments take up little space thanks to hard links
->   - Care should be taken to avoid running pip in the “root” environment
+>   - Care should be taken to avoid running pip in the "root" environment
 >
 > - Recreate the environment if changes are needed
 >   - Once pip has been used, conda will be unaware of the changes
@@ -296,19 +296,23 @@ python3 -m pip --version
 Installing `virtualenv`:
 
 ```sh
-python3 -m pip install --user virtualenv
+python -m pip install --user virtualenv
 ```
 
-Creating a virtual environment (`virtualenv` not needed -- `venv` is part of Python's base):
+Creating and activating a virtual environment (`virtualenv` not needed -- `venv` is part of Python's base):
+
+On Linux:
 
 ```sh
 python3 -m venv env
+source env/bin/activate
 ```
 
-Activating a virtual environment:
+On Windows:
 
-```sh
-source env/bin/activate
+```ps1
+py -3 -m venv env
+.\env\Scripts\activate
 ```
 
 Leaving the virtual environment:
@@ -318,12 +322,6 @@ deactivate
 ```
 
 ### Installing for a specific Python version
-
-```sh
-pip3 install package
-```
-
-or:
 
 ```sh
 python3 -m pip install package
@@ -354,8 +352,7 @@ Consider using the `--user` option or check the permissions.
 Fixed using:
 
 ```sh
-pip3 install --user package-name  # for Python3
-pip install --user package-name   # for Python2
+python -m pip install --user package-name
 ```
 
 ### Fixing `error: invalid command 'bdist_wheel'`
@@ -363,7 +360,7 @@ pip install --user package-name   # for Python2
 Installing `wheel` fixes the issue:
 
 ```sh
-pip install wheel
+python -m pip install wheel
 ```
 
 Upgrading `pip` or `setuptools`, or reinstalling `wheel` could also potentially fix it.
@@ -402,14 +399,14 @@ pip-chill --no-chill > requirements.txt
 Install PIP Chill via pip:
 
 ```sh
-pip install pip-chill
+python -m pip install pip-chill
 ```
 
 The requirements file generated through PIP Chill can be used to install all dependencies via both pip and conda:
 
 ```sh
 # using pip
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 
 # using conda
 conda create --file requirements.txt

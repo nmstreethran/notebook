@@ -30,6 +30,7 @@
   - [Disable Bluetooth on startup](#disable-bluetooth-on-startup)
   - [Fixing 'Setting locale failed'](#fixing-setting-locale-failed)
   - [Using a custom icon for an application](#using-a-custom-icon-for-an-application)
+  - [XAMPP](#xampp)
   - [Troubleshooting WiFi issues](#troubleshooting-wifi-issues)
 - [Android](#android)
   - [Booting devices into download mode, bootloader, and recovery mode](#booting-devices-into-download-mode-bootloader-and-recovery-mode)
@@ -368,6 +369,39 @@ cp /usr/share/applications/app.desktop ~/.local/share/applications/
 ```
 
 Open the copied file and change the value of `Icon`, e.g. change absolute path to relative, use a custom icon, etc. Save the file after making changes.
+
+### XAMPP
+
+<https://www.apachefriends.org/faq_linux.html>
+
+After installation, try starting XAMPP:
+
+```sh
+sudo /opt/lampp/lampp start
+```
+
+Using the GUI:
+
+```sh
+sudo /opt/lampp/manager-linux-x64.run
+```
+
+There's no need to fix the security weaknesses for local development; doing so can cause additional issues. See:
+
+- <https://stackoverflow.com/q/68677283>
+- <https://community.apachefriends.org/viewtopic.php?p=272515>
+
+Restarting XAMPP:
+
+```sh
+sudo /opt/lampp/lampp restart
+```
+
+To stop XAMPP:
+
+```sh
+sudo /opt/lampp/lampp stop
+```
 
 ### Troubleshooting WiFi issues
 
