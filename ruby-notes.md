@@ -10,6 +10,7 @@
   - [Uninstalling old gem versions](#uninstalling-old-gem-versions)
   - [Cross-platform Gemfile](#cross-platform-gemfile)
   - [Fixing dependency errors](#fixing-dependency-errors)
+- [Ruby programming](#ruby-programming)
 - [Jekyll](#jekyll)
   - [Local server](#local-server)
   - [Check if Jekyll installed properly](#check-if-jekyll-installed-properly)
@@ -170,6 +171,37 @@ More info:
 
 - <https://stackoverflow.com/q/13767725>
 - <https://stackoverflow.com/q/3458602>
+
+## Ruby programming
+
+Setting up a simple Ruby programme:
+
+- create a text file named `hello.rb`
+- paste `puts "Hello World!"` in the text file
+- run the programme from the terminal: `ruby hello.rb`
+
+Running a simple web-based Ruby application:
+
+- install a web server framework: `gem install sinatra`
+- create a text file named `wwwhello.rb`
+- paste the following in the text file:
+
+  ```rb
+  get '/' do
+    "Hello World!"
+  end
+  ```
+
+- fix SSL issues (check links below)
+- run the programme: `ruby wwwhello.rb`
+- go to `https://localhost:4567/` to view the application
+
+Links:
+
+- <https://stackoverflow.com/a/2728204>
+- <https://stackoverflow.com/a/20433632>
+- <https://gist.github.com/hvasconcelos/9911439>
+- <https://askubuntu.com/q/950815/714808>
 
 ## Jekyll
 
