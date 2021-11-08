@@ -614,6 +614,18 @@ And now for something completely different
 %TC:endignore
 ```
 
+To automate word count generation and inclusion in the compiled PDF, add the following to `doc/main.tex`:
+
+```latex
+\vfill\hfill Word count: \input{wordcount}%
+```
+
+Then, run the following command:
+
+```sh
+cd doc; texcount -merge -template='{1}' main.tex -out='wordcount.tex'; arara main.tex
+```
+
 ## Beamer class
 
 <https://www.ctan.org/pkg/beamer>

@@ -217,8 +217,6 @@
     "editor.tabSize": 3
   },
   "r.rpath.windows": "C:\\Program Files\\R\\R-4.0.5\\bin\\R.exe",
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
   "terminal.integrated.fontSize": 16,
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",

@@ -1,4 +1,4 @@
-# Ruby package management <!-- omit in toc -->
+# Ruby notes <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
 
