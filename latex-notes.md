@@ -623,8 +623,43 @@ To automate word count generation and inclusion in the compiled PDF, add the fol
 Then, run the following command:
 
 ```sh
-cd doc; texcount -merge -template='{1}' main.tex -out='wordcount.tex'; arara main.tex
+cd doc && texcount -merge -template='{1}' main.tex -out='wordcount.tex' && echo "TeXcount successful!" | cat - wordcount.tex ; echo -e " words\n" && arara main.tex
 ```
+
+To add thousands separators to the word count output, use the following instead:
+
+```sh
+cd doc && printf "%'d" $(texcount -merge -template='{1}' main.tex) > wordcount.tex && echo "TeXcount successful!" | cat - wordcount.tex ; echo -e " words\n" && arara main.tex
+```
+
+Example output:
+
+```text
+TeXcount successful!
+1,732 words
+
+  __ _ _ __ __ _ _ __ __ _ 
+ / _` | '__/ _` | '__/ _` |
+| (_| | | | (_| | | | (_| |
+ \__,_|_|  \__,_|_|  \__,_|
+
+Processing 'main.tex' (size: 15 KB, last modified:
+11/10/2021 23:51:31), please wait.
+
+(XeLaTeX) XeLaTeX engine ................................ SUCCESS
+(Biber) The Biber reference management software ......... SUCCESS
+(XeLaTeX) XeLaTeX engine ................................ SUCCESS
+(XeLaTeX) XeLaTeX engine ................................ SUCCESS
+
+Total: 12.49 seconds
+```
+
+References:
+
+- add thousands separator: <https://unix.stackexchange.com/q/113795>
+- passing output from one command to another: <https://unix.stackexchange.com/q/4782>
+- inserting a new line: <https://stackoverflow.com/a/20538015>
+- print contents of a file and prepend a string: <https://askubuntu.com/a/968657>
 
 ## Beamer class
 
