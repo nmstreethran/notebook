@@ -51,7 +51,7 @@
   },
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
-  "editor.fontFamily": "'Cascadia Code', 'Cascadia Code PL', monospace",
+  "editor.fontFamily": "'Delugia', 'Cascadia Code PL', 'Source Code Pro', 'Cascadia Code', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.minimap.renderCharacters": false,
@@ -217,10 +217,11 @@
     "editor.tabSize": 3
   },
   "r.rpath.windows": "C:\\Program Files\\R\\R-4.0.5\\bin\\R.exe",
+  "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.fontSize": 16,
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.colorTheme": "Monokai Dimmed",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },

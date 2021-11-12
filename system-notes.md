@@ -30,6 +30,7 @@
   - [Disable Bluetooth on startup](#disable-bluetooth-on-startup)
   - [Fixing 'Setting locale failed'](#fixing-setting-locale-failed)
   - [Using a custom icon for an application](#using-a-custom-icon-for-an-application)
+  - [Manjaro](#manjaro)
   - [XAMPP](#xampp)
   - [Troubleshooting WiFi issues](#troubleshooting-wifi-issues)
 - [Android](#android)
@@ -50,6 +51,10 @@ Find the **Secure Boot** setting, and if possible, set it to **Enabled**. This o
 ## Fix boot order / Grub menu not appearing on startup
 
 Windows: go to **Settings charm** > **Change PC settings** > **Update and Recovery** > **Recovery** > **Advanced Startup: Restart now**. When the PC reboots, go to **Troubleshoot** > **Advanced Options: UEFI Firmware Settings**. Change the order of the OS in boot settings.
+
+If the Grub command line appears after installing Manjaro, type `exit` and enter. Then, launch UEFI firmware settings and change the boot order. This issue is caused by Manjaro not appearing at the top of the bootloader.
+
+Source: <https://unix.stackexchange.com/q/329926>
 
 ## Booting into a USB device using Grub2
 
@@ -369,6 +374,42 @@ cp /usr/share/applications/app.desktop ~/.local/share/applications/
 ```
 
 Open the copied file and change the value of `Icon`, e.g. change absolute path to relative, use a custom icon, etc. Save the file after making changes.
+
+### Manjaro
+
+- <https://wiki.manjaro.org/index.php/Pacman_Overview>
+- <https://wiki.manjaro.org/index.php/Pamac>
+- <https://aur.archlinux.org/>
+
+#### Pacman
+
+To search for packages:
+
+```sh
+pacman -Ss papirus-icon-theme
+```
+
+To install:
+
+```sh
+sudo pacman -S papirus-icon-theme
+```
+
+#### Pamac
+
+Install AUR packages using Pamac.
+
+To search for packages:
+
+```sh
+pamac search -a vscodium
+```
+
+To install from AUR (NOTE: do not use `sudo`):
+
+```sh
+pamac build vscodium-bin
+```
 
 ### XAMPP
 
