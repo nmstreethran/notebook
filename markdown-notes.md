@@ -85,7 +85,7 @@ Some text to show that the reference links can follow later.
 
 [arbitrary case-insensitive reference text]: https://www.mozilla.org/en-US/exp/
 [1]: https://slashdot.org/
-[link text itself]: https://www.reddit.com/
+[link text itself]: https://github.com/
 ```
 
 [I'm an inline-style link](https://github.com/)
@@ -104,7 +104,7 @@ Some text to show that the reference links can follow later.
 
 [arbitrary case-insensitive reference text]: https://www.mozilla.org/en-US/exp/
 [1]: https://slashdot.org/
-[link text itself]: https://www.reddit.com/
+[link text itself]: https://github.com/
 
 ## Images
 

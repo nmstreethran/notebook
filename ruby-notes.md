@@ -172,6 +172,10 @@ More info:
 - <https://stackoverflow.com/q/13767725>
 - <https://stackoverflow.com/q/3458602>
 
+`'require': cannot load such file -- webrick` can be fixed by adding `gem "webrick"` to the Gemfile.
+
+<https://stackoverflow.com/a/65621758>
+
 ## Ruby programming
 
 Setting up a simple Ruby programme:

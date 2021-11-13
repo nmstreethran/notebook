@@ -46,7 +46,7 @@
 
 - <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>
 - <https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories>
-- <https://docs.gitlab.com/ee/ssh/README.html>
+- <https://docs.gitlab.com/ee/ssh/index.html>
 
 Check for existing SSH keys:
 
@@ -62,7 +62,7 @@ Generate a new key if none exist:
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
-**[Using ED25519 SSH keys (recommended over RSA)](https://docs.gitlab.com/ee/ssh/README.html):**
+**[Using ED25519 SSH keys (recommended over RSA)](https://docs.gitlab.com/ee/ssh/index.html):**
 
 ```sh
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -135,6 +135,13 @@ If that doesn't work, [try reinstalling `ssh-askpass`](https://askubuntu.com/a/1
 
 ```sh
 sudo apt install ssh-askpass
+```
+
+On [Manjaro](https://forum.manjaro.org/t/vscode-git-ssh-askpass-exec-usr-lib-ssh-ssh-askpass-no-such-file-or-directory/78787), install `ksshaskpass` and create a symlink to enable VS Code to recognise it:
+
+```sh
+sudo pacman -S ksshaskpass
+sudo ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
 ```
 
 If you get a similar error to the [following](https://superuser.com/a/421084):
@@ -396,7 +403,7 @@ https://gitlab.com/api/v4/projects/19753809/repository/files/geography%2Fpolygon
 
 ### CI
 
-- <https://docs.gitlab.com/ee/development/cicd/templates.html>
+<https://docs.gitlab.com/ee/development/cicd/templates.html>
 
 ## Errors
 

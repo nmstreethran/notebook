@@ -30,6 +30,7 @@
   - [Disable Bluetooth on startup](#disable-bluetooth-on-startup)
   - [Fixing 'Setting locale failed'](#fixing-setting-locale-failed)
   - [Using a custom icon for an application](#using-a-custom-icon-for-an-application)
+  - [KDE](#kde)
   - [Manjaro](#manjaro)
   - [XAMPP](#xampp)
   - [Troubleshooting WiFi issues](#troubleshooting-wifi-issues)
@@ -331,7 +332,7 @@ For Ubuntu, see <https://www.fosslinux.com/4216/how-to-automount-hard-disk-parti
 
 For Kubuntu, search for 'Removable Devices' and change the settings there.
 
-### [Preventing applications from launching on boot](https://www.reddit.com/r/Kubuntu/comments/bcae00/how_to_prevent_qbittorrent_from_launching_at/)
+### [Preventing applications from launching on boot](https://redd.it/bcae00)
 
 System Settings > Startup and Shutdown > Desktop Session > On Login > Enable 'Start with an empty session'
 
@@ -375,6 +376,18 @@ cp /usr/share/applications/app.desktop ~/.local/share/applications/
 
 Open the copied file and change the value of `Icon`, e.g. change absolute path to relative, use a custom icon, etc. Save the file after making changes.
 
+### KDE
+
+`baloo_file_extractor` using too much memory: go to System Settings > Search and disable file search
+
+Using the CLI:
+
+```sh
+balooctl disable
+```
+
+<https://redd.it/5c0n30>
+
 ### Manjaro
 
 - <https://wiki.manjaro.org/index.php/Pacman_Overview>
@@ -395,6 +408,12 @@ To install:
 sudo pacman -S papirus-icon-theme
 ```
 
+To uninstall:
+
+```sh
+sudo pacman -R papirus-icon-theme
+```
+
 #### Pamac
 
 Install AUR packages using Pamac.
@@ -409,6 +428,12 @@ To install from AUR (NOTE: do not use `sudo`):
 
 ```sh
 pamac build vscodium-bin
+```
+
+To uninstall:
+
+```sh
+pamac remove vscodium-bin
 ```
 
 ### XAMPP

@@ -699,7 +699,6 @@ Set custom aspect ratio (widescreen) and import colours from `xcolor` (`svgnames
 
 ### Themes and colours
 
-- [Beamer theme gallery](https://deic-web.uab.cat/~iblanes/beamer_gallery/)
 - [Beamer docs](https://ctan.org/pkg/beamer)
 - [Beamer template tutorial by Claudio Fiandrino](https://tex.stackexchange.com/a/146682)
 - [Overleaf beamer guide](https://www.overleaf.com/learn/latex/Beamer)

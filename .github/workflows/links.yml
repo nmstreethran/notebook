@@ -40,13 +40,14 @@ jobs:
           stackoverflow.com,\
           askubuntu.com,\
           superuser.com,\
-          USERNAME/REPOSITORY,\
+          redd.it,\
+          github.com/USERNAME/REPOSITORY,\
           oFFvwZIEk1Y,\
           gitlab.com/api,\
           localhost,\
-          YOUR_USERNAME/YOUR_FORK,\
-          gist.github.com/$,\
+          github.com/YOUR_USERNAME/YOUR_FORK,\
+          gist.github.com/username/gistid/raw/filename,\
           www.java.com,\
           docs.github.com,\
-          ORIGINAL_OWNER/ORIGINAL_REPOSITORY \
+          github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY \
           `find . -name "*.md"`

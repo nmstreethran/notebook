@@ -40,7 +40,7 @@ google.*##.g:has(a[href*="thesun.co.uk"])
 google.*##a[href*="thesun.co.uk"]:nth-ancestor(1)
 ```
 
-Source: [Reddit posts](https://www.reddit.com/r/uBlockOrigin/comments/mml29s/removing_items_from_duckduckgo_search_results/) by u/leedaa99 and u/DrTomDice.
+Source: [Reddit posts](https://redd.it/mml29s) by u/leedaa99 and u/DrTomDice.
 
 The example above works for `thesun.co.uk`. To block multiple domains, create a text file (e.g. `list.txt`) and list each domain in a new line. Then, the following `awk` commands can be used to generate the filters for each search engine:
 
@@ -69,5 +69,5 @@ awk '{
 The results will be saved in new text files (i.e. `ddg.txt`, `ecosia.txt`, and `google.txt`). Simply copy and paste the contents of these text files in your uBlock Origin personal filter list, or store them in a GitHub Gist and import them into uBlock Origin using their raw file URL. The Gist's URL is of the following form:
 
 ```text
-https://gist.github.com/${username}/${gistid}/raw/${filename}
+https://gist.github.com/username/gistid/raw/filename
 ```
