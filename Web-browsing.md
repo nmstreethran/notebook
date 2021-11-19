@@ -1,7 +1,3 @@
-# Web browsing <!-- omit in toc -->
-
-## Table of contents <!-- omit in toc -->
-
 - [Firefox](#firefox)
   - [Find location of extensions](#find-location-of-extensions)
   - [View and modify extension data](#view-and-modify-extension-data)

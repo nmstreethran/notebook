@@ -1,7 +1,3 @@
-# LaTeX notes <!-- omit in toc -->
-
-## Table of contents <!-- omit in toc -->
-
 - [My templates](#my-templates)
 - [General](#general)
   - [Linux setup](#linux-setup)

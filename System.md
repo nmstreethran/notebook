@@ -1,7 +1,3 @@
-# System notes <!-- omit in toc -->
-
-## Table of contents <!-- omit in toc -->
-
 - [Turn on or off secure boot](#turn-on-or-off-secure-boot)
 - [Fix boot order / Grub menu not appearing on startup](#fix-boot-order--grub-menu-not-appearing-on-startup)
 - [Booting into a USB device using Grub2](#booting-into-a-usb-device-using-grub2)

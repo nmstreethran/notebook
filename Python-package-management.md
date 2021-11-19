@@ -1,7 +1,3 @@
-# Python package management <!-- omit in toc -->
-
-## Table of contents <!-- omit in toc -->
-
 - [Anaconda](#anaconda)
   - [Searching for packages](#searching-for-packages)
   - [Managing environments](#managing-environments)

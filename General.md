@@ -1,7 +1,3 @@
-# General coding notes and best practices <!-- omit in toc -->
-
-## Table of contents <!-- omit in toc -->
-
 - [Character limits](#character-limits)
 - [Python](#python)
 - [URL encoding](#url-encoding)

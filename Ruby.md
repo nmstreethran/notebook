@@ -1,7 +1,3 @@
-# Ruby notes <!-- omit in toc -->
-
-## Table of contents <!-- omit in toc -->
-
 - [Installing Ruby](#installing-ruby)
 - [Installing gems](#installing-gems)
   - [Installing gems with Bundler](#installing-gems-with-bundler)

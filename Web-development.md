@@ -1,7 +1,3 @@
-# Web development notes <!-- omit in toc -->
-
-## Table of contents <!-- omit in toc -->
-
 - [HTML / CSS](#html--css)
   - [Colours](#colours)
   - [Render whitespace when using `content`](#render-whitespace-when-using-content)

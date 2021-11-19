@@ -1,7 +1,3 @@
-# Git notes <!-- omit in toc -->
-
-## Table of contents <!-- omit in toc -->
-
 - [Useful links](#useful-links)
 - [Credentials and authentication](#credentials-and-authentication)
   - [Setting up SSH](#setting-up-ssh)

@@ -1,9 +1,3 @@
-# Shell scripting notes <!-- omit in toc -->
-
-Shell scripts and commands, including Bash, AWK, sed, grep.
-
-## Table of contents <!-- omit in toc -->
-
 - [Using the terminal to navigate through directories](#using-the-terminal-to-navigate-through-directories)
 - [Finding files](#finding-files)
 - [Copy files from one directory to another, ignoring all .files and .dirs](#copy-files-from-one-directory-to-another-ignoring-all-files-and-dirs)

@@ -1,7 +1,3 @@
-# Document conversion notes <!-- omit in toc -->
-
-## Table of contents <!-- omit in toc -->
-
 - [Ghostscript](#ghostscript)
   - [Compressing PDF files to reduce their size](#compressing-pdf-files-to-reduce-their-size)
   - [Merging PDF files and generating bookmarks](#merging-pdf-files-and-generating-bookmarks)

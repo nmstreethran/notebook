@@ -1,9 +1,3 @@
-# Visual Studio Code notes <!-- omit in toc -->
-
-See [vscode-settings](vscode-settings/) for the full settings.
-
-## Table of contents <!-- omit in toc -->
-
 - [Syntax highlighting](#syntax-highlighting)
 - [File watching](#file-watching)
 - [Keyboard shortcuts](#keyboard-shortcuts)

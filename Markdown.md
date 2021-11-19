@@ -1,7 +1,3 @@
-# Markdown notes <!-- omit in toc -->
-
-## Table of contents <!-- omit in toc -->
-
 - [Emphasis](#emphasis)
 - [Lists](#lists)
 - [Hyperlinks](#hyperlinks)

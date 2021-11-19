@@ -1,7 +1,3 @@
-# Python notes <!-- omit in toc -->
-
-## Table of contents <!-- omit in toc -->
-
 - [Getting started](#getting-started)
 - [Datetime](#datetime)
 - [Getting a Python programme to do nothing when using statements](#getting-a-python-programme-to-do-nothing-when-using-statements)
