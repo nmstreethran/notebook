@@ -12,7 +12,7 @@
 - [Linux](#linux)
   - [Adding directory to PATH environment variables](#adding-directory-to-path-environment-variables)
   - [Editing hosts file](#editing-hosts-file)
-  - [What to do when Ubuntu freezes](#what-to-do-when-ubuntu-freezes)
+  - [What to do when the system freezes](#what-to-do-when-the-system-freezes)
   - [Installing Zotero](#installing-zotero)
   - [Creating and extracting archives](#creating-and-extracting-archives)
   - [Installing from an archive](#installing-from-an-archive)
@@ -155,7 +155,7 @@ echo export PATH=\"$(echo path/to/file/):\$PATH\" >> ~/.bashrc
 
 Open `/etc/hosts` as an administrator using a text editor.
 
-### [What to do when Ubuntu freezes](https://askubuntu.com/a/36717)
+### What to do when the system freezes
 
 If it's completely frozen, REISUB it (safer than rebooting)
 
@@ -171,6 +171,9 @@ If it's completely frozen, REISUB it (safer than rebooting)
 > REISUB is BUSIER backwards, as in "The System is **busier** than it should be", if you need to remember it. Or mnemonically - **R**eboot; **E**ven; **I**f; **S**ystem; **U**tterly; **B**roken.
 >
 > **NOTE:** There exists less radical way than rebooting the whole system. If `SysReq` key works, you can kill processes one-by-one using `Alt`+`SysReq`+`F`. Kernel will kill the most[sic] «expensive» process each time. If you want to kill all processes for one console, you can issue `Alt`+`SysReq`+`K`.
+
+- <https://askubuntu.com/a/36717>
+- <https://forum.manjaro.org/t/howto-reboot-turn-off-your-frozen-computer-reisub-reisuo/3855/81>
 
 ### Installing Zotero
 
@@ -402,6 +405,22 @@ To search which package owns a certain file:
 ```sh
 pamac search -f /usr/bin/smplayer
 ```
+
+#### [Downgrading packages](https://wiki.manjaro.org/index.php?title=Downgrading_packages)
+
+Install `downgrade`:
+
+```sh
+pamac install downgrade
+```
+
+To get a list of package versions available for installation:
+
+```sh
+sudo downgrade mysql-workbench
+```
+
+After the downgrade, add it to `IgnorePkg` to prevent automatic updates.
 
 ### Ubuntu notes
 

@@ -1,5 +1,8 @@
 - [XAMPP](#xampp)
 - [MySQL Workbench](#mysql-workbench)
+  - [`org.freedesktop.secrets` issue on KDE](#orgfreedesktopsecrets-issue-on-kde)
+  - [Server incompatibility issue](#server-incompatibility-issue)
+  - [SSL issues](#ssl-issues)
 - [MariaDB](#mariadb)
 
 ## XAMPP
@@ -65,6 +68,34 @@ To launch:
 ```
 
 <https://dev.mysql.com/doc/workbench/en/wb-launching-linux.html>
+
+### `org.freedesktop.secrets` issue on KDE
+
+Install `gnome-keyring`
+
+- <https://bbs.archlinux.org/viewtopic.php?id=244193>
+- <https://redd.it/d8tjln>
+
+### Server incompatibility issue
+
+Caused by the use of MariaDB instead of MySQL, which isn't officially supported by Oracle's products
+
+- <https://stackoverflow.com/q/35376109>
+- <https://unix.stackexchange.com/a/271985>
+
+### SSL issues
+
+Downgrade to 8.0.26 (did not work on my end). On Manjaro:
+
+```sh
+sudo downgrade mysql-workbench
+```
+
+- <https://dba.stackexchange.com/q/199154>
+- <https://downloads.mysql.com/archives/workbench/>
+- <https://stackoverflow.com/a/52789610>
+- <https://wiki.manjaro.org/index.php?title=Downgrading_packages>
+- <https://stackoverflow.com/q/57774867>
 
 ## MariaDB
 
