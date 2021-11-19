@@ -52,7 +52,7 @@ Add the user install directory to the `PATH` environment variable. Alternatively
 
 ```sh
 export GEM_HOME=$HOME/.gem
-export GEM_PATH=$GEM_HOME
+export GEM_PATH=$GEM_HOME/ruby/3.0.0/
 export PATH="$GEM_PATH/bin:$PATH"
 ```
 

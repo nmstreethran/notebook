@@ -14,7 +14,7 @@ Settings and the list of extensions used can be found in the `.vscode` folder.
 
 ### OS
 
-[Kubuntu](https://kubuntu.org/) and Windows 10.
+[Manjaro KDE](https://manjaro.org/) and Windows 10.
 
 ### GitHub actions
 

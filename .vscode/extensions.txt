@@ -1,8 +1,11 @@
 davidanson.vscode-markdownlint-0.44.4
+davidanson.vscode-markdownlint-0.45.0
 github.github-vscode-theme-5.0.3
 james-yu.latex-workshop-8.21.1
+james-yu.latex-workshop-8.22.0
 mechatroner.rainbow-csv-1.7.1
 ms-python.python-2021.10.1365161279
+ms-python.python-2021.11.1422169775
 ms-toolsai.jupyter-2021.8.12
 pkief.material-icon-theme-4.10.0
 reditorsupport.r-lsp-0.1.14

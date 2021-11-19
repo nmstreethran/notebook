@@ -20,7 +20,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    # container: dkhamsing/awesome_bot # Docker method
+    # container: dkhamsing/awesome_bot  # Docker method
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
@@ -28,7 +28,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: 3.0
       - name: Install awesome_bot and dependencies
         run: |
           gem install awesome_bot

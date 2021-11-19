@@ -15,25 +15,16 @@
   - [Computer shuts down or hibernates immediately after waking from sleep](#computer-shuts-down-or-hibernates-immediately-after-waking-from-sleep)
 - [Linux](#linux)
   - [Adding directory to PATH environment variables](#adding-directory-to-path-environment-variables)
-  - [Editing hosts file - Ubuntu](#editing-hosts-file---ubuntu)
+  - [Editing hosts file](#editing-hosts-file)
   - [What to do when Ubuntu freezes](#what-to-do-when-ubuntu-freezes)
-  - [Installing Firefox Developer Edition](#installing-firefox-developer-edition)
-  - [CheckInstall](#checkinstall)
-  - [Uninstalling software](#uninstalling-software)
-  - [Useful packages](#useful-packages)
-  - [Handling held back packages](#handling-held-back-packages)
   - [Installing Zotero](#installing-zotero)
   - [Creating and extracting archives](#creating-and-extracting-archives)
   - [Installing from an archive](#installing-from-an-archive)
-  - [Automount hard disks on boot](#automount-hard-disks-on-boot)
-  - [Preventing applications from launching on boot](#preventing-applications-from-launching-on-boot)
   - [Disable Bluetooth on startup](#disable-bluetooth-on-startup)
-  - [Fixing 'Setting locale failed'](#fixing-setting-locale-failed)
   - [Using a custom icon for an application](#using-a-custom-icon-for-an-application)
   - [KDE](#kde)
   - [Manjaro](#manjaro)
-  - [XAMPP](#xampp)
-  - [Troubleshooting WiFi issues](#troubleshooting-wifi-issues)
+  - [Ubuntu notes](#ubuntu-notes)
 - [Android](#android)
   - [Booting devices into download mode, bootloader, and recovery mode](#booting-devices-into-download-mode-bootloader-and-recovery-mode)
   - [SDK tools](#sdk-tools)
@@ -158,13 +149,13 @@ This is most likely caused by a critical thermal event, which could happen due t
 
 ### [Adding directory to PATH environment variables](https://askubuntu.com/a/688998)
 
-These are added to the `.bashrc` (shell startup) file, which can be found in the Home directory.
+These are added to the `.bashrc` or equivalent (shell startup) file, which can be found in the Home directory.
 
 ```sh
 echo export PATH=\"$(echo path/to/file/):\$PATH\" >> ~/.bashrc
 ```
 
-### [Editing hosts file - Ubuntu](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)
+### [Editing hosts file](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)
 
 Open `/etc/hosts` as an administrator using a text editor.
 
@@ -185,91 +176,9 @@ If it's completely frozen, REISUB it (safer than rebooting)
 >
 > **NOTE:** There exists less radical way than rebooting the whole system. If `SysReq` key works, you can kill processes one-by-one using `Alt`+`SysReq`+`F`. Kernel will kill the most[sic] «expensive» process each time. If you want to kill all processes for one console, you can issue `Alt`+`SysReq`+`K`.
 
-### [Installing Firefox Developer Edition](https://askubuntu.com/a/584704)
-
-Firefox Developer Edition will work alongside other Firefox installations with separate profiles.
-
-First, install [Ubuntu Make](https://wiki.ubuntu.com/ubuntu-make):
-
-Using PPA:
-
-```sh
-sudo add-apt-repository ppa:lyzardking/ubuntu-make
-sudo apt update
-sudo apt install ubuntu-make
-```
-
-Then, install Firefox Developer Edition:
-
-```sh
-umake web firefox-dev
-```
-
-Restart if the application does not appear in the dashboard.
-
-### [CheckInstall](https://help.ubuntu.com/community/CheckInstall)
-
-> CheckInstall keeps track of all files installed by a "make install" or equivalent, creates a Slackware, RPM, or Debian package with those files, and adds it to the installed packages database, allowing for easy package removal or distribution.
-
-Install using:
-
-```sh
-sudo apt update && sudo apt install checkinstall
-```
-
-Instead of
-
-```sh
-sudo make install
-```
-
-you will use
-
-```sh
-sudo checkinstall
-```
-
-### [Uninstalling software](https://askubuntu.com/a/1144)
-
-If installed via package manager:
-
-```sh
-sudo apt remove ${application-name}
-```
-
-To uninstall all related packages and configuration files:
-
-```sh
-sudo apt purge ${package-name}
-```
-
-Otherwise, use Synaptic Package Manager, and 'Mark for complete removal'.
-
-### Useful packages
-
-- [HardInfo](https://help.ubuntu.com/community/HardInfo)
-- [Ubuntu Make](https://wiki.ubuntu.com/ubuntu-make)
-- [Synaptic Package Manager](https://www.nongnu.org/synaptic/)
-
-### [Handling held back packages](https://askubuntu.com/a/602)
-
-`apt upgrade` gives `The following packages have been kept back`.
-
-Solution 1:
-
-```sh
-sudo apt --with-new-pkgs upgrade
-```
-
-Solution 2 (replace `packages` with the list of packages held back):
-
-```sh
-sudo apt install packages
-```
-
 ### Installing Zotero
 
-Download the tarball from Zotero's [download page](https://www.zotero.org/download/). Extract the contents and move them to a location of your choice, such as `/opt/zotero`. Open the terminal in this location and run `./set_launcher_icon` to update the `zotero.desktop` file for that location. Create a symlink for `zotero.desktop` by running `ln -s "$PWD/zotero.desktop" ~/.local/share/applications/` from the same location. All of these commands can be run in succession from the same terminal window, i.e. `nms@nms-notebook:~/opt/zotero`.
+Download the tarball from Zotero's [download page](https://www.zotero.org/download/). Extract the contents and move them to a location of your choice, such as `/opt/zotero`. Open the terminal in this location and run `./set_launcher_icon` to update the `zotero.desktop` file for that location. Create a symlink for `zotero.desktop` by running `ln -s "$PWD/zotero.desktop" ~/.local/share/applications/` from the same location. All of these commands can be run in succession from the same terminal window, i.e. `~/opt/zotero`.
 
 ***Note:*** If using a custom icon theme, replace the absolute path for the icon with `zotero` in `./set_launcher_icon` prior to running it.
 
@@ -305,12 +214,6 @@ If the source and destination are the same:
 unzip file.zip
 ```
 
-If `unzip` is not installed:
-
-```sh
-sudo apt install unzip
-```
-
 #### Zipping and unzipping files
 
 - <https://www.howtogeek.com/414082/how-to-zip-or-unzip-files-from-the-linux-terminal/>
@@ -326,45 +229,11 @@ Installation (depends on instructions):
 xdg-open INSTALL
 ```
 
-### Automount hard disks on boot
-
-For Ubuntu, see <https://www.fosslinux.com/4216/how-to-automount-hard-disk-partitions-in-ubuntu.htm>
-
-For Kubuntu, search for 'Removable Devices' and change the settings there.
-
-### [Preventing applications from launching on boot](https://redd.it/bcae00)
-
-System Settings > Startup and Shutdown > Desktop Session > On Login > Enable 'Start with an empty session'
-
 ### Disable Bluetooth on startup
 
 Open `/etc/bluetooth/main.conf` and set `AutoEnable=false`.
 
 Source: <https://askubuntu.com/a/155886/>
-
-### Fixing 'Setting locale failed'
-
-```text
-perl: warning: Setting locale failed.
-perl: warning: Please check that your locale settings:
-[...]
-    are supported and installed on your system.
-perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
-locale: Cannot set LC_ALL to default locale: No such file or directory
-```
-
-Run `locale` to list all locales defined for the user.
-
-To reconfigure locales, identify the locale name (e.g. `en_GB.UTF-8`), generate it, and then reconfigure:
-
-```sh
-sudo locale-gen "en_GB.UTF-8"
-sudo dpkg-reconfigure locales
-```
-
-Source: <https://draculaservers.com/tutorials/setting-locale-failed-ubuntu/>
-
-Alternatively, when installing Ubuntu, select a region which has the desired locale (e.g. United Kingdom for `en_GB.UTF-8`), and change the timezone manually once the installation is complete.
 
 ### [Using a custom icon for an application](https://askubuntu.com/a/80634)
 
@@ -388,13 +257,43 @@ balooctl disable
 
 <https://redd.it/5c0n30>
 
+#### Automount hard disks on boot
+
+Search for 'Removable Devices' and change the settings there.
+
+#### [Preventing applications from launching on boot](https://redd.it/bcae00)
+
+System Settings > Startup and Shutdown > Desktop Session > On Login > Enable 'Start with an empty session'
+
 ### Manjaro
 
 - <https://wiki.manjaro.org/index.php/Pacman_Overview>
 - <https://wiki.manjaro.org/index.php/Pamac>
 - <https://aur.archlinux.org/>
+- <https://wiki.archlinux.org/title/Pacman>
 
 #### Pacman
+
+Pacman flags:
+
+- `-S`: query the sync database
+  - `-Ss`: search for a package
+  - `-Si`: display extensive information about a package
+  - `-Syu`: update packages
+  - `-Sw`: download package without installing
+- `-Q`: query the local package database
+  - `-Ql`: list of files installed by a package
+  - `-Qk`: verify the presence of files installed by a package
+  - `-Qs`: search already installed packages
+  - `-Qi`: display extensive information about a locally-installed package
+  - `-Qii`: also display the list of backup files and their modification states
+  - `-Qdt`: list packages no longer required as dependencies (orphans)
+  - `-Qet`: list packages explicitly installed and not required as dependencies
+- `-F`: query the file database
+  - `-Fl`: retrieve a list of the files installed by a remote package
+- `-R`: remove a software package
+  - `-Rsu`: remove a package and all unneeded dependencies
+  - `-Rsun`: remove a package and all unneeded dependencies and backup configuration files
 
 To search for packages:
 
@@ -402,23 +301,41 @@ To search for packages:
 pacman -Ss papirus-icon-theme
 ```
 
-To install:
+To install and update system:
 
 ```sh
-sudo pacman -S papirus-icon-theme
+sudo pacman -Syu papirus-icon-theme
 ```
 
-To uninstall:
+To uninstall and remove unneeded dependencies:
 
 ```sh
-sudo pacman -R papirus-icon-theme
+sudo pacman -Rsu papirus-icon-theme
+```
+
+To remove all orphan packages:
+
+```sh
+sudo pacman -Rs $(pacman -Qdtq)
+```
+
+To determine which package owns a file:
+
+```sh
+pacman -Qo /usr/bin/smplayer
+```
+
+To remove old package caches except for the latest three package versions:
+
+```sh
+paccache -rvk3
 ```
 
 #### Pamac
 
 Install AUR packages using Pamac.
 
-To search for packages:
+To search for packages (the `-a` flag is used to search AUR):
 
 ```sh
 pamac search -a vscodium
@@ -436,63 +353,179 @@ To uninstall:
 pamac remove vscodium-bin
 ```
 
-### XAMPP
-
-<https://www.apachefriends.org/faq_linux.html>
-
-After installation, try starting XAMPP:
+To identify installed packages:
 
 ```sh
-sudo /opt/lampp/lampp start
+pamac list -i
 ```
 
-Using the GUI:
+To display detailed package information:
 
 ```sh
-sudo /opt/lampp/manager-linux-x64.run
+pamac info -a smplayer
 ```
 
-There's no need to fix the security weaknesses for local development; doing so can cause additional issues. See:
-
-- <https://stackoverflow.com/q/68677283>
-- <https://community.apachefriends.org/viewtopic.php?p=272515>
-
-Restarting XAMPP:
+To search for available updates:
 
 ```sh
-sudo /opt/lampp/lampp restart
+pamac checkupdates -a
 ```
 
-To stop XAMPP:
+To update all installed packages:
 
 ```sh
-sudo /opt/lampp/lampp stop
+pamac upgrade -a
 ```
 
-To fix Apache Web Server issues (usually caused by a blocked port):
+To list orphaned packages:
 
-- <https://httpd.apache.org/docs/current/bind.html>
-- <https://stackoverflow.com/q/27754367>
-- <https://themeisle.com/blog/xampp-error-apache-shutdown-unexpectedly/>
-- <https://stackoverflow.com/q/49127318>
+```sh
+pamac list -o
+```
 
-Change the port in `opt/lampp/etc/httpd.conf`:
+To remove all orphaned packages:
 
-- `Port 80` to `Port 8080`
-- `Listen 80` to `Listen 8080`
-- `servername localhost: 80` to `servername localhost: 8080`
+```sh
+pamac remove -o
+```
 
-Change the port in `opt/lampp/etc/extra/httpd-ssl.conf`:
+To clean the package caches except the latest three package versions:
 
-- `Listen 443` to `Listen 4433`
-- `<VirtualHost_default_:443>` to `<VirtualHost_default_:4433>`
-- `ServerName www.example.com:443` to `ServerName www.example.com:4433`
+```sh
+pamac clean --keep 3
+```
 
-Close all XAMPP services and restart.
+To force reinstall a package:
 
-### Troubleshooting WiFi issues
+```sh
+pamac reinstall smplayer
+```
+
+To search which package owns a certain file:
+
+```sh
+pamac search -f /usr/bin/smplayer
+```
+
+### Ubuntu notes
+
+<details>
+
+#### [Installing Firefox Developer Edition](https://askubuntu.com/a/584704)
+
+Firefox Developer Edition will work alongside other Firefox installations with separate profiles.
+
+First, install [Ubuntu Make](https://wiki.ubuntu.com/ubuntu-make):
+
+Using PPA:
+
+```sh
+sudo add-apt-repository ppa:lyzardking/ubuntu-make
+sudo apt update
+sudo apt install ubuntu-make
+```
+
+Then, install Firefox Developer Edition:
+
+```sh
+umake web firefox-dev
+```
+
+Restart if the application does not appear in the dashboard.
+
+#### [CheckInstall](https://help.ubuntu.com/community/CheckInstall)
+
+> CheckInstall keeps track of all files installed by a "make install" or equivalent, creates a Slackware, RPM, or Debian package with those files, and adds it to the installed packages database, allowing for easy package removal or distribution.
+
+Install using:
+
+```sh
+sudo apt update && sudo apt install checkinstall
+```
+
+Instead of
+
+```sh
+sudo make install
+```
+
+you will use
+
+```sh
+sudo checkinstall
+```
+
+#### Troubleshooting WiFi issues
 
 See <https://askubuntu.com/a/235280>.
+
+#### Fixing 'Setting locale failed'
+
+```text
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+[...]
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+locale: Cannot set LC_ALL to default locale: No such file or directory
+```
+
+Run `locale` to list all locales defined for the user.
+
+To reconfigure locales, identify the locale name (e.g. `en_GB.UTF-8`), generate it, and then reconfigure:
+
+```sh
+sudo locale-gen "en_GB.UTF-8"
+sudo dpkg-reconfigure locales
+```
+
+Source: <https://draculaservers.com/tutorials/setting-locale-failed-ubuntu/>
+
+Alternatively, when installing Ubuntu, select a region which has the desired locale (e.g. United Kingdom for `en_GB.UTF-8`), and change the timezone manually once the installation is complete.
+
+#### Automount hard disks on boot - Ubuntu
+
+For Ubuntu, see <https://www.fosslinux.com/4216/how-to-automount-hard-disk-partitions-in-ubuntu.htm>
+
+#### Useful packages
+
+- [HardInfo](https://help.ubuntu.com/community/HardInfo)
+- [Ubuntu Make](https://wiki.ubuntu.com/ubuntu-make)
+- [Synaptic Package Manager](https://www.nongnu.org/synaptic/)
+
+#### [Handling held back packages](https://askubuntu.com/a/602)
+
+`apt upgrade` gives `The following packages have been kept back`.
+
+Solution 1:
+
+```sh
+sudo apt --with-new-pkgs upgrade
+```
+
+Solution 2 (replace `packages` with the list of packages held back):
+
+```sh
+sudo apt install packages
+```
+
+#### [Uninstalling software](https://askubuntu.com/a/1144)
+
+If installed via package manager:
+
+```sh
+sudo apt remove ${application-name}
+```
+
+To uninstall all related packages and configuration files:
+
+```sh
+sudo apt purge ${package-name}
+```
+
+Otherwise, use Synaptic Package Manager, and 'Mark for complete removal'.
+
+</details>
 
 ## Android
 
