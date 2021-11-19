@@ -8,21 +8,15 @@ Welcome to my notebook! This is where I backup my settings and computing notes.
 
 ### Text editor
 
-[Visual Studio Code](https://code.visualstudio.com/) / [VSCodium](https://vscodium.com/)
-
-Settings and the list of extensions used can be found in the `.vscode` folder.
+[VSCodium](https://vscodium.com/) (settings and list of extensions can be found in the `.vscode` folder)
 
 ### OS
 
-[Manjaro KDE](https://manjaro.org/) and Windows 10.
+[Manjaro](https://manjaro.org/) ([KDE](https://kde.org/)) / Windows 10 / Android
 
-### GitHub actions
+### CI
 
-See the `.github` folder.
-
-### GitLab CI
-
-See the `.gitlab` folder.
+See `.github` and `.gitlab` for GitHub and GitLab CI configurations
 
 ## License and credits
 
@@ -36,4 +30,4 @@ All original sources are attributed and/or linked within the notes.
 
 ### Settings
 
-Unless otherwise stated, settings and files in `.vscode`, `.github`, and `.gitlab` are licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+Unless otherwise stated, settings are licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT).

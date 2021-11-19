@@ -17,7 +17,7 @@
   - [Creating and extracting archives](#creating-and-extracting-archives)
   - [Installing from an archive](#installing-from-an-archive)
   - [Disable Bluetooth on startup](#disable-bluetooth-on-startup)
-  - [Using a custom icon for an application](#using-a-custom-icon-for-an-application)
+  - [Using a custom application icon](#using-a-custom-application-icon)
   - [KDE](#kde)
   - [Manjaro](#manjaro)
   - [Ubuntu notes](#ubuntu-notes)
@@ -234,7 +234,7 @@ Open `/etc/bluetooth/main.conf` and set `AutoEnable=false`.
 
 Source: <https://askubuntu.com/a/155886/>
 
-### [Using a custom icon for an application](https://askubuntu.com/a/80634)
+### [Using a custom application icon](https://askubuntu.com/a/80634)
 
 Copy the `.desktop` file of the application to the local applications folder:
 
