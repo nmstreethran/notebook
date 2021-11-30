@@ -1,4 +1,6 @@
 - [XAMPP](#xampp)
+  - [Install new phpMyAdmin themes](#install-new-phpmyadmin-themes)
+  - [Fix Apache Web Server issues](#fix-apache-web-server-issues)
 - [MySQL Workbench](#mysql-workbench)
   - [`org.freedesktop.secrets` issue on KDE](#orgfreedesktopsecrets-issue-on-kde)
   - [Server incompatibility issue](#server-incompatibility-issue)
@@ -21,6 +23,12 @@ Using the GUI:
 sudo /opt/lampp/manager-linux-x64.run
 ```
 
+A shortcut to this GUI can be created on KDE with the following command:
+
+```sh
+kdesu /opt/lampp/manager-linux-x64.run
+```
+
 There's no need to fix the security weaknesses for local development; doing so can cause additional issues. See:
 
 - <https://stackoverflow.com/q/68677283>
@@ -38,7 +46,16 @@ To stop XAMPP:
 sudo /opt/lampp/lampp stop
 ```
 
-To fix Apache Web Server issues (usually caused by a blocked port):
+### Install new phpMyAdmin themes
+
+Download a theme and extract it to `/opt/lampp/phpmyadmin/themes/`.
+
+- <https://www.phpmyadmin.net/themes/>
+- <https://github.com/phpmyadmin/themes>
+
+### Fix Apache Web Server issues
+
+Usually caused by a blocked port:
 
 - <https://httpd.apache.org/docs/current/bind.html>
 - <https://stackoverflow.com/q/27754367>

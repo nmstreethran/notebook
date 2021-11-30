@@ -244,6 +244,13 @@ cp /usr/share/applications/app.desktop ~/.local/share/applications/
 
 Open the copied file and change the value of `Icon`, e.g. change absolute path to relative, use a custom icon, etc. Save the file after making changes.
 
+On [KDE](https://archived.forum.manjaro.org/t/starting-a-root-command-in-terminal-through-a-shortcut/33653/2), right-click the Application Launcher icon and use Edit Application to create or modify desktop applications.
+
+To enable a password prompt for applications that require administrative privileges, add `kdesu` before the command.
+
+- <https://superuser.com/q/135311>
+- <https://api.kde.org/frameworks/kdesu/html/index.html>
+
 ### KDE
 
 `baloo_file_extractor` using too much memory: go to System Settings > Search and disable file search
@@ -334,7 +341,7 @@ paccache -rvk3
 
 Install AUR packages using Pamac.
 
-To search for packages (the `-a` flag is used to search AUR):
+To search for packages (the `-a` or `--aur` flag is used to search AUR):
 
 ```sh
 pamac search -a vscodium

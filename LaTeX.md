@@ -53,7 +53,7 @@
 
 ### Linux setup
 
-I regularly use XeLaTeX, Biber, Makeglossaries, Arara, and some extra fonts.
+I regularly use XeLaTeX, Biber, Makeglossaries, Arara, and some extra fonts. On Ubuntu, install the following:
 
 ```sh
 sudo apt install texlive-extra-utils texlive-xetex texlive-fonts-extra biber
