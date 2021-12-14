@@ -28,7 +28,7 @@
   - [Using TWRP to backup and install ROMs](#using-twrp-to-backup-and-install-roms)
   - [Links](#links)
 
-## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot)
+## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot?view=windows-10)
 
 Open the PC BIOS menu. You can often access this menu by pressing a key during the boot up sequence, such as `F1`, `F2`, `F12`, or `Esc`.
 
@@ -431,21 +431,38 @@ After the downgrade, add it to `IgnorePkg` to prevent automatic updates.
 
 ### Ubuntu notes
 
-<details>
-
-#### [Installing Firefox Developer Edition](https://askubuntu.com/a/584704)
-
-Firefox Developer Edition will work alongside other Firefox installations with separate profiles.
-
-First, install [Ubuntu Make](https://wiki.ubuntu.com/ubuntu-make):
-
-Using PPA:
+#### Install from PPA
 
 ```sh
 sudo add-apt-repository ppa:lyzardking/ubuntu-make
 sudo apt update
 sudo apt install ubuntu-make
 ```
+
+#### [Uninstalling software](https://askubuntu.com/a/1144)
+
+If installed via package manager:
+
+```sh
+sudo apt remove ${application-name}
+```
+
+To uninstall all related packages and configuration files:
+
+```sh
+sudo apt purge ${package-name}
+```
+
+Otherwise, use Synaptic Package Manager, and 'Mark for complete removal'.
+
+<details>
+<summary>Archived notes</summary>
+
+#### [Installing Firefox Developer Edition](https://askubuntu.com/a/584704)
+
+Firefox Developer Edition will work alongside other Firefox installations with separate profiles.
+
+First, install [Ubuntu Make](https://wiki.ubuntu.com/ubuntu-make).
 
 Then, install Firefox Developer Edition:
 
@@ -530,22 +547,6 @@ Solution 2 (replace `packages` with the list of packages held back):
 ```sh
 sudo apt install packages
 ```
-
-#### [Uninstalling software](https://askubuntu.com/a/1144)
-
-If installed via package manager:
-
-```sh
-sudo apt remove ${application-name}
-```
-
-To uninstall all related packages and configuration files:
-
-```sh
-sudo apt purge ${package-name}
-```
-
-Otherwise, use Synaptic Package Manager, and 'Mark for complete removal'.
 
 </details>
 

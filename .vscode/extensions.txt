@@ -2,8 +2,8 @@ davidanson.vscode-markdownlint-0.45.0
 github.github-vscode-theme-5.1.0
 james-yu.latex-workshop-8.22.0
 mechatroner.rainbow-csv-1.7.1
-ms-python.python-2021.11.1422169775
-ms-toolsai.jupyter-2021.8.12
+ms-python.python-2021.12.1559732655
+ms-toolsai.jupyter-2021.11.1001552333
 pkief.material-icon-theme-4.11.0
 reditorsupport.r-lsp-0.1.14
 streetsidesoftware.code-spell-checker-2.0.13

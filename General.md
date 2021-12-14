@@ -21,8 +21,6 @@
 
 ## URL encoding
 
-<https://vermontdatabase.com/cloudwriter/url_encoding.htm>
-
 <https://en.wikipedia.org/wiki/Percent-encoding>
 
 Character | URL encoding | Reserved?
