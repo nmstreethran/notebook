@@ -1,18 +1,3 @@
-- [Installing Ruby](#installing-ruby)
-- [Installing gems](#installing-gems)
-  - [Installing gems with Bundler](#installing-gems-with-bundler)
-  - [Caching Bundler gems with GitLab CI](#caching-bundler-gems-with-gitlab-ci)
-  - [List installed gems](#list-installed-gems)
-  - [Uninstalling old gem versions](#uninstalling-old-gem-versions)
-  - [Cross-platform Gemfile](#cross-platform-gemfile)
-  - [Fixing dependency errors](#fixing-dependency-errors)
-- [Ruby programming](#ruby-programming)
-- [Jekyll](#jekyll)
-  - [Local server](#local-server)
-  - [Check if Jekyll installed properly](#check-if-jekyll-installed-properly)
-  - [GitHub Pages](#github-pages)
-- [References](#references)
-
 ## Installing Ruby
 
 First, check if Ruby is already installed and its version:

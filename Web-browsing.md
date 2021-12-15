@@ -1,10 +1,3 @@
-- [Firefox](#firefox)
-  - [Find location of extensions](#find-location-of-extensions)
-  - [View and modify extension data](#view-and-modify-extension-data)
-  - [Crashes](#crashes)
-- [uBlock Origin](#ublock-origin)
-  - [Search result blocking](#search-result-blocking)
-
 ## Firefox
 
 ### [Find location of extensions](https://stackoverflow.com/a/6579979)

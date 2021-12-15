@@ -1,19 +1,3 @@
-- [Emphasis](#emphasis)
-- [Lists](#lists)
-- [Hyperlinks](#hyperlinks)
-- [Images](#images)
-- [Tables](#tables)
-- [Code and syntax highlighting](#code-and-syntax-highlighting)
-- [Horizontal rule](#horizontal-rule)
-- [Text alignment](#text-alignment)
-- [Badges](#badges)
-- [Blockquotes](#blockquotes)
-- [Font Awesome](#font-awesome)
-- [Text colours and fonts](#text-colours-and-fonts)
-- [YouTube videos](#youtube-videos)
-- [Footnotes](#footnotes)
-- [Sources](#sources)
-
 ## Emphasis
 
 **Bold**: `**Bold**`

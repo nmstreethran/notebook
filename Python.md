@@ -1,7 +1,3 @@
-- [Getting started](#getting-started)
-- [Datetime](#datetime)
-- [Getting a Python programme to do nothing when using statements](#getting-a-python-programme-to-do-nothing-when-using-statements)
-
 ## Getting started
 
 - [Python For Beginners](https://www.python.org/about/gettingstarted/)

@@ -225,7 +225,8 @@
   "window.restoreWindows": "none",
   "workbench.colorTheme": "Monokai Dimmed",
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
+    "*.ipynb": "jupyter.notebook.ipynb",
+    "*.pdf": "latex-workshop-pdf-hook"
   },
   "workbench.iconTheme": "material-icon-theme"
 }

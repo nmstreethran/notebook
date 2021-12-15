@@ -1,8 +1,3 @@
-- [XAMPP](#xampp)
-  - [Install new phpMyAdmin themes](#install-new-phpmyadmin-themes)
-  - [Fix server issues](#fix-server-issues)
-- [MariaDB](#mariadb)
-
 ## XAMPP
 
 <https://www.apachefriends.org/faq_linux.html>

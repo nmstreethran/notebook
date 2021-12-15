@@ -1,14 +1,3 @@
-- [Syntax highlighting](#syntax-highlighting)
-- [File watching](#file-watching)
-- [Keyboard shortcuts](#keyboard-shortcuts)
-- [Additional keybindings](#additional-keybindings)
-  - [Making selected text uppercase or lowercase](#making-selected-text-uppercase-or-lowercase)
-- [Useful links](#useful-links)
-  - [Python](#python)
-  - [Git](#git)
-  - [Markdown](#markdown)
-  - [HTML](#html)
-
 ## Syntax highlighting
 
 [Manually set the language for syntax highlighting for a file opened on VS Code](https://stackoverflow.com/a/30776845):

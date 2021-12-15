@@ -1,11 +1,3 @@
-- [Ghostscript](#ghostscript)
-  - [Compressing PDF files to reduce their size](#compressing-pdf-files-to-reduce-their-size)
-  - [Merging PDF files and generating bookmarks](#merging-pdf-files-and-generating-bookmarks)
-- [Poppler](#poppler)
-  - [Merging PDF files](#merging-pdf-files)
-  - [Separating PDF files](#separating-pdf-files)
-  - [Convert PDF to image](#convert-pdf-to-image)
-
 ## Ghostscript
 
 ### [Compressing PDF files to reduce their size](https://askubuntu.com/a/256449)

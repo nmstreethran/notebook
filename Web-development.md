@@ -1,18 +1,3 @@
-- [HTML / CSS](#html--css)
-  - [Colours](#colours)
-  - [Render whitespace when using `content`](#render-whitespace-when-using-content)
-  - [Overflow](#overflow)
-  - [Selecting elements with matching conditions](#selecting-elements-with-matching-conditions)
-  - [Fonts](#fonts)
-  - [Prevent overlap of content on navigation bar](#prevent-overlap-of-content-on-navigation-bar)
-  - [Types of CSS](#types-of-css)
-  - [Scale image height to match text height](#scale-image-height-to-match-text-height)
-- [Issues](#issues)
-  - [MIME type mismatch](#mime-type-mismatch)
-- [Minimal Mistakes theme](#minimal-mistakes-theme)
-  - [Social share buttons](#social-share-buttons)
-- [See also](#see-also)
-
 ## HTML / CSS
 
 ### Colours

@@ -1,10 +1,3 @@
-- [Character limits](#character-limits)
-- [Python](#python)
-- [URL encoding](#url-encoding)
-- [Versioning](#versioning)
-- [YAML](#yaml)
-  - [Line breaks](#line-breaks)
-
 ## Character limits
 
 [adhering to 80 character limit in code](https://softwareengineering.stackexchange.com/a/1848)

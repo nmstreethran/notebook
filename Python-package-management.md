@@ -1,23 +1,3 @@
-- [Anaconda](#anaconda)
-  - [Searching for packages](#searching-for-packages)
-  - [Managing environments](#managing-environments)
-  - [Installing packages](#installing-packages)
-  - [Viewing a list of installed packages](#viewing-a-list-of-installed-packages)
-  - [Updating packages](#updating-packages)
-  - [Removing packages](#removing-packages)
-  - [Desktop shortcut](#desktop-shortcut)
-- [Python](#python)
-  - [Getting a list of locally installed packages](#getting-a-list-of-locally-installed-packages)
-  - [Updating packages](#updating-packages-1)
-  - [Virtual environments](#virtual-environments)
-  - [Installing for a specific Python version](#installing-for-a-specific-python-version)
-  - [Uninstalling packages](#uninstalling-packages)
-  - [Prevent conda from activating the base environment by default](#prevent-conda-from-activating-the-base-environment-by-default)
-  - [Environment error](#environment-error)
-  - [Fixing `error: invalid command 'bdist_wheel'`](#fixing-error-invalid-command-bdist_wheel)
-- [Creating a requirements file](#creating-a-requirements-file)
-- [References](#references)
-
 ## Anaconda
 
 ### Searching for packages
