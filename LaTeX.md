@@ -553,44 +553,6 @@ Sources:
 - <https://tex.stackexchange.com/a/8665>
 - <https://tex.stackexchange.com/q/14620>
 
-### Word count
-
-- [TeXcount](https://ctan.uib.no/support/texcount/doc/TeXcount.pdf) package documentation.
-- [Ignore sections or inputs of a document when calculating the number of words using TeXcount](https://tex.stackexchange.com/a/259296) - using `%TC:ignore` and `%TC:endignore`:
-
-```latex
-% regions between TC:ignore and TC:endignore will be ignored from word count
-%TC:ignore
-\appendix
-And now for something completely different
-%TC:endignore
-```
-
-To automate word count generation and inclusion in the compiled PDF, add the following to `doc/main.tex`:
-
-```latex
-\vfill\hfill Word count: \input{wordcount}%
-```
-
-Then, run the following command:
-
-```sh
-cd doc && texcount -merge -template='{1}' main.tex -out='wordcount.tex' && arara main.tex
-```
-
-To add thousands separators to the word count output, use the following instead:
-
-```sh
-cd doc && printf "%'d" $(texcount -merge -template='{1}' main.tex) > wordcount.tex && arara main.tex
-```
-
-References:
-
-- add thousands separator: <https://unix.stackexchange.com/q/113795>
-- passing output from one command to another: <https://unix.stackexchange.com/q/4782>
-- inserting a new line: <https://stackoverflow.com/a/20538015>
-- print contents of a file and prepend a string: <https://askubuntu.com/a/968657>
-
 ## Beamer class
 
 <https://www.ctan.org/pkg/beamer>

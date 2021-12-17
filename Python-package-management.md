@@ -345,40 +345,9 @@ The issue could be caused by the absence of `setup_requires=['wheel']` in `setup
 
 See <https://stackoverflow.com/q/34819221> for more information.
 
-## Creating a requirements file
+## requirements.txt
 
-Using [PIP Chill](https://pip-chill.readthedocs.io/en/latest/), which lists only the packages that are not dependencies of installed packages. This is an alternative to `pip freeze`.
-
-Version 1.0.1 of PIP Chill has the following options:
-
-```text
-# pip-chill --help
-usage: pip-chill [-h] [--no-version] [--no-chill] [-a] [-v]
-
-Like `pip freeze`, but more relaxed.
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --no-version          omit version numbers.
-  --no-chill            don't show installed pip-chill.
-  -a, --all, --show-all
-                        show all packages.
-  -v, --verbose         list commented out dependencies too.
-```
-
-To save the output of PIP Chill as requirements.txt:
-
-```sh
-pip-chill --no-chill > requirements.txt
-```
-
-Install PIP Chill via pip:
-
-```sh
-python -m pip install pip-chill
-```
-
-The requirements file generated through PIP Chill can be used to install all dependencies via both pip and conda:
+The requirements file can be used to install all dependencies via both pip and conda:
 
 ```sh
 # using pip

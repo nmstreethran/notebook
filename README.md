@@ -6,15 +6,9 @@ Welcome to my notebook! This is where I backup my settings and computing notes.
 
 ## Configurations
 
-### Text editor
+Text editor: [VSCodium](https://vscodium.com/) (settings and list of extensions can be found in the `.vscode` folder)
 
-[VSCodium](https://vscodium.com/) (settings and list of extensions can be found in the `.vscode` folder)
-
-### OS
-
-[Manjaro](https://manjaro.org/) ([KDE](https://kde.org/)) / Windows 10 / Android
-
-### CI
+OS: [Manjaro Linux](https://manjaro.org/) ([KDE](https://kde.org/)) / Windows 10 / Android
 
 See `.github` and `.gitlab` for GitHub and GitLab CI configurations
 
