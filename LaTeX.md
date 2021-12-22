@@ -9,10 +9,16 @@
 
 ### Linux setup
 
-I regularly use XeLaTeX, Biber, Makeglossaries, Arara, and some extra fonts. On Ubuntu, install the following:
+I regularly use XeLaTeX, Biber, Makeglossaries, Arara (requires Java), Minted (requires Python for Pygments), and some extra fonts. On Ubuntu, install the following:
 
 ```sh
-sudo apt install texlive-extra-utils texlive-xetex texlive-fonts-extra biber
+sudo apt install texlive-extra-utils texlive-xetex texlive-fonts-extra biber python3-pygments default-jre default-jdk
+```
+
+On Manjaro:
+
+```sh
+sudo pacman -S texlive-latexextra texlive-fontsextra biber python-pygments jdk-openjdk jre-openjdk
 ```
 
 ### Commands
