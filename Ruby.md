@@ -33,7 +33,7 @@ Add the user install directory to the `PATH` environment variable. Alternatively
 
 ```sh
 export GEM_HOME=$HOME/.gem
-export GEM_PATH=$GEM_HOME/ruby/3.0.0/
+export GEM_PATH=$GEM_HOME/ruby/3.0.0
 export PATH="$GEM_PATH/bin:$PATH"
 ```
 
@@ -92,6 +92,19 @@ To check if there are any older versions of gems installed, do a dry run of the 
 
 ```sh
 gem cleanup --dryrun
+```
+
+If the [following error](https://stackoverflow.com/a/58798613) shows up:
+
+```text
+ERROR:  While executing gem ... (NameError)
+    uninitialized constant Gem::RDoc
+```
+
+Install `rdoc`:
+
+```sh
+gem install rdoc
 ```
 
 ### Cross-platform Gemfile
