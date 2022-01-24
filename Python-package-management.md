@@ -261,13 +261,13 @@ pip list
 pip list --outdated
 ```
 
-[Finding pip version](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#linux-and-macos):
+[Finding pip version](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/):
 
 ```sh
 python3 -m pip --version
 ```
 
-### [Virtual environments](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+### [Virtual environments](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/)
 
 Installing `virtualenv`:
 
@@ -362,4 +362,4 @@ conda create --file requirements.txt
 1. <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html>
 2. <https://pythonfix.com/code/conda-upgrade-all/>
 3. <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>
-4. <https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/>
+4. <https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/>

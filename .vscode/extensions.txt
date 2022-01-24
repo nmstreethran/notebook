@@ -5,7 +5,7 @@ james-yu.latex-workshop-8.23.0
 mechatroner.rainbow-csv-2.0.0
 ms-python.python-2021.12.1559732655
 ms-toolsai.jupyter-2021.11.1001552333
-pkief.material-icon-theme-4.11.0
+pkief.material-icon-theme-4.12.1
 reditorsupport.r-lsp-0.1.14
 streetsidesoftware.code-spell-checker-2.1.4
 yzhang.markdown-all-in-one-3.4.0

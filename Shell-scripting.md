@@ -131,7 +131,7 @@ $HOME
 
 Note that the `-i.bak` option will create a backup of the original file.
 
-### [Replace a string in a file](https://www.cyberciti.biz/faq/how-to-use-sed-to-find-and-replace-text-in-files-in-linux-unix-shell/)
+### [Replace a string in a file](https://unix.stackexchange.com/q/26284)
 
 ```sh
 sed -i.bak "s/string to be replaced/replacement/g" filename.txt
