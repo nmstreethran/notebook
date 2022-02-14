@@ -4,6 +4,13 @@
 - [Pro Git book](https://git-scm.com/book/en/v2)
 - [Visual Git Cheat Sheet](https://ndpsoftware.com/git-cheatsheet.html)
 
+## Setting up Git
+
+```sh
+git config --global user.name "username"
+git config --global user.email "email"
+```
+
 ## Credentials and authentication
 
 ### Setting up SSH
@@ -20,33 +27,22 @@ Check for existing SSH keys:
 ls -al ~/.ssh
 ```
 
-Generate a new key if none exist:
-
-**Using RSA:**
-
-```sh
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-```
-
-**[Using ED25519 SSH keys (recommended over RSA)](https://docs.gitlab.com/ee/ssh/index.html):**
+Generate a new key **[using ED25519 SSH keys (recommended over RSA)](https://docs.gitlab.com/ee/ssh/index.html):**
 
 ```sh
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
-Press `Enter` when prompted to "Enter a file in which to save the key". Then, type a secure passphrase.
+When prompted to "Enter a file in which to save the key", press `Enter` to use the default file name, or specify a custom file name. Then, type a secure passphrase.
 
 Start the ssh-agent and add your private key (if using non-default file path):
 
 ```sh
 eval "$(ssh-agent -s)"
-
-ssh-add ~/.ssh/id_rsa
-# or
 ssh-add ~/.ssh/id_ed25519
 ```
 
-Copy the SSH key to your clipboard (saved at `$HOME/.ssh/id_rsa` or `$HOME/.ssh/id_ed25519`). Go to 'SSH and GPG keys' in your GitHub account settings. Select 'New SSH key', add a descriptive label in the 'Title' field, and paste the SSH key in the 'Key' field.
+Copy the SSH public key to your clipboard (saved at `$HOME/.ssh/id_ed25519.pub`). Go to 'SSH and GPG keys' in your GitHub account settings. Select 'New SSH key', add a descriptive label in the 'Title' field, and paste the SSH key in the 'Key' field.
 
 List existing remote URLs for your local repository:
 
@@ -60,6 +56,90 @@ Change your remote's URL from HTTPS to SSH with `git remote set-url` and verify:
 git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 git remote -v
 ```
+
+### Alternate SSH port
+
+To test if SSH connection over the HTTPS port (443) is possible:
+
+```sh
+ssh -T -p 443 git@ssh.github.com  # GitHub
+ssh -T -p 443 git@altssh.gitlab.com  # GitLab
+```
+
+The following greetings should appear if successful:
+
+```text
+Hi username! You've successfully authenticated, but GitHub does not
+provide shell access.
+
+Welcome to GitLab, @username!
+```
+
+Create a file called `~/.ssh/config` and add the following configurations for GitLab:
+
+```text
+Host gitlab.com
+  Hostname altssh.gitlab.com
+  User git
+  Port 443
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519
+
+Host github.com
+  Hostname ssh.github.com
+  User git
+  Port 443
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519
+```
+
+Test if everything works (same greetings as above should appear):
+
+```sh
+ssh -T git@github.com  # GitHub
+ssh -T git@gitlab.com  # GitLab
+```
+
+- <https://about.gitlab.com/blog/2016/02/18/gitlab-dot-com-now-supports-an-alternate-git-plus-ssh-port/>
+- <https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port>
+
+### [SSH askpass error](https://stackoverflow.com/a/52886041)
+
+Error when pushing using VS Code on Ubuntu:
+
+```sh
+Git: ssh_askpass: exec(usr/lib/ssh/ssh_askpass): No such file or directory.
+```
+
+Likely caused by OS update, which makes Git lose the passphrase of the SSH key. To solve the problem, run `eval $(ssh-agent)`, then `ssh-add ~/.ssh/id_rsa`. It may require reinstallation of VS Code.
+
+If that doesn't work, [try reinstalling `ssh-askpass`](https://askubuntu.com/a/1196265):
+
+```sh
+sudo apt install ssh-askpass
+```
+
+On [Manjaro](https://forum.manjaro.org/t/vscode-git-ssh-askpass-exec-usr-lib-ssh-ssh-askpass-no-such-file-or-directory/78787), install `ksshaskpass` and create a symlink to enable VS Code to recognise it:
+
+```sh
+pamac install ksshaskpass
+sudo ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
+```
+
+If you get a similar error to the [following](https://superuser.com/a/421084):
+
+```text
+The authenticity of host 'bitbucket.org (207.223.240.181)' can't be established.
+
+RSA key fingerprint is 97:8c:1b:f2:6f:14:6b:5c:3b:ec:aa:46:46:74:7c:40.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'bitbucket.org,207.223.240.181' (RSA) to the list of
+known hosts.
+```
+
+If you expect to receive this message from the host and it's the first time you're connecting to this server after installing SSH, then it's probably normal. If you answer `yes`, SSH will start recognising that this host is `bitbucket.org`.
+
+See also: <https://forum.manjaro.org/t/howto-use-kwallet-as-a-login-keychain-for-storing-ssh-key-passphrases-on-kde/7088>
 
 ### SSH on Windows
 
@@ -86,42 +166,6 @@ On Windows, the default SSH key path is `$HOME\.ssh`. `$HOME` is usually `C:\Use
 >
 > It should automatically pick up keys stored in `C:\Users\%USERNAME%\.ssh` which is where ssh-keygen creates them.
 > Enter your password(s) at the prompt.
-
-### [SSH askpass error](https://stackoverflow.com/a/52886041)
-
-Error when pushing using VS Code on Ubuntu:
-
-```sh
-Git: ssh_askpass: exec(usr/lib/ssh/ssh_askpass): No such file or directory.
-```
-
-Likely caused by OS update, which makes Git lose the passphrase of the SSH key. To solve the problem, run `eval $(ssh-agent)`, then `ssh-add ~/.ssh/id_rsa`. It may require reinstallation of VS Code.
-
-If that doesn't work, [try reinstalling `ssh-askpass`](https://askubuntu.com/a/1196265):
-
-```sh
-sudo apt install ssh-askpass
-```
-
-On [Manjaro](https://forum.manjaro.org/t/vscode-git-ssh-askpass-exec-usr-lib-ssh-ssh-askpass-no-such-file-or-directory/78787), install `ksshaskpass` and create a symlink to enable VS Code to recognise it:
-
-```sh
-sudo pacman -S ksshaskpass
-sudo ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
-```
-
-If you get a similar error to the [following](https://superuser.com/a/421084):
-
-```text
-The authenticity of host 'bitbucket.org (207.223.240.181)' can't be established.
-
-RSA key fingerprint is 97:8c:1b:f2:6f:14:6b:5c:3b:ec:aa:46:46:74:7c:40.
-Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added 'bitbucket.org,207.223.240.181' (RSA) to the list of
-known hosts.
-```
-
-If you expect to receive this message from the host and it's the first time you're connecting to this server after installing SSH, then it's probably normal. If you answer `yes`, SSH will start recognising that this host is `bitbucket.org`.
 
 ## Branching
 

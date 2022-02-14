@@ -12,13 +12,13 @@
 I regularly use XeLaTeX, Biber, Makeglossaries, Arara (requires Java), Minted (requires Python for Pygments), and some extra fonts. On Ubuntu, install the following:
 
 ```sh
-sudo apt install texlive-extra-utils texlive-xetex texlive-fonts-extra biber python3-pygments default-jre default-jdk
+sudo apt install texlive-extra-utils texlive-xetex texlive-fonts-extra biber python3-pygments default-jre
 ```
 
 On Manjaro:
 
 ```sh
-sudo pacman -S texlive-latexextra texlive-fontsextra biber python-pygments jdk-openjdk jre-openjdk
+pamac install texlive-latexextra texlive-fontsextra texlive-formatsextra texlive-bibtexextra biber python-pygments jre-openjdk
 ```
 
 ### Commands
