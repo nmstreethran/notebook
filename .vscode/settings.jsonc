@@ -206,10 +206,6 @@
     "old": "archive",
     "wiki": "docs"
   },
-  "python.dataScience.alwaysTrustNotebooks": true,
-  "python.dataScience.askForKernelRestart": false,
-  "python.dataScience.exportWithOutputEnabled": true,
-  "python.dataScience.notebookFileRoot": "${workspaceFolder}",
   "python.linting.pylintEnabled": true,
   "python.linting.flake8Enabled": true,
   "python.terminal.activateEnvInCurrentTerminal": true,

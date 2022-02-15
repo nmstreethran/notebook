@@ -27,7 +27,7 @@ Check for existing SSH keys:
 ls -al ~/.ssh
 ```
 
-Generate a new key **[using ED25519 SSH keys (recommended over RSA)](https://docs.gitlab.com/ee/ssh/index.html):**
+If no keys exist, generate a new key **[using ED25519 (recommended over RSA)](https://docs.gitlab.com/ee/ssh/index.html):**
 
 ```sh
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -111,7 +111,7 @@ Error when pushing using VS Code on Ubuntu:
 Git: ssh_askpass: exec(usr/lib/ssh/ssh_askpass): No such file or directory.
 ```
 
-Likely caused by OS update, which makes Git lose the passphrase of the SSH key. To solve the problem, run `eval $(ssh-agent)`, then `ssh-add ~/.ssh/id_rsa`. It may require reinstallation of VS Code.
+Likely caused by OS update, which makes Git lose the passphrase of the SSH key. To solve the problem, run `eval $(ssh-agent)`, then `ssh-add ~/.ssh/id_ed25519`. It may require reinstallation of VS Code.
 
 If that doesn't work, [try reinstalling `ssh-askpass`](https://askubuntu.com/a/1196265):
 
@@ -138,6 +138,8 @@ known hosts.
 ```
 
 If you expect to receive this message from the host and it's the first time you're connecting to this server after installing SSH, then it's probably normal. If you answer `yes`, SSH will start recognising that this host is `bitbucket.org`.
+
+The list of known hosts can be seen in `~/.ssh/known_hosts`.
 
 See also: <https://forum.manjaro.org/t/howto-use-kwallet-as-a-login-keychain-for-storing-ssh-key-passphrases-on-kde/7088>
 
