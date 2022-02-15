@@ -59,23 +59,25 @@ git remote -v
 
 ### Alternate SSH port
 
+An alternate SSH port should be used if there are connection issues preventing the default port from working as expected.
+
 To test if SSH connection over the HTTPS port (443) is possible:
 
 ```sh
-ssh -T -p 443 git@ssh.github.com  # GitHub
 ssh -T -p 443 git@altssh.gitlab.com  # GitLab
+ssh -T -p 443 git@ssh.github.com  # GitHub
 ```
 
 The following greetings should appear if successful:
 
 ```text
+Welcome to GitLab, @username!
+
 Hi username! You've successfully authenticated, but GitHub does not
 provide shell access.
-
-Welcome to GitLab, @username!
 ```
 
-Create a file called `~/.ssh/config` and add the following configurations for GitLab:
+Create a file called `~/.ssh/config` and add the following configurations for GitLab, GitHub, and GitHub Gist:
 
 ```text
 Host gitlab.com
@@ -91,13 +93,21 @@ Host github.com
   Port 443
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/id_ed25519
+
+Host gist.github.com
+  Hostname ssh.github.com
+  User git
+  Port 443
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519
 ```
 
 Test if everything works (same greetings as above should appear):
 
 ```sh
-ssh -T git@github.com  # GitHub
 ssh -T git@gitlab.com  # GitLab
+ssh -T git@github.com  # GitHub
+ssh -T git@gist.github.com  # GitHub Gist
 ```
 
 - <https://about.gitlab.com/blog/2016/02/18/gitlab-dot-com-now-supports-an-alternate-git-plus-ssh-port/>
