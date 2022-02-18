@@ -2,8 +2,8 @@ davidanson.vscode-markdownlint-0.46.0
 james-yu.latex-workshop-8.23.0
 mechatroner.rainbow-csv-2.0.0
 ms-python.python-2022.0.1814523869
-ms-toolsai.jupyter-2022.1.1201832589
+ms-toolsai.jupyter-2022.1.1301856528
 pkief.material-icon-theme-4.13.0
 reditorsupport.r-lsp-0.1.14
-streetsidesoftware.code-spell-checker-2.1.6
+streetsidesoftware.code-spell-checker-2.1.7
 yzhang.markdown-all-in-one-3.4.0

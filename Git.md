@@ -209,9 +209,9 @@ git branch branchname HEAD~3
 
 ```sh
 git checkout better_branch
-git merge --strategy=ours master # keep the content of this branch, but record a merge
+git merge --strategy=ours master  # keep the content of this branch, but record a merge
 git checkout master
-git merge better_branch # fast-forward master up to the merge
+git merge better_branch  # fast-forward master up to the merge
 ```
 
 ### [Cloning a specific branch](https://stackoverflow.com/a/9920956)

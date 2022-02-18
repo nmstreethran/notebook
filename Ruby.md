@@ -9,10 +9,17 @@ ruby --version
 Download and install Ruby using instructions from the [official website](https://www.ruby-lang.org/en/).
 
 - Use [RubyInstaller](https://rubyinstaller.org/) on Windows
-- Use apt on Debian/Ubuntu (*may not be the latest version*):
+- On Debian/Ubuntu (*may not be the latest version*):
 
   ```sh
   sudo apt install ruby-dev
+  ```
+
+- On Manjaro:
+
+  ```sh
+  pamac install ruby  # latest version
+  pamac install ruby2.7  # specific older version
   ```
 
 ## Installing gems
@@ -29,7 +36,7 @@ On Linux, install RubyGems locally, not using `sudo`. Installing using `sudo` ca
 gem install --user-install ${gemname}
 ```
 
-Add the user install directory to the `PATH` environment variable. Alternatively, change the `GEM_HOME` and `GEM_PATH` variables so that gems can be installed without `sudo` or `--user-install`, by adding the following to `~/.bash_profile` (or equivalent file):
+Add the user install directory to the `PATH` environment variable. Alternatively, change the `GEM_HOME` and `GEM_PATH` variables so that gems can be installed without `sudo` or `--user-install`, by adding the following to `~/.zshrc` (or equivalent):
 
 ```sh
 export GEM_HOME=$HOME/.gem
@@ -37,7 +44,7 @@ export GEM_PATH=$GEM_HOME/ruby/3.0.0
 export PATH="$GEM_PATH/bin:$PATH"
 ```
 
-To update the paths, run `source ~/.bash_profile`.
+To update the paths, run `source ~/.zshrc`.
 
 ### Installing gems with Bundler
 
@@ -45,6 +52,12 @@ To install gems from a Gemfile, install [Bundler](https://bundler.io):
 
 ```sh
 gem install bundler
+```
+
+To install Bundler for a specific older version of Ruby (e.g. 2.7):
+
+```sh
+gem-2.7 install bundler
 ```
 
 Bundler installs gems in the same path as `gem install`.
@@ -59,6 +72,12 @@ Install gems using Bundler:
 
 ```sh
 bundle install
+```
+
+To use Bundler with a specific older version of Ruby:
+
+```sh
+bundle-2.7 install
 ```
 
 ### Caching Bundler gems with GitLab CI
