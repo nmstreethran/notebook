@@ -13,7 +13,7 @@ a[href*="spotify"]:after, a[href*="steam"]:after, a[href*="translate"]:after,
 a[href*="twitch"]:after, a[href*="whatsapp"]:after,
 a[href*="wikipedia"]:after, a[href*="youtube"]:after {
   color: white;
-  font-family: "CaskaydiaCove Nerd Font";
+  font-family: "CaskaydiaCove Nerd Font", "CaskaydiaCove NF";
   font-size: x-large;
 }
 

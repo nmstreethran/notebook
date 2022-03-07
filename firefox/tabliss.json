@@ -1,0 +1,136 @@
+{
+  "backgrounds": [
+    {
+      "id": "59542518-f511-470c-a128-963fe5d7f213",
+      "key": "background/unsplash",
+      "active": true,
+      "display": {
+        "luminosity": -0.5,
+        "blur": 0
+      }
+    }
+  ],
+  "widgets": [
+    {
+      "id": "7e3c75b7-7d2d-4626-a014-7bc65d3543dc",
+      "key": "widget/greeting",
+      "active": true,
+      "display": {
+        "position": "middleCentre",
+        "fontSize": 20
+      }
+    },
+    {
+      "id": "008e7bbf-2a11-420b-8b9e-6b6a079918c7",
+      "key": "widget/literature-clock",
+      "active": true,
+      "display": {
+        "position": "middleCentre",
+        "fontSize": 16
+      }
+    },
+    {
+      "id": "7542a1fb-860a-4e18-9488-e0cc735d4815",
+      "key": "widget/weather",
+      "active": true,
+      "display": {
+        "position": "middleCentre"
+      }
+    },
+    {
+      "id": "47abf519-27b7-4dc1-86b8-213a3f70c36b",
+      "key": "widget/links",
+      "active": true,
+      "display": {
+        "position": "middleCentre"
+      }
+    },
+    {
+      "id": "45a7cc0c-fbf1-4087-ad97-b412c8274cab",
+      "key": "widget/css",
+      "active": true,
+      "display": {
+        "position": "middleCentre"
+      }
+    }
+  ],
+  "data": {
+    "7542a1fb-860a-4e18-9488-e0cc735d4815": {
+      "showDetails": true,
+      "units": "auto",
+      "latitude": 53.0328,
+      "longitude": -7.2988,
+      "name": ""
+    },
+    "47abf519-27b7-4dc1-86b8-213a3f70c36b": {
+      "columns": 7,
+      "links": [
+        {
+          "url": "https://gitlab.com/",
+          "name": " "
+        },
+        {
+          "url": "https://github.com/",
+          "name": "  "
+        },
+        {
+          "url": "https://store.steampowered.com/",
+          "name": " "
+        },
+        {
+          "url": "https://www.facebook.com/",
+          "name": " "
+        },
+        {
+          "url": "https://mail.google.com/mail/u/0/#inbox",
+          "name": " "
+        },
+        {
+          "url": "https://www.linkedin.com/",
+          "name": " "
+        },
+        {
+          "url": "https://www.google.com/maps",
+          "name": " "
+        },
+        {
+          "url": "https://open.spotify.com/",
+          "name": " "
+        },
+        {
+          "url": "https://translate.google.com/",
+          "name": " "
+        },
+        {
+          "url": "https://www.twitch.tv/",
+          "name": " "
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Main_Page",
+          "name": " "
+        },
+        {
+          "url": "https://www.youtube.com/",
+          "name": " "
+        },
+        {
+          "url": "https://web.whatsapp.com/",
+          "name": " "
+        },
+        {
+          "url": "https://www.reddit.com/",
+          "name": " "
+        }
+      ],
+      "visible": true,
+      "linkOpenStyle": false
+    },
+    "45a7cc0c-fbf1-4087-ad97-b412c8274cab": {
+      "input": "/* To be used with the Tabliss extension - https://tabliss.io/ */\n/* Custom CSS to replace quick link icons using Nerd Fonts */\n/* https://www.nerdfonts.com/cheat-sheet */\n\na:hover {\n  text-decoration: none;\n}\n\na[href*=\"facebook\"]:after, a[href*=\"github\"]:after, a[href*=\"gitlab\"]:after,\na[href*=\"google.com/maps\"]:after, a[href*=\"linkedin\"]:after,\na[href*=\"mail.google\"]:after, a[href*=\"reddit\"]:after,\na[href*=\"spotify\"]:after, a[href*=\"steam\"]:after, a[href*=\"translate\"]:after,\na[href*=\"twitch\"]:after, a[href*=\"whatsapp\"]:after,\na[href*=\"wikipedia\"]:after, a[href*=\"youtube\"]:after {\n  color: white;\n  font-family: \"CaskaydiaCove Nerd Font\", \"CaskaydiaCove NF\";\n  font-size: x-large;\n}\n\na[href*=\"facebook\"]:after {\n  content: \"\\f230\";\n}\n\na[href*=\"github\"]:after {\n  content: \"\\f7a3\";\n}\n\na[href*=\"gitlab\"]:after {\n  content: \"\\f296\";\n}\n\na[href*=\"google.com/maps\"]:after {\n  content: \"\\f279\";\n}\n\na[href*=\"linkedin\"]:after {\n  content: \"\\f08c\";\n}\n\na[href*=\"mail.google\"]:after {\n  content: \"\\f6ed\";\n}\n\na[href*=\"reddit\"]:after {\n  content: \"\\f281\";\n}\n\na[href*=\"spotify\"]:after {\n  content: \"\\f1bc\";\n}\n\na[href*=\"steam\"]:after {\n  content: \"\\f1b6\";\n}\n\na[href*=\"translate\"]:after {\n  content: \"\\fac9\";\n}\n\na[href*=\"twitch\"]:after {\n  content: \"\\f1e8\";\n}\n\na[href*=\"whatsapp\"]:after {\n  content: \"\\faa2\";\n}\n\na[href*=\"wikipedia\"]:after {\n  content: \"\\faab\";\n}\n\na[href*=\"youtube\"]:after {\n  content: \"\\f16a\";\n}\n"
+    }
+  },
+  "_persist": {
+    "version": -1,
+    "rehydrated": true
+  }
+}
