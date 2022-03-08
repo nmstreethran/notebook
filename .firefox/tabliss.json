@@ -52,6 +52,14 @@
       "display": {
         "position": "middleCentre"
       }
+    },
+    {
+      "id": "a4944145-a912-4333-a848-0752d643ece7",
+      "key": "widget/links",
+      "active": true,
+      "display": {
+        "position": "bottomLeft"
+      }
     }
   ],
   "data": {
@@ -71,7 +79,7 @@
         },
         {
           "url": "https://github.com/",
-          "name": "  "
+          "name": " "
         },
         {
           "url": "https://store.steampowered.com/",
@@ -135,9 +143,29 @@
       "search": "",
       "timeout": 86400
     },
-    "008e7bbf-2a11-420b-8b9e-6b6a079918c7": {
-      "showBookAndAuthor": true,
-      "centerText": false
+    "a4944145-a912-4333-a848-0752d643ece7": {
+      "columns": 1,
+      "links": [
+        {
+          "url": "https://discord.com/channels/@me",
+          "name": "Discord"
+        },
+        {
+          "url": "https://www.duolingo.com/",
+          "name": "Duolingo"
+        },
+        {
+          "url": "https://www.arcgis.com/",
+          "name": "ArcGIS",
+          "icon": ""
+        },
+        {
+          "url": "https://www.epicgames.com/",
+          "name": "Epic Games"
+        }
+      ],
+      "visible": false,
+      "linkOpenStyle": false
     }
   },
   "_persist": {
