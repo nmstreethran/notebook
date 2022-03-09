@@ -67,8 +67,7 @@
       "showDetails": true,
       "units": "auto",
       "latitude": 53.0328,
-      "longitude": -7.2988,
-      "name": ""
+      "longitude": -7.2988
     },
     "47abf519-27b7-4dc1-86b8-213a3f70c36b": {
       "columns": 7,
@@ -156,8 +155,7 @@
         },
         {
           "url": "https://www.arcgis.com/",
-          "name": "ArcGIS",
-          "icon": ""
+          "name": "ArcGIS"
         },
         {
           "url": "https://www.epicgames.com/",

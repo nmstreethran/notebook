@@ -1,0 +1,6 @@
+brave-bin
+miniconda3
+nerd-fonts-cascadia-code
+nerd-fonts-source-code-pro
+vscodium-bin
+ytfzf
