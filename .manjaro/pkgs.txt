@@ -3,6 +3,7 @@ downgrade
 fzf
 git-lfs
 gimp
+heimdall
 inkscape
 jre-openjdk
 keepassxc
@@ -13,6 +14,7 @@ pandoc-crossref
 papirus-folders
 python-pygments
 qbittorrent
+qgis
 ruby2.7
 scrcpy
 speedtest-cli
