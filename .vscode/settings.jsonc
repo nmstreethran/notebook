@@ -51,6 +51,8 @@
   },
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "off",
   "editor.fontFamily": "'Cascadia Code PL', 'Cascadia Code', 'Source Code Pro', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,

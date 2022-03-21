@@ -3,4 +3,5 @@ miniconda3
 nerd-fonts-cascadia-code
 nerd-fonts-source-code-pro
 vscodium-bin
+xampp
 ytfzf
