@@ -221,6 +221,12 @@ To enable a password prompt for applications that require administrative privile
 - <https://superuser.com/q/135311>
 - <https://api.kde.org/frameworks/kdesu/html/index.html>
 
+### Changing password
+
+Use the `passwd` command
+
+<https://www.redhat.com/sysadmin/managing-users-passwd>
+
 ### KDE
 
 `baloo_file_extractor` using too much memory: go to System Settings > Search and disable file search
@@ -398,6 +404,52 @@ sudo downgrade mysql-workbench
 ```
 
 After the downgrade, add it to `IgnorePkg` to prevent automatic updates.
+
+#### Enable emoji fonts
+
+In a terminal emulator, type the following:
+
+```sh
+sudo nano /etc/fonts/local.conf
+```
+
+Then, paste the following and save the file:
+
+```xml
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+
+ <alias>
+   <family>sans-serif</family>
+   <prefer>
+     <family>Sans</family>
+     <family>Noto Color Emoji</family>
+   </prefer> 
+ </alias>
+
+ <alias>
+   <family>serif</family>
+   <prefer>
+     <family>Serif</family>
+     <family>Noto Color Emoji</family>
+   </prefer>
+ </alias>
+
+ <alias>
+  <family>monospace</family>
+  <prefer>
+    <family>Monospace</family>
+    <family>Noto Color Emoji</family>
+   </prefer>
+ </alias>
+
+</fontconfig>
+```
+
+Install an appropriate emoji font, such as `noto-fonts-emoji`.
+
+<https://forum.manjaro.org/t/howto-enable-emoji-fonts/36695>
 
 ### Ubuntu notes
 

@@ -10,7 +10,7 @@
 
 ## Python
 
-[PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
+[PEP 8 -- Style Guide for Python Code](https://peps.python.org/pep-0008/)
 
 ## URL encoding
 
