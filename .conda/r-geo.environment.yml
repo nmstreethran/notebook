@@ -1,0 +1,12 @@
+name: r-geo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - r-base
+  - r-essentials
+  - r-rgdal
+  - r-rastervis
+  - r-sf
+  - r-geojsonio
+  - jupyterlab

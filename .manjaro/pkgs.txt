@@ -12,6 +12,7 @@ keepassxc
 libertinus-font
 libreoffice-fresh
 nm-connection-editor
+noto-fonts-emoji
 pandoc-crossref
 papirus-folders
 python-pygments

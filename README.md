@@ -10,8 +10,6 @@ Text editor: [VSCodium](https://vscodium.com/) (settings and list of extensions 
 
 OS: [Manjaro Linux](https://manjaro.org/) ([KDE](https://kde.org/)) / Windows 10 / Android
 
-See `.github` and `.gitlab` for GitHub and GitLab CI configurations
-
 ## License and credits
 
 ### Notes
@@ -24,4 +22,4 @@ All original sources are attributed and/or linked within the notes.
 
 ### Settings
 
-Unless otherwise stated, settings are licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+Unless otherwise stated, settings / dotfiles are licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT).

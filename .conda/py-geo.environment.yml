@@ -1,0 +1,13 @@
+name: py-geo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3
+  - geopandas
+  - matplotlib
+  - rioxarray
+  - rasterstats
+  - dask
+  - jupyterlab
+  - jupyter_bokeh
