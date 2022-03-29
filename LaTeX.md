@@ -58,7 +58,7 @@ It was written by \@author\space on \@date
   \textbf{\textit{#3 $\bullet$ #4}}\hfill#5}
 % end of preamble
 
-\education{Master's Degree in Mathematics}{Apr 2017 — Apr 2018}
+\education{Master's Degree in Mathematics}{Apr 2017 - Apr 2018}
   {University of Alexandria}{Distinction grade}{Alexandria, Egypt}
 ```
 

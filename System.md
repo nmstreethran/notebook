@@ -140,7 +140,7 @@ If it's completely frozen, REISUB it (safer than rebooting)
 >
 > REISUB is BUSIER backwards, as in "The System is **busier** than it should be", if you need to remember it. Or mnemonically - **R**eboot; **E**ven; **I**f; **S**ystem; **U**tterly; **B**roken.
 >
-> **NOTE:** There exists less radical way than rebooting the whole system. If `SysReq` key works, you can kill processes one-by-one using `Alt`+`SysReq`+`F`. Kernel will kill the most[sic] «expensive» process each time. If you want to kill all processes for one console, you can issue `Alt`+`SysReq`+`K`.
+> **NOTE:** There exists less radical way than rebooting the whole system. If `SysReq` key works, you can kill processes one-by-one using `Alt`+`SysReq`+`F`. Kernel will kill the most[sic] *expensive* process each time. If you want to kill all processes for one console, you can issue `Alt`+`SysReq`+`K`.
 
 - <https://askubuntu.com/a/36717>
 - <https://forum.manjaro.org/t/howto-reboot-turn-off-your-frozen-computer-reisub-reisuo/3855/81>
@@ -226,6 +226,29 @@ To enable a password prompt for applications that require administrative privile
 Use the `passwd` command
 
 <https://www.redhat.com/sysadmin/managing-users-passwd>
+
+### Getting Steam to work
+
+Using Steam on a Manjaro system with hybrid graphics can cause display issues, such as a black screen.
+
+The Steam runtime for Manjaro can be installed as follows:
+
+```sh
+pamac install steam-manjaro
+```
+
+After installation, copy `/usr/share/applications/steam.desktop` to `~/.local/share/applications/steam.desktop`.
+
+Open the copied desktop file and change the line `PrefersNonDefaultGPU=true` to `PrefersNonDefaultGPU=false`.
+
+When set to false, Steam will use the more powerful GPU instead of the integrated graphics.
+
+Now the Steam client can be launched using the desktop icon without any display issues.
+
+Source:
+
+- <https://redd.it/tqai5t>
+- <https://steamcommunity.com/app/221410/discussions/0/3051736373892813276/?ctp=2#c5034464604293516297>
 
 ### KDE
 
@@ -689,7 +712,7 @@ From [TWRP's FAQ](https://twrp.me/faq/whattobackup.html):
 
 From [How-To Geek](https://www.howtogeek.com/240047/how-to-flash-twrp-recovery-on-your-android-phone/), regarding WiMAX, pds, efs, etc., and rooting using TWRP:
 
-> *This partition usually contains your EFS or IMEI information, which is crucial. If it ever becomes corrupted, you’ll lose data connectivity and can restore this backup to make your phone function again.*
+> *This partition usually contains your EFS or IMEI information, which is crucial. If it ever becomes corrupted, you'll lose data connectivity and can restore this backup to make your phone function again.*
 >
 > *Lastly, if TWRP ever asks if you want to root your phone, choose "Do Not Install". It's best to flash the latest version of SuperSU yourself rather than having TWRP do it for you.*
 
@@ -727,7 +750,7 @@ Links:
 How-To Geek Guides:
 
 - [How To Create a Full Android Phone or Tablet Backup Without Rooting or Unlocking Your Device](https://www.howtogeek.com/125375/how-to-create-a-full-android-phone-or-tablet-backup-without-rooting-or-unlocking-your-device/)
-- [How to Unlock Your Android Phone’s Bootloader, the Official Way](https://www.howtogeek.com/239798/how-to-unlock-your-android-phones-bootloader-the-official-way/)
+- [How to Unlock Your Android Phone's Bootloader, the Official Way](https://www.howtogeek.com/239798/how-to-unlock-your-android-phones-bootloader-the-official-way/)
 - [What is a Custom Recovery on Android, and Why Would I Want One?](https://www.howtogeek.com/193055/what-is-a-custom-recovery-on-android-and-why-would-i-want-one/)
 - [How to Root Your Android Phone with SuperSU and TWRP](https://www.howtogeek.com/115297/how-to-root-your-android-why-you-might-want-to/)
 

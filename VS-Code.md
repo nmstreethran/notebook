@@ -31,7 +31,7 @@ Useful shortcuts:
 - Create Collapsible Region: `Ctrl+M+H` / `Ctrl+M+U`
 - Comment / uncomment Code Block: `Ctrl+K+C` / `Ctrl+K+U`
 - Peek Definition: `Alt+F12`
-- Navigate Forward / Backward: `Ctrl+–` / `Ctrl+Shift+–`
+- Navigate Forward / Backward: `Ctrl+-` / `Ctrl+Shift+-`
 - [Add cursors to all line ends in current selection](https://stackoverflow.com/a/46244456): `Alt+Shift+I`
 
 ## Additional keybindings

@@ -180,7 +180,7 @@ Using [Shields.io](https://shields.io/category/social/) badges with [custom logo
 [![Style-Flat-appveyor](https://img.shields.io/badge/style-flat-green.svg?logo=appveyor&style=flat)](https://img.shields.io/badge/style-flat-green.svg?logo=appveyor&style=flat)
 ```
 
-Use the following to obtain `?logo=data:image/png;base64,…`:
+Use the following to obtain `?logo=data:image/png;base64,...`:
 
 - [Base-64 encoding tool](https://b64.io/)
 - [Encoder/decoder tool for percent encoding](https://meyerweb.com/eric/tools/dencoder/)

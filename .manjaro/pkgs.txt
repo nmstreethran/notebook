@@ -21,6 +21,7 @@ qgis
 ruby2.7
 scrcpy
 speedtest-cli
+steam-manjaro
 texlive-bibtexextra
 texlive-fontsextra
 texlive-formatsextra
