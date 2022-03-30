@@ -54,6 +54,51 @@ Character | URL encoding | Reserved?
 `~` | %7E |
 `£` | %C2%A3 |
 
+## YAML
+
+### Line breaks
+
+See <https://stackoverflow.com/a/21699210>.
+
+## Regular expressions
+
+To find non-Basic Latin characters: `[^\u0020-\u007E]`
+
+This uses the range of Unicode characters corresponding to the Basic Latin block, and `^` to exclude them from the search. See <https://en.wikipedia.org/wiki/List_of_Unicode_characters#Basic_Latin>.
+
+`U+0020` is the code for `Space`, while `U+007E` is the code for `~` (tilde).
+
+## cron jobs
+
+See: <https://en.wikipedia.org/wiki/Cron>
+
+The cron schedule syntax has five columns: `* * * * *`
+
+Each represents, from left to right:
+
+- minute (0 - 59)
+- hour (0 - 23)
+- day of the month (1 - 31)
+- month (1 - 12)
+- day of the week, i.e. Sunday to Saturday (0 - 6)
+
+To run a job:
+
+- at one minute past midnight (00:01) every day: `1 0 * * *`
+- at 23:45 every Saturday: `45 23 * * 6`
+- every 5th minute of every first, second and third hour (i.e., 01:00, 01:05, 01:10, up until 03:55): `*/5 1,2,3 * * *`
+
+Non-standard macros:
+
+Entry | Description | Equivalent to
+--- | ---- | --
+`@yearly` (or `@annually`) | Run once a year at midnight of 1 January | `0 0 1 1 *`
+`@monthly` | Run once a month at midnight of the first day of the month | `0 0 1 * *`
+`@weekly` | Run once a week at midnight on Sunday morning | `0 0 * * 0`
+`@daily` (or `@midnight`) | Run once a day at midnight | `0 0 * * *`
+`@hourly` | Run once an hour at the beginning of the hour | `0 * * * *`
+`@reboot` | Run at startup | N/A
+
 ## Versioning
 
 [Answer by Escualo / community wiki](https://stackoverflow.com/a/3728813):
@@ -83,9 +128,3 @@ From [Semantic Versioning](https://semver.org/):
 > I think different factors come into play here. Psychological/marketing impact of the version number (version number increased often => more $$$, people don't want to buy a 0.99 beta version, etc) must be taken into account. "Logic" version numbers can help when working in a huge team.
 >
 > And I like the linux way of having odd numbers for the unstable versions, and even numbers for the stable one.
-
-## YAML
-
-### Line breaks
-
-See <https://stackoverflow.com/a/21699210>.

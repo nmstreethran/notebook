@@ -3,7 +3,7 @@ james-yu.latex-workshop-8.23.0
 mechatroner.rainbow-csv-2.0.0
 ms-python.python-2022.2.1924087327
 ms-toolsai.jupyter-2022.3.1000752054
-pkief.material-icon-theme-4.14.1
+pkief.material-icon-theme-4.15.0
 reditorsupport.r-lsp-0.1.14
 streetsidesoftware.code-spell-checker-2.1.9
 yzhang.markdown-all-in-one-3.4.0
