@@ -11,6 +11,7 @@ kdenlive
 keepassxc
 libertinus-font
 libreoffice-fresh
+make
 nm-connection-editor
 noto-fonts-emoji
 pandoc-crossref

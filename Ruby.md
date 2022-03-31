@@ -172,7 +172,7 @@ necessary libraries and/or headers.  Check the mkmf.log file for more
 details.  You may need configuration options.
 ```
 
-To fix this, do the following:
+To fix this, do the following (on Ubuntu):
 
 ```sh
 sudo apt install ruby-dev make gcc g++ ruby-eventmachine libssl-dev
@@ -188,6 +188,20 @@ More info:
 `'require': cannot load such file -- webrick` can be fixed by adding `gem "webrick"` to the Gemfile.
 
 <https://stackoverflow.com/a/65621758>
+
+This error indicates that Make is not installed:
+
+```text
+sh: line 1: make: command not found
+
+make failed, exit code 127
+```
+
+Install (on Manjaro) using:
+
+```sh
+pamac install make
+```
 
 ## Ruby programming
 
