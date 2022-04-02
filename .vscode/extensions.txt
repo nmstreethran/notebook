@@ -1,5 +1,5 @@
 davidanson.vscode-markdownlint-0.46.0
-james-yu.latex-workshop-8.23.0
+james-yu.latex-workshop-8.24.1
 mechatroner.rainbow-csv-2.0.0
 ms-python.python-2022.2.1924087327
 ms-toolsai.jupyter-2022.3.1000901801

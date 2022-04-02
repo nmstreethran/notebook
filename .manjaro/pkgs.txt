@@ -2,6 +2,7 @@ android-tools
 biber
 downgrade
 fzf
+git-filter-repo
 git-lfs
 gimp
 heimdall
@@ -21,11 +22,11 @@ qbittorrent
 qgis
 ruby2.7
 scrcpy
+smplayer-themes
 speedtest-cli
 steam-manjaro
 texlive-bibtexextra
 texlive-fontsextra
 texlive-formatsextra
 texlive-latexextra
-vlc
 yt-dlp
