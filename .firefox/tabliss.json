@@ -51,11 +51,15 @@
     },
     "order": 3
   },
-  "data/7542a1fb-860a-4e18-9488-e0cc735d4815": {
-    "showDetails": true,
-    "units": "auto",
-    "latitude": 53.0328,
-    "longitude": -7.2988
+  "widget/008e7bbf-2a11-420b-8b9e-6b6a079918c7": {
+    "id": "008e7bbf-2a11-420b-8b9e-6b6a079918c7",
+    "key": "widget/literature-clock",
+    "active": true,
+    "display": {
+      "position": "middleCentre",
+      "fontSize": 16
+    },
+    "order": 1
   },
   "data/47abf519-27b7-4dc1-86b8-213a3f70c36b": {
     "columns": 7,
@@ -179,15 +183,11 @@
     "displayCountry": true,
     "refreshInterval": 120
   },
-  "widget/008e7bbf-2a11-420b-8b9e-6b6a079918c7": {
-    "id": "008e7bbf-2a11-420b-8b9e-6b6a079918c7",
-    "key": "widget/literature-clock",
-    "active": true,
-    "display": {
-      "position": "middleCentre",
-      "fontSize": 16
-    },
-    "order": 1
+  "data/7542a1fb-860a-4e18-9488-e0cc735d4815": {
+    "showDetails": true,
+    "units": "auto",
+    "latitude": 53.0328,
+    "longitude": -7.2988
   },
   "version": 3
 }

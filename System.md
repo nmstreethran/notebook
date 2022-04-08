@@ -73,6 +73,14 @@ sudo update-grub
 
 If anything goes wrong, restore using the backup.
 
+## Custom DNS
+
+Use `1.1.1.1`; set-up instructions: <https://developers.cloudflare.com/1.1.1.1/setup/>.
+
+To use the WARP client: <https://developers.cloudflare.com/warp-client/get-started/>
+
+DNS over TLS or HTTPS: <https://www.cloudflare.com/en-gb/learning/dns/dns-over-tls/>
+
 ## Windows
 
 ### [Setting or changing the PATH system variable](https://www.java.com/en/download/help/path.html)
