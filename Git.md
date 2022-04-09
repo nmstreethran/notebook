@@ -42,7 +42,7 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 ```
 
-Copy the SSH public key to your clipboard (saved at `$HOME/.ssh/id_ed25519.pub`). Go to 'SSH and GPG keys' in your GitHub account settings. Select 'New SSH key', add a descriptive label in the 'Title' field, and paste the SSH key in the 'Key' field.
+Copy the SSH public key to your clipboard (saved at `~/.ssh/id_ed25519.pub`). Go to 'SSH and GPG keys' in your GitHub account settings. Select 'New SSH key', add a descriptive label in the 'Title' field, and paste the SSH key in the 'Key' field.
 
 List existing remote URLs for your local repository:
 
@@ -155,7 +155,7 @@ See also: <https://forum.manjaro.org/t/howto-use-kwallet-as-a-login-keychain-for
 
 ### SSH on Windows
 
-On Windows, the default SSH key path is `$HOME\.ssh`. `$HOME` is usually `C:\Users\%USERNAME%`.
+On Windows, the default SSH key path is `~\.ssh`. `$HOME` is usually `C:\Users\%USERNAME%`.
 
 [Comment](https://github.com/Microsoft/vscode/issues/13680#issuecomment-414841885) by GitHub user **whatsyourgithub** to fix SSH issues on Windows:
 

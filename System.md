@@ -235,29 +235,6 @@ Use the `passwd` command
 
 <https://www.redhat.com/sysadmin/managing-users-passwd>
 
-### Getting Steam to work
-
-Using Steam on a Manjaro system with hybrid graphics can cause display issues, such as a black screen.
-
-The Steam runtime for Manjaro can be installed as follows:
-
-```sh
-pamac install steam-manjaro
-```
-
-After installation, copy `/usr/share/applications/steam.desktop` to `~/.local/share/applications/steam.desktop`.
-
-Open the copied desktop file and change the line `PrefersNonDefaultGPU=true` to `PrefersNonDefaultGPU=false`.
-
-When set to false, Steam will use the more powerful GPU instead of the integrated graphics.
-
-Now the Steam client can be launched using the desktop icon without any display issues.
-
-Source:
-
-- <https://redd.it/tqai5t>
-- <https://steamcommunity.com/app/221410/discussions/0/3051736373892813276/?ctp=2#c5034464604293516297>
-
 ### KDE
 
 `baloo_file_extractor` using too much memory: go to System Settings > Search and disable file search
@@ -624,7 +601,7 @@ Install Android SDK tools via [Android Studio](https://developer.android.com/stu
 
 - Enable USB debugging on the device
 - Connect device to computer using USB cable
-- Navigate to the `platform-tools` directory (for Linux, `$HOME/Android/Sdk/platform-tools`; for Windows, `%LocalAppData%/Android/Sdk/platform-tools`)
+- Navigate to the `platform-tools` directory (for Linux, `~/Android/Sdk/platform-tools`; for Windows, `%LocalAppData%/Android/Sdk/platform-tools`)
 - Run `adb devices` (for Linux and Windows, add `./` and `.\` before the executable (i.e. `adb`), respectively)
 
 See [How to Install and Use ADB, the Android Debug Bridge Utility - How-To Geek](https://www.howtogeek.com/125769/how-to-install-and-use-abd-the-android-debug-bridge-utility/).

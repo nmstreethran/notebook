@@ -658,7 +658,7 @@ Displaying listing in a frame (must use `fragile`):
 \begin{lstlisting}[language=sh]
 #!/bin/bash
 
-cd $HOME
+cd ~
 cout << "Hello world!";
 \end{lstlisting}
 \end{exampleblock}

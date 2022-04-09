@@ -39,7 +39,7 @@ gem install --user-install ${gemname}
 Add the user install directory to the `PATH` environment variable. Alternatively, change the `GEM_HOME` and `GEM_PATH` variables so that gems can be installed without `sudo` or `--user-install`, by adding the following to `~/.zshrc` (or equivalent):
 
 ```sh
-export GEM_HOME=$HOME/.gem
+export GEM_HOME=~/.gem
 export GEM_PATH=$GEM_HOME/ruby/3.0.0
 export PATH="$GEM_PATH/bin:$PATH"
 ```

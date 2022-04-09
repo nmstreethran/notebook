@@ -2,7 +2,7 @@
 
 [![View notes on GitHub Wiki](badge.svg)](https://github.com/nmstreethran/notebook/wiki)
 
-Welcome to my notebook! This is where I backup my settings and computing notes.
+Welcome to my notebook! This is where I backup my settings and computing notes. Some of my notes can be found on my website instead: <https://nithiya.gitlab.io/>.
 
 ## Configurations
 

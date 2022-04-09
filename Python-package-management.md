@@ -218,7 +218,7 @@ conda list
 
 Example with `qgis`:
 
-1.  Create a shell script, e.g. `$HOME/bin/launch_qgis.sh`:
+1.  Create a shell script, e.g. `~/bin/launch_qgis.sh`:
 
     ```sh
     #! /bin/bash
@@ -226,10 +226,10 @@ Example with `qgis`:
     conda activate py-geo && qgis
     ```
 
-2.  Create a desktop file, e.g. `$HOME/.local/share/applications/qgis.desktop`; copy and paste the programme's desktop configuration. Modify the configurations with the following (may have to remove the `TryExec` line if it exists):
+2.  Create a desktop file, e.g. `~/.local/share/applications/qgis.desktop`; copy and paste the programme's desktop configuration. Modify the configurations with the following (may have to remove the `TryExec` line if it exists):
 
     ```conf
-    Exec=bash -i $HOME/bin/launch_qgis.sh
+    Exec=bash -i ~/bin/launch_qgis.sh
     Terminal=true
     ```
 
