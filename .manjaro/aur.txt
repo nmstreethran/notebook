@@ -3,6 +3,7 @@ cloudflare-warp-bin
 miniconda3
 nerd-fonts-cascadia-code
 nerd-fonts-source-code-pro
+sysfetch-git
 vscodium-bin
 xampp
 ytfzf

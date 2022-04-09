@@ -13,6 +13,7 @@ keepassxc
 libertinus-font
 libreoffice-fresh
 make
+neofetch
 nm-connection-editor
 noto-fonts-emoji
 pandoc-crossref

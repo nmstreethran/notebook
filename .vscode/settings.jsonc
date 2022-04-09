@@ -79,6 +79,7 @@
   "files.associations": {
     "*.geojson": "jsonc",
     "*.latex": "latex",
+    "*.qml": "xml",
     "*.rmd": "markdown",
     "*.rst": "restructuredtext",
     "*.sty": "latex"
