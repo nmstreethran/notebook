@@ -4,9 +4,6 @@
 # To automatically get bug fixes and new Ruby versions for
 # ruby/setup-ruby, use ruby/setup-ruby@v1
 # (see https://github.com/ruby/setup-ruby#versioning)
-#
-# Based on a quick test run, the Docker method takes around 11 seconds
-# longer than the Ruby gem method.
 
 name: test_links
 
@@ -15,7 +12,7 @@ on:
     - cron: "0 5 24 3,6,9,12 *"
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   test:

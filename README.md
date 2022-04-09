@@ -13,7 +13,7 @@ OS: [Manjaro Linux](https://manjaro.org/) ([KDE](https://kde.org/)) / Windows 10
 - `.vscode`: [VSCodium](https://vscodium.com/) settings and list of extensions
 - `.manjaro`: list of packages installed from Pacman/AUR on Manjaro
 - `.gitlab`: GitLab CI templates
-- `.github`: GitHub Actions templates
+- `.github`: GitHub Actions workflow templates
 - `.firefox`: Firefox settings and extensions
 - `.conda`: Anaconda environment configurations
 
