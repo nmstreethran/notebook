@@ -1,7 +1,7 @@
 davidanson.vscode-markdownlint-0.47.0
-james-yu.latex-workshop-8.24.1
+james-yu.latex-workshop-8.25.0
 mechatroner.rainbow-csv-2.0.0
-ms-python.python-2022.2.1924087327
+ms-python.python-2022.4.1
 ms-toolsai.jupyter-2022.3.1000901801
 ms-vscode.js-debug-companion-1.0.17
 ms-vscode.references-view-0.0.89

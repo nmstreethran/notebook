@@ -7,3 +7,4 @@ sysfetch-git
 vscodium-bin
 xampp
 ytfzf
+zotero-bin
