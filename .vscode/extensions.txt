@@ -5,7 +5,7 @@ ms-python.python-2022.4.1
 ms-toolsai.jupyter-2022.3.1000901801
 ms-vscode.js-debug-companion-1.0.17
 ms-vscode.references-view-0.0.89
-pkief.material-icon-theme-4.15.0
+pkief.material-icon-theme-4.16.0
 reditorsupport.r-lsp-0.1.14
 streetsidesoftware.code-spell-checker-2.1.11
 yzhang.markdown-all-in-one-3.4.0

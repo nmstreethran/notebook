@@ -205,7 +205,13 @@
     "readme.rst": "readme"
   },
   "material-icon-theme.folders.associations": {
+    "_draft": "mock",
+    "_pages": "views",
+    "_posts": "docs",
+    ".jekyll-cache": "temp",
     "charts": "images",
+    "gh-wiki": "docs",
+    "maps": "images",
     "old": "archive",
     "wiki": "docs"
   },
@@ -215,7 +221,6 @@
   "[restructuredtext]": {
     "editor.tabSize": 3
   },
-  "r.rpath.windows": "C:\\Program Files\\R\\R-4.0.5\\bin\\R.exe",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Code PL', 'Cascadia Code', 'SauceCodePro Nerd Font', 'Source Code Pro', monospace",
   "terminal.integrated.fontSize": 16,
