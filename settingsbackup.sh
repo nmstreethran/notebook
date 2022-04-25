@@ -18,3 +18,7 @@ cp /etc/fonts/local.conf .manjaro/fonts-local.conf
 cp ~/.local/share/konsole/*.profile .manjaro/konsole.profile
 cp ~/.kde4/share/config/kdeglobals .manjaro/kdeglobals.txt
 cp ~/.local/share/kxmlgui5/okular/part.rc .manjaro/okular-part.rc
+
+# # list of packages
+# pamac list --explicitly-installed --quiet > .manjaro/pkgs.txt
+# pamac list --foreign --quiet > .manjaro/aur.txt
