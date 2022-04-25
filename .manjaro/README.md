@@ -5,9 +5,9 @@
 To get a list of foreign packages and save it as a file:
 
 ```sh
-pamac list --foreign --quiet > .manjaro/aur.txt
+pamac list --foreign --quiet > .manjaro/pkgs-aur.txt
 # or
-pamac list -m -q > .manjaro/aur.txt
+pamac list -m -q > .manjaro/pkgs-aur.txt
 ```
 
 To get a list of explicitly installed packages:
@@ -65,7 +65,7 @@ ram ~ 854/3905 MB   swap ~ 916/4083 MB
 ## Settings
 
 - SSH configurations (`~/.ssh/config`) - copied to `.manjaro/ssh-config.txt`
-- Emoji font configurations (`/etc/fonts/local.conf`) - copied to `.manjaro/fonts-local.conf`
-- Konsole profile (`~/.local/share/konsole/*.profile`) - copied to `.manjaro/konsole.profile`
-- KDE global configurations (`~/.kde4/share/config/kdeglobals`) - copied to `.manjaro/kdeglobals.txt`
-- Okular configurations (`~/.local/share/kxmlgui5/okular/part.rc`) - copied to `.manjaro/okular-part.rc`
+- Emoji font configurations (`/etc/fonts/local.conf`) - copied to `.manjaro/fonts-local.xml`
+- Konsole profile (`~/.local/share/konsole/*.profile`) - copied to `.manjaro/konsole.conf`
+- KDE global configurations (`~/.kde4/share/config/kdeglobals`) - copied to `.manjaro/kdeglobals.conf`
+- Okular configurations (`~/.local/share/kxmlgui5/okular/part.rc`) - copied to `.manjaro/okular-part.xml`
