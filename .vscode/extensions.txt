@@ -8,4 +8,4 @@ ms-vscode.references-view-0.0.89
 pkief.material-icon-theme-4.16.0
 reditorsupport.r-lsp-0.1.14
 streetsidesoftware.code-spell-checker-2.1.11
-yzhang.markdown-all-in-one-3.4.0
+yzhang.markdown-all-in-one-3.5.0
