@@ -1,0 +1,16 @@
+7zip.7zip
+Cloudflare.Warp
+Git.Git
+KDE.Kate
+KeePassXCTeam.KeePassXC
+Microsoft.Edge
+Microsoft.Teams
+Microsoft.XNARedist
+Microsoft.WindowsTerminal
+Mozilla.Firefox
+msys2.msys2
+NexusMods.Vortex
+Python.Python.3
+Rufus.Rufus
+TheDocumentFoundation.LibreOffice
+Valve.Steam
