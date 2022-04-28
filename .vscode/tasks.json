@@ -4,9 +4,15 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "compile",
+            "label": "compile-all",
             "type": "shell",
             "command": "./settingsbackup.sh",
+            "problemMatcher": []
+        },
+        {
+            "label": "compile-min",
+            "type": "shell",
+            "command": "cp ~/.config/VSCodium/User/settings.json .vscode/settings.jsonc; cp *.md gh-wiki; mv gh-wiki/README.md gh-wiki/Home.md",
             "problemMatcher": []
         }
     ]
