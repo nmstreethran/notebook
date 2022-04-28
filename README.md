@@ -11,11 +11,12 @@ OS: [Manjaro Linux](https://manjaro.org/) ([KDE](https://kde.org/)) / Windows 10
 [Folders](https://github.com/nmstreethran/notebook):
 
 - `.vscode`: [VSCodium](https://vscodium.com/) settings and list of extensions
-- `.manjaro`: list of packages installed from Pacman/AUR on Manjaro
+- `.manjaro`: list of packages installed from Pacman/AUR and other settings for Manjaro
 - `.gitlab`: GitLab CI templates
 - `.github`: GitHub Actions workflow templates
 - `.firefox`: Firefox settings and extensions
 - `.conda`: Anaconda environment configurations
+- `.windows`: list of packages installed from `winget` and other settings for Windows 10
 
 ## License and credits
 

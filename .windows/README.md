@@ -8,7 +8,7 @@ winget export --output .\.windows\pkgs-winget.json
 winget export -o .\.windows\pkgs-winget.json
 ```
 
-Skyrim SE plugin list (`.windows\skyrimse-plugins.txt`) and load order (`.windows/skyrimse-loadorder.txt`) for mods managed with Vortex:
+Skyrim SE plugin list (`.windows/skyrimse-plugins.txt`) and load order (`.windows/skyrimse-loadorder.txt`) for mods managed with Vortex:
 
 ```powershell
 cp $HOME\AppData\Roaming\Vortex\skyrimse\profiles\yGZRItibI\plugins.txt .\.windows\skyrimse-plugins.txt
