@@ -12,7 +12,7 @@
         {
             "label": "compile-min",
             "type": "shell",
-            "command": "cp ~/.config/VSCodium/User/settings.json .vscode/settings.jsonc; cp *.md gh-wiki; mv gh-wiki/README.md gh-wiki/Home.md",
+            "command": "cp ~/.config/VSCodium/User/settings.json .vscode/settings.jsonc; cp notes/*.md gh-wiki; cp README.md gh-wiki/Home.md",
             "problemMatcher": []
         }
     ]
