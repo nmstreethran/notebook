@@ -1,0 +1,95 @@
+{
+  "$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
+  "CreationDate" : "2022-04-27T22:23:56.873-00:00",
+  "Sources" :
+  [
+    {
+      "Packages" :
+      [
+        {
+          "PackageIdentifier" : "NexusMods.Vortex"
+        },
+        {
+          "PackageIdentifier" : "7zip.7zip"
+        },
+        {
+          "PackageIdentifier" : "Git.Git"
+        },
+        {
+          "PackageIdentifier" : "KDE.Kate"
+        },
+        {
+          "PackageIdentifier" : "Microsoft.Edge"
+        },
+        {
+          "PackageIdentifier" : "Microsoft.EdgeWebView2Runtime"
+        },
+        {
+          "PackageIdentifier" : "Microsoft.WindowsTerminal"
+        },
+        {
+          "PackageIdentifier" : "Mozilla.Firefox"
+        },
+        {
+          "PackageIdentifier" : "KDE.Okular"
+        },
+        {
+          "PackageIdentifier" : "Microsoft.OneDrive"
+        },
+        {
+          "PackageIdentifier" : "Rufus.Rufus"
+        },
+        {
+          "PackageIdentifier" : "Valve.Steam"
+        },
+        {
+          "PackageIdentifier" : "Microsoft.Teams"
+        },
+        {
+          "PackageIdentifier" : "Microsoft.VC++2013Redist-x64"
+        },
+        {
+          "PackageIdentifier" : "Microsoft.VC++2010Redist-x64"
+        },
+        {
+          "PackageIdentifier" : "Cloudflare.Warp"
+        },
+        {
+          "PackageIdentifier" : "Microsoft.VC++2015-2019Redist-x64"
+        },
+        {
+          "PackageIdentifier" : "Microsoft.dotnetRuntime.3-x64"
+        },
+        {
+          "PackageIdentifier" : "Microsoft.VC++2008Redist-x64"
+        },
+        {
+          "PackageIdentifier" : "Microsoft.WindowsPCHealthCheck"
+        },
+        {
+          "PackageIdentifier" : "TheDocumentFoundation.LibreOffice"
+        },
+        {
+          "PackageIdentifier" : "Microsoft.VC++2015-2019Redist-x86"
+        },
+        {
+          "PackageIdentifier" : "KeePassXCTeam.KeePassXC"
+        },
+        {
+          "PackageIdentifier" : "Microsoft.VC++2013Redist-x86"
+        },
+        {
+          "PackageIdentifier" : "Microsoft.XNARedist"
+        }
+      ],
+      "SourceDetails" :
+      {
+        "Argument" : "https://winget.azureedge.net/cache",
+        "Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
+        "Name" : "winget",
+        "Type" : "Microsoft.PreIndexed.Package"
+      }
+    }
+  ],
+  "WinGetVersion" : "1.2.10271"
+}
