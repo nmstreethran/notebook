@@ -129,10 +129,10 @@ If that doesn't work, [try reinstalling `ssh-askpass`](https://askubuntu.com/a/1
 sudo apt install ssh-askpass
 ```
 
-On [Manjaro](https://forum.manjaro.org/t/vscode-git-ssh-askpass-exec-usr-lib-ssh-ssh-askpass-no-such-file-or-directory/78787), install `ksshaskpass` and create a symlink to enable VS Code to recognise it:
+On [Arch Linux](https://forum.manjaro.org/t/vscode-git-ssh-askpass-exec-usr-lib-ssh-ssh-askpass-no-such-file-or-directory/78787), install `ksshaskpass` and create a symlink to enable VS Code to recognise it:
 
 ```sh
-pamac install ksshaskpass
+pacman -Syu ksshaskpass
 sudo ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
 ```
 
@@ -155,7 +155,7 @@ See also: <https://forum.manjaro.org/t/howto-use-kwallet-as-a-login-keychain-for
 
 ### SSH on Windows
 
-On Windows, the default SSH key path is `~\.ssh`. `$HOME` is usually `C:\Users\%USERNAME%`.
+On Windows, the default SSH key path is `$HOME\.ssh`. `$HOME` is usually `C:\Users\%USERNAME%`.
 
 [Comment](https://github.com/Microsoft/vscode/issues/13680#issuecomment-414841885) by GitHub user **whatsyourgithub** to fix SSH issues on Windows:
 

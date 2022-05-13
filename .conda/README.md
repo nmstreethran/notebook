@@ -1,9 +1,9 @@
 # Conda environments
 
-Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html). On Manjaro, it can be installed using AUR:
+Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html). On Arch Linux, it can be installed using AUR:
 
 ```sh
-pamac build miniconda3
+yay miniconda3
 ```
 
 To create a new Conda environment using a YAML file:

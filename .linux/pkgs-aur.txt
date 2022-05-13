@@ -1,5 +1,7 @@
 brave-bin
 cloudflare-warp-bin
+gnome-icon-theme
+gnome-icon-theme-symbolic
 miniconda3
 nerd-fonts-cascadia-code
 nerd-fonts-source-code-pro

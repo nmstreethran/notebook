@@ -2,7 +2,7 @@
 
 <https://www.apachefriends.org/faq_linux.html>
 
-XAMPP can be installed using the installer downloaded from the website, or using AUR + Pamac on Manjaro.
+XAMPP can be installed using the installer downloaded from the website, or using AUR on Arch Linux.
 
 After installation, try starting XAMPP:
 

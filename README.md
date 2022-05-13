@@ -6,12 +6,12 @@ Welcome to my notebook! This is where I backup my settings and computing notes. 
 
 ## Configurations
 
-OS: [Manjaro Linux](https://manjaro.org/) ([KDE](https://kde.org/)) / Windows 10 / Android
+OS: [Arch Linux](https://archlinux.org/) with [KDE](https://kde.org/) Plasma / Windows 10 / Android
 
 [Folders](https://github.com/nmstreethran/notebook):
 
 - `.vscode`: [VSCodium](https://vscodium.com/) settings and list of extensions
-- `.manjaro`: list of packages installed from Pacman/AUR and other settings for Manjaro
+- `.linux`: list of packages installed from Pacman/AUR and other settings for Arch Linux
 - `.gitlab`: GitLab CI templates
 - `.github`: GitHub Actions workflow templates
 - `.firefox`: Firefox settings and extensions

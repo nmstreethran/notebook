@@ -221,6 +221,9 @@
   "[restructuredtext]": {
     "editor.tabSize": 3
   },
+  "[scss]": {
+    "editor.tabSize": 2
+  },
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Code PL', 'Cascadia Code', 'SauceCodePro Nerd Font', 'Source Code Pro', monospace",
   "terminal.integrated.fontSize": 16,

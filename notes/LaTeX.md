@@ -15,10 +15,10 @@ I regularly use XeLaTeX, Biber, Makeglossaries, Arara (requires Java), Minted (r
 sudo apt install texlive-extra-utils texlive-xetex texlive-fonts-extra biber python3-pygments default-jre
 ```
 
-On Manjaro:
+On Arch Linux:
 
 ```sh
-pamac install texlive-latexextra texlive-fontsextra texlive-formatsextra texlive-bibtexextra biber python-pygments jre-openjdk
+pacman -Syu texlive-latexextra texlive-fontsextra texlive-formatsextra texlive-bibtexextra biber python-pygments jre-openjdk
 ```
 
 ### Commands

@@ -15,11 +15,11 @@ Download and install Ruby using instructions from the [official website](https:/
   sudo apt install ruby-dev
   ```
 
-- On Manjaro:
+- On Arch Linux:
 
   ```sh
-  pamac install ruby  # latest version
-  pamac install ruby2.7  # specific older version
+  pacman -Syu ruby  # latest version
+  pacman -Syu ruby2.7  # specific older version
   ```
 
 ## Installing gems
@@ -197,10 +197,10 @@ sh: line 1: make: command not found
 make failed, exit code 127
 ```
 
-Install (on Manjaro) using:
+Install on Arch Linux (it's also part of the `base-devel` package):
 
 ```sh
-pamac install make
+pacman -Syu make
 ```
 
 ## Ruby programming

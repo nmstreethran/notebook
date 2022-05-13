@@ -9,16 +9,16 @@ do echo ${dir%-*};
 done > .vscode/extensions.txt
 
 # copy other settings
-cp ~/.zshrc .manjaro/.zshrc
-cp ~/.ssh/config .manjaro/ssh-config.txt
-cp /etc/fonts/local.conf .manjaro/fonts-local.xml
-cp ~/.local/share/konsole/*.profile .manjaro/konsole.conf
-cp ~/.kde4/share/config/kdeglobals .manjaro/kdeglobals.conf
-cp ~/.local/share/kxmlgui5/okular/part.rc .manjaro/okular-part.xml
+cp ~/.zshrc .linux/.zshrc
+cp ~/.ssh/config .linux/ssh-config.txt
+cp /etc/fonts/local.conf .linux/fonts-local.xml
+cp ~/.local/share/konsole/*.profile .linux/konsole.conf
+cp ~/.kde4/share/config/kdeglobals .linux/kdeglobals.conf
+cp ~/.local/share/kxmlgui5/okular/part.rc .linux/okular-part.xml
 
 # list of packages
-# pamac list --explicitly-installed --quiet > .manjaro/pkgs.txt
-pamac list --foreign --quiet > .manjaro/pkgs-aur.txt
+pacman -Qeq > .linux/pkgs.txt
+pacman -Qmq > .linux/pkgs-aur.txt
 # fi
 
 # copy all notes into wiki
