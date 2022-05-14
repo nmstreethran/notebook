@@ -6,27 +6,27 @@ Or, from Windows: go to **Settings charm** > **Change PC settings** > **Update a
 
 Find the **Secure Boot** setting, and if possible, set it to **Enabled**. This option is usually in either the **Security** tab, the **Boot** tab, or the **Authentication** tab.
 
-## Fix boot order / Grub menu not appearing on startup
+## Fix boot order / GRUB menu not appearing on startup
 
 Windows: go to **Settings charm** > **Change PC settings** > **Update and Recovery** > **Recovery** > **Advanced Startup: Restart now**. When the PC reboots, go to **Troubleshoot** > **Advanced Options: UEFI Firmware Settings**. Change the order of the OS in boot settings.
 
-If the Grub command line appears after installing Manjaro, type `exit` and enter. Then, launch UEFI firmware settings and change the boot order. This issue is caused by Manjaro not appearing at the top of the bootloader.
+If the GRUB command line appears after installing Linux, type `exit` and enter. Then, launch UEFI firmware settings and change the boot order. This issue is caused by Linux not appearing at the top of the bootloader.
 
 Source: <https://unix.stackexchange.com/q/329926>
 
-## Booting into a USB device using Grub2
+## Booting into a USB device using GRUB2
 
-The Grub2 command line might show up if you had a dual boot system with Windows 10 and Linux, and the Linux partition has been deleted. This will remove the usual Grub menu which lets you choose between operating systems or UEFI settings. It will not boot into Windows 10 automatically like it did pre-Linux installation, as the master boot record (MBR) has been removed.
+The GRUB2 command line might show up if you had a dual boot system with Windows 10 and Linux, and the Linux partition has been deleted. This will remove the usual GRUB menu which lets you choose between operating systems or UEFI settings. It will not boot into Windows 10 automatically like it did pre-Linux installation, as the master boot record (MBR) has been removed.
 
 This is not an issue for older Windows versions, as the BIOS screen will show up on start up.
 
-If you have not restarted and are still running Windows 10, plug in the USB device and use the advanced startup options in the settings to boot from USB. If you have already restarted, use a Windows 10 installation/recovery medium to restore the MBR. Alternatively, follow the instructions below, which uses the Grub2 command line and do not require a Windows 10 recovery medium.
+If you have not restarted and are still running Windows 10, plug in the USB device and use the advanced startup options in the settings to boot from USB. If you have already restarted, use a Windows 10 installation/recovery medium to restore the MBR. Alternatively, follow the instructions below, which uses the GRUB2 command line and do not require a Windows 10 recovery medium.
 
 When creating a bootable USB, note where the `vmlinuz` and `initrd.*` files are located. In my case, it was in `cdrom/casper`. Kubuntu and Pop! OS use `casper`.
 
 Plug in the USB and turn on the device.
 
-In the Grub2 command line, use `ls` to get a list of partitions available:
+In the GRUB2 command line, use `ls` to get a list of partitions available:
 
 ```grub
 grub> ls
@@ -45,15 +45,15 @@ grub> boot
 
 Source: <https://blog.viktorpetersson.com/2014/07/29/how-to-boot-from-usb-with-grub2.html>
 
-## [Changing default Grub boot OS](https://askubuntu.com/a/110738)
+## [Changing default GRUB boot OS](https://askubuntu.com/a/110738)
 
-On Linux, create a backup of the Grub file:
+On Linux, create a backup of the GRUB file:
 
 ```sh
 sudo cp /etc/default/grub /etc/default/grub.bak
 ```
 
-Open `/boot/grub/grub.cfg` which has a `menuentry` for each Grub menu item. Note the name of the `menuentry` which you want to set as default. An example for Windows 7:
+Open `/boot/grub/grub.cfg` which has a `menuentry` for each GRUB menu item. Note the name of the `menuentry` which you want to set as default. An example for Windows 7:
 
 ```text
 menuentry 'Microsoft Windows XP Professional (on /dev/sda1)' [options] {
@@ -65,7 +65,7 @@ Open `/etc/default/grub` using a text editor with `sudo` or administrative privi
 GRUB_DEFAULT='Microsoft Windows XP Professional (on /dev/sda1)'
 ```
 
-Finally, update the Grub menu:
+Finally, update the GRUB menu:
 
 ```sh
 sudo update-grub
@@ -255,10 +255,9 @@ Search for 'Removable Devices' and change the settings there.
 
 System Settings > Startup and Shutdown > Desktop Session > On Login > Enable 'Start with an empty session'
 
-### Manjaro
+### Arch Linux
 
 - <https://wiki.manjaro.org/index.php/Pacman_Overview>
-- <https://wiki.manjaro.org/index.php/Pamac>
 - <https://aur.archlinux.org/>
 - <https://wiki.archlinux.org/title/Pacman>
 
@@ -318,100 +317,14 @@ pacman -Qo /usr/bin/smplayer
 To remove old package caches except for the latest three package versions:
 
 ```sh
-paccache -rvk3
+paccache -r
 ```
 
-#### Pamac
-
-Install AUR packages using Pamac.
-
-To search for packages (the `-a` or `--aur` flag is used to search AUR):
+To remove all cached versions of uninstalled packages:
 
 ```sh
-pamac search -a vscodium
+paccache -ruk0
 ```
-
-To install from AUR (NOTE: do not use `sudo`):
-
-```sh
-pamac build vscodium-bin
-```
-
-To uninstall:
-
-```sh
-pamac remove vscodium-bin
-```
-
-To identify installed packages:
-
-```sh
-pamac list -i
-```
-
-To display detailed package information:
-
-```sh
-pamac info -a smplayer
-```
-
-To search for available updates:
-
-```sh
-pamac checkupdates -a
-```
-
-To update all installed packages:
-
-```sh
-pamac upgrade -a
-```
-
-To list orphaned packages:
-
-```sh
-pamac list -o
-```
-
-To remove all orphaned packages:
-
-```sh
-pamac remove -o
-```
-
-To clean the package caches except the latest three package versions:
-
-```sh
-pamac clean --keep 3
-```
-
-To force reinstall a package:
-
-```sh
-pamac reinstall smplayer
-```
-
-To search which package owns a certain file:
-
-```sh
-pamac search -f /usr/bin/smplayer
-```
-
-#### [Downgrading packages](https://wiki.manjaro.org/index.php?title=Downgrading_packages)
-
-Install `downgrade`:
-
-```sh
-pamac install downgrade
-```
-
-To get a list of package versions available for installation:
-
-```sh
-sudo downgrade mysql-workbench
-```
-
-After the downgrade, add it to `IgnorePkg` to prevent automatic updates.
 
 #### Enable emoji fonts
 
@@ -579,6 +492,100 @@ sudo apt install packages
 ```
 
 </details>
+
+### Manjaro
+
+#### Pamac
+
+Install AUR packages using Pamac (<https://wiki.manjaro.org/index.php/Pamac>)
+
+To search for packages (the `-a` or `--aur` flag is used to search AUR):
+
+```sh
+pamac search -a vscodium
+```
+
+To install from AUR (NOTE: do not use `sudo`):
+
+```sh
+pamac build vscodium-bin
+```
+
+To uninstall:
+
+```sh
+pamac remove vscodium-bin
+```
+
+To identify installed packages:
+
+```sh
+pamac list -i
+```
+
+To display detailed package information:
+
+```sh
+pamac info -a smplayer
+```
+
+To search for available updates:
+
+```sh
+pamac checkupdates -a
+```
+
+To update all installed packages:
+
+```sh
+pamac upgrade -a
+```
+
+To list orphaned packages:
+
+```sh
+pamac list -o
+```
+
+To remove all orphaned packages:
+
+```sh
+pamac remove -o
+```
+
+To clean the package caches except the latest three package versions:
+
+```sh
+pamac clean --keep 3
+```
+
+To force reinstall a package:
+
+```sh
+pamac reinstall smplayer
+```
+
+To search which package owns a certain file:
+
+```sh
+pamac search -f /usr/bin/smplayer
+```
+
+#### [Downgrading packages](https://wiki.manjaro.org/index.php?title=Downgrading_packages)
+
+Install `downgrade`:
+
+```sh
+pamac install downgrade
+```
+
+To get a list of package versions available for installation:
+
+```sh
+sudo downgrade mysql-workbench
+```
+
+After the downgrade, add it to `IgnorePkg` to prevent automatic updates.
 
 ## Android
 

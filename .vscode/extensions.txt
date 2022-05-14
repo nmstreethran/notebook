@@ -3,8 +3,8 @@ james-yu.latex-workshop
 mechatroner.rainbow-csv
 ms-python.python
 ms-toolsai.jupyter
-ms-vscode.js-debug-companion
-ms-vscode.references-view
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
 pkief.material-icon-theme
 reditorsupport.r-lsp
 streetsidesoftware.code-spell-checker

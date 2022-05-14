@@ -112,14 +112,14 @@
   <Separator name="separator_0"/>
   <Action name="mouse_drag"/>
   <Action name="mouse_selecttools"/>
-  <Action name="zoom_to"/>
-  <Action name="view_render_mode"/>
-  <Spacer name="spacer_0"/>
-  <Action name="view_orientation_rotate_cw"/>
-  <Action name="page_number"/>
-  <Action name="view_orientation_rotate_ccw"/>
-  <Spacer name="spacer_1"/>
   <Action name="mouse_toggle_annotate"/>
+  <Spacer name="spacer_0"/>
+  <Action name="view_orientation_rotate_ccw"/>
+  <Action name="page_number"/>
+  <Action name="view_orientation_rotate_cw"/>
+  <Spacer name="spacer_1"/>
+  <Action name="view_render_mode"/>
+  <Action name="zoom_to"/>
   <Action name="color_mode_menu"/>
   <Separator name="separator_1"/>
   <Action name="hamburger_menu"/>
@@ -128,7 +128,7 @@
  <ActionProperties scheme="Default">
   <Action name="show_leftpanel" priority="0"/>
  </ActionProperties>
- <ToolBar iconText="icononly" hidden="true" newline="true" name="annotationToolBar">
+ <ToolBar newline="true" name="annotationToolBar" iconText="icononly" hidden="true">
   <text translationDomain="okular">Annotation Toolbar</text>
   <Action name="annotation_highlighter"/>
   <Action name="annotation_underline"/>
@@ -153,7 +153,7 @@
   <Spacer/>
   <Action name="hide_annotation_toolbar"/>
  </ToolBar>
- <ToolBar iconText="icononly" position="right" hidden="true" newline="true" iconSize="32" name="quickAnnotationToolBar">
+ <ToolBar newline="true" name="quickAnnotationToolBar" position="right" iconText="icononly" hidden="true" iconSize="32">
   <text translationDomain="okular">Quick Annotation Toolbar</text>
   <Action name="quick_annotation_action_bar"/>
  </ToolBar>

@@ -8,11 +8,8 @@ CursorShape=2
 
 [General]
 Command=/bin/zsh
-Name=Profile
+Name=zsh
 Parent=FALLBACK/
-
-[Scrolling]
-HistorySize=1000
 
 [Terminal Features]
 BlinkingCursorEnabled=true

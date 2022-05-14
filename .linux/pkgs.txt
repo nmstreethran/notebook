@@ -1,41 +1,72 @@
-android-tools
+alsa-utils
+alsa-firmware
+# awesome-terminal-fonts
+base
+base-devel
 biber
-downgrade
+bluedevil
+bluez-utils
+breeze-grub
+breeze-gtk
+dolphin
+efibootmgr
 firefox
-fzf
-git-filter-repo
-git-lfs
-gimp
+# fzf
+git
+# git-filter-repo
+# git-lfs
+# gimp
+grub
 gwenview
-heimdall
-inkscape
+# heimdall
+# inkscape
+intel-ucode
 jre-openjdk
 kate
-kdenlive
+kde-gtk-config
+# kdenlive
 keepassxc
+konsole
 ksshaskpass
 libertinus-font
 libreoffice-fresh
-make
+linux
+linux-firmware
+nano
 neofetch
-nm-connection-editor
+networkmanager
+# nm-connection-editor
+noto-fonts-cjk
 noto-fonts-emoji
+ntfs-3g
 okular
-pandoc-crossref
-papirus-folders
+oxygen
+pacman-contrib
+# pandoc-crossref
+papirus-icon-theme
+plasma-desktop
+plasma-nm
+plasma-pa
+powerline
+powerline-fonts
+pulseaudio-bluetooth
 python-pygments
 qbittorrent
 qgis
 ruby2.7
 scrcpy
+sddm-kcm
 smplayer-themes
 spectacle
 speedtest-cli
-steam-manjaro
 texlive-bibtexextra
 texlive-fontsextra
 texlive-formatsextra
 texlive-latexextra
-thunderbird
+# thunderbird
+ttf-cascadia-code
+xf86-video-amdgpu
+xorg-server
 yakuake
-yt-dlp
+# yt-dlp
+zsh

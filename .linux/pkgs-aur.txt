@@ -1,12 +1,13 @@
 brave-bin
-cloudflare-warp-bin
-gnome-icon-theme
-gnome-icon-theme-symbolic
-miniconda3
+# cloudflare-warp-bin
+# miniconda3
 nerd-fonts-cascadia-code
 nerd-fonts-source-code-pro
-sysfetch-git
+papirus-folders
+plasma5-themes-breath
+# sysfetch-git
 vscodium-bin
-xampp
-ytfzf
+# xampp
+yay
+# ytfzf
 zotero-bin

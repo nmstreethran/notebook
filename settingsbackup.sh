@@ -10,9 +10,7 @@ done > .vscode/extensions.txt
 
 # copy other settings
 cp ~/.zshrc .linux/.zshrc
-cp ~/.ssh/config .linux/ssh-config.txt
-cp /etc/fonts/local.conf .linux/fonts-local.xml
-cp ~/.local/share/konsole/*.profile .linux/konsole.conf
+cp ~/.local/share/konsole/*.profile .linux/konsole/
 cp ~/.kde4/share/config/kdeglobals .linux/kdeglobals.conf
 cp ~/.local/share/kxmlgui5/okular/part.rc .linux/okular-part.xml
 

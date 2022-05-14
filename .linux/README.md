@@ -41,7 +41,7 @@ $ neofetch
 
 ## Settings
 
-- Emoji font configurations (`/etc/fonts/local.conf`) - copied to `.linux/fonts-local.xml`
-- Konsole profile (`~/.local/share/konsole/*.profile`) - copied to `.linux/konsole.conf`
+- `.zshrc` copied to `.linux/.zshrc`
+- Konsole profiles (`~/.local/share/konsole/*.profile`) - copied to `.linux/konsole/`
 - KDE global configurations (`~/.kde4/share/config/kdeglobals`) - copied to `.linux/kdeglobals.conf`
 - Okular configurations (`~/.local/share/kxmlgui5/okular/part.rc`) - copied to `.linux/okular-part.xml`

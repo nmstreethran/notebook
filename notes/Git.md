@@ -387,6 +387,12 @@ pippo/pluto/*
 !pippo/pluto/paperino.xml
 ```
 
+## [`fatal: unsafe repository`](https://stackoverflow.com/a/71940133)
+
+```sh
+git config --global --add safe.directory '*'
+```
+
 ## GitHub
 
 - [Delete wiki home page](https://stackoverflow.com/a/42653762)
