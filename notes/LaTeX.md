@@ -18,7 +18,7 @@ sudo apt install texlive-extra-utils texlive-xetex texlive-fonts-extra biber pyt
 On Arch Linux:
 
 ```sh
-pacman -Syu texlive-latexextra texlive-fontsextra texlive-formatsextra texlive-bibtexextra biber python-pygments jre-openjdk
+sudo pacman -Syu texlive-latexextra texlive-fontsextra texlive-formatsextra texlive-bibtexextra biber python-pygments jre-openjdk
 ```
 
 ### Commands

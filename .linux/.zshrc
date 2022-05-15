@@ -29,5 +29,21 @@ export GEM_HOME=~/.gem
 export GEM_PATH=$GEM_HOME/ruby/2.7.0
 export PATH="$GEM_PATH/bin:$PATH"
 
-# SSH
-# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR"/ssh-agent.socket
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('~/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "~/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "~/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="~/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# SSH settings
+export SSH_ASKPASS=/usr/bin/ksshaskpass
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR"/ssh-agent.socket

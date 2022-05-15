@@ -1,6 +1,4 @@
 brave-bin
-# cloudflare-warp-bin
-# miniconda3
 nerd-fonts-cascadia-code
 nerd-fonts-source-code-pro
 papirus-folders
@@ -9,5 +7,5 @@ plasma5-themes-breath
 vscodium-bin
 # xampp
 yay
-# ytfzf
+ytfzf
 zotero-bin

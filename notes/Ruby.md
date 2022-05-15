@@ -18,8 +18,8 @@ Download and install Ruby using instructions from the [official website](https:/
 - On Arch Linux:
 
   ```sh
-  pacman -Syu ruby  # latest version
-  pacman -Syu ruby2.7  # specific older version
+  sudo pacman -Syu ruby  # latest version
+  sudo pacman -Syu ruby2.7  # specific older version
   ```
 
 ## Installing gems
@@ -197,10 +197,10 @@ sh: line 1: make: command not found
 make failed, exit code 127
 ```
 
-Install on Arch Linux (it's also part of the `base-devel` package):
+Install on Arch Linux (not necessary if `base-devel` is installed):
 
 ```sh
-pacman -Syu make
+sudo pacman -Syu make
 ```
 
 ## Ruby programming

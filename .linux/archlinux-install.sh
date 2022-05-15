@@ -48,9 +48,9 @@ pacstrap /mnt base linux linux-firmware base-devel pacman-contrib
 # generate an fstab file
 genfstab -U /mnt >> /mnt/etc/fstab
 
-# check the fstab file
+# check the fstab file and modify to automatically mount other partitions
 # https://wiki.archlinux.org/title/Fstab#Auto_mount_devices
-cat /mnt/etc/fstab
+nano /mnt/etc/fstab
 
 # change root into the new system
 arch-chroot /mnt
@@ -116,26 +116,18 @@ EDITOR=nano visudo
 # e.g. add nms    ALL=(ALL:ALL) ALL
 visudo
 
-# install display libraries
+# install display libraries, desktop environment, and video drivers
+# https://wiki.archlinux.org/title/Xorg#Driver_installation
 # https://wiki.archlinux.org/title/Backlight
-pacman -Syu xorg-server xf86-video-amdgpu
-
-# install desktop environment
-pacman -Syu plasma-desktop sddm-kcm kde-gtk-config breeze-grub breeze-gtk
-
-# set GRUB theme in /etc/default/grub and regenerate configurations
-nano /etc/default/grub
-grub-mkconfig -o /boot/grub/grub.cfg
+pacman -Syu xorg-server xf86-video-amdgpu xf86-video-ati plasma-desktop sddm-kcm powerdevil
 
 # enable display manager
 systemctl enable sddm
 
-# install network manager
+# install network manager and start the service
 # https://wiki.archlinux.org/title/Network_configuration
 # https://wiki.archlinux.org/title/NetworkManager
 pacman -Syu networkmanager plasma-nm
-
-# enable and start networkmanager service
 systemctl enable NetworkManager.service
 systemctl start NetworkManager.service
 
@@ -152,25 +144,30 @@ amixer sset Master unmute
 amixer sset Speaker unmute
 amixer sset Headphone unmute
 
-# install and enable Bluetooth
+# install Bluetooth libraries
 # https://wiki.archlinux.org/title/Bluetooth
 # https://bbs.archlinux.org/viewtopic.php?pid=1998583#p1998583
 pacman -Syu bluez-utils bluedevil pulseaudio-bluetooth
-systemctl enable bluetooth.service
 
 # enable NTFS support
 # https://wiki.archlinux.org/title/NTFS
 pacman -Syu ntfs-3g
 
-# configure Git
-pacman -Syu git ksshaskpass
-ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
-
-# install base utilities
+# install basic utilities
 pacman -Syu kate firefox dolphin konsole
 
 # restart to boot into new system
 reboot
+
+# boot into new user account
+# configure Git
+# https://forum.manjaro.org/t/vscode-git-ssh-askpass-exec-usr-lib-ssh-ssh-askpass-no-such-file-or-directory/78787
+# https://forum.manjaro.org/t/howto-use-kwallet-as-a-login-keychain-for-storing-ssh-key-passphrases-on-kde/7088
+# https://wiki.archlinux.org/title/KDE_Wallet
+sudo pacman -Syu git-lfs ksshaskpass kwallet-pam kwalletmanager
+git config --global user.name "username"
+git config --global user.email "email"
+sudo ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
 
 # install and configure Zsh with powerline
 # https://wiki.archlinux.org/title/Zsh
@@ -189,11 +186,22 @@ bindkey "^[3;5~" delete-char
 bindkey "\e[H" beginning-of-line
 bindkey "\e[F" end-of-line' >> ~/.zshrc
 
+# install themes
+sudo pacman -Syu kde-gtk-config breeze-grub breeze-gtk papirus-icon-theme oxygen
+
+# set GRUB theme in /etc/default/grub and regenerate configurations
+sudo nano /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
 # install additional utilities
-sudo pacman -Syu libreoffice-fresh okular gwenview smplayer-themes
+sudo pacman -Syu libreoffice-fresh okular gwenview smplayer-themes keepassxc qbittorrent qgis scrcpy spectacle speedtest-cli yakuake neofetch fzf partitionmanager
 
 # install fonts
 sudo pacman -Syu noto-fonts-cjk noto-fonts-emoji ttf-cascadia-code libertinus-font
+
+# configure emoji fonts
+# https://forum.manjaro.org/t/howto-enable-emoji-fonts/36695
+sudo nano /etc/fonts/local.conf
 
 # set up Ruby
 sudo pacman -Syu ruby2.7
@@ -204,9 +212,33 @@ export PATH="$GEM_PATH/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 gem-2.7 install bundler
 
+# install libraries for LaTeX
+sudo pacman -Syu texlive-latexextra texlive-fontsextra texlive-formatsextra texlive-bibtexextra biber python-pygments jre-openjdk
+
 # install an AUR helper
 mkdir ~/Downloads/AUR
 cd ~/Downloads/AUR
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -s -i -c
+
+# install additional utilities from AUR
+yay -Syu brave-bin vscodium-bin zotero-bin ytfzf
+
+# install additional fonts and themes from AUR
+yay -Syu nerd-fonts-cascadia-code nerd-fonts-source-code-pro papirus-folders plasma5-themes-breath
+
+# set papirus icons folder colour
+papirus-folders -C teal --theme Papirus-Dark
+
+# use custom hosts file
+# https://github.com/stevenblack/hosts
+sudo curl --output /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+
+# install and configure Miniconda
+# https://conda.io/projects/conda/en/latest/user-guide/install/linux.html
+curl --output ~/Downloads/Miniconda3-latest-Linux-x86_64.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+sha256sum ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
+bash ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
+~/miniconda3/condabin/conda init zsh
+conda config --set auto_activate_base false

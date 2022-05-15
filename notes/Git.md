@@ -132,7 +132,7 @@ sudo apt install ssh-askpass
 On [Arch Linux](https://forum.manjaro.org/t/vscode-git-ssh-askpass-exec-usr-lib-ssh-ssh-askpass-no-such-file-or-directory/78787), install `ksshaskpass` and create a symlink to enable VS Code to recognise it:
 
 ```sh
-pacman -Syu ksshaskpass
+sudo pacman -Syu ksshaskpass
 sudo ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
 ```
 
