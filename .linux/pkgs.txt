@@ -1,5 +1,6 @@
 alsa-utils
 alsa-firmware
+ark
 # awesome-terminal-fonts
 base
 base-devel

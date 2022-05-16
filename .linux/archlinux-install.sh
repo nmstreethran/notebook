@@ -194,7 +194,7 @@ sudo nano /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # install additional utilities
-sudo pacman -Syu libreoffice-fresh okular gwenview smplayer-themes keepassxc qbittorrent qgis scrcpy spectacle speedtest-cli yakuake neofetch fzf partitionmanager
+sudo pacman -Syu libreoffice-fresh okular gwenview smplayer-themes keepassxc qbittorrent qgis scrcpy spectacle speedtest-cli yakuake neofetch fzf partitionmanager ark
 
 # install fonts
 sudo pacman -Syu noto-fonts-cjk noto-fonts-emoji ttf-cascadia-code libertinus-font
@@ -242,3 +242,13 @@ sha256sum ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
 bash ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
 ~/miniconda3/condabin/conda init zsh
 conda config --set auto_activate_base false
+
+# adding Microsoft fonts from Windows partition
+# https://wiki.archlinux.org/title/Microsoft_fonts
+# https://wiki.archlinux.org/title/Font_configuration
+mkdir ~/.local/share/fonts
+cd /run/media/nms/Windows/Windows/Fonts
+cp arial*.ttf calibri*.ttf cambria* comic*.ttf cour*.ttf georgia*.ttf symbol.ttf times*.ttf trebuc*.ttf verdana*.ttf webdings.ttf wingding.ttf ~/.local/share/fonts/
+# update fontconfig rules
+sudo nano /usr/share/fontconfig/conf.avail/30-metric-aliases.conf
+fc-cache --force
