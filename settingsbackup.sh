@@ -19,6 +19,6 @@ pacman -Qeq > .linux/pkgs.txt
 pacman -Qmq > .linux/pkgs-aur.txt
 # fi
 
-# copy all notes into wiki
-cp notes/*.md gh-wiki
-cp README.md gh-wiki/Home.md
+# symlink all notes into wiki
+# ln notes/*.md gh-wiki
+# ln README.md gh-wiki/Home.md

@@ -43,7 +43,7 @@ swapon /dev/sda7
 cat /etc/pacman.d/mirrorlist
 
 # install base packages
-pacstrap /mnt base linux linux-firmware base-devel pacman-contrib
+pacstrap /mnt base linux linux-firmware base-devel pacman-contrib nano
 
 # generate an fstab file
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -66,9 +66,6 @@ ln -sf /usr/share/zoneinfo/Europe/Dublin /etc/localtime
 
 # generate /etc/adjtime
 hwclock --systohc
-
-# install text editor
-pacman -Syu nano
 
 # enable required locales (en_US.UTF-8 UTF-8, ...)
 nano /etc/locale.gen
