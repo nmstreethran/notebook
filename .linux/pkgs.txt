@@ -1,5 +1,5 @@
-alsa-utils
 alsa-firmware
+alsa-utils
 ark
 # awesome-terminal-fonts
 base
@@ -17,6 +17,7 @@ fzf
 git-lfs
 # gimp
 grub
+gtk2
 gwenview
 # heimdall
 # inkscape
@@ -50,6 +51,8 @@ partitionmanager
 plasma-desktop
 plasma-nm
 plasma-pa
+plasma-systemmonitor
+plasma-workspace-wallpapers
 powerdevil
 powerline
 powerline-fonts
@@ -69,6 +72,7 @@ texlive-formatsextra
 texlive-latexextra
 # thunderbird
 ttf-cascadia-code
+webkit2gtk
 xf86-video-amdgpu
 xf86-video-ati
 xorg-server

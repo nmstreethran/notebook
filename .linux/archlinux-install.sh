@@ -249,3 +249,28 @@ cp arial*.ttf calibri*.ttf cambria* comic*.ttf cour*.ttf georgia*.ttf symbol.ttf
 # update fontconfig rules
 sudo nano /usr/share/fontconfig/conf.avail/30-metric-aliases.conf
 fc-cache --force
+
+# install Citrix Receiver
+# download Workspace app for Linux (x86_64)
+# https://www.citrix.com/downloads/workspace-app/linux/workspace-app-for-linux-latest.html
+# https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/install.html#tarball-packages
+# https://wiki.archlinux.org/title/Citrix#TLS/SSL_Certificates
+# https://askubuntu.com/a/830129
+sudo pacman -Syu webkit2gtk gtk2
+mkdir ~/Downloads/Citrix
+mv linuxx64-*.tar.gz ~/Downloads/Citrix/
+cd ~/Downloads/Citrix
+tar xzvf linuxx64-*.tar.gz
+./setupwfc
+# configure certificates
+mkdir -p ~/ICAClient/linuxx64/keystore/cacerts/
+cd ~/ICAClient/linuxx64/keystore/cacerts/
+cp /etc/ca-certificates/extracted/tls-ca-bundle.pem .
+awk 'BEGIN {c=0;} /BEGIN CERT/{c++} { print > "cert." c ".pem"}' < tls-ca-bundle.pem
+openssl rehash ~/ICAClient/linuxx64/keystore/cacerts/
+~/ICAClient/linuxx64/util/ctx_rehash
+# login to virtualapp on your browser and open the .ica file with Citrix
+# Workspace Engine
+# launching GUIs
+# ~/ICAClient/linuxx64/util/configmgr &
+# ~/ICAClient/linuxx64/selfservice
