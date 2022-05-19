@@ -12,6 +12,7 @@ breeze-gtk
 dolphin
 efibootmgr
 firefox
+firefox-developer-edition
 fzf
 # git-filter-repo
 git-lfs

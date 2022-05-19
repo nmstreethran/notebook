@@ -1,10 +1,5 @@
 {
-  "data/7542a1fb-860a-4e18-9488-e0cc735d4815": {
-    "showDetails": true,
-    "units": "auto",
-    "latitude": 53.0328,
-    "longitude": -7.2988
-  },
+  "widget/Xa37A0Lfbwa2": null,
   "widget/72ElPmEu-Ruu": null,
   "background": {
     "id": "59542518-f511-470c-a128-963fe5d7f213",
@@ -20,7 +15,9 @@
   "focus": false,
   "timeZone": null,
   "widget/7e3c75b7-7d2d-4626-a014-7bc65d3543dc": null,
-  "locale": "en",
+  "data/qud_7ho1SDa1": {
+    "category": "students"
+  },
   "widget/7542a1fb-860a-4e18-9488-e0cc735d4815": {
     "id": "7542a1fb-860a-4e18-9488-e0cc735d4815",
     "key": "widget/weather",
@@ -35,9 +32,9 @@
     "key": "widget/links",
     "active": true,
     "display": {
-      "position": "bottomLeft"
+      "position": "topLeft"
     },
-    "order": 4
+    "order": 3
   },
   "widget/45a7cc0c-fbf1-4087-ad97-b412c8274cab": {
     "id": "45a7cc0c-fbf1-4087-ad97-b412c8274cab",
@@ -67,16 +64,24 @@
     "displayCountry": true,
     "refreshInterval": 120
   },
+  "data/7542a1fb-860a-4e18-9488-e0cc735d4815": {
+    "showDetails": true,
+    "units": "si",
+    "latitude": 51.898,
+    "longitude": -8.4706
+  },
   "data/47abf519-27b7-4dc1-86b8-213a3f70c36b": {
-    "columns": 10,
+    "columns": 4,
     "links": [
       {
         "url": "https://gitlab.com/",
-        "name": " "
+        "name": " ",
+        "icon": ""
       },
       {
         "url": "https://github.com/",
-        "name": " "
+        "name": " ",
+        "icon": ""
       },
       {
         "url": "https://store.steampowered.com/",
@@ -84,7 +89,8 @@
       },
       {
         "url": "https://www.facebook.com/",
-        "name": " "
+        "name": " ",
+        "icon": ""
       },
       {
         "url": "https://mail.google.com/mail/u/0/#inbox",
@@ -104,10 +110,6 @@
       },
       {
         "url": "https://translate.google.com/",
-        "name": " "
-      },
-      {
-        "url": "https://outlook.office.com/mail/",
         "name": " "
       },
       {
@@ -150,15 +152,8 @@
     "visible": false,
     "linkOpenStyle": false
   },
-  "data/59542518-f511-470c-a128-963fe5d7f213": {
-    "by": "official",
-    "collections": "",
-    "featured": false,
-    "search": "",
-    "timeout": 86400
-  },
   "data/45a7cc0c-fbf1-4087-ad97-b412c8274cab": {
-    "input": "/* To be used with the Tabliss extension - https://tabliss.io/ */\n/* Custom CSS to replace quick link icons using Nerd Fonts */\n/* https://www.nerdfonts.com/cheat-sheet */\n\na:hover {\n  text-decoration: none;\n}\n\na[href*=\"facebook\"]:after, a[href*=\"github\"]:after, a[href*=\"gitlab\"]:after,\na[href*=\"google.com/maps\"]:after, a[href*=\"linkedin\"]:after,\na[href*=\"mail.google\"]:after, a[href*=\"reddit\"]:after,\na[href*=\"spotify\"]:after, a[href*=\"steam\"]:after, a[href*=\"translate\"]:after,\na[href*=\"twitch\"]:after, a[href*=\"whatsapp\"]:after, [href*=\"duolingo\"]:after,\na[href*=\"wikipedia\"]:after, a[href*=\"youtube\"]:after, [href*=\"discord\"]:after,\na[href*=\"epicgames\"]:after, a[href*=\"outlook\"]:after, [href*=\"arcgis\"]:after {\n  color: white;\n  font-family: \"CaskaydiaCove Nerd Font\", \"CaskaydiaCove NF\";\n  font-size: x-large;\n}\n\na[href*=\"arcgis\"]:after {\n  content: \"\\f484\";\n}\n\na[href*=\"discord\"]:after {\n  content: \"\\fb6e\";\n}\n\na[href*=\"duolingo\"]:after {\n  content: \"\\f1ab\";\n}\n\na[href*=\"epicgames\"]:after {\n  content: \"\\f11b\";\n}\n\na[href*=\"facebook\"]:after {\n  content: \"\\f230\";\n}\n\na[href*=\"github\"]:after {\n  content: \"\\f7a3\";\n}\n\na[href*=\"gitlab\"]:after {\n  content: \"\\f296\";\n}\n\na[href*=\"google.com/maps\"]:after {\n  content: \"\\f279\";\n}\n\na[href*=\"linkedin\"]:after {\n  content: \"\\f08c\";\n}\n\na[href*=\"mail.google\"]:after {\n  content: \"\\f6ed\";\n}\n\na[href*=\"outlook\"]:after {\n  content: \"\\f871\";\n}\n\na[href*=\"reddit\"]:after {\n  content: \"\\f281\";\n}\n\na[href*=\"spotify\"]:after {\n  content: \"\\f1bc\";\n}\n\na[href*=\"steam\"]:after {\n  content: \"\\f1b6\";\n}\n\na[href*=\"translate\"]:after {\n  content: \"\\fac9\";\n}\n\na[href*=\"twitch\"]:after {\n  content: \"\\f1e8\";\n}\n\na[href*=\"whatsapp\"]:after {\n  content: \"\\faa2\";\n}\n\na[href*=\"wikipedia\"]:after {\n  content: \"\\faab\";\n}\n\na[href*=\"youtube\"]:after {\n  content: \"\\f16a\";\n}\n"
+    "input": "/* To be used with the Tabliss extension - https://tabliss.io/ */\n/* Custom CSS to replace quick link icons using Nerd Fonts */\n/* https://www.nerdfonts.com/cheat-sheet */\n\na:hover {\n  text-decoration: none;\n}\n\na[href*=\"facebook\"]:after, a[href*=\"github\"]:after, a[href*=\"gitlab\"]:after,\na[href*=\"google.com/maps\"]:after, a[href*=\"linkedin\"]:after,\na[href*=\"mail.google\"]:after, a[href*=\"reddit\"]:after, [href*=\"arcgis\"]:after,\na[href*=\"spotify\"]:after, a[href*=\"steam\"]:after, a[href*=\"translate\"]:after,\na[href*=\"twitch\"]:after, a[href*=\"whatsapp\"]:after, [href*=\"duolingo\"]:after,\na[href*=\"wikipedia\"]:after, a[href*=\"youtube\"]:after, [href*=\"discord\"]:after,\na[href*=\"epicgames\"]:after {\n  color: white;\n  font-family: \"CaskaydiaCove Nerd Font\", \"CaskaydiaCove NF\";\n  font-size: x-large;\n}\n\na[href*=\"arcgis\"]:after {\n  content: \"\\f484\";\n}\n\na[href*=\"discord\"]:after {\n  content: \"\\f860\";\n}\n\na[href*=\"duolingo\"]:after {\n  content: \"\\f8d1\";\n}\n\na[href*=\"epicgames\"]:after {\n  content: \"\\f11b\";\n}\n\na[href*=\"facebook\"]:after {\n  content: \"\\f230\";\n}\n\na[href*=\"github\"]:after {\n  content: \"\\f7a3\";\n}\n\na[href*=\"gitlab\"]:after {\n  content: \"\\f296\";\n}\n\na[href*=\"google.com/maps\"]:after {\n  content: \"\\f279\";\n}\n\na[href*=\"linkedin\"]:after {\n  content: \"\\f08c\";\n}\n\na[href*=\"mail.google\"]:after {\n  content: \"\\f6ed\";\n}\n\na[href*=\"reddit\"]:after {\n  content: \"\\f281\";\n}\n\na[href*=\"spotify\"]:after {\n  content: \"\\f1bc\";\n}\n\na[href*=\"steam\"]:after {\n  content: \"\\f1b6\";\n}\n\na[href*=\"translate\"]:after {\n  content: \"\\fac9\";\n}\n\na[href*=\"twitch\"]:after {\n  content: \"\\f1e8\";\n}\n\na[href*=\"whatsapp\"]:after {\n  content: \"\\faa2\";\n}\n\na[href*=\"wikipedia\"]:after {\n  content: \"\\faab\";\n}\n\na[href*=\"youtube\"]:after {\n  content: \"\\f16a\";\n}\n"
   },
   "widget/oljdbiPcz09V": {
     "id": "oljdbiPcz09V",
@@ -171,12 +166,30 @@
   "widget/bktzm_Y8Trvq": {
     "id": "bktzm_Y8Trvq",
     "key": "widget/ipInfo",
-    "order": 5,
+    "order": 4,
     "display": {
       "position": "bottomRight",
       "fontSize": 14
     }
   },
-  "widget/Xa37A0Lfbwa2": null,
+  "widget/qud_7ho1SDa1": {
+    "id": "qud_7ho1SDa1",
+    "key": "widget/quote",
+    "order": 5,
+    "display": {
+      "position": "bottomCentre",
+      "fontSize": 16,
+      "fontWeight": 500
+    }
+  },
+  "locale": "en-GB",
+  "data/59542518-f511-470c-a128-963fe5d7f213": {
+    "by": "official",
+    "collections": "",
+    "featured": false,
+    "search": "",
+    "timeout": 86400,
+    "topics": "wnzpLxs0nQY"
+  },
   "version": 3
 }

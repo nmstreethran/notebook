@@ -35,11 +35,8 @@ sudo pacman -Syu kde-gtk-config breeze-grub breeze-gtk papirus-icon-theme oxygen
 sudo nano /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-# install additional utilities
-sudo pacman -Syu libreoffice-fresh okular gwenview smplayer-themes keepassxc qbittorrent qgis scrcpy spectacle speedtest-cli yakuake neofetch fzf partitionmanager ark
-
 # install fonts
-sudo pacman -Syu noto-fonts-cjk noto-fonts-emoji ttf-cascadia-code libertinus-font
+sudo pacman -Syu noto-fonts-cjk noto-fonts-emoji
 
 # configure emoji fonts
 # https://forum.manjaro.org/t/howto-enable-emoji-fonts/36695
@@ -54,9 +51,6 @@ export PATH="$GEM_PATH/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 gem-2.7 install bundler
 
-# install libraries for LaTeX
-sudo pacman -Syu texlive-latexextra texlive-fontsextra texlive-formatsextra texlive-bibtexextra biber python-pygments jre-openjdk
-
 # install an AUR helper
 mkdir ~/Downloads/AUR
 cd ~/Downloads/AUR
@@ -64,13 +58,8 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -s -i -c
 
-# install additional utilities from AUR
-yay -Syu brave-bin vscodium-bin zotero-bin ytfzf
-
-# install additional fonts and themes from AUR
-yay -Syu nerd-fonts-cascadia-code nerd-fonts-source-code-pro papirus-folders plasma5-themes-breath
-
 # set papirus icons folder colour
+yay -Syu papirus-folders
 papirus-folders -C teal --theme Papirus-Dark
 
 # use custom hosts file

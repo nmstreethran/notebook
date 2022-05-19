@@ -1,0 +1,116 @@
+{
+  "locale": "en-GB",
+  "widget/default-time": null,
+  "data/VQTVqenEBmsY": {
+    "columns": 1,
+    "links": [
+      {
+        "url": "https://outlook.office.com/mail/",
+        "name": "",
+        "icon": "mail"
+      },
+      {
+        "url": "https://teams.microsoft.com/",
+        "icon": "message-circle"
+      },
+      {
+        "url": "https://virtualapp.ucc.ie/",
+        "icon": "codesandbox"
+      }
+    ],
+    "visible": true,
+    "linkOpenStyle": false
+  },
+  "background": {
+    "id": "default-unsplash",
+    "key": "background/unsplash",
+    "display": {
+      "luminosity": -0.4,
+      "blur": 0
+    }
+  },
+  "data/ciS_OfQeY91J": {
+    "ip": "Fetching IP data...",
+    "city": "",
+    "country": "",
+    "displayCity": true,
+    "displayCountry": true,
+    "refreshInterval": 120
+  },
+  "data/tC-W1fyam2z4": {
+    "category": "funny"
+  },
+  "widget/82Sf0fdHrq25": {
+    "id": "82Sf0fdHrq25",
+    "key": "widget/weather",
+    "order": 3,
+    "display": {
+      "position": "topRight"
+    }
+  },
+  "widget/tvdIwg82DIQs": null,
+  "widget/FK0GgA_wEaii": null,
+  "widget/tC-W1fyam2z4": {
+    "id": "tC-W1fyam2z4",
+    "key": "widget/quote",
+    "order": 4,
+    "display": {
+      "position": "bottomCentre",
+      "fontSize": 16,
+      "fontWeight": 500
+    }
+  },
+  "widget/VQTVqenEBmsY": {
+    "id": "VQTVqenEBmsY",
+    "key": "widget/links",
+    "order": 5,
+    "display": {
+      "position": "middleLeft"
+    }
+  },
+  "widget/4LwrOA-3LAJN": null,
+  "data/default-unsplash": {
+    "by": "search",
+    "collections": "",
+    "featured": false,
+    "paused": false,
+    "search": "landscapes, animals",
+    "topics": "dijpbw99kQQ",
+    "timeout": 86400
+  },
+  "widget/default-greeting": {
+    "id": "default-greeting",
+    "key": "widget/greeting",
+    "order": 1,
+    "display": {
+      "position": "middleCentre"
+    }
+  },
+  "widget/VCoOcJ6achMc": {
+    "id": "VCoOcJ6achMc",
+    "key": "widget/literature-clock",
+    "order": 2,
+    "display": {
+      "position": "middleCentre",
+      "fontSize": 16
+    }
+  },
+  "widget/ciS_OfQeY91J": {
+    "id": "ciS_OfQeY91J",
+    "key": "widget/ipInfo",
+    "order": 6,
+    "display": {
+      "position": "bottomRight",
+      "fontSize": 14
+    }
+  },
+  "data/82Sf0fdHrq25": {
+    "showDetails": true,
+    "units": "si",
+    "latitude": 51.898,
+    "longitude": -8.4706
+  },
+  "focus": false,
+  "timeZone": null,
+  "version": 3
+}
