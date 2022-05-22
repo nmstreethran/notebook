@@ -73,6 +73,32 @@ sudo update-grub
 
 If anything goes wrong, restore using the backup.
 
+## Fix missing Windows 10 boot record while dual-booting
+
+Create a Windows recovery media, e.g. a bootable USB with the ISO of your Windows version. Boot with the recovery media, then go to **Repair your computer** > **Troubleshoot** > **Advanced options** > **Command prompt**. Run the following commands in the prompt:
+
+```powershell
+bootrec /FixMbr
+bootrec /FixBoot
+bootrec /ScanOs
+bootrec /RebuildBcd
+```
+
+If any of the first two commands produce a permission error, just ignore it. Exit the command prompt and go to **Repair your computer** > **Troubleshoot** > **Advanced options** > **Startup Repair** to finish repairing the boot. Then, shut down the computer and remove the recovery media.
+
+Turn on the computer and launch the Linux system. Install `os-prober` and ensure `/etc/default/grub` has it enabled, i.e. `GRUB_DISABLE_OS_PROBER=false`. Make sure this line is uncommented. Finally, regenerate the GRUB configurations:
+
+```sh
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+The Windows boot manager should now appear in the GRUB menu during startup.
+
+- <https://social.technet.microsoft.com/wiki/contents/articles/51782.fixing-corrupted-mbr-in-windows-10.aspx>
+- <https://wiki.archlinux.org/title/Dual_boot_with_Windows#Linux_before_Windows>
+- <https://docs.microsoft.com/en-us/windows/client-management/advanced-troubleshooting-boot-problems>
+- <https://www.linux.org/docs/man1/os-prober.html>
+
 ## Custom DNS
 
 Use `1.1.1.1`; set-up instructions: <https://developers.cloudflare.com/1.1.1.1/setup/>.

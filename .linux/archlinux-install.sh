@@ -85,17 +85,14 @@ mkinitcpio -P
 # set the root password
 passwd
 
-# install boot loader
+# install boot loader and microcode
 # https://wiki.archlinux.org/title/Arch_boot_process
 # https://wiki.archlinux.org/title/GRUB
-pacman -Syu grub efibootmgr
+# https://wiki.archlinux.org/title/Microcode
+pacman -Syu grub efibootmgr intel-ucode os-prober
 
 # install the GRUB EFI application
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
-
-# install microcode
-# https://wiki.archlinux.org/title/Microcode
-pacman -Syu intel-ucode
 
 # generate GRUB configuration
 grub-mkconfig -o /boot/grub/grub.cfg

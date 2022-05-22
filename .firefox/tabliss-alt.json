@@ -1,6 +1,17 @@
 {
   "locale": "en-GB",
   "widget/default-time": null,
+  "data/tC-W1fyam2z4": {
+    "category": "students"
+  },
+  "background": {
+    "id": "default-unsplash",
+    "key": "background/unsplash",
+    "display": {
+      "luminosity": -0.4,
+      "blur": 0
+    }
+  },
   "data/VQTVqenEBmsY": {
     "columns": 1,
     "links": [
@@ -16,18 +27,18 @@
       {
         "url": "https://virtualapp.ucc.ie/",
         "icon": "codesandbox"
+      },
+      {
+        "url": "https://uccireland-my.sharepoint.com/personal/nstreethran_ucc_ie/_layouts/15/onedrive.aspx",
+        "icon": "cloud"
+      },
+      {
+        "url": "https://github.com/",
+        "icon": "github"
       }
     ],
     "visible": true,
     "linkOpenStyle": false
-  },
-  "background": {
-    "id": "default-unsplash",
-    "key": "background/unsplash",
-    "display": {
-      "luminosity": -0.4,
-      "blur": 0
-    }
   },
   "data/ciS_OfQeY91J": {
     "ip": "Fetching IP data...",
@@ -35,40 +46,42 @@
     "country": "",
     "displayCity": true,
     "displayCountry": true,
-    "refreshInterval": 120
+    "refreshInterval": 1440
   },
-  "data/tC-W1fyam2z4": {
-    "category": "funny"
-  },
-  "widget/82Sf0fdHrq25": {
-    "id": "82Sf0fdHrq25",
-    "key": "widget/weather",
-    "order": 3,
+  "widget/default-greeting": {
+    "id": "default-greeting",
+    "key": "widget/greeting",
+    "order": 0,
     "display": {
-      "position": "topRight"
+      "position": "middleCentre"
     }
   },
   "widget/tvdIwg82DIQs": null,
   "widget/FK0GgA_wEaii": null,
-  "widget/tC-W1fyam2z4": {
-    "id": "tC-W1fyam2z4",
-    "key": "widget/quote",
-    "order": 4,
+  "widget/82Sf0fdHrq25": {
+    "id": "82Sf0fdHrq25",
+    "key": "widget/weather",
+    "order": 2,
     "display": {
-      "position": "bottomCentre",
-      "fontSize": 16,
-      "fontWeight": 500
+      "position": "topRight"
     }
   },
-  "widget/VQTVqenEBmsY": {
-    "id": "VQTVqenEBmsY",
-    "key": "widget/links",
-    "order": 5,
+  "widget/VCoOcJ6achMc": {
+    "id": "VCoOcJ6achMc",
+    "key": "widget/literature-clock",
+    "order": 1,
     "display": {
-      "position": "middleLeft"
+      "position": "middleCentre",
+      "fontSize": 16
     }
   },
   "widget/4LwrOA-3LAJN": null,
+  "data/82Sf0fdHrq25": {
+    "showDetails": true,
+    "units": "si",
+    "latitude": 51.898,
+    "longitude": -8.4706
+  },
   "data/default-unsplash": {
     "by": "search",
     "collections": "",
@@ -78,37 +91,32 @@
     "topics": "dijpbw99kQQ",
     "timeout": 86400
   },
-  "widget/default-greeting": {
-    "id": "default-greeting",
-    "key": "widget/greeting",
-    "order": 1,
+  "widget/VQTVqenEBmsY": {
+    "id": "VQTVqenEBmsY",
+    "key": "widget/links",
+    "order": 3,
     "display": {
-      "position": "middleCentre"
-    }
-  },
-  "widget/VCoOcJ6achMc": {
-    "id": "VCoOcJ6achMc",
-    "key": "widget/literature-clock",
-    "order": 2,
-    "display": {
-      "position": "middleCentre",
-      "fontSize": 16
+      "position": "middleLeft"
     }
   },
   "widget/ciS_OfQeY91J": {
     "id": "ciS_OfQeY91J",
     "key": "widget/ipInfo",
-    "order": 6,
+    "order": 4,
     "display": {
       "position": "bottomRight",
       "fontSize": 14
     }
   },
-  "data/82Sf0fdHrq25": {
-    "showDetails": true,
-    "units": "si",
-    "latitude": 51.898,
-    "longitude": -8.4706
+  "widget/tC-W1fyam2z4": {
+    "id": "tC-W1fyam2z4",
+    "key": "widget/quote",
+    "order": 5,
+    "display": {
+      "position": "bottomCentre",
+      "fontSize": 12,
+      "fontWeight": 500
+    }
   },
   "focus": false,
   "timeZone": null,
