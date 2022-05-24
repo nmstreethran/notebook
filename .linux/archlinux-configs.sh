@@ -68,9 +68,7 @@ sudo curl --output /etc/hosts https://raw.githubusercontent.com/StevenBlack/host
 
 # install and configure Miniconda
 # https://conda.io/projects/conda/en/latest/user-guide/install/linux.html
-curl --output ~/Downloads/Miniconda3-latest-Linux-x86_64.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-sha256sum ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
-bash ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh | sh
 ~/miniconda3/condabin/conda init zsh
 conda config --set auto_activate_base false
 

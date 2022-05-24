@@ -29,6 +29,7 @@ kde-gtk-config
 # kdenlive
 keepassxc
 konsole
+kscreen
 ksshaskpass
 kwallet-pam
 kwalletmanager

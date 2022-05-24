@@ -148,7 +148,7 @@ pacman -Syu bluez-utils bluedevil pulseaudio-bluetooth
 pacman -Syu ntfs-3g
 
 # install basic utilities
-pacman -Syu kate firefox dolphin konsole
+pacman -Syu kate firefox dolphin konsole kscreen
 
 # restart to boot into new system
 reboot
