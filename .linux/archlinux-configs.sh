@@ -1,6 +1,7 @@
 # Arch Linux installation and maintenance steps
 # https://wiki.archlinux.org/title/Installation_guide
 # https://wiki.archlinux.org/title/General_recommendations
+# https://wiki.archlinux.org/title/System_maintenance
 
 # configure Git
 # https://forum.manjaro.org/t/vscode-git-ssh-askpass-exec-usr-lib-ssh-ssh-askpass-no-such-file-or-directory/78787
@@ -58,6 +59,19 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -s -i -c
 
+# enable multilib repositories
+# https://wiki.archlinux.org/title/Official_repositories#multilib
+sudo nano /etc/pacman.conf
+yay -Syu
+
+# install Steam and fix graphics settings
+# https://wiki.archlinux.org/title/Steam
+# https://wiki.archlinux.org/title/Vulkan
+# https://redd.it/tqai5t
+sudo pacman -Syu steam amdvlk lib32-amdvlk
+cp /usr/share/applications/steam.desktop ~/.local/share/applications/steam.desktop
+nano ~/.local/share/applications/steam.desktop
+
 # set papirus icons folder colour
 yay -Syu papirus-folders
 papirus-folders -C teal --theme Papirus-Dark
@@ -77,7 +91,8 @@ conda config --set auto_activate_base false
 # https://wiki.archlinux.org/title/Font_configuration
 mkdir ~/.local/share/fonts
 cd /run/media/nms/Windows/Windows/Fonts
-cp arial*.ttf calibri*.ttf cambria* comic*.ttf cour*.ttf georgia*.ttf symbol.ttf times*.ttf trebuc*.ttf verdana*.ttf webdings.ttf wingding.ttf ~/.local/share/fonts/
+cp arial*.ttf comic*.ttf georgia*.ttf segoeui*.ttf segui*.ttf symbol.ttf times*.ttf trebuc*.ttf webdings.ttf wingding.ttf ~/.local/share/fonts/
+# cp calibri*.ttf cambria* cour*.ttf verdana*.ttf ~/.local/share/fonts/
 # update fontconfig rules
 sudo nano /usr/share/fontconfig/conf.avail/30-metric-aliases.conf
 fc-cache --force

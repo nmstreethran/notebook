@@ -331,7 +331,7 @@ sudo pacman -Rsu papirus-icon-theme
 To remove all orphan packages:
 
 ```sh
-sudo pacman -Rs $(pacman -Qdtq)
+sudo pacman -Rsn $(pacman -Qdtq)
 ```
 
 To determine which package owns a file:

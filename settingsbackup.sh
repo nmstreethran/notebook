@@ -15,8 +15,8 @@ cp ~/.kde4/share/config/kdeglobals .linux/kdeglobals.conf
 cp ~/.local/share/kxmlgui5/okular/part.rc .linux/okular-part.xml
 
 # list of packages
-pacman -Qeq > .linux/pkgs.txt
-pacman -Qmq > .linux/pkgs-aur.txt
+pacman -Qqen > .linux/pkgs.txt
+pacman -Qqem > .linux/pkgs-aur.txt
 # fi
 
 # symlink all notes into wiki

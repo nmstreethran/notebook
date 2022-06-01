@@ -68,6 +68,7 @@ ln -sf /usr/share/zoneinfo/Europe/Dublin /etc/localtime
 hwclock --systohc
 
 # enable required locales (en_US.UTF-8 UTF-8, ...)
+# https://wiki.archlinux.org/title/Locale
 nano /etc/locale.gen
 
 # generate locales

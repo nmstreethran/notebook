@@ -5,13 +5,13 @@
 To get a list of foreign packages and save it as a file:
 
 ```sh
-pacman -Qmq > .linux/pkgs-aur.txt
+pacman -Qqem > .linux/pkgs-aur.txt
 ```
 
 To get a list of explicitly installed packages:
 
 ```sh
-pacman -Qeq > .linux/pkgs.txt
+pacman -Qqen > .linux/pkgs.txt
 ```
 
 Configurations:
@@ -22,9 +22,9 @@ $ neofetch
                   .o+`                   -----------------
                  `ooo/                   OS: Arch Linux x86_64
                 `+oooo:                  Host: HP Notebook
-               `+oooooo:                 Kernel: 5.17.7-arch1-1
+               `+oooooo:                 Kernel: 5.18.1-arch1-1
                -+oooooo+:                Uptime: 54 mins
-             `/:-:++oooo+:               Packages: 905 (pacman)
+             `/:-:++oooo+:               Packages: 1137 (pacman)
             `/++++/+++++++:              Shell: bash 5.1.16
            `/++++++++++++++:             Resolution: 1366x768
           `/+++ooooooooooooo/`           DE: Plasma 5.24.5

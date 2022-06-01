@@ -1,5 +1,6 @@
 alsa-firmware
 alsa-utils
+amdvlk
 ark
 # awesome-terminal-fonts
 base
@@ -33,6 +34,7 @@ kscreen
 ksshaskpass
 kwallet-pam
 kwalletmanager
+lib32-amdvlk
 libertinus-font
 libreoffice-fresh
 linux
@@ -48,7 +50,7 @@ okular
 os-prober
 oxygen
 pacman-contrib
-# pandoc-crossref
+pandoc-crossref
 papirus-icon-theme
 partitionmanager
 plasma-desktop
@@ -69,12 +71,15 @@ sddm-kcm
 smplayer-themes
 spectacle
 speedtest-cli
+steam
 texlive-bibtexextra
 texlive-fontsextra
 texlive-formatsextra
 texlive-latexextra
 # thunderbird
 ttf-cascadia-code
+ttf-dejavu
+ttf-liberation
 webkit2gtk
 xf86-video-amdgpu
 xf86-video-ati
