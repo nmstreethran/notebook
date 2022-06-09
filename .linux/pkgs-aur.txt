@@ -4,6 +4,7 @@ nerd-fonts-source-code-pro
 papirus-folders
 plasma5-themes-breath
 # sysfetch-git
+teams-for-linux
 vscodium-bin
 # xampp
 yay

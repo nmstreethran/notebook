@@ -62,7 +62,7 @@ makepkg -s -i -c
 # enable multilib repositories
 # https://wiki.archlinux.org/title/Official_repositories#multilib
 sudo nano /etc/pacman.conf
-yay -Syu
+yay
 
 # install Steam and fix graphics settings
 # https://wiki.archlinux.org/title/Steam
@@ -73,7 +73,7 @@ cp /usr/share/applications/steam.desktop ~/.local/share/applications/steam.deskt
 nano ~/.local/share/applications/steam.desktop
 
 # set papirus icons folder colour
-yay -Syu papirus-folders
+yay papirus-folders
 papirus-folders -C teal --theme Papirus-Dark
 
 # use custom hosts file
