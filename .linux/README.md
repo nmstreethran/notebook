@@ -18,25 +18,25 @@ Configurations:
 
 ```text
 $ neofetch
-                   -`                    nms@nms-archlinux
-                  .o+`                   -----------------
-                 `ooo/                   OS: Arch Linux x86_64
-                `+oooo:                  Host: HP Notebook
-               `+oooooo:                 Kernel: 5.18.1-arch1-1
-               -+oooooo+:                Uptime: 54 mins
-             `/:-:++oooo+:               Packages: 1137 (pacman)
-            `/++++/+++++++:              Shell: bash 5.1.16
-           `/++++++++++++++:             Resolution: 1366x768
-          `/+++ooooooooooooo/`           DE: Plasma 5.24.5
-         ./ooosssso++osssssso+`          WM: KWin
-        .oossssso-````/ossssss+`         WM Theme: Oxygen
-       -osssssso.      :ssssssso.        Theme: [Plasma], Breeze [GTK2/3]
-      :osssssss/        osssso+++.       Icons: Papirus-Dark [Plasma], Papirus-Dark [GTK2/3]
-     /ossssssss/        +ssssooo/-       Terminal: yakuake
-   `/ossssso+/:-        -:/+osssso+-     CPU: Intel i5-6200U (4) @ 2.800GHz
-  `+sso+:-`                 `.-/+oso:    GPU: Intel Skylake GT2 [HD Graphics 520]
- `++:.                           `-/+/   GPU: AMD ATI Radeon HD 8670A/8670M/8690M / R5 M330 / M430 / Radeon 520 Mobile
- .`                                 `/   Memory: 2402MiB / 3816MiB
+                   -`
+                  .o+`                   nms@nms-archlinux 
+                 `ooo/                   ----------------- 
+                `+oooo:                  OS: Arch Linux x86_64 
+               `+oooooo:                 Host: HP Notebook 
+               -+oooooo+:                Kernel: 5.18.2-arch1-1 
+             `/:-:++oooo+:               Uptime: 15 hours, 19 mins 
+            `/++++/+++++++:              Packages: 1139 (pacman) 
+           `/++++++++++++++:             Shell: bash 5.1.16 
+          `/+++ooooooooooooo/`           Resolution: 1366x768 
+         ./ooosssso++osssssso+`          DE: Plasma 5.24.5 
+        .oossssso-````/ossssss+`         WM: KWin 
+       -osssssso.      :ssssssso.        WM Theme: Oxygen 
+      :osssssss/        osssso+++.       Theme: [Plasma], Breeze [GTK2/3] 
+     /ossssssss/        +ssssooo/-       Icons: Papirus-Dark [Plasma], Papirus-Dark [GTK2/3] 
+   `/ossssso+/:-        -:/+osssso+-     Terminal: yakuake 
+  `+sso+:-`                 `.-/+oso:    CPU: Intel i5-6200U (4) @ 2.800GHz 
+ `++:.                           `-/+/   GPU: Intel Skylake GT2 [HD Graphics 520] 
+ .`                                 `/   GPU: AMD ATI Radeon HD 8670A/8670M/8690M / R5 M330 / M430 / Radeon 520 Mobile 
 ```
 
 ## Settings

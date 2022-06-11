@@ -12,33 +12,14 @@
       "blur": 0
     }
   },
-  "data/VQTVqenEBmsY": {
-    "columns": 1,
-    "links": [
-      {
-        "url": "https://outlook.office.com/mail/",
-        "name": "",
-        "icon": "mail"
-      },
-      {
-        "url": "https://teams.microsoft.com/",
-        "icon": "message-circle"
-      },
-      {
-        "url": "https://virtualapp.ucc.ie/",
-        "icon": "codesandbox"
-      },
-      {
-        "url": "https://uccireland-my.sharepoint.com/personal/nstreethran_ucc_ie/_layouts/15/onedrive.aspx",
-        "icon": "cloud"
-      },
-      {
-        "url": "https://github.com/",
-        "icon": "github"
-      }
-    ],
-    "visible": true,
-    "linkOpenStyle": false
+  "data/default-unsplash": {
+    "by": "search",
+    "collections": "",
+    "featured": false,
+    "paused": false,
+    "search": "landscapes, animals",
+    "topics": "dijpbw99kQQ",
+    "timeout": 86400
   },
   "data/ciS_OfQeY91J": {
     "ip": "Fetching IP data...",
@@ -82,14 +63,15 @@
     "latitude": 51.898,
     "longitude": -8.4706
   },
-  "data/default-unsplash": {
-    "by": "search",
-    "collections": "",
-    "featured": false,
-    "paused": false,
-    "search": "landscapes, animals",
-    "topics": "dijpbw99kQQ",
-    "timeout": 86400
+  "widget/tC-W1fyam2z4": {
+    "id": "tC-W1fyam2z4",
+    "key": "widget/quote",
+    "order": 5,
+    "display": {
+      "position": "bottomCentre",
+      "fontSize": 12,
+      "fontWeight": 500
+    }
   },
   "widget/VQTVqenEBmsY": {
     "id": "VQTVqenEBmsY",
@@ -108,15 +90,45 @@
       "fontSize": 14
     }
   },
-  "widget/tC-W1fyam2z4": {
-    "id": "tC-W1fyam2z4",
-    "key": "widget/quote",
-    "order": 5,
-    "display": {
-      "position": "bottomCentre",
-      "fontSize": 12,
-      "fontWeight": 500
-    }
+  "data/VQTVqenEBmsY": {
+    "columns": 1,
+    "links": [
+      {
+        "url": "https://email.ucc.ie",
+        "name": "",
+        "icon": "mail"
+      },
+      {
+        "url": "https://teams.microsoft.com/",
+        "icon": "message-circle"
+      },
+      {
+        "url": "https://virtualapp.ucc.ie/",
+        "icon": "codesandbox"
+      },
+      {
+        "url": "https://uccireland-my.sharepoint.com/",
+        "icon": "cloud"
+      },
+      {
+        "url": "https://github.com/",
+        "icon": "github"
+      },
+      {
+        "url": "https://www.zotero.org/",
+        "icon": "paperclip"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Main_Page",
+        "icon": "book"
+      },
+      {
+        "url": "https://www.google.com/maps",
+        "icon": "map"
+      }
+    ],
+    "visible": true,
+    "linkOpenStyle": false
   },
   "focus": false,
   "timeZone": null,

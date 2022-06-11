@@ -97,7 +97,7 @@ cp arial*.ttf comic*.ttf georgia*.ttf segoeui*.ttf segui*.ttf symbol.ttf times*.
 sudo nano /usr/share/fontconfig/conf.avail/30-metric-aliases.conf
 fc-cache --force
 
-# install Citrix Receiver
+# install Citrix Workspace
 # download Workspace app for Linux (x86_64)
 # https://www.citrix.com/downloads/workspace-app/linux/workspace-app-for-linux-latest.html
 # https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/install.html#tarball-packages
