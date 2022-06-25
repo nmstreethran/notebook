@@ -46,5 +46,6 @@ jobs:
           gist.github.com/username/gistid/raw/filename,\
           www.java.com,\
           docs.github.com,\
+          cloudflare.com,\
           github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY \
           `find . -name "*.md"`

@@ -36,9 +36,11 @@ kwallet-pam
 kwalletmanager
 lib32-amdvlk
 libertinus-font
+libiconv
 libreoffice-fresh
 linux
 linux-firmware
+linux-lts
 nano
 neofetch
 networkmanager

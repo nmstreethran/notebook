@@ -82,9 +82,11 @@ sudo curl --output /etc/hosts https://raw.githubusercontent.com/StevenBlack/host
 
 # install and configure Miniconda
 # https://conda.io/projects/conda/en/latest/user-guide/install/linux.html
-curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh | sh
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh --output ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
+sh ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
 ~/miniconda3/condabin/conda init zsh
 conda config --set auto_activate_base false
+rm ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
 
 # adding Microsoft fonts from Windows partition
 # https://wiki.archlinux.org/title/Microsoft_fonts
@@ -109,15 +111,35 @@ mv linuxx64-*.tar.gz ~/Downloads/Citrix/
 cd ~/Downloads/Citrix
 tar xzvf linuxx64-*.tar.gz
 ./setupwfc
+# configure $ICAROOT
+echo '
+# Citrix Workspace - ICAClient
+export ICAROOT=~/ICAClient/linuxx64/' >> ~/.zshrc
+source ~/.zshrc
 # configure certificates
-mkdir -p ~/ICAClient/linuxx64/keystore/cacerts/
-cd ~/ICAClient/linuxx64/keystore/cacerts/
+mkdir -p $ICAROOT/keystore/cacerts/
+cd $ICAROOT/keystore/cacerts/
 cp /etc/ca-certificates/extracted/tls-ca-bundle.pem .
 awk 'BEGIN {c=0;} /BEGIN CERT/{c++} { print > "cert." c ".pem"}' < tls-ca-bundle.pem
-openssl rehash ~/ICAClient/linuxx64/keystore/cacerts/
-~/ICAClient/linuxx64/util/ctx_rehash
+openssl rehash $ICAROOT/keystore/cacerts/
+$ICAROOT/util/ctx_rehash
+# remove installation files
+rm -r ~/Downloads/Citrix
+# to reinstall or uninstall
+$ICAROOT/setupwfc
 # login to virtualapp on your browser and open the .ica file with Citrix
 # Workspace Engine
 # launching GUIs
 # ~/ICAClient/linuxx64/util/configmgr &
 # ~/ICAClient/linuxx64/selfservice
+
+# install R in a Conda environment
+conda create --name r-lang --channel conda-forge r-base r-essentials
+conda activate r-lang
+# install the following if there are issues with
+# install.packages("languageserver")
+# conda install --channel conda-forge r-stringi r-knitr r-xml2 r-lintr r-roxygen2
+# do the following if there are errors while loading shared libraries
+# https://askubuntu.com/a/1209723
+# sudo ln -s /lib/libreadline.so.8.1 /lib/libreadline.so.6
+# sudo ln -s /lib/libncurses.so /lib/libncurses.so.5

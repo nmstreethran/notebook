@@ -5,7 +5,7 @@
   "breadcrumbs.enabled": true,
   "cSpell.allowCompoundWords": true,
   "cSpell.language": "en-GB",
-  "cSpell.maxDuplicateProblems": 2,
+  "cSpell.maxDuplicateProblems": 1,
   "cSpell.minWordLength": 1,
   "cSpell.userWords": [
     "alright",
@@ -36,6 +36,7 @@
     "renewables",
     "respirable",
     "resumé",
+    "senescing",
     "stavanger",
     "streethran",
     "tribology",
@@ -230,10 +231,15 @@
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.colorTheme": "Monokai",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook",
     "*.pdf": "latex-workshop-pdf-hook"
   },
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "material-icon-theme",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "r.rpath.linux": "~/miniconda3/envs/r-lang/lib/R/bin/R"
 }

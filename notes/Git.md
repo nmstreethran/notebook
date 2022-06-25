@@ -417,7 +417,7 @@ Parameters:
 - `file_path` (required) - URL encoded full path to new file. e.g. `lib%2Fclass%2Erb` (replace `/` with `%2F`)
 - `ref` (required) - The name of branch, tag or commit
 
-Example for the file at <https://gitlab.com/nithiya/ml-elec-model-data/-/blob/master/geography/polygons/bidding_zones.geojson>:
+Example for the file at <https://gitlab.com/renewables-forecasting/renewables-forecasting-data/-/blob/master/geography/polygons/bidding_zones.geojson>:
 
 - `file_path`: `geography%2Fpolygons%2Fbidding%5Fzones%2Egeojson`
 - `ref`: `master`

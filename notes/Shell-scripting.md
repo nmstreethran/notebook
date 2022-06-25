@@ -7,7 +7,7 @@ Changing directories using `cd`:
 - To navigate up one directory level: `cd ..`
 - To navigate to the previous directory (or back): `cd -`
 
-## [Finding files](https://www.lifewire.com/uses-of-linux-command-find-2201100)
+## [Finding files](https://www.lifewire.com/how-to-open-command-prompt-2618089)
 
 Searching in the current active path:
 

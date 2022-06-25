@@ -10,10 +10,14 @@
             "problemMatcher": []
         },
         {
-            "label": "compile-min",
+            "label": "vscode-settings",
             "type": "shell",
-            "command": "cp ~/.config/VSCodium/User/settings.json .vscode/settings.jsonc; cp notes/*.md gh-wiki; cp README.md gh-wiki/Home.md",
-            "problemMatcher": []
+            "command": "cp ~/.config/VSCodium/User/settings.json .vscode/settings.jsonc",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }

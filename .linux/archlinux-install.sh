@@ -43,7 +43,7 @@ swapon /dev/sda7
 cat /etc/pacman.d/mirrorlist
 
 # install base packages
-pacstrap /mnt base linux linux-firmware base-devel pacman-contrib nano
+pacstrap /mnt base linux linux-firmware base-devel pacman-contrib nano linux-lts
 
 # generate an fstab file
 genfstab -U /mnt >> /mnt/etc/fstab
