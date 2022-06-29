@@ -30,7 +30,7 @@ pages:
     expire_in: 1 week
   only:
     refs:
-      - master
+      - main
 
 # linting Python scripts
 test:

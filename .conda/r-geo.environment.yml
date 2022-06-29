@@ -1,7 +1,8 @@
 name: r-geo
 channels:
   - conda-forge
-  - defaults
+  - r
+  - anaconda
 dependencies:
   - r-base
   - r-essentials

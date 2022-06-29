@@ -23,12 +23,12 @@ $ neofetch
                  `ooo/                   ----------------- 
                 `+oooo:                  OS: Arch Linux x86_64 
                `+oooooo:                 Host: HP Notebook 
-               -+oooooo+:                Kernel: 5.18.2-arch1-1 
-             `/:-:++oooo+:               Uptime: 15 hours, 19 mins 
-            `/++++/+++++++:              Packages: 1139 (pacman) 
+               -+oooooo+:                Kernel: 5.18.7-arch1-1 
+             `/:-:++oooo+:               Uptime: 10 hours, 45 mins 
+            `/++++/+++++++:              Packages: 1157 (pacman) 
            `/++++++++++++++:             Shell: bash 5.1.16 
           `/+++ooooooooooooo/`           Resolution: 1366x768 
-         ./ooosssso++osssssso+`          DE: Plasma 5.24.5 
+         ./ooosssso++osssssso+`          DE: Plasma 5.25.2 
         .oossssso-````/ossssss+`         WM: KWin 
        -osssssso.      :ssssssso.        WM Theme: Oxygen 
       :osssssss/        osssso+++.       Theme: [Plasma], Breeze [GTK2/3] 

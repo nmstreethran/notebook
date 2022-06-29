@@ -241,5 +241,6 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "r.rpath.linux": "~/miniconda3/envs/r-lang/lib/R/bin/R"
+  "r.rpath.linux": "~/miniconda3/envs/r-lang/lib/R/bin/R",
+  "terminal.integrated.inheritEnv": false
 }

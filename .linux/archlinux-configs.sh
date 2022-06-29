@@ -73,7 +73,7 @@ cp /usr/share/applications/steam.desktop ~/.local/share/applications/steam.deskt
 nano ~/.local/share/applications/steam.desktop
 
 # set papirus icons folder colour
-yay papirus-folders
+yay -Syu papirus-folders
 papirus-folders -C teal --theme Papirus-Dark
 
 # use custom hosts file
@@ -132,14 +132,3 @@ $ICAROOT/setupwfc
 # launching GUIs
 # ~/ICAClient/linuxx64/util/configmgr &
 # ~/ICAClient/linuxx64/selfservice
-
-# install R in a Conda environment
-conda create --name r-lang --channel conda-forge r-base r-essentials
-conda activate r-lang
-# install the following if there are issues with
-# install.packages("languageserver")
-# conda install --channel conda-forge r-stringi r-knitr r-xml2 r-lintr r-roxygen2
-# do the following if there are errors while loading shared libraries
-# https://askubuntu.com/a/1209723
-# sudo ln -s /lib/libreadline.so.8.1 /lib/libreadline.so.6
-# sudo ln -s /lib/libncurses.so /lib/libncurses.so.5

@@ -3,6 +3,7 @@ nerd-fonts-cascadia-code
 nerd-fonts-source-code-pro
 papirus-folders
 plasma5-themes-breath
+python38
 # sysfetch-git
 teams-for-linux
 vscodium-bin

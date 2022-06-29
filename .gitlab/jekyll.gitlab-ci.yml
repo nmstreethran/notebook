@@ -42,7 +42,7 @@ pages:
     expire_in: 1 week
   only:
     refs:
-      - master
+      - main
 
 test_pages:
   extends: .pages

@@ -10,6 +10,7 @@ bluedevil
 bluez-utils
 breeze-grub
 breeze-gtk
+docker
 dolphin
 efibootmgr
 firefox
