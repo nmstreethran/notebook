@@ -132,3 +132,8 @@ $ICAROOT/setupwfc
 # launching GUIs
 # ~/ICAClient/linuxx64/util/configmgr &
 # ~/ICAClient/linuxx64/selfservice
+
+# Docker
+# https://wiki.archlinux.org/title/Docker#Installation
+sudo pacman -Syu docker
+sudo gpasswd -a nms docker

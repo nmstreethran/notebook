@@ -1,0 +1,72 @@
+{
+  "breadcrumbs.enabled": true,
+  "cSpell.allowCompoundWords": true,
+  "cSpell.language": "en-GB",
+  "cSpell.maxDuplicateProblems": 1,
+  "cSpell.minWordLength": 1,
+  "[csv]": {
+    "editor.wordWrap": "off"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+  "editor.fontSize": 16,
+  "editor.minimap.renderCharacters": false,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [
+    79
+  ],
+  "editor.suggestSelection": "first",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  "editor.wordWrap": "on",
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSave": "afterDelay",
+  "files.watcherExclude": {
+    "**/env/bin/**": true,
+    "**/env/lib/**": true,
+    "**/env/lib64/**": true,
+    "**/env/share/**": true
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.tabSize": 2
+  },
+  "jupyter.askForKernelRestart": false,
+  "jupyter.exportWithOutputEnabled": true,
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "[markdown]": {
+    "editor.tabSize": 2
+  },
+  "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "terminal.integrated.defaultProfile.windows": "CondaPowerShell",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.profiles.windows": {
+    "CondaPowerShell": {
+      "path": "PowerShell",
+      "args": ["-file", "C:\\Users\\NStreethran\\Documents\\conda-init.ps1"]
+    }
+  },
+  "window.restoreWindows": "none",
+  "workbench.colorTheme": "Monokai"
+}
