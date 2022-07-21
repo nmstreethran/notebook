@@ -1,0 +1,8 @@
+# awesome-terminal-fonts
+# git-filter-repo
+# gimp
+# heimdall
+# inkscape
+# kdenlive
+# nm-connection-editor
+# thunderbird

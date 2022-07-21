@@ -86,6 +86,12 @@ curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh --out
 sh ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
 ~/miniconda3/condabin/conda init zsh
 conda config --set auto_activate_base false
+conda config --env --add channels conda-forge
+conda config --env --set channel_priority strict
+mkdir -p /run/media/nms/Backups/.conda/pkgs
+mkdir -p /run/media/nms/Backups/.conda/envs
+conda config --add pkgs_dirs /run/media/nms/Backups/.conda/pkgs
+conda config --add envs_dirs /run/media/nms/Backups/.conda/envs
 rm ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
 
 # adding Microsoft fonts from Windows partition

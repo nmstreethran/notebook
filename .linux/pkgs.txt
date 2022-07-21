@@ -2,7 +2,6 @@ alsa-firmware
 alsa-utils
 amdvlk
 ark
-# awesome-terminal-fonts
 base
 base-devel
 biber
@@ -16,19 +15,14 @@ efibootmgr
 firefox
 firefox-developer-edition
 fzf
-# git-filter-repo
 git-lfs
-# gimp
 grub
 gtk2
 gwenview
-# heimdall
-# inkscape
 intel-ucode
 jre-openjdk
 kate
 kde-gtk-config
-# kdenlive
 keepassxc
 konsole
 kscreen
@@ -45,7 +39,6 @@ linux-lts
 nano
 neofetch
 networkmanager
-# nm-connection-editor
 noto-fonts-cjk
 noto-fonts-emoji
 ntfs-3g
@@ -56,6 +49,7 @@ pacman-contrib
 pandoc-crossref
 papirus-icon-theme
 partitionmanager
+perl-clone
 plasma-desktop
 plasma-nm
 plasma-pa
@@ -79,7 +73,6 @@ texlive-bibtexextra
 texlive-fontsextra
 texlive-formatsextra
 texlive-latexextra
-# thunderbird
 ttf-cascadia-code
 ttf-dejavu
 ttf-liberation
@@ -88,5 +81,5 @@ xf86-video-amdgpu
 xf86-video-ati
 xorg-server
 yakuake
-# yt-dlp
+yt-dlp
 zsh

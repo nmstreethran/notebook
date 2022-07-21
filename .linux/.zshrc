@@ -48,3 +48,6 @@ unset __conda_setup
 # SSH settings
 export SSH_ASKPASS=/usr/bin/ksshaskpass
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR"/ssh-agent.socket
+
+# Citrix Workspace - ICAClient
+export ICAROOT=~/ICAClient/linuxx64/

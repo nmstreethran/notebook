@@ -231,7 +231,7 @@
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "Monokai",
+  "workbench.colorTheme": "Kimbie Dark",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook",
     "*.pdf": "latex-workshop-pdf-hook"
@@ -242,5 +242,6 @@
     "jupyter-notebook": "left"
   },
   "r.rpath.linux": "~/miniconda3/envs/r-lang/lib/R/bin/R",
-  "terminal.integrated.inheritEnv": false
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.enableMultiLinePasteWarning": false
 }
