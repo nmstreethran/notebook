@@ -1,2 +1,8 @@
+# brave-bin
+# nerd-fonts-source-code-pro
+# papirus-folders
+# plasma5-themes-breath
+# python38
 # sysfetch-git
 # xampp
+# ytfzf
