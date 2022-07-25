@@ -62,6 +62,7 @@ texlive-bibtexextra
 texlive-fontsextra
 texlive-formatsextra
 texlive-latexextra
+ttf-cascadia-code
 xorg-server
 xf86-video-nouveau
 xorg-xinput

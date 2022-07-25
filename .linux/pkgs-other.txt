@@ -18,7 +18,6 @@
 # scrcpy
 # steam
 # thunderbird
-# ttf-cascadia-code
 # ttf-dejavu
 # ttf-liberation
 # webkit2gtk

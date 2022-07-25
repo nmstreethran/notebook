@@ -1,4 +1,3 @@
-nerd-fonts-cascadia-code
 teams-for-linux
 vscodium-bin
 yay
