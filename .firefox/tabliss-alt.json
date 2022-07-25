@@ -8,7 +8,7 @@
     "id": "default-unsplash",
     "key": "background/unsplash",
     "display": {
-      "luminosity": -0.4,
+      "luminosity": -0.5,
       "blur": 0
     }
   },
@@ -99,10 +99,6 @@
         "icon": "mail"
       },
       {
-        "url": "https://teams.microsoft.com/",
-        "icon": "message-circle"
-      },
-      {
         "url": "https://virtualapp.ucc.ie/",
         "icon": "codesandbox"
       },
@@ -112,19 +108,31 @@
       },
       {
         "url": "https://github.com/",
-        "icon": "github"
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://teams.microsoft.com/",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://open.spotify.com/",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://scholar.google.com/",
+        "icon": "_favicon"
       },
       {
         "url": "https://www.zotero.org/",
-        "icon": "paperclip"
+        "icon": "_favicon"
       },
       {
         "url": "https://en.wikipedia.org/wiki/Main_Page",
-        "icon": "book"
+        "icon": "_favicon"
       },
       {
         "url": "https://www.google.com/maps",
-        "icon": "map"
+        "icon": "_favicon"
       }
     ],
     "visible": true,
