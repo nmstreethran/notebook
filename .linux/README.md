@@ -23,8 +23,8 @@ pacman -Qqen > .linux/pkgs.txt
 
 ## Installation
 
-- Create a new partition which is about 50 GB
-- Create a small partition for the swap file of about 4 GB
+- Create a new partition of about 50 GB
+- Create a small partition of about 4 GB for the swap
 - Disable secure boot
 - Download the Arch Linux ISO and copy it to a USB flash drive:
 

@@ -32,7 +32,6 @@ linux
 linux-firmware
 linux-lts
 nano
-networkmanager
 noto-fonts-cjk
 noto-fonts-emoji
 ntfs-3g
@@ -63,7 +62,7 @@ texlive-fontsextra
 texlive-formatsextra
 texlive-latexextra
 ttf-cascadia-code
-xorg-server
+wget
 xf86-video-nouveau
 xorg-xinput
 yakuake
