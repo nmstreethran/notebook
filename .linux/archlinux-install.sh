@@ -43,7 +43,7 @@ swapon /dev/sda7
 cat /etc/pacman.d/mirrorlist
 
 # install base packages
-pacstrap /mnt base linux linux-firmware base-devel pacman-contrib nano linux-lts
+pacstrap /mnt base linux linux-firmware linux-lts base-devel pacman-contrib nano
 
 # generate an fstab file
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -113,7 +113,7 @@ EDITOR=nano visudo
 # https://wiki.archlinux.org/title/Xorg#Driver_installation
 # https://wiki.archlinux.org/title/Backlight
 # https://wiki.archlinux.org/title/Libinput#Touchpad_configuration
-pacman -Syu xorg-server plasma-desktop sddm-kcm powerdevil xf86-video-nouveau mesa libinput xf86-input-libinput xorg-xinput
+pacman -Syu plasma-desktop sddm-kcm powerdevil xf86-video-nouveau xorg-xinput
 # enable display manager
 systemctl enable sddm
 # configure touchpad
@@ -131,7 +131,7 @@ sudo nano /etc/X11/xorg.conf.d/30-touchpad.conf
 # install network manager and start the service
 # https://wiki.archlinux.org/title/Network_configuration
 # https://wiki.archlinux.org/title/NetworkManager
-pacman -Syu networkmanager plasma-nm
+pacman -Syu plasma-nm
 # systemctl enable NetworkManager.service
 # systemctl start NetworkManager.service
 # view list of wireless connections
