@@ -113,7 +113,7 @@ EDITOR=nano visudo
 # https://wiki.archlinux.org/title/Xorg#Driver_installation
 # https://wiki.archlinux.org/title/Backlight
 # https://wiki.archlinux.org/title/Libinput#Touchpad_configuration
-pacman -Syu plasma-desktop sddm-kcm powerdevil xf86-video-nouveau xorg-xinput
+pacman -Syu plasma-desktop sddm-kcm powerdevil xf86-video-nouveau xorg-xinput tlp
 # enable display manager
 systemctl enable sddm
 # configure touchpad

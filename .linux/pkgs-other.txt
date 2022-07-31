@@ -13,6 +13,7 @@
 # nm-connection-editor
 # oxygen
 # plasma-workspace-wallpapers
+# power-profiles-daemon
 # qbittorrent
 # ruby2.7
 # scrcpy

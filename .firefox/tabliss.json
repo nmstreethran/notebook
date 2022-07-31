@@ -46,115 +46,6 @@
     "category": "funny"
   },
   "widget/a4944145-a912-4333-a848-0752d643ece7": null,
-  "widget/47abf519-27b7-4dc1-86b8-213a3f70c36b": {
-    "id": "47abf519-27b7-4dc1-86b8-213a3f70c36b",
-    "key": "widget/links",
-    "active": true,
-    "display": {
-      "position": "bottomLeft"
-    },
-    "order": 3
-  },
-  "widget/7542a1fb-860a-4e18-9488-e0cc735d4815": {
-    "id": "7542a1fb-860a-4e18-9488-e0cc735d4815",
-    "key": "widget/weather",
-    "active": true,
-    "display": {
-      "position": "topRight"
-    },
-    "order": 2
-  },
-  "data/7542a1fb-860a-4e18-9488-e0cc735d4815": {
-    "showDetails": true,
-    "units": "si",
-    "latitude": 51.898,
-    "longitude": -8.4706
-  },
-  "data/45a7cc0c-fbf1-4087-ad97-b412c8274cab": {
-    "input": ""
-  },
-  "data/59542518-f511-470c-a128-963fe5d7f213": {
-    "by": "official",
-    "collections": "",
-    "featured": false,
-    "search": "",
-    "timeout": 86400,
-    "topics": "wnzpLxs0nQY",
-    "paused": false
-  },
-  "data/47abf519-27b7-4dc1-86b8-213a3f70c36b": {
-    "columns": 3,
-    "links": [
-      {
-        "url": "https://translate.google.com/",
-        "name": " ",
-        "icon": "_favicon"
-      },
-      {
-        "url": "https://discord.com/channels/@me",
-        "name": " ",
-        "icon": "_favicon"
-      },
-      {
-        "url": "https://www.duolingo.com/",
-        "name": " ",
-        "icon": "_favicon"
-      },
-      {
-        "url": "https://www.arcgis.com/",
-        "name": " ",
-        "icon": "_favicon"
-      },
-      {
-        "url": "https://www.twitch.tv/directory/following/channels",
-        "name": " ",
-        "icon": "_favicon"
-      },
-      {
-        "url": "https://store.epicgames.com/en-US/",
-        "name": " ",
-        "icon": "codesandbox"
-      }
-    ],
-    "visible": false,
-    "linkOpenStyle": false
-  },
-  "widget/4mJW1UduUG3d": {
-    "id": "4mJW1UduUG3d",
-    "key": "widget/links",
-    "order": 4,
-    "display": {
-      "position": "bottomLeft"
-    }
-  },
-  "widget/008e7bbf-2a11-420b-8b9e-6b6a079918c7": {
-    "id": "008e7bbf-2a11-420b-8b9e-6b6a079918c7",
-    "key": "widget/literature-clock",
-    "active": true,
-    "display": {
-      "position": "middleCentre",
-      "fontSize": 16
-    },
-    "order": 1
-  },
-  "locale": "en-GB",
-  "data/bktzm_Y8Trvq": {
-    "ip": "Fetching IP data...",
-    "city": "",
-    "country": "",
-    "displayCity": true,
-    "displayCountry": true,
-    "refreshInterval": 1440
-  },
-  "widget/45a7cc0c-fbf1-4087-ad97-b412c8274cab": {
-    "id": "45a7cc0c-fbf1-4087-ad97-b412c8274cab",
-    "key": "widget/css",
-    "active": true,
-    "display": {
-      "position": "middleCentre"
-    },
-    "order": 7
-  },
   "data/4mJW1UduUG3d": {
     "columns": 3,
     "links": [
@@ -214,13 +105,80 @@
         "icon": "_favicon"
       },
       {
-        "url": "https://www.reddit.com/",
-        "name": " ",
+        "url": "https://translate.google.com/",
         "icon": "_favicon"
+      },
+      {
+        "url": "https://store.epicgames.com/en-US/",
+        "icon": "codesandbox"
       }
     ],
     "visible": true,
     "linkOpenStyle": false
+  },
+  "widget/7542a1fb-860a-4e18-9488-e0cc735d4815": {
+    "id": "7542a1fb-860a-4e18-9488-e0cc735d4815",
+    "key": "widget/weather",
+    "active": true,
+    "display": {
+      "position": "topRight"
+    },
+    "order": 2
+  },
+  "data/7542a1fb-860a-4e18-9488-e0cc735d4815": {
+    "showDetails": true,
+    "units": "si",
+    "latitude": 51.898,
+    "longitude": -8.4706
+  },
+  "data/45a7cc0c-fbf1-4087-ad97-b412c8274cab": {
+    "input": ""
+  },
+  "data/59542518-f511-470c-a128-963fe5d7f213": {
+    "by": "official",
+    "collections": "",
+    "featured": false,
+    "search": "",
+    "timeout": 86400,
+    "topics": "wnzpLxs0nQY",
+    "paused": false
+  },
+  "widget/47abf519-27b7-4dc1-86b8-213a3f70c36b": null,
+  "widget/4mJW1UduUG3d": {
+    "id": "4mJW1UduUG3d",
+    "key": "widget/links",
+    "order": 4,
+    "display": {
+      "position": "bottomLeft"
+    }
+  },
+  "widget/008e7bbf-2a11-420b-8b9e-6b6a079918c7": {
+    "id": "008e7bbf-2a11-420b-8b9e-6b6a079918c7",
+    "key": "widget/literature-clock",
+    "active": true,
+    "display": {
+      "position": "middleCentre",
+      "fontSize": 16
+    },
+    "order": 1
+  },
+  "locale": "en-GB",
+  "data/bktzm_Y8Trvq": {
+    "ip": "Fetching IP data...",
+    "city": "",
+    "country": "",
+    "displayCity": true,
+    "displayCountry": true,
+    "refreshInterval": 1440
+  },
+  "widget/45a7cc0c-fbf1-4087-ad97-b412c8274cab": {
+    "id": "45a7cc0c-fbf1-4087-ad97-b412c8274cab",
+    "key": "widget/css",
+    "active": true,
+    "display": {
+      "position": "middleCentre"
+    },
+    "order": 7
   },
   "version": 3
 }
