@@ -26,11 +26,15 @@ pacman -Qqen > .linux/pkgs.txt
 - Create a new partition of about 50 GB
 - Create a small partition of about 4 GB for the swap
 - Disable secure boot
-- Download the Arch Linux ISO and copy it to a USB flash drive:
+- Download the Arch Linux ISO and https://wiki.archlinux.org/title/USB_flash_installation_medium:
 
   ```sh
   sudo bash -c "cat path/to/archlinux-version-x86_64.iso > /dev/sdx"
   ```
+
+  See [this comparison](https://unix.stackexchange.com/questions/224277/is-it-better-to-use-cat-dd-pv-or-another-procedure-to-copy-a-cd-dvd) of command line utilities for the copying process.
+
+  Note that the USB flash drive must be unmounted. Check the name of the USB drive using `lsblk`.
 
 - Connect computer to the internet using an ethernet cable
 - Follow the steps in `.linux/archlinux-install.sh`
