@@ -7,16 +7,15 @@
 # https://forum.manjaro.org/t/vscode-git-ssh-askpass-exec-usr-lib-ssh-ssh-askpass-no-such-file-or-directory/78787
 # https://forum.manjaro.org/t/howto-use-kwallet-as-a-login-keychain-for-storing-ssh-key-passphrases-on-kde/7088
 # https://wiki.archlinux.org/title/KDE_Wallet
-sudo pacman -Syu git-lfs ksshaskpass kwallet-pam kwalletmanager
 git config --global user.name "username"
 git config --global user.email "email"
+mkdir -p /usr/lib/ssh/ssh-askpass
 sudo ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
 
 # install and configure Zsh with powerline
 # https://wiki.archlinux.org/title/Zsh
 # https://wiki.archlinux.org/title/Powerline
 # https://bbs.archlinux.org/viewtopic.php?id=239257
-sudo pacman -Syu zsh powerline powerline-fonts
 autoload -Uz zsh-newuser-install
 zsh-newuser-install -f
 echo '# Powerlines
@@ -29,22 +28,18 @@ bindkey "^[3;5~" delete-char
 bindkey "\e[H" beginning-of-line
 bindkey "\e[F" end-of-line' >> ~/.zshrc
 
-# install themes
-sudo pacman -Syu kde-gtk-config breeze-grub breeze-gtk papirus-icon-theme oxygen
-
 # set GRUB theme in /etc/default/grub and regenerate configurations
 sudo nano /etc/default/grub
+# add `GRUB_THEME="/usr/share/grub/themes/breeze/theme.txt"`
+# uncomment `GRUB_DISABLE_OS_PROBER=false` to ensure Windows is detected
 sudo grub-mkconfig -o /boot/grub/grub.cfg
-
-# install fonts
-sudo pacman -Syu noto-fonts-cjk noto-fonts-emoji
 
 # configure emoji fonts
 # https://forum.manjaro.org/t/howto-enable-emoji-fonts/36695
 sudo nano /etc/fonts/local.conf
+# paste the XML from the link above
 
 # set up Ruby
-sudo pacman -Syu ruby2.7
 echo '# Ruby
 export GEM_HOME=~/.gem
 export GEM_PATH=$GEM_HOME/ruby/2.7.0
@@ -59,26 +54,12 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -s -i -c
 
-# enable multilib repositories
-# https://wiki.archlinux.org/title/Official_repositories#multilib
-sudo nano /etc/pacman.conf
-yay
-
-# install Steam and fix graphics settings
-# https://wiki.archlinux.org/title/Steam
-# https://wiki.archlinux.org/title/Vulkan
-# https://redd.it/tqai5t
-sudo pacman -Syu steam amdvlk lib32-amdvlk
-cp /usr/share/applications/steam.desktop ~/.local/share/applications/steam.desktop
-nano ~/.local/share/applications/steam.desktop
-
-# set papirus icons folder colour
-yay -Syu papirus-folders
-papirus-folders -C teal --theme Papirus-Dark
-
 # use custom hosts file
 # https://github.com/stevenblack/hosts
 sudo curl --output /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+
+# set papirus icons folder colour
+papirus-folders -C teal --theme Papirus-Dark
 
 # install and configure Miniconda
 # https://conda.io/projects/conda/en/latest/user-guide/install/linux.html
@@ -88,10 +69,10 @@ sh ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
 conda config --set auto_activate_base false
 conda config --env --add channels conda-forge
 conda config --env --set channel_priority strict
-mkdir -p /run/media/nms/Backups/.conda/pkgs
-mkdir -p /run/media/nms/Backups/.conda/envs
-conda config --add pkgs_dirs /run/media/nms/Backups/.conda/pkgs
-conda config --add envs_dirs /run/media/nms/Backups/.conda/envs
+# mkdir -p /run/media/nms/Backups/.conda/pkgs
+# mkdir -p /run/media/nms/Backups/.conda/envs
+# conda config --add pkgs_dirs /run/media/nms/Backups/.conda/pkgs
+# conda config --add envs_dirs /run/media/nms/Backups/.conda/envs
 rm ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
 
 # adding Microsoft fonts from Windows partition
@@ -102,7 +83,7 @@ cd /run/media/nms/Windows/Windows/Fonts
 cp arial*.ttf comic*.ttf georgia*.ttf segoeui*.ttf segui*.ttf symbol.ttf times*.ttf trebuc*.ttf webdings.ttf wingding.ttf ~/.local/share/fonts/
 # cp calibri*.ttf cambria* cour*.ttf verdana*.ttf ~/.local/share/fonts/
 # update fontconfig rules
-sudo nano /usr/share/fontconfig/conf.avail/30-metric-aliases.conf
+# sudo nano /usr/share/fontconfig/conf.avail/30-metric-aliases.conf
 fc-cache --force
 
 # install Citrix Workspace
@@ -111,7 +92,6 @@ fc-cache --force
 # https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/install.html#tarball-packages
 # https://wiki.archlinux.org/title/Citrix#TLS/SSL_Certificates
 # https://askubuntu.com/a/830129
-sudo pacman -Syu webkit2gtk gtk2
 mkdir ~/Downloads/Citrix
 mv linuxx64-*.tar.gz ~/Downloads/Citrix/
 cd ~/Downloads/Citrix
@@ -141,5 +121,17 @@ $ICAROOT/setupwfc
 
 # Docker
 # https://wiki.archlinux.org/title/Docker#Installation
-sudo pacman -Syu docker
+# sudo pacman -Syu docker
 sudo gpasswd -a nms docker
+
+# enable multilib repositories
+# https://wiki.archlinux.org/title/Official_repositories#multilib
+sudo nano /etc/pacman.conf
+yay
+
+# install Steam and fix graphics settings
+# https://wiki.archlinux.org/title/Steam
+# https://wiki.archlinux.org/title/Vulkan
+# https://redd.it/tqai5t
+cp /usr/share/applications/steam.desktop ~/.local/share/applications/steam.desktop
+nano ~/.local/share/applications/steam.desktop

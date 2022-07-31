@@ -26,6 +26,7 @@ git-lfs
 grep
 groff
 grub
+gtk2
 gwenview
 gzip
 intel-ucode
@@ -69,6 +70,7 @@ plasma-systemmonitor
 powerdevil
 powerline
 powerline-fonts
+powertop
 pulseaudio-bluetooth
 python-pygments
 qgis
@@ -83,7 +85,9 @@ texlive-bibtexextra
 texlive-fontsextra
 texlive-formatsextra
 texlive-latexextra
+tlp
 ttf-cascadia-code
+webkit2gtk
 wget
 which
 xf86-video-nouveau
