@@ -26,7 +26,7 @@ pacman -Qqen > .linux/pkgs.txt
 - Create a new partition of about 50 GB
 - Create a small partition of about 4 GB for the swap
 - Disable secure boot
-- Download the Arch Linux ISO and https://wiki.archlinux.org/title/USB_flash_installation_medium:
+- Download the Arch Linux ISO and [create an installation medium using a USB flash drive](https://wiki.archlinux.org/title/USB_flash_installation_medium):
 
   ```sh
   sudo bash -c "cat path/to/archlinux-version-x86_64.iso > /dev/sdx"

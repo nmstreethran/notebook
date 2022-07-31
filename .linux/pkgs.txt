@@ -67,7 +67,6 @@ plasma-desktop
 plasma-nm
 plasma-pa
 plasma-systemmonitor
-power-profiles-daemon
 powerdevil
 powerline
 powerline-fonts
@@ -86,6 +85,7 @@ texlive-bibtexextra
 texlive-fontsextra
 texlive-formatsextra
 texlive-latexextra
+tlp
 ttf-cascadia-code
 webkit2gtk
 wget
