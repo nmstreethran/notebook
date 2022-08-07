@@ -1,3 +1,4 @@
+adobe-source-sans-fonts
 alsa-firmware
 alsa-utils
 ark
@@ -67,6 +68,7 @@ plasma-desktop
 plasma-nm
 plasma-pa
 plasma-systemmonitor
+power-profiles-daemon
 powerdevil
 powerline
 powerline-fonts
@@ -74,6 +76,7 @@ powertop
 pulseaudio-bluetooth
 python-pygments
 qgis
+ruby2.7
 sddm-kcm
 sed
 smplayer-themes
@@ -85,8 +88,9 @@ texlive-bibtexextra
 texlive-fontsextra
 texlive-formatsextra
 texlive-latexextra
-tlp
 ttf-cascadia-code
+ttf-dejavu
+ttf-fira-sans
 webkit2gtk
 wget
 which
