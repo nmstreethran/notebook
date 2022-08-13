@@ -54,7 +54,7 @@
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "off",
-  "editor.fontFamily": "'Cascadia Code PL', 'Cascadia Code', 'Source Code Pro', monospace",
+  "editor.fontFamily": "'Cascadia Code', 'Source Code Pro', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.minimap.renderCharacters": false,
@@ -216,9 +216,14 @@
     "old": "archive",
     "wiki": "docs"
   },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
   "python.linting.pylintEnabled": true,
   "python.linting.flake8Enabled": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
+  "r.rpath.linux": "~/miniconda3/envs/r-env/lib/R/bin/R",
   "[restructuredtext]": {
     "editor.tabSize": 3
   },
@@ -226,8 +231,10 @@
     "editor.tabSize": 2
   },
   "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Code PL', 'Cascadia Code', 'SauceCodePro Nerd Font', 'Source Code Pro', monospace",
   "terminal.integrated.fontSize": 16,
+  "terminal.integrated.inheritEnv": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
@@ -236,12 +243,5 @@
     "*.ipynb": "jupyter-notebook",
     "*.pdf": "latex-workshop-pdf-hook"
   },
-  "workbench.iconTheme": "material-icon-theme",
-  "notebook.cellToolbarLocation": {
-    "default": "right",
-    "jupyter-notebook": "left"
-  },
-  "r.rpath.linux": "~/miniconda3/envs/r-lang/lib/R/bin/R",
-  "terminal.integrated.inheritEnv": false,
-  "terminal.integrated.enableMultiLinePasteWarning": false
+  "workbench.iconTheme": "material-icon-theme"
 }
