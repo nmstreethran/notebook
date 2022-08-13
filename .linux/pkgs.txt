@@ -47,6 +47,7 @@ libtool
 linux
 linux-firmware
 linux-lts
+lshw
 m4
 make
 nano
@@ -92,7 +93,6 @@ ttf-cascadia-code
 ttf-dejavu
 ttf-fira-sans
 webkit2gtk
-wget
 which
 xf86-video-nouveau
 xorg-xinput
