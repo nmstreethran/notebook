@@ -39,6 +39,7 @@
     "senescing",
     "stavanger",
     "streethran",
+    "tillering",
     "tribology",
     "winery",
     "zenodo",
@@ -223,7 +224,7 @@
   "python.linting.pylintEnabled": true,
   "python.linting.flake8Enabled": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
-  "r.rpath.linux": "~/miniconda3/envs/r-env/lib/R/bin/R",
+  "r.rpath.linux": "~/miniconda3/envs/r-env/bin/R",
   "[restructuredtext]": {
     "editor.tabSize": 3
   },
