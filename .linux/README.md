@@ -1,5 +1,29 @@
 # Linux
 
+```
+$ neofetch
+
+                   -`                    nms@nms-msi-archlinux
+                  .o+`                   ---------------------
+                 `ooo/                   OS: Arch Linux x86_64
+                `+oooo:                  Host: GF63 Thin 11UD REV:1.0
+               `+oooooo:                 Kernel: 5.15.61-1-lts
+               -+oooooo+:                Uptime: 7 hours, 17 mins
+             `/:-:++oooo+:               Packages: 1066 (pacman)
+            `/++++/+++++++:              Shell: bash 5.1.16
+           `/++++++++++++++:             Resolution: 1920x1080
+          `/+++ooooooooooooo/`           DE: Plasma 5.25.4
+         ./ooosssso++osssssso+`          WM: KWin
+        .oossssso-````/ossssss+`         Theme: [Plasma], Breeze [GTK2/3]
+       -osssssso.      :ssssssso.        Icons: Papirus-Dark [Plasma], Papirus-Dark [GTK2/3]
+      :osssssss/        osssso+++.       Terminal: yakuake
+     /ossssssss/        +ssssooo/-       CPU: 11th Gen Intel i7-11800H (16) @ 4.600GHz
+   `/ossssso+/:-        -:/+osssso+-     GPU: Intel TigerLake-H GT1 [UHD Graphics]
+  `+sso+:-`                 `.-/+oso:    GPU: NVIDIA GeForce RTX 3050 Ti Mobile
+ `++:.                           `-/+/   Memory: 3421MiB / 7650MiB
+ .`                                 `/
+```
+
 ## Packages
 
 To get a list of foreign packages and save it as a file:

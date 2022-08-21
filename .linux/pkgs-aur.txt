@@ -1,3 +1,4 @@
+papirus-folders-git
 teams-for-linux
 vscodium-bin
 yay
