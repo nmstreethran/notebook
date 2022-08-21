@@ -3,15 +3,6 @@
 # https://wiki.archlinux.org/title/General_recommendations
 # https://wiki.archlinux.org/title/System_maintenance
 
-# configure Git
-# https://forum.manjaro.org/t/vscode-git-ssh-askpass-exec-usr-lib-ssh-ssh-askpass-no-such-file-or-directory/78787
-# https://forum.manjaro.org/t/howto-use-kwallet-as-a-login-keychain-for-storing-ssh-key-passphrases-on-kde/7088
-# https://wiki.archlinux.org/title/KDE_Wallet
-git config --global user.name "username"
-git config --global user.email "email"
-mkdir -p /usr/lib/ssh/ssh-askpass
-sudo ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
-
 # install and configure Zsh with powerline
 # https://wiki.archlinux.org/title/Zsh
 # https://wiki.archlinux.org/title/Powerline
@@ -28,7 +19,42 @@ bindkey "^[3;5~" delete-char
 bindkey "\e[H" beginning-of-line
 bindkey "\e[F" end-of-line' >> ~/.zshrc
 
+# configure Git
+# https://forum.manjaro.org/t/vscode-git-ssh-askpass-exec-usr-lib-ssh-ssh-askpass-no-such-file-or-directory/78787
+# https://forum.manjaro.org/t/howto-use-kwallet-as-a-login-keychain-for-storing-ssh-key-passphrases-on-kde/7088
+# https://wiki.archlinux.org/title/KDE_Wallet
+# the wallet's password should be the same as the user's password
+sudo pacman -Syu openssh kwalletmanager kwallet-pam ksshaskpass git-lfs
+git config --global user.name "username"
+git config --global user.email "email"
+sudo mkdir -p /usr/lib/ssh/ssh-askpass
+sudo ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
+
+# power management
+sudo pacman -Syu power-profiles-daemon powertop
+sudo powertop
+
+# install an AUR helper
+mkdir ~/Downloads/AUR
+cd ~/Downloads/AUR
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -s -i -c
+
+# # configure touchpad
+# sudo nano /etc/X11/xorg.conf.d/30-touchpad.conf
+# # paste the following:
+# # Section "InputClass"
+# #     Identifier "touchpad"
+# #     Driver "libinput"
+# #     MatchIsTouchpad "on"
+# #     Option "Tapping" "on"
+# #     Option "TappingButtonMap" "lmr"
+# #     Option "NaturalScrolling" "true"
+# # EndSection
+
 # set GRUB theme in /etc/default/grub and regenerate configurations
+sudo pacman -Syu os-prober breeze-grub
 sudo nano /etc/default/grub
 # add `GRUB_THEME="/usr/share/grub/themes/breeze/theme.txt"`
 # uncomment `GRUB_DISABLE_OS_PROBER=false` to ensure Windows is detected
@@ -39,6 +65,9 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo nano /etc/fonts/local.conf
 # paste the XML from the link above
 
+# themes
+sudo pacman -Syu breeze-gtk kde-gtk-config
+
 # set up Ruby
 echo '# Ruby
 export GEM_HOME=~/.gem
@@ -46,13 +75,6 @@ export GEM_PATH=$GEM_HOME/ruby/2.7.0
 export PATH="$GEM_PATH/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 gem-2.7 install bundler
-
-# install an AUR helper
-mkdir ~/Downloads/AUR
-cd ~/Downloads/AUR
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -s -i -c
 
 # use custom hosts file
 # https://github.com/stevenblack/hosts

@@ -90,7 +90,7 @@ passwd
 # https://wiki.archlinux.org/title/Arch_boot_process
 # https://wiki.archlinux.org/title/GRUB
 # https://wiki.archlinux.org/title/Microcode
-pacman -Syu grub efibootmgr intel-ucode os-prober
+pacman -Syu grub efibootmgr intel-ucode
 
 # install the GRUB EFI application
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
@@ -113,26 +113,15 @@ EDITOR=nano visudo
 # https://wiki.archlinux.org/title/Xorg#Driver_installation
 # https://wiki.archlinux.org/title/Backlight
 # https://wiki.archlinux.org/title/Libinput#Touchpad_configuration
-pacman -Syu plasma-desktop sddm-kcm powerdevil xf86-video-nouveau xorg-xinput tlp
+pacman -Syu plasma-desktop sddm-kcm powerdevil xf86-video-nouveau xorg-xinput
 # enable display manager
 systemctl enable sddm
-# configure touchpad
-sudo nano /etc/X11/xorg.conf.d/30-touchpad.conf
-# paste the following:
-# Section "InputClass"
-#     Identifier "touchpad"
-#     Driver "libinput"
-#     MatchIsTouchpad "on"
-#     Option "Tapping" "on"
-#     Option "TappingButtonMap" "lmr"
-#     Option "NaturalScrolling" "true"
-# EndSection
 
 # install network manager and start the service
 # https://wiki.archlinux.org/title/Network_configuration
 # https://wiki.archlinux.org/title/NetworkManager
 pacman -Syu plasma-nm
-# systemctl enable NetworkManager.service
+systemctl enable NetworkManager
 # systemctl start NetworkManager.service
 # view list of wireless connections
 # nmcli dev wifi list
@@ -141,10 +130,10 @@ pacman -Syu plasma-nm
 
 # install sound card firmware and configure volumes
 # https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture
-pacman -Syu alsa-utils alsa-firmware plasma-pa
-amixer sset Master unmute
-amixer sset Speaker unmute
-amixer sset Headphone unmute
+pacman -Syu alsa-utils alsa-firmware plasma-pa sof-firmware
+# amixer sset Master unmute
+# amixer sset Speaker unmute
+# amixer sset Headphone unmute
 
 # install Bluetooth libraries
 # https://wiki.archlinux.org/title/Bluetooth
@@ -157,7 +146,7 @@ systemctl enable bluetooth.service
 pacman -Syu ntfs-3g
 
 # install basic utilities
-pacman -Syu kate firefox dolphin konsole kscreen
+pacman -Syu kate firefox dolphin zsh yakuake
 
 # exit the chroot environment
 exit
