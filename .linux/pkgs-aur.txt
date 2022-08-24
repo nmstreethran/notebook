@@ -1,3 +1,5 @@
+brave-bin
+inxi
 papirus-folders-git
 teams-for-linux
 vscodium-bin
