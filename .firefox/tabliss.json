@@ -15,13 +15,14 @@
   "focus": false,
   "timeZone": null,
   "widget/7e3c75b7-7d2d-4626-a014-7bc65d3543dc": null,
-  "widget/oljdbiPcz09V": {
-    "id": "oljdbiPcz09V",
-    "key": "widget/greeting",
-    "order": 0,
+  "widget/45a7cc0c-fbf1-4087-ad97-b412c8274cab": {
+    "id": "45a7cc0c-fbf1-4087-ad97-b412c8274cab",
+    "key": "widget/css",
+    "active": true,
     "display": {
       "position": "middleCentre"
-    }
+    },
+    "order": 7
   },
   "widget/bktzm_Y8Trvq": {
     "id": "bktzm_Y8Trvq",
@@ -32,14 +33,13 @@
       "fontSize": 14
     }
   },
-  "widget/qud_7ho1SDa1": {
-    "id": "qud_7ho1SDa1",
-    "key": "widget/quote",
-    "order": 6,
+  "widget/Ovp1c9X_NyCZ": {
+    "id": "Ovp1c9X_NyCZ",
+    "key": "widget/time",
+    "order": 1,
     "display": {
-      "position": "bottomCentre",
-      "fontSize": 12,
-      "fontWeight": 400
+      "position": "middleCentre",
+      "fontSize": 12
     }
   },
   "data/qud_7ho1SDa1": {
@@ -116,20 +116,22 @@
     "visible": true,
     "linkOpenStyle": false
   },
-  "widget/7542a1fb-860a-4e18-9488-e0cc735d4815": {
-    "id": "7542a1fb-860a-4e18-9488-e0cc735d4815",
-    "key": "widget/weather",
-    "active": true,
+  "widget/4mJW1UduUG3d": {
+    "id": "4mJW1UduUG3d",
+    "key": "widget/links",
+    "order": 4,
     "display": {
-      "position": "topRight"
-    },
-    "order": 2
+      "position": "bottomLeft"
+    }
   },
-  "data/7542a1fb-860a-4e18-9488-e0cc735d4815": {
-    "showDetails": true,
-    "units": "si",
-    "latitude": 51.898,
-    "longitude": -8.4706
+  "data/Ovp1c9X_NyCZ": {
+    "mode": "digital",
+    "hour12": false,
+    "showDate": true,
+    "showMinutes": true,
+    "showSeconds": true,
+    "showDayPeriod": true,
+    "timeZone": null
   },
   "data/45a7cc0c-fbf1-4087-ad97-b412c8274cab": {
     "input": ""
@@ -144,23 +146,24 @@
     "paused": false
   },
   "widget/47abf519-27b7-4dc1-86b8-213a3f70c36b": null,
-  "widget/4mJW1UduUG3d": {
-    "id": "4mJW1UduUG3d",
-    "key": "widget/links",
-    "order": 4,
+  "widget/qud_7ho1SDa1": {
+    "id": "qud_7ho1SDa1",
+    "key": "widget/quote",
+    "order": 6,
     "display": {
-      "position": "bottomLeft"
+      "position": "bottomCentre",
+      "fontSize": 12,
+      "fontWeight": 400
     }
   },
-  "widget/008e7bbf-2a11-420b-8b9e-6b6a079918c7": {
-    "id": "008e7bbf-2a11-420b-8b9e-6b6a079918c7",
-    "key": "widget/literature-clock",
+  "widget/7542a1fb-860a-4e18-9488-e0cc735d4815": {
+    "id": "7542a1fb-860a-4e18-9488-e0cc735d4815",
+    "key": "widget/weather",
     "active": true,
     "display": {
-      "position": "middleCentre",
-      "fontSize": 16
+      "position": "topRight"
     },
-    "order": 1
+    "order": 3
   },
   "locale": "en-GB",
   "data/bktzm_Y8Trvq": {
@@ -171,14 +174,29 @@
     "displayCountry": true,
     "refreshInterval": 1440
   },
-  "widget/45a7cc0c-fbf1-4087-ad97-b412c8274cab": {
-    "id": "45a7cc0c-fbf1-4087-ad97-b412c8274cab",
-    "key": "widget/css",
+  "data/7542a1fb-860a-4e18-9488-e0cc735d4815": {
+    "showDetails": true,
+    "units": "si",
+    "latitude": 51.898,
+    "longitude": -8.4706
+  },
+  "widget/008e7bbf-2a11-420b-8b9e-6b6a079918c7": {
+    "id": "008e7bbf-2a11-420b-8b9e-6b6a079918c7",
+    "key": "widget/literature-clock",
     "active": true,
     "display": {
-      "position": "middleCentre"
+      "position": "middleCentre",
+      "fontSize": 16
     },
-    "order": 7
+    "order": 2
+  },
+  "widget/oljdbiPcz09V": {
+    "id": "oljdbiPcz09V",
+    "key": "widget/greeting",
+    "order": 0,
+    "display": {
+      "position": "middleCentre"
+    }
   },
   "version": 3
 }

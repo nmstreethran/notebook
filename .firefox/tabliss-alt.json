@@ -1,9 +1,7 @@
 {
   "locale": "en-GB",
   "widget/default-time": null,
-  "data/tC-W1fyam2z4": {
-    "category": "students"
-  },
+  "widget/tC-W1fyam2z4": null,
   "background": {
     "id": "default-unsplash",
     "key": "background/unsplash",
@@ -21,20 +19,12 @@
         "icon": "mail"
       },
       {
-        "url": "https://virtualapp.ucc.ie/",
-        "icon": "codesandbox"
-      },
-      {
-        "url": "https://uccireland-my.sharepoint.com/",
-        "icon": "cloud"
-      },
-      {
         "url": "https://github.com/",
         "icon": "_favicon"
       },
       {
-        "url": "https://teams.microsoft.com/",
-        "icon": "_favicon"
+        "url": "https://uccireland-my.sharepoint.com/",
+        "icon": "cloud"
       },
       {
         "url": "https://open.spotify.com/",
@@ -42,6 +32,18 @@
       },
       {
         "url": "https://scholar.google.com/",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://virtualapp.ucc.ie/",
+        "icon": "codesandbox"
+      },
+      {
+        "url": "https://libguides.ucc.ie/library",
+        "icon": "book-open"
+      },
+      {
+        "url": "https://teams.microsoft.com/",
         "icon": "_favicon"
       },
       {
@@ -59,10 +61,6 @@
       {
         "url": "https://www.google.com/maps",
         "icon": "map"
-      },
-      {
-        "url": "https://www.researchgate.net/",
-        "icon": "_favicon"
       }
     ],
     "visible": true,
@@ -76,12 +74,13 @@
     "displayCountry": true,
     "refreshInterval": 1440
   },
-  "widget/default-greeting": {
-    "id": "default-greeting",
-    "key": "widget/greeting",
-    "order": 0,
+  "widget/ibBEFh0EPU4I": {
+    "id": "ibBEFh0EPU4I",
+    "key": "widget/time",
+    "order": 1,
     "display": {
-      "position": "middleCentre"
+      "position": "middleCentre",
+      "fontSize": 12
     }
   },
   "widget/tvdIwg82DIQs": null,
@@ -89,7 +88,7 @@
   "widget/82Sf0fdHrq25": {
     "id": "82Sf0fdHrq25",
     "key": "widget/weather",
-    "order": 2,
+    "order": 3,
     "display": {
       "position": "topRight"
     }
@@ -97,7 +96,7 @@
   "widget/VCoOcJ6achMc": {
     "id": "VCoOcJ6achMc",
     "key": "widget/literature-clock",
-    "order": 1,
+    "order": 2,
     "display": {
       "position": "middleCentre",
       "fontSize": 16
@@ -110,20 +109,18 @@
     "latitude": 51.898,
     "longitude": -8.4706
   },
-  "widget/tC-W1fyam2z4": {
-    "id": "tC-W1fyam2z4",
-    "key": "widget/quote",
-    "order": 5,
+  "widget/default-greeting": {
+    "id": "default-greeting",
+    "key": "widget/greeting",
+    "order": 0,
     "display": {
-      "position": "bottomCentre",
-      "fontSize": 12,
-      "fontWeight": 500
+      "position": "middleCentre"
     }
   },
   "widget/VQTVqenEBmsY": {
     "id": "VQTVqenEBmsY",
     "key": "widget/links",
-    "order": 3,
+    "order": 4,
     "display": {
       "position": "middleLeft"
     }
@@ -131,11 +128,20 @@
   "widget/ciS_OfQeY91J": {
     "id": "ciS_OfQeY91J",
     "key": "widget/ipInfo",
-    "order": 4,
+    "order": 5,
     "display": {
       "position": "bottomRight",
       "fontSize": 14
     }
+  },
+  "data/ibBEFh0EPU4I": {
+    "mode": "digital",
+    "hour12": false,
+    "showDate": true,
+    "showMinutes": true,
+    "showSeconds": true,
+    "showDayPeriod": true,
+    "timeZone": null
   },
   "data/default-unsplash": {
     "by": "search",
