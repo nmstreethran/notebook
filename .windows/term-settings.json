@@ -3,15 +3,15 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "actions": [
     {
+      "command": "paste",
+      "keys": "ctrl+v"
+    },
+    {
       "command": {
         "action": "copy",
         "singleLine": false
       },
       "keys": "ctrl+c"
-    },
-    {
-      "command": "paste",
-      "keys": "ctrl+v"
     },
     {
       "command": "find",
@@ -31,52 +31,45 @@
   "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
   "profiles": {
     "defaults": {
+      "colorScheme": "Raspberry",
       "cursorShape": "vintage",
+      "experimental.retroTerminalEffect": false,
       "font": {
-        "face": "Cascadia Code PL"
+        "face": "Cascadia Code",
+        "size": 11
       }
     },
     "list": [
       {
-        "colorScheme": "Raspberry",
-        "cursorShape": "vintage",
+        "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
         "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
         "hidden": false,
         "name": "Windows PowerShell"
       },
       {
+        "commandline": "%SystemRoot%\\System32\\cmd.exe",
         "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
         "hidden": false,
         "name": "Command Prompt"
       },
       {
-        "colorScheme": "Raspberry",
-        "commandline": "C:/Program Files/Git/bin/bash.exe",
-        "cursorShape": "vintage",
-        "guid": "{b736e90a-5c8f-49e5-825e-6eb3d2b5356f}",
-        "icon": "C:/Program Files/Git/mingw64/share/git/git-for-windows.ico",
-        "name": "Git Bash",
-        "startingDirectory": "%USERPROFILE%",
-        "suppressApplicationTitle": true,
-        "tabTitle": "Git Bash"
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": false,
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
       },
       {
-        "colorScheme": "Raspberry",
-        "commandline": "powershell.exe -ExecutionPolicy ByPass -NoExit -Command \"& '%USERPROFILE%\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate '%USERPROFILE%\\miniconda3'\"",
-        "cursorShape": "vintage",
-        "guid": "{716bb24d-ef4c-4540-8eee-984f24684d5e}",
-        "icon": "%USERPROFILE%\\Documents\\icons\\anaconda-navigator.ico",
-        "name": "Miniconda",
-        "startingDirectory": "%USERPROFILE%"
+        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+        "hidden": false,
+        "name": "Ubuntu",
+        "source": "Windows.Terminal.Wsl"
       },
       {
-        "colorScheme": "Raspberry",
-        "commandline": "powershell.exe -ExecutionPolicy ByPass -NoExit -Command \"& '%USERPROFILE%\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'G:\\Documents\\ArcGIS\\ArcGIS\\arcgispro-py3-clone'\"",
-        "cursorShape": "vintage",
-        "guid": "{e1e3667b-a5a6-45ad-8ea2-9409be7ba466}",
-        "icon": "%USERPROFILE%\\Documents\\icons\\anaconda-navigator.ico",
-        "name": "ArcGIS Pro",
-        "startingDirectory": "G:\\Documents\\ArcGIS"
+        "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "elevate": true,
+        "guid": "{7989e1b8-7f84-461b-be2c-58bbbf4f5ac3}",
+        "hidden": false,
+        "name": "Windows PowerShell (Admin)"
       }
     ]
   },
@@ -126,29 +119,6 @@
       "selectionBackground": "#FFFFFF",
       "white": "#CCCCCC",
       "yellow": "#C19C00"
-    },
-    {
-      "background": "#FFFFFF",
-      "black": "#3C5712",
-      "blue": "#17B2FF",
-      "brightBlack": "#749B36",
-      "brightBlue": "#27B2F6",
-      "brightCyan": "#13A8C0",
-      "brightGreen": "#89AF50",
-      "brightPurple": "#F2A20A",
-      "brightRed": "#F49B36",
-      "brightWhite": "#741274",
-      "brightYellow": "#991070",
-      "cursorColor": "#000000",
-      "cyan": "#3C96A6",
-      "foreground": "#000000",
-      "green": "#6AAE08",
-      "name": "Frost",
-      "purple": "#991070",
-      "red": "#8D0C0C",
-      "selectionBackground": "#FFFFFF",
-      "white": "#6E386E",
-      "yellow": "#991070"
     },
     {
       "background": "#282C34",
@@ -334,6 +304,5 @@
       "white": "#C0C0C0",
       "yellow": "#808000"
     }
-  ],
-  "theme": "dark"
+  ]
 }

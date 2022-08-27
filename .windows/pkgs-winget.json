@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-  "CreationDate": "2022-04-28T02:03:49.242-00:00",
+  "CreationDate": "2022-08-27T14:31:54.425-00:00",
   "Sources": [
     {
       "Packages": [
@@ -11,85 +11,52 @@
           "PackageIdentifier": "7zip.7zip"
         },
         {
-          "PackageIdentifier": "Git.Git"
+          "PackageIdentifier": "Canonical.Ubuntu"
         },
         {
-          "PackageIdentifier": "KDE.Kate"
+          "PackageIdentifier": "Mozilla.Firefox.DeveloperEdition"
         },
         {
           "PackageIdentifier": "Microsoft.Edge"
         },
         {
-          "PackageIdentifier": "Microsoft.EdgeWebView2Runtime"
-        },
-        {
           "PackageIdentifier": "Microsoft.WindowsTerminal"
         },
         {
-          "PackageIdentifier": "Mozilla.Firefox"
+          "PackageIdentifier": "Microsoft.Office"
         },
         {
           "PackageIdentifier": "KDE.Okular"
         },
         {
-          "PackageIdentifier": "Microsoft.OneDrive"
-        },
-        {
-          "PackageIdentifier": "Rufus.Rufus"
-        },
-        {
           "PackageIdentifier": "Valve.Steam"
         },
         {
-          "PackageIdentifier": "Microsoft.Teams"
-        },
-        {
-          "PackageIdentifier": "Microsoft.VC++2013Redist-x64"
-        },
-        {
-          "PackageIdentifier": "Microsoft.VC++2010Redist-x64"
-        },
-        {
-          "PackageIdentifier": "Cloudflare.Warp"
-        },
-        {
-          "PackageIdentifier": "Microsoft.VC++2015-2019Redist-x64"
-        },
-        {
-          "PackageIdentifier": "Microsoft.dotnetRuntime.3-x64"
-        },
-        {
-          "PackageIdentifier": "Microsoft.VC++2008Redist-x64"
-        },
-        {
-          "PackageIdentifier": "Microsoft.WindowsPCHealthCheck"
-        },
-        {
-          "PackageIdentifier": "TheDocumentFoundation.LibreOffice"
-        },
-        {
-          "PackageIdentifier": "Microsoft.VC++2015-2019Redist-x86"
+          "PackageIdentifier": "Microsoft.VC++2015-2022Redist-x64"
         },
         {
           "PackageIdentifier": "KeePassXCTeam.KeePassXC"
         },
         {
-          "PackageIdentifier": "Microsoft.VC++2013Redist-x86"
+          "PackageIdentifier": "Nvidia.GeForceExperience"
         },
         {
-          "PackageIdentifier": "Microsoft.XNARedist"
+          "PackageIdentifier": "Nvidia.PhysX"
         },
         {
-          "PackageIdentifier": "Anaconda.Miniconda3"
+          "PackageIdentifier": "Microsoft.VC++2015-2022Redist-x64"
+        },
+        {
+          "PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.6"
         }
       ],
       "SourceDetails": {
-        "Argument": "https://winget.azureedge.net/cache",
+        "Argument": "https://cdn.winget.microsoft.com/cache",
         "Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
         "Name": "winget",
         "Type": "Microsoft.PreIndexed.Package"
       }
     }
   ],
-  "WinGetVersion": "1.2.10271"
+  "WinGetVersion": "1.3.2091"
 }
