@@ -11,12 +11,18 @@ done > .vscode/extensions.txt
 # copy other settings
 cp ~/.zshrc .linux/.zshrc
 cp ~/.local/share/konsole/*.profile .linux/konsole/
-cp ~/.kde4/share/config/kdeglobals .linux/kdeglobals.conf
 cp ~/.local/share/kxmlgui5/okular/part.rc .linux/okular-part.xml
+cp ~/.config/user-dirs.dirs .linux/user-dirs.conf
+cp ~/.config/spectaclerc .linux/spectacle.conf
+cp ~/.config/kglobalshortcutsrc .linux/kglobalshortcutsrc.conf
 
 # list of packages
 pacman -Qqen > .linux/pkgs.txt
 pacman -Qqem > .linux/pkgs-aur.txt
+
+# Zotero
+ls -1 ~/.zotero/zotero/*/extensions/ > .zotero/extensions.txt
+cp ~/.zotero/zotero/*/prefs.js .zotero/prefs.js
 # fi
 
 # symlink all notes into wiki

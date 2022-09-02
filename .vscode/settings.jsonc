@@ -222,8 +222,9 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "python.linting.pylintEnabled": true,
+  "notebook.output.textLineLimit": 200,
   "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
   "r.rpath.linux": "~/miniconda3/envs/r-env/bin/R",
   "[restructuredtext]": {
@@ -233,11 +234,18 @@
     "editor.tabSize": 2
   },
   "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.windows": "CondaPowerShell",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Code PL', 'Cascadia Code', 'SauceCodePro Nerd Font', 'Source Code Pro', monospace",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.profiles.windows": {
+    "CondaPowerShell": {
+      "path": "PowerShell",
+      "args": ["-file", "%USERPROFILE%\\Documents\\conda-init.ps1"]
+    }
+  },
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
   "workbench.colorTheme": "Kimbie Dark",

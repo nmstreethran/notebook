@@ -1,7 +1,6 @@
-# brave-bin
 # nerd-fonts-cascadia-code
 # nerd-fonts-source-code-pro
-# papirus-folders
+# nvidia-xrun-git
 # plasma5-themes-breath
 # python38
 # sysfetch-git

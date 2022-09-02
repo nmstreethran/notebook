@@ -1,9 +1,9 @@
 <?xml version='1.0'?>
-<!DOCTYPE gui>
-<gui name="okular_part" version="51">
+<!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
+<gui version="52" name="okular_part">
  <MenuBar>
-  <Menu noMerge="1" name="file">
-   <text translationDomain="okular">&amp;File</text>
+  <Menu name="file">
+   <text>&amp;File</text>
    <Action group="file_open" name="get_new_stuff"/>
    <Action group="file_open" name="import_ps"/>
    <Action group="file_save" name="file_save"/>
@@ -17,8 +17,8 @@
    <Action group="file_print" name="file_export_as"/>
    <Action group="file_print" name="file_share"/>
   </Menu>
-  <Menu noMerge="1" name="edit">
-   <text translationDomain="okular">&amp;Edit</text>
+  <Menu name="edit">
+   <text>&amp;Edit</text>
    <Action name="edit_undo"/>
    <Action name="edit_redo"/>
    <Separator/>
@@ -31,8 +31,8 @@
    <Action name="edit_find_next"/>
    <Action name="edit_find_prev"/>
   </Menu>
-  <Menu noMerge="1" name="view">
-   <text translationDomain="okular">&amp;View</text>
+  <Menu name="view">
+   <text>&amp;View</text>
    <Action name="presentation"/>
    <Separator/>
    <Action name="view_zoom_in"/>
@@ -44,8 +44,8 @@
    <Separator/>
    <Action name="view_render_mode"/>
    <Separator/>
-   <Menu noMerge="1" name="view_orientation">
-    <text translationDomain="okular">&amp;Orientation</text>
+   <Menu name="view_orientation">
+    <text>&amp;Orientation</text>
     <Action name="view_orientation_rotate_ccw"/>
     <Action name="view_orientation_rotate_cw"/>
     <Action name="view_orientation_original"/>
@@ -54,8 +54,8 @@
    <Separator/>
    <Action name="view_toggle_forms"/>
   </Menu>
-  <Menu noMerge="1" name="go">
-   <text translationDomain="okular">&amp;Go</text>
+  <Menu name="go">
+   <text>&amp;Go</text>
    <Action name="go_previous"/>
    <Action name="go_next"/>
    <Separator/>
@@ -67,8 +67,8 @@
    <Separator/>
    <Action name="go_goto_page"/>
   </Menu>
-  <Menu noMerge="1" name="bookmarks">
-   <text translationDomain="okular">&amp;Bookmarks</text>
+  <Menu name="bookmarks">
+   <text>&amp;Bookmarks</text>
    <Action name="bookmark_add"/>
    <Action name="rename_bookmark"/>
    <Action name="previous_bookmark"/>
@@ -76,8 +76,8 @@
    <Separator/>
    <ActionList name="bookmarks_currentdocument"/>
   </Menu>
-  <Menu noMerge="1" name="tools">
-   <text translationDomain="okular">&amp;Tools</text>
+  <Menu name="tools">
+   <text>&amp;Tools</text>
    <Action name="mouse_drag"/>
    <Action name="mouse_zoom"/>
    <Action name="mouse_select"/>
@@ -94,41 +94,24 @@
    <Action name="speak_stop_all"/>
    <Action name="speak_pause_resume"/>
   </Menu>
-  <Menu noMerge="1" name="settings">
-   <text translationDomain="okular">&amp;Settings</text>
+  <Menu name="settings">
+   <text>&amp;Settings</text>
+   <Action group="show_merge" name="colorscheme_menu"/>
    <Action group="show_merge" name="show_leftpanel"/>
    <Action group="show_merge" name="show_bottombar"/>
    <Action group="configure_merge" name="options_configure_generators"/>
    <Action group="configure_merge" name="options_configure"/>
   </Menu>
-  <Menu noMerge="1" name="help">
-   <text translationDomain="okular">&amp;Help</text>
+  <Menu name="help">
+   <text>&amp;Help</text>
    <Action group="about_merge" name="help_about_backend"/>
   </Menu>
  </MenuBar>
- <ToolBar noMerge="1" name="mainToolBar">
-  <text translationDomain="okular">Main Toolbar</text>
-  <Action name="show_leftpanel"/>
-  <Separator name="separator_0"/>
-  <Action name="mouse_drag"/>
-  <Action name="mouse_selecttools"/>
-  <Action name="mouse_toggle_annotate"/>
-  <Spacer name="spacer_0"/>
-  <Action name="view_orientation_rotate_ccw"/>
-  <Action name="page_number"/>
-  <Action name="view_orientation_rotate_cw"/>
-  <Spacer name="spacer_1"/>
-  <Action name="view_render_mode"/>
-  <Action name="zoom_to"/>
-  <Action name="color_mode_menu"/>
-  <Separator name="separator_1"/>
-  <Action name="hamburger_menu"/>
-  <Action name="properties"/>
+ <ToolBar position="right" iconText="icononly" hidden="true" name="quickAnnotationToolBar" newline="true" iconSize="32">
+  <text translationDomain="okular">Quick Annotation Toolbar</text>
+  <Action name="quick_annotation_action_bar"/>
  </ToolBar>
- <ActionProperties scheme="Default">
-  <Action name="show_leftpanel" priority="0"/>
- </ActionProperties>
- <ToolBar newline="true" name="annotationToolBar" iconText="icononly" hidden="true">
+ <ToolBar iconText="icononly" hidden="true" name="annotationToolBar" newline="true">
   <text translationDomain="okular">Annotation Toolbar</text>
   <Action name="annotation_highlighter"/>
   <Action name="annotation_underline"/>
@@ -153,8 +136,26 @@
   <Spacer/>
   <Action name="hide_annotation_toolbar"/>
  </ToolBar>
- <ToolBar newline="true" name="quickAnnotationToolBar" position="right" iconText="icononly" hidden="true" iconSize="32">
-  <text translationDomain="okular">Quick Annotation Toolbar</text>
-  <Action name="quick_annotation_action_bar"/>
+ <ToolBar noMerge="1" name="mainToolBar">
+  <text translationDomain="okular">Main Toolbar</text>
+  <Action name="show_leftpanel"/>
+  <Separator name="separator_0"/>
+  <Action name="mouse_drag"/>
+  <Action name="mouse_selecttools"/>
+  <Action name="mouse_toggle_annotate"/>
+  <Spacer name="spacer_0"/>
+  <Action name="view_orientation_rotate_ccw"/>
+  <Action name="page_number"/>
+  <Action name="view_orientation_rotate_cw"/>
+  <Spacer name="spacer_1"/>
+  <Action name="view_render_mode"/>
+  <Action name="zoom_to"/>
+  <Action name="color_mode_menu"/>
+  <Separator name="separator_1"/>
+  <Action name="hamburger_menu"/>
+  <Action name="properties"/>
  </ToolBar>
+ <ActionProperties scheme="Default">
+  <Action priority="0" name="show_leftpanel"/>
+ </ActionProperties>
 </gui>

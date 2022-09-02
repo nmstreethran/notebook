@@ -1,4 +1,5 @@
 brave-bin
+icaclient
 inxi
 papirus-folders-git
 teams-for-linux

@@ -114,46 +114,46 @@ fc-cache --force
 # https://docs.citrix.com/en-us/citrix-workspace-app-for-linux/install.html#tarball-packages
 # https://wiki.archlinux.org/title/Citrix#TLS/SSL_Certificates
 # https://askubuntu.com/a/830129
-mkdir ~/Downloads/Citrix
-mv linuxx64-*.tar.gz ~/Downloads/Citrix/
-cd ~/Downloads/Citrix
-tar xzvf linuxx64-*.tar.gz
-./setupwfc
-# configure $ICAROOT
-echo '
-# Citrix Workspace - ICAClient
-export ICAROOT=~/ICAClient/linuxx64/' >> ~/.zshrc
-source ~/.zshrc
-# configure certificates
-mkdir -p $ICAROOT/keystore/cacerts/
-cd $ICAROOT/keystore/cacerts/
-cp /etc/ca-certificates/extracted/tls-ca-bundle.pem .
-awk 'BEGIN {c=0;} /BEGIN CERT/{c++} { print > "cert." c ".pem"}' < tls-ca-bundle.pem
-openssl rehash $ICAROOT/keystore/cacerts/
-$ICAROOT/util/ctx_rehash
-# remove installation files
-rm -r ~/Downloads/Citrix
-# to reinstall or uninstall
-$ICAROOT/setupwfc
-# login to virtualapp on your browser and open the .ica file with Citrix
-# Workspace Engine
-# launching GUIs
-# ~/ICAClient/linuxx64/util/configmgr &
-# ~/ICAClient/linuxx64/selfservice
+# mkdir ~/Downloads/Citrix
+# mv linuxx64-*.tar.gz ~/Downloads/Citrix/
+# cd ~/Downloads/Citrix
+# tar xzvf linuxx64-*.tar.gz
+# ./setupwfc
+# # configure $ICAROOT
+# echo '
+# # Citrix Workspace - ICAClient
+# export ICAROOT=~/ICAClient/linuxx64/' >> ~/.zshrc
+# source ~/.zshrc
+# # configure certificates
+# mkdir -p $ICAROOT/keystore/cacerts/
+# cd $ICAROOT/keystore/cacerts/
+# cp /etc/ca-certificates/extracted/tls-ca-bundle.pem .
+# awk 'BEGIN {c=0;} /BEGIN CERT/{c++} { print > "cert." c ".pem"}' < tls-ca-bundle.pem
+# openssl rehash $ICAROOT/keystore/cacerts/
+# $ICAROOT/util/ctx_rehash
+# # remove installation files
+# rm -r ~/Downloads/Citrix
+# # to reinstall or uninstall
+# $ICAROOT/setupwfc
+# # login to virtualapp on your browser and open the .ica file with Citrix
+# # Workspace Engine
+# # launching GUIs
+# # ~/ICAClient/linuxx64/util/configmgr &
+# # ~/ICAClient/linuxx64/selfservice
 
 # Docker
 # https://wiki.archlinux.org/title/Docker#Installation
 # sudo pacman -Syu docker
-sudo gpasswd -a nms docker
+# sudo gpasswd -a nms docker
 
 # enable multilib repositories
 # https://wiki.archlinux.org/title/Official_repositories#multilib
-sudo nano /etc/pacman.conf
-yay
+# sudo nano /etc/pacman.conf
+# yay
 
 # install Steam and fix graphics settings
 # https://wiki.archlinux.org/title/Steam
 # https://wiki.archlinux.org/title/Vulkan
 # https://redd.it/tqai5t
-cp /usr/share/applications/steam.desktop ~/.local/share/applications/steam.desktop
-nano ~/.local/share/applications/steam.desktop
+# cp /usr/share/applications/steam.desktop ~/.local/share/applications/steam.desktop
+# nano ~/.local/share/applications/steam.desktop
