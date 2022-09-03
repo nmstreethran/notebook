@@ -20,9 +20,14 @@ cp ~/.config/kglobalshortcutsrc .linux/kglobalshortcutsrc.conf
 pacman -Qqen > .linux/pkgs.txt
 pacman -Qqem > .linux/pkgs-aur.txt
 
+# Firefox
+cp ~/.mozilla/firefox/*.dev-edition-default/user.js .firefox/user.js
+# ls -1 ~/.mozilla/firefox/*.dev-edition-default/extensions/ | awk -e '/^[A-Za-z]/ { print }' > .firefox/extensions.txt
+jq '.addons[] | if (.id | test("^(?!.*mozilla).*$")) then ( {id: .id, name: .defaultLocale.name } ) else empty end ' ~/.mozilla/firefox/*.dev-edition-default/extensions.json > .firefox/extensions.json
+
 # Zotero
 ls -1 ~/.zotero/zotero/*/extensions/ > .zotero/extensions.txt
-cp ~/.zotero/zotero/*/prefs.js .zotero/prefs.js
+cp ~/.zotero/zotero/*/user.js .zotero/user.js
 # fi
 
 # symlink all notes into wiki

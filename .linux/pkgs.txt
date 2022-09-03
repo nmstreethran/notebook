@@ -24,6 +24,7 @@ grub
 gtk2
 gwenview
 intel-ucode
+jq
 jre-openjdk
 kate
 kde-gtk-config
