@@ -12,6 +12,7 @@ done > .vscode/extensions.txt
 cp ~/.zshrc .linux/.zshrc
 cp ~/.local/share/konsole/*.profile .linux/konsole/
 cp ~/.local/share/kxmlgui5/okular/part.rc .linux/okular-part.xml
+cp ~/.config/okularpartrc .linux/okularpartrc.conf
 cp ~/.config/user-dirs.dirs .linux/user-dirs.conf
 cp ~/.config/spectaclerc .linux/spectacle.conf
 cp ~/.config/kglobalshortcutsrc .linux/kglobalshortcutsrc.conf
@@ -21,12 +22,27 @@ pacman -Qqen > .linux/pkgs.txt
 pacman -Qqem > .linux/pkgs-aur.txt
 
 # Firefox
+# ls -1 ~/.mozilla/firefox/*.dev-edition-default/extensions/ |
+# awk -e '/^[A-Za-z]/ { print }' > .firefox/extensions.txt
+jq '
+    [.addons[] |
+    if (.id | test("^(?!.*mozilla).*$"))
+    then ({ id: .id, name: .defaultLocale.name })
+    else empty
+    end]
+' ~/.mozilla/firefox/*.dev-edition-default/extensions.json > \
+.firefox/extensions.json
 cp ~/.mozilla/firefox/*.dev-edition-default/user.js .firefox/user.js
-# ls -1 ~/.mozilla/firefox/*.dev-edition-default/extensions/ | awk -e '/^[A-Za-z]/ { print }' > .firefox/extensions.txt
-jq '.addons[] | if (.id | test("^(?!.*mozilla).*$")) then ( {id: .id, name: .defaultLocale.name } ) else empty end ' ~/.mozilla/firefox/*.dev-edition-default/extensions.json > .firefox/extensions.json
 
 # Zotero
-ls -1 ~/.zotero/zotero/*/extensions/ > .zotero/extensions.txt
+# ls -1 ~/.zotero/zotero/*/extensions/ > .zotero/extensions.txt
+jq '
+    [.addons[] |
+    if (.id | test("^(?!.*zoteroOpenOfficeIntegration).*$"))
+    then ({ id: .id, name: .defaultLocale.name })
+    else empty
+    end]
+' ~/.zotero/zotero/*/extensions.json > .zotero/extensions.json
 cp ~/.zotero/zotero/*/user.js .zotero/user.js
 # fi
 

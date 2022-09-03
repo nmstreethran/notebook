@@ -17,6 +17,7 @@ OS: [Arch Linux](https://archlinux.org/) with [KDE](https://kde.org/) Plasma / W
 - `.firefox`: Firefox settings and extensions
 - `.conda`: Anaconda environment configurations
 - `.windows`: list of packages installed from `winget` and other settings for Windows 11
+- `.zotero`: Zotero settings and extensions
 
 ## License and credits
 

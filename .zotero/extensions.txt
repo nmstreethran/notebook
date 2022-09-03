@@ -1,2 +1,0 @@
-better-bibtex@iris-advies.com.xpi
-zotfile@columbia.edu.xpi

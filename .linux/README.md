@@ -6,9 +6,9 @@ $ neofetch
                   .o+`                   ---------------------
                  `ooo/                   OS: Arch Linux x86_64
                 `+oooo:                  Host: GF63 Thin 11UD REV:1.0
-               `+oooooo:                 Kernel: 5.15.62-1-lts
-               -+oooooo+:                Uptime: 7 hours, 24 mins
-             `/:-:++oooo+:               Packages: 1085 (pacman)
+               `+oooooo:                 Kernel: 5.15.63-1-lts
+               -+oooooo+:                Uptime: 7 days, 7 mins
+             `/:-:++oooo+:               Packages: 1095 (pacman)
             `/++++/+++++++:              Shell: bash 5.1.16
            `/++++++++++++++:             Resolution: 1920x1080
           `/+++ooooooooooooo/`           DE: Plasma 5.25.4
@@ -19,7 +19,7 @@ $ neofetch
      /ossssssss/        +ssssooo/-       CPU: 11th Gen Intel i7-11800H (16) @ 4.600GHz
    `/ossssso+/:-        -:/+osssso+-     GPU: Intel TigerLake-H GT1 [UHD Graphics]
   `+sso+:-`                 `.-/+oso:    GPU: NVIDIA GeForce RTX 3050 Ti Mobile
- `++:.                           `-/+/   Memory: 3103MiB / 7650MiB
+ `++:.                           `-/+/   Memory: 4765MiB / 7650MiB
  .`                                 `/
 ```
 
@@ -36,13 +36,6 @@ To get a list of explicitly installed packages:
 ```sh
 pacman -Qqen > .linux/pkgs.txt
 ```
-
-## Settings
-
-- `.zshrc` copied to `.linux/.zshrc`
-- Konsole profiles (`~/.local/share/konsole/*.profile`) - copied to `.linux/konsole/`
-- KDE global configurations (`~/.kde4/share/config/kdeglobals`) - copied to `.linux/kdeglobals.conf`
-- Okular configurations (`~/.local/share/kxmlgui5/okular/part.rc`) - copied to `.linux/okular-part.xml`
 
 ## Installation
 
