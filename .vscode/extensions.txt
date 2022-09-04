@@ -6,6 +6,5 @@ ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
 pkief.material-icon-theme
-reditorsupport.r-lsp
 streetsidesoftware.code-spell-checker
 yzhang.markdown-all-in-one
