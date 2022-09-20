@@ -222,6 +222,7 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
+  "notebook.diff.ignoreMetadata": true,
   "notebook.output.textLineLimit": 200,
   "python.linting.flake8Enabled": true,
   "python.linting.pylintEnabled": true,

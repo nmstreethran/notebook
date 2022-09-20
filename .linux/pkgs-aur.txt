@@ -1,4 +1,5 @@
 brave-bin
+grass
 icaclient
 inxi
 papirus-folders-git

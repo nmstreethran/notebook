@@ -2,6 +2,7 @@ adobe-source-sans-fonts
 alsa-firmware
 alsa-utils
 ark
+arrow
 autoconf
 automake
 base
@@ -44,13 +45,16 @@ linux-lts
 lshw
 m4
 make
+mariadb
 mesa-utils
 nano
 neofetch
+netcdf
 noto-fonts-cjk
 noto-fonts-emoji
 ntfs-3g
 okular
+openexr
 openssh
 os-prober
 pacman-contrib
@@ -64,11 +68,13 @@ plasma-desktop
 plasma-nm
 plasma-pa
 plasma-systemmonitor
+podofo
 powerdevil
 powerline
 powerline-fonts
 powertop
 pulseaudio-bluetooth
+python-cookiecutter
 python-pygments
 qgis
 ruby2.7
@@ -87,6 +93,7 @@ tlp
 tlp-rdw
 ttf-cascadia-code
 webkit2gtk
+wget
 which
 xorg-xinput
 yakuake

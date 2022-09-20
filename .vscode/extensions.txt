@@ -1,4 +1,5 @@
 davidanson.vscode-markdownlint
+editorconfig.editorconfig
 james-yu.latex-workshop
 mechatroner.rainbow-csv
 ms-python.python
