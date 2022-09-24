@@ -71,7 +71,7 @@ Go to Keyboard Shortcuts (`ctrl+k` `ctrl+s`) and paste the following in `keybind
 
 ### Git
 
-- [Using Version Control in VS Code](https://code.visualstudio.com/Docs/editor/versioncontrol)
+- [Using Version Control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview)
 
 ### Markdown
 

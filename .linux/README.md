@@ -55,3 +55,5 @@ pacman -Qqen > .linux/pkgs.txt
 - Connect computer to the internet using an ethernet cable
 - Follow the steps in `.linux/archlinux-install.sh`
 - See <https://wiki.archlinux.org/title/Installation_guide> for more info
+- When logged in to Windows, open Disk Management and unassign any drive letters for the two Linux partitions
+- Also open power management and turn off all hibernate options. Then, open PowerShell with administrative rights, and [run](https://learn.microsoft.com/en-us/troubleshoot/windows-client/deployment/disable-and-re-enable-hibernation) `powercfg.exe /hibernate off`. This will prevent Windows from blocking write access to drives when logged in to Linux.

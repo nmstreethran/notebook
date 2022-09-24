@@ -19,7 +19,7 @@ git config --global user.email "email"
 
 - <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>
 - <https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories>
-- <https://docs.gitlab.com/ee/ssh/index.html>
+- <https://docs.gitlab.com/ee/user/ssh.html>
 
 Check for existing SSH keys:
 
@@ -27,7 +27,7 @@ Check for existing SSH keys:
 ls -al ~/.ssh
 ```
 
-If no keys exist, generate a new key **[using ED25519 (recommended over RSA)](https://docs.gitlab.com/ee/ssh/index.html):**
+If no keys exist, generate a new key **[using ED25519 (recommended over RSA)](https://docs.gitlab.com/ee/user/ssh.html):**
 
 ```sh
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -417,16 +417,16 @@ Parameters:
 - `file_path` (required) - URL encoded full path to new file. e.g. `lib%2Fclass%2Erb` (replace `/` with `%2F`)
 - `ref` (required) - The name of branch, tag or commit
 
-Example for the file at <https://gitlab.com/renewables-forecasting/renewables-forecasting-data/-/blob/master/geography/polygons/bidding_zones.geojson>:
+Example for the file at <https://gitlab.com/renewables-forecasting/renewables-forecasting-data/-/blob/main/geography/polygons/bidding_zones.geojson>:
 
 - `file_path`: `geography%2Fpolygons%2Fbidding%5Fzones%2Egeojson`
-- `ref`: `master`
+- `ref`: `main`
 - `id`: `19753809`
 
 URL:
 
 ```text
-https://gitlab.com/api/v4/projects/19753809/repository/files/geography%2Fpolygons%2Fbidding%5Fzones%2Egeojson/raw?ref=master
+https://gitlab.com/api/v4/projects/19753809/repository/files/geography%2Fpolygons%2Fbidding%5Fzones%2Egeojson/raw?ref=main
 ```
 
 ### CI

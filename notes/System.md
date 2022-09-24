@@ -1,4 +1,4 @@
-## [Turn on or off secure boot](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot?view=windows-10)
+## [Turn on or off secure boot](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot?view=windows-11)
 
 Open the PC BIOS menu. You can often access this menu by pressing a key during the boot up sequence, such as `F1`, `F2`, `F12`, or `Esc`.
 
@@ -96,7 +96,7 @@ The Windows boot manager should now appear in the GRUB menu during startup.
 
 - <https://social.technet.microsoft.com/wiki/contents/articles/51782.fixing-corrupted-mbr-in-windows-10.aspx>
 - <https://wiki.archlinux.org/title/Dual_boot_with_Windows#Linux_before_Windows>
-- <https://docs.microsoft.com/en-us/windows/client-management/advanced-troubleshooting-boot-problems>
+- <https://learn.microsoft.com/en-us/windows/client-management/advanced-troubleshooting-boot-problems>
 - <https://www.linux.org/docs/man1/os-prober.html>
 
 ## Custom DNS
@@ -118,17 +118,30 @@ DNS over TLS or HTTPS: <https://www.cloudflare.com/en-gb/learning/dns/dns-over-t
 - In the section System Variables, find the **PATH** environment variable and select it. Click Edit. If the **PATH** environment variable does not exist, click New.
 - In the Edit System Variable (or New System Variable) window, specify the value of the **PATH** environment variable. Click OK. Close all remaining windows by clicking OK.
 
-### [Securely delete files on Windows 10 without third-party tools](https://www.techrepublic.com/article/how-to-securely-and-completely-delete-files-in-windows-10-without-third-party-software/)
-
-Using the [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete) Sysinternals software.
-
 ### [Closing windows that are open](https://superuser.com/a/81477)
 
 Ensure the window to be closed is in focus. Press `Alt` + `F4` to close.
 
-### [Editing hosts file - Windows 10](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)
+### [Editing hosts file](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)
 
 Open `c:\windows\system32\drivers\etc\hosts` as an administrator using a text editor.
+
+### USB flash drive issues
+
+USB flash drive not detected. When trying to format or assign it a different drive letter in Disk Management, you get the error "The system cannot find the file specified". When trying to delete the partition, an "unexpected error" occurs.
+
+To fix the issue, open a PowerShell session with administrator rights and run the following:
+
+```powershell
+diskpart
+list disk  # make note of the flash drive's disk number
+select disk <disknumber>
+clean
+select disk <disknumber>
+create partition primary
+```
+
+<https://answers.microsoft.com/en-us/windows/forum/all/disk-management-change-driver-letter-shows-it/002dd0db-e624-4c71-98ad-567f8f102dfc>
 
 ### Resetting PC on Windows 10
 
@@ -140,6 +153,10 @@ When reinstalling Windows 10, there are two options:
 When resetting, if there are multiple drives or partitions, it will ask if you want to clear all drives, or only the drive with Windows installed. Selecting the latter will only format the Windows drive.
 
 Source: <https://www.neowin.net/forum/topic/1266840-windows-10-reset-this-pc-will-it-delete-files-on-another-partition/>
+
+### [Securely delete files on Windows 10 without third-party tools](https://www.techrepublic.com/article/how-to-securely-and-completely-delete-files-in-windows-10-without-third-party-software/)
+
+Using the [SDelete](https://learn.microsoft.com/en-us/sysinternals/downloads/sdelete) Sysinternals software.
 
 ### [Computer shuts down or hibernates immediately after waking from sleep](https://www.dell.com/community/Laptops-General-Read-Only/Laptop-shuts-down-immediately-after-waking-from-sleep/td-p/5162536)
 
