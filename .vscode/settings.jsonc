@@ -31,6 +31,7 @@
     "microfluidics",
     "nithiya",
     "nmstreethran",
+    "parameterised",
     "phenomological",
     "photovoltaics",
     "prosumers",
@@ -75,6 +76,7 @@
       }
     ]
   },
+  "editor.unicodeHighlight.includeComments": true,
   "editor.wordWrap": "on",
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,

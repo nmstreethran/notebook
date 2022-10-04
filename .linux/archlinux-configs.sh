@@ -3,6 +3,12 @@
 # https://wiki.archlinux.org/title/General_recommendations
 # https://wiki.archlinux.org/title/System_maintenance
 
+# enable SysRq keys
+# https://wiki.archlinux.org/title/Keyboard_shortcuts#Kernel_(SysRq)
+# https://wiki.archlinux.org/title/Sysctl#Configuration
+# add kernel.sysrq=1 to the configuration file
+sudo nano /etc/sysctl.d/99-sysctl.conf
+
 # install and configure Zsh with powerline
 # https://wiki.archlinux.org/title/Zsh
 # https://wiki.archlinux.org/title/Powerline

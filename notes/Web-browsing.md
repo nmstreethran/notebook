@@ -11,3 +11,9 @@ Go to `about:debugging#/runtime/this-firefox` to open the extension console
 ### Crashes
 
 View and submit crash reports via `about:crashes`.
+
+### Executable file nag
+
+Go to `about:config` and set `browser.download.skipConfirmLaunchExecutable` to `true`.
+
+<https://superuser.com/a/1715460>

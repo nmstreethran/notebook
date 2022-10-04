@@ -11,8 +11,8 @@ winget export -o .\.windows\pkgs-winget.json
 Skyrim SE plugin list (`.windows/skyrimse-plugins.txt`) and load order (`.windows/skyrimse-loadorder.txt`) for mods managed with Vortex:
 
 ```powershell
-cp $HOME\AppData\Roaming\Vortex\skyrimse\profiles\yGZRItibI\plugins.txt .\.windows\skyrimse-plugins.txt
-cp $HOME\AppData\Roaming\Vortex\skyrimse\profiles\yGZRItibI\loadorder.txt .\.windows\skyrimse-loadorder.txt
+cp $HOME\AppData\Roaming\Vortex\skyrimse\profiles\HJcaJmmWi\plugins.txt .\.windows\skyrimse-plugins.txt
+cp $HOME\AppData\Roaming\Vortex\skyrimse\profiles\HJcaJmmWi\loadorder.txt .\.windows\skyrimse-loadorder.txt
 ```
 
 Windows Terminal settings are saved in `.windows/term-settings.json`.
