@@ -2,10 +2,10 @@ davidanson.vscode-markdownlint
 editorconfig.editorconfig
 james-yu.latex-workshop
 mechatroner.rainbow-csv
-ms-python.python
-ms-toolsai.jupyter
+ms-python.python-2022.16.1
+ms-toolsai.jupyter-2022.10.110
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
-pkief.material-icon-theme
+pkief.material-icon-theme-4.21.0
 streetsidesoftware.code-spell-checker-2.10.1
 yzhang.markdown-all-in-one

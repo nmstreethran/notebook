@@ -49,8 +49,14 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # SSH settings
-export SSH_ASKPASS=/usr/bin/ksshaskpass
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR"/ssh-agent.socket
+# export SSH_ASKPASS=/usr/bin/ksshaskpass
+# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
 
 # GPG key
 export GPG_TTY=$(tty)
+
+# PROJ
+export PROJ_LIB=/usr/share/proj

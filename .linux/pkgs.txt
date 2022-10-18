@@ -19,6 +19,7 @@ firefox
 firefox-developer-edition
 flex
 gcc
+git-filter-repo
 git-lfs
 groff
 grub
@@ -52,6 +53,7 @@ neofetch
 netcdf
 noto-fonts-cjk
 noto-fonts-emoji
+npm
 ntfs-3g
 okular
 openexr
@@ -97,4 +99,5 @@ wget
 which
 xorg-xinput
 yakuake
+zbar
 zsh
