@@ -369,6 +369,14 @@ To remove all cached versions of uninstalled packages:
 paccache -ruk0
 ```
 
+#### Yay
+
+Clean cache:
+
+```sh
+yay -Scc
+```
+
 #### Enable emoji fonts
 
 In a terminal emulator, type the following:

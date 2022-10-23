@@ -314,6 +314,32 @@ Source:
 
 ## Rewriting history
 
+### git filter-repo
+
+See the documentation: <https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html>
+
+Create a fresh clone of the repository to be cleaned.
+
+To remove all Jupyter notebooks in subdirectories:
+
+```sh
+git filter-repo --path-glob '*/*.ipynb' --invert-paths
+```
+
+After running the above, reconfigure the remote:
+
+```sh
+git remote add origin git@github.com:nmstreethran/charts.git
+```
+
+Then, force push the changes:
+
+```sh
+git push --set-upstream origin main --force
+```
+
+<https://stackoverflow.com/q/71577268>
+
 ### [Deleting commit history of a repository but keep the code in its current state](https://stackoverflow.com/a/26000395)
 
 Checkout:
@@ -392,6 +418,14 @@ pippo/pluto/*
 ```sh
 git config --global --add safe.directory '*'
 ```
+
+## List of all files that have ever existed in a repository
+
+```sh
+git log --all --pretty=format: --name-only --diff-filter=A | sort -u
+```
+
+<https://stackoverflow.com/q/543346>
 
 ## GitHub
 
@@ -489,10 +523,14 @@ git clone --recurse-submodules https://github.com/USERNAME/REPOSITORY.git
 git mv oldname newname
 ```
 
-### [Deinit old submodule, remove the directory and create a new submodule](https://stackoverflow.com/a/22309234)
+### Deinit old submodule, remove the directory and create a new submodule
 
 ```sh
-git submodule deinit ${submodule-name}
-git rm ${submodule-folder-name}
-git submodule add ${address-to-remote-git-repo} ${new-folder-name}
+git submodule deinit ${submodulename}
+git rm ${submodulename}
+git config -f .git/config --remove-section submodule.$submodulename
+git submodule add ${address-to-remote-git-repo} ${submodulename}
 ```
+
+- <https://stackoverflow.com/a/22309234>
+- <https://stackoverflow.com/q/1260748>
