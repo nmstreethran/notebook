@@ -53,7 +53,6 @@ neofetch
 netcdf
 noto-fonts-cjk
 noto-fonts-emoji
-npm
 ntfs-3g
 okular
 openexr
@@ -65,6 +64,10 @@ papirus-icon-theme
 partitionmanager
 patch
 perl-clone
+pipewire-alsa
+pipewire-audio
+pipewire-jack
+pipewire-pulse
 pkgconf
 plasma-desktop
 plasma-nm
@@ -75,7 +78,6 @@ powerdevil
 powerline
 powerline-fonts
 powertop
-pulseaudio-bluetooth
 python-cookiecutter
 python-pygments
 qgis
@@ -93,10 +95,14 @@ texlive-formatsextra
 texlive-latexextra
 tlp
 tlp-rdw
+tree
 ttf-cascadia-code
 webkit2gtk
 wget
 which
+wireplumber
+xdg-desktop-portal
+xdg-desktop-portal-kde
 xorg-xinput
 yakuake
 zbar

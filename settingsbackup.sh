@@ -4,9 +4,12 @@
 # if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 cp ~/.config/VSCodium/User/settings.json .vscode/settings.jsonc
 cp ~/.config/VSCodium/User/keybindings.json .vscode/keybindings.jsonc
-for dir in $(ls ~/.vscode-oss/extensions/);
-do echo ${dir%-*};
-done > .vscode/extensions.txt
+# for dir in $(ls -d ~/.vscode-oss/extensions/*/);
+# do echo ${dir%%/};
+# done > .vscode/extensions.txt
+cat ~/.vscode-oss/extensions/extensions.json | jq '
+    [.[] | { id: .identifier.id }] | sort_by(.id)
+' > .vscode/extensions.json
 
 # copy other settings
 cp ~/.zshrc .linux/.zshrc
@@ -16,6 +19,7 @@ cp ~/.config/okularpartrc .linux/okularpartrc.conf
 cp ~/.config/user-dirs.dirs .linux/user-dirs.conf
 cp ~/.config/spectaclerc .linux/spectacle.conf
 sed --in-place "/lastSaveLocation=/d" .linux/spectacle.conf
+sed --in-place "/window-position=/d" .linux/spectacle.conf
 cp ~/.config/kglobalshortcutsrc .linux/kglobalshortcutsrc.conf
 
 # list of packages
@@ -30,7 +34,7 @@ jq '
     if (.id | test("^(?!.*mozilla).*$"))
     then ({ id: .id, name: .defaultLocale.name })
     else empty
-    end]
+    end] | sort_by(.name)
 ' ~/.mozilla/firefox/*.dev-edition-default/extensions.json > \
 .firefox/extensions.json
 cp ~/.mozilla/firefox/*.dev-edition-default/user.js .firefox/user.js
@@ -42,7 +46,7 @@ jq '
     if (.id | test("^(?!.*zoteroOpenOfficeIntegration).*$"))
     then ({ id: .id, name: .defaultLocale.name })
     else empty
-    end]
+    end] | sort_by(.name)
 ' ~/.zotero/zotero/*/extensions.json > .zotero/extensions.json
 cp ~/.zotero/zotero/*/user.js .zotero/user.js
 # fi
