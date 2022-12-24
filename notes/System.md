@@ -96,7 +96,7 @@ The Windows boot manager should now appear in the GRUB menu during startup.
 
 - <https://social.technet.microsoft.com/wiki/contents/articles/51782.fixing-corrupted-mbr-in-windows-10.aspx>
 - <https://wiki.archlinux.org/title/Dual_boot_with_Windows#Linux_before_Windows>
-- <https://learn.microsoft.com/en-us/windows/client-management/advanced-troubleshooting-boot-problems>
+- <https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/windows-boot-issues-troubleshooting>
 - <https://www.linux.org/docs/man1/os-prober.html>
 
 ## Custom DNS
@@ -277,6 +277,24 @@ To enable a password prompt for applications that require administrative privile
 Use the `passwd` command
 
 <https://www.redhat.com/sysadmin/managing-users-passwd>
+
+### Audio timeout with WirePlumber
+
+To prevent this timeout, copy the configuration file to the user configs. Then, set the timeout value to zero: `["session.suspend-timeout-seconds"] = 0` (uncomment the line by removing the `--`, if necessary).
+
+```sh
+mkdir -p ~/.config/wireplumber/main.lua.d/
+cp /usr/share/wireplumber/main.lua.d/50-alsa-config.lua ~/.config/wireplumber/main.lua.d/
+nano ~/.config/wireplumber/main.lua.d/50-alsa-config.lua
+```
+
+After saving the config, restart the WirePlumber service:
+
+```sh
+systemctl --user restart wireplumber
+```
+
+Source: <https://unix.stackexchange.com/a/677000>
 
 ### KDE
 
@@ -543,100 +561,6 @@ sudo apt install packages
 ```
 
 </details>
-
-### Manjaro
-
-#### Pamac
-
-Install AUR packages using Pamac (<https://wiki.manjaro.org/index.php/Pamac>)
-
-To search for packages (the `-a` or `--aur` flag is used to search AUR):
-
-```sh
-pamac search -a vscodium
-```
-
-To install from AUR (NOTE: do not use `sudo`):
-
-```sh
-pamac build vscodium-bin
-```
-
-To uninstall:
-
-```sh
-pamac remove vscodium-bin
-```
-
-To identify installed packages:
-
-```sh
-pamac list -i
-```
-
-To display detailed package information:
-
-```sh
-pamac info -a smplayer
-```
-
-To search for available updates:
-
-```sh
-pamac checkupdates -a
-```
-
-To update all installed packages:
-
-```sh
-pamac upgrade -a
-```
-
-To list orphaned packages:
-
-```sh
-pamac list -o
-```
-
-To remove all orphaned packages:
-
-```sh
-pamac remove -o
-```
-
-To clean the package caches except the latest three package versions:
-
-```sh
-pamac clean --keep 3
-```
-
-To force reinstall a package:
-
-```sh
-pamac reinstall smplayer
-```
-
-To search which package owns a certain file:
-
-```sh
-pamac search -f /usr/bin/smplayer
-```
-
-#### [Downgrading packages](https://wiki.manjaro.org/index.php?title=Downgrading_packages)
-
-Install `downgrade`:
-
-```sh
-pamac install downgrade
-```
-
-To get a list of package versions available for installation:
-
-```sh
-sudo downgrade mysql-workbench
-```
-
-After the downgrade, add it to `IgnorePkg` to prevent automatic updates.
 
 ## Android
 

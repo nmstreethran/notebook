@@ -130,7 +130,7 @@ systemctl enable NetworkManager
 
 # install sound card firmware and configure volumes
 # https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture
-pacman -Syu alsa-utils alsa-firmware plasma-pa sof-firmware
+pacman -Syu alsa-utils alsa-firmware plasma-pa sof-firmware pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber
 # amixer sset Master unmute
 # amixer sset Speaker unmute
 # amixer sset Headphone unmute
@@ -138,7 +138,7 @@ pacman -Syu alsa-utils alsa-firmware plasma-pa sof-firmware
 # install Bluetooth libraries
 # https://wiki.archlinux.org/title/Bluetooth
 # https://bbs.archlinux.org/viewtopic.php?pid=1998583#p1998583
-pacman -Syu bluez-utils bluedevil pulseaudio-bluetooth
+pacman -Syu bluez-utils bluedevil
 systemctl enable bluetooth.service
 
 # enable NTFS support

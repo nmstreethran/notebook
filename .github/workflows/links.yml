@@ -20,12 +20,12 @@ jobs:
     # container: dkhamsing/awesome_bot  # Docker method
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       # begin Ruby gem method
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0
+          bundler-cache: true
       - name: Install awesome_bot and dependencies
         run: |
           gem install awesome_bot
