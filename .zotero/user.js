@@ -2,7 +2,7 @@
 
 user_pref("extensions.zotero.automaticSnapshots", false);
 user_pref("extensions.zotero.dataDir", "/home/nms/Zotero");
-user_pref("extensions.zotero.export.quickCopy.setting", "bibliography=the-open-university-harvard-modded");
+user_pref("extensions.zotero.export.quickCopy.setting", "bibliography=https://raw.githubusercontent.com/nmstreethran/csl-custom-styles/main/the-open-university-harvard-modified.csl");
 user_pref("extensions.zotero.export.translatorSettings", "{\"exportNotes\":false,\"exportFileData\":false,\"useJournalAbbreviation\":false,\"keepUpdated\":true,\"worker\":true,\"includeAnnotations\":false}");
 user_pref("extensions.zotero.fileHandler.pdf", "/bin/okular");
 user_pref("extensions.zotero.translators.better-bibtex.citekeyFormat", "authEtal2.lower + year.prefix(_)");

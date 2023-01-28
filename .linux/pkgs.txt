@@ -83,6 +83,7 @@ python-cookiecutter
 python-pygments
 qgis
 ruby2.7
+scrcpy
 sddm-kcm
 smplayer-themes
 sof-firmware

@@ -17,3 +17,9 @@ View and submit crash reports via `about:crashes`.
 Go to `about:config` and set `browser.download.skipConfirmLaunchExecutable` to `true`.
 
 <https://superuser.com/a/1715460>
+
+### Disable middle-click pasting from primary selections
+
+On Firefox, go to `about:config` and set `middlemouse.paste` to `false`.
+
+<https://askubuntu.com/a/1391599>

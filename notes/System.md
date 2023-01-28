@@ -296,6 +296,17 @@ systemctl --user restart wireplumber
 
 Source: <https://unix.stackexchange.com/a/677000>
 
+### Disable middle-click pasting from primary selections
+
+On Firefox, go to `about:config` and set `middlemouse.paste` to `false`.
+
+On VS Code, set `"editor.selectionClipboard": false`.
+
+- <https://askubuntu.com/a/1391599>
+- <https://unix.stackexchange.com/a/564349>
+- <https://unix.stackexchange.com/a/213843>
+- <https://bbs.archlinux.org/viewtopic.php?id=110361>
+
 ### KDE
 
 `baloo_file_extractor` using too much memory: go to System Settings > Search and disable file search
