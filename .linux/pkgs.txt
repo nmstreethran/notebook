@@ -23,8 +23,11 @@ git-filter-repo
 git-lfs
 groff
 grub
+gst-libav
+gst-plugins-good
 gtk2
 gwenview
+htop
 intel-ucode
 inxi
 jq
@@ -60,7 +63,7 @@ openexr
 openssh
 os-prober
 pacman-contrib
-pandoc
+pandoc-cli
 papirus-icon-theme
 partitionmanager
 patch
@@ -99,6 +102,7 @@ tlp
 tlp-rdw
 tree
 ttf-cascadia-code
+ttf-lato
 webkit2gtk
 wget
 which

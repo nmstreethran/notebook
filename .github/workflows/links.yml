@@ -1,18 +1,24 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+#
 # Check links in text files
 # https://github.com/dkhamsing/awesome_bot
 #
-# To automatically get bug fixes and new Ruby versions for
-# ruby/setup-ruby, use ruby/setup-ruby@v1
-# (see https://github.com/ruby/setup-ruby#versioning)
+# To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
+# use ruby/setup-ruby@v1
+# https://github.com/ruby/setup-ruby
+# https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
 
 name: test_links
 
 on:
   schedule:
     - cron: "0 5 24 3,6,9,12 *"
-  pull_request:
-    branches:
-      - main
+
+permissions:
+  contents: read
 
 jobs:
   test:
@@ -25,6 +31,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
+          ruby-version: "3.0"
           bundler-cache: true
       - name: Install awesome_bot and dependencies
         run: |

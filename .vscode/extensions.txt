@@ -1,0 +1,12 @@
+davidanson.vscode-markdownlint
+editorconfig.editorconfig
+james-yu.latex-workshop
+mechatroner.rainbow-csv
+ms-python.isort
+ms-python.python
+ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
+pkief.material-icon-theme
+streetsidesoftware.code-spell-checker
+yzhang.markdown-all-in-one

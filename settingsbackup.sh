@@ -7,9 +7,8 @@ cp ~/.config/VSCodium/User/keybindings.json .vscode/keybindings.jsonc
 # for dir in $(ls -d ~/.vscode-oss/extensions/*/);
 # do echo ${dir%%/};
 # done > .vscode/extensions.txt
-cat ~/.vscode-oss/extensions/extensions.json | jq '
-    [.[] | { id: .identifier.id }] | sort_by(.id)
-' > .vscode/extensions.json
+cat ~/.vscode-oss/extensions/extensions.json | \
+jq --raw-output '.[] | .identifier.id' | sort > .vscode/extensions.txt
 
 # copy other settings
 cp ~/.zshrc .linux/.zshrc
@@ -20,6 +19,8 @@ cp ~/.config/user-dirs.dirs .linux/user-dirs.conf
 cp ~/.config/spectaclerc .linux/spectacle.conf
 sed --in-place "/lastSaveLocation=/d" .linux/spectacle.conf
 sed --in-place "/window-position=/d" .linux/spectacle.conf
+sed --in-place "/SplitterSizes=/d" .linux/okularpartrc.conf
+sed --in-place "/ViewMode=/d" .linux/okularpartrc.conf
 cp ~/.config/kglobalshortcutsrc .linux/kglobalshortcutsrc.conf
 
 # list of packages

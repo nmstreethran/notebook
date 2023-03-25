@@ -4,6 +4,11 @@
   },
   "breadcrumbs.enabled": true,
   "cSpell.allowCompoundWords": true,
+  "cSpell.enableFiletypes": [
+    "bibtex",
+    "r",
+    "tex"
+  ],
   "cSpell.language": "en-GB",
   "cSpell.maxDuplicateProblems": 1,
   "cSpell.minWordLength": 1,
