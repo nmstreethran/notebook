@@ -236,6 +236,9 @@
   "notebook.diff.ignoreMetadata": true,
   "notebook.lineNumbers": "on",
   "notebook.output.textLineLimit": 200,
+  "[python]": {
+    "editor.formatOnType": true
+  },
   "python.linting.flake8Enabled": true,
   "python.linting.pylintEnabled": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
@@ -247,7 +250,7 @@
     "editor.tabSize": 2
   },
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Code PL', 'Cascadia Code', 'SauceCodePro Nerd Font', 'Source Code Pro', monospace",
   "terminal.integrated.fontSize": 16,

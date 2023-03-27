@@ -1,9 +1,11 @@
 {
   "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-  "CreationDate": "2022-08-27T14:31:54.425-00:00",
-  "Sources": [
+  "CreationDate": "2023-03-27T22:32:46.677-00:00",
+  "Sources":
+  [
     {
-      "Packages": [
+      "Packages":
+      [
         {
           "PackageIdentifier": "NexusMods.Vortex"
         },
@@ -11,16 +13,37 @@
           "PackageIdentifier": "7zip.7zip"
         },
         {
-          "PackageIdentifier": "Canonical.Ubuntu"
+          "PackageIdentifier": "Citrix.Workspace"
         },
         {
-          "PackageIdentifier": "Mozilla.Firefox.DeveloperEdition"
+          "PackageIdentifier": "Git.Git"
+        },
+        {
+          "PackageIdentifier": "GnuPG.GnuPG"
+        },
+        {
+          "PackageIdentifier": "Google.Chrome"
+        },
+        {
+          "PackageIdentifier": "GnuPG.Gpg4win"
+        },
+        {
+          "PackageIdentifier": "KDE.Kate"
         },
         {
           "PackageIdentifier": "Microsoft.Edge"
         },
         {
+          "PackageIdentifier": "Microsoft.EdgeWebView2Runtime"
+        },
+        {
           "PackageIdentifier": "Microsoft.WindowsTerminal"
+        },
+        {
+          "PackageIdentifier": "Mozilla.Firefox"
+        },
+        {
+          "PackageIdentifier": "Mozilla.Firefox.DeveloperEdition"
         },
         {
           "PackageIdentifier": "Microsoft.Office"
@@ -32,10 +55,19 @@
           "PackageIdentifier": "Valve.Steam"
         },
         {
-          "PackageIdentifier": "Microsoft.VC++2015-2022Redist-x64"
+          "PackageIdentifier": "Microsoft.OneDrive"
+        },
+        {
+          "PackageIdentifier": "Microsoft.Teams"
         },
         {
           "PackageIdentifier": "KeePassXCTeam.KeePassXC"
+        },
+        {
+          "PackageIdentifier": "DigitalScholar.Zotero"
+        },
+        {
+          "PackageIdentifier": "Microsoft.DotNet.Runtime.6"
         },
         {
           "PackageIdentifier": "Nvidia.GeForceExperience"
@@ -44,13 +76,26 @@
           "PackageIdentifier": "Nvidia.PhysX"
         },
         {
-          "PackageIdentifier": "Microsoft.VC++2015-2022Redist-x64"
+          "PackageIdentifier": "VSCodium.VSCodium"
         },
         {
-          "PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.6"
+          "PackageIdentifier": "Microsoft.VCRedist.2015+.x64"
+        },
+        {
+          "PackageIdentifier": "Microsoft.WindowsPCHealthCheck"
+        },
+        {
+          "PackageIdentifier": "Microsoft.VisualStudioCode"
+        },
+        {
+          "PackageIdentifier": "Dell.CommandUpdate.Universal"
+        },
+        {
+          "PackageIdentifier": "Microsoft.VCRedist.2015+.x64"
         }
       ],
-      "SourceDetails": {
+      "SourceDetails":
+      {
         "Argument": "https://cdn.winget.microsoft.com/cache",
         "Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
         "Name": "winget",
@@ -58,5 +103,5 @@
       }
     }
   ],
-  "WinGetVersion": "1.3.2091"
+  "WinGetVersion": "1.4.10173"
 }
