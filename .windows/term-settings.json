@@ -1,4 +1,4 @@
-{
+  {
   "$help": "https://aka.ms/terminal-documentation",
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "actions":
@@ -59,21 +59,24 @@
               "hidden": true,
               "icon": "C:/msys64/ucrt64.ico",
               "name": "UCRT64 / MSYS2",
-              "startingDirectory": "%USERPROFILE%"
+              "startingDirectory": "%USERPROFILE%",
+              "suppressApplicationTitle": true
           },
           {
               "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys",
               "guid": "{71160544-14d8-4194-af25-d05feeac7233}",
               "icon": "C:/msys64/msys2.ico",
               "name": "MSYS / MSYS2",
-              "startingDirectory": "%USERPROFILE%"
+              "startingDirectory": "%USERPROFILE%",
+              "suppressApplicationTitle": true
           },
           {
               "commandline": "C:/Program Files/Git/bin/bash.exe",
               "guid": "{b736e90a-5c8f-49e5-825e-6eb3d2b5356f}",
               "icon": "C:/Program Files/Git/mingw64/share/git/git-for-windows.ico",
               "name": "Git Bash",
-              "startingDirectory": "%USERPROFILE%"
+              "startingDirectory": "%USERPROFILE%",
+              "suppressApplicationTitle": true
           },
           {
               "commandline": "powershell.exe -ExecutionPolicy ByPass -NoExit -Command \"& '%USERPROFILE%\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate base\"",
@@ -93,7 +96,8 @@
           {
               "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
               "name": "Ubuntu",
-              "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+              "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
+              "suppressApplicationTitle": true
           },
           {
               "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
