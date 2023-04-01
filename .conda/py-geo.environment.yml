@@ -5,9 +5,22 @@ channels:
 dependencies:
   - python=3
   - geopandas
-  - matplotlib
   - rioxarray
   - rasterstats
-  - dask
-  - jupyterlab
+  - cfgrib
+  - netcdf4
+  - cartopy
+  - cdo  # unavailable on Windows; use Conda with WSL
+  - dask  # parallel computing
+  - pooch  # to download data
+  - matplotlib  # plotting tools
+  - nc-time-axis
+  - seaborn
+  - pyviz
+  - hvplot
+  - jupyterlab  # interactive notebooks
   - jupyter_bokeh
+  - pytest  # testing and linting
+  - flake8
+  - pylint
+  - black

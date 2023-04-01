@@ -105,7 +105,6 @@
     "**/env/lib64/**": true,
     "**/env/share/**": true
   },
-  "git.alwaysSignOff": true,
   "git.autofetch": true,
   "git.autoStash": true,
   "git.confirmSync": false,

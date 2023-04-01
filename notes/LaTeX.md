@@ -73,7 +73,7 @@ Source: <https://www.overleaf.com/learn>
 \graphicspath{{images/}}
 ```
 
-#### [Prevent image overflow in margins](https://github.com/jgm/pandoc/blob/master/data/templates/default.latex)
+#### [Prevent image overflow in margins](https://github.com/jgm/pandoc/blob/main/data/templates/default.latex)
 
 ```latex
 \makeatletter
@@ -98,7 +98,7 @@ Source: <https://www.overleaf.com/learn>
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 ```
 
-#### [Set default figure placement to `!htb`](https://github.com/jgm/pandoc/blob/master/data/templates/default.latex)
+#### [Set default figure placement to `!htb`](https://github.com/jgm/pandoc/blob/main/data/templates/default.latex)
 
 ```latex
 \makeatletter

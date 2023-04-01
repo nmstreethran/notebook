@@ -5,7 +5,7 @@
 References:
 
 - [HTML colour codes](https://htmlcolorcodes.com/)
-- [Percent colour codes](https://www.december.com/html/spec/colorper.html)
+- [Percent colour codes](https://johndecember.com/html/spec/colorper.html)
 - [Mozilla colour picker tool](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
 
 ### [Render whitespace when using `content`](https://stackoverflow.com/a/40963855)

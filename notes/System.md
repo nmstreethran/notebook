@@ -122,7 +122,7 @@ DNS over TLS or HTTPS: <https://www.cloudflare.com/en-gb/learning/dns/dns-over-t
 
 Ensure the window to be closed is in focus. Press `Alt` + `F4` to close.
 
-### [Editing hosts file](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)
+### [Editing hosts file](https://www.howtogeek.com/27350/beginner-geek-how-to-edit-your-hosts-file/)
 
 Open `c:\windows\system32\drivers\etc\hosts` as an administrator using a text editor.
 
@@ -172,7 +172,7 @@ These are added to the `.bashrc` or equivalent (shell startup) file, which can b
 echo export PATH=\"$(echo path/to/file/):\$PATH\" >> ~/.bashrc
 ```
 
-### [Editing hosts file](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/)
+### [Editing hosts file](https://www.howtogeek.com/27350/beginner-geek-how-to-edit-your-hosts-file/)
 
 Open `/etc/hosts` as an administrator using a text editor.
 
