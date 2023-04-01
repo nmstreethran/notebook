@@ -15,10 +15,7 @@ name: test_links
 
 on:
   schedule:
-    - cron: "0 5 24 3,6,9,12 *"
-
-permissions:
-  contents: read
+    - cron: "0 12 1 4,7,10,1 *"
 
 jobs:
   test:
