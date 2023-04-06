@@ -3,7 +3,7 @@
 List of packages installed through `winget` (`.windows/pkgs-winget.json`):
 
 ```powershell
-winget export --output .\.windows\pkgs-winget.json
+winget export --source winget --output .\.windows\pkgs-winget.json
 ```
 
 Skyrim SE plugin list (`.windows/skyrimse-plugins.txt`) and load order (`.windows/skyrimse-loadorder.txt`) for mods managed with Vortex:
@@ -15,11 +15,15 @@ cp $HOME\AppData\Roaming\Vortex\skyrimse\profiles\HJcaJmmWi\loadorder.txt .\.win
 
 Windows Terminal settings are saved in `.windows/term-settings.json`.
 
-## Development environment setup
+## Development environment in WSL
 
-- Install Windows Terminal
-- Install and set-up WSL: `wsl --install`
-- Install Visual Studio Code in Windows: `winget install vscode`
+- In PowerShell, install Visual Studio Code and WSL:
+
+  ```powershell
+  winget install vscode
+  wsl --install
+  ```
+
 - Install the WSL and Remote - SSH VS Code extensions locally in Windows
 - Install local VS Code extensions in WSL
 - Set up SSH (for authentication and signing) and Git in WSL:
@@ -37,7 +41,7 @@ Windows Terminal settings are saved in `.windows/term-settings.json`.
   ```
 
 - Add the SSH key to GitHub (authentication keys and signing keys must be added separately)
-- Install Miniconda in WSL (use the shell script to install)
+- Install Miniconda in WSL (use the Unix shell script to install)
 - Clone Git repositories in WSL using SSH
 - Launch VS Code by navigating to the Git repository directory and running `code .`
 
@@ -45,3 +49,22 @@ See:
 
 - <https://learn.microsoft.com/en-us/windows/wsl/>
 - <https://code.visualstudio.com/docs/remote/wsl>
+
+## Development environment in Windows
+
+- In PowerShell:
+
+  ```powershell
+  winget install vscode
+  winget install git.git
+  winget install githubdesktop
+  winget install github.cli
+  Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+  ```
+
+- In Git Bash:
+
+  ```sh
+  git config --global user.name "Your Name"
+  git config --global user.email "email@example.com"
+  ```

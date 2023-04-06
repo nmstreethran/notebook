@@ -89,15 +89,5 @@
     "key": "ctrl+m",
     "command": "markdown.extension.editing.toggleCodeSpan",
     "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "-workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
   }
 ]

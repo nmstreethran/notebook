@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-  "CreationDate": "2023-03-27T22:32:46.677-00:00",
+  "CreationDate": "2023-04-06T13:20:44.152-00:00",
   "Sources":
   [
     {
@@ -16,16 +16,13 @@
           "PackageIdentifier": "Citrix.Workspace"
         },
         {
+          "PackageIdentifier": "GitHub.GitHubDesktop"
+        },
+        {
           "PackageIdentifier": "Git.Git"
         },
         {
-          "PackageIdentifier": "GnuPG.GnuPG"
-        },
-        {
           "PackageIdentifier": "Google.Chrome"
-        },
-        {
-          "PackageIdentifier": "GnuPG.Gpg4win"
         },
         {
           "PackageIdentifier": "KDE.Kate"
@@ -70,28 +67,25 @@
           "PackageIdentifier": "Microsoft.DotNet.Runtime.6"
         },
         {
-          "PackageIdentifier": "Nvidia.GeForceExperience"
-        },
-        {
-          "PackageIdentifier": "Nvidia.PhysX"
-        },
-        {
-          "PackageIdentifier": "VSCodium.VSCodium"
+          "PackageIdentifier": "GitHub.cli"
         },
         {
           "PackageIdentifier": "Microsoft.VCRedist.2015+.x64"
         },
         {
-          "PackageIdentifier": "Microsoft.WindowsPCHealthCheck"
+          "PackageIdentifier": "Microsoft.VisualStudioCode"
         },
         {
-          "PackageIdentifier": "Microsoft.VisualStudioCode"
+          "PackageIdentifier": "Microsoft.WindowsPCHealthCheck"
         },
         {
           "PackageIdentifier": "Dell.CommandUpdate.Universal"
         },
         {
           "PackageIdentifier": "Microsoft.VCRedist.2015+.x64"
+        },
+        {
+          "PackageIdentifier": "Python.Python.3.10"
         }
       ],
       "SourceDetails":
