@@ -50,7 +50,7 @@ unset __conda_setup
 
 # SSH settings
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
+ssh-add
 
 # GPG key
 export GPG_TTY=$(tty)

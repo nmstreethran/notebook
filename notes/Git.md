@@ -6,14 +6,51 @@
 
 ## Setting up Git
 
+### Installing SSH libraries
+
+[Arch Linux](https://forum.manjaro.org/t/vscode-git-ssh-askpass-exec-usr-lib-ssh-ssh-askpass-no-such-file-or-directory/78787) (also create a symlink to enable VS Code to recognise it):
+
 ```sh
-git config --global user.name "username"
-git config --global user.email "email"
+sudo pacman -Syu ksshaskpass
+sudo ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
 ```
 
-## Credentials and authentication
+Ubuntu / WSL:
 
-### Setting up SSH
+```sh
+sudo apt install ssh-askpass keychain
+```
+
+Windows without WSL:
+
+- Use the SSH agent that comes with Git for Windows:
+
+  ```powershell
+  winget install git.git
+  ```
+
+- Alternatively, use [OpenSSH for Windows](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse):
+
+  ```sh
+  git config --global core.sshCommand "C:\Windows\System32\OpenSSH\ssh.exe"
+  ```
+
+  - [Set OpenSSH to run automatically](https://github.com/Microsoft/vscode/issues/13680#issuecomment-414841885). Go to Task Manager > Services > Open Services, find OpenSSH Authentication Agent > Properties > Startup Type > Automatic.
+
+- To revert to the SSH agent that comes with Git for Windows:
+
+  ```sh
+  git config --global core.sshCommand "C:\Program Files\Git\usr\bin\ssh.exe"
+  ```
+
+### Configure Git global user settings
+
+```sh
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+```
+
+### Setting up SSH keys
 
 [Using SSH keys](https://stackoverflow.com/a/34957424):
 
@@ -30,19 +67,45 @@ ls -al ~/.ssh
 If no keys exist, generate a new key **[using ED25519 (recommended over RSA)](https://docs.gitlab.com/ee/user/ssh.html):**
 
 ```sh
-ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "<comment>"
 ```
 
 When prompted to "Enter a file in which to save the key", press `Enter` to use the default file name, or specify a custom file name. Then, type a secure passphrase.
 
-Start the ssh-agent and add your private key (if using non-default file path):
+Add the following to `~/.bashrc` or equivalent:
+
+```sh
+eval $(ssh-agent)
+ssh-add
+```
+
+If using WSL or Ubuntu, add the following:
+
+```sh
+eval $(ssh-agent)
+eval `keychain --eval`
+ssh-add
+```
+
+Start the ssh-agent and add your private key:
 
 ```sh
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
+eval `keychain --eval`  # only if using WSL / Ubuntu
+ssh-add
 ```
 
-Copy the SSH public key to your clipboard (saved at `~/.ssh/id_ed25519.pub`). Go to 'SSH and GPG keys' in your GitHub account settings. Select 'New SSH key', add a descriptive label in the 'Title' field, and paste the SSH key in the 'Key' field.
+Copy the SSH public key to your clipboard (saved at `~/.ssh/id_ed25519.pub`) and add to GitHub/GitLab. The key can be used for authentication, signing, or both.
+
+### Configure SSH key for signing commits
+
+```sh
+git config --global commit.gpgsign true
+git config --global gpg.format ssh
+git config --global user.signingkey ~/.ssh/id_ed25519.pub
+```
+
+### Updating remote URLs
 
 List existing remote URLs for your local repository:
 
@@ -136,7 +199,7 @@ sudo pacman -Syu ksshaskpass
 sudo ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
 ```
 
-If you get a similar error to the [following](https://superuser.com/a/421084):
+If you get a similar warning to the [following](https://superuser.com/a/421084):
 
 ```text
 The authenticity of host 'bitbucket.org (207.223.240.181)' can't be established.
@@ -157,7 +220,7 @@ See also: <https://forum.manjaro.org/t/howto-use-kwallet-as-a-login-keychain-for
 
 On Windows, the default SSH key path is `$HOME\.ssh`. `$HOME` is usually `C:\Users\%USERNAME%`.
 
-[Comment](https://github.com/Microsoft/vscode/issues/13680#issuecomment-414841885) by GitHub user **whatsyourgithub** to fix SSH issues on Windows:
+[To fix SSH issues on Windows](https://github.com/Microsoft/vscode/issues/13680#issuecomment-414841885):
 
 > Make Git use the OpenSSH that comes with Windows instead of the one that comes with Git.
 >
@@ -497,9 +560,9 @@ git remote rm docs
 2. ***push the changes to the submodule's branch***
 3. ***push to the main code repository***
 
-### Including wiki in the main code repository as a submodule
+### Including a submodule
 
-Add the wiki to the main repository as a submodule (replace `username` and `repository` with username and repository name respectively):
+Add a GitHub wiki to the main repository as a submodule (replace `username` and `repository` with username and repository name respectively):
 
 ```sh
 git submodule add https://github.com/USERNAME/REPOSITORY.wiki.git wiki

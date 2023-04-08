@@ -43,7 +43,7 @@ See:
   ssh-keygen -t ed25519 -C "<comment>"
   eval "$(ssh-agent -s)"
   eval `keychain --eval`
-  ssh-add ~/.ssh/id_ed25519
+  ssh-add
   git config --global user.name "Your Name"
   git config --global user.email "email@example.com"
   git config --global commit.gpgsign true
@@ -54,10 +54,12 @@ See:
 - add the following to `.bashrc`
 
   ```sh
+  eval "$(ssh-agent -s)"
   eval `keychain --eval`
+  ssh-add
   ```
 
-- Add the SSH key to GitHub (authentication keys and signing keys must be added separately)
+- Add the SSH key to GitHub (authentication keys and signing keys must be added separately in GitHub)
 - Install Miniconda in WSL (use the Unix shell script to install)
 - Clone Git repositories in WSL using SSH
 - Launch VS Code by navigating to the Git repository directory and running `code .`
@@ -96,13 +98,14 @@ See:
 
     ```sh
     eval $(ssh-agent)
+    ssh-add
     ```
 
   - In Git Bash:
 
     ```sh
     eval $(ssh-agent)
-    ssh-add ~/.ssh/id_ed25519
+    ssh-add
     git config --global commit.gpgsign true
     git config --global gpg.format ssh
     git config --global user.signingkey ~/.ssh/id_ed25519.pub
@@ -114,16 +117,16 @@ See:
 
   - Configure Git to use OpenSSH:
 
-  ```sh
-  git config --global core.sshCommand "C:\Windows\System32\OpenSSH\ssh.exe"
-  eval $(ssh-agent)
-  ssh-add ~/.ssh/id_ed25519
-  ```
+    ```sh
+    git config --global core.sshCommand "C:\Windows\System32\OpenSSH\ssh.exe"
+    eval $(ssh-agent)
+    ssh-add
+    ```
 
   - To revert to the SSH agent supplied by Git for Windows:
 
     ```sh
     git config --global core.sshCommand "C:\Program Files\Git\usr\bin\ssh.exe"
     eval $(ssh-agent)
-    ssh-add ~/.ssh/id_ed25519
+    ssh-add
     ```
