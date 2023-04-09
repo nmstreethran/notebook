@@ -1,11 +1,9 @@
 {
   "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-  "CreationDate": "2023-04-06T13:20:44.152-00:00",
-  "Sources":
-  [
+  "CreationDate": "2023-04-09T23:03:14.711-00:00",
+  "Sources": [
     {
-      "Packages":
-      [
+      "Packages": [
         {
           "PackageIdentifier": "NexusMods.Vortex"
         },
@@ -67,6 +65,18 @@
           "PackageIdentifier": "Microsoft.DotNet.Runtime.6"
         },
         {
+          "PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.6"
+        },
+        {
+          "PackageIdentifier": "Microsoft.VCRedist.2015+.x86"
+        },
+        {
+          "PackageIdentifier": "Microsoft.VCRedist.2013.x64"
+        },
+        {
+          "PackageIdentifier": "Microsoft.VCRedist.2010.x64"
+        },
+        {
           "PackageIdentifier": "GitHub.cli"
         },
         {
@@ -86,10 +96,15 @@
         },
         {
           "PackageIdentifier": "Python.Python.3.10"
+        },
+        {
+          "PackageIdentifier": "Nvidia.GeForceExperience"
+        },
+        {
+          "PackageIdentifier": "Nvidia.PhysX"
         }
       ],
-      "SourceDetails":
-      {
+      "SourceDetails": {
         "Argument": "https://cdn.winget.microsoft.com/cache",
         "Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
         "Name": "winget",
