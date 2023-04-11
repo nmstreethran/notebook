@@ -11,7 +11,7 @@
 [Arch Linux](https://forum.manjaro.org/t/vscode-git-ssh-askpass-exec-usr-lib-ssh-ssh-askpass-no-such-file-or-directory/78787) (also create a symlink to enable VS Code to recognise it):
 
 ```sh
-sudo pacman -Syu ksshaskpass
+sudo pacman -Syu openssh kwalletmanager kwallet-pam ksshaskpass
 sudo ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
 ```
 
@@ -32,7 +32,7 @@ Windows without WSL:
 - Alternatively, use [OpenSSH for Windows](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse):
 
   ```sh
-  git config --global core.sshCommand "C:\Windows\System32\OpenSSH\ssh.exe"
+  git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
   ```
 
   - [Set OpenSSH to run automatically](https://github.com/Microsoft/vscode/issues/13680#issuecomment-414841885). Go to Task Manager > Services > Open Services, find OpenSSH Authentication Agent > Properties > Startup Type > Automatic.
@@ -40,7 +40,7 @@ Windows without WSL:
 - To revert to the SSH agent that comes with Git for Windows:
 
   ```sh
-  git config --global core.sshCommand "C:\Program Files\Git\usr\bin\ssh.exe"
+  git config --global core.sshCommand "C:/Program Files/Git/usr/bin/ssh.exe"
   ```
 
 ### Configure Git global user settings

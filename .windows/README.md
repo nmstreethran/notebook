@@ -6,13 +6,6 @@ List of packages installed through `winget` (`.windows/pkgs-winget.json`):
 winget export --source winget --output .\.windows\pkgs-winget.json
 ```
 
-Skyrim SE plugin list (`.windows/skyrimse-plugins.txt`) and load order (`.windows/skyrimse-loadorder.txt`) for mods managed with Vortex:
-
-```powershell
-cp $HOME\AppData\Roaming\Vortex\skyrimse\profiles\HJcaJmmWi\plugins.txt .\.windows\skyrimse-plugins.txt
-cp $HOME\AppData\Roaming\Vortex\skyrimse\profiles\HJcaJmmWi\loadorder.txt .\.windows\skyrimse-loadorder.txt
-```
-
 Windows Terminal settings are saved in `.windows/term-settings.json`.
 
 ## Development environments
@@ -73,6 +66,8 @@ See:
   winget install git.git
   winget install github.githubdesktop
   winget install github.cli
+  winget install github.gitlfs
+  winget install microsoft.powershell
   ```
 
 - In Git Bash:
@@ -130,3 +125,12 @@ See:
     eval $(ssh-agent)
     ssh-add
     ```
+
+## Other
+
+Skyrim SE plugin list (`.windows/skyrimse-plugins.txt`) and load order (`.windows/skyrimse-loadorder.txt`) for mods managed with Vortex:
+
+```powershell
+cp $HOME\AppData\Roaming\Vortex\skyrimse\profiles\HJcaJmmWi\plugins.txt .\.windows\skyrimse-plugins.txt
+cp $HOME\AppData\Roaming\Vortex\skyrimse\profiles\HJcaJmmWi\loadorder.txt .\.windows\skyrimse-loadorder.txt
+```

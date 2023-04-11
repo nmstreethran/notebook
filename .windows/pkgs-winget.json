@@ -1,12 +1,9 @@
 {
   "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-  "CreationDate": "2023-04-09T23:03:14.711-00:00",
+  "CreationDate": "2023-04-11T20:50:43.002-00:00",
   "Sources": [
     {
       "Packages": [
-        {
-          "PackageIdentifier": "NexusMods.Vortex"
-        },
         {
           "PackageIdentifier": "7zip.7zip"
         },
@@ -14,10 +11,22 @@
           "PackageIdentifier": "Citrix.Workspace"
         },
         {
-          "PackageIdentifier": "GitHub.GitHubDesktop"
+          "PackageIdentifier": "Dell.CommandUpdate.Universal"
+        },
+        {
+          "PackageIdentifier": "DigitalScholar.Zotero"
         },
         {
           "PackageIdentifier": "Git.Git"
+        },
+        {
+          "PackageIdentifier": "GitHub.cli"
+        },
+        {
+          "PackageIdentifier": "GitHub.GitHubDesktop"
+        },
+        {
+          "PackageIdentifier": "GitHub.GitLFS"
         },
         {
           "PackageIdentifier": "Google.Chrome"
@@ -26,10 +35,52 @@
           "PackageIdentifier": "KDE.Kate"
         },
         {
+          "PackageIdentifier": "KDE.Okular"
+        },
+        {
+          "PackageIdentifier": "KeePassXCTeam.KeePassXC"
+        },
+        {
+          "PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.6"
+        },
+        {
+          "PackageIdentifier": "Microsoft.DotNet.Runtime.6"
+        },
+        {
           "PackageIdentifier": "Microsoft.Edge"
         },
         {
           "PackageIdentifier": "Microsoft.EdgeWebView2Runtime"
+        },
+        {
+          "PackageIdentifier": "Microsoft.Office"
+        },
+        {
+          "PackageIdentifier": "Microsoft.OneDrive"
+        },
+        {
+          "PackageIdentifier": "Microsoft.PowerShell"
+        },
+        {
+          "PackageIdentifier": "Microsoft.Teams"
+        },
+        {
+          "PackageIdentifier": "Microsoft.VCRedist.2010.x64"
+        },
+        {
+          "PackageIdentifier": "Microsoft.VCRedist.2013.x64"
+        },
+        {
+          "PackageIdentifier": "Microsoft.VCRedist.2015+.x64"
+        },
+        {
+          "PackageIdentifier": "Microsoft.VCRedist.2015+.x86"
+        },
+        {
+          "PackageIdentifier": "Microsoft.VisualStudioCode"
+        },
+        {
+          "PackageIdentifier": "Microsoft.WindowsPCHealthCheck"
         },
         {
           "PackageIdentifier": "Microsoft.WindowsTerminal"
@@ -41,67 +92,19 @@
           "PackageIdentifier": "Mozilla.Firefox.DeveloperEdition"
         },
         {
-          "PackageIdentifier": "Microsoft.Office"
-        },
-        {
-          "PackageIdentifier": "KDE.Okular"
-        },
-        {
-          "PackageIdentifier": "Valve.Steam"
-        },
-        {
-          "PackageIdentifier": "Microsoft.OneDrive"
-        },
-        {
-          "PackageIdentifier": "Microsoft.Teams"
-        },
-        {
-          "PackageIdentifier": "KeePassXCTeam.KeePassXC"
-        },
-        {
-          "PackageIdentifier": "DigitalScholar.Zotero"
-        },
-        {
-          "PackageIdentifier": "Microsoft.DotNet.Runtime.6"
-        },
-        {
-          "PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.6"
-        },
-        {
-          "PackageIdentifier": "Microsoft.VCRedist.2015+.x86"
-        },
-        {
-          "PackageIdentifier": "Microsoft.VCRedist.2013.x64"
-        },
-        {
-          "PackageIdentifier": "Microsoft.VCRedist.2010.x64"
-        },
-        {
-          "PackageIdentifier": "GitHub.cli"
-        },
-        {
-          "PackageIdentifier": "Microsoft.VCRedist.2015+.x64"
-        },
-        {
-          "PackageIdentifier": "Microsoft.VisualStudioCode"
-        },
-        {
-          "PackageIdentifier": "Microsoft.WindowsPCHealthCheck"
-        },
-        {
-          "PackageIdentifier": "Dell.CommandUpdate.Universal"
-        },
-        {
-          "PackageIdentifier": "Microsoft.VCRedist.2015+.x64"
-        },
-        {
-          "PackageIdentifier": "Python.Python.3.10"
+          "PackageIdentifier": "NexusMods.Vortex"
         },
         {
           "PackageIdentifier": "Nvidia.GeForceExperience"
         },
         {
           "PackageIdentifier": "Nvidia.PhysX"
+        },
+        {
+          "PackageIdentifier": "Python.Python.3.10"
+        },
+        {
+          "PackageIdentifier": "Valve.Steam"
         }
       ],
       "SourceDetails": {

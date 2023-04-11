@@ -148,6 +148,12 @@ pacman -Syu ntfs-3g
 # install basic utilities
 pacman -Syu kate firefox dolphin zsh yakuake
 
+# enable SysRq keys
+# https://wiki.archlinux.org/title/Keyboard_shortcuts#Kernel_(SysRq)
+# https://wiki.archlinux.org/title/Sysctl#Configuration
+# add kernel.sysrq=1 to the configuration file
+nano /etc/sysctl.d/99-sysctl.conf
+
 # exit the chroot environment
 exit
 

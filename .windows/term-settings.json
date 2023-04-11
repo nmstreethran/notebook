@@ -87,6 +87,7 @@
       {
         "commandline": "powershell.exe -ExecutionPolicy ByPass -NoExit -Command \"& '%USERPROFILE%\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate base\"",
         "guid": "{b073cd1c-da10-4862-9ce7-fc9e87d4310d}",
+        "hidden": true,
         "icon": "%USERPROFILE%\\Pictures\\icons\\conda.png",
         "name": "Conda (Windows)",
         "startingDirectory": "%USERPROFILE%"
@@ -101,18 +102,31 @@
       },
       {
         "colorScheme": "Ubuntu-ColorScheme",
-        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-        "hidden": false,
+        "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
         "name": "Ubuntu",
+        "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+      },
+      {
+        "colorScheme": "Ubuntu-ColorScheme",
+        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+        "hidden": true,
+        "name": "WSL",
         "source": "Windows.Terminal.Wsl",
         "suppressApplicationTitle": true
       },
       {
         "colorScheme": "One Half Dark",
         "guid": "{59d2bd70-f9a6-5353-baf7-81a6b2ad87d7}",
-        "hidden": false,
+        "hidden": true,
         "name": "ArcGIS Python Command Prompt",
-        "source": "ArcGIS"
+        "source": "ArcGIS",
+        "suppressApplicationTitle": true
+      },
+      {
+        "colorScheme": "Tango Dark",
+        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+        "name": "PowerShell",
+        "source": "Windows.Terminal.PowershellCore"
       }
     ]
   },
