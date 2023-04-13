@@ -44,7 +44,7 @@ See:
   git config --global user.signingkey ~/.ssh/id_ed25519.pub
   ```
 
-- add the following to `.bashrc`
+- Add the following to `~/.bashrc`
 
   ```sh
   eval "$(ssh-agent -s)"
@@ -113,7 +113,7 @@ See:
   - Configure Git to use OpenSSH:
 
     ```sh
-    git config --global core.sshCommand "C:\Windows\System32\OpenSSH\ssh.exe"
+    git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
     eval $(ssh-agent)
     ssh-add
     ```
@@ -121,7 +121,7 @@ See:
   - To revert to the SSH agent supplied by Git for Windows:
 
     ```sh
-    git config --global core.sshCommand "C:\Program Files\Git\usr\bin\ssh.exe"
+    git config --global core.sshCommand "C:/Program Files/Git/usr/bin/ssh.exe"
     eval $(ssh-agent)
     ssh-add
     ```

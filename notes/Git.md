@@ -184,7 +184,7 @@ Error when pushing using VS Code on Ubuntu:
 Git: ssh_askpass: exec(usr/lib/ssh/ssh_askpass): No such file or directory.
 ```
 
-Likely caused by OS update, which makes Git lose the passphrase of the SSH key. To solve the problem, run `eval $(ssh-agent)`, then `ssh-add ~/.ssh/id_ed25519`. It may require reinstallation of VS Code.
+Likely caused by OS update, which makes Git lose the passphrase of the SSH key. To solve the problem, run `eval $(ssh-agent)`, then `ssh-add`. It may require reinstallation of VS Code.
 
 If that doesn't work, [try reinstalling `ssh-askpass`](https://askubuntu.com/a/1196265):
 

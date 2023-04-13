@@ -12,6 +12,7 @@ bluedevil
 bluez-utils
 breeze-grub
 breeze-gtk
+capitaine-cursors
 dolphin
 efibootmgr
 fakeroot
@@ -38,6 +39,7 @@ keepassxc
 konsole
 kscreen
 ksshaskpass
+kvantum-theme-materia
 kwallet-pam
 kwalletmanager
 libertinus-font
@@ -51,6 +53,7 @@ lshw
 m4
 make
 mariadb
+materia-kde
 mesa-utils
 nano
 neofetch
@@ -62,6 +65,7 @@ okular
 openexr
 openssh
 os-prober
+oxygen
 pacman-contrib
 pandoc-cli
 papirus-icon-theme
