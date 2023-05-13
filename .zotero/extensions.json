@@ -4,7 +4,15 @@
     "name": "Better BibTex for Zotero"
   },
   {
+    "id": "zoteroshortdoi@wiernik.org",
+    "name": "DOI Manager"
+  },
+  {
     "id": "zotfile@columbia.edu",
     "name": "ZotFile"
+  },
+  {
+    "id": "date-from-last-modified@iris-advies.com",
+    "name": "Zotero Date From Last Modified"
   }
 ]
