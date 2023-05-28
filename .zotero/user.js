@@ -1,6 +1,6 @@
 /* https://kb.mozillazine.org/User.js_file */
 
-user_pref("extensions.zotero.automaticSnapshots", true);
+user_pref("extensions.zotero.automaticSnapshots", false);
 
 user_pref("extensions.zotero.dataDir", "/home/nms/Zotero");
 
