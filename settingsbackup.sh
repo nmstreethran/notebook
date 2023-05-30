@@ -22,6 +22,7 @@ sed --in-place "/window-position=/d" .linux/spectacle.conf
 sed --in-place "/SplitterSizes=/d" .linux/okularpartrc.conf
 sed --in-place "/ViewMode=/d" .linux/okularpartrc.conf
 cp ~/.config/kglobalshortcutsrc .linux/kglobalshortcutsrc.conf
+cp ~/.xscreensaver .linux/.xscreensaver
 
 # list of packages
 pacman -Qqen > .linux/pkgs.txt

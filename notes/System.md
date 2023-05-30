@@ -452,6 +452,44 @@ Install an appropriate emoji font, such as `noto-fonts-emoji`.
 
 <https://forum.manjaro.org/t/howto-enable-emoji-fonts/36695>
 
+#### Screensaver
+
+- Installation: `yay xscreensaver-arch-logo`
+- Configure screensaver using `xscreensaver & xscreensaver-settings`, which will also generate a `~/.xscreensaver` file that can be manually edited
+  - 'Blank After' or `timeout` is the time it takes for the screen to lock, e.g. 5 minutes
+  - 'Lock Screen After' or `lockTimeout` should be checked and set to zero
+  - Configure display energy saving (DPMS)
+- Configure KDE built-in settings:
+  - "Workspace Behaviour / Screen Locking / Lock automatically"
+  - "Workspace Behaviour / Screen Locking / After waking from sleep"
+  - "Workspace Behaviour / Screen Locking / Keyboard shortcut"
+  - "Hardware / Power Management / Screen Energy Saving"
+  - "Hardware / Power Management / Suspend session"
+  - "Hardware / Power Management / Laptop lid closed" = Do Nothing
+- Autostart: `cp /usr/share/applications/xscreensaver.desktop ~/.config/autostart/`
+- Additional configurations for KDE: run `systemctl edit --user plasma-ksmserver.service` and replace the contents with the following:
+  ```
+  [Service]
+  ExecStart=
+  ExecStart=/usr/bin/ksmserver --no-lockscreen
+  ```
+- Set the `Meta+L` keyboard shortcut for the command `xscreensaver-command -lock`
+- Set a video clip (or a `.m3u` playlist) as the screensaver through `mpv` using the `~/.xscreensaver` file, e.g.:
+  ```
+  "Video"  mpv --really-quiet --no-audio --fs --loop=inf   \
+                --no-stop-screensaver --shuffle            \
+                --wid=$XSCREENSAVER_WINDOW                 \
+                path/to/video/clip.mp4                   \n\
+  ```
+- Consider reviewing the [security concerns](https://man.archlinux.org/man/xscreensaver.1#SECURITY_CONCERNS)
+
+Links:
+
+- <https://wiki.archlinux.org/title/XScreenSaver>
+- <https://man.archlinux.org/man/xscreensaver.1#INSTALLING_XSCREENSAVER_ON_KDE>
+- <https://www.jwz.org/xscreensaver/faq.html>
+- <https://raspberrypi.stackexchange.com/a/67831>
+
 ### Ubuntu notes
 
 #### Install from PPA
