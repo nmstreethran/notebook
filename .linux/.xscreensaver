@@ -2,48 +2,48 @@
 # Written by xscreensaver-settings 6.06 for nms on Mon May 29 21:42:40 2023.
 # https://www.jwz.org/xscreensaver/
 
-timeout:										0:02:00
-cycle:											0:05:00
-lock:												True
-lockTimeout:								0:00:00
-passwdTimeout:							0:00:30
-visualID:										default
-installColormap:						True
-verbose:										False
-splash:											True
-splashDuration:							0:00:05
-demoCommand:								xscreensaver-settings
-nice:												10
-fade:												True
-unfade:											True
-fadeSeconds:								0:00:03
+timeout:			0:05:00
+cycle:				0:05:00
+lock:				True
+lockTimeout:			0:00:00
+passwdTimeout:			0:00:30
+visualID:			default
+installColormap:		True
+verbose:			False
+splash:				True
+splashDuration:			0:00:05
+demoCommand:			xscreensaver-settings
+nice:				10
+fade:				True
+unfade:				True
+fadeSeconds:			0:00:03
 ignoreUninstalledPrograms:	False
-dpmsEnabled:								False
-dpmsQuickOff:								False
-dpmsStandby:								0:10:00
-dpmsSuspend:								0:15:00
-dpmsOff:										12:00:00
-grabDesktopImages:					True
-grabVideoFrames:						False
-chooseRandomImages:					False
+dpmsEnabled:			False
+dpmsQuickOff:			False
+dpmsStandby:			0:10:00
+dpmsSuspend:			0:15:00
+dpmsOff:			12:00:00
+grabDesktopImages:		True
+grabVideoFrames:		False
+chooseRandomImages:		False
 imageDirectory:
 
-mode:												one
-selected:										0
+mode:				one
+selected:			0
 
-textMode:										literal
-textLiteral:								XScreenSaver
+textMode:			literal
+textLiteral:			XScreenSaver
 textFile:
-textProgram:								fortune
-textURL:										https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss
-dialogTheme:								borderlessblack
-settingsGeom:								0,29 0,29
+textProgram:			fortune
+textURL:			https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss
+dialogTheme:			borderlessblack
+settingsGeom:			0,29 0,29
 
 programs:								    \
-	"Video" 	mpv --really-quiet --no-audio --fs	    \
-						--loop=inf --no-stop-screensaver	    \
-						--shuffle --wid=$XSCREENSAVER_WINDOW	    \
-						/run/media/nms/Backup/Videos/aerial/comp_GMT329_117NC_401C_1037_IRELAND_TO_ASIA_v48_SDR_PS_FINAL_20180725_F0F6300_SDR_2K_HEVC.mov	    \n\
+  "Video" 			mpv --really-quiet --no-audio --fs	    \
+				--loop=inf --no-stop-screensaver	    \
+				--shuffle --wid=$XSCREENSAVER_WINDOW	    \
+				/run/media/nms/Backup/Videos/aerial/comp_GMT329_117NC_401C_1037_IRELAND_TO_ASIA_v48_SDR_PS_FINAL_20180725_F0F6300_SDR_2K_HEVC.mov	    \n\
 				maze --root				    \n\
   GL: 				superquadrics --root			    \n\
 				attraction --root			    \n\
@@ -294,5 +294,5 @@ programs:								    \
   GL: 				squirtorus --root			    \n\
 
 
-pointerHysteresis:					10
-authWarningSlack:						20
+pointerHysteresis:		10
+authWarningSlack:		20
