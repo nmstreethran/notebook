@@ -15,7 +15,7 @@ splashDuration:			0:00:05
 demoCommand:			xscreensaver-settings
 nice:				10
 fade:				True
-unfade:				True
+unfade:				False
 fadeSeconds:			0:00:03
 ignoreUninstalledPrograms:	False
 dpmsEnabled:			False
@@ -43,7 +43,7 @@ programs:								    \
   "Video" 			mpv --really-quiet --no-audio --fs	    \
 				--loop=inf --no-stop-screensaver	    \
 				--shuffle --wid=$XSCREENSAVER_WINDOW	    \
-				/run/media/nms/Backup/Videos/aerial/comp_GMT329_117NC_401C_1037_IRELAND_TO_ASIA_v48_SDR_PS_FINAL_20180725_F0F6300_SDR_2K_HEVC.mov	    \n\
+				/run/media/nms/Backup/Videos/aerial/earth.m3u	    \n\
 				maze --root				    \n\
   GL: 				superquadrics --root			    \n\
 				attraction --root			    \n\

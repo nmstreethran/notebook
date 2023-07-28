@@ -13,6 +13,7 @@ bluez-utils
 breeze-grub
 breeze-gtk
 capitaine-cursors
+conky
 dolphin
 efibootmgr
 fakeroot
@@ -34,11 +35,13 @@ inxi
 jq
 jre-openjdk
 kate
+kcalc
 kde-gtk-config
 keepassxc
 konsole
 kscreen
 ksshaskpass
+ksystemlog
 kvantum-theme-materia
 kwallet-pam
 kwalletmanager
@@ -89,6 +92,7 @@ powertop
 python-cookiecutter
 python-pygments
 qgis
+rsync
 ruby2.7
 scrcpy
 sddm-kcm
@@ -99,9 +103,11 @@ speedtest-cli
 sudo
 texinfo
 texlive-bibtexextra
+texlive-binextra
 texlive-fontsextra
 texlive-formatsextra
 texlive-latexextra
+texlive-xetex
 tlp
 tlp-rdw
 tree
