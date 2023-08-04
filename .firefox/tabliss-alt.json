@@ -2,69 +2,14 @@
   "locale": "en-GB",
   "widget/default-time": null,
   "widget/tC-W1fyam2z4": null,
+  "focus": false,
   "background": {
-    "id": "default-unsplash",
-    "key": "background/unsplash",
+    "id": "NY8DSjdglm_b",
+    "key": "background/image",
     "display": {
-      "luminosity": -0.5,
-      "blur": 0
+      "blur": 0,
+      "luminosity": -0.2
     }
-  },
-  "data/VQTVqenEBmsY": {
-    "columns": 1,
-    "links": [
-      {
-        "url": "https://email.ucc.ie",
-        "name": "",
-        "icon": "mail"
-      },
-      {
-        "url": "https://github.com/",
-        "icon": "_favicon"
-      },
-      {
-        "url": "https://uccireland-my.sharepoint.com/",
-        "icon": "cloud"
-      },
-      {
-        "url": "https://open.spotify.com/",
-        "icon": "_favicon"
-      },
-      {
-        "url": "https://scholar.google.com/",
-        "icon": "_favicon"
-      },
-      {
-        "url": "https://virtualapp.ucc.ie/",
-        "icon": "codesandbox"
-      },
-      {
-        "url": "https://libguides.ucc.ie/library",
-        "icon": "book-open"
-      },
-      {
-        "url": "https://teams.microsoft.com/",
-        "icon": "_favicon"
-      },
-      {
-        "url": "https://www.arcgis.com/",
-        "icon": "_favicon"
-      },
-      {
-        "url": "https://www.zotero.org/",
-        "icon": "_favicon"
-      },
-      {
-        "url": "https://en.wikipedia.org/wiki/Main_Page",
-        "icon": "_favicon"
-      },
-      {
-        "url": "https://www.google.com/maps",
-        "icon": "map"
-      }
-    ],
-    "visible": true,
-    "linkOpenStyle": false
   },
   "data/ciS_OfQeY91J": {
     "ip": "Fetching IP data...",
@@ -85,33 +30,42 @@
   },
   "widget/tvdIwg82DIQs": null,
   "widget/FK0GgA_wEaii": null,
-  "widget/82Sf0fdHrq25": {
-    "id": "82Sf0fdHrq25",
-    "key": "widget/weather",
-    "order": 3,
-    "display": {
-      "position": "topRight"
-    }
+  "data/82Sf0fdHrq25": {
+    "showDetails": true,
+    "units": "si",
+    "latitude": 51,
+    "longitude": -8
   },
-  "widget/VCoOcJ6achMc": {
-    "id": "VCoOcJ6achMc",
-    "key": "widget/literature-clock",
-    "order": 2,
-    "display": {
-      "position": "middleCentre",
-      "fontSize": 16
-    }
+  "data/VQTVqenEBmsY": {
+    "columns": 1,
+    "links": [
+      {
+        "url": "https://outlook.office.com/mail/",
+        "name": "",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://uccireland-my.sharepoint.com/personal/nstreethran_ucc_ie/_layouts/15/onedrive.aspx?view=0",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://open.spotify.com/",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://scholar.google.com/",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://teams.microsoft.com/",
+        "icon": "_favicon"
+      }
+    ],
+    "visible": true,
+    "linkOpenStyle": false
   },
   "widget/4LwrOA-3LAJN": null,
-  "data/default-unsplash": {
-    "by": "official",
-    "collections": "",
-    "featured": false,
-    "paused": false,
-    "search": "landscapes, animals",
-    "topics": "6sMVjTLSkeQ",
-    "timeout": 86400
-  },
+  "widget/s0pn1vOqnKqO": null,
   "widget/default-greeting": {
     "id": "default-greeting",
     "key": "widget/greeting",
@@ -146,12 +100,30 @@
     "showDayPeriod": true,
     "timeZone": null
   },
-  "focus": false,
-  "data/82Sf0fdHrq25": {
-    "showDetails": true,
-    "units": "si",
-    "latitude": 51.898,
-    "longitude": -8.4706
+  "data/default-greeting": {
+    "name": "Nithiya"
+  },
+  "widget/82Sf0fdHrq25": {
+    "id": "82Sf0fdHrq25",
+    "key": "widget/weather",
+    "order": 3,
+    "display": {
+      "position": "topRight"
+    }
+  },
+  "widget/VCoOcJ6achMc": {
+    "id": "VCoOcJ6achMc",
+    "key": "widget/literature-clock",
+    "order": 2,
+    "display": {
+      "position": "bottomCentre",
+      "fontSize": 16,
+      "fontFamily": ""
+    }
+  },
+  "data/VCoOcJ6achMc": {
+    "showBookAndAuthor": true,
+    "centerText": true
   },
   "timeZone": null,
   "version": 3

@@ -42,15 +42,10 @@
       "fontSize": 12
     }
   },
-  "data/qud_7ho1SDa1": {
-    "category": "funny"
-  },
+  "widget/qud_7ho1SDa1": null,
   "widget/a4944145-a912-4333-a848-0752d643ece7": null,
-  "data/7542a1fb-860a-4e18-9488-e0cc735d4815": {
-    "showDetails": true,
-    "units": "si",
-    "latitude": 51.898,
-    "longitude": -8.4706
+  "data/oljdbiPcz09V": {
+    "name": "Nithiya"
   },
   "widget/4mJW1UduUG3d": {
     "id": "4mJW1UduUG3d",
@@ -81,16 +76,7 @@
     }
   },
   "widget/47abf519-27b7-4dc1-86b8-213a3f70c36b": null,
-  "widget/qud_7ho1SDa1": {
-    "id": "qud_7ho1SDa1",
-    "key": "widget/quote",
-    "order": 6,
-    "display": {
-      "position": "bottomCentre",
-      "fontSize": 12,
-      "fontWeight": 400
-    }
-  },
+  "widget/BNZb5rtM1ZkP": null,
   "widget/7542a1fb-860a-4e18-9488-e0cc735d4815": {
     "id": "7542a1fb-860a-4e18-9488-e0cc735d4815",
     "key": "widget/weather",
@@ -127,6 +113,12 @@
       "fontSize": 16
     },
     "order": 2
+  },
+  "data/7542a1fb-860a-4e18-9488-e0cc735d4815": {
+    "showDetails": true,
+    "units": "si",
+    "latitude": 51,
+    "longitude": -8
   },
   "data/4mJW1UduUG3d": {
     "columns": 1,
@@ -183,6 +175,22 @@
       },
       {
         "url": "https://translate.google.com/",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://drive.google.com/drive/u/0/my-drive",
+        "icon": "cloud"
+      },
+      {
+        "url": "https://calendar.google.com/calendar/u/0/r",
+        "icon": "calendar"
+      },
+      {
+        "url": "https://www.reddit.com/",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://discord.com/channels/@me",
         "icon": "_favicon"
       }
     ],
