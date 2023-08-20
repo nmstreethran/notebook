@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-  "CreationDate": "2023-04-11T20:50:43.002-00:00",
+  "CreationDate": "2023-08-20T14:59:41.067-00:00",
   "Sources": [
     {
       "Packages": [
@@ -8,28 +8,13 @@
           "PackageIdentifier": "7zip.7zip"
         },
         {
-          "PackageIdentifier": "Citrix.Workspace"
-        },
-        {
-          "PackageIdentifier": "Dell.CommandUpdate.Universal"
+          "PackageIdentifier": "Canonical.Ubuntu.2204"
         },
         {
           "PackageIdentifier": "DigitalScholar.Zotero"
         },
         {
-          "PackageIdentifier": "Git.Git"
-        },
-        {
-          "PackageIdentifier": "GitHub.cli"
-        },
-        {
-          "PackageIdentifier": "GitHub.GitHubDesktop"
-        },
-        {
-          "PackageIdentifier": "GitHub.GitLFS"
-        },
-        {
-          "PackageIdentifier": "Google.Chrome"
+          "PackageIdentifier": "DuckDuckGo.DesktopBrowser"
         },
         {
           "PackageIdentifier": "KDE.Kate"
@@ -101,7 +86,7 @@
           "PackageIdentifier": "Nvidia.PhysX"
         },
         {
-          "PackageIdentifier": "Python.Python.3.10"
+          "PackageIdentifier": "Rufus.Rufus"
         },
         {
           "PackageIdentifier": "Valve.Steam"
@@ -115,5 +100,5 @@
       }
     }
   ],
-  "WinGetVersion": "1.4.10173"
+  "WinGetVersion": "1.5.2201"
 }
