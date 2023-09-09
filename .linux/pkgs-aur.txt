@@ -1,7 +1,6 @@
 brave-bin
 icaclient
 papirus-folders-git
-teams-for-linux
 vscodium-bin
 xscreensaver-arch-logo
 yay

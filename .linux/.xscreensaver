@@ -43,7 +43,7 @@ programs:								    \
   "Video" 			mpv --really-quiet --no-audio --fs	    \
 				--loop=inf --no-stop-screensaver	    \
 				--shuffle --wid=$XSCREENSAVER_WINDOW	    \
-				/run/media/nms/Backup/Videos/aerial/earth.m3u	    \n\
+				/run/media/nms/Backup/Videos/rust.webm	    \n\
 				maze --root				    \n\
   GL: 				superquadrics --root			    \n\
 				attraction --root			    \n\

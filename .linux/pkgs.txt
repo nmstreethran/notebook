@@ -123,5 +123,6 @@ xdg-desktop-portal-kde
 xorg-xinit
 xorg-xinput
 yakuake
+yt-dlp
 zbar
 zsh

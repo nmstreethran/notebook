@@ -13,9 +13,6 @@
 # plasma-workspace-wallpapers
 # power-profiles-daemon
 # qbittorrent
-# scrcpy
-# steam
 # thunderbird
 # ttf-liberation
 # xf86-video-nouveau
-# yt-dlp
