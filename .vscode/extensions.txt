@@ -2,7 +2,9 @@ davidanson.vscode-markdownlint
 editorconfig.editorconfig
 james-yu.latex-workshop
 mechatroner.rainbow-csv
+ms-python.flake8
 ms-python.isort
+ms-python.pylint
 ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap

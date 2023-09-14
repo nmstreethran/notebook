@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-settings 6.06 for nms on Mon May 29 21:42:40 2023.
+# Written by xscreensaver-demo 6.07 for nms on Sun Sep 10 16:20:32 2023.
 # https://www.jwz.org/xscreensaver/
 
 timeout:			0:10:00
@@ -43,7 +43,7 @@ programs:								    \
   "Video" 			mpv --really-quiet --no-audio --fs	    \
 				--loop=inf --no-stop-screensaver	    \
 				--shuffle --wid=$XSCREENSAVER_WINDOW	    \
-				/run/media/nms/Backup/Videos/rust.webm	    \n\
+				/run/media/nms/Backup/Videos/summer_city_day.webm	    \n\
 				maze --root				    \n\
   GL: 				superquadrics --root			    \n\
 				attraction --root			    \n\
@@ -292,6 +292,10 @@ programs:								    \
   GL: 				mapscroller --root			    \n\
   GL: 				nakagin --root				    \n\
   GL: 				squirtorus --root			    \n\
+  GL: 				cubocteversion --root			    \n\
+				droste --root				    \n\
+  GL: 				papercube --root			    \n\
+  GL: 				skulloop --root				    \n\
 
 
 pointerHysteresis:		10

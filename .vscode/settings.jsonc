@@ -61,6 +61,7 @@
   "[csv]": {
     "editor.wordWrap": "off"
   },
+  "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
@@ -210,6 +211,7 @@
   "latex-workshop.message.warning.show": false,
   "latex-workshop.view.pdf.viewer": "tab",
   "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
     "editor.tabSize": 2
   },
   "markdown.extension.toc.levels": "1..3",
@@ -241,8 +243,6 @@
   "[python]": {
     "editor.formatOnType": true
   },
-  "python.linting.flake8Enabled": true,
-  "python.linting.pylintEnabled": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
   "r.rpath.linux": "~/miniconda3/envs/r-env/bin/R",
   "[restructuredtext]": {
