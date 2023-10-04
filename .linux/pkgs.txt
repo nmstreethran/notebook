@@ -90,6 +90,7 @@ powerline
 powerline-fonts
 powertop
 python-cookiecutter
+python-lxml
 python-pygments
 qgis
 rsync
@@ -100,6 +101,7 @@ smplayer-themes
 sof-firmware
 spectacle
 speedtest-cli
+spotify-launcher
 steam
 sudo
 texinfo
@@ -120,6 +122,7 @@ which
 wireplumber
 xdg-desktop-portal
 xdg-desktop-portal-kde
+xf86-input-synaptics
 xorg-xinit
 xorg-xinput
 yakuake

@@ -254,13 +254,12 @@
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Code PL', 'Cascadia Code', 'SauceCodePro Nerd Font', 'Source Code Pro', monospace",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "Kimbie Dark",
+  "workbench.colorTheme": "Monokai Dimmed",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook",
     "*.pdf": "latex-workshop-pdf-hook"

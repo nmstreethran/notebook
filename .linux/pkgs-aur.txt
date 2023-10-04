@@ -1,5 +1,3 @@
-brave-bin
-icaclient
 papirus-folders-git
 vscodium-bin
 xscreensaver-arch-logo

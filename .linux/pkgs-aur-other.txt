@@ -1,7 +1,0 @@
-# nerd-fonts-cascadia-code
-# nerd-fonts-source-code-pro
-# nvidia-xrun-git
-# python38
-# sysfetch-git
-# xampp
-# ytfzf

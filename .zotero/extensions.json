@@ -8,11 +8,11 @@
     "name": "DOI Manager"
   },
   {
-    "id": "zotfile@columbia.edu",
-    "name": "ZotFile"
+    "id": "date-from-last-modified@iris-advies.com",
+    "name": "Get date from URL last-modified for Zotero"
   },
   {
-    "id": "date-from-last-modified@iris-advies.com",
-    "name": "Zotero Date From Last Modified"
+    "id": "zotfile@columbia.edu",
+    "name": "ZotFile"
   }
 ]
