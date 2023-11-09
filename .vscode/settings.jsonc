@@ -211,9 +211,9 @@
   "latex-workshop.message.warning.show": false,
   "latex-workshop.view.pdf.viewer": "tab",
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
     "editor.tabSize": 2
   },
+  "markdown.extension.orderedList.autoRenumber": false,
   "markdown.extension.toc.levels": "1..3",
   "material-icon-theme.activeIconPack": "none",
   "material-icon-theme.files.associations": {

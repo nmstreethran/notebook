@@ -33,7 +33,7 @@ htop
 intel-ucode
 inxi
 jq
-jre-openjdk
+jre-openjdk-headless
 kate
 kcalc
 kde-gtk-config

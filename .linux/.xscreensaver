@@ -1,49 +1,52 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 6.07 for nms on Sun Sep 10 16:20:32 2023.
+# Written by xscreensaver-demo 6.08 for nms on Thu Nov  2 14:48:41 2023.
 # https://www.jwz.org/xscreensaver/
 
-timeout:			0:10:00
-cycle:				0:10:00
-lock:				True
-lockTimeout:			0:00:00
-passwdTimeout:			0:00:30
-visualID:			default
-installColormap:		True
-verbose:			False
-splash:				True
-splashDuration:			0:00:05
-demoCommand:			xscreensaver-settings
-nice:				10
-fade:				True
-unfade:				False
-fadeSeconds:			0:00:03
-ignoreUninstalledPrograms:	False
-dpmsEnabled:			False
-dpmsQuickOff:			False
-dpmsStandby:			0:15:00
-dpmsSuspend:			0:20:00
-dpmsOff:			12:00:00
-grabDesktopImages:		True
-grabVideoFrames:		False
-chooseRandomImages:		False
-imageDirectory:
+timeout:	0:10:00
+cycle:		0:10:00
+lock:		True
+lockTimeout:	0:00:00
+passwdTimeout:	0:00:30
+visualID:	default
+installColormap:    True
+verbose:	False
+splash:		True
+splashDuration:	0:00:05
+demoCommand:	xscreensaver-settings
+nice:		10
+fade:		True
+unfade:		False
+fadeSeconds:	0:00:03
+ignoreUninstalledPrograms:False
+dpmsEnabled:	False
+dpmsQuickOff:	False
+dpmsStandby:	0:15:00
+dpmsSuspend:	0:20:00
+dpmsOff:	12:00:00
+grabDesktopImages:  True
+grabVideoFrames:    False
+chooseRandomImages: False
+imageDirectory:	
 
-mode:				one
-selected:			0
+mode:		one
+selected:	0
 
-textMode:			literal
-textLiteral:			XScreenSaver
-textFile:
-textProgram:			fortune
-textURL:			https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss
-dialogTheme:			borderlessblack
-settingsGeom:			0,29 0,29
+textMode:	date
+textLiteral:	XScreenSaver
+textFile:	
+textProgram:	fortune
+textURL:	https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss
+dialogTheme:	wine
+settingsGeom:	0,28 0,28
 
-programs:								    \
-  "Video" 			mpv --really-quiet --no-audio --fs	    \
-				--loop=inf --no-stop-screensaver	    \
-				--shuffle --wid=$XSCREENSAVER_WINDOW	    \
-				/run/media/nms/Backup/Videos/summer_city_day.webm	    \n\
+programs:								      \
+		       "Video" 	mpv --really-quiet --no-audio --fs	      \
+				  --loop=inf --no-stop-screensaver	      \
+				  --shuffle --wid=$XSCREENSAVER_WINDOW	      \
+				  --osd-msg1='   ${clock}'	      \
+				  --osd-border-size=0 --osd-font='Libertinus Mono'	      \
+				  --osd-scale=1.83 --osd-margin-y=130 --osd-margin-x=300	      \
+				  /run/media/nms/Backup/Videos/puzzle.webm  \n\
 				maze --root				    \n\
   GL: 				superquadrics --root			    \n\
 				attraction --root			    \n\
@@ -298,5 +301,6 @@ programs:								    \
   GL: 				skulloop --root				    \n\
 
 
-pointerHysteresis:		10
-authWarningSlack:		20
+pointerHysteresis:  10
+authWarningSlack:   20
+
