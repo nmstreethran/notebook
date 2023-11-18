@@ -1,5 +1,6 @@
 davidanson.vscode-markdownlint
 editorconfig.editorconfig
+html-validate.vscode-html-validate
 james-yu.latex-workshop
 mechatroner.rainbow-csv
 ms-python.flake8

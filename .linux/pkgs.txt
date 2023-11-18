@@ -6,7 +6,6 @@ arrow
 autoconf
 automake
 base
-biber
 bison
 bluedevil
 bluez-utils
@@ -105,12 +104,6 @@ spotify-launcher
 steam
 sudo
 texinfo
-texlive-bibtexextra
-texlive-binextra
-texlive-fontsextra
-texlive-formatsextra
-texlive-latexextra
-texlive-xetex
 tlp
 tlp-rdw
 tree

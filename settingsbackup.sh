@@ -17,10 +17,13 @@ cp ~/.local/share/kxmlgui5/okular/part.rc .linux/okular-part.xml
 cp ~/.config/okularpartrc .linux/okularpartrc.conf
 cp ~/.config/user-dirs.dirs .linux/user-dirs.conf
 cp ~/.config/spectaclerc .linux/spectacle.conf
+sed --in-place "/lastSaveAsLocation=/d" .linux/spectacle.conf
 sed --in-place "/lastSaveLocation=/d" .linux/spectacle.conf
-sed --in-place "/window-position=/d" .linux/spectacle.conf
-sed --in-place "/SplitterSizes=/d" .linux/okularpartrc.conf
-sed --in-place "/ViewMode=/d" .linux/okularpartrc.conf
+sed --in-place "/Recent URLs/d" .linux/spectacle.conf
+sed --in-place "/Recent Files/d" .linux/spectacle.conf
+# sed --in-place "/window-position=/d" .linux/spectacle.conf
+# sed --in-place "/SplitterSizes=/d" .linux/okularpartrc.conf
+# sed --in-place "/ViewMode=/d" .linux/okularpartrc.conf
 cp ~/.config/kglobalshortcutsrc .linux/kglobalshortcutsrc.conf
 cp ~/.xscreensaver .linux/.xscreensaver
 
