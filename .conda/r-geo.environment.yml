@@ -6,6 +6,9 @@ channels:
 dependencies:
   - r-base
   - r-essentials
+  - libgit2  # to install packages from Git repositories
+  - r-devtools
+  - r-terra
   - r-rgdal
   - r-sf
   - r-geojsonio

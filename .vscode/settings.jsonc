@@ -4,6 +4,15 @@
   },
   "breadcrumbs.enabled": true,
   "cSpell.allowCompoundWords": true,
+  "cSpell.allowedSchemas": [
+    "file",
+    "gist",
+    "repo",
+    "sftp",
+    "untitled",
+    "vscode-scm",
+    "vscode-userdata"
+  ],
   "cSpell.enableFiletypes": [
     "bibtex",
     "r",
@@ -23,6 +32,7 @@
     "decarbonisation",
     "dispatchable",
     "eastings",
+    "exergy",
     "forecasted",
     "geospatial",
     "interpretivism",
@@ -61,6 +71,7 @@
   "[csv]": {
     "editor.wordWrap": "off"
   },
+  "diffEditor.experimental.showMoves": true,
   "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,

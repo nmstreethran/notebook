@@ -8,6 +8,7 @@ automake
 base
 bison
 bluedevil
+bluez-tools
 bluez-utils
 breeze-grub
 breeze-gtk
