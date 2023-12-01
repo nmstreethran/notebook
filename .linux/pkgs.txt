@@ -30,6 +30,7 @@ gst-plugins-good
 gtk2
 gwenview
 htop
+inkscape
 intel-ucode
 inxi
 jq

@@ -31,7 +31,7 @@ sudo mkdir -p /usr/lib/ssh/ssh-askpass
 sudo ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
 
 # power management
-sudo pacman -Syu powertop
+sudo pacman -Syu powertop tlp tlp-rdw
 sudo powertop
 
 # install an AUR helper
@@ -75,10 +75,6 @@ export GEM_PATH=$GEM_HOME/ruby/2.7.0
 export PATH="$GEM_PATH/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 gem-2.7 install bundler
-
-# use custom hosts file
-# https://github.com/stevenblack/hosts
-sudo curl --output /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 
 # set papirus icons folder colour
 papirus-folders -C teal --theme Papirus-Dark
@@ -173,3 +169,13 @@ $ICAROOT/util/ctx_rehash
 # https://wiki.archlinux.org/title/Official_repositories#multilib
 # sudo nano /etc/pacman.conf
 # yay
+
+# Cloudflare WARP
+yay -Syu cloudflare-warp-bin
+sudo systemctl enable --now warp-svc.service
+warp-cli register
+warp-cli connect
+
+# use custom hosts file
+# https://github.com/stevenblack/hosts
+sudo curl --output /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts

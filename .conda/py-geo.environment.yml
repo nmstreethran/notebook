@@ -10,7 +10,6 @@ dependencies:
   - scipy
   - cfgrib
   - netcdf4
-  - cartopy
   - cdo  # unavailable on Windows; use Conda with WSL
   - dask  # parallel computing
   - pooch  # to download data
@@ -29,3 +28,4 @@ dependencies:
   - flake8
   - pylint
   - black
+  - black-jupyter

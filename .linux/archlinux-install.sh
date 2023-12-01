@@ -138,7 +138,7 @@ pacman -Syu alsa-utils alsa-firmware plasma-pa sof-firmware pipewire-alsa pipewi
 # install Bluetooth libraries
 # https://wiki.archlinux.org/title/Bluetooth
 # https://bbs.archlinux.org/viewtopic.php?pid=1998583#p1998583
-pacman -Syu bluez-utils bluedevil
+pacman -Syu bluez-tools bluez-utils bluedevil
 systemctl enable bluetooth.service
 
 # enable NTFS support
