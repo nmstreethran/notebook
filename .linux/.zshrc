@@ -30,7 +30,7 @@ bindkey "\e[F" end-of-line
 
 # Ruby
 export GEM_HOME=~/.gem
-export GEM_PATH=$GEM_HOME/ruby/2.7.0
+export GEM_PATH=$GEM_HOME/ruby/3.0.0
 export PATH="$GEM_PATH/bin:$PATH"
 
 # >>> conda initialize >>>

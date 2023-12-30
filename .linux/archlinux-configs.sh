@@ -71,10 +71,10 @@ sudo pacman -Syu breeze-gtk kde-gtk-config
 # set up Ruby
 echo '# Ruby
 export GEM_HOME=~/.gem
-export GEM_PATH=$GEM_HOME/ruby/2.7.0
+export GEM_PATH=$GEM_HOME/ruby/3.0.0
 export PATH="$GEM_PATH/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
-gem-2.7 install bundler
+gem install bundler
 
 # set papirus icons folder colour
 papirus-folders -C teal --theme Papirus-Dark
@@ -162,13 +162,14 @@ $ICAROOT/util/ctx_rehash
 
 # Docker
 # https://wiki.archlinux.org/title/Docker#Installation
-# sudo pacman -Syu docker
-# sudo gpasswd -a nms docker
+sudo pacman -Syu docker
+sudo groupadd docker
+sudo gpasswd -a nms docker
 
 # enable multilib repositories
 # https://wiki.archlinux.org/title/Official_repositories#multilib
-# sudo nano /etc/pacman.conf
-# yay
+sudo nano /etc/pacman.conf
+yay
 
 # Cloudflare WARP
 yay -Syu cloudflare-warp-bin
