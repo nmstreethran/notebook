@@ -14,8 +14,6 @@ breeze-grub
 breeze-gtk
 capitaine-cursors
 conky
-docker
-docker-compose
 dolphin
 efibootmgr
 fakeroot
