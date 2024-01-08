@@ -15,7 +15,7 @@ cp ~/.zshrc .linux/.zshrc
 cp ~/.local/share/konsole/*.profile .linux/konsole/
 cp ~/.local/share/kxmlgui5/okular/part.rc .linux/okular-part.xml
 cp ~/.config/okularpartrc .linux/okularpartrc.conf
-cp ~/.config/user-dirs.dirs .linux/user-dirs.conf
+# cp ~/.config/user-dirs.dirs .linux/user-dirs.conf
 cp ~/.config/spectaclerc .linux/spectacle.conf
 sed --in-place "/lastSaveAsLocation=/d" .linux/spectacle.conf
 sed --in-place "/lastSaveLocation=/d" .linux/spectacle.conf
