@@ -11,7 +11,7 @@ cat ~/.vscode-oss/extensions/extensions.json | \
 jq --raw-output '.[] | .identifier.id' | sort > .vscode/extensions.txt
 
 # copy other settings
-cp ~/.zshrc .linux/.zshrc
+cp ~/.zshrc .linux/
 cp ~/.local/share/konsole/*.profile .linux/konsole/
 cp ~/.local/share/kxmlgui5/okular/part.rc .linux/okular-part.xml
 cp ~/.config/okularpartrc .linux/okularpartrc.conf
@@ -25,7 +25,8 @@ sed --in-place "/Recent Files/d" .linux/spectacle.conf
 # sed --in-place "/SplitterSizes=/d" .linux/okularpartrc.conf
 # sed --in-place "/ViewMode=/d" .linux/okularpartrc.conf
 cp ~/.config/kglobalshortcutsrc .linux/kglobalshortcutsrc.conf
-cp ~/.xscreensaver .linux/.xscreensaver
+cp ~/.xscreensaver .linux/
+cp ~/.ssh/config .ssh/
 
 # list of packages
 pacman -Qqen > .linux/pkgs.txt
@@ -42,7 +43,7 @@ jq '
     end] | sort_by(.name)
 ' ~/.mozilla/firefox/*.dev-edition-default/extensions.json > \
 .firefox/extensions.json
-cp ~/.mozilla/firefox/*.dev-edition-default/user.js .firefox/user.js
+cp ~/.mozilla/firefox/*.dev-edition-default/user.js .firefox/
 
 # Zotero
 # ls -1 ~/.zotero/zotero/*/extensions/ > .zotero/extensions.txt
@@ -53,7 +54,7 @@ jq '
     else empty
     end] | sort_by(.name)
 ' ~/.zotero/zotero/*/extensions.json > .zotero/extensions.json
-cp ~/.zotero/zotero/*/user.js .zotero/user.js
+cp ~/.zotero/zotero/*/user.js .zotero/
 # fi
 
 # symlink all notes into wiki
