@@ -50,7 +50,6 @@ libertinus-font
 libiconv
 libreoffice-fresh
 libtool
-linux
 linux-firmware
 linux-lts
 lshw
