@@ -179,7 +179,8 @@
     "*.synctex.gz",
     "*.synctex.gz(busy)",
     "*.toc",
-    "*.vrb"
+    "*.vrb",
+    "*.xwm"
   ],
   "latex-workshop.latex.recipe.default": "lastUsed",
   "latex-workshop.latex.recipes": [
@@ -275,7 +276,7 @@
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.colorTheme": "Monokai",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook",
     "*.pdf": "latex-workshop-pdf-hook"

@@ -110,6 +110,7 @@ tlp-rdw
 tree
 ttf-cascadia-code
 ttf-lato
+ttf-montserrat
 webkit2gtk
 wget
 which
