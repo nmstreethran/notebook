@@ -1,46 +1,39 @@
 {
   "widget/Xa37A0Lfbwa2": null,
   "widget/72ElPmEu-Ruu": null,
-  "background": {
-    "id": "59542518-f511-470c-a128-963fe5d7f213",
-    "key": "background/unsplash",
+  "widget/008e7bbf-2a11-420b-8b9e-6b6a079918c7": {
+    "id": "008e7bbf-2a11-420b-8b9e-6b6a079918c7",
+    "key": "widget/literature-clock",
     "active": true,
     "display": {
-      "luminosity": -0.5,
-      "blur": 0
-    }
+      "position": "bottomCentre",
+      "fontSize": 16
+    },
+    "order": 2
   },
   "widget/default-time": null,
   "widget/default-greeting": null,
   "focus": false,
   "timeZone": null,
   "widget/7e3c75b7-7d2d-4626-a014-7bc65d3543dc": null,
-  "widget/45a7cc0c-fbf1-4087-ad97-b412c8274cab": {
-    "id": "45a7cc0c-fbf1-4087-ad97-b412c8274cab",
-    "key": "widget/css",
-    "active": true,
-    "display": {
-      "position": "middleCentre"
-    },
-    "order": 7
+  "data/7542a1fb-860a-4e18-9488-e0cc735d4815": {
+    "showDetails": true,
+    "units": "si",
+    "latitude": 53.0344,
+    "longitude": -7.2998
   },
   "widget/bktzm_Y8Trvq": {
     "id": "bktzm_Y8Trvq",
     "key": "widget/ipInfo",
     "order": 5,
     "display": {
-      "position": "bottomRight",
+      "position": "bottomLeft",
       "fontSize": 14
     }
   },
-  "widget/Ovp1c9X_NyCZ": {
-    "id": "Ovp1c9X_NyCZ",
-    "key": "widget/time",
-    "order": 1,
-    "display": {
-      "position": "middleCentre",
-      "fontSize": 12
-    }
+  "data/008e7bbf-2a11-420b-8b9e-6b6a079918c7": {
+    "showBookAndAuthor": true,
+    "centerText": false
   },
   "widget/qud_7ho1SDa1": null,
   "widget/a4944145-a912-4333-a848-0752d643ece7": null,
@@ -64,9 +57,7 @@
     "showDayPeriod": true,
     "timeZone": null
   },
-  "data/45a7cc0c-fbf1-4087-ad97-b412c8274cab": {
-    "input": ""
-  },
+  "widget/45a7cc0c-fbf1-4087-ad97-b412c8274cab": null,
   "widget/oljdbiPcz09V": {
     "id": "oljdbiPcz09V",
     "key": "widget/greeting",
@@ -95,33 +86,34 @@
     "displayCountry": true,
     "refreshInterval": 1440
   },
-  "data/59542518-f511-470c-a128-963fe5d7f213": {
+  "data/5ql41E4Q37Yd": {
     "by": "official",
     "collections": "",
     "featured": false,
+    "paused": false,
     "search": "",
-    "timeout": 86400,
-    "topics": "Jpg6Kidl-Hk",
-    "paused": false
+    "topics": "bo8jQKTaE0Y",
+    "timeout": 604800
   },
-  "widget/008e7bbf-2a11-420b-8b9e-6b6a079918c7": {
-    "id": "008e7bbf-2a11-420b-8b9e-6b6a079918c7",
-    "key": "widget/literature-clock",
-    "active": true,
+  "widget/Ovp1c9X_NyCZ": {
+    "id": "Ovp1c9X_NyCZ",
+    "key": "widget/time",
+    "order": 1,
     "display": {
       "position": "middleCentre",
-      "fontSize": 16
-    },
-    "order": 2
+      "fontSize": 12
+    }
   },
-  "data/7542a1fb-860a-4e18-9488-e0cc735d4815": {
-    "showDetails": true,
-    "units": "si",
-    "latitude": 51,
-    "longitude": -8
+  "background": {
+    "id": "5ql41E4Q37Yd",
+    "key": "background/unsplash",
+    "display": {
+      "blur": 0,
+      "luminosity": -0.2
+    }
   },
   "data/4mJW1UduUG3d": {
-    "columns": 1,
+    "columns": 2,
     "links": [
       {
         "url": "https://mail.google.com/mail/u/0/#inbox",
@@ -129,7 +121,7 @@
         "name": " "
       },
       {
-        "url": "https://www.facebook.com/",
+        "url": "https://www.facebook.com/?filter=friends&sk=h_chr",
         "icon": "facebook",
         "name": " "
       },
@@ -149,12 +141,12 @@
         "name": " "
       },
       {
-        "url": "https://gitlab.com/",
+        "url": "https://gitlab.com/nithiya",
         "icon": "_favicon",
         "name": " "
       },
       {
-        "url": "https://www.linkedin.com/",
+        "url": "https://www.linkedin.com/mynetwork/",
         "icon": "_favicon",
         "name": " "
       },
@@ -175,7 +167,7 @@
       },
       {
         "url": "https://translate.google.com/",
-        "icon": "_favicon"
+        "icon": "flag"
       },
       {
         "url": "https://drive.google.com/drive/u/0/my-drive",
@@ -191,6 +183,38 @@
       },
       {
         "url": "https://discord.com/channels/@me",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://www.twitch.tv/directory/following/channels",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://store.epicgames.com/en-US/",
+        "icon": "codesandbox"
+      },
+      {
+        "url": "https://www.gog.com/",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://github.com/",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://photos.google.com/",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://www.duolingo.com",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://ebird.org",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://www.irishrail.ie/en-ie/",
         "icon": "_favicon"
       }
     ],

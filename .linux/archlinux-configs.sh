@@ -180,3 +180,13 @@ warp-cli connect
 # use custom hosts file
 # https://github.com/stevenblack/hosts
 sudo curl --output /etc/hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+
+# remove all orphan packages
+# https://wiki.archlinux.org/title/Pacman
+sudo pacman -Rsn $(pacman -Qdtq)
+
+# remove old package caches except for the latest three package versions
+paccache -r
+
+# remove all cached versions of uninstalled packages
+paccache -ruk0

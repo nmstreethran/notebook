@@ -3,53 +3,16 @@
   "widget/default-time": null,
   "widget/tC-W1fyam2z4": null,
   "focus": false,
-  "background": {
-    "id": "NY8DSjdglm_b",
-    "key": "background/image",
-    "display": {
-      "blur": 0,
-      "luminosity": -0.2
-    }
-  },
-  "data/ciS_OfQeY91J": {
-    "ip": "Fetching IP data...",
-    "city": "",
-    "country": "",
-    "displayCity": true,
-    "displayCountry": true,
-    "refreshInterval": 1440
-  },
-  "widget/ibBEFh0EPU4I": {
-    "id": "ibBEFh0EPU4I",
-    "key": "widget/time",
-    "order": 1,
-    "display": {
-      "position": "middleCentre",
-      "fontSize": 12
-    }
-  },
-  "widget/tvdIwg82DIQs": null,
-  "widget/FK0GgA_wEaii": null,
-  "data/82Sf0fdHrq25": {
-    "showDetails": true,
-    "units": "si",
-    "latitude": 51,
-    "longitude": -8
-  },
   "data/VQTVqenEBmsY": {
     "columns": 1,
     "links": [
       {
         "url": "https://outlook.office.com/mail/",
         "name": "",
-        "icon": "_favicon"
+        "icon": "mail"
       },
       {
         "url": "https://uccireland-my.sharepoint.com/personal/nstreethran_ucc_ie/_layouts/15/onedrive.aspx?view=0",
-        "icon": "_favicon"
-      },
-      {
-        "url": "https://open.spotify.com/",
         "icon": "_favicon"
       },
       {
@@ -59,38 +22,49 @@
       {
         "url": "https://teams.microsoft.com/",
         "icon": "_favicon"
+      },
+      {
+        "url": "https://drive.google.com/drive/starred",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://github.com/",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://open.spotify.com/",
+        "icon": "_favicon"
+      },
+      {
+        "url": "https://virtualapp.ucc.ie/",
+        "icon": "_favicon"
       }
     ],
     "visible": true,
     "linkOpenStyle": false
   },
-  "widget/4LwrOA-3LAJN": null,
-  "widget/s0pn1vOqnKqO": null,
-  "widget/default-greeting": {
-    "id": "default-greeting",
+  "widget/WXdGf3E9xBsL": null,
+  "widget/3GuRbW7Jylul": {
+    "id": "3GuRbW7Jylul",
     "key": "widget/greeting",
     "order": 0,
     "display": {
       "position": "middleCentre"
     }
   },
-  "widget/VQTVqenEBmsY": {
-    "id": "VQTVqenEBmsY",
-    "key": "widget/links",
-    "order": 4,
+  "widget/tvdIwg82DIQs": null,
+  "widget/FK0GgA_wEaii": null,
+  "widget/VCoOcJ6achMc": null,
+  "background": {
+    "id": "XBtAYvXTOWmx",
+    "key": "background/unsplash",
     "display": {
-      "position": "middleLeft"
+      "blur": 0,
+      "luminosity": -0.3
     }
   },
-  "widget/ciS_OfQeY91J": {
-    "id": "ciS_OfQeY91J",
-    "key": "widget/ipInfo",
-    "order": 5,
-    "display": {
-      "position": "bottomRight",
-      "fontSize": 14
-    }
-  },
+  "widget/4LwrOA-3LAJN": null,
+  "widget/s0pn1vOqnKqO": null,
   "data/ibBEFh0EPU4I": {
     "mode": "digital",
     "hour12": false,
@@ -100,31 +74,73 @@
     "showDayPeriod": true,
     "timeZone": null
   },
-  "data/default-greeting": {
-    "name": "Nithiya"
-  },
   "widget/82Sf0fdHrq25": {
     "id": "82Sf0fdHrq25",
     "key": "widget/weather",
-    "order": 3,
+    "order": 2,
     "display": {
       "position": "topRight"
     }
   },
-  "widget/VCoOcJ6achMc": {
-    "id": "VCoOcJ6achMc",
-    "key": "widget/literature-clock",
-    "order": 2,
+  "widget/tdSucwsZpJz-": null,
+  "data/ciS_OfQeY91J": {
+    "ip": "Fetching IP data...",
+    "city": "",
+    "country": "",
+    "displayCity": true,
+    "displayCountry": true,
+    "refreshInterval": 1440
+  },
+  "widget/default-greeting": null,
+  "widget/ibBEFh0EPU4I": {
+    "id": "ibBEFh0EPU4I",
+    "key": "widget/time",
+    "order": 1,
     "display": {
-      "position": "bottomCentre",
-      "fontSize": 16,
-      "fontFamily": ""
+      "position": "middleCentre",
+      "fontSize": 20
     }
   },
-  "data/VCoOcJ6achMc": {
-    "showBookAndAuthor": true,
-    "centerText": true
+  "widget/5ljLKoFnjuZr": null,
+  "data/82Sf0fdHrq25": {
+    "showDetails": true,
+    "units": "si",
+    "latitude": 53.0344,
+    "longitude": -7.2998
   },
+  "widget/VQTVqenEBmsY": {
+    "id": "VQTVqenEBmsY",
+    "key": "widget/links",
+    "order": 3,
+    "display": {
+      "position": "middleLeft"
+    }
+  },
+  "widget/0Z1ptph_vh1G": null,
+  "widget/KYA9zDGlPF46": null,
+  "widget/2BHwCtkKrNZL": null,
+  "widget/Gx0LFX-HnpOS": null,
+  "widget/xiQgjRUXTdHH": null,
+  "widget/cmqv8POokquo": null,
+  "widget/ciS_OfQeY91J": {
+    "id": "ciS_OfQeY91J",
+    "key": "widget/ipInfo",
+    "order": 4,
+    "display": {
+      "position": "bottomRight",
+      "fontSize": 14
+    }
+  },
+  "data/XBtAYvXTOWmx": {
+    "by": "collections",
+    "collections": "3333421",
+    "featured": false,
+    "paused": false,
+    "search": "birds",
+    "topics": "bo8jQKTaE0Y",
+    "timeout": 604800
+  },
+  "widget/w77dbmQuHS6e": null,
   "timeZone": null,
   "version": 3
 }
