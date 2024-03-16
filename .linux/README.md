@@ -35,9 +35,9 @@ pacman -Qqen > .linux/pkgs.txt
   - Open Disk Management and unassign any drive letters for the two Linux partitions.
   - For MSI computers, use the MSI Dragon Centre to set battery charging limits.
   - Also open power management and turn off all hibernate options. Then, open PowerShell with administrative rights, and [run](https://learn.microsoft.com/en-us/troubleshoot/windows-client/deployment/disable-and-re-enable-hibernation) `powercfg.exe /hibernate off`. This will prevent Windows from blocking write access to drives when logged in to Linux.
-- [Disable USB autosuspend in TLP](https://wiki.archlinux.org/title/TLP#USB_autosuspend) to allow USB charging.
+<!-- - [Disable USB autosuspend in TLP](https://wiki.archlinux.org/title/TLP#USB_autosuspend) to allow USB charging. -->
 
 Other considerations:
 
-- Disable [C-states](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/xperf/p-states-and-c-states) if performance issues are encountered?
+- Disable [C-states](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/xperf/p-states-and-c-states) if performance issues are encountered
 - Have a [separate `/home` directory](https://help.ubuntu.com/community/Partitioning/Home/Moving) - ~20 GB for `/` and ~50 GB for `/home`

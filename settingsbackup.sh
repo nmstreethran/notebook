@@ -19,6 +19,7 @@ cp ~/.config/okularpartrc .linux/okularpartrc.conf
 cp ~/.config/spectaclerc .linux/spectacle.conf
 sed --in-place "/lastSaveAsLocation=/d" .linux/spectacle.conf
 sed --in-place "/lastSaveLocation=/d" .linux/spectacle.conf
+sed --in-place "/lastImageSaveLocation=/d" .linux/spectacle.conf
 sed --in-place "/Recent URLs/d" .linux/spectacle.conf
 sed --in-place "/Recent Files/d" .linux/spectacle.conf
 # sed --in-place "/window-position=/d" .linux/spectacle.conf

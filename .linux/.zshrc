@@ -14,7 +14,7 @@ compinit
 # End of lines added by compinstall
 
 # Keyboard layout
-setxkbmap gb
+# setxkbmap gb
 
 # Powerlines
 # https://wiki.archlinux.org/title/Powerline

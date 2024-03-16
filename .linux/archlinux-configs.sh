@@ -31,7 +31,7 @@ sudo mkdir -p /usr/lib/ssh/ssh-askpass
 sudo ln /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
 
 # power management
-sudo pacman -Syu powertop tlp tlp-rdw
+sudo pacman -Syu powertop power-profiles-daemon
 sudo powertop
 
 # install an AUR helper
@@ -190,3 +190,6 @@ paccache -r
 
 # remove all cached versions of uninstalled packages
 paccache -ruk0
+
+# check if the GPU is running or suspended
+# cat /sys/bus/pci/devices/0000:01:00.0/power/runtime_status

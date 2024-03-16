@@ -113,9 +113,25 @@ EDITOR=nano visudo
 # https://wiki.archlinux.org/title/Xorg#Driver_installation
 # https://wiki.archlinux.org/title/Backlight
 # https://wiki.archlinux.org/title/Libinput#Touchpad_configuration
-pacman -Syu plasma-desktop sddm-kcm powerdevil xorg-xinput mesa-utils
+pacman -Syu plasma-desktop sddm-kcm powerdevil xorg-xinput
 # enable display manager
 systemctl enable sddm
+
+# configure NVIDIA graphics
+# https://wiki.archlinux.org/title/NVIDIA
+# https://wiki.archlinux.org/title/PRIME#PRIME_render_offload
+# https://wiki.archlinux.org/title/kernel_mode_setting
+# find the appropriate graphics card
+lspci -k | grep -A 2 -E "(VGA|3D)"
+# install the drivers
+sudo pacman -Syu nvidia-lts nvidia-utils lib32-nvidia-utils nvidia-prime
+# remove kms from the HOOKS array in /etc/mkinitcpio.conf
+sudo nano /etc/mkinitcpio.conf
+# regenerate the initramfs
+mkinitcpio -P
+# enable nvidia-persistenced.service to avoid the kernel tearing down the
+# device state whenever the NVIDIA device resources are no longer in use
+systemctl enable nvidia-persistenced.service
 
 # install network manager and start the service
 # https://wiki.archlinux.org/title/Network_configuration

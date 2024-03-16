@@ -57,13 +57,14 @@ m4
 make
 mariadb
 materia-kde
-mesa-utils
 nano
 neofetch
 netcdf
 noto-fonts-cjk
 noto-fonts-emoji
 ntfs-3g
+nvidia-lts
+nvidia-prime
 okular
 openexr
 openssh
@@ -85,6 +86,7 @@ plasma-nm
 plasma-pa
 plasma-systemmonitor
 podofo
+power-profiles-daemon
 powerdevil
 powerline
 powerline-fonts
@@ -105,8 +107,6 @@ spotify-launcher
 steam
 sudo
 texinfo
-tlp
-tlp-rdw
 tree
 ttf-cascadia-code
 ttf-lato
@@ -117,7 +117,6 @@ which
 wireplumber
 xdg-desktop-portal
 xdg-desktop-portal-kde
-xf86-input-synaptics
 xorg-xinit
 xorg-xinput
 yakuake
