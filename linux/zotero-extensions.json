@@ -1,0 +1,18 @@
+[
+  {
+    "id": "better-bibtex@iris-advies.com",
+    "name": "Better BibTex for Zotero"
+  },
+  {
+    "id": "zoteroshortdoi@wiernik.org",
+    "name": "DOI Manager"
+  },
+  {
+    "id": "date-from-last-modified@iris-advies.com",
+    "name": "Get date from URL last-modified for Zotero"
+  },
+  {
+    "id": "zotfile@columbia.edu",
+    "name": "ZotFile"
+  }
+]

@@ -14,14 +14,14 @@ cp --parents ~/.local/share/konsole/*.profile linux
 for setting in .config/VSCodium/User/settings.json .config/VSCodium/User/keybindings.json .zshrc .local/share/kxmlgui5/okular/part.rc .config/okularpartrc .config/spectaclerc .config/kglobalshortcutsrc .xscreensaver .ssh/config;
 do cp --parents ~/${setting} linux
 done
-# sed --in-place "/lastSaveAsLocation=/d" .linux/spectacle.conf
-# sed --in-place "/lastSaveLocation=/d" .linux/spectacle.conf
-# sed --in-place "/lastImageSaveLocation=/d" .linux/spectacle.conf
-# sed --in-place "/Recent URLs/d" .linux/spectacle.conf
-# sed --in-place "/Recent Files/d" .linux/spectacle.conf
-# sed --in-place "/window-position=/d" .linux/spectacle.conf
-# sed --in-place "/SplitterSizes=/d" .linux/okularpartrc.conf
-# sed --in-place "/ViewMode=/d" .linux/okularpartrc.conf
+sed --in-place "/lastSaveAsLocation=/d" linux/home/nms/.config/spectaclerc
+sed --in-place "/lastSaveLocation=/d" linux/home/nms/.config/spectaclerc
+sed --in-place "/lastImageSaveLocation=/d" linux/home/nms/.config/spectaclerc
+sed --in-place "/Recent URLs/d" linux/home/nms/.config/spectaclerc
+sed --in-place "/Recent Files/d" linux/home/nms/.config/spectaclerc
+# sed --in-place "/window-position=/d" linux/home/nms/.config/spectaclerc
+# sed --in-place "/SplitterSizes=/d" linux/home/nms/.config/spectaclerc
+# sed --in-place "/ViewMode=/d" linux/home/nms/.config/spectaclerc
 
 # list of packages
 pacman -Qqen > linux/pkgs-pacman.txt

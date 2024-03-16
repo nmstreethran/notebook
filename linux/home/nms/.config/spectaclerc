@@ -19,18 +19,13 @@ window-position=71,0
 
 [ImageSave]
 imageSaveLocation=file:///run/media/nms/Backup/Pictures/Screenshots
-lastImageSaveLocation=file:///home/nms/Screenshots/Screenshot_20240316_212911.png
 translatedScreenshotsFolder=Screenshots
 
 [KFileDialog Settings]
-Recent Files[$e]=rioxarray-data-str.png,file:///run/media/nms/Backup/Downloads/sig1.png,file:///run/media/nms/Backup/Documents/Git/nithiya.gitlab.io/assets/images/thematic-raster-plot-python/rioxarray-data-str.png
-Recent URLs[$e]=file:///run/media/nms/Backup/Documents/Git/nithiya.gitlab.io/assets/images/thematic-raster-plot-python/,file:$HOME/,file:///run/media/nms/Backup/Downloads/
 detailViewIconSize=16
 
 [Save]
 defaultSaveLocation=file:///run/media/nms/Backup/Pictures/Screenshots
-lastSaveAsLocation=file:///run/media/nms/Backup/Downloads/sig1.png
-lastSaveLocation=file:///run/media/nms/Backup/Pictures/Screenshots/Screenshot_20240303_200257.png
 
 [VideoSave]
 translatedScreencastsFolder=Screencasts

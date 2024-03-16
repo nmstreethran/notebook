@@ -8,17 +8,6 @@ Welcome to my notebook! This is where I backup my settings and computing notes. 
 
 OS: [Arch Linux](https://archlinux.org/) with [KDE](https://kde.org/) Plasma / Windows 11 / Android
 
-[Folders](https://github.com/nmstreethran/notebook):
-
-- `.vscode`: [VSCodium](https://vscodium.com/) settings and list of extensions
-- `.linux`: list of packages installed from Pacman/AUR and other settings for Arch Linux
-- `.gitlab`: GitLab CI templates
-- `.github`: GitHub Actions workflow templates
-- `.firefox`: Firefox settings and extensions
-- `.conda`: Anaconda environment configurations
-- `.windows`: list of packages installed from `winget` and other settings for Windows 11
-- `.zotero`: Zotero settings and extensions
-
 ## License and credits
 
 ### Notes
