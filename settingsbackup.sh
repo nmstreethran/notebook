@@ -29,7 +29,7 @@ pacman -Qqem > linux/pkgs-aur.txt
 
 # Firefox
 # ls -1 ~/.mozilla/firefox/*.dev-edition-default/extensions/ |
-# awk -e '/^[A-Za-z]/ { print }' > .firefox/extensions.txt
+# awk -e '/^[A-Za-z]/ { print }' > linux/firefox-extensions
 jq '
     [.addons[] |
     if (.id | test("^(?!.*mozilla).*$"))

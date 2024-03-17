@@ -12,12 +12,6 @@
                 "kind": "build",
                 "isDefault": true
             }
-        },
-        {
-            "label": "vscode-settings",
-            "type": "shell",
-            "command": "cp ~/.config/VSCodium/User/settings.json .vscode/settings.jsonc",
-            "problemMatcher": []
         }
     ]
 }
