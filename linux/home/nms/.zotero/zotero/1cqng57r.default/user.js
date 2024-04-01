@@ -6,12 +6,12 @@ user_pref("extensions.zotero.dataDir", "/home/nms/Zotero");
 
 user_pref("extensions.zotero.export.bibliographySettings", "{\"mode\":\"bibliography\",\"method\":\"copy-to-clipboard\"}");
 user_pref("extensions.zotero.export.citePaperJournalArticleURL", true);
-user_pref("extensions.zotero.export.quickCopy.setting", "bibliography=https://raw.githubusercontent.com/nmstreethran/csl-custom-styles/main/harvard-cite-them-right-11th-edition-modified.csl");
+user_pref("extensions.zotero.export.quickCopy.setting", "bibliography=https://raw.githubusercontent.com/nmstreethran/csl-custom-styles/main/harvard-cite-them-right.csl");
 user_pref("extensions.zotero.export.translatorSettings", "{\"exportNotes\":false,\"exportFileData\":false,\"useJournalAbbreviation\":false,\"keepUpdated\":false,\"worker\":true,\"includeAnnotations\":false}");
 
 user_pref("extensions.zotero.fileHandler.pdf", "/bin/okular");
 
-user_pref("extensions.zotero.newItemTypeMRU", "book,bookSection,webPage,journalArticle,document");
+user_pref("extensions.zotero.newItemTypeMRU", "book,bookSection,report,journalArticle,document");
 
 user_pref("extensions.zotero.translators.better-bibtex.DOIandURL", "doi");
 user_pref("extensions.zotero.translators.better-bibtex.autoExportDelay", 2);
@@ -20,7 +20,7 @@ user_pref("extensions.zotero.translators.better-bibtex.citekeyFormatEditing", "a
 user_pref("extensions.zotero.translators.better-bibtex.exportTitleCase", false);
 user_pref("extensions.zotero.translators.better-bibtex.importSentenceCase", "off");
 user_pref("extensions.zotero.translators.better-bibtex.keyConflictPolicy", "change");
-user_pref("extensions.zotero.translators.better-bibtex.skipFields", "abstract,shorttitle,keywords,file,annotation,shortjournal");
+user_pref("extensions.zotero.translators.better-bibtex.skipFields", "abstract,shorttitle,keywords,file,annotation,shortjournal,langid");
 user_pref("extensions.zotero.translators.better-bibtex.warnBulkModify", 0);
 
 user_pref("extensions.zotero.useDataDir", true);

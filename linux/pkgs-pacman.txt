@@ -48,7 +48,7 @@ kwallet-pam
 kwalletmanager
 libertinus-font
 libiconv
-libreoffice-fresh
+libreoffice-still
 libtool
 linux-firmware
 linux-lts

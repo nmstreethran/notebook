@@ -142,6 +142,7 @@
     "editor.tabSize": 2
   },
   "latex-workshop.bind.altKeymap.enabled": true,
+  "latex-workshop.check.duplicatedLabels.enabled": true,
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.autoBuild.run": "never",
   "latex-workshop.latex.autoClean.run": "onBuilt",
@@ -220,6 +221,8 @@
       "env": {}
     }
   ],
+  "latex-workshop.linting.chktex.enabled": true,
+  "latex-workshop.linting.lacheck.enabled": true,
   "latex-workshop.message.error.show": false,
   "latex-workshop.message.warning.show": false,
   "latex-workshop.view.pdf.viewer": "tab",
@@ -270,7 +273,7 @@
   },
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
