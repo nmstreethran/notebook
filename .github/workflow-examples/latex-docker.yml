@@ -25,7 +25,7 @@ jobs:
     container: registry.gitlab.com/islandoftex/images/texlive:latest
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Build LaTeX PDF via Arara
         run: |
           cd $DIR

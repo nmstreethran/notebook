@@ -20,4 +20,4 @@ All original sources are attributed and/or linked within the notes.
 
 ### Settings
 
-Unless otherwise stated, settings / dotfiles are licensed under the terms of the [MIT License](https://opensource.org/license/mit/).
+Unless otherwise stated, settings / dotfiles are licensed under the terms of the [MIT License](https://opensource.org/license/mit).

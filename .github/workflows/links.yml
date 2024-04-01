@@ -23,7 +23,7 @@ jobs:
     # container: dkhamsing/awesome_bot  # Docker method
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       # begin Ruby gem method
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
