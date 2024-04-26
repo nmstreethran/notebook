@@ -1,0 +1,11 @@
+keepassxc
+htop
+system76-driver-nvidia
+steam
+neofetch
+python-is-python3
+python3.11
+python3.11-venv
+gwenview
+okular
+yakuake
