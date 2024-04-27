@@ -45,6 +45,12 @@ sudo apt autoremove
 
 ## Configurations
 
+Configure disk mount options:
+
+In Disks, click on the desired partition and click the gear icon (additional partition options) and go to edit mount options.
+Set it to mount at system startup and identify as `dev/disk/by-label`.
+Append `uid=1000` to the mount options to [allow deleted files to be moved to trash](https://askubuntu.com/a/1093032).
+
 Configure mouse and touchpad:
 
 Go to Settings > Mouse & Touchpad.
