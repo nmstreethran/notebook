@@ -17,7 +17,7 @@ sort linux/pkgs-apt.txt > linux/pkgs-apt_.txt
 mv linux/pkgs-apt_.txt linux/pkgs-apt.txt
 
 # cp --parents ~/.local/share/konsole/*.profile linux
-for setting in .zshrc .profile .bashrc .config/okularpartrc;
+for setting in .zshrc .profile .bashrc .config/okularpartrc .local/share/kxmlgui5/okular/part.rc;
 do cp --parents ~/${setting} linux
 done
 # sed --in-place "/lastSaveAsLocation=/d" linux/home/nms/.config/spectaclerc

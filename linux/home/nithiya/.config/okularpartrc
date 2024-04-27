@@ -5,11 +5,11 @@ HighlightLinks=true
 RenderMode=InvertLuma
 
 [Main View]
-ShowLeftPanel=false
-SplitterSizes=294,1625
+SplitterSizes=218,1698
 
 [PageView]
 MouseMode=TextSelect
+ViewMode=Facing
 
 [Reviews]
 AnnotationContinuousMode=false

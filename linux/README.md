@@ -74,9 +74,9 @@ fc-cache --force
 
 ```sh
 sudo apt install powerline fonts-powerline
+echo '. /usr/share/powerline/bindings/bash/powerline.sh' >> ~/.bashrc
 ```
 
-Add `. /usr/share/powerline/bindings/bash/powerline.sh` to `~/.bashrc`.
 Install a font that supports powerlines, e.g. Fira Code.
 
 [Delete unnecessary locales](https://askubuntu.com/a/1419010) and configure languages:
