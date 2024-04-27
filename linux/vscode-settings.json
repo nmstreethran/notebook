@@ -78,7 +78,7 @@
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "off",
-  "editor.fontFamily": "'Cascadia Code', 'Source Code Pro', monospace",
+  "editor.fontFamily": "'Cascadia Code', 'Source Code Pro', 'Fira Mono', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.minimap.renderCharacters": false,
