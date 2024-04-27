@@ -1,0 +1,42 @@
+[
+  {
+    "id": "addon@darkreader.org",
+    "name": "Dark Reader"
+  },
+  {
+    "id": "jid1-ZAdIEUB7XOzOJw@jetpack",
+    "name": "DuckDuckGo Privacy Essentials"
+  },
+  {
+    "id": "@testpilot-containers",
+    "name": "Firefox Multi-Account Containers"
+  },
+  {
+    "id": "private-relay@firefox.com",
+    "name": "Firefox Relay"
+  },
+  {
+    "id": "chrome-gnome-shell@gnome.org",
+    "name": "GNOME Shell integration"
+  },
+  {
+    "id": "keepassxc-browser@keepassxc.org",
+    "name": "KeePassXC-Browser"
+  },
+  {
+    "id": "{5067e500-5bc8-4537-9a9a-d52cb90e37b2}",
+    "name": "SpotiShush"
+  },
+  {
+    "id": "extension@tabliss.io",
+    "name": "Tabliss"
+  },
+  {
+    "id": "{a6c4a591-f1b2-4f03-b3ff-767e5bedf4e7}",
+    "name": "User-Agent Switcher and Manager"
+  },
+  {
+    "id": "uBlock0@raymondhill.net",
+    "name": "uBlock Origin"
+  }
+]
