@@ -9,3 +9,5 @@ python3.11-venv
 gwenview
 okular
 yakuake
+qt5ct
+breeze-icon-theme

@@ -75,7 +75,7 @@ nano /etc/locale.gen
 locale-gen
 
 # create locale configuration and add the desired locale
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
+echo "LANG=en_IE.UTF-8" > /etc/locale.conf
 
 # create the hostname file
 echo "my-archlinux" > /etc/hostname

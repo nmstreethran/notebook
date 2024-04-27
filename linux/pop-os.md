@@ -45,7 +45,17 @@ sudo apt autoremove
 
 ## Configurations
 
-Copy Windows fonts:
+Configure mouse and touchpad:
+
+Go to Settings > Mouse & Touchpad.
+Set the click option to Right-Click with Click in Bottom Right Corner or Two Finger Tap.
+Enable natural scrolling and two-finger scrolling for the touchpad.
+
+Configure power settings:
+
+Go to Settings > Power and set the Power Button Behaviour to Suspend.
+
+[Copy Windows fonts](https://wiki.archlinux.org/title/Microsoft_fonts):
 
 ```sh
 mkdir ~/.local/share/fonts
@@ -54,7 +64,29 @@ cp arial*.ttf comic*.ttf georgia*.ttf segoeui*.ttf segui*.ttf symbol.ttf times*.
 fc-cache --force
 ```
 
-Install Firefox Developer Edition:
+[Delete unnecessary locales](https://askubuntu.com/a/1419010) and configure languages:
+
+```sh
+cd /var/lib/locales/supported.d
+sudo rm ar de es fr it ja pt ru zh-hans zh-hant
+sudo nano en  # comment out unnecessary locales
+sudo locale-gen  # regenerate
+```
+
+Go to Settings > Region & Language > Manage Installed Languages and remove all unnecessary languages.
+Set the desired language, e.g. English (United Kingdom), and regional format, e.g. English (Ireland).
+
+[Configure GTK themes](https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications):
+
+Install the following:
+
+```sh
+sudo apt install qt5ct breeze-icon-theme
+```
+
+Launch the Qt5 Settings app and configure the style, font, and icon theme.
+
+[Install Firefox Developer Edition](https://askubuntu.com/a/584704):
 
 ```sh
 sudo add-apt-repository ppa:lyzardking/ubuntu-make
@@ -62,7 +94,7 @@ sudo apt update && sudo apt install ubuntu-make
 umake web firefox-dev
 ```
 
-Install VSCodium:
+[Install VSCodium](https://vscodium.com/):
 
 ```sh
 wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
@@ -84,10 +116,14 @@ git config --global gpg.format ssh
 git config --global user.signingkey ~/.ssh/id_ed25519.pub
 ```
 
-Install Zotero:
+[Install Zotero](https://www.zotero.org/support/installation):
+
+Download the tarball and extract the contents to `~/opt/zotero`.
+Set the launcher icon and symlink:
 
 ```sh
-./set_launcher_icon 
+cd ~/opt/zotero
+./set_launcher_icon
 ln -s "$PWD/zotero.desktop" ~/.local/share/applications/
 ```
 
