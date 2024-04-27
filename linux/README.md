@@ -64,6 +64,15 @@ cp arial*.ttf comic*.ttf georgia*.ttf segoeui*.ttf segui*.ttf symbol.ttf times*.
 fc-cache --force
 ```
 
+[Configure powerlines](https://askubuntu.com/q/283908):
+
+```sh
+sudo apt install powerline fonts-powerline
+```
+
+Add `. /usr/share/powerline/bindings/bash/powerline.sh` to `~/.bashrc`.
+Install a font that supports powerlines, e.g. Fira Code.
+
 [Delete unnecessary locales](https://askubuntu.com/a/1419010) and configure languages:
 
 ```sh
@@ -115,7 +124,7 @@ echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https:/
 sudo apt update && sudo apt install codium
 ```
 
-Configure SSH and Git:
+Configure [SSH](https://docs.gitlab.com/ee/user/ssh.html) and Git:
 
 ```sh
 ls -al ~/.ssh
@@ -143,6 +152,7 @@ ln -s "$PWD/zotero.desktop" ~/.local/share/applications/
 [Install TeXLive](https://tug.org/texlive/):
 
 ```sh
+sudo apt install default-jre-headless
 # https://wiki.archlinux.org/title/TeX_Live
 cd ~/Downloads/
 # curl https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O
@@ -152,12 +162,12 @@ cd install-tl-*/
 # sudo perl ./install-tl --no-interaction
 sudo perl ./install-tl --no-interaction --location https://ftp.heanet.ie/mirrors/ctan.org/tex/systems/texlive/tlnet
 echo '# TeX Live
-export MANPATH="/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH"
-export INFOPATH="/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH"
-export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"' >> ~/.bashrc
+export MANPATH="/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH"
+export PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"' >> ~/.bashrc
 ```
 
-Install Ruby:
+[Install Ruby](https://www.ruby-lang.org/en/):
 
 ```sh
 sudo apt install ruby-dev ruby-bundler

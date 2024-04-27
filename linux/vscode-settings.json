@@ -78,7 +78,7 @@
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "off",
-  "editor.fontFamily": "'Cascadia Code', 'Source Code Pro', 'Fira Mono', monospace",
+  "editor.fontFamily": "'Fira Code', 'Fira Mono', 'Cascadia Code', 'Source Code Pro', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.minimap.renderCharacters": false,
@@ -271,7 +271,7 @@
   "[scss]": {
     "editor.tabSize": 2
   },
-  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.fontSize": 16,

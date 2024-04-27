@@ -17,7 +17,7 @@ sort linux/pkgs-apt.txt > linux/pkgs-apt_.txt
 mv linux/pkgs-apt_.txt linux/pkgs-apt.txt
 
 # cp --parents ~/.local/share/konsole/*.profile linux
-for setting in .zshrc .profile .bashrc .config/yakuakerc .config/okularpartrc .config/kglobalshortcutsrc;
+for setting in .zshrc .profile .bashrc .config/okularpartrc;
 do cp --parents ~/${setting} linux
 done
 # sed --in-place "/lastSaveAsLocation=/d" linux/home/nms/.config/spectaclerc
@@ -63,3 +63,4 @@ cp ~/.zotero/zotero/*/user.js linux/zotero-user.js
 # symlink all notes into wiki
 # ln notes/*.md gh-wiki
 # ln README.md gh-wiki/Home.md
+# ln linux/README.md gh-wiki/PopOS.md

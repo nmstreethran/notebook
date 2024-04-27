@@ -1,7 +1,0 @@
-[ActivityManager]
-_k_friendly_name=Activity Manager
-switch-to-activity-1b2e429f-bb86-4d9f-bcdb-dabe1536f595=none,none,Switch to activity "Default"
-
-[yakuake]
-_k_friendly_name=Yakuake
-toggle-window-state=F12,F12,Open/Retract Yakuake

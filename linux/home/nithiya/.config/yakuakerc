@@ -1,9 +1,0 @@
-[Appearance]
-HideSkinBorders=true
-
-[Dialogs]
-FirstRun=false
-
-[Window]
-DynamicTabTitles=true
-Height=40

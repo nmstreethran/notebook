@@ -116,3 +116,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# TeX Live
+export MANPATH="/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH"
+export PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"
+
+# Ruby
+export GEM_HOME=~/.gem
+export GEM_PATH=$GEM_HOME/ruby/3.0.0
+export PATH="$GEM_PATH/bin:$PATH"
+
+# Powerline
+. /usr/share/powerline/bindings/bash/powerline.sh

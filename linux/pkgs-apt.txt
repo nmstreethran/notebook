@@ -1,5 +1,7 @@
 breeze-icon-theme
+default-jre-headless
 font-manager
+fonts-powerline
 gnome-tweaks
 gwenview
 htop
@@ -7,6 +9,7 @@ inkscape
 keepassxc
 neofetch
 okular
+powerline
 python3.11
 python3.11-venv
 python-is-python3
@@ -15,4 +18,4 @@ ruby-bundler
 ruby-dev
 steam
 system76-driver-nvidia
-yakuake
+zsh
