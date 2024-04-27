@@ -12,6 +12,10 @@ jq --raw-output '.[] | .identifier.id' | sort > linux/vscode-extensions.txt
 cp ~/.config/VSCodium/User/settings.json linux/vscode-settings.json
 cp ~/.config/VSCodium/User/keybindings.json linux/vscode-keybindings.jsonc
 
+# sort
+sort linux/pkgs-apt.txt > linux/pkgs-apt_.txt
+mv linux/pkgs-apt_.txt linux/pkgs-apt.txt
+
 # cp --parents ~/.local/share/konsole/*.profile linux
 for setting in .zshrc .profile .bashrc .config/yakuakerc .config/okularpartrc .config/kglobalshortcutsrc;
 do cp --parents ~/${setting} linux

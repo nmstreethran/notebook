@@ -22,13 +22,14 @@
     "latitude": 53.0344,
     "longitude": -7.2998
   },
-  "widget/bktzm_Y8Trvq": {
-    "id": "bktzm_Y8Trvq",
-    "key": "widget/ipInfo",
-    "order": 5,
+  "widget/Ovp1c9X_NyCZ": {
+    "id": "Ovp1c9X_NyCZ",
+    "key": "widget/time",
+    "order": 1,
     "display": {
-      "position": "bottomLeft",
-      "fontSize": 14
+      "position": "middleCentre",
+      "fontSize": 12,
+      "fontFamily": "Fira Mono"
     }
   },
   "data/008e7bbf-2a11-420b-8b9e-6b6a079918c7": {
@@ -95,23 +96,6 @@
     "topics": "bo8jQKTaE0Y",
     "timeout": 604800
   },
-  "widget/Ovp1c9X_NyCZ": {
-    "id": "Ovp1c9X_NyCZ",
-    "key": "widget/time",
-    "order": 1,
-    "display": {
-      "position": "middleCentre",
-      "fontSize": 12
-    }
-  },
-  "background": {
-    "id": "5ql41E4Q37Yd",
-    "key": "background/unsplash",
-    "display": {
-      "blur": 0,
-      "luminosity": -0.2
-    }
-  },
   "data/4mJW1UduUG3d": {
     "columns": 2,
     "links": [
@@ -146,7 +130,7 @@
         "name": " "
       },
       {
-        "url": "https://www.linkedin.com/mynetwork/",
+        "url": "https://www.linkedin.com/feed/",
         "icon": "_favicon",
         "name": " "
       },
@@ -220,6 +204,24 @@
     ],
     "visible": true,
     "linkOpenStyle": false
+  },
+  "background": {
+    "id": "5ql41E4Q37Yd",
+    "key": "background/unsplash",
+    "display": {
+      "blur": 0,
+      "luminosity": -0.2
+    }
+  },
+  "widget/bktzm_Y8Trvq": {
+    "id": "bktzm_Y8Trvq",
+    "key": "widget/ipInfo",
+    "order": 5,
+    "display": {
+      "position": "bottomLeft",
+      "fontSize": 14,
+      "fontFamily": "Fira Mono"
+    }
   },
   "version": 3
 }

@@ -6,7 +6,7 @@ Welcome to my notebook! This is where I backup my settings and computing notes. 
 
 ## Configurations
 
-OS: [Arch Linux](https://archlinux.org/) with [KDE](https://kde.org/) Plasma / Windows 11 / Android
+OS: [Pop!_OS](https://pop.system76.com/) / Windows 11 / Android
 
 ## License and credits
 

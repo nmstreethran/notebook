@@ -20,7 +20,7 @@
         "icon": "_favicon"
       },
       {
-        "url": "https://teams.microsoft.com/",
+        "url": "https://teams.microsoft.com/v2/",
         "icon": "_favicon"
       },
       {
@@ -38,19 +38,24 @@
       {
         "url": "https://virtualapp.ucc.ie/",
         "icon": "_favicon"
+      },
+      {
+        "url": "https://gitlab.com/users/nithiya/projects",
+        "icon": "_favicon"
       }
     ],
     "visible": true,
     "linkOpenStyle": false
   },
   "widget/WXdGf3E9xBsL": null,
-  "widget/3GuRbW7Jylul": {
-    "id": "3GuRbW7Jylul",
-    "key": "widget/greeting",
-    "order": 0,
-    "display": {
-      "position": "middleCentre"
-    }
+  "data/XBtAYvXTOWmx": {
+    "by": "collections",
+    "collections": "3333421",
+    "featured": false,
+    "paused": false,
+    "search": "birds",
+    "topics": "bo8jQKTaE0Y",
+    "timeout": 604800
   },
   "widget/tvdIwg82DIQs": null,
   "widget/FK0GgA_wEaii": null,
@@ -98,7 +103,8 @@
     "order": 1,
     "display": {
       "position": "middleCentre",
-      "fontSize": 20
+      "fontSize": 20,
+      "fontFamily": "Fira Mono"
     }
   },
   "widget/5ljLKoFnjuZr": null,
@@ -122,25 +128,18 @@
   "widget/Gx0LFX-HnpOS": null,
   "widget/xiQgjRUXTdHH": null,
   "widget/cmqv8POokquo": null,
+  "widget/3GuRbW7Jylul": null,
+  "widget/w77dbmQuHS6e": null,
   "widget/ciS_OfQeY91J": {
     "id": "ciS_OfQeY91J",
     "key": "widget/ipInfo",
     "order": 4,
     "display": {
       "position": "bottomRight",
-      "fontSize": 14
+      "fontSize": 14,
+      "fontFamily": "Fira Mono"
     }
   },
-  "data/XBtAYvXTOWmx": {
-    "by": "collections",
-    "collections": "3333421",
-    "featured": false,
-    "paused": false,
-    "search": "birds",
-    "topics": "bo8jQKTaE0Y",
-    "timeout": 604800
-  },
-  "widget/w77dbmQuHS6e": null,
   "timeZone": null,
   "version": 3
 }

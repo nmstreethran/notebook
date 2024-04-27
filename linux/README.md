@@ -76,6 +76,19 @@ sudo locale-gen  # regenerate
 Go to Settings > Region & Language > Manage Installed Languages and remove all unnecessary languages.
 Set the desired language, e.g. English (United Kingdom), and regional format, e.g. English (Ireland).
 
+Uninstall unnecessary languages:
+
+```sh
+sudo apt remove wamerican wbrazilian wfrench witalian wngerman wogerman wportuguese wspanish wswiss
+```
+
+Uninstall unnecessary packages:
+
+```sh
+sudo apt remove geary kdeconnect
+sudo apt autoremove
+```
+
 [Configure GTK themes](https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications):
 
 Install the following:
@@ -125,6 +138,33 @@ Set the launcher icon and symlink:
 cd ~/opt/zotero
 ./set_launcher_icon
 ln -s "$PWD/zotero.desktop" ~/.local/share/applications/
+```
+
+[Install TeXLive](https://tug.org/texlive/):
+
+```sh
+# https://wiki.archlinux.org/title/TeX_Live
+cd ~/Downloads/
+# curl https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O
+curl https://ftp.heanet.ie/mirrors/ctan.org/tex/systems/texlive/tlnet/install-tl-unx.tar.gz -O
+zcat < install-tl-unx.tar.gz | tar xf -
+cd install-tl-*/
+# sudo perl ./install-tl --no-interaction
+sudo perl ./install-tl --no-interaction --location https://ftp.heanet.ie/mirrors/ctan.org/tex/systems/texlive/tlnet
+echo '# TeX Live
+export MANPATH="/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH"
+export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"' >> ~/.bashrc
+```
+
+Install Ruby:
+
+```sh
+sudo apt install ruby-dev ruby-bundler
+echo 'export GEM_HOME=~/.gem
+export GEM_PATH=$GEM_HOME/ruby/3.0.0
+export PATH="$GEM_PATH/bin:$PATH"' >> ~/.bashrc
+gem install bundler
 ```
 
 [Use a custom hosts file](https://github.com/stevenblack/hosts):
