@@ -33,23 +33,14 @@ Links:
 - <https://support.system76.com/articles/install-pop/>
 - <https://github.com/spxak1/weywot/blob/main/Pop_OS_Dual_Boot.md>
 
-## Commands
-
-The usual commands:
-
-```sh
-sudo apt update
-sudo apt upgrade
-sudo apt autoremove
-```
-
 ## Configurations
 
 Configure disk mount options:
 
+In a terminal, run `echo "$UID"` to find the user ID.
 In Disks, click on the desired partition and click the gear icon (additional partition options) and go to edit mount options.
 Set it to mount at system startup and identify as `dev/disk/by-label`.
-Append `uid=1000` to the mount options to [allow deleted files to be moved to trash](https://askubuntu.com/a/1093032).
+Append `uid=$UID` to the mount options to [allow deleted files to be moved to trash](https://askubuntu.com/a/1093032).
 
 Configure mouse and touchpad:
 
@@ -65,6 +56,7 @@ Go to Settings > Power and set the Power Button Behaviour to Suspend.
 
 ```sh
 mkdir ~/.local/share/fonts
+# mount the Windows partition
 cd /media/nithiya/Windows/Fonts
 cp arial*.ttf comic*.ttf georgia*.ttf segoeui*.ttf segui*.ttf symbol.ttf times*.ttf trebuc*.ttf webdings.ttf wingding.ttf ~/.local/share/fonts/
 fc-cache --force
