@@ -112,12 +112,6 @@
     "*.sty": "latex"
   },
   "files.autoSave": "afterDelay",
-  "files.watcherExclude": {
-    "**/env/bin/**": true,
-    "**/env/lib/**": true,
-    "**/env/lib64/**": true,
-    "**/env/share/**": true
-  },
   "git.autofetch": true,
   "git.autoStash": true,
   "git.confirmSync": false,
@@ -233,23 +227,6 @@
   "markdown.extension.orderedList.marker": "one",
   "markdown.extension.toc.levels": "1..3",
   "material-icon-theme.activeIconPack": "none",
-  "material-icon-theme.files.associations": {
-    "*.geojson": "json",
-    "*.latex": "tex",
-    "readme.markdown": "readme",
-    "readme.rst": "readme"
-  },
-  "material-icon-theme.folders.associations": {
-    "_draft": "mock",
-    "_pages": "views",
-    "_posts": "docs",
-    ".jekyll-cache": "temp",
-    "charts": "images",
-    "gh-wiki": "docs",
-    "maps": "images",
-    "old": "archive",
-    "wiki": "docs"
-  },
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -261,7 +238,6 @@
     "editor.formatOnType": true
   },
   "python.terminal.activateEnvInCurrentTerminal": true,
-  "r.rpath.linux": "~/miniconda3/envs/r-env/bin/R",
   "[r]": {
     "editor.tabSize": 2
   },

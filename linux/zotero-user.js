@@ -1,5 +1,8 @@
 /* https://kb.mozillazine.org/User.js_file */
 
+user_pref("extensions.zotero.attachmentRenameTemplate", "{{ firstCreator suffix=\" - \" }}{{ year suffix=\" - \" }}{{ title truncate=\"50\" }}");
+user_pref("extensions.zotero.autoRenameFiles.linked", true);
+
 user_pref("extensions.zotero.automaticSnapshots", false);
 
 user_pref("extensions.zotero.dataDir", "/home/nithiya/Zotero");
@@ -11,6 +14,9 @@ user_pref("extensions.zotero.export.quickCopy.setting", "bibliography=http://www
 user_pref("extensions.zotero.export.translatorSettings", "{\"exportNotes\":false,\"exportFileData\":false,\"useJournalAbbreviation\":false,\"keepUpdated\":false,\"worker\":true,\"includeAnnotations\":false}");
 
 user_pref("extensions.zotero.newItemTypeMRU", "book,bookSection,report,journalArticle,document");
+
+user_pref("extensions.zotero.reader.contentDarkMode", false);
+user_pref("extensions.zotero.reader.ebookFontFamily", "Source Sans 3");
 
 user_pref("extensions.zotero.translators.better-bibtex.DOIandURL", "doi");
 user_pref("extensions.zotero.translators.better-bibtex.autoExportDelay", 2);

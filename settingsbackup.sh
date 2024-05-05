@@ -52,6 +52,7 @@ cp ~/.mozilla/firefox/*.dev-edition-default/user.js linux/firefox-user.js
 # ls -1 ~/.zotero/zotero/*/extensions/ > linux/zotero-extensions.txt
 jq '
     [.addons[] |
+    select(.id != null) |
     if (.id | test("^(?!.*zoteroOpenOfficeIntegration).*$"))
     then ({ id: .id, name: .defaultLocale.name })
     else empty

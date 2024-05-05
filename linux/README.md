@@ -147,10 +147,10 @@ cd ~/opt/zotero
 ln -s "$PWD/zotero.desktop" ~/.local/share/applications/
 ```
 
-[Install TeXLive](https://tug.org/texlive/):
+[Install TeX Live](https://tug.org/texlive/):
 
 ```sh
-sudo apt install default-jre-headless
+sudo apt install default-jre-headless  # Java needed for arara
 # https://wiki.archlinux.org/title/TeX_Live
 cd ~/Downloads/
 # curl https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O
