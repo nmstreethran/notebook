@@ -73,7 +73,6 @@
     "editor.wordWrap": "off"
   },
   "diffEditor.experimental.showMoves": true,
-  "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
@@ -232,6 +231,11 @@
     "jupyter-notebook": "left"
   },
   "notebook.diff.ignoreMetadata": true,
+  "notebook.editorOptionsCustomizations": {
+    "editor.tabSize": 4,
+    "editor.indentSize": 4,
+    "editor.insertSpaces": true
+  },
   "notebook.lineNumbers": "on",
   "notebook.output.textLineLimit": 200,
   "[python]": {

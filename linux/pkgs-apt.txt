@@ -16,6 +16,6 @@ python-is-python3
 qt5ct
 ruby-bundler
 ruby-dev
+smplayer
 steam
 system76-driver-nvidia
-zsh
