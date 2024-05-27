@@ -58,7 +58,7 @@ Go to Settings > Power and set the Power Button Behaviour to Suspend.
 mkdir ~/.local/share/fonts
 # mount the Windows partition
 cd /media/nithiya/Windows/Fonts
-cp arial*.ttf comic*.ttf georgia*.ttf segoeui*.ttf segui*.ttf symbol.ttf times*.ttf trebuc*.ttf webdings.ttf wingding.ttf ~/.local/share/fonts/
+cp arial*.ttf georgia*.ttf segoeui*.ttf segui*.ttf symbol.ttf times*.ttf webdings.ttf wingding.ttf ~/.local/share/fonts/
 fc-cache --force
 ```
 

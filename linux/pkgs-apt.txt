@@ -1,7 +1,9 @@
 breeze-icon-theme
+cdo
 default-jre-headless
 font-manager
 fonts-powerline
+git-lfs
 gnome-tweaks
 gwenview
 htop
