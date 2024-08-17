@@ -3,6 +3,8 @@
 user_pref("extensions.zotero.attachmentRenameTemplate", "{{ firstCreator suffix=\" - \" }}{{ year suffix=\" - \" }}{{ title truncate=\"50\" }}");
 user_pref("extensions.zotero.autoRenameFiles.linked", true);
 user_pref("extensions.zotero.automaticSnapshots", false);
+user_pref("extensions.zotero.baseAttachmentPath", "/mnt/Backup/Documents/Zotero");
+user_pref("extensions.zotero.cite.automaticJournalAbbreviations", false);
 user_pref("extensions.zotero.dataDir", "/home/nithiya/Zotero");
 user_pref("extensions.zotero.export.bibliographySettings", "{\"mode\":\"bibliography\",\"method\":\"copy-to-clipboard\"}");
 user_pref("extensions.zotero.export.citePaperJournalArticleURL", true);
@@ -14,13 +16,17 @@ user_pref("extensions.zotero.reader.contentDarkMode", false);
 user_pref("extensions.zotero.reader.ebookFontFamily", "Source Sans 3");
 user_pref("extensions.zotero.tabs.title.reader", "creatorYearTitle");
 user_pref("extensions.zotero.translators.better-bibtex.DOIandURL", "doi");
+user_pref("extensions.zotero.translators.better-bibtex.autoExport", "idle");
 user_pref("extensions.zotero.translators.better-bibtex.autoExportDelay", 2);
+user_pref("extensions.zotero.translators.better-bibtex.baseAttachmentPath", "/mnt/Backup/Documents/Zotero");
+user_pref("extensions.zotero.translators.better-bibtex.biblatexExtractEprint", false);
 user_pref("extensions.zotero.translators.better-bibtex.citekeyFormat", "authEtal2.lower + year.prefix(_)");
 user_pref("extensions.zotero.translators.better-bibtex.citekeyFormatEditing", "authEtal2.lower + year.prefix(_)");
+user_pref("extensions.zotero.translators.better-bibtex.exportSort", "citekey");
 user_pref("extensions.zotero.translators.better-bibtex.exportTitleCase", false);
 user_pref("extensions.zotero.translators.better-bibtex.importSentenceCase", "off");
 user_pref("extensions.zotero.translators.better-bibtex.keyConflictPolicy", "change");
-user_pref("extensions.zotero.translators.better-bibtex.skipFields", "abstract,shorttitle,keywords,file,annotation,shortjournal,langid");
+user_pref("extensions.zotero.translators.better-bibtex.skipFields", "abstract,shorttitle,keywords,file,annotation,shortjournal,langid,eprint,eprinttype");
 user_pref("extensions.zotero.translators.better-bibtex.warnBulkModify", 0);
 user_pref("extensions.zotero.useDataDir", true);
 

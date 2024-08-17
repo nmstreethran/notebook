@@ -138,7 +138,7 @@
   "latex-workshop.check.duplicatedLabels.enabled": true,
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.autoBuild.run": "never",
-  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.autoClean.run": "onFailed",
   "latex-workshop.latex.clean.fileTypes": [
     "*.acn",
     "*.acr",
