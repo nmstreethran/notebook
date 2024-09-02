@@ -9,7 +9,7 @@ user_pref("extensions.zotero.dataDir", "/home/nithiya/Zotero");
 user_pref("extensions.zotero.export.bibliographySettings", "{\"mode\":\"bibliography\",\"method\":\"copy-to-clipboard\"}");
 user_pref("extensions.zotero.export.citePaperJournalArticleURL", true);
 user_pref("extensions.zotero.export.quickCopy.locale", "en-GB");
-user_pref("extensions.zotero.export.quickCopy.setting", "bibliography=http://www.zotero.org/styles/harvard-cite-them-right");
+user_pref("extensions.zotero.export.quickCopy.setting", "bibliography=https://raw.githubusercontent.com/nmstreethran/csl-custom-styles/main/harvard-cite-them-right-no-et-al-modified.csl");
 user_pref("extensions.zotero.export.translatorSettings", "{\"exportNotes\":false,\"exportFileData\":false,\"useJournalAbbreviation\":false,\"keepUpdated\":false,\"worker\":true,\"includeAnnotations\":false}");
 user_pref("extensions.zotero.newItemTypeMRU", "book,bookSection,report,journalArticle,document");
 user_pref("extensions.zotero.reader.contentDarkMode", false);
