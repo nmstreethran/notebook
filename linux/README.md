@@ -96,6 +96,13 @@ sudo apt remove geary kdeconnect
 sudo apt autoremove
 ```
 
+Uninstall unnecessary LibreOffice languages:
+
+```sh
+dpkg -l | grep libreoffice*  # find packages to remove
+sudo apt purge libreoffice-help-de libreoffice-help-es libreoffice-help-fr libreoffice-help-it libreoffice-help-ja libreoffice-help-pt libreoffice-help-pt-br libreoffice-help-ru libreoffice-help-zh-cn libreoffice-help-zh-tw libreoffice-l10n-ar libreoffice-l10n-de libreoffice-l10n-en-za libreoffice-l10n-es libreoffice-l10n-fr libreoffice-l10n-it libreoffice-l10n-ja libreoffice-l10n-pt libreoffice-l10n-pt-br libreoffice-l10n-ru libreoffice-l10n-zh-cn libreoffice-l10n-zh-tw
+```
+
 [Configure GTK themes](https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications):
 
 Install the following:
