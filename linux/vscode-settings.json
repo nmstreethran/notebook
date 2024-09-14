@@ -263,8 +263,9 @@
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
-  "window.menuBarVisibility": "toggle",
+  "window.customTitleBarVisibility": "auto",
   "window.restoreWindows": "none",
+  "window.titleBarStyle": "custom",
   "workbench.colorTheme": "Monokai",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook",
