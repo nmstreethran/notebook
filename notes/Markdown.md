@@ -459,7 +459,7 @@ You can also use words, to fit your writing style more closely[^note].
 For footnotes:
 
 ```md
-Bla bla <sup id="a1">[[1]](#f1)</sup> or <sup name="a2">[[2]](#f2)</sup>
+Bla bla <sup id="a1">[1](#f1)</sup> or <sup name="a2">[2](#f2)</sup>
 
 <b id="f1">1</b> Footnote content here. [↩](#a1)
 
@@ -479,7 +479,7 @@ Bla bla <sup id="a1">[1](#f1)</sup> or <sup name="a2">[2](#f2)</sup>
 <summary>Tips for collapsed sections (click to expand/collapse)</summary>
 
 - You can add a header.
-- You can add text within a collapsed section. 
+- You can add text within a collapsed section.
 - You can add an image or a code block, too.
 </details>
 ```
@@ -488,7 +488,7 @@ Bla bla <sup id="a1">[1](#f1)</sup> or <sup name="a2">[2](#f2)</sup>
 <summary>Tips for collapsed sections (click to expand/collapse)</summary>
 
 - You can add a header.
-- You can add text within a collapsed section. 
+- You can add text within a collapsed section.
 - You can add an image or a code block, too.
 </details>
 
@@ -510,20 +510,6 @@ Thumbnail by [Gopher](https://www.youtube.com/user/GophersVids).
 
 <p align="center">centered text</p>
 
-## Text colours and fonts
-
-```md
-In his beard lived three <span style="color:red">cardinals</span>.
-```
-
-In his beard lived three <span style="color:red">cardinals</span>.
-
-```md
-I am in <span style="font-family:serif; font-size:4em;">LOVE!</span>
-```
-
-I am in <span style="font-family:serif; font-size:4em;">LOVE!</span>
-
 ## Badges
 
 - [License badges using Shields.io](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
@@ -540,6 +526,20 @@ Use the following to obtain `?logo=data:image/png;base64,...`:
 
 - [Base-64 encoding tool](https://b64.io/)
 - [Encoder/decoder tool for percent encoding](https://meyerweb.com/eric/tools/dencoder/)
+
+## Text colours and fonts (does not work on GitHub)
+
+```md
+In his beard lived three <span style="color:red">cardinals</span>.
+```
+
+In his beard lived three <span style="color:red">cardinals</span>.
+
+```md
+I am in <span style="font-family:serif; font-size:4em;">LOVE!</span>
+```
+
+I am in <span style="font-family:serif; font-size:4em;">LOVE!</span>
 
 ## Sources
 
