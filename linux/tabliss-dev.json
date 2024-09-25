@@ -12,8 +12,8 @@
         "icon": "mail"
       },
       {
-        "url": "https://uccireland-my.sharepoint.com/personal/nstreethran_ucc_ie/_layouts/15/onedrive.aspx?view=0",
-        "icon": "_favicon"
+        "url": "https://uccireland-my.sharepoint.com/my",
+        "icon": "cloud"
       },
       {
         "url": "https://scholar.google.com/",
@@ -42,20 +42,25 @@
       {
         "url": "https://gitlab.com/users/nithiya/projects",
         "icon": "_favicon"
+      },
+      {
+        "url": "https://duckduckgo.com/aichat",
+        "icon": "_favicon"
       }
     ],
     "visible": true,
     "linkOpenStyle": false
   },
   "widget/WXdGf3E9xBsL": null,
-  "data/XBtAYvXTOWmx": {
-    "by": "collections",
-    "collections": "3333421",
-    "featured": false,
-    "paused": false,
-    "search": "birds",
-    "topics": "bo8jQKTaE0Y",
-    "timeout": 604800
+  "widget/ciS_OfQeY91J": {
+    "id": "ciS_OfQeY91J",
+    "key": "widget/ipInfo",
+    "order": 4,
+    "display": {
+      "position": "bottomRight",
+      "fontSize": 14,
+      "fontFamily": "Fira Mono"
+    }
   },
   "widget/tvdIwg82DIQs": null,
   "widget/FK0GgA_wEaii": null,
@@ -130,15 +135,14 @@
   "widget/cmqv8POokquo": null,
   "widget/3GuRbW7Jylul": null,
   "widget/w77dbmQuHS6e": null,
-  "widget/ciS_OfQeY91J": {
-    "id": "ciS_OfQeY91J",
-    "key": "widget/ipInfo",
-    "order": 4,
-    "display": {
-      "position": "bottomRight",
-      "fontSize": 14,
-      "fontFamily": "Fira Mono"
-    }
+  "data/XBtAYvXTOWmx": {
+    "by": "collections",
+    "collections": "3333421",
+    "featured": false,
+    "paused": false,
+    "search": "birds",
+    "topics": "bo8jQKTaE0Y",
+    "timeout": 604800
   },
   "timeZone": null,
   "version": 3
