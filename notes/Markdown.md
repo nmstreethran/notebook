@@ -1,4 +1,6 @@
-## Headers
+These examples have been adapted from adam-p/markdown-here and GitHub Docs.
+
+## Headings
 
 ```md
 # H1
@@ -429,23 +431,35 @@ Here is a simple endnote[^1].
 
 An endnote can also have multiple lines[^2].
 
+You can also use words, to fit your writing style more closely[^note].
+
 [^1]: My reference.
-[^2]: To add line breaks within a endnote, prefix new lines with 2 spaces.
+
+[^2]: To add line breaks within a endnote, prefix new lines with 2 spaces.  
   This is a second line.
+
+[^note]: Named endnotes will still render with numbers instead of the text but allow easier identification and linking.    
+    This endnote also has been made with a different syntax using 4 spaces for new lines.
 ```
 
 Here is a simple endnote[^1].
 
 An endnote can also have multiple lines[^2].
 
+You can also use words, to fit your writing style more closely[^note].
+
 [^1]: My reference.
-[^2]: To add line breaks within a endnote, prefix new lines with 2 spaces.
+
+[^2]: To add line breaks within a endnote, prefix new lines with 2 spaces.  
   This is a second line.
+
+[^note]: Named endnotes will still render with numbers instead of the text but allow easier identification and linking.    
+    This endnote also has been made with a different syntax using 4 spaces for new lines.
 
 For footnotes:
 
 ```md
-Bla bla <sup id="a1">[1](#f1)</sup> or <sup name="a2">[2](#f2)</sup>
+Bla bla <sup id="a1">[[1]](#f1)</sup> or <sup name="a2">[[2]](#f2)</sup>
 
 <b id="f1">1</b> Footnote content here. [↩](#a1)
 
