@@ -12,6 +12,10 @@ jq --raw-output '.[] | .identifier.id' | sort > linux/vscode-extensions.txt
 cp ~/.config/VSCodium/User/settings.json linux/vscode-settings.json
 cp ~/.config/VSCodium/User/keybindings.json linux/vscode-keybindings.jsonc
 
+# list of packages
+# pacman -Qqen > linux/pkgs-pacman.txt
+# pacman -Qqem > linux/pkgs-aur.txt
+
 # sort
 sort linux/pkgs-apt.txt > linux/pkgs-apt_.txt
 mv linux/pkgs-apt_.txt linux/pkgs-apt.txt
@@ -28,10 +32,6 @@ done
 # sed --in-place "/window-position=/d" linux/home/nms/.config/spectaclerc
 # sed --in-place "/SplitterSizes=/d" linux/home/nms/.config/spectaclerc
 # sed --in-place "/ViewMode=/d" linux/home/nms/.config/spectaclerc
-
-# list of packages
-# pacman -Qqen > linux/pkgs-pacman.txt
-# pacman -Qqem > linux/pkgs-aur.txt
 
 # Firefox
 # ls -1 ~/.mozilla/firefox/*.dev-edition-default/extensions/ |

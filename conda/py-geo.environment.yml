@@ -25,7 +25,4 @@ dependencies:
   - jupyterlab  # interactive notebooks
   - jupyter_bokeh
   - pytest  # testing and linting
-  - flake8
-  - pylint
-  - black
-  - black-jupyter
+  - ruff
