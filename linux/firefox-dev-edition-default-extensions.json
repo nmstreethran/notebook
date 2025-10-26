@@ -20,6 +20,10 @@
     "name": "Zotero Connector"
   },
   {
+    "id": "@ublacklist",
+    "name": "uBlacklist"
+  },
+  {
     "id": "uBlock0@raymondhill.net",
     "name": "uBlock Origin"
   }

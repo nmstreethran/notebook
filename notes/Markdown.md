@@ -372,7 +372,7 @@ Alternatively, you can use the `math` code block syntax to display a math expres
 - This is a <sub>subscript</sub> text.
 - This is a <sup>superscript</sup> text.
 
-## Alerts
+## Alerts (only works on GitHub)
 
 ```md
 > [!NOTE]

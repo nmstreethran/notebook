@@ -1,5 +1,6 @@
 davidanson.vscode-markdownlint
 editorconfig.editorconfig
+github.copilot-chat
 james-yu.latex-workshop
 mechatroner.rainbow-csv
 ms-python.debugpy
